@@ -1,2 +1,2 @@
 # TradeMySurf
-MVP price generator
+# MVP price generator for iOS
