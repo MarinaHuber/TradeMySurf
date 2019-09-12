@@ -18,7 +18,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="This app is not endorsed by surf community, and any price is entirely fictional currently." textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="MK6-lQ-8Hq">
-                                <rect key="frame" x="60" y="735" width="294" height="61"/>
+                                <rect key="frame" x="60" y="722" width="294" height="65"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="294" id="947-eP-7Rf"/>
                                 </constraints>
@@ -53,11 +53,12 @@
                             <constraint firstItem="K31-aE-VUq" firstAttribute="trailing" secondItem="rKl-Xy-1YN" secondAttribute="trailing" constant="43" id="39o-oO-WIh"/>
                             <constraint firstItem="rKl-Xy-1YN" firstAttribute="top" secondItem="K31-aE-VUq" secondAttribute="top" constant="20" id="UVG-jU-W5G"/>
                             <constraint firstItem="rKl-Xy-1YN" firstAttribute="centerX" secondItem="MK6-lQ-8Hq" secondAttribute="centerX" id="Wpa-nm-Cue"/>
-                            <constraint firstItem="FSd-wP-55i" firstAttribute="top" secondItem="MK6-lQ-8Hq" secondAttribute="bottom" constant="2" id="aFA-6Y-04e"/>
+                            <constraint firstItem="FSd-wP-55i" firstAttribute="top" secondItem="MK6-lQ-8Hq" secondAttribute="bottom" constant="11" id="aFA-6Y-04e"/>
                             <constraint firstItem="rKl-Xy-1YN" firstAttribute="leading" secondItem="K31-aE-VUq" secondAttribute="leading" constant="43" id="dF1-RI-dos"/>
                             <constraint firstItem="K31-aE-VUq" firstAttribute="bottom" secondItem="FSd-wP-55i" secondAttribute="bottom" constant="20" id="mZy-9K-6gk"/>
                             <constraint firstItem="MK6-lQ-8Hq" firstAttribute="centerX" secondItem="FSd-wP-55i" secondAttribute="centerX" id="mma-WV-1SB"/>
                             <constraint firstItem="FSd-wP-55i" firstAttribute="centerX" secondItem="K31-aE-VUq" secondAttribute="centerX" id="q7v-DS-gpQ"/>
+                            <constraint firstItem="MK6-lQ-8Hq" firstAttribute="top" secondItem="rKl-Xy-1YN" secondAttribute="bottom" constant="63" id="yUv-aD-QSn"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="K31-aE-VUq"/>
                     </view>
@@ -75,7 +76,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="5" translatesAutoresizingMaskIntoConstraints="NO" id="fJE-Su-y6S">
-                                <rect key="frame" x="20" y="20" width="374" height="631.5"/>
+                                <rect key="frame" x="20" y="20" width="374" height="410.5"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="BRAND" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="RSd-a9-Vaz">
                                         <rect key="frame" x="0.0" y="0.0" width="374" height="20.5"/>
@@ -149,24 +150,19 @@
                                         <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <nil key="highlightedColor"/>
                                     </label>
-                                    <pickerView contentMode="scaleAspectFit" semanticContentAttribute="spatial" translatesAutoresizingMaskIntoConstraints="NO" id="dpD-fW-42G">
-                                        <rect key="frame" x="0.0" y="270.5" width="374" height="216"/>
-                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                        <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                    </pickerView>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="nen-M7-iTq">
-                                        <rect key="frame" x="0.0" y="491.5" width="374" height="33"/>
+                                        <rect key="frame" x="0.0" y="270.5" width="374" height="33"/>
                                         <fontDescription key="fontDescription" style="UICTFontTextStyleHeadline"/>
                                         <state key="normal" title="TAKE A PICTURE"/>
                                     </button>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="TRADE YOUR BOARD FOR…" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="DBK-vQ-1VH">
-                                        <rect key="frame" x="0.0" y="529.5" width="374" height="20.5"/>
+                                        <rect key="frame" x="0.0" y="308.5" width="374" height="20.5"/>
                                         <fontDescription key="fontDescription" style="UICTFontTextStyleHeadline"/>
                                         <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="$99,999" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="mZ2-tw-V7m">
-                                        <rect key="frame" x="0.0" y="555" width="374" height="76.5"/>
+                                        <rect key="frame" x="0.0" y="334" width="374" height="76.5"/>
                                         <fontDescription key="fontDescription" type="system" weight="thin" pointSize="64"/>
                                         <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                         <nil key="highlightedColor"/>
