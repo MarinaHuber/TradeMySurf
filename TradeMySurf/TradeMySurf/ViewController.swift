@@ -1,12 +1,15 @@
 //
 //  ViewController.swift
-
-//  Copyright © 2019 All rights reserved.
+//  TradeMySurf
+//
+//  Created by Marina Huber on 9/12/19.
+//  Copyright © 2019 Marina Huber. All rights reserved.
 //
 
 import UIKit
 
 class ViewController: UIViewController {
+
     let cars = Surfs()
 
     @IBOutlet var stackView: UIStackView!
@@ -43,6 +46,7 @@ class ViewController: UIViewController {
             valuation.text = "Error"
         }
     }
-    
+
+
 }
 
