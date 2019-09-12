@@ -69,7 +69,7 @@
         <!--View Controller-->
         <scene sceneID="tzV-V2-pFt">
             <objects>
-                <viewController id="GqH-AH-E9t" customClass="ViewController" customModule="Project1" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="GqH-AH-E9t" customClass="ViewController" customModule="TradeMySurf" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="Ti1-kh-fvf">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
