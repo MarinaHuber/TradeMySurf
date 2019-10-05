@@ -1,5 +1,5 @@
 //
-//  ViewController.swift
+//  PriceCalendarViewController.swift
 //  TradeMySurf
 //
 //  Created by Marina Huber on 9/12/19.
@@ -8,7 +8,7 @@
 
 import UIKit
 
-class ViewController: UIViewController {
+class PriceCalendarViewController: UIViewController {
 
     let cars = Surfs()
 

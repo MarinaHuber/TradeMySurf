@@ -9,7 +9,7 @@
 /* Begin PBXBuildFile section */
 		9C5B644C232A506C000727E6 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C5B644B232A506C000727E6 /* AppDelegate.swift */; };
 		9C5B644E232A506C000727E6 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C5B644D232A506C000727E6 /* SceneDelegate.swift */; };
-		9C5B6450232A506C000727E6 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C5B644F232A506C000727E6 /* ViewController.swift */; };
+		9C5B6450232A506C000727E6 /* PriceCalendarViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C5B644F232A506C000727E6 /* PriceCalendarViewController.swift */; };
 		9C5B6453232A506C000727E6 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9C5B6451232A506C000727E6 /* Main.storyboard */; };
 		9C5B6456232A506C000727E6 /* TradeMySurf.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 9C5B6454232A506C000727E6 /* TradeMySurf.xcdatamodeld */; };
 		9C5B6458232A5073000727E6 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 9C5B6457232A5073000727E6 /* Assets.xcassets */; };
@@ -18,6 +18,12 @@
 		9C5B6471232A5073000727E6 /* TradeMySurfUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C5B6470232A5073000727E6 /* TradeMySurfUITests.swift */; };
 		9C5B647F232A508B000727E6 /* Surfs.mlmodel in Sources */ = {isa = PBXBuildFile; fileRef = 9C5B647E232A508B000727E6 /* Surfs.mlmodel */; };
 		9C5B6481232A5092000727E6 /* surfs.csv in Resources */ = {isa = PBXBuildFile; fileRef = 9C5B6480232A5091000727E6 /* surfs.csv */; };
+		9C76F09223493D8000853FD9 /* Onboarding.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9C76F09123493D8000853FD9 /* Onboarding.storyboard */; };
+		9C76F09423493DAB00853FD9 /* OnboardingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C76F09323493DAB00853FD9 /* OnboardingViewController.swift */; };
+		9C76F09623493EDA00853FD9 /* BuyTipsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C76F09523493EDA00853FD9 /* BuyTipsViewController.swift */; };
+		9C76F09823493F0900853FD9 /* SellTipsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C76F09723493F0900853FD9 /* SellTipsViewController.swift */; };
+		9C76F09B23493FD400853FD9 /* UIStoryboardExension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C76F09A23493FD400853FD9 /* UIStoryboardExension.swift */; };
+		9C76F09D234946CA00853FD9 /* TabBar.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9C76F09C234946CA00853FD9 /* TabBar.storyboard */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -41,7 +47,7 @@
 		9C5B6448232A506C000727E6 /* TradeMySurf.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TradeMySurf.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		9C5B644B232A506C000727E6 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		9C5B644D232A506C000727E6 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		9C5B644F232A506C000727E6 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		9C5B644F232A506C000727E6 /* PriceCalendarViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PriceCalendarViewController.swift; sourceTree = "<group>"; };
 		9C5B6452232A506C000727E6 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		9C5B6455232A506C000727E6 /* TradeMySurf.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = TradeMySurf.xcdatamodel; sourceTree = "<group>"; };
 		9C5B6457232A5073000727E6 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -55,6 +61,12 @@
 		9C71A14B2348946C00A67323 /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		9C71A14E234894CD00A67323 /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		9C71A150234894D500A67323 /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		9C76F09123493D8000853FD9 /* Onboarding.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Onboarding.storyboard; sourceTree = "<group>"; };
+		9C76F09323493DAB00853FD9 /* OnboardingViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnboardingViewController.swift; sourceTree = "<group>"; };
+		9C76F09523493EDA00853FD9 /* BuyTipsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BuyTipsViewController.swift; sourceTree = "<group>"; };
+		9C76F09723493F0900853FD9 /* SellTipsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SellTipsViewController.swift; sourceTree = "<group>"; };
+		9C76F09A23493FD400853FD9 /* UIStoryboardExension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIStoryboardExension.swift; sourceTree = "<group>"; };
+		9C76F09C234946CA00853FD9 /* TabBar.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = TabBar.storyboard; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -105,12 +117,11 @@
 		9C5B644A232A506C000727E6 /* TradeMySurf */ = {
 			isa = PBXGroup;
 			children = (
+				9C76F09F2349471000853FD9 /* ViewController */,
+				9C76F09E234946D500853FD9 /* Resources */,
+				9C76F09923493FA000853FD9 /* Extensions */,
 				9C5B644B232A506C000727E6 /* AppDelegate.swift */,
 				9C5B644D232A506C000727E6 /* SceneDelegate.swift */,
-				9C5B644F232A506C000727E6 /* ViewController.swift */,
-				9C5B6451232A506C000727E6 /* Main.storyboard */,
-				9C5B6457232A5073000727E6 /* Assets.xcassets */,
-				9C5B6459232A5073000727E6 /* LaunchScreen.storyboard */,
 				9C5B6480232A5091000727E6 /* surfs.csv */,
 				9C71A14B2348946C00A67323 /* Info.plist */,
 				9C5B647E232A508B000727E6 /* Surfs.mlmodel */,
@@ -135,6 +146,37 @@
 				9C71A150234894D500A67323 /* Info.plist */,
 			);
 			path = TradeMySurfUITests;
+			sourceTree = "<group>";
+		};
+		9C76F09923493FA000853FD9 /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				9C76F09A23493FD400853FD9 /* UIStoryboardExension.swift */,
+			);
+			path = Extensions;
+			sourceTree = "<group>";
+		};
+		9C76F09E234946D500853FD9 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				9C5B6451232A506C000727E6 /* Main.storyboard */,
+				9C76F09123493D8000853FD9 /* Onboarding.storyboard */,
+				9C76F09C234946CA00853FD9 /* TabBar.storyboard */,
+				9C5B6457232A5073000727E6 /* Assets.xcassets */,
+				9C5B6459232A5073000727E6 /* LaunchScreen.storyboard */,
+			);
+			path = Resources;
+			sourceTree = "<group>";
+		};
+		9C76F09F2349471000853FD9 /* ViewController */ = {
+			isa = PBXGroup;
+			children = (
+				9C5B644F232A506C000727E6 /* PriceCalendarViewController.swift */,
+				9C76F09523493EDA00853FD9 /* BuyTipsViewController.swift */,
+				9C76F09723493F0900853FD9 /* SellTipsViewController.swift */,
+				9C76F09323493DAB00853FD9 /* OnboardingViewController.swift */,
+			);
+			path = ViewController;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -242,8 +284,10 @@
 			buildActionMask = 2147483647;
 			files = (
 				9C5B645B232A5073000727E6 /* LaunchScreen.storyboard in Resources */,
+				9C76F09223493D8000853FD9 /* Onboarding.storyboard in Resources */,
 				9C5B6458232A5073000727E6 /* Assets.xcassets in Resources */,
 				9C5B6481232A5092000727E6 /* surfs.csv in Resources */,
+				9C76F09D234946CA00853FD9 /* TabBar.storyboard in Resources */,
 				9C5B6453232A506C000727E6 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -269,10 +313,14 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				9C5B6450232A506C000727E6 /* ViewController.swift in Sources */,
+				9C5B6450232A506C000727E6 /* PriceCalendarViewController.swift in Sources */,
+				9C76F09423493DAB00853FD9 /* OnboardingViewController.swift in Sources */,
+				9C76F09B23493FD400853FD9 /* UIStoryboardExension.swift in Sources */,
 				9C5B644C232A506C000727E6 /* AppDelegate.swift in Sources */,
 				9C5B647F232A508B000727E6 /* Surfs.mlmodel in Sources */,
 				9C5B6456232A506C000727E6 /* TradeMySurf.xcdatamodeld in Sources */,
+				9C76F09623493EDA00853FD9 /* BuyTipsViewController.swift in Sources */,
+				9C76F09823493F0900853FD9 /* SellTipsViewController.swift in Sources */,
 				9C5B644E232A506C000727E6 /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
