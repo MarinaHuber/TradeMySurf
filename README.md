@@ -1,3 +1,3 @@
 # TradeMySurf
-# MVP price generator for iOS
-tbc
+# MVP app tips for surfers
+
