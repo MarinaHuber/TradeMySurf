@@ -9,17 +9,17 @@
 import UIKit
 
 final class CalculatorCoordinator: Coordinator {
-var navigationController: UINavigationController
+var presenter: UINavigationController
 
 func stop() {
 }
 var childCoordinators: [Coordinator]
 
-init(navigationController: UINavigationController) {
-	self.navigationController = navigationController
+init(presenter: UINavigationController) {
+	self.presenter = presenter
 	childCoordinators = []
 
-	navigationController.tabBarItem = UITabBarItem(title: "Menu", image: nil, selectedImage: nil)
+	presenter.tabBarItem = UITabBarItem(title: "Menu", image: nil, selectedImage: nil)
 }
 
 func start() {

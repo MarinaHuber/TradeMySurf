@@ -8,13 +8,13 @@
 import UIKit
 
 protocol Coordinator: AnyObject {
-	var navigationController: UINavigationController { get }
+	var presenter: UINavigationController { get }
     var childCoordinators: [Coordinator] { get set }
 	func start()
 }
 extension Coordinator {
 	func stop() {
-		navigationController.setViewControllers([], animated: false)
+		presenter.setViewControllers([], animated: false)
 	}
 }
 

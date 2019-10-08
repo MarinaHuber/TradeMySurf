@@ -10,14 +10,14 @@ import Foundation
 import UIKit
 
 final class AppCoordinator: Coordinator {
-	var navigationController: UINavigationController
+	var presenter: UINavigationController
     var childCoordinators: [Coordinator]
 
     init(nav: UINavigationController) {
-		self.navigationController = nav
+		self.presenter = nav
 		childCoordinators = []
 
-		navigationController.setNavigationBarHidden(true, animated: false)
+		presenter.setNavigationBarHidden(true, animated: false)
     }
 
 	func start() {

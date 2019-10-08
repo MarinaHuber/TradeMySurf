@@ -16,14 +16,14 @@ final class TabBarCoordinator: Coordinator {
         case calculate = 2
     }
 
-	var navigationController: UINavigationController
+	var presenter: UINavigationController
 	let tabBarController: UITabBarController
     var childCoordinators: [Coordinator]
 
 	init(tabBarController: UITabBarController, nav: UINavigationController) {
         self.tabBarController = tabBarController
         childCoordinators = []
-		self.navigationController = nav
+		self.presenter = nav
     }
 
 
@@ -35,19 +35,19 @@ final class TabBarCoordinator: Coordinator {
             addChildCoordinator(coordinator: coordinator)
         })
 
-        let navigationControllers: [UINavigationController] = coordinators.map({ coordinator -> UINavigationController in
-            coordinator.navigationController
+        let presenters: [UINavigationController] = coordinators.map({ coordinator -> UINavigationController in
+            coordinator.presenter
         })
 
-        tabBarController.setViewControllers(navigationControllers, animated: false)
+        tabBarController.setViewControllers(presenters, animated: false)
 
-        selectTab(type: SellTipsCoordinator.self)
+       // selectTab(type: SellTipsCoordinator.self)
     }
 
     private func generateTabCoordinators() -> [Coordinator] {
-        let menuCoordinator: BuyTipsCoordinator = BuyTipsCoordinator(navigationController: UINavigationController())
-        let homeCoordinator: CalculatorCoordinator = CalculatorCoordinator(navigationController: UINavigationController())
-        let settingsCoordinator: SellTipsCoordinator = SellTipsCoordinator(navigationController: UINavigationController())
+        let menuCoordinator: BuyTipsCoordinator = BuyTipsCoordinator(presenter: UINavigationController())
+        let homeCoordinator: CalculatorCoordinator = CalculatorCoordinator(presenter: UINavigationController())
+        let settingsCoordinator: SellTipsCoordinator = SellTipsCoordinator(presenter: UINavigationController())
 
         return [menuCoordinator, homeCoordinator, settingsCoordinator]
     }
