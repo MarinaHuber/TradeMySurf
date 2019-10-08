@@ -17,12 +17,11 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
 	func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
 
-		let navigationController: UINavigationController = UINavigationController()
-        appCoordinator = AppCoordinator(nav: navigationController)
-		window = UIWindow(frame: UIScreen.main.bounds)
-		window?.rootViewController = navigationController
-		window?.makeKeyAndVisible()
-        appCoordinator?.start()
+		let window = UIWindow(frame: UIScreen.main.bounds)
+		let applicationCoordinator = AppCoordinator(window: window)
+		self.appCoordinator = applicationCoordinator
+
+		applicationCoordinator.start()
 		return true
 	}
 

@@ -7,3 +7,20 @@
 //
 
 import Foundation
+import UIKit
+
+final class TutorialCoordinator: Coordinator {
+
+	var presenter: UINavigationController
+	func stop() {
+	}
+	var childCoordinators: [Coordinator]
+
+	init(presenter: UINavigationController) {
+		self.presenter = presenter
+		childCoordinators = []
+	}
+	func start() {
+	}
+
+}

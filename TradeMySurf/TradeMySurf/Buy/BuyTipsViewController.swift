@@ -7,3 +7,18 @@
 //
 
 import Foundation
+import UIKit
+
+class BuyTipsViewController: UIViewController {
+
+
+}
+
+extension BuyTipsViewController: StoryboardProtocol {
+	func presentBuyVC() {
+		let vc = BuyTipsViewController.instantiateViewController()
+	}
+
+}
+
+

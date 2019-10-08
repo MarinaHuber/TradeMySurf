@@ -1,5 +1,5 @@
 //
-//  OnboardingViewController.swift
+//  TutorialViewController.swift
 //  TradeMySurf
 //
 //  Created by Marina Huber on 10/5/19.
@@ -7,3 +7,16 @@
 //
 
 import Foundation
+import UIKit
+
+class TutorialViewController: UIViewController {
+
+
+}
+
+extension TutorialViewController: StoryboardProtocol {
+	func present() {
+		let vc = TutorialViewController.instantiateViewController()
+	}
+
+}
