@@ -13,9 +13,16 @@ import UIKit
 class AppDelegate: UIResponder, UIApplicationDelegate {
 
 	var window: UIWindow?
+	private var appCoordinator: AppCoordinator?
 
 	func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
-		// Override point for customization after application launch.
+
+		let navigationController: UINavigationController = UINavigationController()
+        appCoordinator = AppCoordinator(nav: navigationController)
+		window = UIWindow(frame: UIScreen.main.bounds)
+		window?.rootViewController = navigationController
+		window?.makeKeyAndVisible()
+        appCoordinator?.start()
 		return true
 	}
 
@@ -25,22 +32,6 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
     func applicationDidEnterBackground(_ application: UIApplication) {
         // If your application supports background execution, this method is called instead of applicationWillTerminate: when the user quits.
-    }
-    func presentFirstViewController() {
-        let firstViewController = UIStoryboard(name: .priceCalculator).instantiateInitialViewController() as! PriceCalendarViewController
-        let mainStoryboardName = Bundle.main.object(forInfoDictionaryKey: "Main") as! String
-        let storyboard: UIStoryboard = UIStoryboard(name: mainStoryboardName, bundle: nil)
-        let centerViewController = storyboard.instantiateInitialViewController()!
-
-
-        // present the Onboarding pager
-        // TODO: Only do this when user first time downloaded app
-        let onboardingStoryboard = UIStoryboard(name: "Onboarding", bundle: nil)
-        if let onboardingVC = onboardingStoryboard.instantiateInitialViewController() {
-            centerViewController.present(onboardingVC, animated: false, completion: { [weak self] in
-				self?.window?.rootViewController?.dismiss(animated: true, completion: nil)
-            })
-        }
     }
 
 }
