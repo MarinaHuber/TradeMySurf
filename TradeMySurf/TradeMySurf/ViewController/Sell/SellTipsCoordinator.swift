@@ -20,7 +20,7 @@ final class SellTipsCoordinator: Coordinator {
 	}
 
 	func start() {
-//		let sellVC = SellTipsViewController.instantiate()
-//		presenter.pushViewController(sellVC, animated: true)
+		let sellVC = SellTipsViewController.instantiate()
+		presenter.pushViewController(sellVC, animated: true)
 	}
 }
