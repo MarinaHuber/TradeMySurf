@@ -1,14 +1,16 @@
 //
-//  BuyTipsCoordinator.swift
+//  OnboardingCoordinator.swift
 //  TradeMySurf
 //
-//  Created by Marina Huber on 10/8/19.
+//  Created by Marina Huber on 10/7/19.
 //  Copyright © 2019 Marina Huber. All rights reserved.
 //
 
+import Foundation
 import UIKit
 
-final class BuyTipsCoordinator: Coordinator {
+final class TutorialCoordinator: Coordinator {
+
 	var presenter: UINavigationController
 	func stop() {
 	}
@@ -17,10 +19,10 @@ final class BuyTipsCoordinator: Coordinator {
 	init(presenter: UINavigationController) {
 		self.presenter = presenter
 		childCoordinators = []
-
-		presenter.tabBarItem = UITabBarItem(title: "Menu", image: nil, selectedImage: nil)
 	}
-
 	func start() {
+		let tutorialVC = TutorialViewController.instantiate()
+		presenter.pushViewController(tutorialVC, animated: true)
 	}
+
 }

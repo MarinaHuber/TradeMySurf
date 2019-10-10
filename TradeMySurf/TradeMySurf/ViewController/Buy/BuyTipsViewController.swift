@@ -10,14 +10,12 @@ import Foundation
 import UIKit
 
 class BuyTipsViewController: UIViewController {
-
+	weak var coordinator: AppCoordinator?
 
 }
 
 extension BuyTipsViewController: StoryboardProtocol {
-	func presentBuyVC() {
-		let vc = BuyTipsViewController.instantiateViewController()
-	}
+
 
 }
 

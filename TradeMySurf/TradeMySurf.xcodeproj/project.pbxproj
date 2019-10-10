@@ -8,7 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		9C3F533D234BD80E00D5F65E /* Coordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C3F533C234BD80E00D5F65E /* Coordinator.swift */; };
-		9C4C54722349C25E00FB2653 /* Buy.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9C4C54712349C25E00FB2653 /* Buy.storyboard */; };
+		9C45E661234D238F0054A5FD /* Buy.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9C45E660234D238E0054A5FD /* Buy.storyboard */; };
 		9C4C54742349C28500FB2653 /* Sell.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9C4C54732349C28500FB2653 /* Sell.storyboard */; };
 		9C4C54762349C4F600FB2653 /* TabBarViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C4C54752349C4F600FB2653 /* TabBarViewController.swift */; };
 		9C53D5C0234C126600A3BD80 /* StoryboardProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C53D5BF234C126600A3BD80 /* StoryboardProtocol.swift */; };
@@ -17,8 +17,7 @@
 		9C53D5C6234C145B00A3BD80 /* SellTipsCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C53D5C5234C145B00A3BD80 /* SellTipsCoordinator.swift */; };
 		9C5B644C232A506C000727E6 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C5B644B232A506C000727E6 /* AppDelegate.swift */; };
 		9C5B644E232A506C000727E6 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C5B644D232A506C000727E6 /* SceneDelegate.swift */; };
-		9C5B6450232A506C000727E6 /* PriceCalendarViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C5B644F232A506C000727E6 /* PriceCalendarViewController.swift */; };
-		9C5B6453232A506C000727E6 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9C5B6451232A506C000727E6 /* Main.storyboard */; };
+		9C5B6450232A506C000727E6 /* PriceCalculatorViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C5B644F232A506C000727E6 /* PriceCalculatorViewController.swift */; };
 		9C5B6456232A506C000727E6 /* TradeMySurf.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 9C5B6454232A506C000727E6 /* TradeMySurf.xcdatamodeld */; };
 		9C5B6458232A5073000727E6 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 9C5B6457232A5073000727E6 /* Assets.xcassets */; };
 		9C5B645B232A5073000727E6 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9C5B6459232A5073000727E6 /* LaunchScreen.storyboard */; };
@@ -27,6 +26,8 @@
 		9C5B647F232A508B000727E6 /* Surfs.mlmodel in Sources */ = {isa = PBXBuildFile; fileRef = 9C5B647E232A508B000727E6 /* Surfs.mlmodel */; };
 		9C5B6481232A5092000727E6 /* surfs.csv in Resources */ = {isa = PBXBuildFile; fileRef = 9C5B6480232A5091000727E6 /* surfs.csv */; };
 		9C69CE76234CD9B9003E386F /* SurfStorage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C69CE75234CD9B9003E386F /* SurfStorage.swift */; };
+		9C69CE85234D06D7003E386F /* Calculator.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9C69CE84234D06D7003E386F /* Calculator.storyboard */; };
+		9C69CE87234D0749003E386F /* Tutorial.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9C69CE86234D0749003E386F /* Tutorial.storyboard */; };
 		9C76F09423493DAB00853FD9 /* TutorialViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C76F09323493DAB00853FD9 /* TutorialViewController.swift */; };
 		9C76F09623493EDA00853FD9 /* BuyTipsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C76F09523493EDA00853FD9 /* BuyTipsViewController.swift */; };
 		9C76F09823493F0900853FD9 /* SellTipsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C76F09723493F0900853FD9 /* SellTipsViewController.swift */; };
@@ -55,7 +56,7 @@
 
 /* Begin PBXFileReference section */
 		9C3F533C234BD80E00D5F65E /* Coordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Coordinator.swift; sourceTree = "<group>"; };
-		9C4C54712349C25E00FB2653 /* Buy.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Buy.storyboard; path = TradeMySurf/Buy/Buy.storyboard; sourceTree = SOURCE_ROOT; };
+		9C45E660234D238E0054A5FD /* Buy.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Buy.storyboard; sourceTree = "<group>"; };
 		9C4C54732349C28500FB2653 /* Sell.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Sell.storyboard; sourceTree = "<group>"; };
 		9C4C54752349C4F600FB2653 /* TabBarViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabBarViewController.swift; sourceTree = "<group>"; };
 		9C53D5BF234C126600A3BD80 /* StoryboardProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StoryboardProtocol.swift; sourceTree = "<group>"; };
@@ -65,8 +66,7 @@
 		9C5B6448232A506C000727E6 /* TradeMySurf.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TradeMySurf.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		9C5B644B232A506C000727E6 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		9C5B644D232A506C000727E6 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		9C5B644F232A506C000727E6 /* PriceCalendarViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PriceCalendarViewController.swift; sourceTree = "<group>"; };
-		9C5B6452232A506C000727E6 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		9C5B644F232A506C000727E6 /* PriceCalculatorViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PriceCalculatorViewController.swift; sourceTree = "<group>"; };
 		9C5B6455232A506C000727E6 /* TradeMySurf.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = TradeMySurf.xcdatamodel; sourceTree = "<group>"; };
 		9C5B6457232A5073000727E6 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		9C5B645A232A5073000727E6 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -77,6 +77,8 @@
 		9C5B647E232A508B000727E6 /* Surfs.mlmodel */ = {isa = PBXFileReference; lastKnownFileType = file.mlmodel; name = Surfs.mlmodel; path = ../../Working/Surfs.mlmodel; sourceTree = "<group>"; };
 		9C5B6480232A5091000727E6 /* surfs.csv */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; name = surfs.csv; path = ../../Working/surfs.csv; sourceTree = "<group>"; };
 		9C69CE75234CD9B9003E386F /* SurfStorage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SurfStorage.swift; sourceTree = "<group>"; };
+		9C69CE84234D06D7003E386F /* Calculator.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Calculator.storyboard; sourceTree = "<group>"; };
+		9C69CE86234D0749003E386F /* Tutorial.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Tutorial.storyboard; sourceTree = "<group>"; };
 		9C71A14B2348946C00A67323 /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		9C71A14E234894CD00A67323 /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		9C71A150234894D500A67323 /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -136,7 +138,7 @@
 		9C53D5C8234CB19900A3BD80 /* Buy */ = {
 			isa = PBXGroup;
 			children = (
-				9C4C54712349C25E00FB2653 /* Buy.storyboard */,
+				9C45E660234D238E0054A5FD /* Buy.storyboard */,
 				9C53D5C3234C144400A3BD80 /* BuyTipsCoordinator.swift */,
 				9C76F09523493EDA00853FD9 /* BuyTipsViewController.swift */,
 			);
@@ -146,8 +148,9 @@
 		9C53D5C9234CB1A800A3BD80 /* Calculator */ = {
 			isa = PBXGroup;
 			children = (
+				9C69CE84234D06D7003E386F /* Calculator.storyboard */,
 				9C53D5C1234C142A00A3BD80 /* CalculatorCoordinator.swift */,
-				9C5B644F232A506C000727E6 /* PriceCalendarViewController.swift */,
+				9C5B644F232A506C000727E6 /* PriceCalculatorViewController.swift */,
 			);
 			path = Calculator;
 			sourceTree = "<group>";
@@ -176,9 +179,6 @@
 			isa = PBXGroup;
 			children = (
 				9C69CE74234CD992003E386F /* Model */,
-				9C53D5C9234CB1A800A3BD80 /* Calculator */,
-				9C53D5C8234CB19900A3BD80 /* Buy */,
-				9C53D5C7234CB18600A3BD80 /* Sell */,
 				9C3F533B234BD7F900D5F65E /* Protocols */,
 				9CC59F15234AA3B200F5ADD0 /* Coordinators */,
 				9C76F09F2349471000853FD9 /* ViewController */,
@@ -220,10 +220,19 @@
 			path = Model;
 			sourceTree = "<group>";
 		};
+		9C69CE88234D1D87003E386F /* TutorialPage */ = {
+			isa = PBXGroup;
+			children = (
+				9C69CE86234D0749003E386F /* Tutorial.storyboard */,
+				9CC59F1A234AA87700F5ADD0 /* TutorialCoordinator.swift */,
+				9C76F09323493DAB00853FD9 /* TutorialViewController.swift */,
+			);
+			path = TutorialPage;
+			sourceTree = "<group>";
+		};
 		9C76F09E234946D500853FD9 /* Resources */ = {
 			isa = PBXGroup;
 			children = (
-				9C5B6451232A506C000727E6 /* Main.storyboard */,
 				9C76F09C234946CA00853FD9 /* TabBar.storyboard */,
 				9C5B6457232A5073000727E6 /* Assets.xcassets */,
 				9C5B6459232A5073000727E6 /* LaunchScreen.storyboard */,
@@ -234,8 +243,11 @@
 		9C76F09F2349471000853FD9 /* ViewController */ = {
 			isa = PBXGroup;
 			children = (
+				9C69CE88234D1D87003E386F /* TutorialPage */,
+				9C53D5C9234CB1A800A3BD80 /* Calculator */,
+				9C53D5C8234CB19900A3BD80 /* Buy */,
+				9C53D5C7234CB18600A3BD80 /* Sell */,
 				9C4C54752349C4F600FB2653 /* TabBarViewController.swift */,
-				9C76F09323493DAB00853FD9 /* TutorialViewController.swift */,
 			);
 			path = ViewController;
 			sourceTree = "<group>";
@@ -243,7 +255,6 @@
 		9CC59F15234AA3B200F5ADD0 /* Coordinators */ = {
 			isa = PBXGroup;
 			children = (
-				9CC59F1A234AA87700F5ADD0 /* TutorialCoordinator.swift */,
 				9CC59F18234AA41600F5ADD0 /* TabBarCoordinator.swift */,
 			);
 			path = Coordinators;
@@ -354,12 +365,13 @@
 			buildActionMask = 2147483647;
 			files = (
 				9C5B645B232A5073000727E6 /* LaunchScreen.storyboard in Resources */,
-				9C4C54722349C25E00FB2653 /* Buy.storyboard in Resources */,
+				9C45E661234D238F0054A5FD /* Buy.storyboard in Resources */,
+				9C69CE87234D0749003E386F /* Tutorial.storyboard in Resources */,
 				9C5B6458232A5073000727E6 /* Assets.xcassets in Resources */,
 				9C5B6481232A5092000727E6 /* surfs.csv in Resources */,
 				9C76F09D234946CA00853FD9 /* TabBar.storyboard in Resources */,
 				9C4C54742349C28500FB2653 /* Sell.storyboard in Resources */,
-				9C5B6453232A506C000727E6 /* Main.storyboard in Resources */,
+				9C69CE85234D06D7003E386F /* Calculator.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -390,7 +402,7 @@
 				9CC59F17234AA3EF00F5ADD0 /* AppCoordinator.swift in Sources */,
 				9CC59F1B234AA87700F5ADD0 /* TutorialCoordinator.swift in Sources */,
 				9C3F533D234BD80E00D5F65E /* Coordinator.swift in Sources */,
-				9C5B6450232A506C000727E6 /* PriceCalendarViewController.swift in Sources */,
+				9C5B6450232A506C000727E6 /* PriceCalculatorViewController.swift in Sources */,
 				9CC59F19234AA41600F5ADD0 /* TabBarCoordinator.swift in Sources */,
 				9C76F09423493DAB00853FD9 /* TutorialViewController.swift in Sources */,
 				9C53D5C4234C144400A3BD80 /* BuyTipsCoordinator.swift in Sources */,
@@ -437,14 +449,6 @@
 /* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
-		9C5B6451232A506C000727E6 /* Main.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				9C5B6452232A506C000727E6 /* Base */,
-			);
-			name = Main.storyboard;
-			sourceTree = "<group>";
-		};
 		9C5B6459232A5073000727E6 /* LaunchScreen.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (

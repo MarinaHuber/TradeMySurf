@@ -10,12 +10,9 @@ import Foundation
 import UIKit
 
 class SellTipsViewController: UIViewController {
-
+	weak var coordinator: AppCoordinator?
 }
 
 extension SellTipsViewController: StoryboardProtocol {
-	func present() {
-		let vc = SellTipsViewController.instantiateViewController()
-	}
 
 }

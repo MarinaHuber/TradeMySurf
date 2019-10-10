@@ -30,20 +30,35 @@ import UIKit
 //}
 
 
-protocol StoryboardProtocol: NSObjectProtocol {
-  associatedtype MyType  // 1
-  static var defaultFileName: String { get }  // 2
-  static func instantiateViewController(_ bundle: Bundle?) -> MyType // 3
+//protocol StoryboardProtocol: NSObjectProtocol {
+//  associatedtype MyType  // 1
+//  static var defaultFileName: String { get }  // 2
+//  static func instantiateViewController(_ bundle: Bundle?) -> MyType // 3
+//}
+//
+//extension StoryboardProtocol where Self: UIViewController {
+//  static var defaultFileName: String {
+//    return NSStringFromClass(Self.self).components(separatedBy: ".").last!
+//  }
+//
+//  static func instantiateViewController(_ bundle: Bundle? = nil) -> Self {
+//    let fileName = defaultFileName
+//    let sb = UIStoryboard(name: fileName, bundle: bundle)
+//    return sb.instantiateInitialViewController() as! Self
+//  }
+//}
+import UIKit
+
+protocol StoryboardProtocol {
+    static func instantiate() -> Self
 }
 
 extension StoryboardProtocol where Self: UIViewController {
-  static var defaultFileName: String {
-    return NSStringFromClass(Self.self).components(separatedBy: ".").last!
-  }
-
-  static func instantiateViewController(_ bundle: Bundle? = nil) -> Self {
-    let fileName = defaultFileName
-    let sb = UIStoryboard(name: fileName, bundle: bundle)
-    return sb.instantiateInitialViewController() as! Self
-  }
+    static func instantiate() -> Self {
+        let fullName = NSStringFromClass(self)
+// this splits by the dot and uses everything after, giving "MyViewController"
+		let className = fullName.components(separatedBy: ".")[1]
+        let storyboard = UIStoryboard(name: "Tutorial", bundle: Bundle.main)
+        return storyboard.instantiateViewController(withIdentifier: className) as! Self
+    }
 }

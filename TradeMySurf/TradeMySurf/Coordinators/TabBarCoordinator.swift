@@ -24,24 +24,13 @@ final class TabBarCoordinator: Coordinator {
         self.tabBarController = tabBarController
         childCoordinators = []
 		self.presenter = nav
+		presenter.navigationBar.prefersLargeTitles = true
+		presenter.navigationBar.topItem?.title = "Kelly my surf"
     }
 
 
     func start() {
-        let coordinators: [Coordinator] = generateTabCoordinators()
-
-        coordinators.forEach({ coordinator in
-            coordinator.start()
-            addChildCoordinator(coordinator: coordinator)
-        })
-
-        let presenters: [UINavigationController] = coordinators.map({ coordinator -> UINavigationController in
-            coordinator.presenter
-        })
-
-        tabBarController.setViewControllers(presenters, animated: false)
-
-       // selectTab(type: SellTipsCoordinator.self)
+		performGetStarted()
     }
 
     private func generateTabCoordinators() -> [Coordinator] {
@@ -51,17 +40,45 @@ final class TabBarCoordinator: Coordinator {
 
         return [menuCoordinator, homeCoordinator, settingsCoordinator]
     }
+
+    func performGetStarted() {
+		let coordinators: [Coordinator] = generateTabCoordinators()
+
+        coordinators.forEach({ coordinator in
+            coordinator.start()
+            addChildCoordinator(coordinator: coordinator)
+        })
+
+        let presenters: [UINavigationController] = coordinators.map({ coordinator -> UINavigationController in
+            coordinator.presenter
+        })
+        tabBarController.setViewControllers(presenters, animated: false)
+
+		selectTab(.buy)
+    }
 }
 
 extension TabBarCoordinator {
-    func selectTab<T: Coordinator>(type _: T.Type) {
-        guard let index = childCoordinators.firstIndex(where: { coordinator in
-            coordinator is T
-        }) else {
-            return
-        }
+		private func selectTab(_ tab: Tab) {
 
-        tabBarController.selectedIndex = index
-    }
-}
+			if let vc = tabBarController as? TabBarViewController {
+				vc.selectedIndex = tab.rawValue
+			}
+
+			if let coordinator = childCoordinators[tab.rawValue] as? TabBarCoordinator {
+				coordinator.start()
+			}
+		}
+	}
+
+
+//    func selectTab<T: Coordinator>(type _: T.Type) {
+//        guard let index = childCoordinators.firstIndex(where: { coordinator in
+//            coordinator is T
+//        }) else {
+//            return
+//        }
+//
+//        tabBarController.selectedIndex = index
+//    }
 

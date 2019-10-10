@@ -1,17 +1,16 @@
 //
-//  OnboardingCoordinator.swift
+//  CalculatorCoordinator.swift
 //  TradeMySurf
 //
-//  Created by Marina Huber on 10/7/19.
+//  Created by Marina Huber on 10/8/19.
 //  Copyright © 2019 Marina Huber. All rights reserved.
 //
 
-import Foundation
 import UIKit
 
-final class TutorialCoordinator: Coordinator {
-
+final class CalculatorCoordinator: Coordinator {
 	var presenter: UINavigationController
+
 	func stop() {
 	}
 	var childCoordinators: [Coordinator]
@@ -19,8 +18,10 @@ final class TutorialCoordinator: Coordinator {
 	init(presenter: UINavigationController) {
 		self.presenter = presenter
 		childCoordinators = []
-	}
-	func start() {
+
+		presenter.tabBarItem = UITabBarItem(title: "calculator", image: nil, selectedImage: nil)
 	}
 
+	func start() {
+	}
 }

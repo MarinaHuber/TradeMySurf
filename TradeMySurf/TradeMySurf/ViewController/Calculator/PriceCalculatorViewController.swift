@@ -8,7 +8,8 @@
 
 import UIKit
 
-class PriceCalendarViewController: UIViewController {
+class PriceCalculatorViewController: UIViewController {
+	weak var coordinator: AppCoordinator?
 
     let cars = Surfs()
 

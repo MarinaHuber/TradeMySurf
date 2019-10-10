@@ -1,0 +1,147 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14868" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14824"/>
+        <capability name="Named colors" minToolsVersion="9.0"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--CALCULATOR-->
+        <scene sceneID="A0p-qg-S49">
+            <objects>
+                <viewController storyboardIdentifier="PriceCalendarViewController" id="NuV-wN-EPR" customClass="PriceCalendarViewController" customModule="TradeMySurf" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="Hme-ax-p5J">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="5" translatesAutoresizingMaskIntoConstraints="NO" id="eQq-u4-VZ7">
+                                <rect key="frame" x="20" y="64" width="374" height="410.5"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="VENDOR" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="pi7-Xi-L6t">
+                                        <rect key="frame" x="0.0" y="0.0" width="374" height="20.5"/>
+                                        <fontDescription key="fontDescription" style="UICTFontTextStyleHeadline"/>
+                                        <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <segmentedControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="1" translatesAutoresizingMaskIntoConstraints="NO" id="ftc-G7-AUk">
+                                        <rect key="frame" x="0.0" y="25.5" width="374" height="32"/>
+                                        <segments>
+                                            <segment title="RipCurl"/>
+                                            <segment title="Lost"/>
+                                            <segment title="Chilli"/>
+                                        </segments>
+                                        <connections>
+                                            <action selector="calculateValue:" destination="NuV-wN-EPR" eventType="valueChanged" id="awP-xS-XZE"/>
+                                        </connections>
+                                    </segmentedControl>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="GEAR" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="HaC-FZ-E91">
+                                        <rect key="frame" x="0.0" y="61.5" width="374" height="20.5"/>
+                                        <fontDescription key="fontDescription" style="UICTFontTextStyleHeadline"/>
+                                        <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <segmentedControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="f12-EG-q2R">
+                                        <rect key="frame" x="0.0" y="87" width="374" height="32"/>
+                                        <segments>
+                                            <segment title="Finless"/>
+                                            <segment title="Single fin"/>
+                                            <segment title="Double Fin"/>
+                                            <segment title="Three fin"/>
+                                            <segment title="Four fin"/>
+                                        </segments>
+                                        <connections>
+                                            <action selector="calculateValue:" destination="NuV-wN-EPR" eventType="valueChanged" id="WU0-BG-KsB"/>
+                                        </connections>
+                                    </segmentedControl>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="HOURS ON WATER" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="o3k-vf-1gc">
+                                        <rect key="frame" x="0.0" y="123" width="374" height="20.5"/>
+                                        <fontDescription key="fontDescription" style="UICTFontTextStyleHeadline"/>
+                                        <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <slider opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="10000" minValue="0.0" maxValue="200000" translatesAutoresizingMaskIntoConstraints="NO" id="KUn-Vj-i6S">
+                                        <rect key="frame" x="-2" y="148.5" width="378" height="31"/>
+                                        <connections>
+                                            <action selector="calculateValue:" destination="NuV-wN-EPR" eventType="valueChanged" id="I8U-Hh-2Y7"/>
+                                        </connections>
+                                    </slider>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="CONDITION" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="rdU-x6-dfo">
+                                        <rect key="frame" x="0.0" y="183.5" width="374" height="20.5"/>
+                                        <fontDescription key="fontDescription" style="UICTFontTextStyleHeadline"/>
+                                        <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <segmentedControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="2" translatesAutoresizingMaskIntoConstraints="NO" id="af1-0f-Ic1">
+                                        <rect key="frame" x="0.0" y="209" width="374" height="32"/>
+                                        <segments>
+                                            <segment title="Poor"/>
+                                            <segment title="OK"/>
+                                            <segment title="Good"/>
+                                            <segment title="Great"/>
+                                        </segments>
+                                        <connections>
+                                            <action selector="calculateValue:" destination="NuV-wN-EPR" eventType="valueChanged" id="gag-xh-BeN"/>
+                                        </connections>
+                                    </segmentedControl>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="YEAR OF PRODUCTION" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="lGt-0J-EUF">
+                                        <rect key="frame" x="0.0" y="245" width="374" height="20.5"/>
+                                        <fontDescription key="fontDescription" style="UICTFontTextStyleHeadline"/>
+                                        <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="1bY-vx-ly8">
+                                        <rect key="frame" x="0.0" y="270.5" width="374" height="33"/>
+                                        <fontDescription key="fontDescription" style="UICTFontTextStyleHeadline"/>
+                                        <state key="normal" title="TAKE A PICTURE"/>
+                                    </button>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="TRADE YOUR BOARD FOR…" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="P3g-kf-HfF">
+                                        <rect key="frame" x="0.0" y="308.5" width="374" height="20.5"/>
+                                        <fontDescription key="fontDescription" style="UICTFontTextStyleHeadline"/>
+                                        <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="$99,999" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="uts-nl-GW8">
+                                        <rect key="frame" x="0.0" y="334" width="374" height="76.5"/>
+                                        <fontDescription key="fontDescription" type="system" weight="thin" pointSize="64"/>
+                                        <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                </subviews>
+                            </stackView>
+                        </subviews>
+                        <color key="backgroundColor" name="blueColor"/>
+                        <color key="tintColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="eQq-u4-VZ7" firstAttribute="top" secondItem="lWU-n5-I3P" secondAttribute="top" constant="20" id="bge-id-PcJ"/>
+                            <constraint firstItem="eQq-u4-VZ7" firstAttribute="leading" secondItem="lWU-n5-I3P" secondAttribute="leading" constant="20" id="h1t-du-WTH"/>
+                            <constraint firstItem="lWU-n5-I3P" firstAttribute="trailing" secondItem="eQq-u4-VZ7" secondAttribute="trailing" constant="20" id="v9J-kg-Tes"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="lWU-n5-I3P"/>
+                    </view>
+                    <tabBarItem key="tabBarItem" title="CALCULATOR" image="surfboardCalc2x" id="Mg6-vh-hHU"/>
+                    <navigationItem key="navigationItem" id="x3L-Wf-1HY"/>
+                    <connections>
+                        <outlet property="condition" destination="af1-0f-Ic1" id="1Ol-dR-Wk6"/>
+                        <outlet property="mileage" destination="KUn-Vj-i6S" id="Mpt-m4-Gvi"/>
+                        <outlet property="mileageLabel" destination="o3k-vf-1gc" id="K3n-mi-gz4"/>
+                        <outlet property="model" destination="ftc-G7-AUk" id="wp6-Ho-q6j"/>
+                        <outlet property="stackView" destination="eQq-u4-VZ7" id="ZVf-RZ-gbA"/>
+                        <outlet property="upgrades" destination="f12-EG-q2R" id="tRT-Mz-DTN"/>
+                        <outlet property="valuation" destination="uts-nl-GW8" id="6kQ-JN-Omq"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="yn9-6i-Jn2" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1251" y="-1812"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="surfboardCalc2x" width="25" height="25"/>
+        <namedColor name="blueColor">
+            <color red="0.25400000810623169" green="0.64800000190734863" blue="0.67599999904632568" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+    </resources>
+</document>

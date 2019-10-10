@@ -10,25 +10,25 @@ import Foundation
 import UIKit
 
 final class AppCoordinator: Coordinator {
-    var childCoordinators: [Coordinator]
+	var childCoordinators: [Coordinator]
 	let window: UIWindow
 	let presenter: UINavigationController
-	let firstCoordinator: TutorialCoordinator
+	let rootCoordinator: TutorialCoordinator
 
 	init(window: UIWindow) {
-	  self.window = window
-	  childCoordinators = []
-	  presenter = UINavigationController()
-	  presenter.setNavigationBarHidden(true, animated: false)
-	  presenter.navigationBar.prefersLargeTitles = true
+		self.window = window
+		childCoordinators = []
+		presenter = UINavigationController()
+		rootCoordinator = TutorialCoordinator(presenter: presenter)
 
-	  firstCoordinator = TutorialCoordinator(presenter: presenter)
+		//presenter.setNavigationBarHidden(true, animated: false)
+
 	}
 
 	func start() {
-	  window.rootViewController = presenter
-	  firstCoordinator.start()
-	  window.makeKeyAndVisible()
+		window.rootViewController = presenter
+		rootCoordinator.start()
+		window.makeKeyAndVisible()
 	}
 }
 

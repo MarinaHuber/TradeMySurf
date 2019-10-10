@@ -9,14 +9,23 @@
 import Foundation
 import UIKit
 
+
+
+
 class TutorialViewController: UIViewController {
 
+	weak var coordinator: TabBarCoordinator?
 
+    override func viewDidLoad() {
+        super.viewDidLoad()
+    }
+
+	@IBAction func openTabBar(_ sender: Any) {
+		coordinator?.performGetStarted()
+	}
+	
 }
 
 extension TutorialViewController: StoryboardProtocol {
-	func present() {
-		let vc = TutorialViewController.instantiateViewController()
-	}
 
 }
