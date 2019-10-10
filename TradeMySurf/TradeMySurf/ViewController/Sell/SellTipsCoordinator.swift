@@ -9,19 +9,16 @@
 import UIKit
 
 final class SellTipsCoordinator: Coordinator {
-var presenter: UINavigationController
+	internal var presenter: UINavigationController
+	internal var childCoordinators: [Coordinator]
 
-func stop() {
-}
-var childCoordinators: [Coordinator]
+	init(presenter: UINavigationController) {
+		self.presenter = presenter
+		childCoordinators = []
 
-init(presenter: UINavigationController) {
-	self.presenter = presenter
-	childCoordinators = []
+		presenter.tabBarItem = UITabBarItem(title: "sell", image: nil, selectedImage: nil)
+	}
 
-	presenter.tabBarItem = UITabBarItem(title: "sell", image: nil, selectedImage: nil)
-}
-
-func start() {
-   }
+	func start() {
+	}
 }

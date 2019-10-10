@@ -9,10 +9,8 @@
 import UIKit
 
 final class BuyTipsCoordinator: Coordinator {
-	var presenter: UINavigationController
-	func stop() {
-	}
-	var childCoordinators: [Coordinator]
+	internal var presenter: UINavigationController
+	internal var childCoordinators: [Coordinator]
 
 	init(presenter: UINavigationController) {
 		self.presenter = presenter

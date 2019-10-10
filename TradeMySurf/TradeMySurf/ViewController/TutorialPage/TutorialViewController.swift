@@ -9,10 +9,13 @@
 import Foundation
 import UIKit
 
-
+protocol TutorialViewControllerDelegate: class {
+  func performTabBar()
+}
 
 
 class TutorialViewController: UIViewController {
+	 weak var delegate: TutorialViewControllerDelegate?
 
 	weak var coordinator: TabBarCoordinator?
 
@@ -21,7 +24,7 @@ class TutorialViewController: UIViewController {
     }
 
 	@IBAction func openTabBar(_ sender: Any) {
-		coordinator?.performGetStarted()
+		delegate?.performTabBar()
 	}
 	
 }

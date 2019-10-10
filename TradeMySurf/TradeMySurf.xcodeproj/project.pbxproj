@@ -11,7 +11,6 @@
 		9C45E661234D238F0054A5FD /* Buy.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9C45E660234D238E0054A5FD /* Buy.storyboard */; };
 		9C467C67234F2A7D009F4D58 /* SurfTextModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C467C66234F2A7D009F4D58 /* SurfTextModel.swift */; };
 		9C4C54742349C28500FB2653 /* Sell.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9C4C54732349C28500FB2653 /* Sell.storyboard */; };
-		9C4C54762349C4F600FB2653 /* TabBarViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C4C54752349C4F600FB2653 /* TabBarViewController.swift */; };
 		9C53D5C0234C126600A3BD80 /* StoryboardProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C53D5BF234C126600A3BD80 /* StoryboardProtocol.swift */; };
 		9C53D5C2234C142A00A3BD80 /* CalculatorCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C53D5C1234C142A00A3BD80 /* CalculatorCoordinator.swift */; };
 		9C53D5C4234C144400A3BD80 /* BuyTipsCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C53D5C3234C144400A3BD80 /* BuyTipsCoordinator.swift */; };
@@ -32,7 +31,6 @@
 		9C76F09423493DAB00853FD9 /* TutorialViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C76F09323493DAB00853FD9 /* TutorialViewController.swift */; };
 		9C76F09623493EDA00853FD9 /* BuyTipsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C76F09523493EDA00853FD9 /* BuyTipsViewController.swift */; };
 		9C76F09823493F0900853FD9 /* SellTipsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C76F09723493F0900853FD9 /* SellTipsViewController.swift */; };
-		9C76F09D234946CA00853FD9 /* TabBar.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9C76F09C234946CA00853FD9 /* TabBar.storyboard */; };
 		9CC59F17234AA3EF00F5ADD0 /* AppCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9CC59F16234AA3EF00F5ADD0 /* AppCoordinator.swift */; };
 		9CC59F19234AA41600F5ADD0 /* TabBarCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9CC59F18234AA41600F5ADD0 /* TabBarCoordinator.swift */; };
 		9CC59F1B234AA87700F5ADD0 /* TutorialCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9CC59F1A234AA87700F5ADD0 /* TutorialCoordinator.swift */; };
@@ -60,7 +58,6 @@
 		9C45E660234D238E0054A5FD /* Buy.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Buy.storyboard; sourceTree = "<group>"; };
 		9C467C66234F2A7D009F4D58 /* SurfTextModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SurfTextModel.swift; sourceTree = "<group>"; };
 		9C4C54732349C28500FB2653 /* Sell.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Sell.storyboard; sourceTree = "<group>"; };
-		9C4C54752349C4F600FB2653 /* TabBarViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabBarViewController.swift; sourceTree = "<group>"; };
 		9C53D5BF234C126600A3BD80 /* StoryboardProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StoryboardProtocol.swift; sourceTree = "<group>"; };
 		9C53D5C1234C142A00A3BD80 /* CalculatorCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CalculatorCoordinator.swift; sourceTree = "<group>"; };
 		9C53D5C3234C144400A3BD80 /* BuyTipsCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BuyTipsCoordinator.swift; sourceTree = "<group>"; };
@@ -87,7 +84,6 @@
 		9C76F09323493DAB00853FD9 /* TutorialViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TutorialViewController.swift; sourceTree = "<group>"; };
 		9C76F09523493EDA00853FD9 /* BuyTipsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BuyTipsViewController.swift; sourceTree = "<group>"; };
 		9C76F09723493F0900853FD9 /* SellTipsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SellTipsViewController.swift; sourceTree = "<group>"; };
-		9C76F09C234946CA00853FD9 /* TabBar.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = TabBar.storyboard; sourceTree = "<group>"; };
 		9CC59F16234AA3EF00F5ADD0 /* AppCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppCoordinator.swift; sourceTree = "<group>"; };
 		9CC59F18234AA41600F5ADD0 /* TabBarCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabBarCoordinator.swift; sourceTree = "<group>"; };
 		9CC59F1A234AA87700F5ADD0 /* TutorialCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TutorialCoordinator.swift; sourceTree = "<group>"; };
@@ -236,7 +232,6 @@
 		9C76F09E234946D500853FD9 /* Resources */ = {
 			isa = PBXGroup;
 			children = (
-				9C76F09C234946CA00853FD9 /* TabBar.storyboard */,
 				9C5B6457232A5073000727E6 /* Assets.xcassets */,
 				9C5B6459232A5073000727E6 /* LaunchScreen.storyboard */,
 			);
@@ -250,7 +245,6 @@
 				9C53D5C9234CB1A800A3BD80 /* Calculator */,
 				9C53D5C8234CB19900A3BD80 /* Buy */,
 				9C53D5C7234CB18600A3BD80 /* Sell */,
-				9C4C54752349C4F600FB2653 /* TabBarViewController.swift */,
 			);
 			path = ViewController;
 			sourceTree = "<group>";
@@ -372,7 +366,6 @@
 				9C69CE87234D0749003E386F /* Tutorial.storyboard in Resources */,
 				9C5B6458232A5073000727E6 /* Assets.xcassets in Resources */,
 				9C5B6481232A5092000727E6 /* surfs.csv in Resources */,
-				9C76F09D234946CA00853FD9 /* TabBar.storyboard in Resources */,
 				9C4C54742349C28500FB2653 /* Sell.storyboard in Resources */,
 				9C69CE85234D06D7003E386F /* Calculator.storyboard in Resources */,
 			);
@@ -416,7 +409,6 @@
 				9C5B6456232A506C000727E6 /* TradeMySurf.xcdatamodeld in Sources */,
 				9C76F09623493EDA00853FD9 /* BuyTipsViewController.swift in Sources */,
 				9C76F09823493F0900853FD9 /* SellTipsViewController.swift in Sources */,
-				9C4C54762349C4F600FB2653 /* TabBarViewController.swift in Sources */,
 				9C5B644E232A506C000727E6 /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

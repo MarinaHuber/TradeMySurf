@@ -12,11 +12,6 @@ protocol Coordinator: AnyObject {
     var childCoordinators: [Coordinator] { get set }
 	func start()
 }
-extension Coordinator {
-	func stop() {
-		presenter.setViewControllers([], animated: false)
-	}
-}
 
 extension Coordinator {
 	func addChildCoordinator(coordinator: Coordinator) {

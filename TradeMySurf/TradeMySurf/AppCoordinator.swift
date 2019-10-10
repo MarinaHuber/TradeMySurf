@@ -10,6 +10,7 @@ import Foundation
 import UIKit
 
 final class AppCoordinator: Coordinator {
+	var tabBarCoordinator: TabBarCoordinator?
 
 	internal var childCoordinators: [Coordinator]
 	internal var presenter: UINavigationController
@@ -20,6 +21,7 @@ final class AppCoordinator: Coordinator {
 		self.window = window
 		childCoordinators = []
 		presenter = UINavigationController()
+
 		rootCoordinator = TutorialCoordinator(presenter: presenter)
 
 		presenter.setNavigationBarHidden(true, animated: false)

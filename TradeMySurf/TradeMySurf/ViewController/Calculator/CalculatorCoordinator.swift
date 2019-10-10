@@ -9,11 +9,9 @@
 import UIKit
 
 final class CalculatorCoordinator: Coordinator {
-	var presenter: UINavigationController
+	internal var presenter: UINavigationController
 
-	func stop() {
-	}
-	var childCoordinators: [Coordinator]
+	internal var childCoordinators: [Coordinator]
 
 	init(presenter: UINavigationController) {
 		self.presenter = presenter
