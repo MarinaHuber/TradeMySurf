@@ -30,7 +30,7 @@ final class TabBarCoordinator: Coordinator {
 
 
     func start() {
-		performGetStarted()
+		performGetTabBar()
     }
 
     private func generateTabCoordinators() -> [Coordinator] {
@@ -41,7 +41,7 @@ final class TabBarCoordinator: Coordinator {
         return [menuCoordinator, homeCoordinator, settingsCoordinator]
     }
 
-    func performGetStarted() {
+    func performGetTabBar() {
 		let coordinators: [Coordinator] = generateTabCoordinators()
 
         coordinators.forEach({ coordinator in
