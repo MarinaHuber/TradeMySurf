@@ -16,9 +16,10 @@ final class TabBarCoordinator: Coordinator {
         case calculate = 2
     }
 
-	var presenter: UINavigationController
-	let tabBarController: UITabBarController
-    var childCoordinators: [Coordinator]
+	internal var presenter: UINavigationController
+	//create a next VC
+	private var tabBarController: UITabBarController?
+	internal var childCoordinators: [Coordinator]
 
 	init(tabBarController: UITabBarController, nav: UINavigationController) {
         self.tabBarController = tabBarController
