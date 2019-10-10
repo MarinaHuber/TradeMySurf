@@ -20,5 +20,7 @@ final class BuyTipsCoordinator: Coordinator {
 	}
 
 	func start() {
+//		let buyVC = BuyTipsViewController.instantiate()
+//		presenter.pushViewController(buyVC, animated: true)
 	}
 }

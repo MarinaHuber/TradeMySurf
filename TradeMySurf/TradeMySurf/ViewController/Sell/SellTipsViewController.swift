@@ -10,9 +10,7 @@ import Foundation
 import UIKit
 
 class SellTipsViewController: UIViewController {
-	weak var coordinator: AppCoordinator?
+	weak var coordinator: SellTipsCoordinator?
 }
 
-extension SellTipsViewController: StoryboardProtocol {
-
-}
+extension SellTipsViewController: StoryboardProtocol {}

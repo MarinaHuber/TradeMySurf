@@ -30,6 +30,7 @@ final class TutorialCoordinator: Coordinator {
 
 }
 
+
 extension TutorialCoordinator : TutorialViewControllerDelegate {
 	func performTabBar() {
 
@@ -39,7 +40,6 @@ extension TutorialCoordinator : TutorialViewControllerDelegate {
         coordinator.start()
 
 		presenter.present(coordinator.tabBarController!, animated: true, completion: nil)
-
 		self.tabBar = coordinator
 		
 	}

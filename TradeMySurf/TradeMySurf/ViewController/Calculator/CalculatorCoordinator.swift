@@ -21,5 +21,7 @@ final class CalculatorCoordinator: Coordinator {
 	}
 
 	func start() {
+//		let calcVC = PriceCalculatorViewController.instantiate()
+//		presenter.pushViewController(calcVC, animated: true)
 	}
 }

@@ -32,8 +32,6 @@ final class TabBarCoordinator: Coordinator {
 
     func start() {
 		performGetTabBar()
-		//tabBarController?.delegate = self as! UITabBarControllerDelegate
-
     }
 
     private func generateTabCoordinators() -> [Coordinator] {
@@ -55,28 +53,24 @@ final class TabBarCoordinator: Coordinator {
         let presenters: [UINavigationController] = coordinators.map({ coordinator -> UINavigationController in
             coordinator.presenter
         })
-		//let tabVC = TabBarViewController.instantiate()
 		tabBarController?.setViewControllers(presenters, animated: false)
-//		tabBarController = tabVC
-//		presenter.pushViewController(tabVC, animated: true)
-
-		//selectTab(.buy)
+		selectTab(type: CalculatorCoordinator.self)
     }
 }
 
-//extension TabBarCoordinator {
-//		private func selectTab(_ tab: Tab) {
-//
-//			if let vc = tabBarController as? TabBarViewController {
-//				vc.selectedIndex = tab.rawValue
-//			}
-//
-//			if let coordinator = childCoordinators[tab.rawValue] as? TabBarCoordinator {
-//				coordinator.start()
-//
-//			}
-//		}
-//	}
+extension TabBarCoordinator {
+
+			func selectTab<T: Coordinator>(type _: T.Type) {
+				guard let index = childCoordinators.firstIndex(where: { coordinator in
+					coordinator is T
+				}) else {
+					return
+				}
+
+				tabBarController?.selectedIndex = index
+			}
+	}
+
 
 extension TabBarCoordinator {
     var selectedViewController: UIViewController? {
@@ -84,9 +78,9 @@ extension TabBarCoordinator {
     }
 }
 
-
+//
 //extension TabBarCoordinator {
-//    func selectTab<: Coordinator>() {
+//    func selectTab<T: Coordinator>(type _: T.Type) {
 //        guard let index = childCoordinators.firstIndex(where: { coordinator in
 //            coordinator is T
 //        }) else {
@@ -95,4 +89,4 @@ extension TabBarCoordinator {
 //
 //        tabBarController.selectedIndex = index
 //    }
-//}
+

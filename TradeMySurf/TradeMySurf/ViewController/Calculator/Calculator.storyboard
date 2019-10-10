@@ -12,7 +12,7 @@
         <!--CALCULATOR-->
         <scene sceneID="A0p-qg-S49">
             <objects>
-                <viewController storyboardIdentifier="PriceCalendarViewController" id="NuV-wN-EPR" customClass="PriceCalendarViewController" customModule="TradeMySurf" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="PriceCalculatorViewController" id="NuV-wN-EPR" customClass="PriceCalculatorViewController" customModule="TradeMySurf" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="Hme-ax-p5J">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>

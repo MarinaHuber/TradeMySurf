@@ -14,9 +14,6 @@ class BuyTipsViewController: UIViewController {
 
 }
 
-extension BuyTipsViewController: StoryboardProtocol {
-
-
-}
+extension BuyTipsViewController: StoryboardProtocol {}
 
 

@@ -29,6 +29,4 @@ class TutorialViewController: UIViewController {
 	
 }
 
-extension TutorialViewController: StoryboardProtocol {
-
-}
+extension TutorialViewController: StoryboardProtocol {}
