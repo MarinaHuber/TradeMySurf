@@ -9,6 +9,7 @@
 import UIKit
 
 final class BuyTipsCoordinator: Coordinator {
+	var coordinator: BuyTipsCoordinator?
 	internal var presenter: UINavigationController
 	internal var childCoordinators: [Coordinator]
 
@@ -20,7 +21,8 @@ final class BuyTipsCoordinator: Coordinator {
 	}
 
 	func start() {
-		let buyVC = BuyTipsViewController.instantiate()
-		presenter.pushViewController(buyVC, animated: true)
+		let storyboard: UIStoryboard = UIStoryboard(name: "Buy", bundle: nil)
+		let viewController: BuyTipsViewController = BuyTipsViewController.initialize(from: storyboard)
+		presenter.pushViewController(viewController, animated: true)
 	}
 }

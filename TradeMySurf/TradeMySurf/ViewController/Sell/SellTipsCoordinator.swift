@@ -9,18 +9,20 @@
 import UIKit
 
 final class SellTipsCoordinator: Coordinator {
+	var coordinator: SellTipsCoordinator?
 	internal var presenter: UINavigationController
 	internal var childCoordinators: [Coordinator]
 
 	init(presenter: UINavigationController) {
 		self.presenter = presenter
 		childCoordinators = []
-
+		
 		presenter.tabBarItem = UITabBarItem(title: "sell", image: nil, selectedImage: nil)
 	}
 
 	func start() {
-		let sellVC = SellTipsViewController.instantiate()
-		presenter.pushViewController(sellVC, animated: true)
+		let storyboard: UIStoryboard = UIStoryboard(name: "Sell", bundle: nil)
+		let viewController: SellTipsViewController = SellTipsViewController.initialize(from: storyboard)
+		presenter.pushViewController(viewController, animated: true)
 	}
 }

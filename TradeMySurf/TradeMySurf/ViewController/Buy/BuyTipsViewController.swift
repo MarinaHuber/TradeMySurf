@@ -10,7 +10,7 @@ import Foundation
 import UIKit
 
 class BuyTipsViewController: UIViewController {
-	weak var coordinator: AppCoordinator?
+	weak var coordinator: BuyTipsCoordinator?
 
 }
 

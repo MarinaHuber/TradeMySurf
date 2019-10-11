@@ -27,9 +27,7 @@ final class TutorialCoordinator: Coordinator {
 		tutorialVC.delegate = self
 		presenter.pushViewController(tutorialVC, animated: true)
 	}
-
 }
-
 
 extension TutorialCoordinator : TutorialViewControllerDelegate {
 	func performTabBar() {

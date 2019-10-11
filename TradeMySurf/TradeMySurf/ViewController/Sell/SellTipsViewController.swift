@@ -11,6 +11,7 @@ import UIKit
 
 class SellTipsViewController: UIViewController {
 	weak var coordinator: SellTipsCoordinator?
+
 }
 
 extension SellTipsViewController: StoryboardProtocol {}
