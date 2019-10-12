@@ -9,8 +9,14 @@
 import UIKit
 
 // Inspired from Coordinator-Example by G. Lombardo & Hacking with swift
-// https://www.hackingwithswift.com/articles/175/advanced-coordinator-pattern-tutorial-ios
 // https://github.com/giulio92/Coordinator
+// https://www.hackingwithswift.com/articles/175/advanced-coordinator-pattern-tutorial-ios
+// no Main.storyboard
+// define protocol for loading storyboard
+// define RootViewController
+// from Main AppCoordinator navigate and create flow
+// Crate programmatic tabBar Coordinator with children for tab VC
+// Test the Coordinator flow in Project Tests
 // *******************************************************************************************
 
 final class TabBarCoordinator: Coordinator {
