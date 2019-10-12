@@ -8,7 +8,9 @@
 
 import UIKit
 
-// Inspired from Coordinator-Example by G. Lombardo
+// Inspired from Coordinator-Example by G. Lombardo & Hacking with swift
+// https://www.hackingwithswift.com/articles/175/advanced-coordinator-pattern-tutorial-ios
+// https://github.com/giulio92/Coordinator
 // *******************************************************************************************
 
 protocol StoryboardProtocol: AnyObject {

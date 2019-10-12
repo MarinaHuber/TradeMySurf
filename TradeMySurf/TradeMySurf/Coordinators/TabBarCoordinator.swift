@@ -8,6 +8,11 @@
 
 import UIKit
 
+// Inspired from Coordinator-Example by G. Lombardo & Hacking with swift
+// https://www.hackingwithswift.com/articles/175/advanced-coordinator-pattern-tutorial-ios
+// https://github.com/giulio92/Coordinator
+// *******************************************************************************************
+
 final class TabBarCoordinator: Coordinator {
 
 	internal var presenter: UINavigationController
