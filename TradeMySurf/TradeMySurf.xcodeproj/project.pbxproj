@@ -1,0 +1,754 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 50;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		9C3F533D234BD80E00D5F65E /* Coordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C3F533C234BD80E00D5F65E /* Coordinator.swift */; };
+		9C45E661234D238F0054A5FD /* Buy.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9C45E660234D238E0054A5FD /* Buy.storyboard */; };
+		9C467C67234F2A7D009F4D58 /* SurfTextModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C467C66234F2A7D009F4D58 /* SurfTextModel.swift */; };
+		9C4C54742349C28500FB2653 /* Sell.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9C4C54732349C28500FB2653 /* Sell.storyboard */; };
+		9C53D5C0234C126600A3BD80 /* StoryboardProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C53D5BF234C126600A3BD80 /* StoryboardProtocol.swift */; };
+		9C53D5C2234C142A00A3BD80 /* CalculatorCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C53D5C1234C142A00A3BD80 /* CalculatorCoordinator.swift */; };
+		9C53D5C4234C144400A3BD80 /* BuyTipsCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C53D5C3234C144400A3BD80 /* BuyTipsCoordinator.swift */; };
+		9C53D5C6234C145B00A3BD80 /* SellTipsCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C53D5C5234C145B00A3BD80 /* SellTipsCoordinator.swift */; };
+		9C5B644C232A506C000727E6 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C5B644B232A506C000727E6 /* AppDelegate.swift */; };
+		9C5B644E232A506C000727E6 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C5B644D232A506C000727E6 /* SceneDelegate.swift */; };
+		9C5B6450232A506C000727E6 /* PriceCalculatorViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C5B644F232A506C000727E6 /* PriceCalculatorViewController.swift */; };
+		9C5B6456232A506C000727E6 /* TradeMySurf.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 9C5B6454232A506C000727E6 /* TradeMySurf.xcdatamodeld */; };
+		9C5B6458232A5073000727E6 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 9C5B6457232A5073000727E6 /* Assets.xcassets */; };
+		9C5B645B232A5073000727E6 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9C5B6459232A5073000727E6 /* LaunchScreen.storyboard */; };
+		9C5B6466232A5073000727E6 /* TradeMySurfTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C5B6465232A5073000727E6 /* TradeMySurfTests.swift */; };
+		9C5B6471232A5073000727E6 /* TradeMySurfUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C5B6470232A5073000727E6 /* TradeMySurfUITests.swift */; };
+		9C5B647F232A508B000727E6 /* Surfs.mlmodel in Sources */ = {isa = PBXBuildFile; fileRef = 9C5B647E232A508B000727E6 /* Surfs.mlmodel */; };
+		9C5B6481232A5092000727E6 /* surfs.csv in Resources */ = {isa = PBXBuildFile; fileRef = 9C5B6480232A5091000727E6 /* surfs.csv */; };
+		9C69CE76234CD9B9003E386F /* SurfStorage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C69CE75234CD9B9003E386F /* SurfStorage.swift */; };
+		9C69CE85234D06D7003E386F /* Calculator.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9C69CE84234D06D7003E386F /* Calculator.storyboard */; };
+		9C69CE87234D0749003E386F /* Tutorial.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9C69CE86234D0749003E386F /* Tutorial.storyboard */; };
+		9C76F09423493DAB00853FD9 /* TutorialViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C76F09323493DAB00853FD9 /* TutorialViewController.swift */; };
+		9C76F09623493EDA00853FD9 /* BuyTipsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C76F09523493EDA00853FD9 /* BuyTipsViewController.swift */; };
+		9C76F09823493F0900853FD9 /* SellTipsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C76F09723493F0900853FD9 /* SellTipsViewController.swift */; };
+		9CC59F17234AA3EF00F5ADD0 /* AppCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9CC59F16234AA3EF00F5ADD0 /* AppCoordinator.swift */; };
+		9CC59F19234AA41600F5ADD0 /* TabBarCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9CC59F18234AA41600F5ADD0 /* TabBarCoordinator.swift */; };
+		9CC59F1B234AA87700F5ADD0 /* TutorialCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9CC59F1A234AA87700F5ADD0 /* TutorialCoordinator.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		9C5B6462232A5073000727E6 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 9C5B6440232A506C000727E6 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 9C5B6447232A506C000727E6;
+			remoteInfo = TradeMySurf;
+		};
+		9C5B646D232A5073000727E6 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 9C5B6440232A506C000727E6 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 9C5B6447232A506C000727E6;
+			remoteInfo = TradeMySurf;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		9C3F533C234BD80E00D5F65E /* Coordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Coordinator.swift; sourceTree = "<group>"; };
+		9C45E660234D238E0054A5FD /* Buy.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Buy.storyboard; sourceTree = "<group>"; };
+		9C467C66234F2A7D009F4D58 /* SurfTextModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SurfTextModel.swift; sourceTree = "<group>"; };
+		9C4C54732349C28500FB2653 /* Sell.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Sell.storyboard; sourceTree = "<group>"; };
+		9C53D5BF234C126600A3BD80 /* StoryboardProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StoryboardProtocol.swift; sourceTree = "<group>"; };
+		9C53D5C1234C142A00A3BD80 /* CalculatorCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CalculatorCoordinator.swift; sourceTree = "<group>"; };
+		9C53D5C3234C144400A3BD80 /* BuyTipsCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BuyTipsCoordinator.swift; sourceTree = "<group>"; };
+		9C53D5C5234C145B00A3BD80 /* SellTipsCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SellTipsCoordinator.swift; sourceTree = "<group>"; };
+		9C5B6448232A506C000727E6 /* TradeMySurf.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TradeMySurf.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		9C5B644B232A506C000727E6 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		9C5B644D232A506C000727E6 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
+		9C5B644F232A506C000727E6 /* PriceCalculatorViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PriceCalculatorViewController.swift; sourceTree = "<group>"; };
+		9C5B6455232A506C000727E6 /* TradeMySurf.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = TradeMySurf.xcdatamodel; sourceTree = "<group>"; };
+		9C5B6457232A5073000727E6 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		9C5B645A232A5073000727E6 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		9C5B6461232A5073000727E6 /* TradeMySurfTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = TradeMySurfTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		9C5B6465232A5073000727E6 /* TradeMySurfTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TradeMySurfTests.swift; sourceTree = "<group>"; };
+		9C5B646C232A5073000727E6 /* TradeMySurfUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = TradeMySurfUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		9C5B6470232A5073000727E6 /* TradeMySurfUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TradeMySurfUITests.swift; sourceTree = "<group>"; };
+		9C5B647E232A508B000727E6 /* Surfs.mlmodel */ = {isa = PBXFileReference; lastKnownFileType = file.mlmodel; name = Surfs.mlmodel; path = ../../Working/Surfs.mlmodel; sourceTree = "<group>"; };
+		9C5B6480232A5091000727E6 /* surfs.csv */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; name = surfs.csv; path = ../../Working/surfs.csv; sourceTree = "<group>"; };
+		9C69CE75234CD9B9003E386F /* SurfStorage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SurfStorage.swift; sourceTree = "<group>"; };
+		9C69CE84234D06D7003E386F /* Calculator.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Calculator.storyboard; sourceTree = "<group>"; };
+		9C69CE86234D0749003E386F /* Tutorial.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Tutorial.storyboard; sourceTree = "<group>"; };
+		9C71A14B2348946C00A67323 /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		9C71A14E234894CD00A67323 /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		9C71A150234894D500A67323 /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		9C76F09323493DAB00853FD9 /* TutorialViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TutorialViewController.swift; sourceTree = "<group>"; };
+		9C76F09523493EDA00853FD9 /* BuyTipsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BuyTipsViewController.swift; sourceTree = "<group>"; };
+		9C76F09723493F0900853FD9 /* SellTipsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SellTipsViewController.swift; sourceTree = "<group>"; };
+		9CC59F16234AA3EF00F5ADD0 /* AppCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppCoordinator.swift; sourceTree = "<group>"; };
+		9CC59F18234AA41600F5ADD0 /* TabBarCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabBarCoordinator.swift; sourceTree = "<group>"; };
+		9CC59F1A234AA87700F5ADD0 /* TutorialCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TutorialCoordinator.swift; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		9C5B6445232A506C000727E6 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		9C5B645E232A5073000727E6 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		9C5B6469232A5073000727E6 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		9C3F533B234BD7F900D5F65E /* Protocols */ = {
+			isa = PBXGroup;
+			children = (
+				9C3F533C234BD80E00D5F65E /* Coordinator.swift */,
+				9C53D5BF234C126600A3BD80 /* StoryboardProtocol.swift */,
+			);
+			path = Protocols;
+			sourceTree = "<group>";
+		};
+		9C53D5C7234CB18600A3BD80 /* Sell */ = {
+			isa = PBXGroup;
+			children = (
+				9C4C54732349C28500FB2653 /* Sell.storyboard */,
+				9C53D5C5234C145B00A3BD80 /* SellTipsCoordinator.swift */,
+				9C76F09723493F0900853FD9 /* SellTipsViewController.swift */,
+			);
+			path = Sell;
+			sourceTree = "<group>";
+		};
+		9C53D5C8234CB19900A3BD80 /* Buy */ = {
+			isa = PBXGroup;
+			children = (
+				9C45E660234D238E0054A5FD /* Buy.storyboard */,
+				9C53D5C3234C144400A3BD80 /* BuyTipsCoordinator.swift */,
+				9C76F09523493EDA00853FD9 /* BuyTipsViewController.swift */,
+			);
+			path = Buy;
+			sourceTree = "<group>";
+		};
+		9C53D5C9234CB1A800A3BD80 /* Calculator */ = {
+			isa = PBXGroup;
+			children = (
+				9C69CE84234D06D7003E386F /* Calculator.storyboard */,
+				9C53D5C1234C142A00A3BD80 /* CalculatorCoordinator.swift */,
+				9C5B644F232A506C000727E6 /* PriceCalculatorViewController.swift */,
+			);
+			path = Calculator;
+			sourceTree = "<group>";
+		};
+		9C5B643F232A506C000727E6 = {
+			isa = PBXGroup;
+			children = (
+				9C5B644A232A506C000727E6 /* TradeMySurf */,
+				9C5B6464232A5073000727E6 /* TradeMySurfTests */,
+				9C5B646F232A5073000727E6 /* TradeMySurfUITests */,
+				9C5B6449232A506C000727E6 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		9C5B6449232A506C000727E6 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				9C5B6448232A506C000727E6 /* TradeMySurf.app */,
+				9C5B6461232A5073000727E6 /* TradeMySurfTests.xctest */,
+				9C5B646C232A5073000727E6 /* TradeMySurfUITests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		9C5B644A232A506C000727E6 /* TradeMySurf */ = {
+			isa = PBXGroup;
+			children = (
+				9C69CE74234CD992003E386F /* Model */,
+				9C3F533B234BD7F900D5F65E /* Protocols */,
+				9CC59F15234AA3B200F5ADD0 /* Coordinators */,
+				9C76F09F2349471000853FD9 /* ViewController */,
+				9C76F09E234946D500853FD9 /* Resources */,
+				9CC59F16234AA3EF00F5ADD0 /* AppCoordinator.swift */,
+				9C5B644B232A506C000727E6 /* AppDelegate.swift */,
+				9C5B644D232A506C000727E6 /* SceneDelegate.swift */,
+				9C5B6480232A5091000727E6 /* surfs.csv */,
+				9C71A14B2348946C00A67323 /* Info.plist */,
+				9C5B647E232A508B000727E6 /* Surfs.mlmodel */,
+				9C5B6454232A506C000727E6 /* TradeMySurf.xcdatamodeld */,
+			);
+			path = TradeMySurf;
+			sourceTree = "<group>";
+		};
+		9C5B6464232A5073000727E6 /* TradeMySurfTests */ = {
+			isa = PBXGroup;
+			children = (
+				9C5B6465232A5073000727E6 /* TradeMySurfTests.swift */,
+				9C71A14E234894CD00A67323 /* Info.plist */,
+			);
+			path = TradeMySurfTests;
+			sourceTree = "<group>";
+		};
+		9C5B646F232A5073000727E6 /* TradeMySurfUITests */ = {
+			isa = PBXGroup;
+			children = (
+				9C5B6470232A5073000727E6 /* TradeMySurfUITests.swift */,
+				9C71A150234894D500A67323 /* Info.plist */,
+			);
+			path = TradeMySurfUITests;
+			sourceTree = "<group>";
+		};
+		9C69CE74234CD992003E386F /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				9C69CE75234CD9B9003E386F /* SurfStorage.swift */,
+				9C467C66234F2A7D009F4D58 /* SurfTextModel.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		9C69CE88234D1D87003E386F /* TutorialPage */ = {
+			isa = PBXGroup;
+			children = (
+				9C69CE86234D0749003E386F /* Tutorial.storyboard */,
+				9CC59F1A234AA87700F5ADD0 /* TutorialCoordinator.swift */,
+				9C76F09323493DAB00853FD9 /* TutorialViewController.swift */,
+			);
+			path = TutorialPage;
+			sourceTree = "<group>";
+		};
+		9C76F09E234946D500853FD9 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				9C5B6457232A5073000727E6 /* Assets.xcassets */,
+				9C5B6459232A5073000727E6 /* LaunchScreen.storyboard */,
+			);
+			path = Resources;
+			sourceTree = "<group>";
+		};
+		9C76F09F2349471000853FD9 /* ViewController */ = {
+			isa = PBXGroup;
+			children = (
+				9C69CE88234D1D87003E386F /* TutorialPage */,
+				9C53D5C9234CB1A800A3BD80 /* Calculator */,
+				9C53D5C8234CB19900A3BD80 /* Buy */,
+				9C53D5C7234CB18600A3BD80 /* Sell */,
+			);
+			path = ViewController;
+			sourceTree = "<group>";
+		};
+		9CC59F15234AA3B200F5ADD0 /* Coordinators */ = {
+			isa = PBXGroup;
+			children = (
+				9CC59F18234AA41600F5ADD0 /* TabBarCoordinator.swift */,
+			);
+			path = Coordinators;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		9C5B6447232A506C000727E6 /* TradeMySurf */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 9C5B6475232A5073000727E6 /* Build configuration list for PBXNativeTarget "TradeMySurf" */;
+			buildPhases = (
+				9C5B6444232A506C000727E6 /* Sources */,
+				9C5B6445232A506C000727E6 /* Frameworks */,
+				9C5B6446232A506C000727E6 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = TradeMySurf;
+			productName = TradeMySurf;
+			productReference = 9C5B6448232A506C000727E6 /* TradeMySurf.app */;
+			productType = "com.apple.product-type.application";
+		};
+		9C5B6460232A5073000727E6 /* TradeMySurfTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 9C5B6478232A5073000727E6 /* Build configuration list for PBXNativeTarget "TradeMySurfTests" */;
+			buildPhases = (
+				9C5B645D232A5073000727E6 /* Sources */,
+				9C5B645E232A5073000727E6 /* Frameworks */,
+				9C5B645F232A5073000727E6 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				9C5B6463232A5073000727E6 /* PBXTargetDependency */,
+			);
+			name = TradeMySurfTests;
+			productName = TradeMySurfTests;
+			productReference = 9C5B6461232A5073000727E6 /* TradeMySurfTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		9C5B646B232A5073000727E6 /* TradeMySurfUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 9C5B647B232A5073000727E6 /* Build configuration list for PBXNativeTarget "TradeMySurfUITests" */;
+			buildPhases = (
+				9C5B6468232A5073000727E6 /* Sources */,
+				9C5B6469232A5073000727E6 /* Frameworks */,
+				9C5B646A232A5073000727E6 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				9C5B646E232A5073000727E6 /* PBXTargetDependency */,
+			);
+			name = TradeMySurfUITests;
+			productName = TradeMySurfUITests;
+			productReference = 9C5B646C232A5073000727E6 /* TradeMySurfUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		9C5B6440232A506C000727E6 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 1100;
+				LastUpgradeCheck = 1100;
+				ORGANIZATIONNAME = "Marina Huber";
+				TargetAttributes = {
+					9C5B6447232A506C000727E6 = {
+						CreatedOnToolsVersion = 11.0;
+					};
+					9C5B6460232A5073000727E6 = {
+						CreatedOnToolsVersion = 11.0;
+						TestTargetID = 9C5B6447232A506C000727E6;
+					};
+					9C5B646B232A5073000727E6 = {
+						CreatedOnToolsVersion = 11.0;
+						TestTargetID = 9C5B6447232A506C000727E6;
+					};
+				};
+			};
+			buildConfigurationList = 9C5B6443232A506C000727E6 /* Build configuration list for PBXProject "TradeMySurf" */;
+			compatibilityVersion = "Xcode 9.3";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 9C5B643F232A506C000727E6;
+			productRefGroup = 9C5B6449232A506C000727E6 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				9C5B6447232A506C000727E6 /* TradeMySurf */,
+				9C5B6460232A5073000727E6 /* TradeMySurfTests */,
+				9C5B646B232A5073000727E6 /* TradeMySurfUITests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		9C5B6446232A506C000727E6 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				9C5B645B232A5073000727E6 /* LaunchScreen.storyboard in Resources */,
+				9C45E661234D238F0054A5FD /* Buy.storyboard in Resources */,
+				9C69CE87234D0749003E386F /* Tutorial.storyboard in Resources */,
+				9C5B6458232A5073000727E6 /* Assets.xcassets in Resources */,
+				9C5B6481232A5092000727E6 /* surfs.csv in Resources */,
+				9C4C54742349C28500FB2653 /* Sell.storyboard in Resources */,
+				9C69CE85234D06D7003E386F /* Calculator.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		9C5B645F232A5073000727E6 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		9C5B646A232A5073000727E6 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		9C5B6444232A506C000727E6 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				9C53D5C6234C145B00A3BD80 /* SellTipsCoordinator.swift in Sources */,
+				9C69CE76234CD9B9003E386F /* SurfStorage.swift in Sources */,
+				9C53D5C2234C142A00A3BD80 /* CalculatorCoordinator.swift in Sources */,
+				9C467C67234F2A7D009F4D58 /* SurfTextModel.swift in Sources */,
+				9CC59F17234AA3EF00F5ADD0 /* AppCoordinator.swift in Sources */,
+				9CC59F1B234AA87700F5ADD0 /* TutorialCoordinator.swift in Sources */,
+				9C3F533D234BD80E00D5F65E /* Coordinator.swift in Sources */,
+				9C5B6450232A506C000727E6 /* PriceCalculatorViewController.swift in Sources */,
+				9CC59F19234AA41600F5ADD0 /* TabBarCoordinator.swift in Sources */,
+				9C76F09423493DAB00853FD9 /* TutorialViewController.swift in Sources */,
+				9C53D5C4234C144400A3BD80 /* BuyTipsCoordinator.swift in Sources */,
+				9C53D5C0234C126600A3BD80 /* StoryboardProtocol.swift in Sources */,
+				9C5B644C232A506C000727E6 /* AppDelegate.swift in Sources */,
+				9C5B647F232A508B000727E6 /* Surfs.mlmodel in Sources */,
+				9C5B6456232A506C000727E6 /* TradeMySurf.xcdatamodeld in Sources */,
+				9C76F09623493EDA00853FD9 /* BuyTipsViewController.swift in Sources */,
+				9C76F09823493F0900853FD9 /* SellTipsViewController.swift in Sources */,
+				9C5B644E232A506C000727E6 /* SceneDelegate.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		9C5B645D232A5073000727E6 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				9C5B6466232A5073000727E6 /* TradeMySurfTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		9C5B6468232A5073000727E6 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				9C5B6471232A5073000727E6 /* TradeMySurfUITests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		9C5B6463232A5073000727E6 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 9C5B6447232A506C000727E6 /* TradeMySurf */;
+			targetProxy = 9C5B6462232A5073000727E6 /* PBXContainerItemProxy */;
+		};
+		9C5B646E232A5073000727E6 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 9C5B6447232A506C000727E6 /* TradeMySurf */;
+			targetProxy = 9C5B646D232A5073000727E6 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		9C5B6459232A5073000727E6 /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				9C5B645A232A5073000727E6 /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		9C5B6473232A5073000727E6 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		9C5B6474232A5073000727E6 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		9C5B6476232A5073000727E6 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "Apple Development";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = HBS2B82CVU;
+				INFOPLIST_FILE = TradeMySurf/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.marinahuber;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = 1;
+			};
+			name = Debug;
+		};
+		9C5B6477232A5073000727E6 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "Apple Development";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = HBS2B82CVU;
+				INFOPLIST_FILE = TradeMySurf/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.marinahuber;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = 1;
+			};
+			name = Release;
+		};
+		9C5B6479232A5073000727E6 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = HBS2B82CVU;
+				INFOPLIST_FILE = TradeMySurfTests/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.marinahuber.TradeMySurfTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/TradeMySurf.app/TradeMySurf";
+			};
+			name = Debug;
+		};
+		9C5B647A232A5073000727E6 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = HBS2B82CVU;
+				INFOPLIST_FILE = TradeMySurfTests/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.marinahuber.TradeMySurfTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/TradeMySurf.app/TradeMySurf";
+			};
+			name = Release;
+		};
+		9C5B647C232A5073000727E6 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = HBS2B82CVU;
+				INFOPLIST_FILE = TradeMySurfUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.marinahuber.TradeMySurfUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = TradeMySurf;
+			};
+			name = Debug;
+		};
+		9C5B647D232A5073000727E6 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = HBS2B82CVU;
+				INFOPLIST_FILE = TradeMySurfUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.marinahuber.TradeMySurfUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = TradeMySurf;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		9C5B6443232A506C000727E6 /* Build configuration list for PBXProject "TradeMySurf" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				9C5B6473232A5073000727E6 /* Debug */,
+				9C5B6474232A5073000727E6 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		9C5B6475232A5073000727E6 /* Build configuration list for PBXNativeTarget "TradeMySurf" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				9C5B6476232A5073000727E6 /* Debug */,
+				9C5B6477232A5073000727E6 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		9C5B6478232A5073000727E6 /* Build configuration list for PBXNativeTarget "TradeMySurfTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				9C5B6479232A5073000727E6 /* Debug */,
+				9C5B647A232A5073000727E6 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		9C5B647B232A5073000727E6 /* Build configuration list for PBXNativeTarget "TradeMySurfUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				9C5B647C232A5073000727E6 /* Debug */,
+				9C5B647D232A5073000727E6 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+
+/* Begin XCVersionGroup section */
+		9C5B6454232A506C000727E6 /* TradeMySurf.xcdatamodeld */ = {
+			isa = XCVersionGroup;
+			children = (
+				9C5B6455232A506C000727E6 /* TradeMySurf.xcdatamodel */,
+			);
+			currentVersion = 9C5B6455232A506C000727E6 /* TradeMySurf.xcdatamodel */;
+			path = TradeMySurf.xcdatamodeld;
+			sourceTree = "<group>";
+			versionGroupType = wrapper.xcdatamodel;
+		};
+/* End XCVersionGroup section */
+	};
+	rootObject = 9C5B6440232A506C000727E6 /* Project object */;
+}

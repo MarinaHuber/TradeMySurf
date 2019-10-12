@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14868" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="btd-kb-JMM">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14824"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Tutorial View Controller-->
+        <scene sceneID="mB9-10-hPS">
+            <objects>
+                <viewController storyboardIdentifier="TutorialViewController" id="btd-kb-JMM" customClass="TutorialViewController" customModule="TradeMySurf" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="fie-jj-q1a">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="r8K-M5-40N">
+                                <rect key="frame" x="147" y="798" width="120" height="44"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="44" id="bJ2-71-c5S"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" weight="heavy" pointSize="25"/>
+                                <state key="normal" title="PROCEED">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="openTabBar:" destination="btd-kb-JMM" eventType="touchUpInside" id="r4J-kK-8ou"/>
+                                </connections>
+                            </button>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Landing" translatesAutoresizingMaskIntoConstraints="NO" id="JuC-gD-qXj">
+                                <rect key="frame" x="43" y="64" width="328" height="595"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="595" id="L1f-I8-LDq"/>
+                                    <constraint firstAttribute="width" constant="328" id="RIY-Cw-sqU"/>
+                                    <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="595" id="h3y-Ld-cFB"/>
+                                </constraints>
+                            </imageView>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemYellowColor" red="1" green="0.80000000000000004" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="JuC-gD-qXj" firstAttribute="top" secondItem="GrG-Zn-ifo" secondAttribute="top" constant="20" id="2d6-2a-ZH1"/>
+                            <constraint firstItem="r8K-M5-40N" firstAttribute="centerX" secondItem="GrG-Zn-ifo" secondAttribute="centerX" id="445-y9-Wv4"/>
+                            <constraint firstItem="GrG-Zn-ifo" firstAttribute="bottom" secondItem="r8K-M5-40N" secondAttribute="bottom" constant="20" id="Sjg-SV-YRp"/>
+                            <constraint firstItem="JuC-gD-qXj" firstAttribute="leading" secondItem="GrG-Zn-ifo" secondAttribute="leading" constant="43" id="T95-Dl-6vV"/>
+                            <constraint firstItem="GrG-Zn-ifo" firstAttribute="trailing" secondItem="JuC-gD-qXj" secondAttribute="trailing" constant="43" id="bap-2V-omu"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="GrG-Zn-ifo"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Y3D-HU-Rx7" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-413" y="-2603"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="Landing" width="200" height="414"/>
+    </resources>
+</document>
