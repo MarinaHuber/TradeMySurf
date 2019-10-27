@@ -14,5 +14,6 @@ Pagination flow
 TabBar flow
 Fill in journal flow
 Recommended flow
+https://pbs.twimg.com/media/EGN6v1YWwAEa2bc?format=jpg&name=large
 
 
