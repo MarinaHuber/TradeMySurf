@@ -8,7 +8,7 @@
 
 import UIKit
 
-// Inspired from Coordinator-Example by G. Lombardo & Hacking with swift
+// kudos Coordinator-Example by G. Lombardo & Hacking with swift
 // https://github.com/giulio92/Coordinator
 // https://www.hackingwithswift.com/articles/175/advanced-coordinator-pattern-tutorial-ios
 // no Main.storyboard

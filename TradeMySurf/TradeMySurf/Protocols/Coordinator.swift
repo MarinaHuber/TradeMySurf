@@ -16,5 +16,6 @@ protocol Coordinator: AnyObject {
 extension Coordinator {
 	func addChildCoordinator(coordinator: Coordinator) {
 		childCoordinators.append(coordinator)
+		debugPrint("Tried to add coordinator \(coordinator) but could not find it in the children of \(self), could that be a bug? 🤔")
 	}
 }
