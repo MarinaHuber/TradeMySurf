@@ -15,21 +15,19 @@ final class AppCoordinator: Coordinator {
 	internal var childCoordinators: [Coordinator]
 	internal var presenter: UINavigationController
 	let window: UIWindow
-	let rootCoordinator: TutorialCoordinator
+	let rootCoordinator: WelcomeCoordinator
 
 	init(window: UIWindow) {
 		self.window = window
 		childCoordinators = []
 		presenter = UINavigationController()
-
-		rootCoordinator = TutorialCoordinator(presenter: presenter)
-
+		rootCoordinator = WelcomeCoordinator(presenter: presenter)
 		presenter.setNavigationBarHidden(true, animated: false)
 
 	}
 
 	func start() {
-		//rootViewController is UINavigationController
+		//MARK: rootViewController is UINavigationController for test
 		window.rootViewController = presenter
 		rootCoordinator.start()
 		window.makeKeyAndVisible()

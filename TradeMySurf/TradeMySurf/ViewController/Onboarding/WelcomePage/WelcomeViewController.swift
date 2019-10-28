@@ -9,24 +9,21 @@
 import Foundation
 import UIKit
 
-protocol TutorialViewControllerDelegate: class {
-  func performTabBar()
+protocol WelcomeViewControllerDelegate: class {
+	func performTabBar()
 }
 
-
-class TutorialViewController: UIViewController {
-	 weak var delegate: TutorialViewControllerDelegate?
-
+class WelcomeViewController: UIViewController {
+	weak var delegate: WelcomeViewControllerDelegate?
 	weak var coordinator: TabBarCoordinator?
 
-    override func viewDidLoad() {
-        super.viewDidLoad()
-    }
+	override func viewDidLoad() {
+		super.viewDidLoad()
+	}
 
 	@IBAction func openTabBar(_ sender: Any) {
 		delegate?.performTabBar()
 	}
-	
 }
 
-extension TutorialViewController: StoryboardProtocol {}
+extension WelcomeViewController: StoryboardProtocol {}
