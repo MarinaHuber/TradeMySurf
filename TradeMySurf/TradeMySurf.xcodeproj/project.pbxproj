@@ -31,6 +31,9 @@
 		9C76F09423493DAB00853FD9 /* TutorialViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C76F09323493DAB00853FD9 /* TutorialViewController.swift */; };
 		9C76F09623493EDA00853FD9 /* BuyTipsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C76F09523493EDA00853FD9 /* BuyTipsViewController.swift */; };
 		9C76F09823493F0900853FD9 /* SellTipsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C76F09723493F0900853FD9 /* SellTipsViewController.swift */; };
+		9C9F83682366485100FA4F41 /* QuestionsViewControllerTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C9F83672366485100FA4F41 /* QuestionsViewControllerTest.swift */; };
+		9C9F836A236649D300FA4F41 /* QuestionsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C9F8369236649D300FA4F41 /* QuestionsViewController.swift */; };
+		9C9F836C2366BDAA00FA4F41 /* TabBarCoordinatorTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C9F836B2366BDAA00FA4F41 /* TabBarCoordinatorTests.swift */; };
 		9CC59F17234AA3EF00F5ADD0 /* AppCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9CC59F16234AA3EF00F5ADD0 /* AppCoordinator.swift */; };
 		9CC59F19234AA41600F5ADD0 /* TabBarCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9CC59F18234AA41600F5ADD0 /* TabBarCoordinator.swift */; };
 		9CC59F1B234AA87700F5ADD0 /* TutorialCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9CC59F1A234AA87700F5ADD0 /* TutorialCoordinator.swift */; };
@@ -84,6 +87,9 @@
 		9C76F09323493DAB00853FD9 /* TutorialViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TutorialViewController.swift; sourceTree = "<group>"; };
 		9C76F09523493EDA00853FD9 /* BuyTipsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BuyTipsViewController.swift; sourceTree = "<group>"; };
 		9C76F09723493F0900853FD9 /* SellTipsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SellTipsViewController.swift; sourceTree = "<group>"; };
+		9C9F83672366485100FA4F41 /* QuestionsViewControllerTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuestionsViewControllerTest.swift; sourceTree = "<group>"; };
+		9C9F8369236649D300FA4F41 /* QuestionsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuestionsViewController.swift; sourceTree = "<group>"; };
+		9C9F836B2366BDAA00FA4F41 /* TabBarCoordinatorTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabBarCoordinatorTests.swift; sourceTree = "<group>"; };
 		9CC59F16234AA3EF00F5ADD0 /* AppCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppCoordinator.swift; sourceTree = "<group>"; };
 		9CC59F18234AA41600F5ADD0 /* TabBarCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabBarCoordinator.swift; sourceTree = "<group>"; };
 		9CC59F1A234AA87700F5ADD0 /* TutorialCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TutorialCoordinator.swift; sourceTree = "<group>"; };
@@ -128,6 +134,7 @@
 			children = (
 				9C4C54732349C28500FB2653 /* Sell.storyboard */,
 				9C53D5C5234C145B00A3BD80 /* SellTipsCoordinator.swift */,
+				9C9F8369236649D300FA4F41 /* QuestionsViewController.swift */,
 				9C76F09723493F0900853FD9 /* SellTipsViewController.swift */,
 			);
 			path = Sell;
@@ -196,7 +203,9 @@
 			isa = PBXGroup;
 			children = (
 				9C5B6465232A5073000727E6 /* TradeMySurfTests.swift */,
+				9C9F836B2366BDAA00FA4F41 /* TabBarCoordinatorTests.swift */,
 				9C71A14E234894CD00A67323 /* Info.plist */,
+				9C9F83672366485100FA4F41 /* QuestionsViewControllerTest.swift */,
 			);
 			path = TradeMySurfTests;
 			sourceTree = "<group>";
@@ -400,6 +409,7 @@
 				9CC59F1B234AA87700F5ADD0 /* TutorialCoordinator.swift in Sources */,
 				9C3F533D234BD80E00D5F65E /* Coordinator.swift in Sources */,
 				9C5B6450232A506C000727E6 /* PriceCalculatorViewController.swift in Sources */,
+				9C9F836A236649D300FA4F41 /* QuestionsViewController.swift in Sources */,
 				9CC59F19234AA41600F5ADD0 /* TabBarCoordinator.swift in Sources */,
 				9C76F09423493DAB00853FD9 /* TutorialViewController.swift in Sources */,
 				9C53D5C4234C144400A3BD80 /* BuyTipsCoordinator.swift in Sources */,
@@ -417,7 +427,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				9C9F83682366485100FA4F41 /* QuestionsViewControllerTest.swift in Sources */,
 				9C5B6466232A5073000727E6 /* TradeMySurfTests.swift in Sources */,
+				9C9F836C2366BDAA00FA4F41 /* TabBarCoordinatorTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

@@ -22,7 +22,7 @@ final class CalculatorCoordinator: Coordinator {
 
 	func start() {
 		let storyboard: UIStoryboard = UIStoryboard(name: "Calculator", bundle: nil)
-		let viewController: PriceCalculatorViewController = PriceCalculatorViewController.initialize(from: storyboard)
+		let viewController: PriceCalculatorViewController = PriceCalculatorViewController.instantiate(from: storyboard)
 		presenter.pushViewController(viewController, animated: true)
 	}
 }

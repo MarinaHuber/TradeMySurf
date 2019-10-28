@@ -33,7 +33,6 @@ final class TabBarCoordinator: Coordinator {
 		presenter.navigationBar.topItem?.title = "Kelly my surf"
 	}
 
-
 	func start() {
 		performGetTabBar()
 	}
@@ -51,7 +50,6 @@ final class TabBarCoordinator: Coordinator {
 		coordinators.forEach({ coordinator in
 			coordinator.start()
 			addChildCoordinator(coordinator: coordinator)
-
 		})
 
 		let presenters: [UINavigationController] = coordinators.map({ coordinator -> UINavigationController in
@@ -70,7 +68,6 @@ extension TabBarCoordinator {
 		}) else {
 			return
 		}
-
 		tabBarController?.selectedIndex = index
 	}
 }
