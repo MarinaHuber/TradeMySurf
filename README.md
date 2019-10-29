@@ -1,4 +1,4 @@
-# KellyMySurf
+# Kelly my Surf
 
 # MVC + Coordinator pattern with CoreML 
 ### Recommendation app gets you surfing safe! 🤙🏽
@@ -12,6 +12,7 @@ Illustrates all flows of the project:
  + Welcome page
  + Add date flow
  + Add level flow
+ + TabBar Coordinator flow
  + Predictions for trip flow
  + Previous trips flow
 ![alt tag](https://pbs.twimg.com/media/EGN6v1YWwAEa2bc?format=jpg&name=large)
