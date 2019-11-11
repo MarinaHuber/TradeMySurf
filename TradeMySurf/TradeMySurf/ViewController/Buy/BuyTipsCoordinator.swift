@@ -17,7 +17,7 @@ final class BuyTipsCoordinator: Coordinator {
 		self.presenter = presenter
 		childCoordinators = []
 
-		presenter.tabBarItem = UITabBarItem(title: "more", image: nil, selectedImage: nil)
+		presenter.tabBarItem = UITabBarItem(title: "Trip", image: nil, selectedImage: nil)
 	}
 
 	func start() {

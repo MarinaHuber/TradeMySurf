@@ -17,7 +17,7 @@ final class CalculatorCoordinator: Coordinator {
 		self.presenter = presenter
 		childCoordinators = []
 
-		presenter.tabBarItem = UITabBarItem(title: "calculator", image: nil, selectedImage: nil)
+		presenter.tabBarItem = UITabBarItem(title: "Board price", image: nil, selectedImage: nil)
 	}
 
 	func start() {

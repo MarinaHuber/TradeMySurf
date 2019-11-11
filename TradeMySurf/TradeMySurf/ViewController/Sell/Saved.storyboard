@@ -9,10 +9,10 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--SELL-->
+        <!--Saved-->
         <scene sceneID="2Op-iH-4u0">
             <objects>
-                <viewController storyboardIdentifier="SellTipsViewController" id="taf-X9-iD4" customClass="SellTipsViewController" customModule="TradeMySurf" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="SellTipsViewController" id="taf-X9-iD4" userLabel="Saved" customClass="SellTipsViewController" customModule="TradeMySurf" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="Cdt-qp-B21">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -41,7 +41,7 @@ sustainable tourism is oxy moron.</string>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="2Hu-wP-3W4"/>
                     </view>
-                    <tabBarItem key="tabBarItem" title="SELL" image="surfboardSell3x" id="byX-hE-gt8"/>
+                    <tabBarItem key="tabBarItem" title="SAVED" image="surfboardSell3x" id="byX-hE-gt8"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Y2y-No-9hG" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>

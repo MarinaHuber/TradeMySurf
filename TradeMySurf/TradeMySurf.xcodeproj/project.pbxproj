@@ -10,7 +10,7 @@
 		9C3F533D234BD80E00D5F65E /* Coordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C3F533C234BD80E00D5F65E /* Coordinator.swift */; };
 		9C45E661234D238F0054A5FD /* Buy.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9C45E660234D238E0054A5FD /* Buy.storyboard */; };
 		9C467C67234F2A7D009F4D58 /* SurfTextModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C467C66234F2A7D009F4D58 /* SurfTextModel.swift */; };
-		9C4C54742349C28500FB2653 /* Sell.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9C4C54732349C28500FB2653 /* Sell.storyboard */; };
+		9C4C54742349C28500FB2653 /* Saved.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9C4C54732349C28500FB2653 /* Saved.storyboard */; };
 		9C53D5C0234C126600A3BD80 /* StoryboardProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C53D5BF234C126600A3BD80 /* StoryboardProtocol.swift */; };
 		9C53D5C2234C142A00A3BD80 /* CalculatorCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C53D5C1234C142A00A3BD80 /* CalculatorCoordinator.swift */; };
 		9C53D5C4234C144400A3BD80 /* BuyTipsCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C53D5C3234C144400A3BD80 /* BuyTipsCoordinator.swift */; };
@@ -63,7 +63,7 @@
 		9C3F533C234BD80E00D5F65E /* Coordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Coordinator.swift; sourceTree = "<group>"; };
 		9C45E660234D238E0054A5FD /* Buy.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Buy.storyboard; sourceTree = "<group>"; };
 		9C467C66234F2A7D009F4D58 /* SurfTextModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SurfTextModel.swift; sourceTree = "<group>"; };
-		9C4C54732349C28500FB2653 /* Sell.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Sell.storyboard; sourceTree = "<group>"; };
+		9C4C54732349C28500FB2653 /* Saved.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Saved.storyboard; sourceTree = "<group>"; };
 		9C53D5BF234C126600A3BD80 /* StoryboardProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StoryboardProtocol.swift; sourceTree = "<group>"; };
 		9C53D5C1234C142A00A3BD80 /* CalculatorCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CalculatorCoordinator.swift; sourceTree = "<group>"; };
 		9C53D5C3234C144400A3BD80 /* BuyTipsCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BuyTipsCoordinator.swift; sourceTree = "<group>"; };
@@ -138,7 +138,7 @@
 		9C53D5C7234CB18600A3BD80 /* Sell */ = {
 			isa = PBXGroup;
 			children = (
-				9C4C54732349C28500FB2653 /* Sell.storyboard */,
+				9C4C54732349C28500FB2653 /* Saved.storyboard */,
 				9C53D5C5234C145B00A3BD80 /* SellTipsCoordinator.swift */,
 				9C9F8369236649D300FA4F41 /* QuestionsViewController.swift */,
 				9C76F09723493F0900853FD9 /* SellTipsViewController.swift */,
@@ -410,7 +410,7 @@
 				9C5B6458232A5073000727E6 /* Assets.xcassets in Resources */,
 				9C5B6481232A5092000727E6 /* surfs.csv in Resources */,
 				9CFDFD3D2367221C00760F25 /* AddDate.storyboard in Resources */,
-				9C4C54742349C28500FB2653 /* Sell.storyboard in Resources */,
+				9C4C54742349C28500FB2653 /* Saved.storyboard in Resources */,
 				9C69CE85234D06D7003E386F /* Calculator.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

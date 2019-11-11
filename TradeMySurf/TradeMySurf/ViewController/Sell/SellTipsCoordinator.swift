@@ -17,11 +17,11 @@ final class SellTipsCoordinator: Coordinator {
 		self.presenter = presenter
 		childCoordinators = []
 		
-		presenter.tabBarItem = UITabBarItem(title: "sell", image: nil, selectedImage: nil)
+//		presenter.tabBarItem = UITabBarItem(title: "Passed trips", image: nil, selectedImage: nil)
 	}
 
 	func start() {
-		let storyboard: UIStoryboard = UIStoryboard(name: "Sell", bundle: nil)
+		let storyboard: UIStoryboard = UIStoryboard(name: "Saved", bundle: nil)
 		let viewController: SellTipsViewController = SellTipsViewController.instantiate(from: storyboard)
 		presenter.pushViewController(viewController, animated: true)
 	}
