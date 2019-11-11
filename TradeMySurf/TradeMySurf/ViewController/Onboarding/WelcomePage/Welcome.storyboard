@@ -8,10 +8,10 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--Tutorial View Controller-->
+        <!--Welcome View Controller-->
         <scene sceneID="mB9-10-hPS">
             <objects>
-                <viewController storyboardIdentifier="TutorialViewController" id="btd-kb-JMM" customClass="TutorialViewController" customModule="TradeMySurf" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="WelcomeViewController" id="btd-kb-JMM" customClass="WelcomeViewController" customModule="TradeMySurf" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="fie-jj-q1a">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -29,7 +29,7 @@
                                     <action selector="openTabBar:" destination="btd-kb-JMM" eventType="touchUpInside" id="r4J-kK-8ou"/>
                                 </connections>
                             </button>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Landing" translatesAutoresizingMaskIntoConstraints="NO" id="JuC-gD-qXj">
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="JuC-gD-qXj">
                                 <rect key="frame" x="43" y="64" width="328" height="595"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="595" id="L1f-I8-LDq"/>
@@ -54,7 +54,4 @@
             <point key="canvasLocation" x="-413" y="-2603"/>
         </scene>
     </scenes>
-    <resources>
-        <image name="Landing" width="200" height="414"/>
-    </resources>
 </document>

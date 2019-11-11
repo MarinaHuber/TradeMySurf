@@ -21,19 +21,25 @@
 		9C5B6456232A506C000727E6 /* TradeMySurf.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 9C5B6454232A506C000727E6 /* TradeMySurf.xcdatamodeld */; };
 		9C5B6458232A5073000727E6 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 9C5B6457232A5073000727E6 /* Assets.xcassets */; };
 		9C5B645B232A5073000727E6 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9C5B6459232A5073000727E6 /* LaunchScreen.storyboard */; };
-		9C5B6466232A5073000727E6 /* TradeMySurfTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C5B6465232A5073000727E6 /* TradeMySurfTests.swift */; };
 		9C5B6471232A5073000727E6 /* TradeMySurfUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C5B6470232A5073000727E6 /* TradeMySurfUITests.swift */; };
 		9C5B647F232A508B000727E6 /* Surfs.mlmodel in Sources */ = {isa = PBXBuildFile; fileRef = 9C5B647E232A508B000727E6 /* Surfs.mlmodel */; };
 		9C5B6481232A5092000727E6 /* surfs.csv in Resources */ = {isa = PBXBuildFile; fileRef = 9C5B6480232A5091000727E6 /* surfs.csv */; };
 		9C69CE76234CD9B9003E386F /* SurfStorage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C69CE75234CD9B9003E386F /* SurfStorage.swift */; };
 		9C69CE85234D06D7003E386F /* Calculator.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9C69CE84234D06D7003E386F /* Calculator.storyboard */; };
-		9C69CE87234D0749003E386F /* Tutorial.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9C69CE86234D0749003E386F /* Tutorial.storyboard */; };
-		9C76F09423493DAB00853FD9 /* TutorialViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C76F09323493DAB00853FD9 /* TutorialViewController.swift */; };
+		9C69CE87234D0749003E386F /* Welcome.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9C69CE86234D0749003E386F /* Welcome.storyboard */; };
+		9C76F09423493DAB00853FD9 /* WelcomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C76F09323493DAB00853FD9 /* WelcomeViewController.swift */; };
 		9C76F09623493EDA00853FD9 /* BuyTipsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C76F09523493EDA00853FD9 /* BuyTipsViewController.swift */; };
 		9C76F09823493F0900853FD9 /* SellTipsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C76F09723493F0900853FD9 /* SellTipsViewController.swift */; };
+		9C9F836A236649D300FA4F41 /* QuestionsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C9F8369236649D300FA4F41 /* QuestionsViewController.swift */; };
+		9C9F836C2366BDAA00FA4F41 /* TabBarCoordinatorTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C9F836B2366BDAA00FA4F41 /* TabBarCoordinatorTests.swift */; };
 		9CC59F17234AA3EF00F5ADD0 /* AppCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9CC59F16234AA3EF00F5ADD0 /* AppCoordinator.swift */; };
 		9CC59F19234AA41600F5ADD0 /* TabBarCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9CC59F18234AA41600F5ADD0 /* TabBarCoordinator.swift */; };
-		9CC59F1B234AA87700F5ADD0 /* TutorialCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9CC59F1A234AA87700F5ADD0 /* TutorialCoordinator.swift */; };
+		9CC59F1B234AA87700F5ADD0 /* WelcomeCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9CC59F1A234AA87700F5ADD0 /* WelcomeCoordinator.swift */; };
+		9CFDFD36236718E400760F25 /* CoordinatorTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9CFDFD35236718E400760F25 /* CoordinatorTests.swift */; };
+		9CFDFD3B2367220300760F25 /* AddLevel.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9CFDFD3A2367220300760F25 /* AddLevel.storyboard */; };
+		9CFDFD3D2367221C00760F25 /* AddDate.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9CFDFD3C2367221C00760F25 /* AddDate.storyboard */; };
+		9CFDFD3F2367226C00760F25 /* AddDateViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9CFDFD3E2367226C00760F25 /* AddDateViewController.swift */; };
+		9CFDFD412367228300760F25 /* AddLavelViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9CFDFD402367228300760F25 /* AddLavelViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -70,23 +76,29 @@
 		9C5B6457232A5073000727E6 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		9C5B645A232A5073000727E6 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		9C5B6461232A5073000727E6 /* TradeMySurfTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = TradeMySurfTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		9C5B6465232A5073000727E6 /* TradeMySurfTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TradeMySurfTests.swift; sourceTree = "<group>"; };
 		9C5B646C232A5073000727E6 /* TradeMySurfUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = TradeMySurfUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		9C5B6470232A5073000727E6 /* TradeMySurfUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TradeMySurfUITests.swift; sourceTree = "<group>"; };
 		9C5B647E232A508B000727E6 /* Surfs.mlmodel */ = {isa = PBXFileReference; lastKnownFileType = file.mlmodel; name = Surfs.mlmodel; path = ../../Working/Surfs.mlmodel; sourceTree = "<group>"; };
 		9C5B6480232A5091000727E6 /* surfs.csv */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; name = surfs.csv; path = ../../Working/surfs.csv; sourceTree = "<group>"; };
 		9C69CE75234CD9B9003E386F /* SurfStorage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SurfStorage.swift; sourceTree = "<group>"; };
 		9C69CE84234D06D7003E386F /* Calculator.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Calculator.storyboard; sourceTree = "<group>"; };
-		9C69CE86234D0749003E386F /* Tutorial.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Tutorial.storyboard; sourceTree = "<group>"; };
+		9C69CE86234D0749003E386F /* Welcome.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Welcome.storyboard; sourceTree = "<group>"; };
 		9C71A14B2348946C00A67323 /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		9C71A14E234894CD00A67323 /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		9C71A150234894D500A67323 /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		9C76F09323493DAB00853FD9 /* TutorialViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TutorialViewController.swift; sourceTree = "<group>"; };
+		9C76F09323493DAB00853FD9 /* WelcomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WelcomeViewController.swift; sourceTree = "<group>"; };
 		9C76F09523493EDA00853FD9 /* BuyTipsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BuyTipsViewController.swift; sourceTree = "<group>"; };
 		9C76F09723493F0900853FD9 /* SellTipsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SellTipsViewController.swift; sourceTree = "<group>"; };
+		9C9F8369236649D300FA4F41 /* QuestionsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuestionsViewController.swift; sourceTree = "<group>"; };
+		9C9F836B2366BDAA00FA4F41 /* TabBarCoordinatorTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabBarCoordinatorTests.swift; sourceTree = "<group>"; };
 		9CC59F16234AA3EF00F5ADD0 /* AppCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppCoordinator.swift; sourceTree = "<group>"; };
 		9CC59F18234AA41600F5ADD0 /* TabBarCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabBarCoordinator.swift; sourceTree = "<group>"; };
-		9CC59F1A234AA87700F5ADD0 /* TutorialCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TutorialCoordinator.swift; sourceTree = "<group>"; };
+		9CC59F1A234AA87700F5ADD0 /* WelcomeCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WelcomeCoordinator.swift; sourceTree = "<group>"; };
+		9CFDFD35236718E400760F25 /* CoordinatorTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoordinatorTests.swift; sourceTree = "<group>"; };
+		9CFDFD3A2367220300760F25 /* AddLevel.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = AddLevel.storyboard; path = TradeMySurf/ViewController/Onboarding/AddLevelPage/AddLevel.storyboard; sourceTree = SOURCE_ROOT; };
+		9CFDFD3C2367221C00760F25 /* AddDate.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = AddDate.storyboard; sourceTree = "<group>"; };
+		9CFDFD3E2367226C00760F25 /* AddDateViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddDateViewController.swift; sourceTree = "<group>"; };
+		9CFDFD402367228300760F25 /* AddLavelViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddLavelViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -128,6 +140,7 @@
 			children = (
 				9C4C54732349C28500FB2653 /* Sell.storyboard */,
 				9C53D5C5234C145B00A3BD80 /* SellTipsCoordinator.swift */,
+				9C9F8369236649D300FA4F41 /* QuestionsViewController.swift */,
 				9C76F09723493F0900853FD9 /* SellTipsViewController.swift */,
 			);
 			path = Sell;
@@ -195,7 +208,8 @@
 		9C5B6464232A5073000727E6 /* TradeMySurfTests */ = {
 			isa = PBXGroup;
 			children = (
-				9C5B6465232A5073000727E6 /* TradeMySurfTests.swift */,
+				9CFDFD35236718E400760F25 /* CoordinatorTests.swift */,
+				9C9F836B2366BDAA00FA4F41 /* TabBarCoordinatorTests.swift */,
 				9C71A14E234894CD00A67323 /* Info.plist */,
 			);
 			path = TradeMySurfTests;
@@ -219,14 +233,14 @@
 			path = Model;
 			sourceTree = "<group>";
 		};
-		9C69CE88234D1D87003E386F /* TutorialPage */ = {
+		9C69CE88234D1D87003E386F /* WelcomePage */ = {
 			isa = PBXGroup;
 			children = (
-				9C69CE86234D0749003E386F /* Tutorial.storyboard */,
-				9CC59F1A234AA87700F5ADD0 /* TutorialCoordinator.swift */,
-				9C76F09323493DAB00853FD9 /* TutorialViewController.swift */,
+				9C69CE86234D0749003E386F /* Welcome.storyboard */,
+				9CC59F1A234AA87700F5ADD0 /* WelcomeCoordinator.swift */,
+				9C76F09323493DAB00853FD9 /* WelcomeViewController.swift */,
 			);
-			path = TutorialPage;
+			path = WelcomePage;
 			sourceTree = "<group>";
 		};
 		9C76F09E234946D500853FD9 /* Resources */ = {
@@ -241,7 +255,7 @@
 		9C76F09F2349471000853FD9 /* ViewController */ = {
 			isa = PBXGroup;
 			children = (
-				9C69CE88234D1D87003E386F /* TutorialPage */,
+				9CFDFD3723671C2500760F25 /* Onboarding */,
 				9C53D5C9234CB1A800A3BD80 /* Calculator */,
 				9C53D5C8234CB19900A3BD80 /* Buy */,
 				9C53D5C7234CB18600A3BD80 /* Sell */,
@@ -255,6 +269,34 @@
 				9CC59F18234AA41600F5ADD0 /* TabBarCoordinator.swift */,
 			);
 			path = Coordinators;
+			sourceTree = "<group>";
+		};
+		9CFDFD3723671C2500760F25 /* Onboarding */ = {
+			isa = PBXGroup;
+			children = (
+				9CFDFD39236721C700760F25 /* AddDatePage */,
+				9CFDFD38236721B900760F25 /* AddLevelPage */,
+				9C69CE88234D1D87003E386F /* WelcomePage */,
+			);
+			path = Onboarding;
+			sourceTree = "<group>";
+		};
+		9CFDFD38236721B900760F25 /* AddLevelPage */ = {
+			isa = PBXGroup;
+			children = (
+				9CFDFD3A2367220300760F25 /* AddLevel.storyboard */,
+				9CFDFD402367228300760F25 /* AddLavelViewController.swift */,
+			);
+			path = AddLevelPage;
+			sourceTree = "<group>";
+		};
+		9CFDFD39236721C700760F25 /* AddDatePage */ = {
+			isa = PBXGroup;
+			children = (
+				9CFDFD3C2367221C00760F25 /* AddDate.storyboard */,
+				9CFDFD3E2367226C00760F25 /* AddDateViewController.swift */,
+			);
+			path = AddDatePage;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -363,9 +405,11 @@
 			files = (
 				9C5B645B232A5073000727E6 /* LaunchScreen.storyboard in Resources */,
 				9C45E661234D238F0054A5FD /* Buy.storyboard in Resources */,
-				9C69CE87234D0749003E386F /* Tutorial.storyboard in Resources */,
+				9C69CE87234D0749003E386F /* Welcome.storyboard in Resources */,
+				9CFDFD3B2367220300760F25 /* AddLevel.storyboard in Resources */,
 				9C5B6458232A5073000727E6 /* Assets.xcassets in Resources */,
 				9C5B6481232A5092000727E6 /* surfs.csv in Resources */,
+				9CFDFD3D2367221C00760F25 /* AddDate.storyboard in Resources */,
 				9C4C54742349C28500FB2653 /* Sell.storyboard in Resources */,
 				9C69CE85234D06D7003E386F /* Calculator.storyboard in Resources */,
 			);
@@ -397,16 +441,19 @@
 				9C53D5C2234C142A00A3BD80 /* CalculatorCoordinator.swift in Sources */,
 				9C467C67234F2A7D009F4D58 /* SurfTextModel.swift in Sources */,
 				9CC59F17234AA3EF00F5ADD0 /* AppCoordinator.swift in Sources */,
-				9CC59F1B234AA87700F5ADD0 /* TutorialCoordinator.swift in Sources */,
+				9CC59F1B234AA87700F5ADD0 /* WelcomeCoordinator.swift in Sources */,
 				9C3F533D234BD80E00D5F65E /* Coordinator.swift in Sources */,
 				9C5B6450232A506C000727E6 /* PriceCalculatorViewController.swift in Sources */,
+				9C9F836A236649D300FA4F41 /* QuestionsViewController.swift in Sources */,
+				9CFDFD412367228300760F25 /* AddLavelViewController.swift in Sources */,
 				9CC59F19234AA41600F5ADD0 /* TabBarCoordinator.swift in Sources */,
-				9C76F09423493DAB00853FD9 /* TutorialViewController.swift in Sources */,
+				9C76F09423493DAB00853FD9 /* WelcomeViewController.swift in Sources */,
 				9C53D5C4234C144400A3BD80 /* BuyTipsCoordinator.swift in Sources */,
 				9C53D5C0234C126600A3BD80 /* StoryboardProtocol.swift in Sources */,
 				9C5B644C232A506C000727E6 /* AppDelegate.swift in Sources */,
 				9C5B647F232A508B000727E6 /* Surfs.mlmodel in Sources */,
 				9C5B6456232A506C000727E6 /* TradeMySurf.xcdatamodeld in Sources */,
+				9CFDFD3F2367226C00760F25 /* AddDateViewController.swift in Sources */,
 				9C76F09623493EDA00853FD9 /* BuyTipsViewController.swift in Sources */,
 				9C76F09823493F0900853FD9 /* SellTipsViewController.swift in Sources */,
 				9C5B644E232A506C000727E6 /* SceneDelegate.swift in Sources */,
@@ -417,7 +464,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				9C5B6466232A5073000727E6 /* TradeMySurfTests.swift in Sources */,
+				9CFDFD36236718E400760F25 /* CoordinatorTests.swift in Sources */,
+				9C9F836C2366BDAA00FA4F41 /* TabBarCoordinatorTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -490,6 +538,7 @@
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
 				COPY_PHASE_STRIP = NO;
 				DEBUG_INFORMATION_FORMAT = dwarf;
+				DEFINES_MODULE = YES;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
 				ENABLE_TESTABILITY = YES;
 				GCC_C_LANGUAGE_STANDARD = gnu11;
@@ -506,7 +555,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
 				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
 				MTL_FAST_MATH = YES;
 				ONLY_ACTIVE_ARCH = YES;
@@ -550,6 +599,7 @@
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
 				COPY_PHASE_STRIP = NO;
 				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				DEFINES_MODULE = YES;
 				ENABLE_NS_ASSERTIONS = NO;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
 				GCC_C_LANGUAGE_STANDARD = gnu11;
@@ -560,7 +610,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				MTL_FAST_MATH = YES;
 				SDKROOT = iphoneos;
@@ -576,6 +626,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_IDENTITY = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
+				DEFINES_MODULE = YES;
 				DEVELOPMENT_TEAM = HBS2B82CVU;
 				INFOPLIST_FILE = TradeMySurf/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
@@ -597,6 +648,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_IDENTITY = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
+				DEFINES_MODULE = YES;
 				DEVELOPMENT_TEAM = HBS2B82CVU;
 				INFOPLIST_FILE = TradeMySurf/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 12.0;

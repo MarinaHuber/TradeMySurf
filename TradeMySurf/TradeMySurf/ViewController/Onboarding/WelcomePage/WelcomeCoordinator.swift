@@ -9,13 +9,11 @@
 import Foundation
 import UIKit
 
-final class TutorialCoordinator: Coordinator {
+final class WelcomeCoordinator: Coordinator {
 
 	var tabBar : TabBarCoordinator?
 	var tabBarController: UITabBarController?
-
 	internal var presenter: UINavigationController
-
 	var childCoordinators: [Coordinator]
 
 	init(presenter: UINavigationController) {
@@ -23,20 +21,17 @@ final class TutorialCoordinator: Coordinator {
 		childCoordinators = []
 	}
 	func start() {
-		let tutorialVC = TutorialViewController.instantiate()
-		tutorialVC.delegate = self
-		presenter.pushViewController(tutorialVC, animated: true)
+		let mainVC = WelcomeViewController.instantiate()
+		mainVC.delegate = self
+		presenter.pushViewController(mainVC, animated: true)
 	}
 }
 
-extension TutorialCoordinator : TutorialViewControllerDelegate {
+extension WelcomeCoordinator : WelcomeViewControllerDelegate {
 	func performTabBar() {
-
-		let coordinator: TabBarCoordinator = TabBarCoordinator(tabBarController: UITabBarController(), nav: UINavigationController())
+		let coordinator: TabBarCoordinator = TabBarCoordinator(tabBarController: UITabBarController())
         addChildCoordinator(coordinator: coordinator)
-
-        coordinator.start()
-
+		coordinator.start()
 		presenter.present(coordinator.tabBarController!, animated: true, completion: nil)
 		self.tabBar = coordinator
 		

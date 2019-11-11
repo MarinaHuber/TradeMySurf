@@ -8,7 +8,7 @@
 
 import UIKit
 
-// Inspired from Coordinator-Example by G. Lombardo & Hacking with swift
+// kudos Coordinator-Example by G. Lombardo & Hacking with swift
 // https://github.com/giulio92/Coordinator
 // https://www.hackingwithswift.com/articles/175/advanced-coordinator-pattern-tutorial-ios
 // no Main.storyboard
@@ -25,17 +25,31 @@ final class TabBarCoordinator: Coordinator {
 	internal var tabBarController: UITabBarController?
 	internal var childCoordinators: [Coordinator]
 
-	init(tabBarController: UITabBarController, nav: UINavigationController) {
+	init(tabBarController: UITabBarController) {
 		self.tabBarController = tabBarController
 		childCoordinators = []
-		self.presenter = nav
-		presenter.navigationBar.prefersLargeTitles = true
-		presenter.navigationBar.topItem?.title = "Kelly my surf"
+		self.presenter = UINavigationController()
 	}
-
 
 	func start() {
 		performGetTabBar()
+	}
+
+	private func performGetTabBar() {
+		let coordinators: [Coordinator] = generateTabCoordinators()
+
+		coordinators.forEach({ coordinator in
+			coordinator.start()
+			addChildCoordinator(coordinator: coordinator)
+		})
+
+		let presenters: [UINavigationController] = coordinators.map({ coordinator -> UINavigationController in
+			coordinator.presenter.navigationBar.prefersLargeTitles = true
+			coordinator.presenter.navigationBar.topItem?.title = "Kelly my surf"
+			return coordinator.presenter
+		})
+		tabBarController?.setViewControllers(presenters, animated: false)
+		selectTab(type: CalculatorCoordinator.self)
 	}
 
 	private func generateTabCoordinators() -> [Coordinator] {
@@ -43,22 +57,6 @@ final class TabBarCoordinator: Coordinator {
 		let calculatorCoordinator: CalculatorCoordinator = CalculatorCoordinator(presenter: UINavigationController())
 		let sellCoordinator: SellTipsCoordinator = SellTipsCoordinator(presenter: UINavigationController())
 		return [buyCoordinator, calculatorCoordinator, sellCoordinator]
-	}
-
-	func performGetTabBar() {
-		let coordinators: [Coordinator] = generateTabCoordinators()
-
-		coordinators.forEach({ coordinator in
-			coordinator.start()
-			addChildCoordinator(coordinator: coordinator)
-
-		})
-
-		let presenters: [UINavigationController] = coordinators.map({ coordinator -> UINavigationController in
-			coordinator.presenter
-		})
-		tabBarController?.setViewControllers(presenters, animated: false)
-		selectTab(type: CalculatorCoordinator.self)
 	}
 }
 
@@ -70,7 +68,6 @@ extension TabBarCoordinator {
 		}) else {
 			return
 		}
-
 		tabBarController?.selectedIndex = index
 	}
 }

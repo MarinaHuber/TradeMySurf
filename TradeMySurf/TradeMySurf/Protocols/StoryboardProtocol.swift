@@ -8,18 +8,14 @@
 
 import UIKit
 
-// Inspired from Coordinator-Example by G. Lombardo & Hacking with swift
-// https://www.hackingwithswift.com/articles/175/advanced-coordinator-pattern-tutorial-ios
-// https://github.com/giulio92/Coordinator
-// *******************************************************************************************
 
 protocol StoryboardProtocol: AnyObject {
-	static func initialize(from storyboard: UIStoryboard) -> Self
+	static func instantiate(from storyboard: UIStoryboard) -> Self
 	static func instantiate() -> Self
 }
 
 extension StoryboardProtocol where Self: UIViewController {
-	static func initialize(from storyboard: UIStoryboard) -> Self {
+	static func instantiate(from storyboard: UIStoryboard) -> Self {
 		let nameSpaceClassName: String = NSStringFromClass(self)
 
 		guard let className: String = nameSpaceClassName.components(separatedBy: ".").last else {
@@ -35,7 +31,8 @@ extension StoryboardProtocol where Self: UIViewController {
 
 	static func instantiate() -> Self {
 		let storyboardIdentifier = String(describing: self)
-		let storyboard = UIStoryboard(name: "Tutorial", bundle: Bundle.main)
+		let storyboard = UIStoryboard(name: "Welcome", bundle: Bundle.main)
+		
 		return storyboard.instantiateViewController(withIdentifier: storyboardIdentifier) as! Self
 	}
 }

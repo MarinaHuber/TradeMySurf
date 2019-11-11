@@ -22,7 +22,7 @@ final class BuyTipsCoordinator: Coordinator {
 
 	func start() {
 		let storyboard: UIStoryboard = UIStoryboard(name: "Buy", bundle: nil)
-		let viewController: BuyTipsViewController = BuyTipsViewController.initialize(from: storyboard)
+		let viewController: BuyTipsViewController = BuyTipsViewController.instantiate(from: storyboard)
 		presenter.pushViewController(viewController, animated: true)
 	}
 }
