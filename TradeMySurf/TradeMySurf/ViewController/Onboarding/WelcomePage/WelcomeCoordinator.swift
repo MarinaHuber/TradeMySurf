@@ -21,9 +21,9 @@ final class WelcomeCoordinator: Coordinator {
 		childCoordinators = []
 	}
 	func start() {
-		let tutorialVC = WelcomeViewController.instantiate()
-		tutorialVC.delegate = self
-		presenter.pushViewController(tutorialVC, animated: true)
+		let mainVC = WelcomeViewController.instantiate()
+		mainVC.delegate = self
+		presenter.pushViewController(mainVC, animated: true)
 	}
 }
 

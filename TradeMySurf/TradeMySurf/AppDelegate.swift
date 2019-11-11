@@ -12,15 +12,16 @@ import UIKit
 class AppDelegate: UIResponder, UIApplicationDelegate {
 
 	var window: UIWindow?
-	private var appCoordinator: AppCoordinator?
+	private lazy var appCoordinator: AppCoordinator = {
+		return AppCoordinator(window: self.window!)
+	}()
+
 
 	func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
 
-		let window = UIWindow(frame: UIScreen.main.bounds)
-		let applicationCoordinator = AppCoordinator(window: window)
-		self.appCoordinator = applicationCoordinator
+		window = UIWindow(frame: UIScreen.main.bounds)
 
-		applicationCoordinator.start()
+		appCoordinator.start()
 		return true
 	}
 

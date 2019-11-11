@@ -18,15 +18,14 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" lineBreakMode="tailTruncation" numberOfLines="12" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="lIG-qv-uaW">
-                                <rect key="frame" x="20" y="66" width="374" height="270"/>
+                                <rect key="frame" x="20" y="66" width="374" height="188.5"/>
                                 <constraints>
-                                    <constraint firstAttribute="width" secondItem="lIG-qv-uaW" secondAttribute="height" multiplier="131:66" constant="-161.68181818181813" id="KIN-HT-wqd"/>
+                                    <constraint firstAttribute="width" secondItem="lIG-qv-uaW" secondAttribute="height" multiplier="131:66" id="KIN-HT-wqd"/>
                                 </constraints>
                                 <string key="text">40miliion surfers is transforming locations overnight.
 Small rural town in 5-10 years is sold to foreigners that are developed unregulated.
 They all start looking all the same wherver you go in the world.as local people are leaving.
-Surfing is not a hobby it is an identity that extends to all versions of yourself.
-Modern lifestyle completely destroy digestive systems consider looking up on youtube for anoreskya videos and obesity leading us to wrong direction.</string>
+</string>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
