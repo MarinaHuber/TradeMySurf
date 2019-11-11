@@ -55,7 +55,7 @@ final class TabBarCoordinator: Coordinator {
 	private func generateTabCoordinators() -> [Coordinator] {
 		let buyCoordinator: BuyTipsCoordinator = BuyTipsCoordinator(presenter: UINavigationController())
 		let calculatorCoordinator: CalculatorCoordinator = CalculatorCoordinator(presenter: UINavigationController())
-		let sellCoordinator: SellTipsCoordinator = SellTipsCoordinator(presenter: UINavigationController())
+		let sellCoordinator: SavedTripsCoordinator = SavedTripsCoordinator(presenter: UINavigationController())
 		return [buyCoordinator, calculatorCoordinator, sellCoordinator]
 	}
 }

@@ -9,9 +9,9 @@
 import Foundation
 import UIKit
 
-class SellTipsViewController: UIViewController {
-	weak var coordinator: SellTipsCoordinator?
+class SavedTripsViewController: UIViewController {
+	weak var coordinator: SavedTripsCoordinator?
 
 }
 
-extension SellTipsViewController: StoryboardProtocol {}
+extension SavedTripsViewController: StoryboardProtocol {}

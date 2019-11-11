@@ -27,7 +27,7 @@ final class AppCoordinator: Coordinator {
 	}
 
 	func start() {
-		//MARK: rootViewController is UINavigationController for test
+//MARK: rootViewController is UINavigationController for test
 		window.rootViewController = presenter
 		rootCoordinator.start()
 		window.makeKeyAndVisible()

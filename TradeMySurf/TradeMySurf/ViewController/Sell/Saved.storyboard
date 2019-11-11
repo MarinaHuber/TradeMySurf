@@ -2,7 +2,6 @@
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14868" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
-        <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14824"/>
         <capability name="Named colors" minToolsVersion="9.0"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
@@ -12,7 +11,7 @@
         <!--Saved-->
         <scene sceneID="2Op-iH-4u0">
             <objects>
-                <viewController storyboardIdentifier="SellTipsViewController" id="taf-X9-iD4" userLabel="Saved" customClass="SellTipsViewController" customModule="TradeMySurf" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="SavedTripsViewController" id="taf-X9-iD4" userLabel="Saved" customClass="SavedTripsViewController" customModule="TradeMySurf" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="Cdt-qp-B21">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>

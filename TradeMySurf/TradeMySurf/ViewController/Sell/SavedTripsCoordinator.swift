@@ -8,8 +8,8 @@
 
 import UIKit
 
-final class SellTipsCoordinator: Coordinator {
-	var coordinator: SellTipsCoordinator?
+final class SavedTripsCoordinator: Coordinator {
+	var coordinator: SavedTripsCoordinator?
 	internal var presenter: UINavigationController
 	internal var childCoordinators: [Coordinator]
 
@@ -21,7 +21,7 @@ final class SellTipsCoordinator: Coordinator {
 
 	func start() {
 		let storyboard: UIStoryboard = UIStoryboard(name: "Saved", bundle: nil)
-		let viewController: SellTipsViewController = SellTipsViewController.instantiate(from: storyboard)
+		let viewController: SavedTripsViewController = SavedTripsViewController.instantiate(from: storyboard)
 		presenter.pushViewController(viewController, animated: true)
 	}
 }

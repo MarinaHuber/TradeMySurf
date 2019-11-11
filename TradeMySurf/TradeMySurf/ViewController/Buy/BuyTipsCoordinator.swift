@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import SwiftUI
 
 final class BuyTipsCoordinator: Coordinator {
 	var coordinator: BuyTipsCoordinator?
@@ -17,12 +18,13 @@ final class BuyTipsCoordinator: Coordinator {
 		self.presenter = presenter
 		childCoordinators = []
 
-		presenter.tabBarItem = UITabBarItem(title: "Trip", image: nil, selectedImage: nil)
+		presenter.tabBarItem = UITabBarItem(title: "RECOMMENDED", image: nil, selectedImage: nil)
 	}
 
 	func start() {
+		let vc = UIHostingController(rootView: WelcomeSwiftUIView())
 		let storyboard: UIStoryboard = UIStoryboard(name: "Buy", bundle: nil)
 		let viewController: BuyTipsViewController = BuyTipsViewController.instantiate(from: storyboard)
-		presenter.pushViewController(viewController, animated: true)
+		presenter.pushViewController(vc, animated: true)
 	}
 }

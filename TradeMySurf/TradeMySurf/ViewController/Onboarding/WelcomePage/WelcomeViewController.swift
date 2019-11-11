@@ -8,9 +8,12 @@
 
 import Foundation
 import UIKit
+#if canImport(SwiftUI)
+import SwiftUI
+#endif
 
 protocol WelcomeViewControllerDelegate: class {
-	func performTabBar()
+	func performNextView()
 }
 
 class WelcomeViewController: UIViewController {
@@ -21,8 +24,8 @@ class WelcomeViewController: UIViewController {
 		super.viewDidLoad()
 	}
 
-	@IBAction func openTabBar(_ sender: Any) {
-		delegate?.performTabBar()
+	@IBAction func openNext(_ sender: Any) {
+		delegate?.performNextView()
 	}
 }
 

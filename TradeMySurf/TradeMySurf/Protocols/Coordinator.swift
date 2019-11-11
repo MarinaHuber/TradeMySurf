@@ -16,6 +16,22 @@ protocol Coordinator: AnyObject {
 extension Coordinator {
 	func addChildCoordinator(coordinator: Coordinator) {
 		childCoordinators.append(coordinator)
-		debugPrint("Tried to add coordinator \(coordinator) but could not find it in the children of \(self), could that be a bug? 🤔")
 	}
+}
+
+extension Coordinator {
+
+    func navigate(to viewController: UIViewController, with presentationStyle: NavigationStyle, animated: Bool = true) {
+        switch presentationStyle {
+        case .present:
+            presenter.present(viewController, animated: animated, completion: nil)
+        case .push:
+            presenter.pushViewController(viewController, animated: true)
+        }
+    }
+}
+
+enum NavigationStyle {
+    case present
+    case push
 }
