@@ -8,7 +8,7 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--RECOMMENDATIONS-->
+        <!--RECOMMENDED-->
         <scene sceneID="BHr-2c-Dbm">
             <objects>
                 <viewController storyboardIdentifier="BuyTipsViewController" id="Kao-sj-uyZ" customClass="BuyTipsViewController" customModule="TradeMySurf" customModuleProvider="target" sceneMemberID="viewController">
@@ -38,7 +38,7 @@ They all start looking all the same wherver you go in the world.as local people 
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="Mg6-kr-haS"/>
                     </view>
-                    <tabBarItem key="tabBarItem" title="RECOMMENDATIONS" image="surfboardAdd3x" id="iYZ-C9-1bj"/>
+                    <tabBarItem key="tabBarItem" title="RECOMMENDED" image="surfboardAdd3x" id="iYZ-C9-1bj"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="cWa-2r-NnT" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>

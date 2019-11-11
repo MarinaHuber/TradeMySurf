@@ -8,7 +8,6 @@
 import  Foundation
 
 
-
 // Provides surfing data from JSON
 //*********************************************
 

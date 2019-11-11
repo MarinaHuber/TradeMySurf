@@ -48,7 +48,6 @@ class PriceCalculatorViewController: UIViewController {
         }
     }
 
-
 }
 
 extension PriceCalculatorViewController: StoryboardProtocol {}
