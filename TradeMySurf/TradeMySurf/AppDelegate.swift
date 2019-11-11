@@ -24,6 +24,14 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 		appCoordinator.start()
 		return true
 	}
+	@available(iOS 13.0, *)
+	func application(_ application: UIApplication, configurationForConnecting connectingSceneSession: UISceneSession, options: UIScene.ConnectionOptions) -> UISceneConfiguration {
+		return UISceneConfiguration()
+	}
+
+	@available(iOS 13.0, *)
+	func application(_ application: UIApplication, didDiscardSceneSessions sceneSessions: Set<UISceneSession>) {
+	}
 
 }
 

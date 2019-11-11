@@ -21,9 +21,9 @@ final class WelcomeCoordinator: Coordinator {
 		childCoordinators = []
 	}
 	func start() {
-		let mainVC = WelcomeViewController.instantiate()
-		mainVC.delegate = self
-		presenter.pushViewController(mainVC, animated: true)
+		let mainViewController = WelcomeViewController.instantiate()
+		mainViewController.delegate = self
+		presenter.pushViewController(mainViewController, animated: true)
 	}
 }
 
@@ -33,9 +33,6 @@ extension WelcomeCoordinator : WelcomeViewControllerDelegate {
         addChildCoordinator(coordinator: coordinator)
 		coordinator.start()
 		presenter.present(coordinator.tabBarController!, animated: true, completion: nil)
-		self.tabBar = coordinator
-		
+		self.tabBar = coordinator		
 	}
-
-
 }
