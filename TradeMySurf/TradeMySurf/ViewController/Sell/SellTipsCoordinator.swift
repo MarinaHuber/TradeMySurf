@@ -16,8 +16,7 @@ final class SellTipsCoordinator: Coordinator {
 	init(presenter: UINavigationController) {
 		self.presenter = presenter
 		childCoordinators = []
-		
-//		presenter.tabBarItem = UITabBarItem(title: "Passed trips", image: nil, selectedImage: nil)
+
 	}
 
 	func start() {
