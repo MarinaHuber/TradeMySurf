@@ -15,11 +15,23 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Welcome,                             TMF is a surf app that helps you improve your surf planning." lineBreakMode="tailTruncation" numberOfLines="4" baselineAdjustment="alignBaselines" adjustsLetterSpacingToFitWidth="YES" adjustsFontForContentSizeCategory="YES" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="GIH-Ay-MhW">
+                                <rect key="frame" x="48" y="86" width="318" height="154"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" secondItem="GIH-Ay-MhW" secondAttribute="height" multiplier="159:77" id="FaN-3K-Lp4"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="AvenirNext-DemiBold" family="Avenir Next" pointSize="25"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="1gZ-V7-pvI">
+                                <rect key="frame" x="48" y="256" width="318" height="326"/>
+                            </stackView>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="r8K-M5-40N">
-                                <rect key="frame" x="149.5" y="798" width="115" height="44"/>
+                                <rect key="frame" x="132" y="798" width="150" height="44"/>
                                 <color key="backgroundColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <constraints>
-                                    <constraint firstAttribute="height" constant="44" id="bJ2-71-c5S"/>
+                                    <constraint firstAttribute="height" constant="44" id="w6q-Ck-1Vb"/>
                                 </constraints>
                                 <fontDescription key="fontDescription" type="system" weight="heavy" pointSize="24"/>
                                 <state key="normal" title="PROCEED">
@@ -29,29 +41,27 @@
                                     <action selector="openNext:" destination="btd-kb-JMM" eventType="touchUpInside" id="fYT-dX-WGj"/>
                                 </connections>
                             </button>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="JuC-gD-qXj">
-                                <rect key="frame" x="43" y="64" width="328" height="595"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="595" id="L1f-I8-LDq"/>
-                                    <constraint firstAttribute="width" constant="328" id="RIY-Cw-sqU"/>
-                                    <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="595" id="h3y-Ld-cFB"/>
-                                </constraints>
-                            </imageView>
                         </subviews>
                         <color key="backgroundColor" systemColor="systemYellowColor" red="1" green="0.80000000000000004" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
-                            <constraint firstItem="JuC-gD-qXj" firstAttribute="top" secondItem="GrG-Zn-ifo" secondAttribute="top" constant="20" id="2d6-2a-ZH1"/>
-                            <constraint firstItem="r8K-M5-40N" firstAttribute="centerX" secondItem="GrG-Zn-ifo" secondAttribute="centerX" id="445-y9-Wv4"/>
-                            <constraint firstItem="GrG-Zn-ifo" firstAttribute="bottom" secondItem="r8K-M5-40N" secondAttribute="bottom" constant="20" id="Sjg-SV-YRp"/>
-                            <constraint firstItem="JuC-gD-qXj" firstAttribute="leading" secondItem="GrG-Zn-ifo" secondAttribute="leading" constant="43" id="T95-Dl-6vV"/>
-                            <constraint firstItem="GrG-Zn-ifo" firstAttribute="trailing" secondItem="JuC-gD-qXj" secondAttribute="trailing" constant="43" id="bap-2V-omu"/>
+                            <constraint firstItem="GIH-Ay-MhW" firstAttribute="centerX" secondItem="fie-jj-q1a" secondAttribute="centerX" id="23g-tt-rd0"/>
+                            <constraint firstItem="r8K-M5-40N" firstAttribute="centerX" secondItem="1gZ-V7-pvI" secondAttribute="centerX" id="Fya-5q-fHi"/>
+                            <constraint firstItem="GrG-Zn-ifo" firstAttribute="trailing" secondItem="1gZ-V7-pvI" secondAttribute="trailing" constant="48" id="HAj-zY-sfm"/>
+                            <constraint firstItem="GrG-Zn-ifo" firstAttribute="trailing" secondItem="GIH-Ay-MhW" secondAttribute="trailing" constant="48" id="Jg5-SU-7hR"/>
+                            <constraint firstItem="1gZ-V7-pvI" firstAttribute="leading" secondItem="GrG-Zn-ifo" secondAttribute="leading" constant="48" id="cHh-tc-isS"/>
+                            <constraint firstItem="1gZ-V7-pvI" firstAttribute="top" secondItem="GIH-Ay-MhW" secondAttribute="bottom" constant="16" id="fuZ-NB-JIh"/>
+                            <constraint firstItem="GrG-Zn-ifo" firstAttribute="bottom" secondItem="r8K-M5-40N" secondAttribute="bottom" constant="20" id="iAc-Kk-QzY"/>
+                            <constraint firstItem="GIH-Ay-MhW" firstAttribute="top" secondItem="GrG-Zn-ifo" secondAttribute="top" constant="42" id="iZY-iS-gLV"/>
+                            <constraint firstItem="r8K-M5-40N" firstAttribute="top" secondItem="1gZ-V7-pvI" secondAttribute="bottom" constant="216" id="jqR-ef-lAf"/>
+                            <constraint firstItem="r8K-M5-40N" firstAttribute="leading" secondItem="GrG-Zn-ifo" secondAttribute="leading" constant="132" id="q8x-bE-jnn"/>
+                            <constraint firstItem="GIH-Ay-MhW" firstAttribute="leading" secondItem="GrG-Zn-ifo" secondAttribute="leading" constant="48" id="qCu-bg-jFp"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="GrG-Zn-ifo"/>
                     </view>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Y3D-HU-Rx7" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-413" y="-2603"/>
+            <point key="canvasLocation" x="-413.04347826086962" y="-2603.5714285714284"/>
         </scene>
     </scenes>
 </document>
