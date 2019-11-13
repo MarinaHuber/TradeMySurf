@@ -22,9 +22,8 @@ final class BuyTipsCoordinator: Coordinator {
 	}
 
 	func start() {
-		let vc = UIHostingController(rootView: WelcomeSwiftUIView())
-		let storyboard: UIStoryboard = UIStoryboard(name: "Buy", bundle: nil)
+		let storyboard: UIStoryboard = UIStoryboard(name: Constants.Storyboards.buyTipsViewController, bundle: nil)
 		let viewController: BuyTipsViewController = BuyTipsViewController.instantiate(from: storyboard)
-		presenter.pushViewController(vc, animated: true)
+		presenter.pushViewController(viewController, animated: true)
 	}
 }

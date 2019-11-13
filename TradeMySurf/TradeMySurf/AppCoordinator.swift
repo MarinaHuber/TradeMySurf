@@ -33,4 +33,3 @@ final class AppCoordinator: Coordinator {
 		window.makeKeyAndVisible()
 	}
 }
-

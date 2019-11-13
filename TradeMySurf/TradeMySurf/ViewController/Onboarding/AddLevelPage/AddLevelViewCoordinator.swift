@@ -19,7 +19,7 @@ final class AddLevelViewCoordinator: Coordinator {
 
 	}
 	func start() {
-		let storyboard: UIStoryboard = UIStoryboard(name: "AddLevelViewController", bundle: nil)
+		let storyboard: UIStoryboard = UIStoryboard(name: Constants.Storyboards.addLevelViewController, bundle: nil)
 		let viewController: AddLevelViewController = AddLevelViewController.instantiate(from: storyboard)
 		viewController.delegate = self
 		presenter.pushViewController(viewController, animated: true)

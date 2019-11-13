@@ -21,13 +21,5 @@ enum Constants {
 		static let priceCalculatorViewController = "PriceCalculatorViewController"
 		static let buyTipsViewController = "BuyTipsViewController"
 		static let savedTripsViewController = "SavedTripsViewController"
-
-		enum StoryboardIdentifiers {
-			static let addLevelViewController = "AddLevelViewController"
-			static let addDateViewController = "AddDateViewController"
-			static let priceCalculatorViewController = "PriceCalculatorViewController"
-			static let buyTipsViewController = "BuyTipsViewController"
-			static let savedTripsViewController = "SavedTripsViewController"
-		}
 	}
 }

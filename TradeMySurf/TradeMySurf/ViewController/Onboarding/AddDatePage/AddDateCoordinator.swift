@@ -20,7 +20,7 @@ final class AddDateCoordinator: Coordinator {
 		childCoordinators = []
 	}
 	func start() {
-		let storyboard: UIStoryboard = UIStoryboard(name: "AddDateViewController", bundle: nil)
+		let storyboard: UIStoryboard = UIStoryboard(name: Constants.Storyboards.addDateViewController, bundle: nil)
 		let dateController: AddDateViewController = AddDateViewController.instantiate(from: storyboard)
 		dateController.delegate = self
 		presenter.pushViewController(dateController, animated: true)
