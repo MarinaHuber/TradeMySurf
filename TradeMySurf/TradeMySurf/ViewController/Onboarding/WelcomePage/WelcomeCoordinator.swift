@@ -32,6 +32,7 @@ extension WelcomeCoordinator : WelcomeViewControllerDelegate {
 		let addLevelCoordinator: AddLevelViewCoordinator = AddLevelViewCoordinator(presenter: UINavigationController())
 		addLevelCoordinator.start()
 		addChildCoordinator(coordinator: addLevelCoordinator)
+		addLevelCoordinator.presenter.modalPresentationStyle = .fullScreen
 		presenter.present(addLevelCoordinator.presenter, animated: true, completion: nil)
 	}
 }

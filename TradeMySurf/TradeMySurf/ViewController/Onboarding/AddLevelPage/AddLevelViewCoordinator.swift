@@ -33,6 +33,7 @@ extension AddLevelViewCoordinator : AddLevelViewControllerDelegate {
 		let addDateCoordinator: AddDateCoordinator = AddDateCoordinator(presenter: UINavigationController())
 		addDateCoordinator.start()
 		addChildCoordinator(coordinator: addDateCoordinator)
+		addDateCoordinator.presenter.modalPresentationStyle = .fullScreen
 		presenter.present(addDateCoordinator.presenter, animated: true, completion: nil)
 	}
 }
