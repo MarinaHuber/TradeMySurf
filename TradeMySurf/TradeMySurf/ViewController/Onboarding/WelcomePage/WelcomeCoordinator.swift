@@ -32,7 +32,8 @@ extension WelcomeCoordinator : WelcomeViewControllerDelegate {
 		let coordinator: TabBarCoordinator = TabBarCoordinator(tabBarController: UITabBarController())
         addChildCoordinator(coordinator: coordinator)
 		coordinator.start()
-		presenter.present(coordinator.tabBarController!, animated: true, completion: nil)
+		presenter.show(coordinator.tabBarController!, sender: nil)
+		//(coordinator.tabBarController!, animated: true, completion: nil)
 		self.tabBar = coordinator
 		
 	}
