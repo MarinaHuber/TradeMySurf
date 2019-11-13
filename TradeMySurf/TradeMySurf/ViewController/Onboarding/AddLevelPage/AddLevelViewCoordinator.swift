@@ -31,8 +31,8 @@ extension AddLevelViewCoordinator : AddLevelViewControllerDelegate {
 	func performNext() {
 
 		let addDateCoordinator: AddDateCoordinator = AddDateCoordinator(presenter: UINavigationController())
-		addChildCoordinator(coordinator: addDateCoordinator)
 		addDateCoordinator.start()
+		addChildCoordinator(coordinator: addDateCoordinator)
 		presenter.present(addDateCoordinator.presenter, animated: true, completion: nil)
 	}
 }

@@ -30,8 +30,8 @@ extension WelcomeCoordinator : WelcomeViewControllerDelegate {
 	func performNextView() {
 
 		let addLevelCoordinator: AddLevelViewCoordinator = AddLevelViewCoordinator(presenter: UINavigationController())
-		addChildCoordinator(coordinator: addLevelCoordinator)
 		addLevelCoordinator.start()
+		addChildCoordinator(coordinator: addLevelCoordinator)
 		presenter.present(addLevelCoordinator.presenter, animated: true, completion: nil)
 	}
 }
