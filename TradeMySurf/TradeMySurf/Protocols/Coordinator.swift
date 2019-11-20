@@ -18,20 +18,3 @@ extension Coordinator {
 		childCoordinators.append(coordinator)
 	}
 }
-
-extension Coordinator {
-
-    func navigate(to viewController: UIViewController, with presentationStyle: NavigationStyle, animated: Bool = true) {
-        switch presentationStyle {
-        case .present:
-            presenter.present(viewController, animated: animated, completion: nil)
-        case .push:
-            presenter.pushViewController(viewController, animated: true)
-        }
-    }
-}
-
-enum NavigationStyle {
-    case present
-    case push
-}

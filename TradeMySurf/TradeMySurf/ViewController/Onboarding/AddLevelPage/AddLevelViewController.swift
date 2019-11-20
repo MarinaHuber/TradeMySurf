@@ -7,6 +7,8 @@
 //
 
 import UIKit
+import Lottie
+import SwiftyPickerPopover
 
 protocol AddLevelViewControllerDelegate: class {
 	func performNext()
@@ -14,15 +16,23 @@ protocol AddLevelViewControllerDelegate: class {
 
 class AddLevelViewController: UIViewController {
 
-		weak var delegate: AddLevelViewControllerDelegate?
-		weak var coordinator: TabBarCoordinator?
+	weak var delegate: AddLevelViewControllerDelegate?
+	weak var coordinator: TabBarCoordinator?
+	var addLevel = UILabel()
+	var iconViewAnima = AnimationView()
 
-		override func viewDidLoad() {
-			super.viewDidLoad()
-		}
+	lazy var iconImage: UIImageView = {
+		let iview = UIImageView()
+		iview.image = #imageLiteral(resourceName: "sunny").withRenderingMode(.alwaysOriginal)
+		return iview
+	}()
+	
+	override func viewDidLoad() {
+		super.viewDidLoad()
+	}
 
-		@IBAction func openAddDate(_ sender: Any) {
-			delegate?.performNext()
-		}
+	@IBAction func openAddDate(_ sender: Any) {
+		delegate?.performNext()
+	}
 }
 extension AddLevelViewController: StoryboardProtocol {}

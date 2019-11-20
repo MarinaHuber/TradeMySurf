@@ -1,0 +1,20 @@
+PODS:
+  - lottie-ios (3.1.5)
+  - SwiftyPickerPopover (6.6.6)
+
+DEPENDENCIES:
+  - lottie-ios
+  - SwiftyPickerPopover
+
+SPEC REPOS:
+  trunk:
+    - lottie-ios
+    - SwiftyPickerPopover
+
+SPEC CHECKSUMS:
+  lottie-ios: 32bf84389337d86fbc8b12266e88452e0abf1dee
+  SwiftyPickerPopover: a402960a6687c911ffcb4e9fb282a1bc61186ab4
+
+PODFILE CHECKSUM: 2c5eff02d7dde9fa120821f0bbfa1d5e1c60aaea
+
+COCOAPODS: 1.8.4
