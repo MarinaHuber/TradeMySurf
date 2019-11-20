@@ -286,9 +286,9 @@
 		9CFDFD3723671C2500760F25 /* Onboarding */ = {
 			isa = PBXGroup;
 			children = (
+				9C69CE88234D1D87003E386F /* WelcomePage */,
 				9CFDFD39236721C700760F25 /* AddDatePage */,
 				9CFDFD38236721B900760F25 /* AddLevelPage */,
-				9C69CE88234D1D87003E386F /* WelcomePage */,
 			);
 			path = Onboarding;
 			sourceTree = "<group>";
