@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14868" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="15505" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14824"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15509"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -15,23 +15,16 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="What is your usual surf level?" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ksG-t2-QZl">
-                                <rect key="frame" x="65" y="164" width="284" height="78"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Turn surfing into a system. What is your current surf level?" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="3" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ksG-t2-QZl">
+                                <rect key="frame" x="65" y="164" width="284" height="106"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="284" id="Irl-yS-EFr"/>
-                                    <constraint firstAttribute="height" constant="78" id="mBh-qi-vjC"/>
+                                    <constraint firstAttribute="height" constant="106" id="mBh-qi-vjC"/>
                                 </constraints>
                                 <fontDescription key="fontDescription" name="AvenirNext-DemiBold" family="Avenir Next" pointSize="21"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <pickerView contentMode="scaleToFill" semanticContentAttribute="forceLeftToRight" translatesAutoresizingMaskIntoConstraints="NO" id="Mfp-Fm-0cM">
-                                <rect key="frame" x="0.0" y="307" width="414" height="162"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="162" id="bhE-Uw-yZr"/>
-                                    <constraint firstAttribute="width" constant="414" id="rvn-oD-HHD"/>
-                                </constraints>
-                            </pickerView>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="33r-K1-vYO">
                                 <rect key="frame" x="229" y="579" width="131" height="30"/>
                                 <color key="backgroundColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
@@ -45,16 +38,25 @@
                                     <action selector="openAddDate:" destination="6mL-yH-c4r" eventType="touchUpInside" id="KvG-Mi-wzP"/>
                                 </connections>
                             </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="4yn-dZ-EVN">
+                                <rect key="frame" x="125" y="332" width="164" height="30"/>
+                                <state key="normal" title="Choose a skill level">
+                                    <color key="titleColor" cocoaTouchSystemColor="darkTextColor"/>
+                                </state>
+                                <connections>
+                                    <action selector="choiceButton:" destination="6mL-yH-c4r" eventType="touchUpInside" id="oiv-3t-lA3"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <constraints>
                             <constraint firstItem="33r-K1-vYO" firstAttribute="leading" secondItem="vTy-5H-Gcj" secondAttribute="leading" constant="229" id="1tR-oW-PjV"/>
-                            <constraint firstItem="Mfp-Fm-0cM" firstAttribute="top" secondItem="ksG-t2-QZl" secondAttribute="bottom" constant="65" id="4Wl-JN-y8a"/>
+                            <constraint firstItem="4yn-dZ-EVN" firstAttribute="top" secondItem="ksG-t2-QZl" secondAttribute="bottom" constant="62" id="53L-C2-4ct"/>
                             <constraint firstItem="vTy-5H-Gcj" firstAttribute="bottom" secondItem="33r-K1-vYO" secondAttribute="bottom" constant="253" id="O9b-Xp-PAa"/>
-                            <constraint firstItem="Mfp-Fm-0cM" firstAttribute="trailing" secondItem="vTy-5H-Gcj" secondAttribute="trailing" id="OSf-ce-Bkp"/>
                             <constraint firstItem="ksG-t2-QZl" firstAttribute="top" secondItem="vTy-5H-Gcj" secondAttribute="top" constant="120" id="P97-k9-0vq"/>
-                            <constraint firstItem="Mfp-Fm-0cM" firstAttribute="leading" secondItem="vTy-5H-Gcj" secondAttribute="leading" id="PaS-lk-hYP"/>
                             <constraint firstItem="vTy-5H-Gcj" firstAttribute="trailing" secondItem="ksG-t2-QZl" secondAttribute="trailing" constant="65" id="R7G-aQ-f3f"/>
+                            <constraint firstItem="4yn-dZ-EVN" firstAttribute="leading" secondItem="vTy-5H-Gcj" secondAttribute="leading" constant="125" id="Zde-Jq-yp3"/>
+                            <constraint firstItem="vTy-5H-Gcj" firstAttribute="trailing" secondItem="4yn-dZ-EVN" secondAttribute="trailing" constant="125" id="k7T-WC-bFv"/>
                             <constraint firstItem="ksG-t2-QZl" firstAttribute="leading" secondItem="vTy-5H-Gcj" secondAttribute="leading" constant="65" id="toR-a6-8Si"/>
                             <constraint firstItem="vTy-5H-Gcj" firstAttribute="trailing" secondItem="33r-K1-vYO" secondAttribute="trailing" constant="54" id="yuZ-Mr-Pfn"/>
                         </constraints>

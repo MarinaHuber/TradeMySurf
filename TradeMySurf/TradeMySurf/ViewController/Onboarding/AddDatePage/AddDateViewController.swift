@@ -7,9 +7,7 @@
 //
 
 import UIKit
-#if canImport(SwiftUI)
-import SwiftUI
-#endif
+import  SwiftyPickerPopover
 
 protocol AddDateViewControllerDelegate: class {
 	func performTabBar()
@@ -21,6 +19,12 @@ class AddDateViewController: UIViewController {
 
 	override func viewDidLoad() {
 		super.viewDidLoad()
+		DatePickerPopover(title: "DatePicker")
+		.setDateMode(.date)
+		.setSelectedDate(Date())
+		.setDoneButton(action: { popover, selectedDate in print("selectedDate \(selectedDate)")})
+		.setCancelButton(action: { _, _ in print("cancel")})
+		.appear(originView: view.superview ?? UIView(), baseViewController: self)
 	}
 
 	@IBAction func openTabBar(_ sender: Any) {
