@@ -19,14 +19,24 @@ class AddDateViewController: UIViewController {
 
 	override func viewDidLoad() {
 		super.viewDidLoad()
-		DatePickerPopover(title: "DatePicker")
-		.setDateMode(.date)
-		.setSelectedDate(Date())
-		.setDoneButton(action: { popover, selectedDate in print("selectedDate \(selectedDate)")})
-		.setCancelButton(action: { _, _ in print("cancel")})
-		.appear(originView: view.superview ?? UIView(), baseViewController: self)
+
 	}
 
+	@IBAction func tapDateSpringPopoverPicker(_ sender: UIButton) {
+		let popover = DatePickerPopover(title: "Clearable DatePicker")
+			.setLocale(identifier: "en_GB") //en_GB is dd-MM-YYYY. en_US is MM-dd-YYYY. They are both in English.
+			.setValueChange(action: { _, selectedDate in
+				print("current date \(selectedDate)")
+			})
+			.setDoneButton(action: { popover, selectedDate in print("selectedDate \(selectedDate)")} )
+			.setCancelButton(action: { _, _ in print("cancel")})
+			.setClearButton(action: { popover, _ in
+				print("clear")
+				popover.setSelectedDate(Date()).reload()
+			})
+		popover.appear(originView: sender, baseViewController: self)
+		popover.disappearAutomatically(after: 5.0)
+	}
 	@IBAction func openTabBar(_ sender: Any) {
 		delegate?.performTabBar()
 	}

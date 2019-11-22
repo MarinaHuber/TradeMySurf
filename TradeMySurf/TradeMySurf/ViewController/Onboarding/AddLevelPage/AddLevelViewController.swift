@@ -26,28 +26,22 @@ class AddLevelViewController: UIViewController {
 		super.viewDidLoad()
 	}
 	@IBAction func didTapStringPickerWithImageButton(_ sender: UIButton) {
-
-        /// StringPickerPopover with image:
-		let pop = StringPickerPopover(title: "with image", choices: levelsData)
-            .setImageNames(["suefboardSell2x","suefboardSell2x","suefboardSell2x", "suefboardSell2x", "suefboardSell2x"])
-            .setSize(width: 350)
-            .setCornerRadius(40)
-		    .setRowHeight(60)
+		let popover = StringPickerPopover(title: "with image", choices: levelsData)
+			.setImageNames(["suefboardSell2x","suefboardSell2x","suefboardSell2x", "suefboardSell2x", "suefboardSell2x"])
+			.setSize(width: 350)
+			.setCornerRadius(40)
+			.setRowHeight(60)
 			.setFontSize(16)
-			//.setFontColor(.black)
-            .setValueChange(action: { _, _, selectedString in
-                print("current string: \(selectedString)")
-            })
-            .setDoneButton(action: {
-                popover, selectedRow, selectedString in
-                print("done row \(selectedRow) \(selectedString)")
-            })
-            .setCancelButton(action: {_, _, _ in
-                print("cancel") })
-            .setOutsideTapDismissing(allowed: false)
-            .setDimmedBackgroundView(enabled: true)
-        pop.appear(originView: sender, baseViewController: self)
-		pop.disappearAutomatically(after: 5.0, completion: { print("automatically hidden")} )
+			.setValueChange(action: { _, _, selectedString in
+			})
+			.setDoneButton(action: {
+				_, selectedRow, selectedString in
+			})
+			.setCancelButton(action: nil)
+			.setOutsideTapDismissing(allowed: false)
+			.setDimmedBackgroundView(enabled: true)
+		popover.appear(originView: sender, baseViewController: self)
+		popover.disappearAutomatically(after: 5.0, completion: nil)
 	}
 
 	@IBAction func openAddDate(_ sender: Any) {

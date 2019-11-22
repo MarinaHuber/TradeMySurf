@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14868" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
-    <device id="retina6_1" orientation="portrait" appearance="light"/>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="15505" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_5" orientation="portrait" appearance="light"/>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14824"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15509"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -16,7 +16,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="GuL-es-VkA">
-                                <rect key="frame" x="122" y="571" width="170" height="38"/>
+                                <rect key="frame" x="122" y="573" width="170" height="36"/>
                                 <color key="backgroundColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="170" id="9mB-Wf-blX"/>
@@ -29,11 +29,41 @@
                                     <action selector="openTabBar:" destination="uFP-b1-cSK" eventType="touchUpInside" id="Tod-TN-MtI"/>
                                 </connections>
                             </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="When are you planning your surfing trip?" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Hvw-mn-vaH">
+                                <rect key="frame" x="60" y="145" width="294" height="33"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="33" id="bL0-Md-exL"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="HelveticaNeue-Bold" family="Helvetica Neue" pointSize="15"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="8UK-iT-pPO">
+                                <rect key="frame" x="157" y="247" width="101" height="30"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="30" id="hkT-FC-9T5"/>
+                                    <constraint firstAttribute="width" constant="101" id="swB-u9-ZGP"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="13"/>
+                                <state key="normal" title="Choose a date">
+                                    <color key="titleColor" cocoaTouchSystemColor="darkTextColor"/>
+                                </state>
+                                <connections>
+                                    <action selector="tapDateSpringPopoverPicker:" destination="uFP-b1-cSK" eventType="touchUpInside" id="RZ2-Zv-SVR"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <constraints>
+                            <constraint firstItem="GuL-es-VkA" firstAttribute="top" secondItem="8UK-iT-pPO" secondAttribute="bottom" constant="296" id="0f8-iJ-NXO"/>
+                            <constraint firstItem="Hvw-mn-vaH" firstAttribute="leading" secondItem="IVB-pQ-fdR" secondAttribute="leading" constant="60" id="997-XN-pvk"/>
+                            <constraint firstItem="IVB-pQ-fdR" firstAttribute="trailing" secondItem="8UK-iT-pPO" secondAttribute="trailing" constant="156" id="9lF-ii-F6r"/>
                             <constraint firstItem="IVB-pQ-fdR" firstAttribute="trailing" secondItem="GuL-es-VkA" secondAttribute="trailing" constant="122" id="Lub-Nu-xME"/>
+                            <constraint firstItem="Hvw-mn-vaH" firstAttribute="top" secondItem="IVB-pQ-fdR" secondAttribute="top" constant="101" id="Ssm-4e-IWh"/>
                             <constraint firstItem="IVB-pQ-fdR" firstAttribute="bottom" secondItem="GuL-es-VkA" secondAttribute="bottom" constant="253" id="Znz-ku-7KN"/>
+                            <constraint firstItem="8UK-iT-pPO" firstAttribute="leading" secondItem="IVB-pQ-fdR" secondAttribute="leading" constant="157" id="ixj-LR-krC"/>
+                            <constraint firstItem="8UK-iT-pPO" firstAttribute="top" secondItem="Hvw-mn-vaH" secondAttribute="bottom" constant="69" id="nkz-DH-UAG"/>
+                            <constraint firstItem="IVB-pQ-fdR" firstAttribute="trailing" secondItem="Hvw-mn-vaH" secondAttribute="trailing" constant="60" id="qPe-29-hOK"/>
                             <constraint firstItem="GuL-es-VkA" firstAttribute="leading" secondItem="IVB-pQ-fdR" secondAttribute="leading" constant="122" id="vKf-qw-n44"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="IVB-pQ-fdR"/>
@@ -41,7 +71,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="GIy-px-N4M" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="137.68115942028987" y="101.78571428571428"/>
+            <point key="canvasLocation" x="136.23188405797103" y="101.11607142857143"/>
         </scene>
     </scenes>
 </document>
