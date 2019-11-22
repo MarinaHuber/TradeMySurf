@@ -9,11 +9,11 @@
 import Foundation
 
 enum Levels: String, CaseIterable {
-    case beginner = "Learning to stand up in white water"
-    case beginnerIntemediate = "Paddling out, dropping straight down"
+    case beginner = "Learning to stand up in white water waves"
+    case beginnerIntemediate = "Paddling out, dropping straight down the face of the wave"
     case intermediate = "Trimming down the middle line of the wave"
     case advanced = "Performing full carving changes"
-	case professional = "Professional speed, power and flow maneuvers"
+	case professional = "Professional level speed, power and flow maneuvers"
 }
 
 enum UserDefaultsUnitKey: String, CaseIterable {

@@ -44,7 +44,7 @@
                                     <color key="titleColor" cocoaTouchSystemColor="darkTextColor"/>
                                 </state>
                                 <connections>
-                                    <action selector="choiceButton:" destination="6mL-yH-c4r" eventType="touchUpInside" id="oiv-3t-lA3"/>
+                                    <action selector="didTapStringPickerWithImageButton:" destination="6mL-yH-c4r" eventType="touchUpInside" id="I7a-Ix-GMY"/>
                                 </connections>
                             </button>
                         </subviews>
