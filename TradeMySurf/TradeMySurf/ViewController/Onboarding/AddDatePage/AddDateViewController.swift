@@ -19,7 +19,6 @@ class AddDateViewController: UIViewController {
 
 	override func viewDidLoad() {
 		super.viewDidLoad()
-
 	}
 
 	@IBAction func tapDateSpringPopoverPicker(_ sender: UIButton) {

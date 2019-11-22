@@ -34,6 +34,12 @@
 		9C76F09423493DAB00853FD9 /* WelcomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C76F09323493DAB00853FD9 /* WelcomeViewController.swift */; };
 		9C76F09623493EDA00853FD9 /* BuyTipsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C76F09523493EDA00853FD9 /* BuyTipsViewController.swift */; };
 		9C76F09823493F0900853FD9 /* SavedTripsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C76F09723493F0900853FD9 /* SavedTripsViewController.swift */; };
+		9C90A2292388886C00E735D3 /* car.json in Resources */ = {isa = PBXBuildFile; fileRef = 9C90A2282388886B00E735D3 /* car.json */; };
+		9C90A22B2388887700E735D3 /* clip-board.json in Resources */ = {isa = PBXBuildFile; fileRef = 9C90A22A2388887700E735D3 /* clip-board.json */; };
+		9C90A22D2388888300E735D3 /* ocean-wave.json in Resources */ = {isa = PBXBuildFile; fileRef = 9C90A22C2388888300E735D3 /* ocean-wave.json */; };
+		9C90A22F2388888B00E735D3 /* shop.json in Resources */ = {isa = PBXBuildFile; fileRef = 9C90A22E2388888B00E735D3 /* shop.json */; };
+		9C90A2312388954700E735D3 /* van.json in Resources */ = {isa = PBXBuildFile; fileRef = 9C90A2302388954600E735D3 /* van.json */; };
+		9C90A233238897A500E735D3 /* air.json in Resources */ = {isa = PBXBuildFile; fileRef = 9C90A232238897A400E735D3 /* air.json */; };
 		9C90BC552386BD020090E346 /* UserDefaults.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C90BC542386BD020090E346 /* UserDefaults.swift */; };
 		9C9F836C2366BDAA00FA4F41 /* TabBarCoordinatorTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C9F836B2366BDAA00FA4F41 /* TabBarCoordinatorTests.swift */; };
 		9CC59F17234AA3EF00F5ADD0 /* AppCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9CC59F16234AA3EF00F5ADD0 /* AppCoordinator.swift */; };
@@ -98,6 +104,12 @@
 		9C76F09323493DAB00853FD9 /* WelcomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WelcomeViewController.swift; sourceTree = "<group>"; };
 		9C76F09523493EDA00853FD9 /* BuyTipsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BuyTipsViewController.swift; sourceTree = "<group>"; };
 		9C76F09723493F0900853FD9 /* SavedTripsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SavedTripsViewController.swift; sourceTree = "<group>"; };
+		9C90A2282388886B00E735D3 /* car.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = car.json; sourceTree = "<group>"; };
+		9C90A22A2388887700E735D3 /* clip-board.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = "clip-board.json"; sourceTree = "<group>"; };
+		9C90A22C2388888300E735D3 /* ocean-wave.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = "ocean-wave.json"; sourceTree = "<group>"; };
+		9C90A22E2388888B00E735D3 /* shop.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = shop.json; sourceTree = "<group>"; };
+		9C90A2302388954600E735D3 /* van.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = van.json; sourceTree = "<group>"; };
+		9C90A232238897A400E735D3 /* air.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = air.json; sourceTree = "<group>"; };
 		9C90BC542386BD020090E346 /* UserDefaults.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserDefaults.swift; sourceTree = "<group>"; };
 		9C9F836B2366BDAA00FA4F41 /* TabBarCoordinatorTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabBarCoordinatorTests.swift; sourceTree = "<group>"; };
 		9CC59F16234AA3EF00F5ADD0 /* AppCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppCoordinator.swift; sourceTree = "<group>"; };
@@ -285,6 +297,7 @@
 		9C76F09E234946D500853FD9 /* Resources */ = {
 			isa = PBXGroup;
 			children = (
+				9C90A2232388812400E735D3 /* Lottie */,
 				9C5B6457232A5073000727E6 /* Assets.xcassets */,
 				9C5B6459232A5073000727E6 /* LaunchScreen.storyboard */,
 			);
@@ -300,6 +313,19 @@
 				9C53D5C7234CB18600A3BD80 /* Sell */,
 			);
 			path = ViewController;
+			sourceTree = "<group>";
+		};
+		9C90A2232388812400E735D3 /* Lottie */ = {
+			isa = PBXGroup;
+			children = (
+				9C90A232238897A400E735D3 /* air.json */,
+				9C90A2302388954600E735D3 /* van.json */,
+				9C90A22E2388888B00E735D3 /* shop.json */,
+				9C90A22C2388888300E735D3 /* ocean-wave.json */,
+				9C90A22A2388887700E735D3 /* clip-board.json */,
+				9C90A2282388886B00E735D3 /* car.json */,
+			);
+			path = Lottie;
 			sourceTree = "<group>";
 		};
 		9C90BC532386BCE50090E346 /* Helpers */ = {
@@ -457,12 +483,18 @@
 			files = (
 				9C5B645B232A5073000727E6 /* LaunchScreen.storyboard in Resources */,
 				9C45E661234D238F0054A5FD /* BuyTipsViewController.storyboard in Resources */,
+				9C90A2292388886C00E735D3 /* car.json in Resources */,
 				9C69CE87234D0749003E386F /* Welcome.storyboard in Resources */,
 				9C5B6458232A5073000727E6 /* Assets.xcassets in Resources */,
+				9C90A22D2388888300E735D3 /* ocean-wave.json in Resources */,
 				9C5B6481232A5092000727E6 /* surfs.csv in Resources */,
+				9C90A2312388954700E735D3 /* van.json in Resources */,
+				9C90A233238897A500E735D3 /* air.json in Resources */,
 				9CFDFD3D2367221C00760F25 /* AddDateViewController.storyboard in Resources */,
+				9C90A22B2388887700E735D3 /* clip-board.json in Resources */,
 				9C4C54742349C28500FB2653 /* SavedTripsViewController.storyboard in Resources */,
 				9C6F64CE2379F86400B0224D /* AddLevelViewController.storyboard in Resources */,
+				9C90A22F2388888B00E735D3 /* shop.json in Resources */,
 				9C69CE85234D06D7003E386F /* PriceCalculatorViewController.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
