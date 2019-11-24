@@ -49,14 +49,14 @@ final class TabBarCoordinator: Coordinator {
 			return coordinator.presenter
 		})
 		tabBarController?.setViewControllers(presenters, animated: false)
-		selectTab(type: CalculatorCoordinator.self)
+		selectTab(type: SurfTripCoordinator.self)
 	}
 
 	private func generateTabCoordinators() -> [Coordinator] {
-		let buyCoordinator: BuyTipsCoordinator = BuyTipsCoordinator(presenter: UINavigationController())
 		let calculatorCoordinator: CalculatorCoordinator = CalculatorCoordinator(presenter: UINavigationController())
+		let tripCoordinator: SurfTripCoordinator = SurfTripCoordinator(presenter: UINavigationController())
 		let sellCoordinator: SavedTripsCoordinator = SavedTripsCoordinator(presenter: UINavigationController())
-		return [buyCoordinator, calculatorCoordinator, sellCoordinator]
+		return [calculatorCoordinator, tripCoordinator, sellCoordinator]
 	}
 }
 

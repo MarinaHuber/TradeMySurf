@@ -15,7 +15,7 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Turn surfing into a system. What is your current surf level?" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="3" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ksG-t2-QZl">
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Turn surfing into a system. What is your current surf level?" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="3" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ksG-t2-QZl">
                                 <rect key="frame" x="65" y="164" width="284" height="106"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="284" id="Irl-yS-EFr"/>
@@ -25,8 +25,23 @@
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="4yn-dZ-EVN">
+                                <rect key="frame" x="125" y="332" width="164" height="30"/>
+                                <state key="normal" title="Choose a skill level">
+                                    <color key="titleColor" cocoaTouchSystemColor="darkTextColor"/>
+                                </state>
+                                <connections>
+                                    <action selector="didTapStringPickerWithImageButton:" destination="6mL-yH-c4r" eventType="touchUpInside" id="I7a-Ix-GMY"/>
+                                </connections>
+                            </button>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="bg-splash" translatesAutoresizingMaskIntoConstraints="NO" id="qbn-uN-LNy">
+                                <rect key="frame" x="0.0" y="512" width="416" height="384"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" secondItem="qbn-uN-LNy" secondAttribute="height" multiplier="414:295" constant="-122.79322033898313" id="RKL-b3-es8"/>
+                                </constraints>
+                            </imageView>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="33r-K1-vYO">
-                                <rect key="frame" x="229" y="579" width="131" height="30"/>
+                                <rect key="frame" x="225" y="538" width="131" height="30"/>
                                 <color key="backgroundColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <constraints>
                                     <constraint firstAttribute="width" secondItem="33r-K1-vYO" secondAttribute="height" multiplier="131:30" id="M6B-qa-2Qe"/>
@@ -38,27 +53,21 @@
                                     <action selector="openAddDate:" destination="6mL-yH-c4r" eventType="touchUpInside" id="KvG-Mi-wzP"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="4yn-dZ-EVN">
-                                <rect key="frame" x="125" y="332" width="164" height="30"/>
-                                <state key="normal" title="Choose a skill level">
-                                    <color key="titleColor" cocoaTouchSystemColor="darkTextColor"/>
-                                </state>
-                                <connections>
-                                    <action selector="didTapStringPickerWithImageButton:" destination="6mL-yH-c4r" eventType="touchUpInside" id="I7a-Ix-GMY"/>
-                                </connections>
-                            </button>
                         </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <constraints>
-                            <constraint firstItem="33r-K1-vYO" firstAttribute="leading" secondItem="vTy-5H-Gcj" secondAttribute="leading" constant="229" id="1tR-oW-PjV"/>
+                            <constraint firstItem="33r-K1-vYO" firstAttribute="leading" secondItem="vTy-5H-Gcj" secondAttribute="leading" constant="225" id="1tR-oW-PjV"/>
+                            <constraint firstItem="qbn-uN-LNy" firstAttribute="trailing" secondItem="vTy-5H-Gcj" secondAttribute="trailing" constant="2" id="4zm-wd-1VP"/>
                             <constraint firstItem="4yn-dZ-EVN" firstAttribute="top" secondItem="ksG-t2-QZl" secondAttribute="bottom" constant="62" id="53L-C2-4ct"/>
-                            <constraint firstItem="vTy-5H-Gcj" firstAttribute="bottom" secondItem="33r-K1-vYO" secondAttribute="bottom" constant="253" id="O9b-Xp-PAa"/>
+                            <constraint firstAttribute="bottom" secondItem="qbn-uN-LNy" secondAttribute="bottom" id="ATa-P7-OX0"/>
+                            <constraint firstItem="vTy-5H-Gcj" firstAttribute="bottom" secondItem="33r-K1-vYO" secondAttribute="bottom" constant="294" id="O9b-Xp-PAa"/>
                             <constraint firstItem="ksG-t2-QZl" firstAttribute="top" secondItem="vTy-5H-Gcj" secondAttribute="top" constant="120" id="P97-k9-0vq"/>
                             <constraint firstItem="vTy-5H-Gcj" firstAttribute="trailing" secondItem="ksG-t2-QZl" secondAttribute="trailing" constant="65" id="R7G-aQ-f3f"/>
                             <constraint firstItem="4yn-dZ-EVN" firstAttribute="leading" secondItem="vTy-5H-Gcj" secondAttribute="leading" constant="125" id="Zde-Jq-yp3"/>
                             <constraint firstItem="vTy-5H-Gcj" firstAttribute="trailing" secondItem="4yn-dZ-EVN" secondAttribute="trailing" constant="125" id="k7T-WC-bFv"/>
+                            <constraint firstItem="qbn-uN-LNy" firstAttribute="leading" secondItem="vTy-5H-Gcj" secondAttribute="leading" id="qsu-z7-PL1"/>
                             <constraint firstItem="ksG-t2-QZl" firstAttribute="leading" secondItem="vTy-5H-Gcj" secondAttribute="leading" constant="65" id="toR-a6-8Si"/>
-                            <constraint firstItem="vTy-5H-Gcj" firstAttribute="trailing" secondItem="33r-K1-vYO" secondAttribute="trailing" constant="54" id="yuZ-Mr-Pfn"/>
+                            <constraint firstItem="vTy-5H-Gcj" firstAttribute="trailing" secondItem="33r-K1-vYO" secondAttribute="trailing" constant="58" id="yuZ-Mr-Pfn"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="vTy-5H-Gcj"/>
                     </view>
@@ -68,4 +77,7 @@
             <point key="canvasLocation" x="137.68115942028987" y="85.714285714285708"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="bg-splash" width="350" height="400"/>
+    </resources>
 </document>

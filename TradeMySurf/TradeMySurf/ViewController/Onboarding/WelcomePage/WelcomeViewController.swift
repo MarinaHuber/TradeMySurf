@@ -28,7 +28,7 @@ class WelcomeViewController: UIViewController {
 	}
 	@IBOutlet private(set) weak var lottieCalculate: AnimationView! {
 		didSet {
-			lottieCalculate.animation = Animation.named("shop")
+			lottieCalculate.animation = Animation.named("ocean-wave")
 			lottieCalculate.animationSpeed = 0.8
 			lottieCalculate.contentMode = .scaleAspectFill
 			lottieCalculate.loopMode = .loop

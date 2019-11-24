@@ -27,10 +27,10 @@ class AddLevelViewController: UIViewController {
 	}
 	@IBAction func didTapStringPickerWithImageButton(_ sender: UIButton) {
 		let popover = StringPickerPopover(title: "with image", choices: levelsData)
-			.setImageNames(["suefboardSell2x","suefboardSell2x","suefboardSell2x", "suefboardSell2x", "suefboardSell2x"])
+			.setImageNames(["iconbaby","iconstand","iconwalk", "iconrun", "iconfly"])
 			.setSize(width: 350)
 			.setCornerRadius(40)
-			.setRowHeight(60)
+			.setRowHeight(90)
 			.setFontSize(16)
 			.setValueChange(action: { _, _, selectedString in
 			})

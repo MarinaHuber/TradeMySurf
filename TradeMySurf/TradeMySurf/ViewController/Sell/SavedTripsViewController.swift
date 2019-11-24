@@ -11,7 +11,5 @@ import UIKit
 
 class SavedTripsViewController: UIViewController {
 	weak var coordinator: SavedTripsCoordinator?
-
 }
-
 extension SavedTripsViewController: StoryboardProtocol {}

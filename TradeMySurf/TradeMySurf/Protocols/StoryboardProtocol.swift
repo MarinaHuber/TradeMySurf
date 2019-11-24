@@ -32,7 +32,6 @@ extension StoryboardProtocol where Self: UIViewController {
 	static func instantiate() -> Self {
 		let storyboardIdentifier = String(describing: self)
 		let storyboard = UIStoryboard(name: "Welcome", bundle: Bundle.main)
-		
 		return storyboard.instantiateViewController(withIdentifier: storyboardIdentifier) as! Self
 	}
 }
