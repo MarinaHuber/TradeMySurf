@@ -10,14 +10,14 @@ import Foundation
 
 struct RecommendedTrip {
 
-    var surfCountry: [Location] = {
+    var surfCountries: [Location] = {
         return [
-			Location(countryName: "France",continentName: "Europe", imageFlag: "seal1"),
-            Location(countryName: "Costa Rica", continentName: "South America", imageFlag: ""),
-            Location(countryName: "Morocco", continentName: "Africa", imageFlag: ""),
-            Location(countryName: "Japan", continentName: "Asia", imageFlag: ""),
-            Location(countryName: "California", continentName: "North America", imageFlag: ""),
-            Location(countryName: "South Africa", continentName: "Africa", imageFlag: ""),
+			Location(countryName: "France",continentName: "Europe", imageFlag: "breakingwave"),
+            Location(countryName: "Costa Rica", continentName: "South America", imageFlag: "breakingwave"),
+            Location(countryName: "Morocco", continentName: "Africa", imageFlag: "breakingwave"),
+            Location(countryName: "Japan", continentName: "Asia", imageFlag: "breakingwave"),
+            Location(countryName: "California", continentName: "North America", imageFlag: "breakingwave"),
+            Location(countryName: "South Africa", continentName: "Africa", imageFlag: "breakingwave"),
         ]
     }()
 
@@ -25,24 +25,18 @@ struct RecommendedTrip {
         return [
             SurfTip(title: "Beginner surf goal",
                      description: "Biking is the best activity you can find. It's fun, it's sporty, and you can look kind of cool on a bike"),
-            SurfTip(title: "SwiftIsland",
-                     description: "This is a special one...."),
-            SuSurfTip(title: "Running around",
-                     description: "Running is not for everyone. But if it's for you, you're in luck! It's still slow enough so you can look around at the nature around"),
-            Surfboard(title: "Petting the seals",
-                     description: "Do you dare to do it? Is it even dangerous? Let's find out together!"),
-            Surfboard(title: "Biking",
-                     description: "Biking is the best activity you can find. It's fun, it's sporty, and you can look kind of cool on a bike")
+            SurfTip(title: "Reading the wave",
+                     description: "This is a specially hard for beginners.")
         ]
     }()
 
-    var coolLocations: [Surfboard] = {
-        return [Surfboard(title: "The Lighthouse",volume: "",weight: 0,weightUnits: "", imageName: "spot4"),
-				Surfboard(title: "The Lighthouse",volume: "",weight: 0,weightUnits: "", imageName: "spot4"),
-				Surfboard(title: "The Lighthouse",volume: "",weight: 0,weightUnits: "", imageName: "spot4"),
-				Surfboard(title: "The Lighthouse",volume: "",weight: 0,weightUnits: "", imageName: "spot4"),
-				Surfboard(title: "The Lighthouse",volume: "",weight: 0,weightUnits: "", imageName: "spot4"),
-				Surfboard(title: "The Lighthouse",volume: "",weight: 0,weightUnits: "", imageName: "spot4")
+    var surfboards: [Surfboard] = {
+        return [Surfboard(title: "The Lighthouse", volume: "40 L", weight: 40, weightUnit: ">", imageName: "bg-splash"),
+				Surfboard(title: "The Longboard", volume: "50 L", weight: 50, weightUnit: "<", imageName: "bg-splash"),
+				Surfboard(title: "The Carver", volume: "60 L", weight: 60, weightUnit: "<", imageName: "bg-splash"),
+				Surfboard(title: "The Fish", volume: "70 L", weight: 70, weightUnit: "<", imageName: "bg-splash"),
+				Surfboard(title: "The Shortboard", volume: "55 L", weight: 80, weightUnit: "<", imageName: "bg-splash"),
+				Surfboard(title: "The Lighthouse", volume: "45 L", weight: 90, weightUnit: "<", imageName: "bg-splash")
 			]
     }()
 }

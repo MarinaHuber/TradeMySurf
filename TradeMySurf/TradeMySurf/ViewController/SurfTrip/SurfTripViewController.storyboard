@@ -14,27 +14,7 @@
                     <view key="view" contentMode="scaleToFill" id="cdL-jU-Pu7">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" lineBreakMode="tailTruncation" numberOfLines="12" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="lIG-qv-uaW">
-                                <rect key="frame" x="20" y="66" width="374" height="188.5"/>
-                                <constraints>
-                                    <constraint firstAttribute="width" secondItem="lIG-qv-uaW" secondAttribute="height" multiplier="131:66" id="KIN-HT-wqd"/>
-                                </constraints>
-                                <string key="text">40miliion surfers is transforming locations overnight.
-Small rural town in 5-10 years is sold to foreigners that are developed unregulated.
-They all start looking all the same wherver you go in the world.as local people are leaving.
-</string>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <nil key="textColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                        </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
-                        <constraints>
-                            <constraint firstItem="lIG-qv-uaW" firstAttribute="leading" secondItem="Mg6-kr-haS" secondAttribute="leading" constant="20" id="GKF-YX-5D7"/>
-                            <constraint firstItem="Mg6-kr-haS" firstAttribute="trailing" secondItem="lIG-qv-uaW" secondAttribute="trailing" constant="20" id="QVt-pA-LNT"/>
-                            <constraint firstItem="lIG-qv-uaW" firstAttribute="top" secondItem="Mg6-kr-haS" secondAttribute="top" constant="22" id="re4-Z5-yrS"/>
-                        </constraints>
                         <viewLayoutGuide key="safeArea" id="Mg6-kr-haS"/>
                     </view>
                     <tabBarItem key="tabBarItem" title="RECOMMENDED" image="map" id="iYZ-C9-1bj">

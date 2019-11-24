@@ -13,6 +13,6 @@ struct Surfboard: Hashable {
     let title: String
 	let volume: String
 	let weight: Int
-	let weightUnits: String
+	let weightUnit: String
     let imageName: String
 }
