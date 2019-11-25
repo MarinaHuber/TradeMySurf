@@ -12,12 +12,12 @@ struct RecommendedTrip {
 
     var surfCountries: [Location] = {
         return [
-			Location(countryName: "France",continentName: "Europe", imageFlag: "breakingwave"),
-            Location(countryName: "Costa Rica", continentName: "South America", imageFlag: "breakingwave"),
-            Location(countryName: "Morocco", continentName: "Africa", imageFlag: "breakingwave"),
-            Location(countryName: "Japan", continentName: "Asia", imageFlag: "breakingwave"),
-            Location(countryName: "California", continentName: "North America", imageFlag: "breakingwave"),
-            Location(countryName: "South Africa", continentName: "Africa", imageFlag: "breakingwave"),
+			Location(countryName: "France",continentName: "Europe", imageFlag: "french"),
+            Location(countryName: "Costa Rica", continentName: "South America", imageFlag: "brazil"),
+            Location(countryName: "Morocco", continentName: "Africa", imageFlag: "morocco"),
+            Location(countryName: "Japan", continentName: "Asia", imageFlag: "indonesia"),
+            Location(countryName: "California", continentName: "North America", imageFlag: "usa"),
+            Location(countryName: "South Africa", continentName: "Africa", imageFlag: "french"),
         ]
     }()
 

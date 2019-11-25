@@ -16,42 +16,22 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="breakingwave" translatesAutoresizingMaskIntoConstraints="NO" id="frO-2d-BxM">
-                                <rect key="frame" x="0.0" y="467" width="427" height="429"/>
+                                <rect key="frame" x="0.0" y="467" width="414" height="429"/>
                                 <constraints>
-                                    <constraint firstAttribute="width" secondItem="frO-2d-BxM" secondAttribute="height" multiplier="207:125" constant="-283.42399999999998" id="aYD-6r-FFZ"/>
+                                    <constraint firstAttribute="width" secondItem="frO-2d-BxM" secondAttribute="height" multiplier="138:143" id="SG1-jn-Lir"/>
                                 </constraints>
                             </imageView>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="What season are you planning a surfing trip?" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Hvw-mn-vaH">
-                                <rect key="frame" x="60" y="145" width="294" height="57"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="57" id="bL0-Md-exL"/>
-                                </constraints>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="What dates are you surfing?" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Hvw-mn-vaH">
+                                <rect key="frame" x="58" y="164" width="299" height="25.333333333333343"/>
                                 <fontDescription key="fontDescription" name="HelveticaNeue-Bold" family="Helvetica Neue" pointSize="21"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="8UK-iT-pPO">
-                                <rect key="frame" x="96" y="268" width="235" height="45"/>
-                                <color key="backgroundColor" systemColor="opaqueSeparatorColor" red="0.77647058820000003" green="0.77647058820000003" blue="0.7843137255" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="45" id="hkT-FC-9T5"/>
-                                    <constraint firstAttribute="width" constant="235" id="swB-u9-ZGP"/>
-                                </constraints>
-                                <state key="normal" title="For location choose a start date"/>
-                                <userDefinedRuntimeAttributes>
-                                    <userDefinedRuntimeAttribute type="number" keyPath="borderWidth">
-                                        <integer key="value" value="7"/>
-                                    </userDefinedRuntimeAttribute>
-                                </userDefinedRuntimeAttributes>
-                                <connections>
-                                    <action selector="tapDateSpringPopoverPicker:" destination="uFP-b1-cSK" eventType="touchUpInside" id="RZ2-Zv-SVR"/>
-                                </connections>
-                            </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="GuL-es-VkA">
-                                <rect key="frame" x="60" y="569" width="294" height="38"/>
+                                <rect key="frame" x="98" y="598" width="219" height="38"/>
                                 <color key="backgroundColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <constraints>
-                                    <constraint firstAttribute="width" constant="294" id="9mB-Wf-blX"/>
+                                    <constraint firstAttribute="width" secondItem="GuL-es-VkA" secondAttribute="height" multiplier="219:38" id="BO0-5y-OAk"/>
                                 </constraints>
                                 <fontDescription key="fontDescription" type="system" pointSize="21"/>
                                 <state key="normal" title="Start">
@@ -66,21 +46,44 @@
                                     <action selector="openTabBar:" destination="uFP-b1-cSK" eventType="touchUpInside" id="Tod-TN-MtI"/>
                                 </connections>
                             </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="This is what will appear in your surf recommendations" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="QDe-fe-J2C">
+                                <rect key="frame" x="75" y="326" width="264" height="38.333333333333314"/>
+                                <fontDescription key="fontDescription" type="system" weight="thin" pointSize="16"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="8UK-iT-pPO">
+                                <rect key="frame" x="92" y="290" width="230" height="30"/>
+                                <state key="normal" title="For location choose a start date">
+                                    <color key="titleColor" cocoaTouchSystemColor="darkTextColor"/>
+                                </state>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="borderWidth">
+                                        <integer key="value" value="7"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                                <connections>
+                                    <action selector="tapDateSpringPopoverPicker:" destination="uFP-b1-cSK" eventType="touchUpInside" id="RZ2-Zv-SVR"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <constraints>
-                            <constraint firstItem="frO-2d-BxM" firstAttribute="trailing" secondItem="IVB-pQ-fdR" secondAttribute="trailing" constant="13" id="6kk-os-xsQ"/>
-                            <constraint firstItem="Hvw-mn-vaH" firstAttribute="leading" secondItem="IVB-pQ-fdR" secondAttribute="leading" constant="60" id="997-XN-pvk"/>
-                            <constraint firstItem="IVB-pQ-fdR" firstAttribute="trailing" secondItem="8UK-iT-pPO" secondAttribute="trailing" constant="83" id="9lF-ii-F6r"/>
-                            <constraint firstItem="IVB-pQ-fdR" firstAttribute="trailing" secondItem="GuL-es-VkA" secondAttribute="trailing" constant="60" id="Lub-Nu-xME"/>
-                            <constraint firstItem="frO-2d-BxM" firstAttribute="leading" secondItem="IVB-pQ-fdR" secondAttribute="leading" id="NK0-em-38v"/>
-                            <constraint firstItem="Hvw-mn-vaH" firstAttribute="top" secondItem="IVB-pQ-fdR" secondAttribute="top" constant="101" id="Ssm-4e-IWh"/>
-                            <constraint firstItem="IVB-pQ-fdR" firstAttribute="bottom" secondItem="GuL-es-VkA" secondAttribute="bottom" constant="255" id="Znz-ku-7KN"/>
-                            <constraint firstAttribute="bottom" secondItem="frO-2d-BxM" secondAttribute="bottom" id="eWB-QX-AXE"/>
-                            <constraint firstItem="8UK-iT-pPO" firstAttribute="leading" secondItem="IVB-pQ-fdR" secondAttribute="leading" constant="96" id="ixj-LR-krC"/>
-                            <constraint firstItem="8UK-iT-pPO" firstAttribute="top" secondItem="Hvw-mn-vaH" secondAttribute="bottom" constant="66" id="nkz-DH-UAG"/>
-                            <constraint firstItem="IVB-pQ-fdR" firstAttribute="trailing" secondItem="Hvw-mn-vaH" secondAttribute="trailing" constant="60" id="qPe-29-hOK"/>
-                            <constraint firstItem="GuL-es-VkA" firstAttribute="leading" secondItem="IVB-pQ-fdR" secondAttribute="leading" constant="60" id="vKf-qw-n44"/>
+                            <constraint firstItem="Hvw-mn-vaH" firstAttribute="top" secondItem="IVB-pQ-fdR" secondAttribute="top" constant="120" id="09K-Fx-tCn"/>
+                            <constraint firstItem="IVB-pQ-fdR" firstAttribute="trailing" secondItem="QDe-fe-J2C" secondAttribute="trailing" constant="75" id="Afg-Gy-0QQ"/>
+                            <constraint firstItem="8UK-iT-pPO" firstAttribute="top" secondItem="Hvw-mn-vaH" secondAttribute="bottom" constant="100.67" id="JLr-RC-esr"/>
+                            <constraint firstItem="QDe-fe-J2C" firstAttribute="top" secondItem="8UK-iT-pPO" secondAttribute="bottom" constant="6" id="PvB-uV-09B"/>
+                            <constraint firstItem="Hvw-mn-vaH" firstAttribute="centerX" secondItem="2H6-JY-Mis" secondAttribute="centerX" constant="0.5" id="Rs3-al-SFt"/>
+                            <constraint firstItem="frO-2d-BxM" firstAttribute="trailing" secondItem="IVB-pQ-fdR" secondAttribute="trailing" id="W8C-iU-hzO"/>
+                            <constraint firstItem="QDe-fe-J2C" firstAttribute="leading" secondItem="IVB-pQ-fdR" secondAttribute="leading" constant="75" id="WHm-J7-Yca"/>
+                            <constraint firstItem="IVB-pQ-fdR" firstAttribute="trailing" secondItem="GuL-es-VkA" secondAttribute="trailing" constant="97" id="akp-Kt-Uu3"/>
+                            <constraint firstAttribute="bottom" secondItem="frO-2d-BxM" secondAttribute="bottom" id="j1L-WD-ctl"/>
+                            <constraint firstItem="GuL-es-VkA" firstAttribute="leading" secondItem="IVB-pQ-fdR" secondAttribute="leading" constant="98" id="puv-zi-SoC"/>
+                            <constraint firstItem="IVB-pQ-fdR" firstAttribute="bottom" secondItem="GuL-es-VkA" secondAttribute="bottom" constant="226" id="smp-fC-9Dt"/>
+                            <constraint firstItem="frO-2d-BxM" firstAttribute="leading" secondItem="IVB-pQ-fdR" secondAttribute="leading" id="syj-ZB-NLO"/>
+                            <constraint firstItem="IVB-pQ-fdR" firstAttribute="trailing" secondItem="8UK-iT-pPO" secondAttribute="trailing" constant="92" id="u3W-hY-b2J"/>
+                            <constraint firstItem="Hvw-mn-vaH" firstAttribute="leading" secondItem="IVB-pQ-fdR" secondAttribute="leading" constant="58" id="vve-E8-YLC"/>
+                            <constraint firstItem="8UK-iT-pPO" firstAttribute="leading" secondItem="IVB-pQ-fdR" secondAttribute="leading" constant="92" id="xNO-M6-sAK"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="IVB-pQ-fdR"/>
                     </view>

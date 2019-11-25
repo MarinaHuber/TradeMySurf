@@ -27,7 +27,7 @@
                             </label>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="4yn-dZ-EVN">
                                 <rect key="frame" x="125" y="332" width="164" height="30"/>
-                                <state key="normal" title="Choose a skill level">
+                                <state key="normal" title="Choose a surf goal">
                                     <color key="titleColor" cocoaTouchSystemColor="darkTextColor"/>
                                 </state>
                                 <connections>
@@ -41,10 +41,10 @@
                                 </constraints>
                             </imageView>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="33r-K1-vYO">
-                                <rect key="frame" x="225" y="538" width="131" height="30"/>
+                                <rect key="frame" x="225" y="534.5" width="131" height="33.5"/>
                                 <color key="backgroundColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <constraints>
-                                    <constraint firstAttribute="width" secondItem="33r-K1-vYO" secondAttribute="height" multiplier="131:30" id="M6B-qa-2Qe"/>
+                                    <constraint firstAttribute="width" secondItem="33r-K1-vYO" secondAttribute="height" multiplier="176:45" id="M6B-qa-2Qe"/>
                                 </constraints>
                                 <state key="normal" title="Next">
                                     <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -53,6 +53,26 @@
                                     <action selector="openAddDate:" destination="6mL-yH-c4r" eventType="touchUpInside" id="KvG-Mi-wzP"/>
                                 </connections>
                             </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="This is what will appear in your surf recommendations" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="gek-Uy-Gls">
+                                <rect key="frame" x="81" y="370" width="252" height="38.5"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="252" id="5Ap-HD-H9R"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" weight="thin" pointSize="16"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="1 - 2" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="eB8-Hq-V1f">
+                                <rect key="frame" x="110" y="532" width="86" height="38"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" secondItem="eB8-Hq-V1f" secondAttribute="height" multiplier="43:19" id="iVg-SK-vpX"/>
+                                    <constraint firstAttribute="height" constant="38" id="tL5-fJ-kn6"/>
+                                    <constraint firstAttribute="width" constant="86" id="zea-cR-IVV"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <constraints>
@@ -60,11 +80,17 @@
                             <constraint firstItem="qbn-uN-LNy" firstAttribute="trailing" secondItem="vTy-5H-Gcj" secondAttribute="trailing" constant="2" id="4zm-wd-1VP"/>
                             <constraint firstItem="4yn-dZ-EVN" firstAttribute="top" secondItem="ksG-t2-QZl" secondAttribute="bottom" constant="62" id="53L-C2-4ct"/>
                             <constraint firstAttribute="bottom" secondItem="qbn-uN-LNy" secondAttribute="bottom" id="ATa-P7-OX0"/>
+                            <constraint firstItem="gek-Uy-Gls" firstAttribute="top" secondItem="4yn-dZ-EVN" secondAttribute="bottom" constant="8" id="CrR-Gg-1Qm"/>
+                            <constraint firstItem="gek-Uy-Gls" firstAttribute="leading" secondItem="vTy-5H-Gcj" secondAttribute="leading" constant="81" id="Nat-bB-xz2"/>
                             <constraint firstItem="vTy-5H-Gcj" firstAttribute="bottom" secondItem="33r-K1-vYO" secondAttribute="bottom" constant="294" id="O9b-Xp-PAa"/>
                             <constraint firstItem="ksG-t2-QZl" firstAttribute="top" secondItem="vTy-5H-Gcj" secondAttribute="top" constant="120" id="P97-k9-0vq"/>
                             <constraint firstItem="vTy-5H-Gcj" firstAttribute="trailing" secondItem="ksG-t2-QZl" secondAttribute="trailing" constant="65" id="R7G-aQ-f3f"/>
+                            <constraint firstItem="eB8-Hq-V1f" firstAttribute="leading" secondItem="vTy-5H-Gcj" secondAttribute="leading" constant="110" id="UZ5-cl-KwZ"/>
                             <constraint firstItem="4yn-dZ-EVN" firstAttribute="leading" secondItem="vTy-5H-Gcj" secondAttribute="leading" constant="125" id="Zde-Jq-yp3"/>
                             <constraint firstItem="vTy-5H-Gcj" firstAttribute="trailing" secondItem="4yn-dZ-EVN" secondAttribute="trailing" constant="125" id="k7T-WC-bFv"/>
+                            <constraint firstItem="vTy-5H-Gcj" firstAttribute="trailing" secondItem="gek-Uy-Gls" secondAttribute="trailing" constant="81" id="nRY-OU-zU8"/>
+                            <constraint firstItem="vTy-5H-Gcj" firstAttribute="bottom" secondItem="eB8-Hq-V1f" secondAttribute="bottom" constant="292" id="pRt-xP-RFK"/>
+                            <constraint firstItem="33r-K1-vYO" firstAttribute="leading" secondItem="eB8-Hq-V1f" secondAttribute="trailing" constant="29" id="pXK-qW-6df"/>
                             <constraint firstItem="qbn-uN-LNy" firstAttribute="leading" secondItem="vTy-5H-Gcj" secondAttribute="leading" id="qsu-z7-PL1"/>
                             <constraint firstItem="ksG-t2-QZl" firstAttribute="leading" secondItem="vTy-5H-Gcj" secondAttribute="leading" constant="65" id="toR-a6-8Si"/>
                             <constraint firstItem="vTy-5H-Gcj" firstAttribute="trailing" secondItem="33r-K1-vYO" secondAttribute="trailing" constant="58" id="yuZ-Mr-Pfn"/>

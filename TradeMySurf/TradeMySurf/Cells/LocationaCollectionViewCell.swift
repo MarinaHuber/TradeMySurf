@@ -42,34 +42,42 @@ extension LocationCollectionViewCell {
 private extension LocationCollectionViewCell {
 
 func configureUI() {
-    let nameCountryLabel = UILabel()
-    let subtitle = UILabel()
-    let imageView = UIImageView()
-        nameCountryLabel.font = UIFont.preferredFont(forTextStyle: .headline)
-        nameCountryLabel.textColor = .label
 
-        subtitle.font = UIFont.preferredFont(forTextStyle: .subheadline)
-        subtitle.textColor = .secondaryLabel
+	// Styling
+	nameCountryLabel.font = UIFont.preferredFont(forTextStyle: .headline)
+	nameCountryLabel.textColor = .label
 
-        imageView.layer.cornerRadius = 15
-        imageView.clipsToBounds = true
+	subtitle.font = UIFont.preferredFont(forTextStyle: .subheadline)
+	subtitle.textColor = .secondaryLabel
 
-        imageView.setContentHuggingPriority(.defaultHigh, for: .horizontal)
+	imageView.layer.cornerRadius = 15
+	imageView.backgroundColor = .systemTeal
+	imageView.contentMode = .scaleAspectFill
+	imageView.clipsToBounds = true
 
-        let innerStackView = UIStackView(arrangedSubviews: [nameCountryLabel, subtitle])
-        innerStackView.axis = .vertical
+	// Layout
 
-        let outerStackView = UIStackView(arrangedSubviews: [imageView, innerStackView])
-        outerStackView.translatesAutoresizingMaskIntoConstraints = false
-        outerStackView.alignment = .center
-        outerStackView.spacing = 10
-        contentView.addSubview(outerStackView)
+	imageView.setContentHuggingPriority(.defaultHigh, for: .horizontal)
 
-        NSLayoutConstraint.activate([
-            outerStackView.leadingAnchor.constraint(equalTo: contentView.leadingAnchor),
-            outerStackView.trailingAnchor.constraint(equalTo: contentView.trailingAnchor),
-            outerStackView.topAnchor.constraint(equalTo: contentView.topAnchor)
-        ])
-    }
+	let labelStackView = UIStackView(arrangedSubviews: [nameCountryLabel, subtitle])
+	labelStackView.axis = .vertical
+	labelStackView.alignment = .center
+	labelStackView.spacing = 5
+	labelStackView.translatesAutoresizingMaskIntoConstraints = false
+
+	let outerStackView = UIStackView(arrangedSubviews: [imageView, labelStackView])
+	outerStackView.alignment = .center
+	outerStackView.axis = .horizontal
+	outerStackView.spacing = 10
+	outerStackView.translatesAutoresizingMaskIntoConstraints = false
+	
+	 let container = self.contentView
+	container.addSubview(outerStackView)
+
+    outerStackView.leadingAnchor.constraint(equalTo: container.leadingAnchor).isActive = true
+	outerStackView.trailingAnchor.constraint(equalTo: container.trailingAnchor).isActive = true
+	outerStackView.topAnchor.constraint(equalTo: container.topAnchor).isActive = true
+	outerStackView.bottomAnchor.constraint(equalTo: container.bottomAnchor).isActive = true
+ }
 
 }

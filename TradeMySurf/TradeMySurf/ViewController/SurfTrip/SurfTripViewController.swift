@@ -36,8 +36,8 @@ class SurfTripViewController: UIViewController {
         addCollectionView()
         configureCollectionView()
     }
-
 }
+
 private extension SurfTripViewController {
 
 func configureDiffableDataSource() {
@@ -49,7 +49,6 @@ func configureDiffableDataSource() {
 			let cell = collectionView.dequeueCell(ofType: SmallTableViewCell.self, for: indexPath)
 			cell.fillWithData(tip)
 			return cell
-
 		case .surfboard(let board):
 			let cell = collectionView.dequeueCell(ofType: SurfBoardCollectionViewCell.self, for: indexPath)
 			cell.fillWithData(board)
@@ -62,11 +61,10 @@ func configureDiffableDataSource() {
 	}
 
 	self.dataSource = dataSource
-
 	updateSnapshot(animated: false)
   }
-    func updateSnapshot(animated: Bool = true) {
 
+    func updateSnapshot(animated: Bool = true) {
 		var snapshot = NSDiffableDataSourceSnapshot<TripSection, TripItem>()
 		snapshot.appendSections([.tips])
 		snapshot.appendItems(appData.tips.map({ TripItem.tip($0) }))
@@ -80,7 +78,6 @@ func configureDiffableDataSource() {
 
         dataSource.apply(snapshot, animatingDifferences: animated)
     }
-
 }
 // MARK: - Collection View Layout -
 
@@ -92,20 +89,20 @@ private extension SurfTripViewController {
 
         let layout = UICollectionViewCompositionalLayout(sectionProvider: { [weak self] (sectionIndex: Int, _ : NSCollectionLayoutEnvironment) -> NSCollectionLayoutSection? in
 
-            guard let sself = self else {
+            guard let strongSelf = self else {
                 return nil
             }
 
-            let guideSection = sself.sections[sectionIndex]
+            let guideSection = strongSelf.sections[sectionIndex]
 
             let section: NSCollectionLayoutSection
             switch guideSection {
-            case .tips:
-                section = sself.makeSmallTableSection()
-            case .surfboards:
-                section = sself.makeSurfboardSection()
+			case .tips:
+					section = strongSelf.makeSmallTableSection()
+			case .surfboards:
+					section = strongSelf.makeSurfboardSection()
 			case .surfCountries:
-                section = sself.makeLocationSection()
+					section = strongSelf.makeLocationSection()
             }
 
             section.contentInsets = NSDirectionalEdgeInsets(top: 0, leading: 10, bottom: 0, trailing: 10)
@@ -117,7 +114,6 @@ private extension SurfTripViewController {
     }
 
 	func makeSmallTableSection() -> NSCollectionLayoutSection {
-
 		let itemSize = NSCollectionLayoutSize(widthDimension: .fractionalWidth(1.0),
 											  heightDimension: .estimated(40))
 		let item = NSCollectionLayoutItem(layoutSize: itemSize)
@@ -135,7 +131,6 @@ private extension SurfTripViewController {
 	}
 
     func makeSurfboardSection() -> NSCollectionLayoutSection {
-
         let itemSize = NSCollectionLayoutSize(widthDimension: .fractionalWidth(1.0),
                                               heightDimension: .fractionalHeight(1.0))
         let item = NSCollectionLayoutItem(layoutSize: itemSize)
@@ -168,12 +163,12 @@ private extension SurfTripViewController {
     }
 
 	 func makeLocationSection() -> NSCollectionLayoutSection {
-		        let itemSize = NSCollectionLayoutSize(widthDimension: .fractionalWidth(1.0),
+		let itemSize = NSCollectionLayoutSize(widthDimension: .fractionalWidth(1.0),
                                               heightDimension: .fractionalHeight(1.0))
         let item = NSCollectionLayoutItem(layoutSize: itemSize)
 
         let groupSize = NSCollectionLayoutSize(widthDimension: .fractionalWidth(0.93),
-                                               heightDimension: .fractionalWidth(0.55))
+                                               heightDimension: .fractionalWidth(0.5))
         let group = NSCollectionLayoutGroup.vertical(layoutSize: groupSize, subitem: item, count: 3)
 
         group.interItemSpacing = NSCollectionLayoutSpacing.fixed(10)
@@ -204,7 +199,6 @@ extension SurfTripViewController: UICollectionViewDelegate {
 private extension SurfTripViewController {
 
     func addCollectionView() {
-
         let layout = makeCompositionalLayout()
 
         collectionView = UICollectionView(frame: CGRect.zero, collectionViewLayout: layout)
@@ -227,11 +221,9 @@ private extension SurfTripViewController {
         collectionView.registerCell(ofType: SurfBoardCollectionViewCell.self)
         collectionView.registerCell(ofType: LocationCollectionViewCell.self)
 
-
         collectionView.delegate = self // Set delegate before data source !!
         configureDiffableDataSource()
     }
 }
-
 // MARK: - Basic Navigation protocol -
 extension SurfTripViewController: StoryboardProtocol {}
