@@ -70,7 +70,7 @@ func configureUI() {
 	outerStackView.axis = .horizontal
 	outerStackView.spacing = 10
 	outerStackView.translatesAutoresizingMaskIntoConstraints = false
-	
+
 	 let container = self.contentView
 	container.addSubview(outerStackView)
 
