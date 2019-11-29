@@ -21,13 +21,20 @@ final class AppCoordinator: Coordinator {
 		self.window = window
 		childCoordinators = []
 		presenter = UINavigationController()
+		self.presenter.navigationBar.backgroundColor = .clear
+		self.presenter.navigationBar.barTintColor = .clear
+		self.presenter.navigationBar.tintColor = .black
+		self.presenter.navigationBar.titleTextAttributes = [.foregroundColor : UIColor.black as Any]
+		UINavigationBar.appearance().setBackgroundImage(UIImage(), for: .any, barMetrics: .default)
+		UINavigationBar.appearance().shadowImage = UIImage()
+		UINavigationBar.appearance().layer.shadowColor = UIColor.clear.cgColor
 		rootCoordinator = WelcomeCoordinator(presenter: presenter)
 		presenter.setNavigationBarHidden(true, animated: false)
 
 	}
 
 	func start() {
-//MARK: rootViewController is UINavigationController for test
+//MARK: - RootViewController is UINavigationController for test
 		window.rootViewController = presenter
 		rootCoordinator.start()
 		window.makeKeyAndVisible()

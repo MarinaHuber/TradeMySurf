@@ -30,6 +30,8 @@
 		9C624176238B089000A4B7C9 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C624175238B089000A4B7C9 /* SceneDelegate.swift */; };
 		9C624178238B107B00A4B7C9 /* SurfboardCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C624177238B107B00A4B7C9 /* SurfboardCollectionViewCell.swift */; };
 		9C62417A238B374A00A4B7C9 /* LocationaCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C624179238B374800A4B7C9 /* LocationaCollectionViewCell.swift */; };
+		9C62417C239156C200A4B7C9 /* SavedValue.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C62417B239156C200A4B7C9 /* SavedValue.swift */; };
+		9C62417F23915AC400A4B7C9 /* SavedEnum.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C62417E23915AC300A4B7C9 /* SavedEnum.swift */; };
 		9C69CE76234CD9B9003E386F /* Location.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C69CE75234CD9B9003E386F /* Location.swift */; };
 		9C69CE85234D06D7003E386F /* PriceCalculatorViewController.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9C69CE84234D06D7003E386F /* PriceCalculatorViewController.storyboard */; };
 		9C69CE87234D0749003E386F /* Welcome.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9C69CE86234D0749003E386F /* Welcome.storyboard */; };
@@ -105,6 +107,8 @@
 		9C624175238B089000A4B7C9 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
 		9C624177238B107B00A4B7C9 /* SurfboardCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SurfboardCollectionViewCell.swift; sourceTree = "<group>"; };
 		9C624179238B374800A4B7C9 /* LocationaCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationaCollectionViewCell.swift; sourceTree = "<group>"; };
+		9C62417B239156C200A4B7C9 /* SavedValue.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SavedValue.swift; sourceTree = "<group>"; };
+		9C62417E23915AC300A4B7C9 /* SavedEnum.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SavedEnum.swift; sourceTree = "<group>"; };
 		9C69CE75234CD9B9003E386F /* Location.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Location.swift; sourceTree = "<group>"; };
 		9C69CE84234D06D7003E386F /* PriceCalculatorViewController.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = PriceCalculatorViewController.storyboard; sourceTree = "<group>"; };
 		9C69CE86234D0749003E386F /* Welcome.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Welcome.storyboard; sourceTree = "<group>"; };
@@ -244,6 +248,7 @@
 		9C5B644A232A506C000727E6 /* TradeMySurf */ = {
 			isa = PBXGroup;
 			children = (
+				9C62417D23915AA800A4B7C9 /* Enums */,
 				9C62416C238AE35100A4B7C9 /* Cells */,
 				9C90BC532386BCE50090E346 /* Helpers */,
 				9C6F64C52379BD7E00B0224D /* SupportingViews */,
@@ -293,6 +298,14 @@
 			path = Cells;
 			sourceTree = "<group>";
 		};
+		9C62417D23915AA800A4B7C9 /* Enums */ = {
+			isa = PBXGroup;
+			children = (
+				9C62417E23915AC300A4B7C9 /* SavedEnum.swift */,
+			);
+			path = Enums;
+			sourceTree = "<group>";
+		};
 		9C69CE74234CD992003E386F /* Model */ = {
 			isa = PBXGroup;
 			children = (
@@ -300,6 +313,7 @@
 				9C467C66234F2A7D009F4D58 /* Surfboard.swift */,
 				9C624171238AE81A00A4B7C9 /* SurfTip.swift */,
 				9C62416F238AE75000A4B7C9 /* RecommendedTrip.swift */,
+				9C62417B239156C200A4B7C9 /* SavedValue.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -632,9 +646,11 @@
 				9C62416E238AE68E00A4B7C9 /* ReuseIdentifierHelper.swift in Sources */,
 				9C5B647F232A508B000727E6 /* Surfs.mlmodel in Sources */,
 				9C624174238AFC1400A4B7C9 /* SmallTableViewCell.swift in Sources */,
+				9C62417F23915AC400A4B7C9 /* SavedEnum.swift in Sources */,
 				9C5B6456232A506C000727E6 /* TradeMySurf.xcdatamodeld in Sources */,
 				9CFDFD3F2367226C00760F25 /* AddDateViewController.swift in Sources */,
 				9C76F09623493EDA00853FD9 /* SurfTripViewController.swift in Sources */,
+				9C62417C239156C200A4B7C9 /* SavedValue.swift in Sources */,
 				9C90BC552386BD020090E346 /* UserDefaults.swift in Sources */,
 				9C76F09823493F0900853FD9 /* SavedTripsViewController.swift in Sources */,
 				9C6F64CB2379CB7400B0224D /* AddDateCoordinator.swift in Sources */,
