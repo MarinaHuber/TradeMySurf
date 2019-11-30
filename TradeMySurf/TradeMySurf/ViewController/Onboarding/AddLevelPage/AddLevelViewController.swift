@@ -25,45 +25,44 @@ class AddLevelViewController: UIViewController {
 
 	override func viewDidLoad() {
 		super.viewDidLoad()
-		let popover = StringPickerPopover(title: "with image", choices: levelsData)
-			//.setImageNames(["iconbaby","iconstand","iconwalk", "iconrun", "iconfly"])
-			.setSize(width: 300)
-			.setCornerRadius(40)
-			.setRowHeight(60)
-			.setFontSize(16)
-			.setValueChange(action: { _, _, selectedString in
-			
-			})
-			.setDoneButton(action: {
-				_, selectedRow, selectedString in
-			})
-			.setCancelButton(action: nil)
-			//.setOutsideTapDismissing(allowed: false)
-			//.setDimmedBackgroundView(enabled: true)
-		popover.appear(originView: pickerView, baseViewController: self)
-		//popover.disappearAutomatically(after: 5.0, completion: nil)
+		setPickerPopover()
 	}
 	@IBAction func didTapStringPickerWithImageButton(_ sender: UIButton) {
-		let popover = StringPickerPopover(title: "with image", choices: levelsData)
-			.setImageNames(["iconbaby","iconstand","iconwalk", "iconrun", "iconfly"])
-			.setSize(width: 350)
-			.setCornerRadius(40)
-			.setRowHeight(90)
-			.setFontSize(16)
-			.setValueChange(action: { _, _, selectedString in
-			})
-			.setDoneButton(action: {
-				_, selectedRow, selectedString in
-			})
-			.setCancelButton(action: nil)
-			.setOutsideTapDismissing(allowed: false)
-			.setDimmedBackgroundView(enabled: true)
-		popover.appear(originView: sender, baseViewController: self)
-		popover.disappearAutomatically(after: 5.0, completion: nil)
+//		let popover = StringPickerPopover(title: "with image", choices: levelsData)
+//			.setImageNames(["iconbaby","iconstand","iconwalk", "iconrun", "iconfly"])
+//			.setSize(width: 300)
+//			.setCornerRadius(40)
+//			.setRowHeight(60)
+//			.setFontSize(16)
+//			.setDoneButton(action: {
+//				_, selectedRow, selectedString in
+//			})
+//			.setCancelButton(action: nil)
+//			.setOutsideTapDismissing(allowed: false)
+//			.setDimmedBackgroundView(enabled: true)
+//		popover.appear(originView: sender, baseViewController: self)
+//		popover.disappearAutomatically(after: 5.0, completion: nil)
+		setPickerPopover()
 	}
 
 	@IBAction func openAddDate(_ sender: Any) {
 		delegate?.performNext()
+
+	}
+
+	private func setPickerPopover() {
+		let popover = StringPickerPopover(title: "Choose one", choices: levelsData)
+			.setSize(width: 300)
+			.setCornerRadius(40)
+			.setRowHeight(60)
+			.setFontSize(16)
+			.setDoneButton(action: { _, _, selectedString in
+				StorageData.surfLevel = selectedString
+				print(" from Picker selected: \(selectedString)")
+			})
+			//.setCancelButton(action: nil)
+			.setDimmedBackgroundView(enabled: true)
+		popover.appear(originView: pickerView, baseViewController: self)
 
 	}
 

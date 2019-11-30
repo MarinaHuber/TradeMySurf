@@ -27,7 +27,7 @@
                             </label>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="4yn-dZ-EVN">
                                 <rect key="frame" x="125" y="276" width="164" height="30"/>
-                                <state key="normal" title="Choose a surf goal">
+                                <state key="normal" title="Your goal:">
                                     <color key="titleColor" cocoaTouchSystemColor="darkTextColor"/>
                                 </state>
                                 <connections>

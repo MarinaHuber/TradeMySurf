@@ -83,35 +83,28 @@ func configureDiffableDataSource() {
 
 private extension SurfTripViewController {
 
-    func makeCompositionalLayout() -> UICollectionViewLayout {
-        let configuration = UICollectionViewCompositionalLayoutConfiguration()
-        configuration.interSectionSpacing = 10
-
-        let layout = UICollectionViewCompositionalLayout(sectionProvider: { [weak self] (sectionIndex: Int, _ : NSCollectionLayoutEnvironment) -> NSCollectionLayoutSection? in
-
-            guard let strongSelf = self else {
-                return nil
-            }
-
-            let guideSection = strongSelf.sections[sectionIndex]
-
-            let section: NSCollectionLayoutSection
-            switch guideSection {
-			case .tips:
+	func makeCompositionalLayout() -> UICollectionViewLayout {
+		let configuration = UICollectionViewCompositionalLayoutConfiguration()
+		configuration.interSectionSpacing = 10
+		let layout = UICollectionViewCompositionalLayout(sectionProvider: { [weak self] (sectionIndex: Int, _ : NSCollectionLayoutEnvironment) -> NSCollectionLayoutSection? in
+			guard let strongSelf = self else {
+				return nil
+			}
+			let guideSection = strongSelf.sections[sectionIndex]
+			let section: NSCollectionLayoutSection
+				switch guideSection {
+				case .tips:
 					section = strongSelf.makeSmallTableSection()
-			case .surfboards:
+				case .surfboards:
 					section = strongSelf.makeSurfboardSection()
-			case .surfCountries:
+				case .surfCountries:
 					section = strongSelf.makeLocationSection()
-            }
-
-            section.contentInsets = NSDirectionalEdgeInsets(top: 0, leading: 10, bottom: 0, trailing: 10)
-            return section
-
-        }, configuration: configuration)
-
-        return layout
-    }
+			}
+			section.contentInsets = NSDirectionalEdgeInsets(top: 0, leading: 10, bottom: 0, trailing: 10)
+			return section
+			}, configuration: configuration)
+		return layout
+	}
 
 	func makeSmallTableSection() -> NSCollectionLayoutSection {
 		let itemSize = NSCollectionLayoutSize(widthDimension: .fractionalWidth(1.0),
@@ -135,22 +128,22 @@ private extension SurfTripViewController {
                                               heightDimension: .fractionalHeight(1.0))
         let item = NSCollectionLayoutItem(layoutSize: itemSize)
 
-        let largeItemSize = NSCollectionLayoutSize(widthDimension: .fractionalWidth(0.4),
+        let largeItemSize = NSCollectionLayoutSize(widthDimension: .fractionalWidth(0.5),
                                                    heightDimension: .fractionalHeight(1.0))
         let largeItem = NSCollectionLayoutItem(layoutSize: largeItemSize)
 
         let groupOf2Size = NSCollectionLayoutSize(widthDimension: .fractionalWidth(0.58),
                                                   heightDimension: .fractionalHeight(1.0))
-        let groupOf2 = NSCollectionLayoutGroup.vertical(layoutSize: groupOf2Size, subitem: item, count: 2)
-        groupOf2.interItemSpacing = .fixed(10)
+//        let groupOf2 = NSCollectionLayoutGroup.vertical(layoutSize: groupOf2Size, subitem: item, count: 2)
+//        groupOf2.interItemSpacing = .fixed(10)
 
-        let groupOf3Size = NSCollectionLayoutSize(widthDimension: .fractionalWidth(1.0),
-                                              heightDimension: .fractionalHeight(1.0))
-        let groupOf3 = NSCollectionLayoutGroup.horizontal(layoutSize: groupOf3Size, subitems: [largeItem, groupOf2])
+//        let groupOf3Size = NSCollectionLayoutSize(widthDimension: .fractionalWidth(1.0),
+//                                              heightDimension: .fractionalHeight(1.0))
+        let groupOf3 = NSCollectionLayoutGroup.horizontal(layoutSize: groupOf2Size, subitems: [largeItem])
         groupOf3.interItemSpacing = .flexible(0)
 
         let groupSize = NSCollectionLayoutSize(widthDimension: .fractionalWidth(0.8),
-                                               heightDimension: .absolute(200))
+                                               heightDimension: .absolute(300))
         let group = NSCollectionLayoutGroup.horizontal(layoutSize: groupSize, subitem: groupOf3, count: 1)
 
         group.interItemSpacing = NSCollectionLayoutSpacing.fixed(10)
