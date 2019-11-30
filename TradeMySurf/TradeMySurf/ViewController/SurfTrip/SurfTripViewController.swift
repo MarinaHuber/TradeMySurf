@@ -129,6 +129,7 @@ private extension SurfTripViewController {
         let largeItem = NSCollectionLayoutItem(layoutSize: largeItemSize)
 
         let groupOf2Size = NSCollectionLayoutSize(widthDimension: .fractionalWidth(2.2),
+												  heightDimension: .estimated(300))
 
         let groupOf3 = NSCollectionLayoutGroup.horizontal(layoutSize: groupOf2Size, subitems: [largeItem])
 

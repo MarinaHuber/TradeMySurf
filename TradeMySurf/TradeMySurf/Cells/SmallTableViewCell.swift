@@ -8,14 +8,12 @@
 
 import UIKit
 
-class SmallTableViewCell : UICollectionViewCell {
-	
+class SmallTableViewCell : UICollectionViewCell {	
 	let titleLabel: UILabel = UILabel()
 	let descriptionLabel: UILabel = UILabel()
 
 	override init(frame: CGRect) {
 		super.init(frame: frame)
-		
 		configureUI()
 	}
 
