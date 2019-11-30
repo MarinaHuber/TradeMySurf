@@ -16,11 +16,11 @@ enum Levels: String, CaseIterable {
 	case professional = "Professional level speed, power and flow maneuvers"
 }
 
-enum UserDefaultsUnitKey: String, CaseIterable {
-
-    case beginner = "Overcoming the white water, learning to stand up"
-    case beginnerIntemediate = "Paddling out, dropping straight down the face of the wave"
-    case intermediate = "Trimming down the middle line of the wave"
-    case advanced = "Performing buttom turns and full carving changes"
-	case professional = "Professional speed, power and flow maneuvers"
-}
+//enum UserDefaultsUnitKey: String, CaseIterable {
+//
+//    case beginner = "Overcoming the white water, learning to stand up"
+//    case beginnerIntemediate = "Paddling out, dropping straight down the face of the wave"
+//    case intermediate = "Trimming down the middle line of the wave"
+//    case advanced = "Performing buttom turns and full carving changes"
+//	case professional = "Professional speed, power and flow maneuvers"
+//}

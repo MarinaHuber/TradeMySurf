@@ -8,29 +8,23 @@
 
 import Foundation
 
+@propertyWrapper
 struct SavedValue<T> {
+  let key: String
+  let defaultValue: T
 
-    private let key: String
-    private let defaultValue: T?
-
-    init(_ key: String, defaultValue: T? = nil) {
-
-        self.key = key
-        self.defaultValue = defaultValue
+  var wrappedValue: T {
+    get {
+      return UserDefaults.standard.object(forKey: key) as? T ?? defaultValue
     }
-
-    var value: T? {
-        get {
-            if let value = UserDefaults.standard.object(forKey: key) as? T {
-                return value
-            }
-            if let defaultValue = defaultValue {
-                return defaultValue
-            }
-            return nil
-        }
-        set {
-            UserDefaults.standard.set(newValue, forKey: key)
-        }
+    set {
+      UserDefaults.standard.set(newValue, forKey: key)
     }
+  }
 }
+
+// save Date as String  ??
+//let date = DateFormatter()
+//date.dateFormat = "dd/MM/yyyy"
+//let str = ddate.string(from: Date())
+//UserDefaults.standard.setValue(str, forKey: key)
