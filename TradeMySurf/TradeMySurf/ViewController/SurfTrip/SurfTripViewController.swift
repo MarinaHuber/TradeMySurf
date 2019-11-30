@@ -124,33 +124,19 @@ private extension SurfTripViewController {
 	}
 
     func makeSurfboardSection() -> NSCollectionLayoutSection {
-        let itemSize = NSCollectionLayoutSize(widthDimension: .fractionalWidth(1.0),
-                                              heightDimension: .fractionalHeight(1.0))
-        let item = NSCollectionLayoutItem(layoutSize: itemSize)
-
-        let largeItemSize = NSCollectionLayoutSize(widthDimension: .fractionalWidth(0.5),
-                                                   heightDimension: .fractionalHeight(1.0))
+		let largeItemSize = NSCollectionLayoutSize(widthDimension: .absolute(140),
+												   heightDimension: .fractionalHeight(1.0))
         let largeItem = NSCollectionLayoutItem(layoutSize: largeItemSize)
 
-        let groupOf2Size = NSCollectionLayoutSize(widthDimension: .fractionalWidth(0.58),
-                                                  heightDimension: .fractionalHeight(1.0))
-//        let groupOf2 = NSCollectionLayoutGroup.vertical(layoutSize: groupOf2Size, subitem: item, count: 2)
-//        groupOf2.interItemSpacing = .fixed(10)
+        let groupOf2Size = NSCollectionLayoutSize(widthDimension: .fractionalWidth(2.2),
 
-//        let groupOf3Size = NSCollectionLayoutSize(widthDimension: .fractionalWidth(1.0),
-//                                              heightDimension: .fractionalHeight(1.0))
         let groupOf3 = NSCollectionLayoutGroup.horizontal(layoutSize: groupOf2Size, subitems: [largeItem])
-        groupOf3.interItemSpacing = .flexible(0)
 
-        let groupSize = NSCollectionLayoutSize(widthDimension: .fractionalWidth(0.8),
-                                               heightDimension: .absolute(300))
-        let group = NSCollectionLayoutGroup.horizontal(layoutSize: groupSize, subitem: groupOf3, count: 1)
+        groupOf3.interItemSpacing = .fixed(10)
 
-        group.interItemSpacing = NSCollectionLayoutSpacing.fixed(10)
-
-        let section = NSCollectionLayoutSection(group: group)
+        let section = NSCollectionLayoutSection(group: groupOf3)
         section.interGroupSpacing = 10
-        section.orthogonalScrollingBehavior = .groupPagingCentered
+        section.orthogonalScrollingBehavior = .continuousGroupLeadingBoundary
 
         return section
     }
