@@ -10,9 +10,24 @@ import Foundation
 
 struct Surfboard: Hashable {
     let id: UUID = UUID()
-    let title: String
-	let volume: String
+	let title: String, volume: String
 	let weight: Int
-	let weightUnit: String
-    let imageName: String
+	let weightUnit: String, imageName: String
+	private(set) var levelType: Level!
+}
+
+extension Surfboard {
+
+    internal func filterByLevel() -> Surfboard? {
+
+        return self
+    }
+}
+
+struct SurfboardBeginner: Hashable {
+    let id: UUID = UUID()
+	let title: String, volume: String
+	let weight: Int
+	let weightUnit: String, imageName: String
+	private(set) var levelType: Level!
 }

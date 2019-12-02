@@ -9,7 +9,7 @@
 import Foundation
 
 @propertyWrapper
-struct SavedValue<T> {
+struct UserDefaultsHelper<T> {
   let key: String
   let defaultValue: T
 
@@ -24,9 +24,3 @@ struct SavedValue<T> {
     }
   }
 }
-
-// save Date as String  ??
-//let date = DateFormatter()
-//date.dateFormat = "dd/MM/yyyy"
-//let str = ddate.string(from: Date())
-//UserDefaults.standard.setValue(str, forKey: key)

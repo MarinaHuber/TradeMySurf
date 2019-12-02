@@ -31,14 +31,36 @@ class SurfBoardCollectionViewCell: UICollectionViewCell {
 
 extension SurfBoardCollectionViewCell {
 
-    func fillWithData(_ data: Surfboard) {
-        titleLabel.text = data.title
-		volumeLabel.text = data.volume
-		weightLabel.text = "\(data.weight)"
-		weightUnit.text = data.weightUnit
-        imageView.image = UIImage(named: data.imageName)
+	func fillWithData(_ model: Surfboard) {
+		let dataType = model.levelType
+		switch dataType {
+		case .beginner:
+			configureUI(with: model)
+		case .beginnerIntemediate:
+			configureUI(with: model)
+		case .intermediate:
+			configureUI(with: model)
+			print("zzzzz")
+		case .advanced:
+			configureUI(with: model)
+			print("lllll")
+		case .professional:
+			configureUI(with: model)
+			print("ooooo")
+		default:
+			print("default")
+		}
     }
+
+	func configureUI(with model: Surfboard) {
+		titleLabel.text = model.title
+		volumeLabel.text = model.volume
+		weightLabel.text = "\(model.weight)"
+		weightUnit.text = model.weightUnit
+		imageView.image = UIImage(named: model.imageName)
+	}
 }
+
 
 // MARK: - UI -
 

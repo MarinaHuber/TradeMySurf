@@ -9,26 +9,31 @@
 import Foundation
 import UIKit
 
+protocol RecommendedSurfProtocol {
+	func gotSelectedUpdate(_ level: String, date: Calendar)
+}
+
 class SurfTripViewController: UIViewController {
 
     enum TripSection: CaseIterable {
         case tips
-        case surfboards
+        case surfboardsBeginner, surfboardsBeginnerInter, surfboardsIntermediate, surfboardsAdvanced, surfboardsPro
         case surfCountries
     }
 
     enum TripItem: Hashable {
         case tip(SurfTip)
-        case surfboard(Surfboard)
+        case surfboardsBeginner(Surfboard), surfboardsBeginnerInter(Surfboard), surfboardsIntermediate(Surfboard), surfboardsAdvanced(Surfboard), surfboardsPro(Surfboard)
         case surfCountry(Location)
     }
+	private var selectedLevel = StorageData.surfLevel
 	private weak var coordinator: SurfTripCoordinator?
 
     private(set) var collectionView: UICollectionView!
 	private var sections: [TripSection] = []
     private(set) var dataSource: UICollectionViewDiffableDataSource<TripSection, TripItem>! // retain data source!
 
-    private(set) var appData: RecommendedTrip = RecommendedTrip()
+    private(set) var appData: RecommendedTripArray = RecommendedTripArray()
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -49,7 +54,7 @@ func configureDiffableDataSource() {
 			let cell = collectionView.dequeueCell(ofType: SmallTableViewCell.self, for: indexPath)
 			cell.fillWithData(tip)
 			return cell
-		case .surfboard(let board):
+		case .surfboardsBeginner(let board), .surfboardsBeginnerInter(let board), .surfboardsIntermediate(let board), .surfboardsAdvanced(let board), .surfboardsPro(let board):
 			let cell = collectionView.dequeueCell(ofType: SurfBoardCollectionViewCell.self, for: indexPath)
 			cell.fillWithData(board)
 			return cell
@@ -65,14 +70,39 @@ func configureDiffableDataSource() {
   }
 
     func updateSnapshot(animated: Bool = true) {
+
 		var snapshot = NSDiffableDataSourceSnapshot<TripSection, TripItem>()
 		snapshot.appendSections([.tips])
 		snapshot.appendItems(appData.tips.map({ TripItem.tip($0) }))
 
-        snapshot.appendSections([.surfboards])
-        snapshot.appendItems(appData.surfboards.map({ TripItem.surfboard($0) }))
 
-        snapshot.appendSections([.surfCountries])
+
+		let pickerString = Level.enumFromString(string: selectedLevel)
+		switch pickerString {
+		case .beginner:
+			snapshot.appendSections([.surfboardsBeginner])
+			snapshot.appendItems(appData.surfboardsBeginner.map({ TripItem.surfboardsBeginner($0) }))
+		case .beginnerIntemediate:
+			snapshot.appendSections([.surfboardsBeginnerInter])
+			snapshot.appendItems(appData.surfboardsBeginnerInter.map({ TripItem.surfboardsBeginnerInter($0) }))
+		case .intermediate:
+			snapshot.appendSections([.surfboardsIntermediate])
+			snapshot.appendItems(appData.surfboardsIntermediate.map({  TripItem.surfboardsIntermediate($0) }))
+				print("zzzzz")
+		case .advanced:
+			snapshot.appendSections([.surfboardsAdvanced])
+			snapshot.appendItems(appData.surfboardsAdvanced.map({  TripItem.surfboardsAdvanced($0) }))
+				print("lllll")
+		case .professional:
+			snapshot.appendSections([.surfboardsPro])
+			snapshot.appendItems(appData.surfboardsPro.map({  TripItem.surfboardsPro($0) }))
+				print("ooooo")
+		default:
+				print("jjjj")
+		}
+
+		snapshot.appendSections([.surfCountries])
+
         snapshot.appendItems(appData.surfCountries.map({ TripItem.surfCountry($0) }))
 		sections = snapshot.sectionIdentifiers
 
@@ -95,7 +125,7 @@ private extension SurfTripViewController {
 				switch guideSection {
 				case .tips:
 					section = strongSelf.makeSmallTableSection()
-				case .surfboards:
+				case .surfboardsBeginner, .surfboardsBeginnerInter, .surfboardsIntermediate, .surfboardsAdvanced, .surfboardsPro:
 					section = strongSelf.makeSurfboardSection()
 				case .surfCountries:
 					section = strongSelf.makeLocationSection()
@@ -204,6 +234,18 @@ private extension SurfTripViewController {
         collectionView.delegate = self // Set delegate before data source !!
         configureDiffableDataSource()
     }
+}
+
+//MARK: - RecommendedSurfProtocol
+extension SurfTripViewController: RecommendedSurfProtocol {
+
+	func gotSelectedUpdate(_ level: String, date: Calendar) {
+		if (level > "") {
+
+		} else {
+
+		}
+	}
 }
 // MARK: - Basic Navigation protocol -
 extension SurfTripViewController: StoryboardProtocol {}

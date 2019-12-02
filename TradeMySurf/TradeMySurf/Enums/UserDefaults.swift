@@ -8,19 +8,21 @@
 
 import Foundation
 
-enum Levels: String, CaseIterable {
+enum Level: String, CaseIterable {
     case beginner = "Learning to stand up in white water waves"
     case beginnerIntemediate = "Paddling out, dropping straight down the face of the wave"
     case intermediate = "Trimming down the middle line of the wave"
     case advanced = "Performing full carving changes"
 	case professional = "Professional level speed, power and flow maneuvers"
+
+	 static func enumFromString(string: String) -> Level? {
+		return self.allCases.first{ "\($0)" == string }
+	}
 }
 
-//enum UserDefaultsUnitKey: String, CaseIterable {
-//
-//    case beginner = "Overcoming the white water, learning to stand up"
-//    case beginnerIntemediate = "Paddling out, dropping straight down the face of the wave"
-//    case intermediate = "Trimming down the middle line of the wave"
-//    case advanced = "Performing buttom turns and full carving changes"
-//	case professional = "Professional speed, power and flow maneuvers"
-//}
+enum Season: String, CaseIterable {
+    case winter = "Winter"
+    case spring = "Spring"
+    case summer = "Summer"
+    case autumn = "Autumn"
+}

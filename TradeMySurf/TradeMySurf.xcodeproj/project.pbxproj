@@ -24,13 +24,13 @@
 		9C5B647F232A508B000727E6 /* Surfs.mlmodel in Sources */ = {isa = PBXBuildFile; fileRef = 9C5B647E232A508B000727E6 /* Surfs.mlmodel */; };
 		9C5B6481232A5092000727E6 /* surfs.csv in Resources */ = {isa = PBXBuildFile; fileRef = 9C5B6480232A5091000727E6 /* surfs.csv */; };
 		9C62416E238AE68E00A4B7C9 /* ReuseIdentifierHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C62416D238AE68E00A4B7C9 /* ReuseIdentifierHelper.swift */; };
-		9C624170238AE75000A4B7C9 /* RecommendedTrip.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C62416F238AE75000A4B7C9 /* RecommendedTrip.swift */; };
+		9C624170238AE75000A4B7C9 /* RecommendedTripArray.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C62416F238AE75000A4B7C9 /* RecommendedTripArray.swift */; };
 		9C624172238AE81A00A4B7C9 /* SurfTip.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C624171238AE81A00A4B7C9 /* SurfTip.swift */; };
 		9C624174238AFC1400A4B7C9 /* SmallTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C624173238AFC1400A4B7C9 /* SmallTableViewCell.swift */; };
 		9C624176238B089000A4B7C9 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C624175238B089000A4B7C9 /* SceneDelegate.swift */; };
 		9C624178238B107B00A4B7C9 /* SurfboardCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C624177238B107B00A4B7C9 /* SurfboardCollectionViewCell.swift */; };
 		9C62417A238B374A00A4B7C9 /* LocationaCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C624179238B374800A4B7C9 /* LocationaCollectionViewCell.swift */; };
-		9C62417C239156C200A4B7C9 /* SavedValue.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C62417B239156C200A4B7C9 /* SavedValue.swift */; };
+		9C62417C239156C200A4B7C9 /* UserDefaultsHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C62417B239156C200A4B7C9 /* UserDefaultsHelper.swift */; };
 		9C62417F23915AC400A4B7C9 /* StorageData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C62417E23915AC300A4B7C9 /* StorageData.swift */; };
 		9C69CE76234CD9B9003E386F /* Location.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C69CE75234CD9B9003E386F /* Location.swift */; };
 		9C69CE85234D06D7003E386F /* PriceCalculatorViewController.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9C69CE84234D06D7003E386F /* PriceCalculatorViewController.storyboard */; };
@@ -51,6 +51,7 @@
 		9C90A233238897A500E735D3 /* air.json in Resources */ = {isa = PBXBuildFile; fileRef = 9C90A232238897A400E735D3 /* air.json */; };
 		9C90BC552386BD020090E346 /* UserDefaults.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C90BC542386BD020090E346 /* UserDefaults.swift */; };
 		9C9F836C2366BDAA00FA4F41 /* TabBarCoordinatorTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C9F836B2366BDAA00FA4F41 /* TabBarCoordinatorTests.swift */; };
+		9CBDE2982395A9E600317F51 /* TimeHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9CBDE2972395A9E600317F51 /* TimeHelper.swift */; };
 		9CC59F17234AA3EF00F5ADD0 /* AppCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9CC59F16234AA3EF00F5ADD0 /* AppCoordinator.swift */; };
 		9CC59F19234AA41600F5ADD0 /* TabBarCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9CC59F18234AA41600F5ADD0 /* TabBarCoordinator.swift */; };
 		9CC59F1B234AA87700F5ADD0 /* WelcomeCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9CC59F1A234AA87700F5ADD0 /* WelcomeCoordinator.swift */; };
@@ -101,13 +102,13 @@
 		9C5B647E232A508B000727E6 /* Surfs.mlmodel */ = {isa = PBXFileReference; lastKnownFileType = file.mlmodel; name = Surfs.mlmodel; path = ../../Working/Surfs.mlmodel; sourceTree = "<group>"; };
 		9C5B6480232A5091000727E6 /* surfs.csv */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; name = surfs.csv; path = ../../Working/surfs.csv; sourceTree = "<group>"; };
 		9C62416D238AE68E00A4B7C9 /* ReuseIdentifierHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReuseIdentifierHelper.swift; sourceTree = "<group>"; };
-		9C62416F238AE75000A4B7C9 /* RecommendedTrip.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecommendedTrip.swift; sourceTree = "<group>"; };
+		9C62416F238AE75000A4B7C9 /* RecommendedTripArray.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecommendedTripArray.swift; sourceTree = "<group>"; };
 		9C624171238AE81A00A4B7C9 /* SurfTip.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SurfTip.swift; sourceTree = "<group>"; };
 		9C624173238AFC1400A4B7C9 /* SmallTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SmallTableViewCell.swift; sourceTree = "<group>"; };
 		9C624175238B089000A4B7C9 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
 		9C624177238B107B00A4B7C9 /* SurfboardCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SurfboardCollectionViewCell.swift; sourceTree = "<group>"; };
 		9C624179238B374800A4B7C9 /* LocationaCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationaCollectionViewCell.swift; sourceTree = "<group>"; };
-		9C62417B239156C200A4B7C9 /* SavedValue.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SavedValue.swift; sourceTree = "<group>"; };
+		9C62417B239156C200A4B7C9 /* UserDefaultsHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserDefaultsHelper.swift; sourceTree = "<group>"; };
 		9C62417E23915AC300A4B7C9 /* StorageData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StorageData.swift; sourceTree = "<group>"; };
 		9C69CE75234CD9B9003E386F /* Location.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Location.swift; sourceTree = "<group>"; };
 		9C69CE84234D06D7003E386F /* PriceCalculatorViewController.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = PriceCalculatorViewController.storyboard; sourceTree = "<group>"; };
@@ -130,6 +131,7 @@
 		9C90A232238897A400E735D3 /* air.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = air.json; sourceTree = "<group>"; };
 		9C90BC542386BD020090E346 /* UserDefaults.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserDefaults.swift; sourceTree = "<group>"; };
 		9C9F836B2366BDAA00FA4F41 /* TabBarCoordinatorTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabBarCoordinatorTests.swift; sourceTree = "<group>"; };
+		9CBDE2972395A9E600317F51 /* TimeHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TimeHelper.swift; sourceTree = "<group>"; };
 		9CC59F16234AA3EF00F5ADD0 /* AppCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppCoordinator.swift; sourceTree = "<group>"; };
 		9CC59F18234AA41600F5ADD0 /* TabBarCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabBarCoordinator.swift; sourceTree = "<group>"; };
 		9CC59F1A234AA87700F5ADD0 /* WelcomeCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WelcomeCoordinator.swift; sourceTree = "<group>"; };
@@ -193,14 +195,14 @@
 			path = Protocols;
 			sourceTree = "<group>";
 		};
-		9C53D5C7234CB18600A3BD80 /* Sell */ = {
+		9C53D5C7234CB18600A3BD80 /* Saved */ = {
 			isa = PBXGroup;
 			children = (
 				9C4C54732349C28500FB2653 /* SavedTripsViewController.storyboard */,
 				9C53D5C5234C145B00A3BD80 /* SavedTripsCoordinator.swift */,
 				9C76F09723493F0900853FD9 /* SavedTripsViewController.swift */,
 			);
-			path = Sell;
+			path = Saved;
 			sourceTree = "<group>";
 		};
 		9C53D5C8234CB19900A3BD80 /* SurfTrip */ = {
@@ -312,9 +314,9 @@
 				9C69CE75234CD9B9003E386F /* Location.swift */,
 				9C467C66234F2A7D009F4D58 /* Surfboard.swift */,
 				9C624171238AE81A00A4B7C9 /* SurfTip.swift */,
-				9C62416F238AE75000A4B7C9 /* RecommendedTrip.swift */,
+				9C62416F238AE75000A4B7C9 /* RecommendedTripArray.swift */,
 				9C62417E23915AC300A4B7C9 /* StorageData.swift */,
-				9C62417B239156C200A4B7C9 /* SavedValue.swift */,
+				9C62417B239156C200A4B7C9 /* UserDefaultsHelper.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -353,7 +355,7 @@
 				9CFDFD3723671C2500760F25 /* Onboarding */,
 				9C53D5C9234CB1A800A3BD80 /* Calculator */,
 				9C53D5C8234CB19900A3BD80 /* SurfTrip */,
-				9C53D5C7234CB18600A3BD80 /* Sell */,
+				9C53D5C7234CB18600A3BD80 /* Saved */,
 			);
 			path = ViewController;
 			sourceTree = "<group>";
@@ -375,6 +377,7 @@
 			isa = PBXGroup;
 			children = (
 				9C62416D238AE68E00A4B7C9 /* ReuseIdentifierHelper.swift */,
+				9CBDE2972395A9E600317F51 /* TimeHelper.swift */,
 			);
 			path = Helpers;
 			sourceTree = "<group>";
@@ -622,6 +625,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				9CBDE2982395A9E600317F51 /* TimeHelper.swift in Sources */,
 				9C53D5C6234C145B00A3BD80 /* SavedTripsCoordinator.swift in Sources */,
 				9C69CE76234CD9B9003E386F /* Location.swift in Sources */,
 				9C6F64C72379BD9300B0224D /* SwiftUIView.swift in Sources */,
@@ -639,7 +643,7 @@
 				9C624178238B107B00A4B7C9 /* SurfboardCollectionViewCell.swift in Sources */,
 				9C76F09423493DAB00853FD9 /* WelcomeViewController.swift in Sources */,
 				9C624172238AE81A00A4B7C9 /* SurfTip.swift in Sources */,
-				9C624170238AE75000A4B7C9 /* RecommendedTrip.swift in Sources */,
+				9C624170238AE75000A4B7C9 /* RecommendedTripArray.swift in Sources */,
 				9C53D5C4234C144400A3BD80 /* SurfTripCoordinator.swift in Sources */,
 				9C53D5C0234C126600A3BD80 /* StoryboardProtocol.swift in Sources */,
 				9C5B644C232A506C000727E6 /* AppDelegate.swift in Sources */,
@@ -650,7 +654,7 @@
 				9C5B6456232A506C000727E6 /* TradeMySurf.xcdatamodeld in Sources */,
 				9CFDFD3F2367226C00760F25 /* AddDateViewController.swift in Sources */,
 				9C76F09623493EDA00853FD9 /* SurfTripViewController.swift in Sources */,
-				9C62417C239156C200A4B7C9 /* SavedValue.swift in Sources */,
+				9C62417C239156C200A4B7C9 /* UserDefaultsHelper.swift in Sources */,
 				9C90BC552386BD020090E346 /* UserDefaults.swift in Sources */,
 				9C76F09823493F0900853FD9 /* SavedTripsViewController.swift in Sources */,
 				9C6F64CB2379CB7400B0224D /* AddDateCoordinator.swift in Sources */,

@@ -10,12 +10,12 @@ import Foundation
 
 // The UserDefaults wrapper
 struct StorageData {
-	@SavedValue(key: "LEVEL_FEATURE_SURFBOARD", defaultValue: "")
+	@UserDefaultsHelper(key: "LEVEL_FEATURE_SURFBOARD", defaultValue: "")
 	static var surfLevel: String
 
-	@SavedValue(key: "DATE_FEATURE_LOCATION", defaultValue: Date())
+	@UserDefaultsHelper(key: "DATE_FEATURE_LOCATION", defaultValue: Date())
 	static var surfDate: Date
 
-	@SavedValue(key: "BOARD_FEATURE_SIZE", defaultValue: 199)
+	@UserDefaultsHelper(key: "BOARD_FEATURE_SIZE", defaultValue: 199)
 	static var surfBoarUnitSize: Int
 }

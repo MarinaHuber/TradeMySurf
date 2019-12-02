@@ -21,27 +21,13 @@ class AddLevelViewController: UIViewController {
 	weak var coordinator: TabBarCoordinator?
 	var addLevel = UILabel()
 	var iconViewAnima = AnimationView()
-	let levelsData = [Levels.beginner.rawValue, Levels.beginnerIntemediate.rawValue, Levels.intermediate.rawValue, Levels.advanced.rawValue, Levels.professional.rawValue]
+	let levelsData = [Level.beginner.rawValue, Level.beginnerIntemediate.rawValue, Level.intermediate.rawValue, Level.advanced.rawValue, Level.professional.rawValue]
 
 	override func viewDidLoad() {
 		super.viewDidLoad()
 		setPickerPopover()
 	}
 	@IBAction func didTapStringPickerWithImageButton(_ sender: UIButton) {
-//		let popover = StringPickerPopover(title: "with image", choices: levelsData)
-//			.setImageNames(["iconbaby","iconstand","iconwalk", "iconrun", "iconfly"])
-//			.setSize(width: 300)
-//			.setCornerRadius(40)
-//			.setRowHeight(60)
-//			.setFontSize(16)
-//			.setDoneButton(action: {
-//				_, selectedRow, selectedString in
-//			})
-//			.setCancelButton(action: nil)
-//			.setOutsideTapDismissing(allowed: false)
-//			.setDimmedBackgroundView(enabled: true)
-//		popover.appear(originView: sender, baseViewController: self)
-//		popover.disappearAutomatically(after: 5.0, completion: nil)
 		setPickerPopover()
 	}
 
@@ -60,7 +46,6 @@ class AddLevelViewController: UIViewController {
 				StorageData.surfLevel = selectedString
 				print(" from Picker selected: \(selectedString)")
 			})
-			//.setCancelButton(action: nil)
 			.setDimmedBackgroundView(enabled: true)
 		popover.appear(originView: pickerView, baseViewController: self)
 
