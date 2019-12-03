@@ -316,7 +316,6 @@
 				9C624171238AE81A00A4B7C9 /* SurfTip.swift */,
 				9C62416F238AE75000A4B7C9 /* RecommendedTripArray.swift */,
 				9C62417E23915AC300A4B7C9 /* StorageData.swift */,
-				9C62417B239156C200A4B7C9 /* UserDefaultsHelper.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -376,6 +375,7 @@
 		9C90BC532386BCE50090E346 /* Helpers */ = {
 			isa = PBXGroup;
 			children = (
+				9C62417B239156C200A4B7C9 /* UserDefaultsHelper.swift */,
 				9C62416D238AE68E00A4B7C9 /* ReuseIdentifierHelper.swift */,
 				9CBDE2972395A9E600317F51 /* TimeHelper.swift */,
 			);
