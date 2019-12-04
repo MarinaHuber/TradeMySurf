@@ -1,7 +1,7 @@
 # Kelly my Surf
 
 # MVC + Coordinator pattern
-### Recommendation app gets you surfing safe! 🤙🏽
+### Recommendation app was create from idea to learn from surf goals and expectations 🤙🏽
  + help from Import Foundation.
 📌  As of October 2019, this project requires Xcode 11.0 (Swift 5.0)
 
