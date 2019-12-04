@@ -21,15 +21,14 @@ class LoadingStateCoordinator: Coordinator {
 	}
 
 	func start() {
-		if StorageData.didUserSetUP == true {
-			let coordinator = TabBarCoordinator(tabBarController: UITabBarController())
-			let tabBarVC = coordinator.tabBarController
-			window.rootViewController = tabBarVC
-
-		} else {
-			let welcomeVC = WelcomeViewController()
-			window.rootViewController = welcomeVC
-		}
+		//if StorageData.didUserSetUp == true {
+//			let coordinator = TabBarCoordinator(tabBarController: UITabBarController())
+//			let tabBarVC = coordinator.tabBarController
+//			window.rootViewController = tabBarVC
+//
+//	//	} else {
+//			let welcomeVC = WelcomeViewController()
+//			window.rootViewController = welcomeVC
+//		}
 	}
-
 }

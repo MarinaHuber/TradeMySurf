@@ -23,11 +23,3 @@ extension Surfboard {
         return self
     }
 }
-
-struct SurfboardBeginner: Hashable {
-    let id: UUID = UUID()
-	let title: String, volume: String
-	let weight: Int
-	let weightUnit: String, imageName: String
-	private(set) var levelType: Level!
-}

@@ -24,7 +24,7 @@ public class DatePickerPopover: AbstractPopover {
     /// Done button parameters
     private(set) var doneButton: ButtonParameterType = (title: "Done".localized, font: nil, color: nil, action: nil)
     /// Cancel button parameters
-    private(set) var cancelButton: ButtonParameterType = (title: "Cancel".localized, font: nil, color: nil, action: nil)
+    private(set) var cancelButton: ButtonParameterType = (title: "".localized, font: nil, color: nil, action: nil)
     /// Clear button parameters
     private(set) var clearButton: ButtonParameterType = (title: "Clear".localized, font: nil, color: nil, action: nil)
     /// Action for picker value change

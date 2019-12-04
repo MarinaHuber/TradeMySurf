@@ -8,40 +8,41 @@
 
 import Foundation
 
-@propertyWrapper
-struct UserDefaultsHelper<T> {
 
-  let key: String
-  let defaultValue: T
+extension UserDefaults {
+	var selectedLevel: String? {
+		get {
+			/// Read value from UserDefaults returns T
+			return UserDefaults.standard.string(forKey: "selectedString")
+		}
+		set {
+			/// Set value to UserDefaults
+			UserDefaults.standard.set(newValue, forKey: "selectedString")
+		}
+	}
 
-  var wrappedValue: T {
-    get {
-		/// Read value from UserDefaults returns T
-      return UserDefaults.standard.object(forKey: key) as? T ?? defaultValue
-    }
-    set {
-		/// Set value to UserDefaults
-      UserDefaults.standard.set(newValue, forKey: key)
-    }
-  }
 }
 
-// MARK: - View Count
+extension UserDefaults {
+	var didUserSetUp: Bool? {
+		get {
+			/// Read value from UserDefaults returns T
+			return UserDefaults.standard.bool(forKey: "didUserSetUp")
+		}
+		set {
+			/// Set value to UserDefaults
+			UserDefaults.standard.set(newValue, forKey: "didUserSetUp")
+		}
+	}
 
-extension UserDefaultsHelper {
-
-    private var viewCountKey: String { return "ViewCount" }
-
-    /// Returns how many times the ViewController has been viewed.
-
-    func fetchViewControllerViewedCount() -> Int {
-        return UserDefaults.standard.integer(forKey: viewCountKey)
-    }
-
-    /// Incremenets and saves how many times the ViewController has been viewed.
-
-    func set(viewControllerViewedCount count: Int) {
-        UserDefaults.standard.set(count, forKey: viewCountKey)
-    }
-
+}
+extension UserDefaults {
+var surfingTime: Date? {
+	get {
+		return UserDefaults.standard.object(forKey: "surfingTime") as? Date
+	}
+	set(newVal){
+		UserDefaults.standard.set(newVal, forKey: "surfingTime")
+	}
+}
 }

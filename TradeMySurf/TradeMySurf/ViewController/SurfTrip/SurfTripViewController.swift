@@ -9,10 +9,6 @@
 import Foundation
 import UIKit
 
-protocol RecommendedSurfProtocol {
-	func gotSelectedUpdate(_ level: String, date: Calendar)
-}
-
 class SurfTripViewController: UIViewController {
 
     enum TripSection: CaseIterable {
@@ -26,7 +22,7 @@ class SurfTripViewController: UIViewController {
         case surfboardsBeginner(Surfboard), surfboardsBeginnerInter(Surfboard), surfboardsIntermediate(Surfboard), surfboardsAdvanced(Surfboard), surfboardsPro(Surfboard)
         case surfCountry(Location)
     }
-	private var selectedLevel = StorageData.surfLevel
+	private var selectedLevel = UserDefaults.standard.selectedLevel
 	private weak var coordinator: SurfTripCoordinator?
 
     private(set) var collectionView: UICollectionView!
@@ -37,7 +33,6 @@ class SurfTripViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-
         addCollectionView()
         configureCollectionView()
     }
@@ -75,9 +70,7 @@ func configureDiffableDataSource() {
 		snapshot.appendSections([.tips])
 		snapshot.appendItems(appData.tips.map({ TripItem.tip($0) }))
 
-
-
-		let pickerString = Level.enumFromString(string: selectedLevel)
+		let pickerString = Level.enumFromString(string: selectedLevel ?? "")
 		switch pickerString {
 		case .beginner:
 			snapshot.appendSections([.surfboardsBeginner])
@@ -88,11 +81,11 @@ func configureDiffableDataSource() {
 		case .intermediate:
 			snapshot.appendSections([.surfboardsIntermediate])
 			snapshot.appendItems(appData.surfboardsIntermediate.map({  TripItem.surfboardsIntermediate($0) }))
-				print("zzzzz")
+				print("intermediate zzzz")
 		case .advanced:
 			snapshot.appendSections([.surfboardsAdvanced])
 			snapshot.appendItems(appData.surfboardsAdvanced.map({  TripItem.surfboardsAdvanced($0) }))
-				print("lllll")
+				print("advanced")
 		case .professional:
 			snapshot.appendSections([.surfboardsPro])
 			snapshot.appendItems(appData.surfboardsPro.map({  TripItem.surfboardsPro($0) }))
@@ -234,18 +227,6 @@ private extension SurfTripViewController {
         collectionView.delegate = self // Set delegate before data source !!
         configureDiffableDataSource()
     }
-}
-
-//MARK: - RecommendedSurfProtocol
-extension SurfTripViewController: RecommendedSurfProtocol {
-
-	func gotSelectedUpdate(_ level: String, date: Calendar) {
-		if (level > "") {
-
-		} else {
-
-		}
-	}
 }
 // MARK: - Basic Navigation protocol -
 extension SurfTripViewController: StoryboardProtocol {}
