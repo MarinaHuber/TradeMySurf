@@ -34,9 +34,11 @@ final class AddLevelViewCoordinator: Coordinator {
 	init(presenter: UINavigationController) {
 		self.presenter = presenter
 		self.childCoordinators = []
-		//presenter.navigationBar.barTintColor = .systemBlue
-		presenter.navigationBar.tintColor = .black
-		presenter.setNavigationBarHidden(false, animated: false)
+		self.presenter.navigationBar.barTintColor = .white
+		self.presenter.navigationBar.tintColor = .black
+		self.presenter.navigationBar.setBackgroundImage(UIImage(), for: UIBarPosition.any, barMetrics: UIBarMetrics.default)
+		self.presenter.navigationBar.shadowImage = UIImage()
+		//presenter.setNavigationBarHidden(true, animated: false)
 
 	}
 	func start() {

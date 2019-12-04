@@ -23,6 +23,8 @@ final class AppCoordinator: Coordinator {
 		self.presenter.navigationBar.backgroundColor = .clear
 		self.presenter.navigationBar.barTintColor = .clear
 		self.presenter.navigationBar.tintColor = .black
+		self.presenter.navigationBar.setBackgroundImage(UIImage(), for: UIBarPosition.any, barMetrics: UIBarMetrics.default)
+		self.presenter.navigationBar.shadowImage = UIImage()
 		self.presenter.navigationBar.titleTextAttributes = [.foregroundColor : UIColor.black as Any]
 		presenter.setNavigationBarHidden(true, animated: false)
 		rootCoordinator = WelcomeCoordinator(presenter: presenter)

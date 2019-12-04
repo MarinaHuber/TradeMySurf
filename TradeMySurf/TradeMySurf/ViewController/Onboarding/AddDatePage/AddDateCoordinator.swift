@@ -18,9 +18,9 @@ final class AddDateCoordinator: Coordinator {
 	init(presenter: UINavigationController) {
 		self.presenter = presenter
 		childCoordinators = []
-		presenter.navigationBar.barTintColor = .systemBlue
-		presenter.navigationItem.backBarButtonItem = UIBarButtonItem(title: "test", style: .plain, target: nil, action: nil)
-		//presenter.setNavigationBarHidden(false, animated: false)
+		self.presenter.navigationBar.barTintColor = .white
+		self.presenter.navigationBar.setBackgroundImage(UIImage(), for: UIBarPosition.any, barMetrics: UIBarMetrics.default)
+		self.presenter.navigationBar.shadowImage = UIImage()
 	}
 	func start() {
 		let storyboard: UIStoryboard = UIStoryboard(name: Constants.Storyboards.addDateViewController, bundle: nil)
