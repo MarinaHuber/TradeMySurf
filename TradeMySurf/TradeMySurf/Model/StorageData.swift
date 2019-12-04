@@ -13,18 +13,18 @@ struct StorageData {
 	@UserDefaultsHelper(key: "LEVEL_FEATURE_SURFBOARD", defaultValue: "")
 	static var surfLevel: String
 
+    @UserDefaultsHelper(key: "LOADINGSTATE_FEATURE", defaultValue: false)
+	static var didUserSetUP: Bool
+
 	@UserDefaultsHelper(key: "DATE_FEATURE_LOCATION", defaultValue: Date())
 	static var surfDate: Date
-
-	@UserDefaultsHelper(key: "BOARD_FEATURE_SIZE", defaultValue: 199)
-	static var surfBoarUnitSize: Int
 }
 
 extension StorageData {
 
-	init(surfLevel: String, surfDate: Date, surfBoarUnitSize: Int) {
+	init(surfLevel: String, didUserSetUP: Bool, surfDate: Date) {
 		StorageData.self.surfLevel = surfLevel
+		StorageData.self.didUserSetUP = didUserSetUP
 		StorageData.self.surfDate = surfDate
-		StorageData.self.surfBoarUnitSize = surfBoarUnitSize
 	}
 }

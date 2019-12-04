@@ -10,7 +10,6 @@ import Foundation
 import UIKit
 
 final class AppCoordinator: Coordinator {
-	//var tabBarCoordinator: TabBarCoordinator?
 
 	internal var childCoordinators: [Coordinator]
 	internal var presenter: UINavigationController
@@ -25,9 +24,6 @@ final class AppCoordinator: Coordinator {
 		self.presenter.navigationBar.barTintColor = .clear
 		self.presenter.navigationBar.tintColor = .black
 		self.presenter.navigationBar.titleTextAttributes = [.foregroundColor : UIColor.black as Any]
-//		UINavigationBar.appearance().setBackgroundImage(UIImage(), for: .any, barMetrics: .default)
-//		UINavigationBar.appearance().shadowImage = UIImage()
-//		UINavigationBar.appearance().layer.shadowColor = UIColor.clear.cgColor
 		presenter.setNavigationBarHidden(true, animated: false)
 		rootCoordinator = WelcomeCoordinator(presenter: presenter)
 	}

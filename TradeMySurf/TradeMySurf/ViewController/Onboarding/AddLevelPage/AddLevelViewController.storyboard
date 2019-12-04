@@ -107,9 +107,6 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="vTy-5H-Gcj"/>
                     </view>
-                    <navigationItem key="navigationItem" id="Owt-CT-QDr">
-                        <barButtonItem key="leftBarButtonItem" systemItem="cancel" id="V9P-V6-PO8"/>
-                    </navigationItem>
                     <connections>
                         <outlet property="pickerView" destination="na2-k6-zeS" id="biu-ap-jb3"/>
                     </connections>

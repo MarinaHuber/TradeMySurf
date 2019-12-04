@@ -40,7 +40,7 @@ final class TabBarCoordinator: Coordinator {
 
 		coordinators.forEach({ coordinator in
 			coordinator.start()
-			addChildCoordinator(coordinator: coordinator)
+			addChildCoordinator(coordinator)
 		})
 
 		let presenters: [UINavigationController] = coordinators.map({ coordinator -> UINavigationController in

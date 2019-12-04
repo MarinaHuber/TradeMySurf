@@ -91,6 +91,9 @@
                     <navigationItem key="navigationItem" id="RT4-kQ-ybg">
                         <barButtonItem key="leftBarButtonItem" systemItem="cancel" id="6cb-je-Zrq">
                             <color key="tintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            <connections>
+                                <action selector="backTap:" destination="uFP-b1-cSK" id="4V3-3y-YAZ"/>
+                            </connections>
                         </barButtonItem>
                     </navigationItem>
                     <simulatedToolbarMetrics key="simulatedBottomBarMetrics"/>

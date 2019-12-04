@@ -42,6 +42,9 @@ class AddDateViewController: UIViewController {
 		.appear(originView: sender, baseViewController: self)
 
 	}
+	@IBAction func backTap(_ sender: Any) {
+		self.dismiss(animated: true)
+	}
 	@IBAction func openTabBar(_ sender: Any) {
 		delegate?.performTabBar()
 	}
