@@ -19,3 +19,12 @@ struct StorageData {
 	@UserDefaultsHelper(key: "BOARD_FEATURE_SIZE", defaultValue: 199)
 	static var surfBoarUnitSize: Int
 }
+
+extension StorageData {
+
+	init(surfLevel: String, surfDate: Date, surfBoarUnitSize: Int) {
+		StorageData.self.surfLevel = surfLevel
+		StorageData.self.surfDate = surfDate
+		StorageData.self.surfBoarUnitSize = surfBoarUnitSize
+	}
+}

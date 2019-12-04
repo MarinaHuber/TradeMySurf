@@ -15,7 +15,7 @@ struct UserDefaultsHelper<T> {
 
   var wrappedValue: T {
     get {
-		// Read value from UserDefaults
+		// Read value from UserDefaults returns Any Type
       return UserDefaults.standard.object(forKey: key) as? T ?? defaultValue
     }
     set {

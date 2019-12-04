@@ -16,7 +16,7 @@ enum Level: String, CaseIterable {
 	case professional = "Professional level speed, power and flow maneuvers"
 
 	 static func enumFromString(string: String) -> Level? {
-		return self.allCases.first{ "\($0)" == string }
+		return self.allCases.first { "\($0.rawValue)" == string }
 	}
 }
 

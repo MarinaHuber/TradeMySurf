@@ -22,13 +22,13 @@
                                 </constraints>
                             </imageView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="What dates are you surfing?" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Hvw-mn-vaH">
-                                <rect key="frame" x="58" y="164" width="299" height="25.333333333333343"/>
+                                <rect key="frame" x="58" y="208" width="299" height="25.333333333333343"/>
                                 <fontDescription key="fontDescription" name="HelveticaNeue-Bold" family="Helvetica Neue" pointSize="21"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="GuL-es-VkA">
-                                <rect key="frame" x="98" y="598" width="219" height="38"/>
+                                <rect key="frame" x="98" y="549" width="219" height="38"/>
                                 <color key="backgroundColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <constraints>
                                     <constraint firstAttribute="width" secondItem="GuL-es-VkA" secondAttribute="height" multiplier="219:38" id="BO0-5y-OAk"/>
@@ -47,13 +47,13 @@
                                 </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="This is what will appear in your surf recommendations" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="QDe-fe-J2C">
-                                <rect key="frame" x="75" y="326" width="264" height="38.333333333333314"/>
+                                <rect key="frame" x="75" y="370" width="264" height="38.333333333333314"/>
                                 <fontDescription key="fontDescription" type="system" weight="thin" pointSize="16"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="8UK-iT-pPO">
-                                <rect key="frame" x="92" y="290" width="230" height="30"/>
+                                <rect key="frame" x="92" y="334" width="230" height="30"/>
                                 <state key="normal" title="For location choose a start date">
                                     <color key="titleColor" cocoaTouchSystemColor="darkTextColor"/>
                                 </state>
@@ -87,10 +87,35 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="IVB-pQ-fdR"/>
                     </view>
+                    <toolbarItems/>
+                    <navigationItem key="navigationItem" id="RT4-kQ-ybg">
+                        <barButtonItem key="leftBarButtonItem" systemItem="cancel" id="6cb-je-Zrq">
+                            <color key="tintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        </barButtonItem>
+                    </navigationItem>
+                    <simulatedToolbarMetrics key="simulatedBottomBarMetrics"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="GIy-px-N4M" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="136.23188405797103" y="101.11607142857143"/>
+            <point key="canvasLocation" x="1956.521739130435" y="101.11607142857143"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="V8z-cG-Bex">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="NFI-CG-85h" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="rbx-wN-GEm">
+                        <rect key="frame" x="0.0" y="44" width="414" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="uFP-b1-cSK" kind="relationship" relationship="rootViewController" id="aad-0h-wl6"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="1Yj-SY-2qB" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1046.376811594203" y="101.11607142857143"/>
         </scene>
     </scenes>
     <resources>

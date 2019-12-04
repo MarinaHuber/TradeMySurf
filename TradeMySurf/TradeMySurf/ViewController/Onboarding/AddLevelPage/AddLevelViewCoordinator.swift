@@ -34,6 +34,9 @@ final class AddLevelViewCoordinator: Coordinator {
 	init(presenter: UINavigationController) {
 		self.presenter = presenter
 		self.childCoordinators = []
+		presenter.navigationBar.barTintColor = .systemBlue
+		presenter.navigationBar.tintColor = .black
+		presenter.setNavigationBarHidden(false, animated: false)
 
 	}
 	func start() {
@@ -50,6 +53,8 @@ extension AddLevelViewCoordinator : AddLevelViewControllerDelegate {
 		let addDateCoordinator: AddDateCoordinator = AddDateCoordinator(presenter: UINavigationController())
 		addDateCoordinator.start()
 		addChildCoordinator(coordinator: addDateCoordinator)
+			//running on an iOS 12 device caused a crash.
+
 		addDateCoordinator.presenter.modalPresentationStyle = .fullScreen
 		presenter.present(addDateCoordinator.presenter, animated: true, completion: nil)
 	}

@@ -28,7 +28,7 @@ class AddLevelViewController: UIViewController {
 		setPickerPopover()
 	}
 	@IBAction func didTapStringPickerWithImageButton(_ sender: UIButton) {
-		setPickerPopover()
+		//setPickerPopover()
 	}
 
 	@IBAction func openAddDate(_ sender: Any) {
@@ -37,17 +37,26 @@ class AddLevelViewController: UIViewController {
 	}
 
 	private func setPickerPopover() {
-		let popover = StringPickerPopover(title: "Choose one", choices: levelsData)
+		StringPickerPopover(title: "Choose one", choices: levelsData)
 			.setSize(width: 300)
 			.setCornerRadius(40)
 			.setRowHeight(60)
 			.setFontSize(16)
-			.setDoneButton(action: { _, _, selectedString in
-				StorageData.surfLevel = selectedString
-				print(" from Picker selected: \(selectedString)")
+			.setValueChange(action: { _, _, selectedString in
+				var storedObject = StorageData.surfLevel
+				storedObject = selectedString
+				let level = Level.enumFromString(string: storedObject)
+				print(" from Picker selected: \(String(describing: level))")
 			})
+			.setDoneButton(action: { popover, _, _ in
+				popover.disappear()
+				self.delegate?.performNext()
+
+			})
+
 			.setDimmedBackgroundView(enabled: true)
-		popover.appear(originView: pickerView, baseViewController: self)
+			.appear(originView: pickerView, baseViewController: self)
+
 
 	}
 

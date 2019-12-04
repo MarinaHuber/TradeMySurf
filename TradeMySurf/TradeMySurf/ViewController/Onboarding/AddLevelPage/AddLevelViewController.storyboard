@@ -107,13 +107,16 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="vTy-5H-Gcj"/>
                     </view>
+                    <navigationItem key="navigationItem" id="Owt-CT-QDr">
+                        <barButtonItem key="leftBarButtonItem" systemItem="cancel" id="V9P-V6-PO8"/>
+                    </navigationItem>
                     <connections>
                         <outlet property="pickerView" destination="na2-k6-zeS" id="biu-ap-jb3"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="5EV-jx-Fxk" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="137.68115942028987" y="85.714285714285708"/>
+            <point key="canvasLocation" x="1047.8260869565217" y="85.714285714285708"/>
         </scene>
     </scenes>
     <resources>
