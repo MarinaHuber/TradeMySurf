@@ -56,7 +56,7 @@ struct RecommendedTripArray {
 			]
     }()
 
-    var surfCountries: [Location] = {
+    var surfCountrySummer: [Location] = {
         return [
 			Location(countryName: "France",continentName: "Europe", imageFlag: "french", plannedDate: Date()),
             Location(countryName: "Costa Rica", continentName: "South America", imageFlag: "brazil", plannedDate: Date()),
@@ -66,6 +66,41 @@ struct RecommendedTripArray {
             Location(countryName: "South Africa", continentName: "Africa", imageFlag: "french", plannedDate: Date()),
         ]
     }()
+	var surfCountryAutumn: [Location] = {
+		  return [
+			  Location(countryName: "France",continentName: "Europe", imageFlag: "french", plannedDate: Date()),
+			  Location(countryName: "Costa Rica", continentName: "South America", imageFlag: "brazil", plannedDate: Date()),
+			  Location(countryName: "Morocco", continentName: "Africa", imageFlag: "morocco", plannedDate: Date()),
+			  Location(countryName: "Japan", continentName: "Asia", imageFlag: "indonesia", plannedDate: Date()),
+			  Location(countryName: "California", continentName: "North America", imageFlag: "usa", plannedDate: Date()),
+			  Location(countryName: "South Africa", continentName: "Africa", imageFlag: "french", plannedDate: Date()),
+		  ]
+	  }()
+
+	var surfCountryWinter: [Location] = {
+		  return [
+			  Location(countryName: "France",continentName: "Europe", imageFlag: "french", plannedDate: Date()),
+			  Location(countryName: "Costa Rica", continentName: "South America", imageFlag: "brazil", plannedDate: Date()),
+			  Location(countryName: "Morocco", continentName: "Africa", imageFlag: "morocco", plannedDate: Date()),
+			  Location(countryName: "Japan", continentName: "Asia", imageFlag: "indonesia", plannedDate: Date()),
+			  Location(countryName: "California", continentName: "North America", imageFlag: "usa", plannedDate: Date()),
+			  Location(countryName: "South Africa", continentName: "Africa", imageFlag: "french", plannedDate: Date()),
+		  ]
+	  }()
+	
+	var surfCountrySpring: [Location] = {
+		  return [
+			  Location(countryName: "France",continentName: "Europe", imageFlag: "french", plannedDate: Date()),
+			  Location(countryName: "Costa Rica", continentName: "South America", imageFlag: "brazil", plannedDate: Date()),
+			  Location(countryName: "Morocco", continentName: "Africa", imageFlag: "morocco", plannedDate: Date()),
+			  Location(countryName: "Japan", continentName: "Asia", imageFlag: "indonesia", plannedDate: Date()),
+			  Location(countryName: "California", continentName: "North America", imageFlag: "usa", plannedDate: Date()),
+			  Location(countryName: "South Africa", continentName: "Africa", imageFlag: "french", plannedDate: Date()),
+		  ]
+	  }()
+
+
+
 
     var tips: [SurfTip] = {
         return [

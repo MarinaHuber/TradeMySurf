@@ -14,13 +14,13 @@ class SurfTripViewController: UIViewController {
     enum TripSection: CaseIterable {
         case tips
         case surfboardsBeginner, surfboardsBeginnerInter, surfboardsIntermediate, surfboardsAdvanced, surfboardsPro
-        case surfCountries
+        case surfCountrySummer, surfCountryAutumn, surfCountryWinter, surfCountrySpring
     }
 
     enum TripItem: Hashable {
         case tip(SurfTip)
         case surfboardsBeginner(Surfboard), surfboardsBeginnerInter(Surfboard), surfboardsIntermediate(Surfboard), surfboardsAdvanced(Surfboard), surfboardsPro(Surfboard)
-        case surfCountry(Location)
+        case surfCountrySummer(Location),surfCountryAutumn(Location),surfCountryWinter(Location),surfCountrySpring(Location)
     }
 	private var selectedLevel = UserDefaults.standard.selectedLevel
 	private var selectedDate = UserDefaults.standard.surfingTime
@@ -55,7 +55,7 @@ func configureDiffableDataSource() {
 			let cell = collectionView.dequeueCell(ofType: SurfBoardCollectionViewCell.self, for: indexPath)
 			cell.fillWithData(board)
 			return cell
-		case .surfCountry(let location):
+		case .surfCountrySummer(let location), .surfCountryAutumn(let location), .surfCountryWinter(let location), .surfCountrySpring(let location):
 			let cell = collectionView.dequeueCell(ofType: LocationCollectionViewCell.self, for: indexPath)
 			cell.fillWithData(location)
 			return cell
@@ -96,9 +96,8 @@ func configureDiffableDataSource() {
 				print("jjjj")
 		}
 
-		snapshot.appendSections([.surfCountries])
-
-        snapshot.appendItems(appData.surfCountries.map({ TripItem.surfCountry($0) }))
+//		snapshot.appendSections([.surfCountries])
+//        snapshot.appendItems(appData.surfCountries.map({ TripItem.surfCountry($0) }))
 		sections = snapshot.sectionIdentifiers
 
         dataSource.apply(snapshot, animatingDifferences: animated)
@@ -122,7 +121,7 @@ private extension SurfTripViewController {
 					section = strongSelf.makeSmallTableSection()
 				case .surfboardsBeginner, .surfboardsBeginnerInter, .surfboardsIntermediate, .surfboardsAdvanced, .surfboardsPro:
 					section = strongSelf.makeSurfboardSection()
-				case .surfCountries:
+				case .surfCountrySummer, .surfCountryAutumn, .surfCountryWinter, .surfCountrySpring:
 					section = strongSelf.makeLocationSection()
 			}
 			section.contentInsets = NSDirectionalEdgeInsets(top: 0, leading: 10, bottom: 0, trailing: 10)
