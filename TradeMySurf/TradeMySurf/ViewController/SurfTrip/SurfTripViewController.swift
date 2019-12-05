@@ -95,13 +95,43 @@ func configureDiffableDataSource() {
 		default:
 				print("jjjj")
 		}
+		let selected = makeIntFromMonth()
+		let pickerDate = Season.sortBy(month: selected)
+		switch pickerDate {
+		case 0:
+			snapshot.appendSections([.surfCountryWinter])
+			snapshot.appendItems(appData.surfCountryWinter.map({ TripItem.surfCountryWinter($0) }))
+		case 1:
+			snapshot.appendSections([.surfCountrySpring])
+			snapshot.appendItems(appData.surfCountrySpring.map({ TripItem.surfCountrySpring($0) }))
+		case 2:
+			snapshot.appendSections([.surfCountrySummer])
+			snapshot.appendItems(appData.surfCountrySummer.map({ TripItem.surfCountrySummer($0) }))
+		case 3:
+			snapshot.appendSections([.surfCountryAutumn])
+			snapshot.appendItems(appData.surfCountryAutumn.map({ TripItem.surfCountryAutumn($0) }))
 
-//		snapshot.appendSections([.surfCountries])
-//        snapshot.appendItems(appData.surfCountries.map({ TripItem.surfCountry($0) }))
+		default:
+			print("season lost")
+		}
+
 		sections = snapshot.sectionIdentifiers
-
         dataSource.apply(snapshot, animatingDifferences: animated)
     }
+
+}
+// MARK: - Business logic -
+private extension SurfTripViewController {
+
+	func makeIntFromMonth() -> Int {
+
+		let monthOfYear = selectedDate?.month
+		let dateFormat = DateFormatter()
+		dateFormat.dateFormat = "LLLL"
+		let date = dateFormat.date(from: monthOfYear ?? "")
+		let monthInt = Calendar.current.component(.month, from: date!)
+		return monthInt
+	}
 }
 // MARK: - Collection View Layout -
 

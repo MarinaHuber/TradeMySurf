@@ -41,7 +41,7 @@ var surfingTime: Date? {
 	get {
 		return UserDefaults.standard.object(forKey: "surfingTime") as? Date
 	}
-	set(newVal){
+	set(newVal) {
 		UserDefaults.standard.set(newVal, forKey: "surfingTime")
 	}
 }

@@ -58,7 +58,7 @@ struct RecommendedTripArray {
 
     var surfCountrySummer: [Location] = {
         return [
-			Location(countryName: "France",continentName: "Europe", imageFlag: "french", plannedDate: Date()),
+			Location(countryName: "Summer France",continentName: "Europe", imageFlag: "french", plannedDate: Date()),
             Location(countryName: "Costa Rica", continentName: "South America", imageFlag: "brazil", plannedDate: Date()),
             Location(countryName: "Morocco", continentName: "Africa", imageFlag: "indonesia", plannedDate: Date()),
             Location(countryName: "Japan", continentName: "Asia", imageFlag: "indonesia", plannedDate: Date()),
@@ -68,7 +68,7 @@ struct RecommendedTripArray {
     }()
 	var surfCountryAutumn: [Location] = {
 		  return [
-			  Location(countryName: "France",continentName: "Europe", imageFlag: "brazil", plannedDate: Date()),
+			  Location(countryName: "Autumn Brazil",continentName: "Europe", imageFlag: "brazil", plannedDate: Date()),
 			  Location(countryName: "Costa Rica", continentName: "South America", imageFlag: "morocco", plannedDate: Date()),
 			  Location(countryName: "Morocco", continentName: "Africa", imageFlag: "morocco", plannedDate: Date()),
 			  Location(countryName: "Japan", continentName: "Asia", imageFlag: "indonesia", plannedDate: Date()),
@@ -79,7 +79,7 @@ struct RecommendedTripArray {
 
 	var surfCountryWinter: [Location] = {
 		  return [
-			  Location(countryName: "France",continentName: "Europe", imageFlag: "morocco", plannedDate: Date()),
+			  Location(countryName: "Winter Morocco",continentName: "Europe", imageFlag: "morocco", plannedDate: Date()),
 			  Location(countryName: "Costa Rica", continentName: "South America", imageFlag: "brazil", plannedDate: Date()),
 			  Location(countryName: "Morocco", continentName: "Africa", imageFlag: "usa", plannedDate: Date()),
 			  Location(countryName: "Japan", continentName: "Asia", imageFlag: "indonesia", plannedDate: Date()),
@@ -89,7 +89,7 @@ struct RecommendedTripArray {
 	  }()
 	var surfCountrySpring: [Location] = {
 		  return [
-			  Location(countryName: "France",continentName: "Europe", imageFlag: "brazil", plannedDate: Date()),
+			  Location(countryName: "Spring France",continentName: "Europe", imageFlag: "brazil", plannedDate: Date()),
 			  Location(countryName: "Costa Rica", continentName: "South America", imageFlag: "usa", plannedDate: Date()),
 			  Location(countryName: "Morocco", continentName: "Africa", imageFlag: "morocco", plannedDate: Date()),
 			  Location(countryName: "Japan", continentName: "Asia", imageFlag: "indonesia", plannedDate: Date()),
@@ -102,8 +102,8 @@ struct RecommendedTripArray {
         return [
             SurfTip(title: "Beginner surf goal",
                      description: "Biking is the best activity you can find. It's fun, it's sporty, and you can look kind of cool on a bike"),
-            SurfTip(title: "Reading the wave",
-                     description: "This is a specially hard for beginners.")
+//            SurfTip(title: "Reading the wave",
+//                     description: "This is a specially hard for beginners.")
         ]
     }()
 }

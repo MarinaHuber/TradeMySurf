@@ -20,9 +20,25 @@ enum Level: String, CaseIterable {
 	}
 }
 
-enum Season: String, CaseIterable {
-    case winter = "Winter"
-    case spring = "Spring"
-    case summer = "Summer"
-    case autumn = "Autumn"
+enum Season: Int, CaseIterable {
+    case winter = 0
+    case spring = 1
+    case summer = 2
+    case autumn = 3
+
+	static func sortBy(month: Int) -> Int {
+		 switch month {
+		 case 0...2:
+			 return Season.winter.rawValue
+		 case 3...5:
+			 return Season.spring.rawValue
+		 case 6...9:
+			 return Season.summer.rawValue
+		 case 10...12:
+			 return Season.autumn.rawValue
+		 default:
+			 print("Fallback option")
+		 }
+		 return 0
+	 }
 }

@@ -28,7 +28,7 @@ class SmallTableViewCell : UICollectionViewCell {
 extension SmallTableViewCell {
 
 	func fillWithData(_ data: SurfTip) {
-		titleLabel.text = selectedDate?.asString(style: .long)
+		titleLabel.text = selectedDate?.dateAsString(style: .long)
 		descriptionLabel.text = data.description
 	}
 }

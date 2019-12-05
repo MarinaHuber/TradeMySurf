@@ -28,23 +28,18 @@ class AddDateViewController: UIViewController {
 			.setValueChange(action: { _, selectedDate in
 				///save to UD
 				UserDefaults.standard.surfingTime = selectedDate
-				//let time = TimeHelper.timeString(from: selectedDate)
 				let monthOfYear = selectedDate.month
-				print("current date \(monthOfYear)")
 
 				let dateFormat = DateFormatter()
 				dateFormat.dateFormat = "LLLL"
 				let date = dateFormat.date(from: monthOfYear)
 				let monthInt = Calendar.current.component(.month, from: date!)
-					print("into int: \(monthInt)")
+					print("month into int: \(monthInt)")
 			})
 			.setDoneButton(action: { popover, _ in
 				popover.disappear()
 				self.delegate?.performTabBar()
 			})
-//			.setClearButton(action: { popover, _ in
-//				popover.setSelectedDate(Date()).reload()
-//			})
 		.appear(originView: sender, baseViewController: self)
 
 	}

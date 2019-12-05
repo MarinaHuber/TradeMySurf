@@ -47,7 +47,7 @@
 		9C90A22F2388888B00E735D3 /* shop.json in Resources */ = {isa = PBXBuildFile; fileRef = 9C90A22E2388888B00E735D3 /* shop.json */; };
 		9C90A2312388954700E735D3 /* van.json in Resources */ = {isa = PBXBuildFile; fileRef = 9C90A2302388954600E735D3 /* van.json */; };
 		9C90A233238897A500E735D3 /* air.json in Resources */ = {isa = PBXBuildFile; fileRef = 9C90A232238897A400E735D3 /* air.json */; };
-		9C90BC552386BD020090E346 /* UserDefaults.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C90BC542386BD020090E346 /* UserDefaults.swift */; };
+		9C90BC552386BD020090E346 /* Enums.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C90BC542386BD020090E346 /* Enums.swift */; };
 		9C990AAB2398114800B17AE5 /* LoadingStateViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C990AAA2398114800B17AE5 /* LoadingStateViewController.swift */; };
 		9C990AAD2398119200B17AE5 /* LoadingStateCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C990AAC2398119200B17AE5 /* LoadingStateCoordinator.swift */; };
 		9C9F836C2366BDAA00FA4F41 /* TabBarCoordinatorTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C9F836B2366BDAA00FA4F41 /* TabBarCoordinatorTests.swift */; };
@@ -127,7 +127,7 @@
 		9C90A22E2388888B00E735D3 /* shop.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = shop.json; sourceTree = "<group>"; };
 		9C90A2302388954600E735D3 /* van.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = van.json; sourceTree = "<group>"; };
 		9C90A232238897A400E735D3 /* air.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = air.json; sourceTree = "<group>"; };
-		9C90BC542386BD020090E346 /* UserDefaults.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserDefaults.swift; sourceTree = "<group>"; };
+		9C90BC542386BD020090E346 /* Enums.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Enums.swift; sourceTree = "<group>"; };
 		9C990AAA2398114800B17AE5 /* LoadingStateViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = LoadingStateViewController.swift; path = TradeMySurf/ViewController/LoadingStateViewController.swift; sourceTree = SOURCE_ROOT; };
 		9C990AAC2398119200B17AE5 /* LoadingStateCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoadingStateCoordinator.swift; sourceTree = "<group>"; };
 		9C9F836B2366BDAA00FA4F41 /* TabBarCoordinatorTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabBarCoordinatorTests.swift; sourceTree = "<group>"; };
@@ -303,7 +303,7 @@
 		9C62417D23915AA800A4B7C9 /* Enums */ = {
 			isa = PBXGroup;
 			children = (
-				9C90BC542386BD020090E346 /* UserDefaults.swift */,
+				9C90BC542386BD020090E346 /* Enums.swift */,
 			);
 			path = Enums;
 			sourceTree = "<group>";
@@ -655,7 +655,7 @@
 				9C76F09623493EDA00853FD9 /* SurfTripViewController.swift in Sources */,
 				9C62417C239156C200A4B7C9 /* UserDefaultsHelper.swift in Sources */,
 				9C990AAD2398119200B17AE5 /* LoadingStateCoordinator.swift in Sources */,
-				9C90BC552386BD020090E346 /* UserDefaults.swift in Sources */,
+				9C90BC552386BD020090E346 /* Enums.swift in Sources */,
 				9C76F09823493F0900853FD9 /* SavedTripsViewController.swift in Sources */,
 				9C6F64CB2379CB7400B0224D /* AddDateCoordinator.swift in Sources */,
 				9C6F64D02379FB7800B0224D /* Constants.swift in Sources */,
