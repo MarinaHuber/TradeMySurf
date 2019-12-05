@@ -23,22 +23,28 @@ class AddDateViewController: UIViewController {
 
 	@IBAction func tapDateSpringPopoverPicker(_ sender: UIButton) {
 		DatePickerPopover(title: "Pick a start date")
-			.setLocale(identifier: "en_GB")
+			.setLocale(identifier: "en_US_POSIX")
 			.setDimmedBackgroundView(enabled: true)
 			.setValueChange(action: { _, selectedDate in
 				///save to UD
-				print("current date \(selectedDate)")
+				UserDefaults.standard.surfingTime = selectedDate
+				//let time = TimeHelper.timeString(from: selectedDate)
+				let monthOfYear = selectedDate.month
+				print("current date \(monthOfYear)")
+
+				let dateFormat = DateFormatter()
+				dateFormat.dateFormat = "LLLL"
+				let date = dateFormat.date(from: monthOfYear)
+				let monthInt = Calendar.current.component(.month, from: date!)
+					print("into int: \(monthInt)")
 			})
 			.setDoneButton(action: { popover, _ in
 				popover.disappear()
 				self.delegate?.performTabBar()
 			})
-			.setCancelButton(action: { _, _ in
-				print("cancel")})
-			.setClearButton(action: { popover, _ in
-				print("clear")
-				popover.setSelectedDate(Date()).reload()
-			})
+//			.setClearButton(action: { popover, _ in
+//				popover.setSelectedDate(Date()).reload()
+//			})
 		.appear(originView: sender, baseViewController: self)
 
 	}

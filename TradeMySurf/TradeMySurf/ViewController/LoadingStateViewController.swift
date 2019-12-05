@@ -26,6 +26,7 @@ class LoadingStateViewController: UIViewController {
 		activityView?.center = self.view.center
 		self.view.addSubview(activityView!)
 		activityView?.startAnimating()
+		//self.navigationController?.popToRootViewControllerAnimated(true)
 	}
 
 	func hideActivityIndicator() {

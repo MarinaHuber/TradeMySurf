@@ -23,6 +23,7 @@ class SurfTripViewController: UIViewController {
         case surfCountry(Location)
     }
 	private var selectedLevel = UserDefaults.standard.selectedLevel
+	private var selectedDate = UserDefaults.standard.surfingTime
 	private weak var coordinator: SurfTripCoordinator?
 
     private(set) var collectionView: UICollectionView!
@@ -35,6 +36,7 @@ class SurfTripViewController: UIViewController {
         super.viewDidLoad()
         addCollectionView()
         configureCollectionView()
+		print("\(selectedDate)")
     }
 }
 

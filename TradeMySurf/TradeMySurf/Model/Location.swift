@@ -12,24 +12,7 @@ struct Location: Hashable {
     var countryName: String
 	var continentName: String
     var imageFlag: String
-
-	mutating func filteredBy<T>(date: T) {
-		print("\(self.countryName) \(self.continentName)")
-		print("\(date)")
-		let monthsOfYear = 12
-		switch monthsOfYear {
-		case 0...2:
-			print(Season.winter.rawValue)
-		case 3...5:
-			print("Spring")
-		case 6...9:
-			print("Summer")
-		case 10...12:
-			print("Autumn")
-		default:
-			print("Fallback option")
-		}
-	}
+	let plannedDate: Date
 }
 
 extension Location {

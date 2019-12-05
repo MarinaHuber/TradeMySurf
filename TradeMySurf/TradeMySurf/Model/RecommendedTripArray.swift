@@ -58,12 +58,12 @@ struct RecommendedTripArray {
 
     var surfCountries: [Location] = {
         return [
-			Location(countryName: "France",continentName: "Europe", imageFlag: "french"),
-            Location(countryName: "Costa Rica", continentName: "South America", imageFlag: "brazil"),
-            Location(countryName: "Morocco", continentName: "Africa", imageFlag: "morocco"),
-            Location(countryName: "Japan", continentName: "Asia", imageFlag: "indonesia"),
-            Location(countryName: "California", continentName: "North America", imageFlag: "usa"),
-            Location(countryName: "South Africa", continentName: "Africa", imageFlag: "french"),
+			Location(countryName: "France",continentName: "Europe", imageFlag: "french", plannedDate: Date()),
+            Location(countryName: "Costa Rica", continentName: "South America", imageFlag: "brazil", plannedDate: Date()),
+            Location(countryName: "Morocco", continentName: "Africa", imageFlag: "morocco", plannedDate: Date()),
+            Location(countryName: "Japan", continentName: "Asia", imageFlag: "indonesia", plannedDate: Date()),
+            Location(countryName: "California", continentName: "North America", imageFlag: "usa", plannedDate: Date()),
+            Location(countryName: "South Africa", continentName: "Africa", imageFlag: "french", plannedDate: Date()),
         ]
     }()
 

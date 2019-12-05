@@ -35,6 +35,22 @@ extension LocationCollectionViewCell {
 		subtitle.text = data.continentName
         imageView.image = UIImage(named: data.imageFlag)
     }
+
+	 func sortBy(month: Int) {
+		let monthsOfYear = 12
+		switch monthsOfYear {
+		case 0...2:
+			print(Season.winter.rawValue)
+		case 3...5:
+			print("Spring")
+		case 6...9:
+			print("Summer")
+		case 10...12:
+			print("Autumn")
+		default:
+			print("Fallback option")
+		}
+	}
 }
 
 // MARK: - UI -
