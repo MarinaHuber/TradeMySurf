@@ -11,6 +11,7 @@ import UIKit
 class SmallTableViewCell : UICollectionViewCell {	
 	let titleLabel: UILabel = UILabel()
 	let descriptionLabel: UILabel = UILabel()
+	let selectedDate = UserDefaults.standard.surfingTime
 
 	override init(frame: CGRect) {
 		super.init(frame: frame)
@@ -27,7 +28,7 @@ class SmallTableViewCell : UICollectionViewCell {
 extension SmallTableViewCell {
 
 	func fillWithData(_ data: SurfTip) {
-		titleLabel.text = data.title
+		titleLabel.text = selectedDate?.asString(style: .long)
 		descriptionLabel.text = data.description
 	}
 }

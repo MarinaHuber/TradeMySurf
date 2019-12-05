@@ -39,3 +39,11 @@ extension Date {
         return dateFormatter.string(from: self)
     }
 }
+
+extension Date {
+  func asString(style: DateFormatter.Style) -> String {
+    let dateFormatter = DateFormatter()
+    dateFormatter.dateStyle = style
+    return dateFormatter.string(from: self)
+  }
+}
