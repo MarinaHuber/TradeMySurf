@@ -26,7 +26,9 @@ extension UserDefaults {
 extension UserDefaults {
 	var didUserSetUp: Bool? {
 		get {
-			/// Read value from UserDefaults returns T
+			///// Register the app default:
+			/// Initialize value from UserDefaults returns T
+			UserDefaults.standard.register(defaults: ["didUserSetUp" : false])
 			return UserDefaults.standard.bool(forKey: "didUserSetUp")
 		}
 		set {

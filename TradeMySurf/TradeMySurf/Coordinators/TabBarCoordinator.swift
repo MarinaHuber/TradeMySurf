@@ -19,13 +19,13 @@ import UIKit
 // Test the Coordinator flow in Project Tests
 // *******************************************************************************************
 
-final class TabBarCoordinator: Coordinator {
+final class TabBarCoordinator: NSObject, Coordinator {
 
 	internal var presenter: UINavigationController
 	internal var tabBarController: UITabBarController?
-	internal var childCoordinators: [Coordinator]
+	internal var childCoordinators: [Coordinator]	
 
-	init(tabBarController: UITabBarController) {
+	init(window: UIWindow, tabBarController: UITabBarController) {
 		self.tabBarController = tabBarController
 		childCoordinators = []
 		self.presenter = UINavigationController()
@@ -45,7 +45,7 @@ final class TabBarCoordinator: Coordinator {
 
 		let presenters: [UINavigationController] = coordinators.map({ coordinator -> UINavigationController in
 			coordinator.presenter.navigationBar.prefersLargeTitles = true
-			coordinator.presenter.navigationBar.topItem?.title = "Kelly my surf"
+			coordinator.presenter.navigationBar.topItem?.title = "Recommended:"
 			return coordinator.presenter
 		})
 		tabBarController?.setViewControllers(presenters, animated: false)

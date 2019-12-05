@@ -15,7 +15,6 @@ protocol AddDateViewControllerDelegate: class {
 
 class AddDateViewController: UIViewController {
 	weak var delegate: AddDateViewControllerDelegate?
-	weak var coordinator: TabBarCoordinator?
 
 	override func viewDidLoad() {
 		super.viewDidLoad()
@@ -25,19 +24,14 @@ class AddDateViewController: UIViewController {
 		DatePickerPopover(title: "Pick a start date")
 			.setLocale(identifier: "en_US_POSIX")
 			.setDimmedBackgroundView(enabled: true)
+			.setOutsideTapDismissing(allowed: false)
 			.setValueChange(action: { _, selectedDate in
 				///save to UD
 				UserDefaults.standard.surfingTime = selectedDate
-				let monthOfYear = selectedDate.month
-
-				let dateFormat = DateFormatter()
-				dateFormat.dateFormat = "LLLL"
-				let date = dateFormat.date(from: monthOfYear)
-				let monthInt = Calendar.current.component(.month, from: date!)
-					print("month into int: \(monthInt)")
 			})
 			.setDoneButton(action: { popover, _ in
 				popover.disappear()
+				UserDefaults.standard.didUserSetUp = true
 				self.delegate?.performTabBar()
 			})
 		.appear(originView: sender, baseViewController: self)

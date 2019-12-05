@@ -8,27 +8,44 @@
 
 import UIKit
 
-class LoadingStateCoordinator: Coordinator {
-	var presenter: UINavigationController
-	let window = UIWindow()
-	var tabBar : TabBarCoordinator?
+class LoadingStateCoordinator: NSObject, Coordinator {
+	internal var childCoordinators: [Coordinator]
+	internal var presenter: UINavigationController
+	let window: UIWindow
 
-	var childCoordinators: [Coordinator]
-
-	init(presenter: UINavigationController) {
+	init(window: UIWindow) {
+		self.window = window
 		childCoordinators = []
-		self.presenter = presenter
+		presenter = UINavigationController()
+		self.presenter.navigationBar.backgroundColor = .clear
+		self.presenter.navigationBar.barTintColor = .clear
+		self.presenter.navigationBar.tintColor = .black
+		self.presenter.navigationBar.setBackgroundImage(UIImage(), for: UIBarPosition.any, barMetrics: UIBarMetrics.default)
+		self.presenter.navigationBar.shadowImage = UIImage()
+		self.presenter.navigationBar.titleTextAttributes = [.foregroundColor : UIColor.black as Any]
+		presenter.setNavigationBarHidden(true, animated: false)
 	}
 
-	func start() {
-		//if StorageData.didUserSetUp == true {
-//			let coordinator = TabBarCoordinator(tabBarController: UITabBarController())
-//			let tabBarVC = coordinator.tabBarController
-//			window.rootViewController = tabBarVC
-//
-//	//	} else {
-//			let welcomeVC = WelcomeViewController()
-//			window.rootViewController = welcomeVC
-//		}
+	 func start() {
+		let controller: LoadingStateViewController = LoadingStateViewController.instantiate()
+		window.rootViewController = controller
+		controller.delegate = self
+		}
+}
+
+extension LoadingStateCoordinator : LoadingViewControllerDelegate {
+	func performScreenSwitch() {
+		if UserDefaults.standard.didUserSetUp == false {
+			let mainTabCoordinator = TabBarCoordinator(window: window, tabBarController: UITabBarController())
+			childCoordinators.append(mainTabCoordinator)
+			window.rootViewController = mainTabCoordinator.presenter
+			mainTabCoordinator.start()
+
+		} else {
+			let welcomeCoordinator = WelcomeCoordinator(window: window, presenter: presenter)
+			childCoordinators.append(welcomeCoordinator)
+			window.rootViewController = welcomeCoordinator.presenter
+			welcomeCoordinator.start()
+		}
 	}
 }

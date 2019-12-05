@@ -41,6 +41,10 @@
 		9C76F09423493DAB00853FD9 /* WelcomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C76F09323493DAB00853FD9 /* WelcomeViewController.swift */; };
 		9C76F09623493EDA00853FD9 /* SurfTripViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C76F09523493EDA00853FD9 /* SurfTripViewController.swift */; };
 		9C76F09823493F0900853FD9 /* SavedTripsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C76F09723493F0900853FD9 /* SavedTripsViewController.swift */; };
+		9C8F32FC239943350070751F /* LoadingStateViewController.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9C8F32FB239943350070751F /* LoadingStateViewController.storyboard */; };
+		9C8F32FF239946090070751F /* logo_final.json in Resources */ = {isa = PBXBuildFile; fileRef = 9C8F32FD239946090070751F /* logo_final.json */; };
+		9C8F3300239946090070751F /* loader_animation.json in Resources */ = {isa = PBXBuildFile; fileRef = 9C8F32FE239946090070751F /* loader_animation.json */; };
+		9C8F330223994CDD0070751F /* FontHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C8F330123994CDD0070751F /* FontHelper.swift */; };
 		9C90A2292388886C00E735D3 /* car.json in Resources */ = {isa = PBXBuildFile; fileRef = 9C90A2282388886B00E735D3 /* car.json */; };
 		9C90A22B2388887700E735D3 /* clip-board.json in Resources */ = {isa = PBXBuildFile; fileRef = 9C90A22A2388887700E735D3 /* clip-board.json */; };
 		9C90A22D2388888300E735D3 /* ocean-wave.json in Resources */ = {isa = PBXBuildFile; fileRef = 9C90A22C2388888300E735D3 /* ocean-wave.json */; };
@@ -121,6 +125,10 @@
 		9C76F09323493DAB00853FD9 /* WelcomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WelcomeViewController.swift; sourceTree = "<group>"; };
 		9C76F09523493EDA00853FD9 /* SurfTripViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SurfTripViewController.swift; sourceTree = "<group>"; };
 		9C76F09723493F0900853FD9 /* SavedTripsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SavedTripsViewController.swift; sourceTree = "<group>"; };
+		9C8F32FB239943350070751F /* LoadingStateViewController.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = LoadingStateViewController.storyboard; sourceTree = "<group>"; };
+		9C8F32FD239946090070751F /* logo_final.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = logo_final.json; sourceTree = "<group>"; };
+		9C8F32FE239946090070751F /* loader_animation.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = loader_animation.json; sourceTree = "<group>"; };
+		9C8F330123994CDD0070751F /* FontHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FontHelper.swift; sourceTree = "<group>"; };
 		9C90A2282388886B00E735D3 /* car.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = car.json; sourceTree = "<group>"; };
 		9C90A22A2388887700E735D3 /* clip-board.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = "clip-board.json"; sourceTree = "<group>"; };
 		9C90A22C2388888300E735D3 /* ocean-wave.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = "ocean-wave.json"; sourceTree = "<group>"; };
@@ -350,6 +358,7 @@
 			isa = PBXGroup;
 			children = (
 				9C990AAA2398114800B17AE5 /* LoadingStateViewController.swift */,
+				9C8F32FB239943350070751F /* LoadingStateViewController.storyboard */,
 				9C990AAC2398119200B17AE5 /* LoadingStateCoordinator.swift */,
 				9CFDFD3723671C2500760F25 /* Onboarding */,
 				9C53D5C9234CB1A800A3BD80 /* Calculator */,
@@ -362,6 +371,8 @@
 		9C90A2232388812400E735D3 /* Lottie */ = {
 			isa = PBXGroup;
 			children = (
+				9C8F32FE239946090070751F /* loader_animation.json */,
+				9C8F32FD239946090070751F /* logo_final.json */,
 				9C90A232238897A400E735D3 /* air.json */,
 				9C90A2302388954600E735D3 /* van.json */,
 				9C90A22E2388888B00E735D3 /* shop.json */,
@@ -378,6 +389,7 @@
 				9C62417B239156C200A4B7C9 /* UserDefaultsHelper.swift */,
 				9C62416D238AE68E00A4B7C9 /* ReuseIdentifierHelper.swift */,
 				9CBDE2972395A9E600317F51 /* TimeHelper.swift */,
+				9C8F330123994CDD0070751F /* FontHelper.swift */,
 			);
 			path = Helpers;
 			sourceTree = "<group>";
@@ -529,9 +541,12 @@
 			files = (
 				9C5B645B232A5073000727E6 /* LaunchScreen.storyboard in Resources */,
 				9C45E661234D238F0054A5FD /* SurfTripViewController.storyboard in Resources */,
+				9C8F32FF239946090070751F /* logo_final.json in Resources */,
+				9C8F3300239946090070751F /* loader_animation.json in Resources */,
 				9C90A2292388886C00E735D3 /* car.json in Resources */,
 				9C69CE87234D0749003E386F /* Welcome.storyboard in Resources */,
 				9C5B6458232A5073000727E6 /* Assets.xcassets in Resources */,
+				9C8F32FC239943350070751F /* LoadingStateViewController.storyboard in Resources */,
 				9C90A22D2388888300E735D3 /* ocean-wave.json in Resources */,
 				9C5B6481232A5092000727E6 /* surfs.csv in Resources */,
 				9C90A2312388954700E735D3 /* van.json in Resources */,
@@ -651,6 +666,7 @@
 				9C5B647F232A508B000727E6 /* Surfs.mlmodel in Sources */,
 				9C624174238AFC1400A4B7C9 /* SmallTableViewCell.swift in Sources */,
 				9C5B6456232A506C000727E6 /* TradeMySurf.xcdatamodeld in Sources */,
+				9C8F330223994CDD0070751F /* FontHelper.swift in Sources */,
 				9CFDFD3F2367226C00760F25 /* AddDateViewController.swift in Sources */,
 				9C76F09623493EDA00853FD9 /* SurfTripViewController.swift in Sources */,
 				9C62417C239156C200A4B7C9 /* UserDefaultsHelper.swift in Sources */,
@@ -832,7 +848,7 @@
 				DEFINES_MODULE = YES;
 				DEVELOPMENT_TEAM = HBS2B82CVU;
 				INFOPLIST_FILE = TradeMySurf/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.1;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -855,7 +871,7 @@
 				DEFINES_MODULE = YES;
 				DEVELOPMENT_TEAM = HBS2B82CVU;
 				INFOPLIST_FILE = TradeMySurf/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.1;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",

@@ -7,6 +7,8 @@
 //
 import UIKit
 
+///AnyObject can be used for working with objects that derive from Class but that don’t share a common root Class
+
 protocol Coordinator: AnyObject {
 	var presenter: UINavigationController { get }
     /** Any child coordinators to keep track of, to prevent them from getting deallocated in memory. */
@@ -30,8 +32,9 @@ extension Coordinator {
      - Parameter childCoordinator: The coordinator to release.
      */
 
-    func removeChildCoordinator(_ childCoordinator: Coordinator) {
-        childCoordinators = childCoordinators.filter { $0 !== childCoordinator }
-    }
-
+    func removeChildCoordinator(_ coordinator: Coordinator) {
+		if let idx = childCoordinators.firstIndex(where: { $0 === coordinator }) {
+            childCoordinators.remove(at: idx)
+        }
+	}
 }

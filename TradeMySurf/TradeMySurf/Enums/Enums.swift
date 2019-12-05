@@ -42,3 +42,15 @@ enum Season: Int, CaseIterable {
 		 return 0
 	 }
 }
+
+enum TripSection: CaseIterable {
+	case tips
+	case surfboardsBeginner, surfboardsBeginnerInter, surfboardsIntermediate, surfboardsAdvanced, surfboardsPro
+	case surfCountrySummer, surfCountryAutumn, surfCountryWinter, surfCountrySpring
+}
+
+enum TripItem: Hashable {
+	case tip(SurfTip)
+	case surfboardsBeginner(Surfboard), surfboardsBeginnerInter(Surfboard), surfboardsIntermediate(Surfboard), surfboardsAdvanced(Surfboard), surfboardsPro(Surfboard)
+	case surfCountrySummer(Location),surfCountryAutumn(Location),surfCountryWinter(Location),surfCountrySpring(Location)
+}

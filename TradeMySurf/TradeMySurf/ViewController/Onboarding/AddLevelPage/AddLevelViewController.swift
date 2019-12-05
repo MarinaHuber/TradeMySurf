@@ -43,12 +43,13 @@ class AddLevelViewController: UIViewController {
 
 	private func setPickerPopover() {
 		StringPickerPopover(title: "Choose one", choices: levelsData)
-			.setSize(width: 300)
+			.setSize(width: view.frame.size.width - 10, height: view.frame.size.height/5)
+			.setDimmedBackgroundView(enabled: true)
 			.setRowHeight(60)
 			.setFontSize(16)
+			.setOutsideTapDismissing(allowed: false)
 			.setValueChange(action: { _, _, selectedString in
 				UserDefaults.standard.selectedLevel = selectedString
-				//let level = Level.enumFromString(string: storedObject)
 				print(" from Picker selected: \(selectedString)")
 			})
 			.setDoneButton(action: { popover, _, _ in

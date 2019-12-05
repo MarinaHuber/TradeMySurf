@@ -11,17 +11,6 @@ import UIKit
 
 class SurfTripViewController: UIViewController {
 
-    enum TripSection: CaseIterable {
-        case tips
-        case surfboardsBeginner, surfboardsBeginnerInter, surfboardsIntermediate, surfboardsAdvanced, surfboardsPro
-        case surfCountrySummer, surfCountryAutumn, surfCountryWinter, surfCountrySpring
-    }
-
-    enum TripItem: Hashable {
-        case tip(SurfTip)
-        case surfboardsBeginner(Surfboard), surfboardsBeginnerInter(Surfboard), surfboardsIntermediate(Surfboard), surfboardsAdvanced(Surfboard), surfboardsPro(Surfboard)
-        case surfCountrySummer(Location),surfCountryAutumn(Location),surfCountryWinter(Location),surfCountrySpring(Location)
-    }
 	private var selectedLevel = UserDefaults.standard.selectedLevel
 	private var selectedDate = UserDefaults.standard.surfingTime
 	private weak var coordinator: SurfTripCoordinator?
@@ -29,8 +18,9 @@ class SurfTripViewController: UIViewController {
     private(set) var collectionView: UICollectionView!
 	private var sections: [TripSection] = []
     private(set) var dataSource: UICollectionViewDiffableDataSource<TripSection, TripItem>! // retain data source!
-
     private(set) var appData: RecommendedTripArray = RecommendedTripArray()
+
+
 
     override func viewDidLoad() {
         super.viewDidLoad()

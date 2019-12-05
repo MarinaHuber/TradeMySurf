@@ -9,7 +9,7 @@
 import Foundation
 import UIKit
 
-final class AppCoordinator: Coordinator {
+final class AppCoordinator: NSObject, Coordinator {
 
 	internal var childCoordinators: [Coordinator]
 	internal var presenter: UINavigationController
@@ -27,7 +27,7 @@ final class AppCoordinator: Coordinator {
 		self.presenter.navigationBar.shadowImage = UIImage()
 		self.presenter.navigationBar.titleTextAttributes = [.foregroundColor : UIColor.black as Any]
 		presenter.setNavigationBarHidden(true, animated: false)
-		rootCoordinator = WelcomeCoordinator(presenter: presenter)
+		rootCoordinator = WelcomeCoordinator(window: window, presenter: presenter)
 	}
 
 	func start() {

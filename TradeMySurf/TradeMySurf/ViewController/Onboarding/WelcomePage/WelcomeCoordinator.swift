@@ -9,20 +9,22 @@
 import Foundation
 import UIKit
 
-final class WelcomeCoordinator: Coordinator {
+ class WelcomeCoordinator: NSObject, Coordinator {
 
 	internal var presenter: UINavigationController
 	var childCoordinators: [Coordinator]
 
-	init(presenter: UINavigationController) {
+	init(window: UIWindow, presenter: UINavigationController) {
 		self.presenter = presenter
 		childCoordinators = []
 		
 	}
 	func start() {
-		let mainViewController = WelcomeViewController.instantiate()
-		mainViewController.delegate = self
-		presenter.pushViewController(mainViewController, animated: true)
+		let storyboard: UIStoryboard = UIStoryboard(name: Constants.Storyboards.welcomeViewCoordinator
+			, bundle: nil)
+		let controller: WelcomeViewController = WelcomeViewController.instantiate(from: storyboard)
+		controller.delegate = self
+		presenter.pushViewController(controller, animated: true)
 	}
 }
 

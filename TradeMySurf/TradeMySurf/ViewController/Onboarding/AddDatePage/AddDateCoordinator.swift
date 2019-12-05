@@ -10,14 +10,16 @@ import UIKit
 
 final class AddDateCoordinator: Coordinator {
 
-	var tabBar : TabBarCoordinator?
-	var tabBarController: UITabBarController?
+	private let tabBarController: UITabBarController?
 	internal var presenter: UINavigationController
+	private let window: UIWindow
 	var childCoordinators: [Coordinator]
 
 	init(presenter: UINavigationController) {
 		self.presenter = presenter
 		childCoordinators = []
+		self.window = UIWindow()
+		self.tabBarController = UITabBarController()
 		self.presenter.navigationBar.barTintColor = .white
 		self.presenter.navigationBar.setBackgroundImage(UIImage(), for: UIBarPosition.any, barMetrics: UIBarMetrics.default)
 		self.presenter.navigationBar.shadowImage = UIImage()
@@ -32,11 +34,10 @@ final class AddDateCoordinator: Coordinator {
 
 extension AddDateCoordinator : AddDateViewControllerDelegate {
 	func performTabBar() {
-		let coordinator: TabBarCoordinator = TabBarCoordinator(tabBarController: UITabBarController())
+		let coordinator: TabBarCoordinator = TabBarCoordinator(window: window, tabBarController: UITabBarController())
 		addChildCoordinator(coordinator)
 		coordinator.start()
 		coordinator.presenter.modalPresentationStyle = .fullScreen
 		presenter.show(coordinator.tabBarController!, sender: nil)
-		self.tabBar = coordinator
 	}
 }
