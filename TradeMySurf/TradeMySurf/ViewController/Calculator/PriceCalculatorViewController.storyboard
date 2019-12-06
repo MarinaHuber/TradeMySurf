@@ -31,6 +31,9 @@
                                             <segment title="Lost"/>
                                             <segment title="Chilli"/>
                                         </segments>
+                                        <connections>
+                                            <action selector="calculateValue:" destination="NuV-wN-EPR" eventType="valueChanged" id="mcC-st-5Rc"/>
+                                        </connections>
                                     </segmentedControl>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="GEAR" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="HaC-FZ-E91">
                                         <rect key="frame" x="0.0" y="61.5" width="374" height="20.5"/>
@@ -47,6 +50,9 @@
                                             <segment title="Three fin"/>
                                             <segment title="Four fin"/>
                                         </segments>
+                                        <connections>
+                                            <action selector="calculateValue:" destination="NuV-wN-EPR" eventType="valueChanged" id="Gag-cZ-W25"/>
+                                        </connections>
                                     </segmentedControl>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="HOURS ON WATER" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="o3k-vf-1gc">
                                         <rect key="frame" x="0.0" y="123" width="374" height="20.5"/>
@@ -56,6 +62,9 @@
                                     </label>
                                     <slider opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="10000" minValue="0.0" maxValue="200000" translatesAutoresizingMaskIntoConstraints="NO" id="KUn-Vj-i6S">
                                         <rect key="frame" x="-2" y="148.5" width="378" height="31"/>
+                                        <connections>
+                                            <action selector="calculateValue:" destination="NuV-wN-EPR" eventType="valueChanged" id="keV-gh-SRI"/>
+                                        </connections>
                                     </slider>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="CONDITION" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="rdU-x6-dfo">
                                         <rect key="frame" x="0.0" y="183.5" width="374" height="20.5"/>
@@ -71,6 +80,9 @@
                                             <segment title="Good"/>
                                             <segment title="Great"/>
                                         </segments>
+                                        <connections>
+                                            <action selector="calculateValue:" destination="NuV-wN-EPR" eventType="valueChanged" id="KHZ-JY-jfI"/>
+                                        </connections>
                                     </segmentedControl>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="YEAR OF PRODUCTION" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="lGt-0J-EUF">
                                         <rect key="frame" x="0.0" y="245" width="374" height="20.5"/>
@@ -107,6 +119,14 @@
                         <color key="badgeColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                     </tabBarItem>
                     <navigationItem key="navigationItem" id="x3L-Wf-1HY"/>
+                    <connections>
+                        <outlet property="condition" destination="af1-0f-Ic1" id="J9F-2Y-tBY"/>
+                        <outlet property="gear" destination="f12-EG-q2R" id="fb9-Ws-TBs"/>
+                        <outlet property="model" destination="ftc-G7-AUk" id="c3c-0q-Tje"/>
+                        <outlet property="production" destination="KUn-Vj-i6S" id="YMN-X8-8yC"/>
+                        <outlet property="stackView" destination="eQq-u4-VZ7" id="41c-WN-ycW"/>
+                        <outlet property="valuation" destination="uts-nl-GW8" id="Aqt-rh-CCq"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="yn9-6i-Jn2" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
