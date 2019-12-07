@@ -101,7 +101,7 @@ struct RecommendedTripArray {
     var tips: [SurfTip] = {
         return [
             SurfTip(title: "Beginner surf goal",
-                     description: "Biking is the best activity you can find. It's fun, it's sporty, and you can look kind of cool on a bike"),
+                     description: "Volumen is the most important element to consider when choosing a surfboard. It's the factor that can most affect the number of waves you catch, and how much fun you have in water.But it isn't everything. Understanding how the curved shapes and the surfboard's dimensions affect your surfing will also help you find better surfboardsfor your surf level, and have positive impact on your progression."),
 //            SurfTip(title: "Reading the wave",
 //                     description: "This is a specially hard for beginners.")
         ]

@@ -31,7 +31,7 @@ class AddDateViewController: UIViewController {
 			})
 			.setDoneButton(action: { popover, _ in
 				popover.disappear()
-				UserDefaults.standard.didUserSetUp = true
+				//UserDefaults.standard.didUserSetUp = true
 				self.delegate?.performTabBar()
 			})
 		.appear(originView: sender, baseViewController: self)
