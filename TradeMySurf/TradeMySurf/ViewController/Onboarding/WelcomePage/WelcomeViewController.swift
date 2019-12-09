@@ -17,7 +17,6 @@ protocol WelcomeViewControllerDelegate: class {
 class WelcomeViewController: UIViewController, CAAnimationDelegate {
 	weak var delegate: WelcomeViewControllerDelegate?
 	weak var coordinator: TabBarCoordinator?
-    @IBOutlet weak var item: UIStackView!
     private var firstTime: Bool?
 	@IBOutlet private(set) weak var lottieBoard: AnimationView! {
 		didSet {
@@ -46,32 +45,33 @@ class WelcomeViewController: UIViewController, CAAnimationDelegate {
 			lottieLocation.play()
 		}
 	}
+	@IBOutlet weak var bgStackView: UIView!
 	override func viewDidLoad() {
 		super.viewDidLoad()
-			animate(item)
+			animate(bgStackView)
 		}
 
-		  func animate(_ item : UIStackView) {
+		  func animate(_ item : UIView) {
 			  let scale = CABasicAnimation(keyPath: "transform.scale")
-			  scale.fromValue = 0.2
+			scale.fromValue = 0.6
 			  scale.toValue =  1
 			  scale.duration = 1
 			  scale.delegate = self
 			  item.layer.add(scale, forKey: "scale")
 			  let post = CABasicAnimation(keyPath: "position.y")
-			  post.fromValue = 0
+			  post.fromValue = view.frame.size.height + 20
+			  post.toValue = view.frame.size.height - 500
 			  post.duration = 2
 			  post.isRemovedOnCompletion =  false
 			  post.fillMode = CAMediaTimingFillMode.forwards
 			  item.layer.add(post, forKey: "post")
-			  item.layer.position.y = self.view.center.y + 100
+			  item.layer.position.y = self.view.center.y
 		  }
 
 		  override func viewWillDisappear(_ animated: Bool) {
 			  super.viewWillDisappear(animated)
 
 		  }
-
 
 	@IBAction func openNext(_ sender: Any) {
 		delegate?.performNextView()
