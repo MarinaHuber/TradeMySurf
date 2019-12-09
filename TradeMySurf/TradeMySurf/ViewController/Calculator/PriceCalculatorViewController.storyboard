@@ -120,10 +120,11 @@
                     </tabBarItem>
                     <navigationItem key="navigationItem" id="x3L-Wf-1HY"/>
                     <connections>
-                        <outlet property="condition" destination="af1-0f-Ic1" id="J9F-2Y-tBY"/>
-                        <outlet property="gear" destination="f12-EG-q2R" id="fb9-Ws-TBs"/>
-                        <outlet property="model" destination="ftc-G7-AUk" id="c3c-0q-Tje"/>
-                        <outlet property="production" destination="KUn-Vj-i6S" id="YMN-X8-8yC"/>
+                        <outlet property="condition" destination="af1-0f-Ic1" id="xir-sI-fZo"/>
+                        <outlet property="gear" destination="f12-EG-q2R" id="pY5-Us-lt7"/>
+                        <outlet property="hoursLabel" destination="o3k-vf-1gc" id="BCg-J9-lOF"/>
+                        <outlet property="model" destination="ftc-G7-AUk" id="P6w-Xt-Tfi"/>
+                        <outlet property="production" destination="KUn-Vj-i6S" id="x5W-Ik-KNK"/>
                         <outlet property="stackView" destination="eQq-u4-VZ7" id="41c-WN-ycW"/>
                         <outlet property="valuation" destination="uts-nl-GW8" id="Aqt-rh-CCq"/>
                     </connections>

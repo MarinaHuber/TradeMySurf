@@ -16,7 +16,7 @@ class PriceCalculatorViewController: UIViewController {
     @IBOutlet var stackView: UIStackView!
     @IBOutlet var model: UISegmentedControl!
     @IBOutlet var gear: UISegmentedControl!
-    @IBOutlet var mileageLabel: UILabel!
+    @IBOutlet var hoursLabel: UILabel!
     @IBOutlet var production: UISlider!
     @IBOutlet var condition: UISegmentedControl!
     @IBOutlet var valuation: UILabel!
@@ -37,10 +37,10 @@ class PriceCalculatorViewController: UIViewController {
         formatter.numberStyle = .decimal
         formatter.maximumFractionDigits = 0
         let formattedMileage = formatter.string(for: production.value) ?? "0"
-        mileageLabel.text = "MILEAGE (\(formattedMileage) miles)"
+        hoursLabel.text = "Hours on water (\(formattedMileage) hours)"
 
         if let prediction = try? surfBoards.prediction(model: Double(model.selectedSegmentIndex), gear: Double(gear.selectedSegmentIndex), production: Double(production.value), condition: Double(condition.selectedSegmentIndex)) {
-            let clampedValuation = max(2000, prediction.price)
+            let clampedValuation = max(1000, prediction.price)
             formatter.numberStyle = .currency
             valuation.text = formatter.string(for: clampedValuation)
         } else {

@@ -168,11 +168,11 @@ private extension SurfTripViewController {
 	}
 
     func makeSurfboardSection() -> NSCollectionLayoutSection {
-		let largeItemSize = NSCollectionLayoutSize(widthDimension: .absolute(140),
+		let largeItemSize = NSCollectionLayoutSize(widthDimension: .absolute(view.frame.size.width / 3),
 												   heightDimension: .fractionalHeight(1.0))
         let largeItem = NSCollectionLayoutItem(layoutSize: largeItemSize)
 
-        let groupOf2Size = NSCollectionLayoutSize(widthDimension: .fractionalWidth(2.2),
+        let groupOf2Size = NSCollectionLayoutSize(widthDimension: .fractionalWidth(view.frame.size.width * 2),
 												  heightDimension: .estimated(300))
 
         let groupOf3 = NSCollectionLayoutGroup.horizontal(layoutSize: groupOf2Size, subitems: [largeItem])

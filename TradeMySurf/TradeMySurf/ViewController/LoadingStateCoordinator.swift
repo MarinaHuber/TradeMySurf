@@ -36,7 +36,7 @@ class LoadingStateCoordinator: NSObject, Coordinator {
 
 extension LoadingStateCoordinator : LoadingViewControllerDelegate {
 	func performScreenSwitch() {
-		 userSettup = true
+		 userSettup = false
 
 		if userSettup {
 			let mainTabCoordinator = TabBarCoordinator(window: window, tabBarController: UITabBarController())
