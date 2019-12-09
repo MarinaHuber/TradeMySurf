@@ -12,6 +12,7 @@ class LoadingStateCoordinator: NSObject, Coordinator {
 	internal var childCoordinators: [Coordinator]
 	internal var presenter: UINavigationController
 	let window: UIWindow
+	private var userSettup = UserDefaults.standard.didUserSetUp
 
 	init(window: UIWindow) {
 		self.window = window
@@ -35,12 +36,13 @@ class LoadingStateCoordinator: NSObject, Coordinator {
 
 extension LoadingStateCoordinator : LoadingViewControllerDelegate {
 	func performScreenSwitch() {
-		  UserDefaults.standard.didUserSetUp = false
+		 userSettup = true
 
-		if UserDefaults.standard.didUserSetUp {
+		if userSettup {
 			let mainTabCoordinator = TabBarCoordinator(window: window, tabBarController: UITabBarController())
 			childCoordinators.append(mainTabCoordinator)
-			window.rootViewController = mainTabCoordinator.presenter
+			window.rootViewController = mainTabCoordinator.tabBarController
+			mainTabCoordinator.presenter.modalPresentationStyle = .fullScreen
 			mainTabCoordinator.start()
 
 		} else {
