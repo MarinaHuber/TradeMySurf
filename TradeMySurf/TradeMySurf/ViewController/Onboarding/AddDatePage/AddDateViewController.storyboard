@@ -22,38 +22,13 @@
                                 </constraints>
                             </imageView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="What dates are you surfing?" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Hvw-mn-vaH">
-                                <rect key="frame" x="58" y="208" width="299" height="25.333333333333343"/>
+                                <rect key="frame" x="58" y="218" width="299" height="25.333333333333343"/>
                                 <fontDescription key="fontDescription" name="HelveticaNeue-Bold" family="Helvetica Neue" pointSize="21"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="GuL-es-VkA">
-                                <rect key="frame" x="98" y="549" width="219" height="38"/>
-                                <color key="backgroundColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                <constraints>
-                                    <constraint firstAttribute="width" secondItem="GuL-es-VkA" secondAttribute="height" multiplier="219:38" id="BO0-5y-OAk"/>
-                                </constraints>
-                                <fontDescription key="fontDescription" type="system" pointSize="21"/>
-                                <state key="normal" title="Start">
-                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                </state>
-                                <userDefinedRuntimeAttributes>
-                                    <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
-                                        <integer key="value" value="8"/>
-                                    </userDefinedRuntimeAttribute>
-                                </userDefinedRuntimeAttributes>
-                                <connections>
-                                    <action selector="openTabBar:" destination="uFP-b1-cSK" eventType="touchUpInside" id="Tod-TN-MtI"/>
-                                </connections>
-                            </button>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="This is what will appear in your surf recommendations" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="QDe-fe-J2C">
-                                <rect key="frame" x="75" y="370" width="264" height="38.333333333333314"/>
-                                <fontDescription key="fontDescription" type="system" weight="thin" pointSize="16"/>
-                                <nil key="textColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="8UK-iT-pPO">
-                                <rect key="frame" x="92" y="334" width="230" height="30"/>
+                                <rect key="frame" x="92" y="286.66666666666669" width="230" height="30"/>
                                 <state key="normal" title="For location choose a start date">
                                     <color key="titleColor" cocoaTouchSystemColor="darkTextColor"/>
                                 </state>
@@ -66,20 +41,23 @@
                                     <action selector="tapDateSpringPopoverPicker:" destination="uFP-b1-cSK" eventType="touchUpInside" id="RZ2-Zv-SVR"/>
                                 </connections>
                             </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="This is what will appear in your surf recommendations" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="QDe-fe-J2C">
+                                <rect key="frame" x="75" y="250.99999999999997" width="264" height="35.666666666666657"/>
+                                <fontDescription key="fontDescription" name="AvenirNext-UltraLight" family="Avenir Next" pointSize="13"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <constraints>
-                            <constraint firstItem="Hvw-mn-vaH" firstAttribute="top" secondItem="IVB-pQ-fdR" secondAttribute="top" constant="120" id="09K-Fx-tCn"/>
+                            <constraint firstItem="Hvw-mn-vaH" firstAttribute="top" secondItem="IVB-pQ-fdR" secondAttribute="top" constant="130" id="09K-Fx-tCn"/>
                             <constraint firstItem="IVB-pQ-fdR" firstAttribute="trailing" secondItem="QDe-fe-J2C" secondAttribute="trailing" constant="75" id="Afg-Gy-0QQ"/>
-                            <constraint firstItem="8UK-iT-pPO" firstAttribute="top" secondItem="Hvw-mn-vaH" secondAttribute="bottom" constant="100.67" id="JLr-RC-esr"/>
-                            <constraint firstItem="QDe-fe-J2C" firstAttribute="top" secondItem="8UK-iT-pPO" secondAttribute="bottom" constant="6" id="PvB-uV-09B"/>
+                            <constraint firstItem="QDe-fe-J2C" firstAttribute="bottom" secondItem="8UK-iT-pPO" secondAttribute="top" id="PvB-uV-09B"/>
                             <constraint firstItem="Hvw-mn-vaH" firstAttribute="centerX" secondItem="2H6-JY-Mis" secondAttribute="centerX" constant="0.5" id="Rs3-al-SFt"/>
                             <constraint firstItem="frO-2d-BxM" firstAttribute="trailing" secondItem="IVB-pQ-fdR" secondAttribute="trailing" id="W8C-iU-hzO"/>
                             <constraint firstItem="QDe-fe-J2C" firstAttribute="leading" secondItem="IVB-pQ-fdR" secondAttribute="leading" constant="75" id="WHm-J7-Yca"/>
-                            <constraint firstItem="IVB-pQ-fdR" firstAttribute="trailing" secondItem="GuL-es-VkA" secondAttribute="trailing" constant="97" id="akp-Kt-Uu3"/>
                             <constraint firstAttribute="bottom" secondItem="frO-2d-BxM" secondAttribute="bottom" id="j1L-WD-ctl"/>
-                            <constraint firstItem="GuL-es-VkA" firstAttribute="leading" secondItem="IVB-pQ-fdR" secondAttribute="leading" constant="98" id="puv-zi-SoC"/>
-                            <constraint firstItem="IVB-pQ-fdR" firstAttribute="bottom" secondItem="GuL-es-VkA" secondAttribute="bottom" constant="226" id="smp-fC-9Dt"/>
+                            <constraint firstItem="QDe-fe-J2C" firstAttribute="top" secondItem="Hvw-mn-vaH" secondAttribute="bottom" constant="7.6666666666666572" id="shp-tz-QPM"/>
                             <constraint firstItem="frO-2d-BxM" firstAttribute="leading" secondItem="IVB-pQ-fdR" secondAttribute="leading" id="syj-ZB-NLO"/>
                             <constraint firstItem="IVB-pQ-fdR" firstAttribute="trailing" secondItem="8UK-iT-pPO" secondAttribute="trailing" constant="92" id="u3W-hY-b2J"/>
                             <constraint firstItem="Hvw-mn-vaH" firstAttribute="leading" secondItem="IVB-pQ-fdR" secondAttribute="leading" constant="58" id="vve-E8-YLC"/>

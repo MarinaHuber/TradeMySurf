@@ -36,7 +36,7 @@ public class StringPickerPopover: AbstractPopover {
     private(set) var font: UIFont?
     private(set) var fontColor: UIColor = .black
     private(set) var fontSize: CGFloat?
-    let kDefaultFontSize: CGFloat = 14
+    let kDefaultFontSize: CGFloat = 12
     
     /// Convert a raw value to the string for displaying it
     private(set) var displayStringFor: DisplayStringForType?
@@ -46,7 +46,7 @@ public class StringPickerPopover: AbstractPopover {
 	/// Cancel button parameters
 	private(set) var cancelButton: ButtonParameterType = (title: "".localized, font: nil, color: nil, action: nil)
     /// Clear button parameters
-    private(set) var clearButton: ButtonParameterType = (title: "".localized, font: nil, color: nil, action: nil)
+    private(set) var clearButton: ButtonParameterType = (title: "test test".localized, font: nil, color: nil, action: nil)
 
     /// Action for picker value change
     private(set) var valueChangeAction: ActionHandlerType?
@@ -180,9 +180,9 @@ public class StringPickerPopover: AbstractPopover {
     /// - Returns: Self
     public func setClearButton(title: String? = nil, font: UIFont? = nil, color: UIColor? = nil, action: ActionHandlerType?) -> Self {
         // Insert the value like "" if needed
-        if let item = choices.first, item != kValueForCleared {
-            choices.insert(kValueForCleared, at: 0)
-        }
+//        if let item = choices.first, item != kValueForCleared {
+//            choices.insert(kValueForCleared, at: 0)
+//        }
         return setButton(button: &clearButton, title:title, font: font, color: color, action: action)
     }
     

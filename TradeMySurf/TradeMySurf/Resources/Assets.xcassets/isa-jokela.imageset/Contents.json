@@ -2,11 +2,11 @@
   "images" : [
     {
       "idiom" : "universal",
-      "filename" : "isa-jokela.png",
       "scale" : "1x"
     },
     {
       "idiom" : "universal",
+      "filename" : "isa-jokela.png",
       "scale" : "2x"
     },
     {

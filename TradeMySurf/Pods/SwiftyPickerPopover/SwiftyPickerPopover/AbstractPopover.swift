@@ -35,7 +35,7 @@ open class AbstractPopover: NSObject {
     /// ViewController in charge of content in the popover
     private(set) weak var contentViewController: AnyObject?
     /// Background color of contentViewController
-    private(set) var backgroundColor: UIColor?
+	private(set) var backgroundColor: UIColor?
     /// tintColor of contentViewController
     private(set) var tintColor: UIColor?
     
@@ -136,7 +136,7 @@ open class AbstractPopover: NSObject {
         navigationController.popoverPresentationController?.delegate = contentVC
         
         let color = backgroundColor ?? baseViewController.navigationController?.navigationBar.barTintColor ?? baseViewController.view.backgroundColor
-        navigationController.navigationBar.barTintColor = color
+       // navigationController.navigationBar.barTintColor = color
         navigationController.popoverPresentationController?.backgroundColor =  color
         
         tintColor = baseViewController.view.tintColor

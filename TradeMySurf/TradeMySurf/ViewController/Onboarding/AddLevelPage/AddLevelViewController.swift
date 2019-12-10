@@ -43,20 +43,20 @@ class AddLevelViewController: UIViewController {
 
 	private func setPickerPopover() {
 		StringPickerPopover(title: "Choose one", choices: levelsData)
-			.setSize(width: view.frame.size.width - 10, height: view.frame.size.height/5)
-			.setDimmedBackgroundView(enabled: true)
+			.setSize(width: view.frame.size.width - 80, height: view.frame.size.height/5)
 			.setRowHeight(60)
+			.setSelectedRow(0)
 			.setFontSize(16)
 			.setOutsideTapDismissing(allowed: false)
+			.setArrowColor(.systemGray4)
 			.setValueChange(action: { _, _, selectedString in
 				UserDefaults.standard.selectedLevel = selectedString
-				print(" from Picker selected: \(selectedString)")
 			})
-			.setDoneButton(action: { popover, _, _ in
+			.setDoneButton(title: "Next", font: UIFont.boldSystemFont(ofSize: 17), color: .systemBlue, action: { popover, _, _ in
 				popover.disappear()
 				self.delegate?.performNext()
-
 			})
+			.setClearButton(title: "This will appear in your surf recommendations", font: UIFont.boldSystemFont(ofSize: 9), color: .gray, action: nil)
 			.appear(originView: pickerView, baseViewController: self)
 
 	}

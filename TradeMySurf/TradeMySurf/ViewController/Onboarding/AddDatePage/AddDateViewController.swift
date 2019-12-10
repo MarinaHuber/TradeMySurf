@@ -21,20 +21,20 @@ class AddDateViewController: UIViewController {
 	}
 
 	@IBAction func tapDateSpringPopoverPicker(_ sender: UIButton) {
-		DatePickerPopover(title: "Pick a start date")
+		DatePickerPopover(title: "Pick a surf date")
 			.setLocale(identifier: "en_US_POSIX")
-			.setDimmedBackgroundView(enabled: true)
 			.setOutsideTapDismissing(allowed: false)
+			.setArrowColor(.systemGray4)
 			.setValueChange(action: { _, selectedDate in
 				///save to UD
 				UserDefaults.standard.surfingTime = selectedDate
 			})
-			.setDoneButton(action: { popover, _ in
-				popover.disappear()
-				//UserDefaults.standard.didUserSetUp = true
-				self.delegate?.performTabBar()
+			.setDoneButton(title: "Done", font: UIFont.boldSystemFont(ofSize: 17), color: .systemBlue, action: { popover, _ in
+					popover.disappear()
+					//missing: UserDefaults.standard.didUserSetUp = true
+					self.delegate?.performTabBar()
 			})
-		.appear(originView: sender, baseViewController: self)
+  		.appear(originView: sender, baseViewController: self)
 
 	}
 	@IBAction func backTap(_ sender: Any) {
