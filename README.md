@@ -28,6 +28,8 @@ Illustrates all flows of the project:
  + Calculator for board prices
 ![alt tag](https://pbs.twimg.com/media/EGN6v1YWwAEa2bc?format=jpg&name=large)
 # Lessons learned
+The most exciting thing about this work is that I had no idea where it would take me. I knew I neede to use Coordinator pattern and 
+that I would not be using a backend.
 # Wish list
 # Credits
  + help from Import Foundation.
