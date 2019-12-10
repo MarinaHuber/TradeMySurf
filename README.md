@@ -1,9 +1,12 @@
 
-### Recommendation app was create from idea to learn from surf goals and expectations 🤙🏽
+### Recommendation app from surfers to surfers to help with surf goals and expectations
  + help from Import Foundation.
 📌  As of October 2019, this project requires Xcode 11.0 (Swift 5.0)
-# Timestamp
+### Published on: DATE
+### Deployed on: DATE
+
 # Why did you undertake the project?
+Recommendation app was create from idea to learn from surf goals and expectations 🤙🏽
 
 # Scope / User story
 
