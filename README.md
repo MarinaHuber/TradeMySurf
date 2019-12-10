@@ -7,8 +7,7 @@
 ### Deployed on: DATE
 
 # Why did you undertake the project?
-Recommendation app was create from idea to learn from surf goals and expectations. Adding value to surf hobby 
-by planning it is a developers approach to surfing. This was a long passion of mine and I was lucky enought to get a mentorship through a program where I presented my vague idea at the time. This let me to wonderful collaborations and learning path. Here is the result of version 1.0.
+ This was a long passion of mine and I was lucky enought to get a mentorship through a program where I presented my vague idea at the time. This let me to wonderful collaborations and learning path. Here is the result of version 1.0. Recommendation app was create from idea to learn from surf goals and expectations. Adding value to surf hobby by planning it is a developers approach to surfing.
 
 
 # Scope / User story
