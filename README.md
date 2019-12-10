@@ -1,5 +1,6 @@
 
 ### Recommendation app from surfers to surfers
+![alt tag](https://img.shields.io/badge/swift%205-Surfo%20project-blue)
 
 📌  As of October 2019, this project requires Xcode 11.0 (Swift 5.0)
 ### Published on: DATE
