@@ -18,12 +18,14 @@
 ###  Navigation scheme: VC + Coordinator pattern
 Illustrates all flows of the project:
 
+ + LoadingState page
  + Welcome page
- + Add date flow
  + Add level flow
+ + Add date flow
  + TabBar Coordinator flow
  + Predictions for trip flow
- + Previous trips flow
+ + Previous trips - missing
+ + Calculator for board prices
 ![alt tag](https://pbs.twimg.com/media/EGN6v1YWwAEa2bc?format=jpg&name=large)
 # Lessons learned
 # Wish list
