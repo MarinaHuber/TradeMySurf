@@ -15,62 +15,54 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Turn surfing into a system. What is your current surf level?" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="3" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ksG-t2-QZl">
-                                <rect key="frame" x="65" y="164" width="284" height="106"/>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="bg-splash" translatesAutoresizingMaskIntoConstraints="NO" id="qbn-uN-LNy">
+                                <rect key="frame" x="0.0" y="204" width="416" height="692"/>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="This is what will appear in your surf recommendations" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="gek-Uy-Gls">
+                                <rect key="frame" x="110.5" y="243" width="195" height="38"/>
                                 <constraints>
-                                    <constraint firstAttribute="width" constant="284" id="Irl-yS-EFr"/>
-                                    <constraint firstAttribute="height" constant="106" id="mBh-qi-vjC"/>
+                                    <constraint firstAttribute="width" constant="195" id="y2Y-cI-TFR"/>
                                 </constraints>
+                                <fontDescription key="fontDescription" type="system" weight="thin" pointSize="13"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="What is your current surf level?" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="3" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ksG-t2-QZl">
+                                <rect key="frame" x="58.5" y="182" width="299" height="60"/>
                                 <fontDescription key="fontDescription" name="AvenirNext-DemiBold" family="Avenir Next" pointSize="21"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="4yn-dZ-EVN">
-                                <rect key="frame" x="172.5" y="287" width="69" height="30"/>
+                                <rect key="frame" x="173.5" y="282" width="69" height="30"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="30" id="6sr-w4-v99"/>
+                                    <constraint firstAttribute="height" constant="30" id="ICd-Ws-cvn"/>
+                                </constraints>
                                 <state key="normal" title="Your goal:">
                                     <color key="titleColor" cocoaTouchSystemColor="darkTextColor"/>
                                 </state>
                             </button>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="bg-splash" translatesAutoresizingMaskIntoConstraints="NO" id="qbn-uN-LNy">
-                                <rect key="frame" x="0.0" y="512" width="416" height="384"/>
-                                <constraints>
-                                    <constraint firstAttribute="width" secondItem="qbn-uN-LNy" secondAttribute="height" multiplier="414:295" constant="-122.79322033898313" id="RKL-b3-es8"/>
-                                </constraints>
-                            </imageView>
-                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="na2-k6-zeS">
-                                <rect key="frame" x="65" y="319" width="284" height="16"/>
-                                <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="16" id="J86-Rs-YPT"/>
-                                </constraints>
-                            </view>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="This is what will appear in your surf recommendations" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="gek-Uy-Gls">
-                                <rect key="frame" x="50.5" y="269" width="313" height="16"/>
-                                <fontDescription key="fontDescription" type="system" weight="thin" pointSize="13"/>
-                                <nil key="textColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
                         </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <constraints>
-                            <constraint firstItem="qbn-uN-LNy" firstAttribute="trailing" secondItem="vTy-5H-Gcj" secondAttribute="trailing" constant="2" id="4zm-wd-1VP"/>
-                            <constraint firstAttribute="bottom" secondItem="qbn-uN-LNy" secondAttribute="bottom" id="ATa-P7-OX0"/>
-                            <constraint firstItem="4yn-dZ-EVN" firstAttribute="centerX" secondItem="KdO-Jh-N5k" secondAttribute="centerX" id="DeG-pI-gQe"/>
-                            <constraint firstItem="4yn-dZ-EVN" firstAttribute="top" secondItem="gek-Uy-Gls" secondAttribute="bottom" constant="2" id="FPK-Iy-Ptb"/>
-                            <constraint firstItem="na2-k6-zeS" firstAttribute="top" secondItem="4yn-dZ-EVN" secondAttribute="bottom" constant="2" id="JSi-LG-Wsa"/>
-                            <constraint firstItem="ksG-t2-QZl" firstAttribute="top" secondItem="vTy-5H-Gcj" secondAttribute="top" constant="120" id="P97-k9-0vq"/>
-                            <constraint firstItem="gek-Uy-Gls" firstAttribute="centerX" secondItem="KdO-Jh-N5k" secondAttribute="centerX" id="Pih-dE-YlI"/>
-                            <constraint firstItem="vTy-5H-Gcj" firstAttribute="trailing" secondItem="ksG-t2-QZl" secondAttribute="trailing" constant="65" id="R7G-aQ-f3f"/>
-                            <constraint firstItem="na2-k6-zeS" firstAttribute="leading" secondItem="vTy-5H-Gcj" secondAttribute="leading" constant="65" id="hsH-jB-cvX"/>
-                            <constraint firstItem="vTy-5H-Gcj" firstAttribute="trailing" secondItem="na2-k6-zeS" secondAttribute="trailing" constant="65" id="j6D-iK-FsV"/>
-                            <constraint firstItem="gek-Uy-Gls" firstAttribute="top" secondItem="ksG-t2-QZl" secondAttribute="bottom" constant="-1" id="mgH-hW-VcV"/>
-                            <constraint firstItem="qbn-uN-LNy" firstAttribute="leading" secondItem="vTy-5H-Gcj" secondAttribute="leading" id="qsu-z7-PL1"/>
-                            <constraint firstItem="ksG-t2-QZl" firstAttribute="leading" secondItem="vTy-5H-Gcj" secondAttribute="leading" constant="65" id="toR-a6-8Si"/>
+                            <constraint firstItem="ksG-t2-QZl" firstAttribute="top" secondItem="vTy-5H-Gcj" secondAttribute="top" constant="138" id="4lZ-c1-VA2"/>
+                            <constraint firstItem="ksG-t2-QZl" firstAttribute="centerX" secondItem="gek-Uy-Gls" secondAttribute="centerX" id="6yn-TM-vmi"/>
+                            <constraint firstItem="gek-Uy-Gls" firstAttribute="top" secondItem="ksG-t2-QZl" secondAttribute="bottom" constant="1" id="87m-WW-5YT"/>
+                            <constraint firstItem="qbn-uN-LNy" firstAttribute="leading" secondItem="vTy-5H-Gcj" secondAttribute="leading" id="Fku-go-YOP"/>
+                            <constraint firstItem="qbn-uN-LNy" firstAttribute="top" secondItem="vTy-5H-Gcj" secondAttribute="top" constant="160" id="GlN-NF-xaU"/>
+                            <constraint firstItem="vTy-5H-Gcj" firstAttribute="bottom" secondItem="4yn-dZ-EVN" secondAttribute="bottom" constant="550" id="Od6-eM-acl"/>
+                            <constraint firstAttribute="bottomMargin" secondItem="qbn-uN-LNy" secondAttribute="bottom" constant="-34" id="ZKL-H4-Zxz"/>
+                            <constraint firstItem="gek-Uy-Gls" firstAttribute="centerX" secondItem="4yn-dZ-EVN" secondAttribute="centerX" id="aQq-bD-ouV"/>
+                            <constraint firstItem="qbn-uN-LNy" firstAttribute="centerX" secondItem="gek-Uy-Gls" secondAttribute="centerX" id="eYx-J6-v0t"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="qbn-uN-LNy" secondAttribute="trailing" constant="-22" id="kQj-jg-rjt"/>
+                            <constraint firstItem="gek-Uy-Gls" firstAttribute="top" secondItem="vTy-5H-Gcj" secondAttribute="top" constant="199" id="rk5-NU-8Q9"/>
+                            <constraint firstItem="4yn-dZ-EVN" firstAttribute="top" secondItem="gek-Uy-Gls" secondAttribute="bottom" constant="1" id="xAJ-Fv-HIh"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="vTy-5H-Gcj"/>
                     </view>
                     <connections>
-                        <outlet property="pickerView" destination="na2-k6-zeS" id="biu-ap-jb3"/>
+                        <outlet property="pickerView" destination="4yn-dZ-EVN" id="Mxj-bW-iOz"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="5EV-jx-Fxk" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>

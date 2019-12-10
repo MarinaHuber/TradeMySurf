@@ -16,7 +16,7 @@ protocol AddLevelViewControllerDelegate: class {
 
 class AddLevelViewController: UIViewController {
 
-	@IBOutlet weak var pickerView: UIView!
+	@IBOutlet weak var pickerView: UIButton!
 	weak var delegate: AddLevelViewControllerDelegate?
 	weak var coordinator: TabBarCoordinator?
 	var addLevel = UILabel()
