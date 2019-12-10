@@ -7,7 +7,7 @@
 ### Deployed on: DATE
 
 # Why did you undertake the project?
- This was a long passion of mine and I was lucky enought to get a mentorship through a program where I presented my vague idea at the time. This led me to wonderful collaborations and learning path. Here is the result of version 1.0. Recommendation app was create from idea to learn from surf goals and expectations. Adding value to surf hobby by planning it is a developers approach to surfing.
+ This was a long passion of mine and I was lucky enought to get a mentorship through a programme where I presented my vague idea at the time. This led me to wonderful collaborations and learning path. Here is the result of version 1.0. Recommendation app was create from idea to learn from surf goals and expectations. Adding value to surf hobby by planning it is a developers approach to surfing.
 
 
 # Scope / User story
@@ -24,7 +24,7 @@ Illustrates all flows of the project:
  + Add date flow
  + TabBar Coordinator flow
  + Predictions for trip flow
- + Previous trips - missing
+ + Previous trips - (check wish list)
  + Calculator for board prices
 ![alt tag](https://pbs.twimg.com/media/EGN6v1YWwAEa2bc?format=jpg&name=large)
 # Lessons learned
