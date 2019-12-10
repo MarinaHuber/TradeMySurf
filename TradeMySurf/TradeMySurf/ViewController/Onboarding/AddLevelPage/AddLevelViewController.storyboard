@@ -30,9 +30,6 @@
                                 <state key="normal" title="Your goal:">
                                     <color key="titleColor" cocoaTouchSystemColor="darkTextColor"/>
                                 </state>
-                                <connections>
-                                    <action selector="didTapStringPickerWithImageButton:" destination="6mL-yH-c4r" eventType="touchUpInside" id="I7a-Ix-GMY"/>
-                                </connections>
                             </button>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="bg-splash" translatesAutoresizingMaskIntoConstraints="NO" id="qbn-uN-LNy">
                                 <rect key="frame" x="0.0" y="512" width="416" height="384"/>

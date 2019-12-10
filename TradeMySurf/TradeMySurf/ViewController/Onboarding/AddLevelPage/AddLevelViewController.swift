@@ -23,16 +23,8 @@ class AddLevelViewController: UIViewController {
 	var iconViewAnima = AnimationView()
 	let levelsData = [Level.beginner.rawValue, Level.beginnerIntemediate.rawValue, Level.intermediate.rawValue, Level.advanced.rawValue, Level.professional.rawValue]
 
-	override func viewDidLoad() {
-		super.viewDidLoad()
-		setPickerPopover()
-	}
-
 	override func viewWillAppear(_ animated: Bool) {
 		super.viewWillAppear(true)
-		setPickerPopover()
-	}
-	@IBAction func didTapStringPickerWithImageButton(_ sender: UIButton) {
 		setPickerPopover()
 	}
 
@@ -40,6 +32,9 @@ class AddLevelViewController: UIViewController {
 		delegate?.performNext()
 
 	}
+}
+
+private extension AddLevelViewController {
 
 	private func setPickerPopover() {
 		StringPickerPopover(title: "Choose one", choices: levelsData)
@@ -58,7 +53,6 @@ class AddLevelViewController: UIViewController {
 			})
 			.setClearButton(title: "This will appear in your surf recommendations", font: UIFont.boldSystemFont(ofSize: 9), color: .gray, action: nil)
 			.appear(originView: pickerView, baseViewController: self)
-
 	}
 
 }

@@ -16,11 +16,22 @@ protocol AddDateViewControllerDelegate: class {
 class AddDateViewController: UIViewController {
 	weak var delegate: AddDateViewControllerDelegate?
 
-	override func viewDidLoad() {
-		super.viewDidLoad()
-	}
+	@IBOutlet weak var pickerViewButton: UIButton!
 
-	@IBAction func tapDateSpringPopoverPicker(_ sender: UIButton) {
+	override func viewWillAppear(_ animated: Bool) {
+		super.viewWillAppear(true)
+		tapDateSpringPopoverPicker()
+	}
+	@IBAction func backTap(_ sender: Any) {
+		self.dismiss(animated: true)
+	}
+	@IBAction func openTabBar(_ sender: Any) {
+		delegate?.performTabBar()
+	}
+}
+private extension AddDateViewController {
+
+	func tapDateSpringPopoverPicker() {
 		DatePickerPopover(title: "Pick a surf date")
 			.setLocale(identifier: "en_US_POSIX")
 			.setOutsideTapDismissing(allowed: false)
@@ -34,14 +45,8 @@ class AddDateViewController: UIViewController {
 					//missing: UserDefaults.standard.didUserSetUp = true
 					self.delegate?.performTabBar()
 			})
-  		.appear(originView: sender, baseViewController: self)
+  		.appear(originView: pickerViewButton, baseViewController: self)
 
-	}
-	@IBAction func backTap(_ sender: Any) {
-		self.dismiss(animated: true)
-	}
-	@IBAction func openTabBar(_ sender: Any) {
-		delegate?.performTabBar()
 	}
 }
 

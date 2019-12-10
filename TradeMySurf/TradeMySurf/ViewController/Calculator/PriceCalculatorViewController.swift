@@ -24,10 +24,10 @@ class PriceCalculatorViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        stackView.setCustomSpacing(30, after: model)
-        stackView.setCustomSpacing(30, after: gear)
-        stackView.setCustomSpacing(30, after: production)
-        stackView.setCustomSpacing(60, after: condition)
+        stackView.setCustomSpacing(10, after: model)
+        stackView.setCustomSpacing(10, after: gear)
+        stackView.setCustomSpacing(10, after: production)
+        stackView.setCustomSpacing(10, after: condition)
 
         calculateValue(self)
     }
