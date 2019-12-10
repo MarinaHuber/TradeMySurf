@@ -1,5 +1,4 @@
 
-# MVC + Coordinator pattern
 ### Recommendation app was create from idea to learn from surf goals and expectations 🤙🏽
  + help from Import Foundation.
 📌  As of October 2019, this project requires Xcode 11.0 (Swift 5.0)
@@ -11,7 +10,7 @@
 # List of features
 
 # Technologies / Stack used
-###  Navigation scheme
+###  Navigation scheme: VC + Coordinator pattern
 Illustrates all flows of the project:
 
  + Welcome page
