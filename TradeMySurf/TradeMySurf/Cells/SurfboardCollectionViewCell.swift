@@ -53,10 +53,10 @@ private extension SurfBoardCollectionViewCell {
         titleLabel.textAlignment = .center
         titleLabel.numberOfLines = 2
         titleLabel.font = UIFont.preferredFont(forTextStyle: .headline)
-		titleLabel.textColor = .label
+		//titleLabel.textColor = .label
 
 		volumeLabel.font = UIFont.preferredFont(forTextStyle: .title3)
-        volumeLabel.textColor = .secondaryLabel
+        //volumeLabel.textColor = .secondaryLabel
 
         imageView.contentMode = .scaleAspectFill
         imageView.backgroundColor = .systemTeal

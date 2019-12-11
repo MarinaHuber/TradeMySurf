@@ -35,7 +35,7 @@ private extension AddDateViewController {
 		DatePickerPopover(title: "Pick a surf date")
 			.setLocale(identifier: "en_US_POSIX")
 			.setOutsideTapDismissing(allowed: false)
-			.setArrowColor(.systemGray4)
+			//.setArrowColor(.systemGray4)
 			.setValueChange(action: { _, selectedDate in
 				///save to UD
 				UserDefaults.standard.surfingTime = selectedDate

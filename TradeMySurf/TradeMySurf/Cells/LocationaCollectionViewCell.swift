@@ -17,7 +17,7 @@ class LocationCollectionViewCell: UICollectionViewCell {
     override init(frame: CGRect) {
         super.init(frame: frame)
 
-        self.configureUI()
+      //  self.configureUI()
     }
 
     @available(*, unavailable)
@@ -42,43 +42,43 @@ extension LocationCollectionViewCell {
 
 private extension LocationCollectionViewCell {
 
-func configureUI() {
-
-	// Styling
-	nameCountryLabel.font = UIFont.preferredFont(forTextStyle: .headline)
-	nameCountryLabel.textColor = .label
-
-	subtitle.font = UIFont.preferredFont(forTextStyle: .subheadline)
-	subtitle.textColor = .secondaryLabel
-
-	imageView.layer.cornerRadius = 15
-	imageView.backgroundColor = .systemTeal
-	imageView.contentMode = .scaleAspectFill
-	imageView.clipsToBounds = true
-
-	// Layout
-
-	imageView.setContentHuggingPriority(.defaultHigh, for: .horizontal)
-
-	let labelStackView = UIStackView(arrangedSubviews: [nameCountryLabel, subtitle])
-	labelStackView.axis = .vertical
-	labelStackView.alignment = .center
-	labelStackView.spacing = 5
-	labelStackView.translatesAutoresizingMaskIntoConstraints = false
-
-	let outerStackView = UIStackView(arrangedSubviews: [imageView, labelStackView])
-	outerStackView.alignment = .center
-	outerStackView.axis = .horizontal
-	outerStackView.spacing = 10
-	outerStackView.translatesAutoresizingMaskIntoConstraints = false
-
-	 let container = self.contentView
-	container.addSubview(outerStackView)
-
-    outerStackView.leadingAnchor.constraint(equalTo: container.leadingAnchor).isActive = true
-	outerStackView.trailingAnchor.constraint(equalTo: container.trailingAnchor).isActive = true
-	outerStackView.topAnchor.constraint(equalTo: container.topAnchor).isActive = true
-	outerStackView.bottomAnchor.constraint(equalTo: container.bottomAnchor).isActive = true
- }
+//func configureUI() {
+//
+//	// Styling
+//	nameCountryLabel.font = UIFont.preferredFont(forTextStyle: .headline)
+//	nameCountryLabel.textColor = .label
+//
+//	subtitle.font = UIFont.preferredFont(forTextStyle: .subheadline)
+//	subtitle.textColor = .secondaryLabel
+//
+//	imageView.layer.cornerRadius = 15
+//	imageView.backgroundColor = .systemTeal
+//	imageView.contentMode = .scaleAspectFill
+//	imageView.clipsToBounds = true
+//
+//	// Layout
+//
+//	imageView.setContentHuggingPriority(.defaultHigh, for: .horizontal)
+//
+//	let labelStackView = UIStackView(arrangedSubviews: [nameCountryLabel, subtitle])
+//	labelStackView.axis = .vertical
+//	labelStackView.alignment = .center
+//	labelStackView.spacing = 5
+//	labelStackView.translatesAutoresizingMaskIntoConstraints = false
+//
+//	let outerStackView = UIStackView(arrangedSubviews: [imageView, labelStackView])
+//	outerStackView.alignment = .center
+//	outerStackView.axis = .horizontal
+//	outerStackView.spacing = 10
+//	outerStackView.translatesAutoresizingMaskIntoConstraints = false
+//
+//	 let container = self.contentView
+//	container.addSubview(outerStackView)
+//
+//    outerStackView.leadingAnchor.constraint(equalTo: container.leadingAnchor).isActive = true
+//	outerStackView.trailingAnchor.constraint(equalTo: container.trailingAnchor).isActive = true
+//	outerStackView.topAnchor.constraint(equalTo: container.topAnchor).isActive = true
+//	outerStackView.bottomAnchor.constraint(equalTo: container.bottomAnchor).isActive = true
+// }
 
 }

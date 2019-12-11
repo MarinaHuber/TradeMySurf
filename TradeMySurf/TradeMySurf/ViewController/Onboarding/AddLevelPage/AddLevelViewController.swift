@@ -43,7 +43,7 @@ private extension AddLevelViewController {
 			.setSelectedRow(0)
 			.setFontSize(16)
 			.setOutsideTapDismissing(allowed: false)
-			.setArrowColor(.systemGray4)
+			//.setArrowColor(.systemGray4)
 			.setValueChange(action: { _, _, selectedString in
 				UserDefaults.standard.selectedLevel = selectedString
 			})

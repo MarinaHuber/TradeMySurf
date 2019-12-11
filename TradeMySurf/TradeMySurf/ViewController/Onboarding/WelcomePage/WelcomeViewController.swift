@@ -75,6 +75,22 @@ class WelcomeViewController: UIViewController, CAAnimationDelegate {
 
 	@IBAction func openNext(_ sender: Any) {
 		delegate?.performNextView()
+        if UIDevice().userInterfaceIdiom == .phone {
+               switch UIScreen.main.nativeBounds.height {
+               case 1334:
+                   print("IPHONE 6S,7S,8S ")
+               case 1920, 2208:
+                   print("IPHONE 6PLUS, 6SPLUS, 7PLUS, 8PLUS")
+               case 2436:
+                   print("IPHONE X, IPHONE XS")
+               case 2688:
+                   print("IPHONE XS_MAX")
+               case 1792:
+                   print("IPHONE XR")
+               default:
+                   print("UNDETERMINED")
+               }
+           }
 	}
 }
 
