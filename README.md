@@ -4,7 +4,7 @@
 
 📌  As of October 2019, this project requires Xcode 11.0 (Swift 5.0)
 ### Published on: DATE
-### Deployed on: DATE
+### Deployed for: iOS 13
 
 # Why did you undertake the project?
  This was a long passion of mine and I was lucky enought to get a mentorship through a programme where I presented my vague idea at the time. This led me to wonderful collaborations and learning path. Here is the result of version 1.0. Recommendation app was create from idea to learn from surf goals and expectations. Adding value to surf hobby by planning it is a developers approach to surfing.
@@ -34,7 +34,7 @@ that I would not be using a backend.
 # Credits
  + help from Import Foundation.
 
-🤙🏽🤙🏽
+
 
 
 
