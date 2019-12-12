@@ -15,6 +15,10 @@ protocol WelcomeViewControllerDelegate: class {
 }
 
 class WelcomeViewController: UIViewController, CAAnimationDelegate {
+    @IBOutlet weak var startButton: UIButton!
+    @IBOutlet weak var welcomeLabel: UILabel!
+    @IBOutlet weak var introLabel: UILabel!
+    
 	weak var delegate: WelcomeViewControllerDelegate?
 	weak var coordinator: TabBarCoordinator?
     private var firstTime: Bool?
@@ -29,7 +33,7 @@ class WelcomeViewController: UIViewController, CAAnimationDelegate {
 	}
 	@IBOutlet private(set) weak var lottieCalculate: AnimationView! {
 		didSet {
-			lottieCalculate.animation = Animation.named("ocean-wave")
+			lottieCalculate.animation = Animation.named("coin-wallet")
 			lottieCalculate.animationSpeed = 0.8
 			lottieCalculate.contentMode = .scaleAspectFill
 			lottieCalculate.loopMode = .loop
@@ -46,10 +50,20 @@ class WelcomeViewController: UIViewController, CAAnimationDelegate {
 		}
 	}
 	@IBOutlet weak var bgStackView: UIView!
-	override func viewDidLoad() {
-		super.viewDidLoad()
-			animate(bgStackView)
-		}
+
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(true)
+        startButton.alpha = 0
+        welcomeLabel.alpha = 0
+        introLabel.alpha = 0
+        UIView.animate(withDuration: 2.6, animations: {
+            self.startButton.alpha = 1
+            self.welcomeLabel.alpha = 1
+            self.introLabel.alpha = 1
+        }, completion: { finished in
+        })
+        animate(bgStackView)
+    }
 
 		  func animate(_ item : UIView) {
 			  let scale = CABasicAnimation(keyPath: "transform.scale")
