@@ -60,7 +60,7 @@ class WelcomeViewController: UIViewController, CAAnimationDelegate {
             self.startButton.alpha = 1
             self.welcomeLabel.alpha = 1
             self.introLabel.alpha = 1
-        }, completion: { finished in
+        }, completion: { _ in
         })
         animate(bgStackView)
     }
@@ -74,7 +74,28 @@ class WelcomeViewController: UIViewController, CAAnimationDelegate {
 			  item.layer.add(scale, forKey: "scale")
 			  let post = CABasicAnimation(keyPath: "position.y")
 			  post.fromValue = view.frame.size.height + 20
-			  post.toValue = view.frame.size.height - 500
+            if UIDevice().userInterfaceIdiom == .phone {
+                   switch UIScreen.main.nativeBounds.height {
+                   case 1334:
+                       print("IPHONE 6S,7S,8S ")
+                    post.toValue = view.frame.size.height - 400
+                   case 1920, 2208:
+                       print("IPHONE 6PLUS, 6SPLUS, 7PLUS, 8PLUS")
+                    post.toValue = view.frame.size.height - 450
+                   case 2436:
+                       print("IPHONE X, IPHONE XS")
+                    post.toValue = view.frame.size.height - 500
+                   case 2688:
+                       print("IPHONE XS_MAX")
+                    post.toValue = view.frame.size.height - 600
+                   case 1792:
+                     print("IPHONE XR")
+                    post.toValue = view.frame.size.height - 500
+                   default:
+                       print("UNDETERMINED")
+                    post.toValue = view.frame.size.height - 500
+                   }
+               }
 			  post.duration = 2
 			  post.isRemovedOnCompletion =  false
 			  post.fillMode = CAMediaTimingFillMode.forwards
@@ -89,24 +110,6 @@ class WelcomeViewController: UIViewController, CAAnimationDelegate {
 
 	@IBAction func openNext(_ sender: Any) {
 		delegate?.performNextView()
-       // let isDevice = UIDevice().userInterfaceIdiom  == .phone
-       // label.font = isPad ? UIFont(name: "Servetica-Thin", size: 36) : UIFont(name: "Servetica-Thin", size: 22)
-        if UIDevice().userInterfaceIdiom == .phone {
-               switch UIScreen.main.nativeBounds.height {
-               case 1334:
-                   print("IPHONE 6S,7S,8S ")
-               case 1920, 2208:
-                   print("IPHONE 6PLUS, 6SPLUS, 7PLUS, 8PLUS")
-               case 2436:
-                   print("IPHONE X, IPHONE XS")
-               case 2688:
-                   print("IPHONE XS_MAX")
-               case 1792:
-                   print("IPHONE XR")
-               default:
-                   print("UNDETERMINED")
-               }
-           }
 	}
 }
 
