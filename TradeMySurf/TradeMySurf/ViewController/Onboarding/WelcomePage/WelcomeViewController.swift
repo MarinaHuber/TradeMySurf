@@ -75,6 +75,8 @@ class WelcomeViewController: UIViewController, CAAnimationDelegate {
 
 	@IBAction func openNext(_ sender: Any) {
 		delegate?.performNextView()
+       // let isDevice = UIDevice().userInterfaceIdiom  == .phone
+       // label.font = isPad ? UIFont(name: "Servetica-Thin", size: 36) : UIFont(name: "Servetica-Thin", size: 22)
         if UIDevice().userInterfaceIdiom == .phone {
                switch UIScreen.main.nativeBounds.height {
                case 1334:

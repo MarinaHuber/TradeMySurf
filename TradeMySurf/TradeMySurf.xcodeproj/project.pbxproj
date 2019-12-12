@@ -354,8 +354,8 @@
 		9C76F09F2349471000853FD9 /* ViewController */ = {
 			isa = PBXGroup;
 			children = (
-				9C990AAA2398114800B17AE5 /* LoadingStateViewController.swift */,
 				9C8F32FB239943350070751F /* LoadingStateViewController.storyboard */,
+				9C990AAA2398114800B17AE5 /* LoadingStateViewController.swift */,
 				9C990AAC2398119200B17AE5 /* LoadingStateCoordinator.swift */,
 				9CFDFD3723671C2500760F25 /* Onboarding */,
 				9C53D5C9234CB1A800A3BD80 /* Calculator */,
