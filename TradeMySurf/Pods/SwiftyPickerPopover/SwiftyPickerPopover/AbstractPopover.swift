@@ -69,7 +69,7 @@ open class AbstractPopover: NSObject {
     /// - Parameter color: Arrow color. Specify the color of viewController.backgroundColor
     /// - Returns: Self
     open func setArrowColor(_ color: UIColor) -> Self {
-        backgroundColor = color
+         backgroundColor = color
         return self
     }
 

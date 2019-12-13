@@ -16,7 +16,7 @@ protocol AddLevelViewControllerDelegate: class {
 
 class AddLevelViewController: UIViewController {
 
-	@IBOutlet weak var pickerView: UIButton!
+	@IBOutlet weak var pickerView: UIView!
 	weak var delegate: AddLevelViewControllerDelegate?
 	weak var coordinator: TabBarCoordinator?
 	var addLevel = UILabel()
@@ -38,12 +38,12 @@ private extension AddLevelViewController {
 
 	private func setPickerPopover() {
 		StringPickerPopover(title: "Choose one", choices: levelsData)
-			.setSize(width: view.frame.size.width - 80, height: view.frame.size.height/5)
+			.setSize(width: view.bounds.size.width, height: 200)
 			.setRowHeight(60)
-			.setSelectedRow(0)
+			.setSelectedRow(2)
 			.setFontSize(16)
+            .setPermittedArrowDirections([.up])
 			.setOutsideTapDismissing(allowed: false)
-			//.setArrowColor(.systemGray4)
 			.setValueChange(action: { _, _, selectedString in
 				UserDefaults.standard.selectedLevel = selectedString
 			})

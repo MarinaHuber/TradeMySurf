@@ -16,7 +16,7 @@ protocol AddDateViewControllerDelegate: class {
 class AddDateViewController: UIViewController {
 	weak var delegate: AddDateViewControllerDelegate?
 
-	@IBOutlet weak var pickerViewButton: UIButton!
+	@IBOutlet weak var pickerViewDate: UIView!
 
 	override func viewWillAppear(_ animated: Bool) {
 		super.viewWillAppear(true)
@@ -35,7 +35,8 @@ private extension AddDateViewController {
 		DatePickerPopover(title: "Pick a surf date")
 			.setLocale(identifier: "en_US_POSIX")
 			.setOutsideTapDismissing(allowed: false)
-			//.setArrowColor(.systemGray4)
+            .setSize(width: view.bounds.size.width, height: 200)
+            .setPermittedArrowDirections([.up])
 			.setValueChange(action: { _, selectedDate in
 				///save to UD
 				UserDefaults.standard.surfingTime = selectedDate
@@ -45,7 +46,7 @@ private extension AddDateViewController {
 					//missing: UserDefaults.standard.didUserSetUp = true
 					self.delegate?.performTabBar()
 			})
-  		.appear(originView: pickerViewButton, baseViewController: self)
+  		.appear(originView: pickerViewDate, baseViewController: self)
 
 	}
 }

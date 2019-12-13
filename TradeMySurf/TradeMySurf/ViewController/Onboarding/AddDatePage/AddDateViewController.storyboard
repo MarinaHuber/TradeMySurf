@@ -22,82 +22,56 @@
                                     <constraint firstAttribute="width" secondItem="frO-2d-BxM" secondAttribute="height" multiplier="138:143" id="SG1-jn-Lir"/>
                                 </constraints>
                             </imageView>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="What day are you surfing?" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Hvw-mn-vaH">
-                                <rect key="frame" x="58" y="218" width="299" height="25.333333333333343"/>
-                                <fontDescription key="fontDescription" name="HelveticaNeue-Bold" family="Helvetica Neue" pointSize="21"/>
-                                <nil key="textColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="8UK-iT-pPO">
-                                <rect key="frame" x="92" y="286.66666666666669" width="230" height="30"/>
-                                <state key="normal" title="For location choose a start date">
-                                    <color key="titleColor" cocoaTouchSystemColor="darkTextColor"/>
-                                </state>
-                                <userDefinedRuntimeAttributes>
-                                    <userDefinedRuntimeAttribute type="number" keyPath="borderWidth">
-                                        <integer key="value" value="7"/>
-                                    </userDefinedRuntimeAttribute>
-                                </userDefinedRuntimeAttributes>
-                            </button>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="This is what will appear in your surf recommendations" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="QDe-fe-J2C">
-                                <rect key="frame" x="75" y="250.99999999999997" width="264" height="35.666666666666657"/>
-                                <fontDescription key="fontDescription" name="AvenirNext-UltraLight" family="Avenir Next" pointSize="13"/>
-                                <nil key="textColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="equalSpacing" spacing="4" translatesAutoresizingMaskIntoConstraints="NO" id="arq-2M-O0u">
+                                <rect key="frame" x="47" y="114" width="320" height="85"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="What day are you surfing?" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Hvw-mn-vaH">
+                                        <rect key="frame" x="0.0" y="0.0" width="320" height="29"/>
+                                        <fontDescription key="fontDescription" name="AvenirNext-DemiBold" family="Avenir Next" pointSize="21"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="This is what will appear in your surf recommendations" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="QDe-fe-J2C">
+                                        <rect key="frame" x="0.0" y="33" width="320" height="37"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="37" id="ptc-2D-GWI"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" name="AvenirNext-UltraLight" family="Avenir Next" pointSize="13"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="xsM-Jl-g9d">
+                                        <rect key="frame" x="0.0" y="74" width="320" height="11"/>
+                                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="11" id="bF3-N2-pg5"/>
+                                        </constraints>
+                                    </view>
+                                </subviews>
+                            </stackView>
                         </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <constraints>
-                            <constraint firstItem="Hvw-mn-vaH" firstAttribute="top" secondItem="IVB-pQ-fdR" secondAttribute="top" constant="130" id="09K-Fx-tCn"/>
-                            <constraint firstItem="IVB-pQ-fdR" firstAttribute="trailing" secondItem="QDe-fe-J2C" secondAttribute="trailing" constant="75" id="Afg-Gy-0QQ"/>
-                            <constraint firstItem="QDe-fe-J2C" firstAttribute="bottom" secondItem="8UK-iT-pPO" secondAttribute="top" id="PvB-uV-09B"/>
-                            <constraint firstItem="Hvw-mn-vaH" firstAttribute="centerX" secondItem="2H6-JY-Mis" secondAttribute="centerX" constant="0.5" id="Rs3-al-SFt"/>
                             <constraint firstItem="frO-2d-BxM" firstAttribute="trailing" secondItem="IVB-pQ-fdR" secondAttribute="trailing" id="W8C-iU-hzO"/>
-                            <constraint firstItem="QDe-fe-J2C" firstAttribute="leading" secondItem="IVB-pQ-fdR" secondAttribute="leading" constant="75" id="WHm-J7-Yca"/>
+                            <constraint firstItem="arq-2M-O0u" firstAttribute="leading" secondItem="IVB-pQ-fdR" secondAttribute="leading" priority="999" constant="47" id="Xww-To-Bnj"/>
+                            <constraint firstItem="frO-2d-BxM" firstAttribute="centerX" secondItem="2H6-JY-Mis" secondAttribute="centerX" id="aqV-Hj-seg"/>
+                            <constraint firstItem="arq-2M-O0u" firstAttribute="centerX" secondItem="2H6-JY-Mis" secondAttribute="centerX" id="ecw-ar-HTE"/>
                             <constraint firstAttribute="bottom" secondItem="frO-2d-BxM" secondAttribute="bottom" id="j1L-WD-ctl"/>
-                            <constraint firstItem="QDe-fe-J2C" firstAttribute="top" secondItem="Hvw-mn-vaH" secondAttribute="bottom" constant="7.6666666666666572" id="shp-tz-QPM"/>
                             <constraint firstItem="frO-2d-BxM" firstAttribute="leading" secondItem="IVB-pQ-fdR" secondAttribute="leading" id="syj-ZB-NLO"/>
-                            <constraint firstItem="IVB-pQ-fdR" firstAttribute="trailing" secondItem="8UK-iT-pPO" secondAttribute="trailing" constant="92" id="u3W-hY-b2J"/>
-                            <constraint firstItem="Hvw-mn-vaH" firstAttribute="leading" secondItem="IVB-pQ-fdR" secondAttribute="leading" constant="58" id="vve-E8-YLC"/>
-                            <constraint firstItem="8UK-iT-pPO" firstAttribute="leading" secondItem="IVB-pQ-fdR" secondAttribute="leading" constant="92" id="xNO-M6-sAK"/>
+                            <constraint firstItem="arq-2M-O0u" firstAttribute="top" secondItem="IVB-pQ-fdR" secondAttribute="top" constant="70" id="u7o-hb-GZm"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="IVB-pQ-fdR"/>
                     </view>
                     <toolbarItems/>
-                    <navigationItem key="navigationItem" id="RT4-kQ-ybg">
-                        <barButtonItem key="leftBarButtonItem" systemItem="cancel" id="6cb-je-Zrq">
-                            <color key="tintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                            <connections>
-                                <action selector="backTap:" destination="uFP-b1-cSK" id="4V3-3y-YAZ"/>
-                            </connections>
-                        </barButtonItem>
-                    </navigationItem>
+                    <navigationItem key="navigationItem" id="RT4-kQ-ybg"/>
                     <simulatedToolbarMetrics key="simulatedBottomBarMetrics"/>
                     <connections>
-                        <outlet property="pickerViewButton" destination="8UK-iT-pPO" id="0Qu-qE-4D0"/>
+                        <outlet property="pickerViewDate" destination="xsM-Jl-g9d" id="2XF-RH-0P6"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="GIy-px-N4M" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1956.521739130435" y="101.11607142857143"/>
-        </scene>
-        <!--Navigation Controller-->
-        <scene sceneID="V8z-cG-Bex">
-            <objects>
-                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="NFI-CG-85h" sceneMemberID="viewController">
-                    <toolbarItems/>
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="rbx-wN-GEm">
-                        <rect key="frame" x="0.0" y="44" width="414" height="44"/>
-                        <autoresizingMask key="autoresizingMask"/>
-                    </navigationBar>
-                    <nil name="viewControllers"/>
-                    <connections>
-                        <segue destination="uFP-b1-cSK" kind="relationship" relationship="rootViewController" id="aad-0h-wl6"/>
-                    </connections>
-                </navigationController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="1Yj-SY-2qB" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="1046.376811594203" y="101.11607142857143"/>
         </scene>
     </scenes>
     <resources>

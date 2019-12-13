@@ -45,11 +45,8 @@
 		9C8F32FF239946090070751F /* logo_final.json in Resources */ = {isa = PBXBuildFile; fileRef = 9C8F32FD239946090070751F /* logo_final.json */; };
 		9C8F3300239946090070751F /* loader_animation.json in Resources */ = {isa = PBXBuildFile; fileRef = 9C8F32FE239946090070751F /* loader_animation.json */; };
 		9C8F330223994CDD0070751F /* FontHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C8F330123994CDD0070751F /* FontHelper.swift */; };
-		9C90A2292388886C00E735D3 /* car.json in Resources */ = {isa = PBXBuildFile; fileRef = 9C90A2282388886B00E735D3 /* car.json */; };
 		9C90A22B2388887700E735D3 /* clip-board.json in Resources */ = {isa = PBXBuildFile; fileRef = 9C90A22A2388887700E735D3 /* clip-board.json */; };
-		9C90A22D2388888300E735D3 /* ocean-wave.json in Resources */ = {isa = PBXBuildFile; fileRef = 9C90A22C2388888300E735D3 /* ocean-wave.json */; };
 		9C90A22F2388888B00E735D3 /* shop.json in Resources */ = {isa = PBXBuildFile; fileRef = 9C90A22E2388888B00E735D3 /* shop.json */; };
-		9C90A2312388954700E735D3 /* van.json in Resources */ = {isa = PBXBuildFile; fileRef = 9C90A2302388954600E735D3 /* van.json */; };
 		9C90A233238897A500E735D3 /* air.json in Resources */ = {isa = PBXBuildFile; fileRef = 9C90A232238897A400E735D3 /* air.json */; };
 		9C90BC552386BD020090E346 /* Enums.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C90BC542386BD020090E346 /* Enums.swift */; };
 		9C990AAB2398114800B17AE5 /* LoadingStateViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C990AAA2398114800B17AE5 /* LoadingStateViewController.swift */; };
@@ -129,11 +126,8 @@
 		9C8F32FD239946090070751F /* logo_final.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = logo_final.json; sourceTree = "<group>"; };
 		9C8F32FE239946090070751F /* loader_animation.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = loader_animation.json; sourceTree = "<group>"; };
 		9C8F330123994CDD0070751F /* FontHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FontHelper.swift; sourceTree = "<group>"; };
-		9C90A2282388886B00E735D3 /* car.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = car.json; sourceTree = "<group>"; };
 		9C90A22A2388887700E735D3 /* clip-board.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = "clip-board.json"; sourceTree = "<group>"; };
-		9C90A22C2388888300E735D3 /* ocean-wave.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = "ocean-wave.json"; sourceTree = "<group>"; };
 		9C90A22E2388888B00E735D3 /* shop.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = shop.json; sourceTree = "<group>"; };
-		9C90A2302388954600E735D3 /* van.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = van.json; sourceTree = "<group>"; };
 		9C90A232238897A400E735D3 /* air.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = air.json; sourceTree = "<group>"; };
 		9C90BC542386BD020090E346 /* Enums.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Enums.swift; sourceTree = "<group>"; };
 		9C990AAA2398114800B17AE5 /* LoadingStateViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = LoadingStateViewController.swift; path = TradeMySurf/ViewController/LoadingStateViewController.swift; sourceTree = SOURCE_ROOT; };
@@ -374,11 +368,8 @@
 				9C8F32FD239946090070751F /* logo_final.json */,
 				9C193AFA23A2ACA7000DE1AB /* coin-wallet.json */,
 				9C90A232238897A400E735D3 /* air.json */,
-				9C90A2302388954600E735D3 /* van.json */,
 				9C90A22E2388888B00E735D3 /* shop.json */,
-				9C90A22C2388888300E735D3 /* ocean-wave.json */,
 				9C90A22A2388887700E735D3 /* clip-board.json */,
-				9C90A2282388886B00E735D3 /* car.json */,
 			);
 			path = Lottie;
 			sourceTree = "<group>";
@@ -543,12 +534,9 @@
 				9C45E661234D238F0054A5FD /* SurfTripViewController.storyboard in Resources */,
 				9C8F32FF239946090070751F /* logo_final.json in Resources */,
 				9C8F3300239946090070751F /* loader_animation.json in Resources */,
-				9C90A2292388886C00E735D3 /* car.json in Resources */,
 				9C69CE87234D0749003E386F /* Welcome.storyboard in Resources */,
 				9C5B6458232A5073000727E6 /* Assets.xcassets in Resources */,
 				9C8F32FC239943350070751F /* LoadingStateViewController.storyboard in Resources */,
-				9C90A22D2388888300E735D3 /* ocean-wave.json in Resources */,
-				9C90A2312388954700E735D3 /* van.json in Resources */,
 				9C90A233238897A500E735D3 /* air.json in Resources */,
 				9CFDFD3D2367221C00760F25 /* AddDateViewController.storyboard in Resources */,
 				9C90A22B2388887700E735D3 /* clip-board.json in Resources */,
@@ -848,7 +836,7 @@
 				DEFINES_MODULE = YES;
 				DEVELOPMENT_TEAM = HBS2B82CVU;
 				INFOPLIST_FILE = TradeMySurf/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -871,7 +859,7 @@
 				DEFINES_MODULE = YES;
 				DEVELOPMENT_TEAM = HBS2B82CVU;
 				INFOPLIST_FILE = TradeMySurf/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
