@@ -76,24 +76,27 @@ class WelcomeViewController: UIViewController, CAAnimationDelegate {
 			  post.fromValue = view.frame.size.height + 20
             if UIDevice().userInterfaceIdiom == .phone {
                    switch UIScreen.main.nativeBounds.height {
+                   case 1136:
+                        print("IPHONE 5,5S,SE ")
+                    post.toValue = view.bounds.size.height - 300
                    case 1334:
                        print("IPHONE 6S,7S,8S ")
-                    post.toValue = view.frame.size.height - 400
+                    post.toValue = view.bounds.size.height - 400
                    case 1920, 2208:
                        print("IPHONE 6PLUS, 6SPLUS, 7PLUS, 8PLUS")
-                    post.toValue = view.frame.size.height - 450
+                    post.toValue = view.bounds.size.height - 450
                    case 2436:
                        print("IPHONE X, IPHONE XS")
-                    post.toValue = view.frame.size.height - 500
+                    post.toValue = view.bounds.size.height - 500
                    case 2688:
                        print("IPHONE XS_MAX")
-                    post.toValue = view.frame.size.height - 600
+                    post.toValue = view.bounds.size.height - 600
                    case 1792:
                      print("IPHONE XR")
-                    post.toValue = view.frame.size.height - 500
+                    post.toValue = view.bounds.size.height - 500
                    default:
                        print("UNDETERMINED")
-                    post.toValue = view.frame.size.height - 500
+                    post.toValue = view.bounds.size.height - 500
                    }
                }
 			  post.duration = 2
