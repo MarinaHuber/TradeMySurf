@@ -17,6 +17,11 @@ class AddDateViewController: UIViewController {
 	weak var delegate: AddDateViewControllerDelegate?
 
 	@IBOutlet weak var pickerViewDate: UIView!
+    
+    override func viewDidLoad() {
+        super.viewDidLoad()
+        tapDateSpringPopoverPicker()
+    }
 
 	override func viewWillAppear(_ animated: Bool) {
 		super.viewWillAppear(true)
@@ -33,6 +38,8 @@ private extension AddDateViewController {
 
 	func tapDateSpringPopoverPicker() {
 		DatePickerPopover(title: "Pick a surf date")
+            .setDateMode(.date)
+            .setSelectedDate(Date())
 			.setLocale(identifier: "en_US_POSIX")
 			.setOutsideTapDismissing(allowed: false)
             .setSize(width: view.bounds.size.width, height: 200)

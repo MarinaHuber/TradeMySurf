@@ -27,7 +27,11 @@ class SurfTripViewController: UIViewController {
         navigationItem.leftBarButtonItem = UIBarButtonItem(barButtonSystemItem: .play, target: nil, action: #selector(popToRoot))
     }
     @objc private func popToRoot(sender:UIBarButtonItem) {
-       navigationController?.popToRootViewController(animated: true)
+      // navigationController?.popToRootViewController(animated: true)
+        let storyboard: UIStoryboard = UIStoryboard(name: Constants.Storyboards.welcomeViewCoordinator
+            , bundle: nil)
+        let controller: WelcomeViewController = WelcomeViewController.instantiate(from: storyboard)
+        navigationController?.pushViewController(controller, animated: true)
     }
 }
 

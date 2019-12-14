@@ -20,13 +20,6 @@ final class AppCoordinator: NSObject, Coordinator {
 		self.window = window
 		childCoordinators = []
 		presenter = UINavigationController()
-		self.presenter.navigationBar.backgroundColor = .clear
-		self.presenter.navigationBar.barTintColor = .clear
-		self.presenter.navigationBar.tintColor = .black
-		self.presenter.navigationBar.setBackgroundImage(UIImage(), for: UIBarPosition.any, barMetrics: UIBarMetrics.default)
-		self.presenter.navigationBar.shadowImage = UIImage()
-		self.presenter.navigationBar.titleTextAttributes = [.foregroundColor : UIColor.black as Any]
-		presenter.setNavigationBarHidden(true, animated: false)
 		rootCoordinator = WelcomeCoordinator(window: window, presenter: presenter)
 	}
 

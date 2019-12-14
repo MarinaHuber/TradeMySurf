@@ -35,6 +35,12 @@ final class TabBarCoordinator: NSObject, Coordinator {
 		})
 
 		let presenters: [UIViewController] = coordinators.map({ coordinator -> UIViewController in
+            coordinator.presenter.navigationBar.backgroundColor = .clear
+            coordinator.presenter.navigationBar.barTintColor = .clear
+            coordinator.presenter.navigationBar.tintColor = .black
+            coordinator.presenter.navigationBar.setBackgroundImage(UIImage(), for: UIBarPosition.any, barMetrics: UIBarMetrics.default)
+            coordinator.presenter.navigationBar.shadowImage = UIImage()
+            coordinator.presenter.navigationBar.titleTextAttributes = [.foregroundColor : UIColor.black as Any]
 			return coordinator.presenter
 		})
 		tabBarController?.setViewControllers(presenters, animated: false)

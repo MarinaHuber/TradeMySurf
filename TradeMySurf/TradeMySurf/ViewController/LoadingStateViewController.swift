@@ -23,16 +23,14 @@ class LoadingStateViewController: UIViewController {
         loadAnimateView.contentMode = .scaleAspectFit
         view.addSubview(loadAnimateView)
         loadAnimateView.play()
-        self.delegate?.performScreenSwitch()
-//
-//        UIView.animate(withDuration: 1.0, delay: 1.0, options: .curveEaseIn, animations: {
-//            self.view.alpha = 0
-//
-//        }, completion: { _ in
-//            DispatchQueue.main.async {
-//                self.delegate?.performScreenSwitch()
-//            }
-//        })
+        UIView.animate(withDuration: 0.5, delay: 0.4, options: .curveEaseIn, animations: {
+            self.loadAnimateView.play()
+
+        }, completion: { _ in
+            DispatchQueue.main.async {
+                self.delegate?.performScreenSwitch()
+            }
+        })
         
     }
 }

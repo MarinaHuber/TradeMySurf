@@ -20,12 +20,9 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 		// configure Coordinators
 		window = UIWindow(frame: UIScreen.main.bounds)
 		appCoordinator.start()
-//		let storyboard: UIStoryboard = UIStoryboard(name: Constants.Storyboards.loadViewController, bundle: nil)
-//		let controller: LoadingStateViewController = LoadingStateViewController.instantiate(from: storyboard)
-//        window?.rootViewController = controller
 		window?.makeKeyAndVisible()
 
-		// configure Fonts
+		// configure Fonts missing
         FontHelper.registerAllFonts()
 
 		return true

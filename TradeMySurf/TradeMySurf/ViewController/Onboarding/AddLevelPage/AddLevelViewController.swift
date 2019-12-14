@@ -27,6 +27,10 @@ class AddLevelViewController: UIViewController {
 		super.viewWillAppear(true)
 		setPickerPopover()
 	}
+    override func viewDidLoad() {
+        super.viewDidLoad()
+        setPickerPopover()
+    }
 
 	@IBAction func openAddDate(_ sender: Any) {
 		delegate?.performNext()
