@@ -24,14 +24,15 @@ class SurfTripViewController: UIViewController {
         super.viewDidLoad()
         addCollectionView()
         configureCollectionView()
-        navigationItem.leftBarButtonItem = UIBarButtonItem(barButtonSystemItem: .play, target: nil, action: #selector(popToRoot))
+        navigationItem.leftBarButtonItem = UIBarButtonItem(title: "Start again",
+        style: .plain, target: self, action: #selector(popToRoot(sender:)))
     }
-    @objc private func popToRoot(sender:UIBarButtonItem) {
-      // navigationController?.popToRootViewController(animated: true)
+    @objc private func popToRoot(sender: UIBarButtonItem) {
+        //add delegate here and remove children from coordinator do the poptoroot there?
         let storyboard: UIStoryboard = UIStoryboard(name: Constants.Storyboards.welcomeViewCoordinator
             , bundle: nil)
         let controller: WelcomeViewController = WelcomeViewController.instantiate(from: storyboard)
-        navigationController?.pushViewController(controller, animated: true)
+        navigationController?.present(controller, animated: true, completion: nil)
     }
 }
 

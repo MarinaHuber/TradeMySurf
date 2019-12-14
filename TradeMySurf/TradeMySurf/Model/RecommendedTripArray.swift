@@ -58,43 +58,43 @@ struct RecommendedTripArray {
 
     var surfCountrySummer: [Location] = {
         return [
-			Location(countryName: "Summer France",continentName: "Europe", imageFlag: "french", plannedDate: Date()),
-            Location(countryName: "Costa Rica", continentName: "South America", imageFlag: "brazil", plannedDate: Date()),
-            Location(countryName: "Morocco", continentName: "Africa", imageFlag: "indonesia", plannedDate: Date()),
-            Location(countryName: "Japan", continentName: "Asia", imageFlag: "indonesia", plannedDate: Date()),
-            Location(countryName: "California", continentName: "North America", imageFlag: "usa", plannedDate: Date()),
-            Location(countryName: "South Africa", continentName: "Africa", imageFlag: "french", plannedDate: Date())
+			Location(countryName: "Summer France",continentName: "Europe", imageFlag: "french"),
+            Location(countryName: "Costa Rica", continentName: "South America", imageFlag: "brazil"),
+            Location(countryName: "Morocco", continentName: "Africa", imageFlag: "indonesia"),
+            Location(countryName: "Japan", continentName: "Asia", imageFlag: "indonesia"),
+            Location(countryName: "California", continentName: "North America", imageFlag: "usa"),
+            Location(countryName: "South Africa", continentName: "Africa", imageFlag: "french")
         ]
     }()
 	var surfCountryAutumn: [Location] = {
 		  return [
-			  Location(countryName: "Autumn Brazil",continentName: "Europe", imageFlag: "brazil", plannedDate: Date()),
-			  Location(countryName: "Costa Rica", continentName: "South America", imageFlag: "morocco", plannedDate: Date()),
-			  Location(countryName: "Morocco", continentName: "Africa", imageFlag: "morocco", plannedDate: Date()),
-			  Location(countryName: "Japan", continentName: "Asia", imageFlag: "indonesia", plannedDate: Date()),
-			  Location(countryName: "California", continentName: "North America", imageFlag: "usa", plannedDate: Date()),
-			  Location(countryName: "South Africa", continentName: "Africa", imageFlag: "french", plannedDate: Date())
+              Location(countryName: "Costa Rica", continentName: "South America", imageFlag: "brazil"),
+			  Location(countryName: "Costa Rica", continentName: "South America", imageFlag: "morocco"),
+			  Location(countryName: "Morocco", continentName: "Africa", imageFlag: "morocco"),
+			  Location(countryName: "Japan", continentName: "Asia", imageFlag: "indonesia"),
+			  Location(countryName: "California", continentName: "North America", imageFlag: "usa"),
+			  Location(countryName: "South Africa", continentName: "Africa", imageFlag: "french")
 		  ]
 	  }()
 
 	var surfCountryWinter: [Location] = {
 		  return [
-			  Location(countryName: "Winter Morocco",continentName: "Europe", imageFlag: "morocco", plannedDate: Date()),
-			  Location(countryName: "Costa Rica", continentName: "South America", imageFlag: "brazil", plannedDate: Date()),
-			  Location(countryName: "Morocco", continentName: "Africa", imageFlag: "usa", plannedDate: Date()),
-			  Location(countryName: "Japan", continentName: "Asia", imageFlag: "indonesia", plannedDate: Date()),
-			  Location(countryName: "California", continentName: "North America", imageFlag: "usa", plannedDate: Date()),
-			  Location(countryName: "South Africa", continentName: "Africa", imageFlag: "french", plannedDate: Date())
+			  Location(countryName: "Winter Morocco",continentName: "Europe", imageFlag: "morocco"),
+			  Location(countryName: "Costa Rica", continentName: "South America", imageFlag: "brazil"),
+			  Location(countryName: "Morocco", continentName: "Africa", imageFlag: "usa"),
+			  Location(countryName: "Japan", continentName: "Asia", imageFlag: "indonesia"),
+			  Location(countryName: "California", continentName: "North America", imageFlag: "usa"),
+			  Location(countryName: "South Africa", continentName: "Africa", imageFlag: "french")
 		  ]
 	  }()
 	var surfCountrySpring: [Location] = {
 		  return [
-			  Location(countryName: "Spring France",continentName: "Europe", imageFlag: "brazil", plannedDate: Date()),
-			  Location(countryName: "Costa Rica", continentName: "South America", imageFlag: "usa", plannedDate: Date()),
-			  Location(countryName: "Morocco", continentName: "Africa", imageFlag: "morocco", plannedDate: Date()),
-			  Location(countryName: "Japan", continentName: "Asia", imageFlag: "indonesia", plannedDate: Date()),
-			  Location(countryName: "California", continentName: "North America", imageFlag: "usa", plannedDate: Date()),
-			  Location(countryName: "South Africa", continentName: "Africa", imageFlag: "french", plannedDate: Date())
+			  Location(countryName: "Spring France",continentName: "Europe", imageFlag: "brazil"),
+			  Location(countryName: "Costa Rica", continentName: "South America", imageFlag: "usa"),
+			  Location(countryName: "Morocco", continentName: "Africa", imageFlag: "morocco"),
+			  Location(countryName: "Japan", continentName: "Asia", imageFlag: "indonesia"),
+			  Location(countryName: "California", continentName: "North America", imageFlag: "usa"),
+			  Location(countryName: "South Africa", continentName: "Africa", imageFlag: "indonesia")
 		  ]
 	  }()
 

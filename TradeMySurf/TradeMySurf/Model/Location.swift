@@ -12,7 +12,6 @@ struct Location: Hashable {
     var countryName: String
 	var continentName: String
     var imageFlag: String
-	let plannedDate: Date
 }
 
 extension Location {
