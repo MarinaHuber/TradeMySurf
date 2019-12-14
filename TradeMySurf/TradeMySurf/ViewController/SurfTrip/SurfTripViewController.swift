@@ -24,7 +24,7 @@ class SurfTripViewController: UIViewController {
         super.viewDidLoad()
         addCollectionView()
         configureCollectionView()
-        navigationItem.leftBarButtonItem = UIBarButtonItem(barButtonSystemItem: .redo, target: nil, action: nil)
+        navigationItem.leftBarButtonItem = UIBarButtonItem(barButtonSystemItem: .play, target: nil, action: #selector(popToRoot))
     }
     @objc private func popToRoot(sender:UIBarButtonItem) {
        navigationController?.popToRootViewController(animated: true)
