@@ -20,11 +20,14 @@ class SurfTripViewController: UIViewController {
     private(set) var dataSource: UICollectionViewDiffableDataSource<TripSection, TripItem>! // retain data source!
     private(set) var appData: RecommendedTripArray = RecommendedTripArray()
 
-
     override func viewDidLoad() {
         super.viewDidLoad()
         addCollectionView()
         configureCollectionView()
+        navigationItem.leftBarButtonItem = UIBarButtonItem(barButtonSystemItem: .redo, target: nil, action: nil)
+    }
+    @objc private func popToRoot(sender:UIBarButtonItem) {
+       navigationController?.popToRootViewController(animated: true)
     }
 }
 

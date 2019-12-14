@@ -8,15 +8,8 @@
 
 import UIKit
 
-// kudos Coordinator-Example by G. Lombardo & Hacking with swift
 // https://github.com/giulio92/Coordinator
 // https://www.hackingwithswift.com/articles/175/advanced-coordinator-pattern-tutorial-ios
-// no Main.storyboard
-// define protocol for loading storyboard
-// define RootViewController
-// from Main AppCoordinator navigate and create flow
-// Crate programmatic tabBar Coordinator with children for tab VC
-// Test the Coordinator flow in Project Tests
 // *******************************************************************************************
 
 final class TabBarCoordinator: NSObject, Coordinator {
@@ -30,11 +23,9 @@ final class TabBarCoordinator: NSObject, Coordinator {
 		childCoordinators = []
 		self.presenter = UINavigationController()
 	}
-
-	func start() {
+	 func start() {
 		performGetTabBar()
 	}
-
 	private func performGetTabBar() {
 		let coordinators: [Coordinator] = generateTabCoordinators()
 
@@ -43,9 +34,7 @@ final class TabBarCoordinator: NSObject, Coordinator {
 			addChildCoordinator(coordinator)
 		})
 
-		let presenters: [UINavigationController] = coordinators.map({ coordinator -> UINavigationController in
-			coordinator.presenter.navigationBar.prefersLargeTitles = true
-			coordinator.presenter.navigationBar.topItem?.title = "Recommended:"
+		let presenters: [UIViewController] = coordinators.map({ coordinator -> UIViewController in
 			return coordinator.presenter
 		})
 		tabBarController?.setViewControllers(presenters, animated: false)

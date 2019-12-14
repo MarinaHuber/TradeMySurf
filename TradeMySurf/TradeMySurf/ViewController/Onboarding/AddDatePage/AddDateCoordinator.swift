@@ -35,9 +35,9 @@ final class AddDateCoordinator: Coordinator {
 extension AddDateCoordinator : AddDateViewControllerDelegate {
 	func performTabBar() {
 		let coordinator: TabBarCoordinator = TabBarCoordinator(window: window, tabBarController: UITabBarController())
-		addChildCoordinator(coordinator)
+        coordinator.presenter.modalPresentationStyle = .fullScreen
 		coordinator.start()
-		coordinator.presenter.modalPresentationStyle = .fullScreen
-		presenter.show(coordinator.tabBarController!, sender: nil)
+        presenter.setNavigationBarHidden(true, animated: true)
+        presenter.pushViewController(coordinator.tabBarController!, animated: true)
 	}
 }

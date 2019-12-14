@@ -18,13 +18,13 @@ class LoadingStateCoordinator: NSObject, Coordinator {
 		self.window = window
 		childCoordinators = []
 		presenter = UINavigationController()
-		self.presenter.navigationBar.backgroundColor = .clear
+         UINavigationBarAppearance().backgroundColor = UIColor.systemBlue
 		self.presenter.navigationBar.barTintColor = .clear
 		self.presenter.navigationBar.tintColor = .black
 		self.presenter.navigationBar.setBackgroundImage(UIImage(), for: UIBarPosition.any, barMetrics: UIBarMetrics.default)
 		self.presenter.navigationBar.shadowImage = UIImage()
 		self.presenter.navigationBar.titleTextAttributes = [.foregroundColor : UIColor.black as Any]
-		presenter.setNavigationBarHidden(true, animated: false)
+        presenter.navigationItem.backBarButtonItem = nil
 	}
 
 	 func start() {
@@ -49,6 +49,7 @@ extension LoadingStateCoordinator : LoadingViewControllerDelegate {
 			let welcomeCoordinator = WelcomeCoordinator(window: window, presenter: presenter)
 			childCoordinators.append(welcomeCoordinator)
 			window.rootViewController = welcomeCoordinator.presenter
+            welcomeCoordinator.presenter.navigationItem.backBarButtonItem = nil
 			welcomeCoordinator.start()
 		}
 	}
