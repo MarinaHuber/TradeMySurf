@@ -18,6 +18,7 @@ class AddLevelViewController: UIViewController {
 	@IBOutlet weak var pickerView: UIView!
 	weak var delegate: AddLevelViewControllerDelegate?
 	weak var coordinator: TabBarCoordinator?
+    let selcetedRow = 2
     private var userSettup = UserDefaults.standard.didUserSetUp
 	var addLevel = UILabel()
 	var iconViewAnima = AnimationView()
@@ -40,11 +41,14 @@ private extension AddLevelViewController {
 		StringPickerPopover(title: "Choose one", choices: levelsData)
 			.setSize(width: view.bounds.size.width, height: 200)
 			.setRowHeight(60)
-			.setSelectedRow(2)
+			.setSelectedRow(selcetedRow)
 			.setFontSize(16)
             .setPermittedArrowDirections([.up])
 			.setOutsideTapDismissing(allowed: false)
-			.setValueChange(action: { _, _, selectedString in
+			.setValueChange(action: { _, row, selectedString in
+                if row == self.selcetedRow {
+                    UserDefaults.standard.selectedLevel = Level.intermediate.rawValue
+                }
 				UserDefaults.standard.selectedLevel = selectedString
                 self.userSettup = false
 			})
