@@ -15,18 +15,14 @@ protocol AddLevelViewControllerDelegate: class {
 }
 
 class AddLevelViewController: UIViewController {
-
 	@IBOutlet weak var pickerView: UIView!
 	weak var delegate: AddLevelViewControllerDelegate?
 	weak var coordinator: TabBarCoordinator?
+    private var userSettup = UserDefaults.standard.didUserSetUp
 	var addLevel = UILabel()
 	var iconViewAnima = AnimationView()
 	let levelsData = [Level.beginner.rawValue, Level.beginnerIntemediate.rawValue, Level.intermediate.rawValue, Level.advanced.rawValue, Level.professional.rawValue]
 
-	override func viewWillAppear(_ animated: Bool) {
-		super.viewWillAppear(true)
-		setPickerPopover()
-	}
     override func viewDidLoad() {
         super.viewDidLoad()
         setPickerPopover()
@@ -50,6 +46,7 @@ private extension AddLevelViewController {
 			.setOutsideTapDismissing(allowed: false)
 			.setValueChange(action: { _, _, selectedString in
 				UserDefaults.standard.selectedLevel = selectedString
+                self.userSettup = false
 			})
 			.setDoneButton(title: "Next", font: UIFont.boldSystemFont(ofSize: 17), color: .systemBlue, action: { popover, _, _ in
 				popover.disappear()

@@ -9,6 +9,7 @@
 import Foundation
 import UIKit
 
+
 class SurfTripViewController: UIViewController {
 
 	private var selectedLevel = UserDefaults.standard.selectedLevel
@@ -28,11 +29,7 @@ class SurfTripViewController: UIViewController {
         style: .plain, target: self, action: #selector(popToRoot(sender:)))
     }
     @objc private func popToRoot(sender: UIBarButtonItem) {
-        //add delegate here and remove children from coordinator do the poptoroot there?
-        let storyboard: UIStoryboard = UIStoryboard(name: Constants.Storyboards.welcomeViewCoordinator
-            , bundle: nil)
-        let controller: WelcomeViewController = WelcomeViewController.instantiate(from: storyboard)
-        navigationController?.present(controller, animated: true, completion: nil)
+        self.view.window!.rootViewController?.dismiss(animated: false, completion: nil)
     }
 }
 
@@ -125,7 +122,7 @@ private extension SurfTripViewController {
 		let dateFormat = DateFormatter()
 		dateFormat.dateFormat = "LLLL"
 		let date = dateFormat.date(from: monthOfYear ?? "")
-		let monthInt = Calendar.current.component(.month, from: date!)
+		let monthInt = Calendar.current.component(.month, from: date ?? Date())
 		return monthInt
 	}
 }

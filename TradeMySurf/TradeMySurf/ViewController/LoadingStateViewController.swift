@@ -31,7 +31,6 @@ class LoadingStateViewController: UIViewController {
                 self.delegate?.performScreenSwitch()
             }
         })
-        
     }
 }
 extension LoadingStateViewController: StoryboardProtocol {}

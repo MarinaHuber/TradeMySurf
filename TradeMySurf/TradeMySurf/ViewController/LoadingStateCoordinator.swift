@@ -35,22 +35,27 @@ class LoadingStateCoordinator: NSObject, Coordinator {
 }
 
 extension LoadingStateCoordinator : LoadingViewControllerDelegate {
-	func performScreenSwitch() {
-		 userSettup = false
-
-		if userSettup {
-			let mainTabCoordinator = TabBarCoordinator(window: window, tabBarController: UITabBarController())
-			childCoordinators.append(mainTabCoordinator)
-			window.rootViewController = mainTabCoordinator.tabBarController
-			mainTabCoordinator.presenter.modalPresentationStyle = .fullScreen
-			mainTabCoordinator.start()
-
-		} else {
-			let welcomeCoordinator = WelcomeCoordinator(window: window, presenter: presenter)
-			childCoordinators.append(welcomeCoordinator)
-			window.rootViewController = welcomeCoordinator.presenter
-            welcomeCoordinator.presenter.navigationItem.backBarButtonItem = nil
-			welcomeCoordinator.start()
-		}
-	}
+    func performScreenSwitch() {
+           userSettup = false
+        let welcomeCoordinator = WelcomeCoordinator(window: window, presenter: presenter)
+        childCoordinators.append(welcomeCoordinator)
+        window.rootViewController = welcomeCoordinator.presenter
+        welcomeCoordinator.presenter.navigationItem.backBarButtonItem = nil
+        welcomeCoordinator.start()
+//        if UserDefaults.standard.selectedLevel != nil && UserDefaults.standard.surfingTime != nil {
+//            userSettup = false
+//            let mainTabCoordinator = TabBarCoordinator(window: window, tabBarController: UITabBarController())
+//            childCoordinators.append(mainTabCoordinator)
+//            window.rootViewController = mainTabCoordinator.tabBarController
+//            mainTabCoordinator.presenter.modalPresentationStyle = .fullScreen
+//            mainTabCoordinator.start()
+//        } else {
+//            userSettup = false
+//            let welcomeCoordinator = WelcomeCoordinator(window: window, presenter: presenter)
+//            childCoordinators.append(welcomeCoordinator)
+//            window.rootViewController = welcomeCoordinator.presenter
+//            welcomeCoordinator.presenter.navigationItem.backBarButtonItem = nil
+//            welcomeCoordinator.start()
+//        }
+    }
 }

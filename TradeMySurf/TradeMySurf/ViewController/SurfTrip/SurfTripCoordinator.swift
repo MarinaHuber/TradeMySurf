@@ -4,7 +4,6 @@
 //
 
 import UIKit
-import SwiftUI
 
 final class SurfTripCoordinator: Coordinator {
 	var coordinator: SurfTripCoordinator?
@@ -14,7 +13,6 @@ final class SurfTripCoordinator: Coordinator {
 	init(presenter: UINavigationController) {
 		self.presenter = presenter
 		childCoordinators = []
-
 		presenter.tabBarItem = UITabBarItem(title: "RECOMMENDED", image: nil, selectedImage: nil)
 	}
 

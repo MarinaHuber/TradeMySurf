@@ -55,8 +55,6 @@ extension AddLevelViewCoordinator : AddLevelViewControllerDelegate {
 		let addDateCoordinator: AddDateCoordinator = AddDateCoordinator(presenter: UINavigationController())
 		addDateCoordinator.start()
 		addChildCoordinator(addDateCoordinator)
-		//running on an iOS 12 device caused a crash.
-
 		addDateCoordinator.presenter.modalPresentationStyle = .fullScreen
 		presenter.present(addDateCoordinator.presenter, animated: true, completion: nil)
 	}

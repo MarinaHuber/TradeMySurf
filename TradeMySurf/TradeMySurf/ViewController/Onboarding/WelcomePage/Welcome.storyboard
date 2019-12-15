@@ -187,6 +187,7 @@
                                 </userDefinedRuntimeAttributes>
                             </view>
                         </subviews>
+                        <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
                             <constraint firstItem="r8K-M5-40N" firstAttribute="leading" secondItem="GrG-Zn-ifo" secondAttribute="leading" constant="48" id="15j-BN-4jc"/>
                             <constraint firstItem="GrG-Zn-ifo" firstAttribute="trailing" secondItem="r8K-M5-40N" secondAttribute="trailing" constant="48" id="FOY-4E-eDP"/>
