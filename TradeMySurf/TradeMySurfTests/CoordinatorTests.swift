@@ -10,7 +10,7 @@ import XCTest
 @testable import TradeMySurf
 
 final class CoordinatorTests: XCTestCase {
-	typealias CoordinatorType = AppCoordinator
+	typealias CoordinatorType = LoadingStateCoordinator
 	var coordinator: CoordinatorType!
 
 	override func setUp() {

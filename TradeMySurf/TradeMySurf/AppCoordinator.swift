@@ -9,8 +9,7 @@
 import Foundation
 import UIKit
 
-final class AppCoordinator: Coordinator {
-	var tabBarCoordinator: TabBarCoordinator?
+final class AppCoordinator: NSObject, Coordinator {
 
 	internal var childCoordinators: [Coordinator]
 	internal var presenter: UINavigationController
@@ -21,16 +20,13 @@ final class AppCoordinator: Coordinator {
 		self.window = window
 		childCoordinators = []
 		presenter = UINavigationController()
-		rootCoordinator = WelcomeCoordinator(presenter: presenter)
-		presenter.setNavigationBarHidden(true, animated: false)
-
+		rootCoordinator = WelcomeCoordinator(window: window, presenter: presenter)
 	}
 
 	func start() {
-		//MARK: rootViewController is UINavigationController for test
+//MARK: - RootViewController is UINavigationController for test
 		window.rootViewController = presenter
 		rootCoordinator.start()
 		window.makeKeyAndVisible()
 	}
 }
-

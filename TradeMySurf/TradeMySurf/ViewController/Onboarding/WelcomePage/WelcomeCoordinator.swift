@@ -9,25 +9,27 @@
 import Foundation
 import UIKit
 
-final class WelcomeCoordinator: Coordinator {
+ class WelcomeCoordinator: NSObject, Coordinator {
 
-	var tabBar : TabBarCoordinator?
-	var tabBarController: UITabBarController?
 	internal var presenter: UINavigationController
 	var childCoordinators: [Coordinator]
 
-	init(presenter: UINavigationController) {
+	init(window: UIWindow, presenter: UINavigationController) {
 		self.presenter = presenter
 		childCoordinators = []
+		
 	}
 	func start() {
-		let mainVC = WelcomeViewController.instantiate()
-		mainVC.delegate = self
-		presenter.pushViewController(mainVC, animated: true)
+		let storyboard: UIStoryboard = UIStoryboard(name: Constants.Storyboards.welcomeViewCoordinator
+			, bundle: nil)
+		let controller: WelcomeViewController = WelcomeViewController.instantiate(from: storyboard)
+		controller.delegate = self
+		presenter.pushViewController(controller, animated: true)
 	}
 }
 
 extension WelcomeCoordinator : WelcomeViewControllerDelegate {
+<<<<<<< HEAD
 	func performTabBar() {
 		let coordinator: TabBarCoordinator = TabBarCoordinator(tabBarController: UITabBarController())
         addChildCoordinator(coordinator: coordinator)
@@ -38,5 +40,14 @@ extension WelcomeCoordinator : WelcomeViewControllerDelegate {
 		
 	}
 
+=======
+	func performNextView() {
+>>>>>>> development
 
+		let addLevelCoordinator: AddLevelViewCoordinator = AddLevelViewCoordinator(presenter: UINavigationController())
+		addLevelCoordinator.start()
+		addChildCoordinator(addLevelCoordinator)
+		addLevelCoordinator.presenter.modalPresentationStyle = .fullScreen
+		presenter.present(addLevelCoordinator.presenter, animated: true, completion: nil)
+	}
 }

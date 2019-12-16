@@ -8,55 +8,50 @@
 
 import UIKit
 
-// kudos Coordinator-Example by G. Lombardo & Hacking with swift
 // https://github.com/giulio92/Coordinator
 // https://www.hackingwithswift.com/articles/175/advanced-coordinator-pattern-tutorial-ios
-// no Main.storyboard
-// define protocol for loading storyboard
-// define RootViewController
-// from Main AppCoordinator navigate and create flow
-// Crate programmatic tabBar Coordinator with children for tab VC
-// Test the Coordinator flow in Project Tests
 // *******************************************************************************************
 
-final class TabBarCoordinator: Coordinator {
+final class TabBarCoordinator: NSObject, Coordinator {
 
 	internal var presenter: UINavigationController
 	internal var tabBarController: UITabBarController?
-	internal var childCoordinators: [Coordinator]
+	internal var childCoordinators: [Coordinator]	
 
-	init(tabBarController: UITabBarController) {
+	init(window: UIWindow, tabBarController: UITabBarController) {
 		self.tabBarController = tabBarController
 		childCoordinators = []
 		self.presenter = UINavigationController()
 	}
-
-	func start() {
+	 func start() {
 		performGetTabBar()
 	}
-
 	private func performGetTabBar() {
 		let coordinators: [Coordinator] = generateTabCoordinators()
 
 		coordinators.forEach({ coordinator in
 			coordinator.start()
-			addChildCoordinator(coordinator: coordinator)
+			addChildCoordinator(coordinator)
 		})
 
-		let presenters: [UINavigationController] = coordinators.map({ coordinator -> UINavigationController in
-			coordinator.presenter.navigationBar.prefersLargeTitles = true
-			coordinator.presenter.navigationBar.topItem?.title = "Kelly my surf"
+		let presenters: [UIViewController] = coordinators.map({ coordinator -> UIViewController in
+            coordinator.presenter.navigationBar.backgroundColor = .clear
+            coordinator.presenter.navigationBar.barTintColor = .clear
+            coordinator.presenter.navigationBar.tintColor = .black
+            coordinator.presenter.navigationBar.setBackgroundImage(UIImage(), for: UIBarPosition.any, barMetrics: UIBarMetrics.default)
+            coordinator.presenter.navigationBar.shadowImage = UIImage()
+            coordinator.presenter.navigationBar.titleTextAttributes = [.foregroundColor : UIColor.black as Any]
 			return coordinator.presenter
 		})
 		tabBarController?.setViewControllers(presenters, animated: false)
-		selectTab(type: CalculatorCoordinator.self)
+		selectTab(type: SurfTripCoordinator.self)
 	}
 
 	private func generateTabCoordinators() -> [Coordinator] {
-		let buyCoordinator: BuyTipsCoordinator = BuyTipsCoordinator(presenter: UINavigationController())
 		let calculatorCoordinator: CalculatorCoordinator = CalculatorCoordinator(presenter: UINavigationController())
-		let sellCoordinator: SellTipsCoordinator = SellTipsCoordinator(presenter: UINavigationController())
-		return [buyCoordinator, calculatorCoordinator, sellCoordinator]
+		let tripCoordinator: SurfTripCoordinator = SurfTripCoordinator(presenter: UINavigationController())
+		let sellCoordinator: SavedTripsCoordinator = SavedTripsCoordinator(presenter: UINavigationController())
+		return [calculatorCoordinator, tripCoordinator, sellCoordinator]
 	}
 }
 

@@ -17,11 +17,11 @@ final class CalculatorCoordinator: Coordinator {
 		self.presenter = presenter
 		childCoordinators = []
 
-		presenter.tabBarItem = UITabBarItem(title: "calculator", image: nil, selectedImage: nil)
+		presenter.tabBarItem = UITabBarItem(title: "CALCULATOR", image: nil, selectedImage: nil)
 	}
 
 	func start() {
-		let storyboard: UIStoryboard = UIStoryboard(name: "Calculator", bundle: nil)
+		let storyboard: UIStoryboard = UIStoryboard(name: Constants.Storyboards.priceCalculatorViewController, bundle: nil)
 		let viewController: PriceCalculatorViewController = PriceCalculatorViewController.instantiate(from: storyboard)
 		presenter.pushViewController(viewController, animated: true)
 	}

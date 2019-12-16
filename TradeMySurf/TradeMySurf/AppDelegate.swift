@@ -12,15 +12,19 @@ import UIKit
 class AppDelegate: UIResponder, UIApplicationDelegate {
 
 	var window: UIWindow?
-	private lazy var appCoordinator: AppCoordinator = {
-		return AppCoordinator(window: self.window!)
+	private lazy var appCoordinator: LoadingStateCoordinator = {
+		return LoadingStateCoordinator(window: self.window!)
 	}()
 
 	func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
-
+		// configure Coordinators
 		window = UIWindow(frame: UIScreen.main.bounds)
-
 		appCoordinator.start()
+		window?.makeKeyAndVisible()
+
+		// configure Fonts missing
+        FontHelper.registerAllFonts()
+
 		return true
 	}
 }

@@ -3,43 +3,64 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 51;
 	objects = {
 
 /* Begin PBXBuildFile section */
+		9C193AFB23A2ACA7000DE1AB /* coin-wallet.json in Resources */ = {isa = PBXBuildFile; fileRef = 9C193AFA23A2ACA7000DE1AB /* coin-wallet.json */; };
+		9C3C703B239B154A00B721CC /* Surfs.mlmodel in Sources */ = {isa = PBXBuildFile; fileRef = 9C3C703A239B154900B721CC /* Surfs.mlmodel */; };
 		9C3F533D234BD80E00D5F65E /* Coordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C3F533C234BD80E00D5F65E /* Coordinator.swift */; };
-		9C45E661234D238F0054A5FD /* Buy.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9C45E660234D238E0054A5FD /* Buy.storyboard */; };
-		9C467C67234F2A7D009F4D58 /* SurfTextModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C467C66234F2A7D009F4D58 /* SurfTextModel.swift */; };
-		9C4C54742349C28500FB2653 /* Sell.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9C4C54732349C28500FB2653 /* Sell.storyboard */; };
+		9C45E661234D238F0054A5FD /* SurfTripViewController.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9C45E660234D238E0054A5FD /* SurfTripViewController.storyboard */; };
+		9C467C67234F2A7D009F4D58 /* Surfboard.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C467C66234F2A7D009F4D58 /* Surfboard.swift */; };
+		9C4C54742349C28500FB2653 /* SavedTripsViewController.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9C4C54732349C28500FB2653 /* SavedTripsViewController.storyboard */; };
 		9C53D5C0234C126600A3BD80 /* StoryboardProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C53D5BF234C126600A3BD80 /* StoryboardProtocol.swift */; };
 		9C53D5C2234C142A00A3BD80 /* CalculatorCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C53D5C1234C142A00A3BD80 /* CalculatorCoordinator.swift */; };
-		9C53D5C4234C144400A3BD80 /* BuyTipsCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C53D5C3234C144400A3BD80 /* BuyTipsCoordinator.swift */; };
-		9C53D5C6234C145B00A3BD80 /* SellTipsCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C53D5C5234C145B00A3BD80 /* SellTipsCoordinator.swift */; };
+		9C53D5C4234C144400A3BD80 /* SurfTripCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C53D5C3234C144400A3BD80 /* SurfTripCoordinator.swift */; };
+		9C53D5C6234C145B00A3BD80 /* SavedTripsCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C53D5C5234C145B00A3BD80 /* SavedTripsCoordinator.swift */; };
 		9C5B644C232A506C000727E6 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C5B644B232A506C000727E6 /* AppDelegate.swift */; };
-		9C5B644E232A506C000727E6 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C5B644D232A506C000727E6 /* SceneDelegate.swift */; };
 		9C5B6450232A506C000727E6 /* PriceCalculatorViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C5B644F232A506C000727E6 /* PriceCalculatorViewController.swift */; };
 		9C5B6456232A506C000727E6 /* TradeMySurf.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 9C5B6454232A506C000727E6 /* TradeMySurf.xcdatamodeld */; };
 		9C5B6458232A5073000727E6 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 9C5B6457232A5073000727E6 /* Assets.xcassets */; };
 		9C5B645B232A5073000727E6 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9C5B6459232A5073000727E6 /* LaunchScreen.storyboard */; };
 		9C5B6471232A5073000727E6 /* TradeMySurfUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C5B6470232A5073000727E6 /* TradeMySurfUITests.swift */; };
-		9C5B647F232A508B000727E6 /* Surfs.mlmodel in Sources */ = {isa = PBXBuildFile; fileRef = 9C5B647E232A508B000727E6 /* Surfs.mlmodel */; };
-		9C5B6481232A5092000727E6 /* surfs.csv in Resources */ = {isa = PBXBuildFile; fileRef = 9C5B6480232A5091000727E6 /* surfs.csv */; };
-		9C69CE76234CD9B9003E386F /* SurfStorage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C69CE75234CD9B9003E386F /* SurfStorage.swift */; };
-		9C69CE85234D06D7003E386F /* Calculator.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9C69CE84234D06D7003E386F /* Calculator.storyboard */; };
+		9C62416E238AE68E00A4B7C9 /* ReuseIdentifierHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C62416D238AE68E00A4B7C9 /* ReuseIdentifierHelper.swift */; };
+		9C624170238AE75000A4B7C9 /* RecommendedTripArray.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C62416F238AE75000A4B7C9 /* RecommendedTripArray.swift */; };
+		9C624172238AE81A00A4B7C9 /* SurfTip.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C624171238AE81A00A4B7C9 /* SurfTip.swift */; };
+		9C624174238AFC1400A4B7C9 /* SmallTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C624173238AFC1400A4B7C9 /* SmallTableViewCell.swift */; };
+		9C624176238B089000A4B7C9 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C624175238B089000A4B7C9 /* SceneDelegate.swift */; };
+		9C624178238B107B00A4B7C9 /* SurfboardCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C624177238B107B00A4B7C9 /* SurfboardCollectionViewCell.swift */; };
+		9C62417A238B374A00A4B7C9 /* LocationaCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C624179238B374800A4B7C9 /* LocationaCollectionViewCell.swift */; };
+		9C62417C239156C200A4B7C9 /* UserDefaultsHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C62417B239156C200A4B7C9 /* UserDefaultsHelper.swift */; };
+		9C69CE76234CD9B9003E386F /* Location.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C69CE75234CD9B9003E386F /* Location.swift */; };
+		9C69CE85234D06D7003E386F /* PriceCalculatorViewController.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9C69CE84234D06D7003E386F /* PriceCalculatorViewController.storyboard */; };
 		9C69CE87234D0749003E386F /* Welcome.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9C69CE86234D0749003E386F /* Welcome.storyboard */; };
+		9C6F64CB2379CB7400B0224D /* AddDateCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C6F64CA2379CB7400B0224D /* AddDateCoordinator.swift */; };
+		9C6F64CD2379D2A200B0224D /* AddLevelViewCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C6F64CC2379D2A200B0224D /* AddLevelViewCoordinator.swift */; };
+		9C6F64CE2379F86400B0224D /* AddLevelViewController.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9CFDFD3A2367220300760F25 /* AddLevelViewController.storyboard */; };
+		9C6F64D02379FB7800B0224D /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C6F64CF2379FB7800B0224D /* Constants.swift */; };
 		9C76F09423493DAB00853FD9 /* WelcomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C76F09323493DAB00853FD9 /* WelcomeViewController.swift */; };
-		9C76F09623493EDA00853FD9 /* BuyTipsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C76F09523493EDA00853FD9 /* BuyTipsViewController.swift */; };
-		9C76F09823493F0900853FD9 /* SellTipsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C76F09723493F0900853FD9 /* SellTipsViewController.swift */; };
-		9C9F836A236649D300FA4F41 /* QuestionsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C9F8369236649D300FA4F41 /* QuestionsViewController.swift */; };
+		9C76F09623493EDA00853FD9 /* SurfTripViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C76F09523493EDA00853FD9 /* SurfTripViewController.swift */; };
+		9C76F09823493F0900853FD9 /* SavedTripsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C76F09723493F0900853FD9 /* SavedTripsViewController.swift */; };
+		9C8F32FC239943350070751F /* LoadingStateViewController.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9C8F32FB239943350070751F /* LoadingStateViewController.storyboard */; };
+		9C8F32FF239946090070751F /* logo_final.json in Resources */ = {isa = PBXBuildFile; fileRef = 9C8F32FD239946090070751F /* logo_final.json */; };
+		9C8F3300239946090070751F /* loader_animation.json in Resources */ = {isa = PBXBuildFile; fileRef = 9C8F32FE239946090070751F /* loader_animation.json */; };
+		9C8F330223994CDD0070751F /* FontHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C8F330123994CDD0070751F /* FontHelper.swift */; };
+		9C90A22B2388887700E735D3 /* clip-board.json in Resources */ = {isa = PBXBuildFile; fileRef = 9C90A22A2388887700E735D3 /* clip-board.json */; };
+		9C90A22F2388888B00E735D3 /* shop.json in Resources */ = {isa = PBXBuildFile; fileRef = 9C90A22E2388888B00E735D3 /* shop.json */; };
+		9C90A233238897A500E735D3 /* air.json in Resources */ = {isa = PBXBuildFile; fileRef = 9C90A232238897A400E735D3 /* air.json */; };
+		9C90BC552386BD020090E346 /* Enums.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C90BC542386BD020090E346 /* Enums.swift */; };
+		9C990AAB2398114800B17AE5 /* LoadingStateViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C990AAA2398114800B17AE5 /* LoadingStateViewController.swift */; };
+		9C990AAD2398119200B17AE5 /* LoadingStateCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C990AAC2398119200B17AE5 /* LoadingStateCoordinator.swift */; };
 		9C9F836C2366BDAA00FA4F41 /* TabBarCoordinatorTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C9F836B2366BDAA00FA4F41 /* TabBarCoordinatorTests.swift */; };
+		9CBDE2982395A9E600317F51 /* TimeHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9CBDE2972395A9E600317F51 /* TimeHelper.swift */; };
 		9CC59F17234AA3EF00F5ADD0 /* AppCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9CC59F16234AA3EF00F5ADD0 /* AppCoordinator.swift */; };
 		9CC59F19234AA41600F5ADD0 /* TabBarCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9CC59F18234AA41600F5ADD0 /* TabBarCoordinator.swift */; };
 		9CC59F1B234AA87700F5ADD0 /* WelcomeCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9CC59F1A234AA87700F5ADD0 /* WelcomeCoordinator.swift */; };
 		9CFDFD36236718E400760F25 /* CoordinatorTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9CFDFD35236718E400760F25 /* CoordinatorTests.swift */; };
-		9CFDFD3B2367220300760F25 /* AddLevel.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9CFDFD3A2367220300760F25 /* AddLevel.storyboard */; };
-		9CFDFD3D2367221C00760F25 /* AddDate.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9CFDFD3C2367221C00760F25 /* AddDate.storyboard */; };
+		9CFDFD3D2367221C00760F25 /* AddDateViewController.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9CFDFD3C2367221C00760F25 /* AddDateViewController.storyboard */; };
 		9CFDFD3F2367226C00760F25 /* AddDateViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9CFDFD3E2367226C00760F25 /* AddDateViewController.swift */; };
-		9CFDFD412367228300760F25 /* AddLavelViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9CFDFD402367228300760F25 /* AddLavelViewController.swift */; };
+		9CFDFD412367228300760F25 /* AddLevelViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9CFDFD402367228300760F25 /* AddLevelViewController.swift */; };
+		C0E8BF8BC57ED015A56DC270 /* Pods_TradeMySurf.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EC03F18041F56133B109FCF2 /* Pods_TradeMySurf.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -60,17 +81,20 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		2A0124D5F3B03C0085DAD269 /* Pods-TradeMySurf.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TradeMySurf.release.xcconfig"; path = "Target Support Files/Pods-TradeMySurf/Pods-TradeMySurf.release.xcconfig"; sourceTree = "<group>"; };
+		73594BCA3A691E66914D3EEA /* Pods-TradeMySurf.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TradeMySurf.debug.xcconfig"; path = "Target Support Files/Pods-TradeMySurf/Pods-TradeMySurf.debug.xcconfig"; sourceTree = "<group>"; };
+		9C193AFA23A2ACA7000DE1AB /* coin-wallet.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = "coin-wallet.json"; sourceTree = "<group>"; };
+		9C3C703A239B154900B721CC /* Surfs.mlmodel */ = {isa = PBXFileReference; lastKnownFileType = file.mlmodel; path = Surfs.mlmodel; sourceTree = "<group>"; };
 		9C3F533C234BD80E00D5F65E /* Coordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Coordinator.swift; sourceTree = "<group>"; };
-		9C45E660234D238E0054A5FD /* Buy.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Buy.storyboard; sourceTree = "<group>"; };
-		9C467C66234F2A7D009F4D58 /* SurfTextModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SurfTextModel.swift; sourceTree = "<group>"; };
-		9C4C54732349C28500FB2653 /* Sell.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Sell.storyboard; sourceTree = "<group>"; };
+		9C45E660234D238E0054A5FD /* SurfTripViewController.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = SurfTripViewController.storyboard; sourceTree = "<group>"; };
+		9C467C66234F2A7D009F4D58 /* Surfboard.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Surfboard.swift; sourceTree = "<group>"; };
+		9C4C54732349C28500FB2653 /* SavedTripsViewController.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = SavedTripsViewController.storyboard; sourceTree = "<group>"; };
 		9C53D5BF234C126600A3BD80 /* StoryboardProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StoryboardProtocol.swift; sourceTree = "<group>"; };
 		9C53D5C1234C142A00A3BD80 /* CalculatorCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CalculatorCoordinator.swift; sourceTree = "<group>"; };
-		9C53D5C3234C144400A3BD80 /* BuyTipsCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BuyTipsCoordinator.swift; sourceTree = "<group>"; };
-		9C53D5C5234C145B00A3BD80 /* SellTipsCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SellTipsCoordinator.swift; sourceTree = "<group>"; };
+		9C53D5C3234C144400A3BD80 /* SurfTripCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SurfTripCoordinator.swift; sourceTree = "<group>"; };
+		9C53D5C5234C145B00A3BD80 /* SavedTripsCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SavedTripsCoordinator.swift; sourceTree = "<group>"; };
 		9C5B6448232A506C000727E6 /* TradeMySurf.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TradeMySurf.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		9C5B644B232A506C000727E6 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		9C5B644D232A506C000727E6 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
 		9C5B644F232A506C000727E6 /* PriceCalculatorViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PriceCalculatorViewController.swift; sourceTree = "<group>"; };
 		9C5B6455232A506C000727E6 /* TradeMySurf.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = TradeMySurf.xcdatamodel; sourceTree = "<group>"; };
 		9C5B6457232A5073000727E6 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -78,27 +102,47 @@
 		9C5B6461232A5073000727E6 /* TradeMySurfTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = TradeMySurfTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		9C5B646C232A5073000727E6 /* TradeMySurfUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = TradeMySurfUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		9C5B6470232A5073000727E6 /* TradeMySurfUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TradeMySurfUITests.swift; sourceTree = "<group>"; };
-		9C5B647E232A508B000727E6 /* Surfs.mlmodel */ = {isa = PBXFileReference; lastKnownFileType = file.mlmodel; name = Surfs.mlmodel; path = ../../Working/Surfs.mlmodel; sourceTree = "<group>"; };
-		9C5B6480232A5091000727E6 /* surfs.csv */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; name = surfs.csv; path = ../../Working/surfs.csv; sourceTree = "<group>"; };
-		9C69CE75234CD9B9003E386F /* SurfStorage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SurfStorage.swift; sourceTree = "<group>"; };
-		9C69CE84234D06D7003E386F /* Calculator.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Calculator.storyboard; sourceTree = "<group>"; };
+		9C62416D238AE68E00A4B7C9 /* ReuseIdentifierHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReuseIdentifierHelper.swift; sourceTree = "<group>"; };
+		9C62416F238AE75000A4B7C9 /* RecommendedTripArray.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecommendedTripArray.swift; sourceTree = "<group>"; };
+		9C624171238AE81A00A4B7C9 /* SurfTip.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SurfTip.swift; sourceTree = "<group>"; };
+		9C624173238AFC1400A4B7C9 /* SmallTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SmallTableViewCell.swift; sourceTree = "<group>"; };
+		9C624175238B089000A4B7C9 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
+		9C624177238B107B00A4B7C9 /* SurfboardCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SurfboardCollectionViewCell.swift; sourceTree = "<group>"; };
+		9C624179238B374800A4B7C9 /* LocationaCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationaCollectionViewCell.swift; sourceTree = "<group>"; };
+		9C62417B239156C200A4B7C9 /* UserDefaultsHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserDefaultsHelper.swift; sourceTree = "<group>"; };
+		9C69CE75234CD9B9003E386F /* Location.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Location.swift; sourceTree = "<group>"; };
+		9C69CE84234D06D7003E386F /* PriceCalculatorViewController.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = PriceCalculatorViewController.storyboard; sourceTree = "<group>"; };
 		9C69CE86234D0749003E386F /* Welcome.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Welcome.storyboard; sourceTree = "<group>"; };
+		9C6F64CA2379CB7400B0224D /* AddDateCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddDateCoordinator.swift; sourceTree = "<group>"; };
+		9C6F64CC2379D2A200B0224D /* AddLevelViewCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddLevelViewCoordinator.swift; sourceTree = "<group>"; };
+		9C6F64CF2379FB7800B0224D /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
 		9C71A14B2348946C00A67323 /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		9C71A14E234894CD00A67323 /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		9C71A150234894D500A67323 /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		9C76F09323493DAB00853FD9 /* WelcomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WelcomeViewController.swift; sourceTree = "<group>"; };
-		9C76F09523493EDA00853FD9 /* BuyTipsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BuyTipsViewController.swift; sourceTree = "<group>"; };
-		9C76F09723493F0900853FD9 /* SellTipsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SellTipsViewController.swift; sourceTree = "<group>"; };
-		9C9F8369236649D300FA4F41 /* QuestionsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuestionsViewController.swift; sourceTree = "<group>"; };
+		9C76F09523493EDA00853FD9 /* SurfTripViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SurfTripViewController.swift; sourceTree = "<group>"; };
+		9C76F09723493F0900853FD9 /* SavedTripsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SavedTripsViewController.swift; sourceTree = "<group>"; };
+		9C8F32FB239943350070751F /* LoadingStateViewController.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = LoadingStateViewController.storyboard; sourceTree = "<group>"; };
+		9C8F32FD239946090070751F /* logo_final.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = logo_final.json; sourceTree = "<group>"; };
+		9C8F32FE239946090070751F /* loader_animation.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = loader_animation.json; sourceTree = "<group>"; };
+		9C8F330123994CDD0070751F /* FontHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FontHelper.swift; sourceTree = "<group>"; };
+		9C90A22A2388887700E735D3 /* clip-board.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = "clip-board.json"; sourceTree = "<group>"; };
+		9C90A22E2388888B00E735D3 /* shop.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = shop.json; sourceTree = "<group>"; };
+		9C90A232238897A400E735D3 /* air.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = air.json; sourceTree = "<group>"; };
+		9C90BC542386BD020090E346 /* Enums.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Enums.swift; sourceTree = "<group>"; };
+		9C990AAA2398114800B17AE5 /* LoadingStateViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = LoadingStateViewController.swift; path = TradeMySurf/ViewController/LoadingStateViewController.swift; sourceTree = SOURCE_ROOT; };
+		9C990AAC2398119200B17AE5 /* LoadingStateCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoadingStateCoordinator.swift; sourceTree = "<group>"; };
 		9C9F836B2366BDAA00FA4F41 /* TabBarCoordinatorTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabBarCoordinatorTests.swift; sourceTree = "<group>"; };
+		9CBDE2972395A9E600317F51 /* TimeHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TimeHelper.swift; sourceTree = "<group>"; };
 		9CC59F16234AA3EF00F5ADD0 /* AppCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppCoordinator.swift; sourceTree = "<group>"; };
 		9CC59F18234AA41600F5ADD0 /* TabBarCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabBarCoordinator.swift; sourceTree = "<group>"; };
 		9CC59F1A234AA87700F5ADD0 /* WelcomeCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WelcomeCoordinator.swift; sourceTree = "<group>"; };
 		9CFDFD35236718E400760F25 /* CoordinatorTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoordinatorTests.swift; sourceTree = "<group>"; };
-		9CFDFD3A2367220300760F25 /* AddLevel.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = AddLevel.storyboard; path = TradeMySurf/ViewController/Onboarding/AddLevelPage/AddLevel.storyboard; sourceTree = SOURCE_ROOT; };
-		9CFDFD3C2367221C00760F25 /* AddDate.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = AddDate.storyboard; sourceTree = "<group>"; };
+		9CFDFD3A2367220300760F25 /* AddLevelViewController.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = AddLevelViewController.storyboard; sourceTree = "<group>"; };
+		9CFDFD3C2367221C00760F25 /* AddDateViewController.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = AddDateViewController.storyboard; sourceTree = "<group>"; };
 		9CFDFD3E2367226C00760F25 /* AddDateViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddDateViewController.swift; sourceTree = "<group>"; };
-		9CFDFD402367228300760F25 /* AddLavelViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddLavelViewController.swift; sourceTree = "<group>"; };
+		9CFDFD402367228300760F25 /* AddLevelViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddLevelViewController.swift; sourceTree = "<group>"; };
+		EC03F18041F56133B109FCF2 /* Pods_TradeMySurf.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_TradeMySurf.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -106,6 +150,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C0E8BF8BC57ED015A56DC270 /* Pods_TradeMySurf.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -126,6 +171,23 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		1A4D14CCE10F5D1951A9A112 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				73594BCA3A691E66914D3EEA /* Pods-TradeMySurf.debug.xcconfig */,
+				2A0124D5F3B03C0085DAD269 /* Pods-TradeMySurf.release.xcconfig */,
+			);
+			path = Pods;
+			sourceTree = "<group>";
+		};
+		92CC33C91AF539EB699BFCE0 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				EC03F18041F56133B109FCF2 /* Pods_TradeMySurf.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 		9C3F533B234BD7F900D5F65E /* Protocols */ = {
 			isa = PBXGroup;
 			children = (
@@ -135,31 +197,30 @@
 			path = Protocols;
 			sourceTree = "<group>";
 		};
-		9C53D5C7234CB18600A3BD80 /* Sell */ = {
+		9C53D5C7234CB18600A3BD80 /* Saved */ = {
 			isa = PBXGroup;
 			children = (
-				9C4C54732349C28500FB2653 /* Sell.storyboard */,
-				9C53D5C5234C145B00A3BD80 /* SellTipsCoordinator.swift */,
-				9C9F8369236649D300FA4F41 /* QuestionsViewController.swift */,
-				9C76F09723493F0900853FD9 /* SellTipsViewController.swift */,
+				9C4C54732349C28500FB2653 /* SavedTripsViewController.storyboard */,
+				9C53D5C5234C145B00A3BD80 /* SavedTripsCoordinator.swift */,
+				9C76F09723493F0900853FD9 /* SavedTripsViewController.swift */,
 			);
-			path = Sell;
+			path = Saved;
 			sourceTree = "<group>";
 		};
-		9C53D5C8234CB19900A3BD80 /* Buy */ = {
+		9C53D5C8234CB19900A3BD80 /* SurfTrip */ = {
 			isa = PBXGroup;
 			children = (
-				9C45E660234D238E0054A5FD /* Buy.storyboard */,
-				9C53D5C3234C144400A3BD80 /* BuyTipsCoordinator.swift */,
-				9C76F09523493EDA00853FD9 /* BuyTipsViewController.swift */,
+				9C45E660234D238E0054A5FD /* SurfTripViewController.storyboard */,
+				9C53D5C3234C144400A3BD80 /* SurfTripCoordinator.swift */,
+				9C76F09523493EDA00853FD9 /* SurfTripViewController.swift */,
 			);
-			path = Buy;
+			path = SurfTrip;
 			sourceTree = "<group>";
 		};
 		9C53D5C9234CB1A800A3BD80 /* Calculator */ = {
 			isa = PBXGroup;
 			children = (
-				9C69CE84234D06D7003E386F /* Calculator.storyboard */,
+				9C69CE84234D06D7003E386F /* PriceCalculatorViewController.storyboard */,
 				9C53D5C1234C142A00A3BD80 /* CalculatorCoordinator.swift */,
 				9C5B644F232A506C000727E6 /* PriceCalculatorViewController.swift */,
 			);
@@ -173,6 +234,8 @@
 				9C5B6464232A5073000727E6 /* TradeMySurfTests */,
 				9C5B646F232A5073000727E6 /* TradeMySurfUITests */,
 				9C5B6449232A506C000727E6 /* Products */,
+				1A4D14CCE10F5D1951A9A112 /* Pods */,
+				92CC33C91AF539EB699BFCE0 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -189,18 +252,22 @@
 		9C5B644A232A506C000727E6 /* TradeMySurf */ = {
 			isa = PBXGroup;
 			children = (
+				9C62417D23915AA800A4B7C9 /* Enums */,
+				9C62416C238AE35100A4B7C9 /* Cells */,
+				9C90BC532386BCE50090E346 /* Helpers */,
+				9C6F64C52379BD7E00B0224D /* SupportingViews */,
 				9C69CE74234CD992003E386F /* Model */,
 				9C3F533B234BD7F900D5F65E /* Protocols */,
 				9CC59F15234AA3B200F5ADD0 /* Coordinators */,
 				9C76F09F2349471000853FD9 /* ViewController */,
 				9C76F09E234946D500853FD9 /* Resources */,
 				9CC59F16234AA3EF00F5ADD0 /* AppCoordinator.swift */,
+				9C3C703A239B154900B721CC /* Surfs.mlmodel */,
 				9C5B644B232A506C000727E6 /* AppDelegate.swift */,
-				9C5B644D232A506C000727E6 /* SceneDelegate.swift */,
-				9C5B6480232A5091000727E6 /* surfs.csv */,
 				9C71A14B2348946C00A67323 /* Info.plist */,
-				9C5B647E232A508B000727E6 /* Surfs.mlmodel */,
 				9C5B6454232A506C000727E6 /* TradeMySurf.xcdatamodeld */,
+				9C6F64CF2379FB7800B0224D /* Constants.swift */,
+				9C624175238B089000A4B7C9 /* SceneDelegate.swift */,
 			);
 			path = TradeMySurf;
 			sourceTree = "<group>";
@@ -224,11 +291,31 @@
 			path = TradeMySurfUITests;
 			sourceTree = "<group>";
 		};
+		9C62416C238AE35100A4B7C9 /* Cells */ = {
+			isa = PBXGroup;
+			children = (
+				9C624173238AFC1400A4B7C9 /* SmallTableViewCell.swift */,
+				9C624177238B107B00A4B7C9 /* SurfboardCollectionViewCell.swift */,
+				9C624179238B374800A4B7C9 /* LocationaCollectionViewCell.swift */,
+			);
+			path = Cells;
+			sourceTree = "<group>";
+		};
+		9C62417D23915AA800A4B7C9 /* Enums */ = {
+			isa = PBXGroup;
+			children = (
+				9C90BC542386BD020090E346 /* Enums.swift */,
+			);
+			path = Enums;
+			sourceTree = "<group>";
+		};
 		9C69CE74234CD992003E386F /* Model */ = {
 			isa = PBXGroup;
 			children = (
-				9C69CE75234CD9B9003E386F /* SurfStorage.swift */,
-				9C467C66234F2A7D009F4D58 /* SurfTextModel.swift */,
+				9C69CE75234CD9B9003E386F /* Location.swift */,
+				9C467C66234F2A7D009F4D58 /* Surfboard.swift */,
+				9C624171238AE81A00A4B7C9 /* SurfTip.swift */,
+				9C62416F238AE75000A4B7C9 /* RecommendedTripArray.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -243,9 +330,17 @@
 			path = WelcomePage;
 			sourceTree = "<group>";
 		};
+		9C6F64C52379BD7E00B0224D /* SupportingViews */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = SupportingViews;
+			sourceTree = "<group>";
+		};
 		9C76F09E234946D500853FD9 /* Resources */ = {
 			isa = PBXGroup;
 			children = (
+				9C90A2232388812400E735D3 /* Lottie */,
 				9C5B6457232A5073000727E6 /* Assets.xcassets */,
 				9C5B6459232A5073000727E6 /* LaunchScreen.storyboard */,
 			);
@@ -255,12 +350,39 @@
 		9C76F09F2349471000853FD9 /* ViewController */ = {
 			isa = PBXGroup;
 			children = (
+				9C8F32FB239943350070751F /* LoadingStateViewController.storyboard */,
+				9C990AAA2398114800B17AE5 /* LoadingStateViewController.swift */,
+				9C990AAC2398119200B17AE5 /* LoadingStateCoordinator.swift */,
 				9CFDFD3723671C2500760F25 /* Onboarding */,
 				9C53D5C9234CB1A800A3BD80 /* Calculator */,
-				9C53D5C8234CB19900A3BD80 /* Buy */,
-				9C53D5C7234CB18600A3BD80 /* Sell */,
+				9C53D5C8234CB19900A3BD80 /* SurfTrip */,
+				9C53D5C7234CB18600A3BD80 /* Saved */,
 			);
 			path = ViewController;
+			sourceTree = "<group>";
+		};
+		9C90A2232388812400E735D3 /* Lottie */ = {
+			isa = PBXGroup;
+			children = (
+				9C8F32FE239946090070751F /* loader_animation.json */,
+				9C8F32FD239946090070751F /* logo_final.json */,
+				9C193AFA23A2ACA7000DE1AB /* coin-wallet.json */,
+				9C90A232238897A400E735D3 /* air.json */,
+				9C90A22E2388888B00E735D3 /* shop.json */,
+				9C90A22A2388887700E735D3 /* clip-board.json */,
+			);
+			path = Lottie;
+			sourceTree = "<group>";
+		};
+		9C90BC532386BCE50090E346 /* Helpers */ = {
+			isa = PBXGroup;
+			children = (
+				9C62417B239156C200A4B7C9 /* UserDefaultsHelper.swift */,
+				9C62416D238AE68E00A4B7C9 /* ReuseIdentifierHelper.swift */,
+				9CBDE2972395A9E600317F51 /* TimeHelper.swift */,
+				9C8F330123994CDD0070751F /* FontHelper.swift */,
+			);
+			path = Helpers;
 			sourceTree = "<group>";
 		};
 		9CC59F15234AA3B200F5ADD0 /* Coordinators */ = {
@@ -274,9 +396,9 @@
 		9CFDFD3723671C2500760F25 /* Onboarding */ = {
 			isa = PBXGroup;
 			children = (
-				9CFDFD39236721C700760F25 /* AddDatePage */,
-				9CFDFD38236721B900760F25 /* AddLevelPage */,
 				9C69CE88234D1D87003E386F /* WelcomePage */,
+				9CFDFD38236721B900760F25 /* AddLevelPage */,
+				9CFDFD39236721C700760F25 /* AddDatePage */,
 			);
 			path = Onboarding;
 			sourceTree = "<group>";
@@ -284,8 +406,9 @@
 		9CFDFD38236721B900760F25 /* AddLevelPage */ = {
 			isa = PBXGroup;
 			children = (
-				9CFDFD3A2367220300760F25 /* AddLevel.storyboard */,
-				9CFDFD402367228300760F25 /* AddLavelViewController.swift */,
+				9CFDFD3A2367220300760F25 /* AddLevelViewController.storyboard */,
+				9CFDFD402367228300760F25 /* AddLevelViewController.swift */,
+				9C6F64CC2379D2A200B0224D /* AddLevelViewCoordinator.swift */,
 			);
 			path = AddLevelPage;
 			sourceTree = "<group>";
@@ -293,8 +416,9 @@
 		9CFDFD39236721C700760F25 /* AddDatePage */ = {
 			isa = PBXGroup;
 			children = (
-				9CFDFD3C2367221C00760F25 /* AddDate.storyboard */,
+				9CFDFD3C2367221C00760F25 /* AddDateViewController.storyboard */,
 				9CFDFD3E2367226C00760F25 /* AddDateViewController.swift */,
+				9C6F64CA2379CB7400B0224D /* AddDateCoordinator.swift */,
 			);
 			path = AddDatePage;
 			sourceTree = "<group>";
@@ -306,9 +430,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 9C5B6475232A5073000727E6 /* Build configuration list for PBXNativeTarget "TradeMySurf" */;
 			buildPhases = (
+				4D9E37785751AB379EFE9D94 /* [CP] Check Pods Manifest.lock */,
 				9C5B6444232A506C000727E6 /* Sources */,
 				9C5B6445232A506C000727E6 /* Frameworks */,
 				9C5B6446232A506C000727E6 /* Resources */,
+				9C6F64C02379ADCA00B0224D /* ShellScript */,
+				50836E4BF80526DB1CF33D8B /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -404,14 +531,20 @@
 			buildActionMask = 2147483647;
 			files = (
 				9C5B645B232A5073000727E6 /* LaunchScreen.storyboard in Resources */,
-				9C45E661234D238F0054A5FD /* Buy.storyboard in Resources */,
+				9C45E661234D238F0054A5FD /* SurfTripViewController.storyboard in Resources */,
+				9C8F32FF239946090070751F /* logo_final.json in Resources */,
+				9C8F3300239946090070751F /* loader_animation.json in Resources */,
 				9C69CE87234D0749003E386F /* Welcome.storyboard in Resources */,
-				9CFDFD3B2367220300760F25 /* AddLevel.storyboard in Resources */,
 				9C5B6458232A5073000727E6 /* Assets.xcassets in Resources */,
-				9C5B6481232A5092000727E6 /* surfs.csv in Resources */,
-				9CFDFD3D2367221C00760F25 /* AddDate.storyboard in Resources */,
-				9C4C54742349C28500FB2653 /* Sell.storyboard in Resources */,
-				9C69CE85234D06D7003E386F /* Calculator.storyboard in Resources */,
+				9C8F32FC239943350070751F /* LoadingStateViewController.storyboard in Resources */,
+				9C90A233238897A500E735D3 /* air.json in Resources */,
+				9CFDFD3D2367221C00760F25 /* AddDateViewController.storyboard in Resources */,
+				9C90A22B2388887700E735D3 /* clip-board.json in Resources */,
+				9C4C54742349C28500FB2653 /* SavedTripsViewController.storyboard in Resources */,
+				9C6F64CE2379F86400B0224D /* AddLevelViewController.storyboard in Resources */,
+				9C90A22F2388888B00E735D3 /* shop.json in Resources */,
+				9C193AFB23A2ACA7000DE1AB /* coin-wallet.json in Resources */,
+				9C69CE85234D06D7003E386F /* PriceCalculatorViewController.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -431,32 +564,105 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		4D9E37785751AB379EFE9D94 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-TradeMySurf-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		50836E4BF80526DB1CF33D8B /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-TradeMySurf/Pods-TradeMySurf-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-TradeMySurf/Pods-TradeMySurf-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-TradeMySurf/Pods-TradeMySurf-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		9C6F64C02379ADCA00B0224D /* ShellScript */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+			);
+			outputFileListPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = " if which swiftlint >/dev/null; then\n swiftlint\n else\n echo \"warning: SwiftLint not installed, 'brew install swiftlint' or download from https://github.com/realm/SwiftLint\"\n fi\n";
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		9C5B6444232A506C000727E6 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				9C53D5C6234C145B00A3BD80 /* SellTipsCoordinator.swift in Sources */,
-				9C69CE76234CD9B9003E386F /* SurfStorage.swift in Sources */,
+				9CBDE2982395A9E600317F51 /* TimeHelper.swift in Sources */,
+				9C53D5C6234C145B00A3BD80 /* SavedTripsCoordinator.swift in Sources */,
+				9C69CE76234CD9B9003E386F /* Location.swift in Sources */,
 				9C53D5C2234C142A00A3BD80 /* CalculatorCoordinator.swift in Sources */,
-				9C467C67234F2A7D009F4D58 /* SurfTextModel.swift in Sources */,
+				9C467C67234F2A7D009F4D58 /* Surfboard.swift in Sources */,
 				9CC59F17234AA3EF00F5ADD0 /* AppCoordinator.swift in Sources */,
+				9C990AAB2398114800B17AE5 /* LoadingStateViewController.swift in Sources */,
 				9CC59F1B234AA87700F5ADD0 /* WelcomeCoordinator.swift in Sources */,
+				9C6F64CD2379D2A200B0224D /* AddLevelViewCoordinator.swift in Sources */,
 				9C3F533D234BD80E00D5F65E /* Coordinator.swift in Sources */,
 				9C5B6450232A506C000727E6 /* PriceCalculatorViewController.swift in Sources */,
-				9C9F836A236649D300FA4F41 /* QuestionsViewController.swift in Sources */,
-				9CFDFD412367228300760F25 /* AddLavelViewController.swift in Sources */,
+				9CFDFD412367228300760F25 /* AddLevelViewController.swift in Sources */,
 				9CC59F19234AA41600F5ADD0 /* TabBarCoordinator.swift in Sources */,
+				9C624176238B089000A4B7C9 /* SceneDelegate.swift in Sources */,
+				9C62417A238B374A00A4B7C9 /* LocationaCollectionViewCell.swift in Sources */,
+				9C624178238B107B00A4B7C9 /* SurfboardCollectionViewCell.swift in Sources */,
 				9C76F09423493DAB00853FD9 /* WelcomeViewController.swift in Sources */,
-				9C53D5C4234C144400A3BD80 /* BuyTipsCoordinator.swift in Sources */,
+				9C3C703B239B154A00B721CC /* Surfs.mlmodel in Sources */,
+				9C624172238AE81A00A4B7C9 /* SurfTip.swift in Sources */,
+				9C624170238AE75000A4B7C9 /* RecommendedTripArray.swift in Sources */,
+				9C53D5C4234C144400A3BD80 /* SurfTripCoordinator.swift in Sources */,
 				9C53D5C0234C126600A3BD80 /* StoryboardProtocol.swift in Sources */,
 				9C5B644C232A506C000727E6 /* AppDelegate.swift in Sources */,
-				9C5B647F232A508B000727E6 /* Surfs.mlmodel in Sources */,
+				9C62416E238AE68E00A4B7C9 /* ReuseIdentifierHelper.swift in Sources */,
+				9C624174238AFC1400A4B7C9 /* SmallTableViewCell.swift in Sources */,
 				9C5B6456232A506C000727E6 /* TradeMySurf.xcdatamodeld in Sources */,
+				9C8F330223994CDD0070751F /* FontHelper.swift in Sources */,
 				9CFDFD3F2367226C00760F25 /* AddDateViewController.swift in Sources */,
-				9C76F09623493EDA00853FD9 /* BuyTipsViewController.swift in Sources */,
-				9C76F09823493F0900853FD9 /* SellTipsViewController.swift in Sources */,
-				9C5B644E232A506C000727E6 /* SceneDelegate.swift in Sources */,
+				9C76F09623493EDA00853FD9 /* SurfTripViewController.swift in Sources */,
+				9C62417C239156C200A4B7C9 /* UserDefaultsHelper.swift in Sources */,
+				9C990AAD2398119200B17AE5 /* LoadingStateCoordinator.swift in Sources */,
+				9C90BC552386BD020090E346 /* Enums.swift in Sources */,
+				9C76F09823493F0900853FD9 /* SavedTripsViewController.swift in Sources */,
+				9C6F64CB2379CB7400B0224D /* AddDateCoordinator.swift in Sources */,
+				9C6F64D02379FB7800B0224D /* Constants.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -555,7 +761,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
 				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
 				MTL_FAST_MATH = YES;
 				ONLY_ACTIVE_ARCH = YES;
@@ -610,7 +816,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				MTL_FAST_MATH = YES;
 				SDKROOT = iphoneos;
@@ -622,6 +828,7 @@
 		};
 		9C5B6476232A5073000727E6 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 73594BCA3A691E66914D3EEA /* Pods-TradeMySurf.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_IDENTITY = "Apple Development";
@@ -629,7 +836,7 @@
 				DEFINES_MODULE = YES;
 				DEVELOPMENT_TEAM = HBS2B82CVU;
 				INFOPLIST_FILE = TradeMySurf/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -644,6 +851,7 @@
 		};
 		9C5B6477232A5073000727E6 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 2A0124D5F3B03C0085DAD269 /* Pods-TradeMySurf.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_IDENTITY = "Apple Development";
@@ -651,7 +859,7 @@
 				DEFINES_MODULE = YES;
 				DEVELOPMENT_TEAM = HBS2B82CVU;
 				INFOPLIST_FILE = TradeMySurf/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",

@@ -15,32 +15,32 @@ class PriceCalculatorViewController: UIViewController {
 
     @IBOutlet var stackView: UIStackView!
     @IBOutlet var model: UISegmentedControl!
-    @IBOutlet var upgrades: UISegmentedControl!
-    @IBOutlet var mileageLabel: UILabel!
-    @IBOutlet var mileage: UISlider!
+    @IBOutlet var gear: UISegmentedControl!
+    @IBOutlet var hoursLabel: UILabel!
+    @IBOutlet var production: UISlider!
     @IBOutlet var condition: UISegmentedControl!
     @IBOutlet var valuation: UILabel!
 
     override func viewDidLoad() {
         super.viewDidLoad()
 
-//        stackView.setCustomSpacing(30, after: model)
-//        stackView.setCustomSpacing(30, after: upgrades)
-//        stackView.setCustomSpacing(30, after: mileage)
-//        stackView.setCustomSpacing(60, after: condition)
+        stackView.setCustomSpacing(10, after: model)
+        stackView.setCustomSpacing(10, after: gear)
+        stackView.setCustomSpacing(10, after: production)
+        stackView.setCustomSpacing(10, after: condition)
 
-//        calculateValue(self)
+        calculateValue(self)
     }
 
     @IBAction func calculateValue(_ sender: Any) {
         let formatter = NumberFormatter()
         formatter.numberStyle = .decimal
         formatter.maximumFractionDigits = 0
-        let formattedMileage = formatter.string(for: mileage.value) ?? "0"
-        mileageLabel.text = "MILEAGE (\(formattedMileage) miles)"
+        let formattedMileage = formatter.string(for: production.value) ?? "0"
+        hoursLabel.text = "Hours on water (\(formattedMileage) hours)"
 
-        if let prediction = try? surfBoards.prediction(model: Double(model.selectedSegmentIndex), premium: Double(upgrades.selectedSegmentIndex), mileage: Double(mileage.value), condition: Double(condition.selectedSegmentIndex)) {
-            let clampedValuation = max(2000, prediction.price)
+        if let prediction = try? surfBoards.prediction(model: Double(model.selectedSegmentIndex), gear: Double(gear.selectedSegmentIndex), production: Double(production.value), condition: Double(condition.selectedSegmentIndex)) {
+            let clampedValuation = max(1000, prediction.price)
             formatter.numberStyle = .currency
             valuation.text = formatter.string(for: clampedValuation)
         } else {
@@ -48,8 +48,6 @@ class PriceCalculatorViewController: UIViewController {
         }
     }
 
-
 }
 
 extension PriceCalculatorViewController: StoryboardProtocol {}
-
