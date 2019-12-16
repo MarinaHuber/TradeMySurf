@@ -77,6 +77,8 @@ Open the workspace open ```TradeMySurf.xcworkspace```.
  + help from Import Foundation project.
 
 
+* *This GitHub Page and Project is in development so It will be changing frequently.* *
 
+Thanks to read and be interest to this project.
 
 
