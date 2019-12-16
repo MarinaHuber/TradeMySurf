@@ -1,6 +1,7 @@
 
 ### Recommendation app from surfers to surfers
 ![alt tag](https://img.shields.io/badge/swift%205-Surfo%20project-blue)
+
 Survey by surfers:
 https://docs.google.com/forms/d/e/1FAIpQLSdzwVMycAc3ISaFck8lxFKnC8e5i4BmnzlVo_N9-Z0lRCYeJg/viewform?usp=sf_link
 
@@ -33,6 +34,7 @@ Illustrates flow of the app:
  + Previous trips - (check wish list)
  + Calculator for board prices
 ![alt tag](https://pbs.twimg.com/media/EGN6v1YWwAEa2bc?format=jpg&name=large)
+
 # Lessons learned
 - The exciting thing about this work is that I had no idea where it would take me. I knew I needed to use Coordinator pattern and 
 that I would not be using a backend for the first version of the app (only mocks).
