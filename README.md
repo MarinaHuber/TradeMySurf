@@ -1,5 +1,5 @@
 
-### Recommendation app from surfers to surfers
+### Recommendation iOS project from surfers to surfers
 ![alt tag](https://img.shields.io/badge/swift%205-Surfo%20project-blue)
 
 Survey by surfers:
@@ -8,7 +8,7 @@ https://docs.google.com/forms/d/e/1FAIpQLSdzwVMycAc3ISaFck8lxFKnC8e5i4BmnzlVo_N9
 Presentation: https://docs.google.com/presentation/d/1hmtwfkfkYBY4rAdn2Nz3Hf__6SqDF5T0Yd6LlU8GkVY/edit?usp=sharing
 
 📌  As of November 2019, this project requires Xcode 11+ (Swift 5.0)
-### Publish on: - - Jan 2020
+### Publish on: - - not jet
 ### Deployed for: iOS 13
 
 # Why did you undertake the project?
