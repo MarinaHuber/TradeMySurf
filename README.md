@@ -18,10 +18,13 @@ This was a long passion of mine and I was lucky enough to get a mentorship throu
 As a surfer I want to set clear my surf goal. To accomplish this goal I need a correct sufboard and a location. I choose a level in the app and the date of expected surf and than the app opens the recommended boards and locations. As a surfer I want to buy a new or second hand surfboard but I do not know what kind would be useful for me. I tap claculator and see the choices I have for range I can spend.
 
 # Used Libraries
-CoreML
-SwiftyPickerPopover
-SwiftLint
-Lottie
+ CoreML
+ 
+ SwiftyPickerPopover
+ 
+ SwiftLint
+ 
+ Lottie
 
 # Technologies / Stack used
 ###  Navigation scheme: MVC + Coordinator pattern
