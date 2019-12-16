@@ -77,7 +77,11 @@ Open the workspace open ```TradeMySurf.xcworkspace```.
  + help from Import Foundation project.
 
 
-* *This GitHub Page and Project is in development so It will be changing frequently.* *
+
+*This GitHub Page and Project is in development so It will be changing frequently.*
+I created a [Trello](https://trello.com/b/PD4vhnSl/trade-my-surf) to try to organize myself with everything I would like to develop for this App.
+
+I would be happy to have suggestions that you can do in the BackLog tab
 
 Thanks to read and be interest to this project.
 
