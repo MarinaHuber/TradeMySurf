@@ -64,9 +64,17 @@ that I would not be using a backend for the first version of the app (only mocks
 - Add details to surfboard collection view
 - Implement tests for model and UI - automatisation
 
+# Installation
+Download the project.
+
+Open the terminal and navigate to the directory of project ```cd TradeMySurf```.
+
+Install Dependencies with Cocoapods ```pod install```.
+
+Open the workspace open ```TradeMySurf.xcworkspace```.
+
 # Credits
  + help from Import Foundation project.
- + projects from Hacking with Swift
 
 
 
