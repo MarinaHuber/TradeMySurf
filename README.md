@@ -34,8 +34,11 @@ Illustrates flow of the app:
  + Previous trips - (check wish list)
  + Calculator for board prices
 ![alt tag](https://pbs.twimg.com/media/EGN6v1YWwAEa2bc?format=jpg&name=large)
+###  Linear Regression
+CoreML and prediction model for the surfboard prices
 
 # Lessons learned
+- How simple is to use CoreML and how hard itis to test the model
 - The exciting thing about this work is that I had no idea where it would take me. I knew I needed to use Coordinator pattern and 
 that I would not be using a backend for the first version of the app (only mocks).
 - I learned how to focus on one main priority thing, and reduce the complexity.
@@ -51,6 +54,7 @@ that I would not be using a backend for the first version of the app (only mocks
 
 # Credits
  + help from Import Foundation project.
+ + projects from Hacking with Swift
 
 
 
