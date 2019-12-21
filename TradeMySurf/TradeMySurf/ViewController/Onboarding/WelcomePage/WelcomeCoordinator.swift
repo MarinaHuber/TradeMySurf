@@ -29,8 +29,8 @@ import UIKit
 }
 
 extension WelcomeCoordinator : WelcomeViewControllerDelegate {
-	func performNextView() {
 
+	func performNextView() {
 		let addLevelCoordinator: AddLevelViewCoordinator = AddLevelViewCoordinator(presenter: UINavigationController())
 		addLevelCoordinator.start()
 		addChildCoordinator(addLevelCoordinator)

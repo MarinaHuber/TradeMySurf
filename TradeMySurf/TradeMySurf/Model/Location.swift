@@ -10,15 +10,8 @@ import  Foundation
 struct Location: Hashable {
     var id: UUID = UUID()
     var countryName: String
-	var continentName: String
+    var continentName: String
     var imageFlag: String
 }
 
-extension Location {
-
-    internal func filterBySurfDate() -> Location? {
-
-        return self
-    }
-}
 

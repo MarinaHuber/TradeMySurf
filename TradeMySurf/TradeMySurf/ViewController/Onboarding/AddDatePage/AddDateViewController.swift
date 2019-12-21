@@ -17,7 +17,8 @@ class AddDateViewController: UIViewController {
 	weak var delegate: AddDateViewControllerDelegate?
     private var userSettup = UserDefaults.standard.didUserSetUp
 	@IBOutlet weak var pickerViewDate: UIView!
-    
+    private (set) var selectedDate = Date()
+
     override func viewDidLoad() {
         super.viewDidLoad()
         tapDateSpringPopoverPicker()
@@ -31,29 +32,25 @@ class AddDateViewController: UIViewController {
 	}
 }
 private extension AddDateViewController {
-
-	func tapDateSpringPopoverPicker() {
-		DatePickerPopover(title: "Pick a surf date")
+    func tapDateSpringPopoverPicker() {
+        DatePickerPopover(title: "Pick a surf date")
             .setDateMode(.date)
             .setSelectedDate(Date())
-			.setLocale(identifier: "en_US_POSIX")
-			.setOutsideTapDismissing(allowed: false)
+            .setLocale(identifier: "en_GB_POSIX")
+            .setOutsideTapDismissing(allowed: false)
             .setSize(width: view.bounds.size.width, height: 200)
             .setPermittedArrowDirections([.up])
-			.setValueChange(action: { _, selectedDate in
-				///save to UD
-				UserDefaults.standard.surfingTime = selectedDate
-                self.userSettup = false
-                print("\(UserDefaults.standard.surfingTime) all edge cases")
-			})
-			.setDoneButton(title: "Done", font: UIFont.boldSystemFont(ofSize: 17), color: .systemBlue, action: { popover, _ in
-					popover.disappear()
-					//missing: UserDefaults.standard.didUserSetUp = true
-					self.delegate?.performTabBar()
-			})
-  		.appear(originView: pickerViewDate, baseViewController: self)
-
-	}
+            .setValueChange(action: { _, selectedDate in
+                UserDefaults.standard.surfingTime = selectedDate
+            })
+            .setDoneButton(title: "Done", font: UIFont.boldSystemFont(ofSize: 17), color: .systemBlue, action: { popover, date in
+                UserDefaults.standard.surfingTime = date
+                popover.disappear()
+                self.userSettup = true
+                self.delegate?.performTabBar()
+            })
+            .appear(originView: pickerViewDate, baseViewController: self)
+    }
 }
 
 extension AddDateViewController: StoryboardProtocol {}

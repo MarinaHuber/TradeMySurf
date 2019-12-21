@@ -7,7 +7,6 @@
 //
 
 import UIKit
-import Lottie
 import SwiftyPickerPopover
 
 protocol AddLevelViewControllerDelegate: class {
@@ -18,11 +17,9 @@ class AddLevelViewController: UIViewController {
 	@IBOutlet weak var pickerView: UIView!
 	weak var delegate: AddLevelViewControllerDelegate?
 	weak var coordinator: TabBarCoordinator?
-    let selcetedRow = 2
     private var userSettup = UserDefaults.standard.didUserSetUp
 	var addLevel = UILabel()
-	var iconViewAnima = AnimationView()
-	let levelsData = [Level.beginner.rawValue, Level.beginnerIntemediate.rawValue, Level.intermediate.rawValue, Level.advanced.rawValue, Level.professional.rawValue]
+	let levels = [Level.beginner.rawValue, Level.beginnerIntemediate.rawValue, Level.intermediate.rawValue, Level.advanced.rawValue, Level.professional.rawValue]
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -31,35 +28,30 @@ class AddLevelViewController: UIViewController {
 
 	@IBAction func openAddDate(_ sender: Any) {
 		delegate?.performNext()
-
 	}
 }
 
 private extension AddLevelViewController {
-
-	private func setPickerPopover() {
-		StringPickerPopover(title: "Choose one", choices: levelsData)
-			.setSize(width: view.bounds.size.width, height: 200)
-			.setRowHeight(60)
-			.setSelectedRow(selcetedRow)
-			.setFontSize(16)
+    private func setPickerPopover() {
+        StringPickerPopover(title: "Choose one", choices: levels)
+            .setSize(width: view.bounds.size.width, height: 200)
+            .setRowHeight(60)
+            .setSelectedRow(2)
+            .setFontSize(16)
             .setPermittedArrowDirections([.up])
-			.setOutsideTapDismissing(allowed: false)
-			.setValueChange(action: { _, row, selectedString in
-                if row == self.selcetedRow {
+            .setOutsideTapDismissing(allowed: false)
+            .setValueChange(action: { _, _, selectedString in
+                UserDefaults.standard.selectedLevel = selectedString
+            })
+            .setDoneButton(title: "Next", font: UIFont.boldSystemFont(ofSize: 17), color: .systemBlue, action: { popover, _, selectedString in
+                if selectedString == Level.intermediate.rawValue {
                     UserDefaults.standard.selectedLevel = Level.intermediate.rawValue
                 }
-				UserDefaults.standard.selectedLevel = selectedString
-                self.userSettup = false
-			})
-			.setDoneButton(title: "Next", font: UIFont.boldSystemFont(ofSize: 17), color: .systemBlue, action: { popover, _, _ in
-				popover.disappear()
-				self.delegate?.performNext()
-			})
-			.setClearButton(title: "This will appear in your surf recommendations", font: UIFont.boldSystemFont(ofSize: 9), color: .gray, action: nil)
-			.appear(originView: pickerView, baseViewController: self)
-	}
-
+                popover.disappear()
+                self.delegate?.performNext()
+            })
+            .appear(originView: pickerView, baseViewController: self)
+    }
 }
 
 extension AddLevelViewController: StoryboardProtocol {}
