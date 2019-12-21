@@ -17,7 +17,6 @@ class AddDateViewController: UIViewController {
 	weak var delegate: AddDateViewControllerDelegate?
     private var userSettup = UserDefaults.standard.didUserSetUp
 	@IBOutlet weak var pickerViewDate: UIView!
-    private (set) var selectedDate = Date()
 
     override func viewDidLoad() {
         super.viewDidLoad()

@@ -9,7 +9,6 @@
 import Foundation
 import UIKit
 
-
 class SurfTripViewController: UIViewController {
 
 	private var selectedLevel = UserDefaults.standard.selectedLevel
@@ -36,8 +35,8 @@ class SurfTripViewController: UIViewController {
 private extension SurfTripViewController {
 
 func configureDiffableDataSource() {
-
-	let dataSource = UICollectionViewDiffableDataSource<TripSection, TripItem>(collectionView: collectionView) { (collectionView: UICollectionView, indexPath: IndexPath, item: TripItem) -> UICollectionViewCell? in
+	let dataSource = UICollectionViewDiffableDataSource<TripSection, TripItem>(collectionView: collectionView) {
+        (collectionView: UICollectionView, indexPath: IndexPath, item: TripItem) -> UICollectionViewCell? in
 
 		switch item {
 		case .tip(let tip):
@@ -76,17 +75,13 @@ func configureDiffableDataSource() {
 		case .intermediate:
 			snapshot.appendSections([.surfboardsIntermediate])
 			snapshot.appendItems(appData.surfboardsIntermediate.map({  TripItem.surfboardsIntermediate($0) }))
-				print("intermediate zzzz")
 		case .advanced:
 			snapshot.appendSections([.surfboardsAdvanced])
 			snapshot.appendItems(appData.surfboardsAdvanced.map({  TripItem.surfboardsAdvanced($0) }))
-				print("advanced")
 		case .professional:
 			snapshot.appendSections([.surfboardsPro])
 			snapshot.appendItems(appData.surfboardsPro.map({  TripItem.surfboardsPro($0) }))
-				print("ooooo")
-		default:
-				print("jjjj")
+        default: break
 		}
 		let selected = makeIntFromMonth()
 		let pickerDate = Season.sortBy(month: selected)
@@ -103,9 +98,7 @@ func configureDiffableDataSource() {
 		case 3:
 			snapshot.appendSections([.surfCountryAutumn])
 			snapshot.appendItems(appData.surfCountryAutumn.map({ TripItem.surfCountryAutumn($0) }))
-
-		default:
-			print("season lost")
+        default: break
 		}
 
 		sections = snapshot.sectionIdentifiers
@@ -117,7 +110,6 @@ func configureDiffableDataSource() {
 private extension SurfTripViewController {
 
 	func makeIntFromMonth() -> Int {
-
 		let monthOfYear = selectedDate?.month
 		let dateFormat = DateFormatter()
 		dateFormat.dateFormat = "LLLL"
@@ -157,13 +149,10 @@ private extension SurfTripViewController {
 		let itemSize = NSCollectionLayoutSize(widthDimension: .fractionalWidth(1.0),
 											  heightDimension: .estimated(40))
 		let item = NSCollectionLayoutItem(layoutSize: itemSize)
-
 		let groupSize = NSCollectionLayoutSize(widthDimension: .fractionalWidth(1.0),
 											   heightDimension: .estimated(100)) // this value doesn't matter
 		let group = NSCollectionLayoutGroup.horizontal(layoutSize: groupSize, subitems: [item])
-
 		group.interItemSpacing = NSCollectionLayoutSpacing.fixed(10)
-
 		let section = NSCollectionLayoutSection(group: group)
 		section.interGroupSpacing = 10
 
@@ -174,14 +163,10 @@ private extension SurfTripViewController {
 		let largeItemSize = NSCollectionLayoutSize(widthDimension: .absolute(view.frame.size.width / 3),
 												   heightDimension: .fractionalHeight(1.0))
         let largeItem = NSCollectionLayoutItem(layoutSize: largeItemSize)
-
         let groupOf2Size = NSCollectionLayoutSize(widthDimension: .fractionalWidth(view.frame.size.width * 2),
 												  heightDimension: .estimated(300))
-
         let groupOf3 = NSCollectionLayoutGroup.horizontal(layoutSize: groupOf2Size, subitems: [largeItem])
-
         groupOf3.interItemSpacing = .fixed(10)
-
         let section = NSCollectionLayoutSection(group: groupOf3)
         section.interGroupSpacing = 10
         section.orthogonalScrollingBehavior = .continuousGroupLeadingBoundary
@@ -193,18 +178,13 @@ private extension SurfTripViewController {
 		let itemSize = NSCollectionLayoutSize(widthDimension: .fractionalWidth(1.0),
                                               heightDimension: .fractionalHeight(1.0))
         let item = NSCollectionLayoutItem(layoutSize: itemSize)
-
         let groupSize = NSCollectionLayoutSize(widthDimension: .fractionalWidth(0.93),
                                                heightDimension: .fractionalWidth(0.5))
         let group = NSCollectionLayoutGroup.vertical(layoutSize: groupSize, subitem: item, count: 3)
-
         group.interItemSpacing = NSCollectionLayoutSpacing.fixed(10)
-
         let section = NSCollectionLayoutSection(group: group)
         section.interGroupSpacing = 10
-
         section.orthogonalScrollingBehavior = .continuousGroupLeadingBoundary
-
         return section
 	}
 }
@@ -227,7 +207,6 @@ private extension SurfTripViewController {
 
     func addCollectionView() {
         let layout = makeCompositionalLayout()
-
         collectionView = UICollectionView(frame: CGRect.zero, collectionViewLayout: layout)
         collectionView.backgroundColor = .systemBackground
         collectionView.translatesAutoresizingMaskIntoConstraints = false
@@ -243,7 +222,6 @@ private extension SurfTripViewController {
     }
 
     func configureCollectionView() {
-
         collectionView.registerCell(ofType: SmallTableViewCell.self)
         collectionView.registerCell(ofType: SurfBoardCollectionViewCell.self)
         collectionView.registerCell(ofType: LocationCollectionViewCell.self)

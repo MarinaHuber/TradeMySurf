@@ -37,7 +37,6 @@ enum Season: Int, CaseIterable {
 		 case 10...12:
 			 return Season.autumn.rawValue
 		 default:
-			 print("Fallback option")
 		 }
 		 return 0
 	 }

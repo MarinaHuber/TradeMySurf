@@ -18,7 +18,6 @@ class AddLevelViewController: UIViewController {
 	weak var delegate: AddLevelViewControllerDelegate?
 	weak var coordinator: TabBarCoordinator?
     private var userSettup = UserDefaults.standard.didUserSetUp
-	var addLevel = UILabel()
 	let levels = [Level.beginner.rawValue, Level.beginnerIntemediate.rawValue, Level.intermediate.rawValue, Level.advanced.rawValue, Level.professional.rawValue]
 
     override func viewDidLoad() {
