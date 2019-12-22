@@ -324,8 +324,8 @@
 			isa = PBXGroup;
 			children = (
 				9C69CE86234D0749003E386F /* Welcome.storyboard */,
-				9CC59F1A234AA87700F5ADD0 /* WelcomeCoordinator.swift */,
 				9C76F09323493DAB00853FD9 /* WelcomeViewController.swift */,
+				9CC59F1A234AA87700F5ADD0 /* WelcomeCoordinator.swift */,
 			);
 			path = WelcomePage;
 			sourceTree = "<group>";

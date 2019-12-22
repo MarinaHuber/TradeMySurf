@@ -10,7 +10,7 @@ import UIKit
 import SwiftyPickerPopover
 
 protocol AddLevelViewControllerDelegate: class {
-	func performNext()
+	func performAddDate()
 }
 
 class AddLevelViewController: UIViewController {
@@ -25,9 +25,6 @@ class AddLevelViewController: UIViewController {
         setPickerPopover()
     }
 
-	@IBAction func openAddDate(_ sender: Any) {
-		delegate?.performNext()
-	}
 }
 
 private extension AddLevelViewController {
@@ -47,7 +44,7 @@ private extension AddLevelViewController {
                     UserDefaults.standard.selectedLevel = Level.intermediate.rawValue
                 }
                 popover.disappear()
-                self.delegate?.performNext()
+                self.delegate?.performAddDate()
             })
             .appear(originView: pickerView, baseViewController: self)
     }
