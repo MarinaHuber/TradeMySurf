@@ -15,7 +15,6 @@ protocol AddDateViewControllerDelegate: class {
 
 class AddDateViewController: UIViewController {
 	weak var delegate: AddDateViewControllerDelegate?
-    private var userSettup = UserDefaults.standard.didUserSetUp
 	@IBOutlet weak var pickerViewDate: UIView!
 
     override func viewDidLoad() {
@@ -39,13 +38,9 @@ private extension AddDateViewController {
             .setOutsideTapDismissing(allowed: false)
             .setSize(width: view.bounds.size.width, height: 200)
             .setPermittedArrowDirections([.up])
-            .setValueChange(action: { _, selectedDate in
-                UserDefaults.standard.surfingTime = selectedDate
-            })
             .setDoneButton(title: "Done", font: UIFont.boldSystemFont(ofSize: 17), color: .systemBlue, action: { popover, date in
                 UserDefaults.standard.surfingTime = date
                 popover.disappear()
-                self.userSettup = true
                 self.delegate?.performTabBar()
             })
             .appear(originView: pickerViewDate, baseViewController: self)

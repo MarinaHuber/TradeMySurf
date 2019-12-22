@@ -37,7 +37,6 @@ extension AddDateCoordinator : AddDateViewControllerDelegate {
 		let coordinator: TabBarCoordinator = TabBarCoordinator(window: window, tabBarController: UITabBarController())
         coordinator.presenter.modalPresentationStyle = .fullScreen
 		coordinator.start()
-        presenter.setNavigationBarHidden(true, animated: true)
         presenter.pushViewController(coordinator.tabBarController!, animated: true)
 	}
 }
