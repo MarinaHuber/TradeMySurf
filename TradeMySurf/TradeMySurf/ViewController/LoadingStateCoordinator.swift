@@ -41,6 +41,7 @@ extension LoadingStateCoordinator : LoadingViewControllerDelegate {
 //            let mainTabCoordinator = TabBarCoordinator(window: window, tabBarController: UITabBarController())
 //            childCoordinators.append(mainTabCoordinator)
 //            window.rootViewController = mainTabCoordinator.tabBarController
+//            presenter.setNavigationBarHidden(false, animated: true)
 //            mainTabCoordinator.presenter.modalPresentationStyle = .fullScreen
 //            mainTabCoordinator.start()
 //        } else {
@@ -48,8 +49,8 @@ extension LoadingStateCoordinator : LoadingViewControllerDelegate {
             let welcomeCoordinator = WelcomeCoordinator(window: window, presenter: presenter)
             childCoordinators.append(welcomeCoordinator)
             window.rootViewController = welcomeCoordinator.presenter
-            welcomeCoordinator.presenter.navigationItem.backBarButtonItem = nil
+            //welcomeCoordinator.presenter.navigationItem.backBarButtonItem = nil
             welcomeCoordinator.start()
- //       }
+  //      }
     }
 }
