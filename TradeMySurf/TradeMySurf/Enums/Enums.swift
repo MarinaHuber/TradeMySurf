@@ -36,7 +36,7 @@ enum Season: Int, CaseIterable {
 			 return Season.summer.rawValue
 		 case 10...12:
 			 return Season.autumn.rawValue
-		 default:
+		 default: break
 		 }
 		 return 0
 	 }

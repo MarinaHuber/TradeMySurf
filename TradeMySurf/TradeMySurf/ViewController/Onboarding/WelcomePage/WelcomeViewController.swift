@@ -11,7 +11,7 @@ import UIKit
 import Lottie
 
 protocol WelcomeViewControllerDelegate: class {
-	func performNextView()
+	func performAddLevel()
 }
 
 class WelcomeViewController: UIViewController, CAAnimationDelegate {
@@ -85,7 +85,7 @@ class WelcomeViewController: UIViewController, CAAnimationDelegate {
                    case 2436:
                     post.toValue = view.bounds.size.height - 500
                    case 2688:
-                    post.toValue = view.bounds.size.height - 600
+                    post.toValue = view.bounds.size.height - 500
                    case 1792:
                     post.toValue = view.bounds.size.height - 500
                    default:
@@ -105,7 +105,7 @@ class WelcomeViewController: UIViewController, CAAnimationDelegate {
 		  }
 
 	@IBAction func openNext(_ sender: Any) {
-		delegate?.performNextView()
+		delegate?.performAddLevel()
 	}
 }
 

@@ -20,8 +20,7 @@ import UIKit
 		
 	}
 	func start() {
-		let storyboard: UIStoryboard = UIStoryboard(name: Constants.Storyboards.welcomeViewCoordinator
-			, bundle: nil)
+		let storyboard: UIStoryboard = UIStoryboard(name: Constants.Storyboards.welcomeViewCoordinator, bundle: nil)
 		let controller: WelcomeViewController = WelcomeViewController.instantiate(from: storyboard)
 		controller.delegate = self
 		presenter.pushViewController(controller, animated: true)
@@ -30,7 +29,7 @@ import UIKit
 
 extension WelcomeCoordinator : WelcomeViewControllerDelegate {
 
-	func performNextView() {
+	func performAddLevel() {
 		let addLevelCoordinator: AddLevelViewCoordinator = AddLevelViewCoordinator(presenter: UINavigationController())
 		addLevelCoordinator.start()
 		addChildCoordinator(addLevelCoordinator)
