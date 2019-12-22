@@ -38,7 +38,6 @@ final class AddLevelViewCoordinator: Coordinator {
 		self.presenter.navigationBar.tintColor = .black
 		self.presenter.navigationBar.setBackgroundImage(UIImage(), for: UIBarPosition.any, barMetrics: UIBarMetrics.default)
 		self.presenter.navigationBar.shadowImage = UIImage()
-		//presenter.setNavigationBarHidden(true, animated: false)
 
 	}
 	func start() {

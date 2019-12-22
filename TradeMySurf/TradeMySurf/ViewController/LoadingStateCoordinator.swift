@@ -24,7 +24,6 @@ class LoadingStateCoordinator: NSObject, Coordinator {
 		self.presenter.navigationBar.setBackgroundImage(UIImage(), for: UIBarPosition.any, barMetrics: UIBarMetrics.default)
 		self.presenter.navigationBar.shadowImage = UIImage()
 		self.presenter.navigationBar.titleTextAttributes = [.foregroundColor : UIColor.black as Any]
-        presenter.navigationItem.backBarButtonItem = nil
 	}
 
 	 func start() {
@@ -41,7 +40,6 @@ extension LoadingStateCoordinator : LoadingViewControllerDelegate {
 //            let mainTabCoordinator = TabBarCoordinator(window: window, tabBarController: UITabBarController())
 //            childCoordinators.append(mainTabCoordinator)
 //            window.rootViewController = mainTabCoordinator.tabBarController
-//            presenter.setNavigationBarHidden(false, animated: true)
 //            mainTabCoordinator.presenter.modalPresentationStyle = .fullScreen
 //            mainTabCoordinator.start()
 //        } else {

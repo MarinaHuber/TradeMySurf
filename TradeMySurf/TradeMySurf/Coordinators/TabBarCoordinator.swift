@@ -22,6 +22,9 @@ final class TabBarCoordinator: NSObject, Coordinator {
 		self.tabBarController = tabBarController
 		childCoordinators = []
 		self.presenter = UINavigationController()
+        self.presenter.navigationBar.barTintColor = .white
+        self.presenter.navigationBar.tintColor = .black
+        self.presenter.navigationBar.setBackgroundImage(UIImage(), for: UIBarPosition.any, barMetrics: UIBarMetrics.default)
 	}
 	 func start() {
 		performGetTabBar()
@@ -35,12 +38,14 @@ final class TabBarCoordinator: NSObject, Coordinator {
 		})
 
 		let presenters: [UIViewController] = coordinators.map({ coordinator -> UIViewController in
-            coordinator.presenter.navigationBar.backgroundColor = .clear
-            coordinator.presenter.navigationBar.barTintColor = .clear
-            coordinator.presenter.navigationBar.tintColor = .black
-            coordinator.presenter.navigationBar.setBackgroundImage(UIImage(), for: UIBarPosition.any, barMetrics: UIBarMetrics.default)
-            coordinator.presenter.navigationBar.shadowImage = UIImage()
-            coordinator.presenter.navigationBar.titleTextAttributes = [.foregroundColor : UIColor.black as Any]
+            coordinator.presenter.setNavigationBarHidden(true, animated: false)
+            let button = UIButton(type: .system)
+            button.setImage(UIImage(systemName: "arrow.turn.up.left"), for: .normal)
+            button.sizeToFit()
+            button.addTarget(self, action: #selector(popToRoot(sender:)), for: .touchUpInside)
+            let leftBtn = UIBarButtonItem(customView: button)
+            leftBtn.style = .plain
+            tabBarController?.navigationItem.leftBarButtonItem = leftBtn // this removes default navigation back button
 			return coordinator.presenter
 		})
 		tabBarController?.setViewControllers(presenters, animated: false)
@@ -65,4 +70,8 @@ extension TabBarCoordinator {
 		}
 		tabBarController?.selectedIndex = index
 	}
+    
+    @objc private func popToRoot(sender: UIBarButtonItem) {
+        //self.view.window!.rootViewController?.dismiss(animated: false, completion: nil)
+    }
 }

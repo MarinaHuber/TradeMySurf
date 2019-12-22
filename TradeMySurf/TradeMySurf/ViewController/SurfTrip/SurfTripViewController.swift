@@ -24,8 +24,8 @@ class SurfTripViewController: UIViewController {
         super.viewDidLoad()
         addCollectionView()
         configureCollectionView()
-        navigationItem.leftBarButtonItem = UIBarButtonItem(title: "< Start again",
-        style: .plain, target: self, action: #selector(popToRoot(sender:)))
+//        navigationItem.leftBarButtonItem = UIBarButtonItem(title: "< Start again",
+//        style: .plain, target: self, action: #selector(popToRoot(sender:)))
     }
     @objc private func popToRoot(sender: UIBarButtonItem) {
         self.view.window!.rootViewController?.dismiss(animated: false, completion: nil)
