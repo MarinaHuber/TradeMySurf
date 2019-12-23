@@ -12,11 +12,10 @@ import Foundation
 struct RecommendedTripArray {
 
 	var surfboardsBeginner: [Surfboard] = {
-        return [Surfboard(title: "The Beginner", volume: "40 L", weight: 40, weightUnit: ">", imageName: "1"),
-				Surfboard(title: "The Beginner", volume: "50 L", weight: 50, weightUnit: "<", imageName: "2"),
-				Surfboard(title: "The Carver", volume: "60 L", weight: 60, weightUnit: "<", imageName: "3"),
-				Surfboard(title: "The Fish", volume: "70 L", weight: 70, weightUnit: "<", imageName: "4"),
-				Surfboard(title: "The Shortboard", volume: "55 L", weight: 80, weightUnit: "<", imageName: "5")
+        return [Surfboard(title: "The Beginner", volume: "40 L", weight: 40, weightUnit: ">", imageName: "1.2"),
+				Surfboard(title: "The Beginner", volume: "50 L", weight: 50, weightUnit: "<", imageName: "2.2"),
+				Surfboard(title: "The Carver", volume: "60 L", weight: 60, weightUnit: "<", imageName: "3.2"),
+				Surfboard(title: "The Fish", volume: "70 L", weight: 70, weightUnit: "<", imageName: "4.2")
 			]
     }()
 	var surfboardsBeginnerInter: [Surfboard] = {
@@ -38,12 +37,11 @@ struct RecommendedTripArray {
 			]
     }()
 	var surfboardsAdvanced: [Surfboard] = {
-        return [Surfboard(title: "The Advanced", volume: "40 L", weight: 40, weightUnit: ">", imageName: "bg-splash"),
-				Surfboard(title: "The Advanced", volume: "50 L", weight: 50, weightUnit: "<", imageName: "bg-splash"),
-				Surfboard(title: "The Carver", volume: "60 L", weight: 60, weightUnit: "<", imageName: "bg-splash"),
-				Surfboard(title: "The Fish", volume: "70 L", weight: 70, weightUnit: "<", imageName: "bg-splash"),
-				Surfboard(title: "The Shortboard", volume: "55 L", weight: 80, weightUnit: "<", imageName: "bg-splash"),
-				Surfboard(title: "The Lighthouse", volume: "45 L", weight: 90, weightUnit: "<", imageName: "bg-splash")
+        return [Surfboard(title: "The Advanced", volume: "40 L", weight: 40, weightUnit: ">", imageName: "1"),
+				Surfboard(title: "The Advanced", volume: "50 L", weight: 50, weightUnit: "<", imageName: "2"),
+				Surfboard(title: "The Carver", volume: "60 L", weight: 60, weightUnit: "<", imageName: "3"),
+				Surfboard(title: "The Fish", volume: "70 L", weight: 70, weightUnit: "<", imageName: "4"),
+				Surfboard(title: "The Shortboard", volume: "55 L", weight: 80, weightUnit: "<", imageName: "5")
 			]
     }()
 	var surfboardsPro: [Surfboard] = {
