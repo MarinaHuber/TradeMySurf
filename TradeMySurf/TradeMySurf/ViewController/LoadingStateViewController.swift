@@ -19,18 +19,11 @@ class LoadingStateViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        loadAnimateView.frame = CGRect(x: 0, y: view.frame.size.height/2, width: view.frame.size.width, height: view.frame.size.height/2)
+        loadAnimateView.frame = CGRect(x: 0, y: view.frame.size.height/4, width: view.frame.size.width, height: view.frame.size.height/1.5)
         loadAnimateView.contentMode = .scaleAspectFit
         view.addSubview(loadAnimateView)
         loadAnimateView.play()
-        UIView.animate(withDuration: 0.5, delay: 0.4, options: .curveEaseIn, animations: {
-            self.loadAnimateView.play()
-
-        }, completion: { _ in
-            DispatchQueue.main.async {
-                self.delegate?.performScreenSwitch()
-            }
-        })
+        delegate?.performScreenSwitch()
     }
 }
 extension LoadingStateViewController: StoryboardProtocol {}

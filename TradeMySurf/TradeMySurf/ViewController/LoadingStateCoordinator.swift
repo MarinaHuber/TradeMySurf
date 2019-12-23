@@ -12,13 +12,12 @@ class LoadingStateCoordinator: NSObject, Coordinator {
 	internal var childCoordinators: [Coordinator]
 	internal var presenter: UINavigationController
 	let window: UIWindow
-	private var userSettup = UserDefaults.standard.didUserSetUp
 
 	init(window: UIWindow) {
 		self.window = window
 		childCoordinators = []
 		presenter = UINavigationController()
-         UINavigationBarAppearance().backgroundColor = UIColor.systemBlue
+        //TODO: makes navigation bar transparent extract in func
 		self.presenter.navigationBar.barTintColor = .clear
 		self.presenter.navigationBar.tintColor = .black
 		self.presenter.navigationBar.setBackgroundImage(UIImage(), for: UIBarPosition.any, barMetrics: UIBarMetrics.default)
@@ -32,23 +31,19 @@ class LoadingStateCoordinator: NSObject, Coordinator {
 		controller.delegate = self
 		}
 }
-
 extension LoadingStateCoordinator : LoadingViewControllerDelegate {
     func performScreenSwitch() {
-//        if UserDefaults.standard.selectedLevel != nil && UserDefaults.standard.surfingTime != nil {
-//            userSettup = true
-//            let mainTabCoordinator = TabBarCoordinator(window: window, tabBarController: UITabBarController())
-//            childCoordinators.append(mainTabCoordinator)
-//            window.rootViewController = mainTabCoordinator.tabBarController
-//            mainTabCoordinator.presenter.modalPresentationStyle = .fullScreen
-//            mainTabCoordinator.start()
-//        } else {
-            userSettup = false
+        if UserDefaults.standard.userWasHere == true {
+            let tabCoordinator: TabBarCoordinator = TabBarCoordinator(window: window, tabBarController: UITabBarController())
+            //addChildCoordinator(tabCoordinator)
+            window.rootViewController = tabCoordinator.tabBarController
+            tabCoordinator.start()
+
+        } else {
             let welcomeCoordinator = WelcomeCoordinator(window: window, presenter: presenter)
-            childCoordinators.append(welcomeCoordinator)
+            addChildCoordinator(welcomeCoordinator)
             window.rootViewController = welcomeCoordinator.presenter
-            //welcomeCoordinator.presenter.navigationItem.backBarButtonItem = nil
             welcomeCoordinator.start()
-  //      }
+        }
     }
 }

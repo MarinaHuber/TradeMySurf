@@ -24,9 +24,25 @@ class SurfTripViewController: UIViewController {
         super.viewDidLoad()
         addCollectionView()
         configureCollectionView()
-//        navigationItem.leftBarButtonItem = UIBarButtonItem(title: "< Start again",
-//        style: .plain, target: self, action: #selector(popToRoot(sender:)))
+        UserDefaults.standard.userWasHere = true
     }
+    
+    override func viewDidAppear(_ animated: Bool) {
+        super.viewDidAppear(true)
+        let button = UIButton(type: .system)
+        button.setImage(UIImage(systemName: "arrow.turn.up.left"), for: .normal)
+        button.sizeToFit()
+        button.addTarget(self, action: #selector(popToRoot(sender:)), for: .touchUpInside)
+        let leftBtn = UIBarButtonItem(customView: button)
+        leftBtn.style = .plain
+        navigationItem.leftBarButtonItem = leftBtn
+        
+    }
+     func viewDidDisappear() {
+        super.viewDidDisappear(true)
+        UserDefaults.standard.userWasHere = false
+    }
+    
     @objc private func popToRoot(sender: UIBarButtonItem) {
         self.view.window!.rootViewController?.dismiss(animated: false, completion: nil)
     }
