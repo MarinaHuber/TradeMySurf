@@ -22,10 +22,7 @@ final class TabBarCoordinator: NSObject, Coordinator {
 		self.tabBarController = tabBarController
 		childCoordinators = []
 		self.presenter = UINavigationController()
-        self.presenter.navigationBar.barTintColor = .white
-        self.presenter.navigationBar.tintColor = .black
-        self.presenter.navigationBar.setBackgroundImage(UIImage(), for: UIBarPosition.any, barMetrics: UIBarMetrics.default)
-	}
+    }
 	 func start() {
 		performGetTabBar()
 	}
@@ -38,16 +35,20 @@ final class TabBarCoordinator: NSObject, Coordinator {
 		})
 
 		let presenters: [UIViewController] = coordinators.map({ coordinator -> UIViewController in
-            coordinator.presenter.setNavigationBarHidden(true, animated: false)
-            let button = UIButton(type: .system)
-            button.setImage(UIImage(systemName: "arrow.turn.up.left"), for: .normal)
-            button.sizeToFit()
-            button.addTarget(self, action: #selector(popToRoot(sender:)), for: .touchUpInside)
-            let leftBtn = UIBarButtonItem(customView: button)
-            leftBtn.style = .plain
-            tabBarController?.navigationItem.leftBarButtonItem = leftBtn // this removes default navigation back button
+            if UserDefaults.standard.userWasHere == true {
+              coordinator.presenter.setNavigationBarHidden(false, animated: true)
+            } else {
+              coordinator.presenter.setNavigationBarHidden(true, animated: true)
+            }
 			return coordinator.presenter
 		})
+        let button = UIButton(type: .system)
+        button.setImage(UIImage(systemName: "arrow.turn.up.left"), for: .normal)
+        button.sizeToFit()
+        button.addTarget(self, action: #selector(popToRoot(sender:)), for: .touchUpInside)
+        let leftBtn = UIBarButtonItem(customView: button)
+        leftBtn.style = .plain
+        tabBarController?.navigationItem.leftBarButtonItem = leftBtn
 		tabBarController?.setViewControllers(presenters, animated: false)
 		selectTab(type: SurfTripCoordinator.self)
 	}
