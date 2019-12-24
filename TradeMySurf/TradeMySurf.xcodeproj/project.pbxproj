@@ -191,7 +191,6 @@
 		9C3F533B234BD7F900D5F65E /* Protocols */ = {
 			isa = PBXGroup;
 			children = (
-				9C3F533C234BD80E00D5F65E /* Coordinator.swift */,
 				9C53D5BF234C126600A3BD80 /* StoryboardProtocol.swift */,
 			);
 			path = Protocols;
@@ -388,6 +387,7 @@
 		9CC59F15234AA3B200F5ADD0 /* Coordinators */ = {
 			isa = PBXGroup;
 			children = (
+				9C3F533C234BD80E00D5F65E /* Coordinator.swift */,
 				9CC59F18234AA41600F5ADD0 /* TabBarCoordinator.swift */,
 			);
 			path = Coordinators;

@@ -22,3 +22,7 @@ final class SurfTripCoordinator: Coordinator {
 		presenter.pushViewController(viewController, animated: true)
 	}
 }
+
+extension SurfTripCoordinator : SurfViewControllerDelegate {
+    func performSwitchToWelcome() { }    
+}

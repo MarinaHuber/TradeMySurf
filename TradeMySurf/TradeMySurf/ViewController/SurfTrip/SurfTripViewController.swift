@@ -9,8 +9,13 @@
 import Foundation
 import UIKit
 
+protocol SurfViewControllerDelegate: class {
+    func performSwitchToWelcome()
+}
+
 class SurfTripViewController: UIViewController {
 
+    weak var delegate: SurfViewControllerDelegate?
 	private var selectedLevel = UserDefaults.standard.selectedLevel
 	private var selectedDate = UserDefaults.standard.surfingTime
 	private weak var coordinator: SurfTripCoordinator?
@@ -19,32 +24,32 @@ class SurfTripViewController: UIViewController {
 	private var sections: [TripSection] = []
     private(set) var dataSource: UICollectionViewDiffableDataSource<TripSection, TripItem>! // retain data source!
     private(set) var appData: RecommendedTripArray = RecommendedTripArray()
+    lazy var leftBtn: UIBarButtonItem = {
+        let button = UIButton(type: .system)
+        button.setImage(UIImage(systemName: "arrow.turn.up.left"), for: .normal)
+        button.sizeToFit()
+        button.addTarget(self,
+                         action: #selector(self.popToRoot(_:)),
+                         for: .touchUpInside)
+      return UIBarButtonItem(customView: button)
+    }()
 
     override func viewDidLoad() {
         super.viewDidLoad()
         addCollectionView()
         configureCollectionView()
-        UserDefaults.standard.userWasHere = true
+       // UserDefaults.standard.userWasHere = true
     }
-    
     override func viewDidAppear(_ animated: Bool) {
         super.viewDidAppear(true)
-        let button = UIButton(type: .system)
-        button.setImage(UIImage(systemName: "arrow.turn.up.left"), for: .normal)
-        button.sizeToFit()
-        button.addTarget(self, action: #selector(popToRoot(sender:)), for: .touchUpInside)
-        let leftBtn = UIBarButtonItem(customView: button)
-        leftBtn.style = .plain
         navigationItem.leftBarButtonItem = leftBtn
-        
     }
      func viewDidDisappear() {
         super.viewDidDisappear(true)
-        UserDefaults.standard.userWasHere = false
+        //UserDefaults.standard.userWasHere = false
     }
-    
-    @objc private func popToRoot(sender: UIBarButtonItem) {
-        self.view.window!.rootViewController?.dismiss(animated: false, completion: nil)
+    @objc func popToRoot(_ sender: UIBarButtonItem) {
+        delegate?.performSwitchToWelcome()
     }
 }
 

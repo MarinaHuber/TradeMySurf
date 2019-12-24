@@ -16,7 +16,16 @@ final class TabBarCoordinator: NSObject, Coordinator {
 
 	internal var presenter: UINavigationController
 	internal var tabBarController: UITabBarController?
-	internal var childCoordinators: [Coordinator]	
+	internal var childCoordinators: [Coordinator]
+    lazy var leftBtn: UIBarButtonItem = {
+        let button = UIButton(type: .system)
+        button.setImage(UIImage(systemName: "arrow.turn.up.left"), for: .normal)
+        button.sizeToFit()
+        button.addTarget(self,
+                         action: #selector(self.popToRoot(_:)),
+                         for: .touchUpInside)
+      return UIBarButtonItem(customView: button)
+    }()
 
 	init(window: UIWindow, tabBarController: UITabBarController) {
 		self.tabBarController = tabBarController
@@ -42,11 +51,13 @@ final class TabBarCoordinator: NSObject, Coordinator {
             }
 			return coordinator.presenter
 		})
-        let button = UIButton(type: .system)
-        button.setImage(UIImage(systemName: "arrow.turn.up.left"), for: .normal)
-        button.sizeToFit()
-        button.addTarget(self, action: #selector(popToRoot(sender:)), for: .touchUpInside)
-        let leftBtn = UIBarButtonItem(customView: button)
+//        let button = UIButton(type: .system)
+//        button.setImage(UIImage(systemName: "arrow.turn.up.left"), for: .normal)
+//        button.sizeToFit()
+//        button.addTarget(self,
+//                         action: #selector(TabBarCoordinator.popToRoot(_:)),
+//                         for: .touchUpInside)
+//        let leftBtn = UIBarButtonItem(customView: button)
         leftBtn.style = .plain
         tabBarController?.navigationItem.leftBarButtonItem = leftBtn
 		tabBarController?.setViewControllers(presenters, animated: false)
@@ -70,9 +81,9 @@ extension TabBarCoordinator {
 			return
 		}
 		tabBarController?.selectedIndex = index
-	}
-    
-    @objc private func popToRoot(sender: UIBarButtonItem) {
+}
+    @objc func popToRoot(_ sender: UIBarButtonItem) {
+        tabBarController?.navigationController!.popToRootViewController(animated: true)
         //self.view.window!.rootViewController?.dismiss(animated: false, completion: nil)
     }
 }
