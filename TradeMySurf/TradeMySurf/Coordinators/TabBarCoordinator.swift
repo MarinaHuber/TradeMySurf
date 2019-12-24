@@ -51,13 +51,6 @@ final class TabBarCoordinator: NSObject, Coordinator {
             }
 			return coordinator.presenter
 		})
-//        let button = UIButton(type: .system)
-//        button.setImage(UIImage(systemName: "arrow.turn.up.left"), for: .normal)
-//        button.sizeToFit()
-//        button.addTarget(self,
-//                         action: #selector(TabBarCoordinator.popToRoot(_:)),
-//                         for: .touchUpInside)
-//        let leftBtn = UIBarButtonItem(customView: button)
         leftBtn.style = .plain
         tabBarController?.navigationItem.leftBarButtonItem = leftBtn
 		tabBarController?.setViewControllers(presenters, animated: false)

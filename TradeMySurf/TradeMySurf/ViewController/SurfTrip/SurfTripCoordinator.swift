@@ -24,5 +24,6 @@ final class SurfTripCoordinator: Coordinator {
 }
 
 extension SurfTripCoordinator : SurfViewControllerDelegate {
-    func performSwitchToWelcome() { }    
+    func performSwitchToWelcome() { }
+    //TO DO: https://irace.me/navigation-coordinators
 }

@@ -35,15 +35,15 @@ extension LoadingStateCoordinator : LoadingViewControllerDelegate {
     func performScreenSwitch() {
         if UserDefaults.standard.userWasHere == true {
             let tabCoordinator: TabBarCoordinator = TabBarCoordinator(window: window, tabBarController: UITabBarController())
-            //addChildCoordinator(tabCoordinator)
             window.rootViewController = tabCoordinator.tabBarController
             tabCoordinator.start()
+            addChildCoordinator(tabCoordinator)
 
         } else {
             let welcomeCoordinator = WelcomeCoordinator(window: window, presenter: presenter)
-            addChildCoordinator(welcomeCoordinator)
             window.rootViewController = welcomeCoordinator.presenter
             welcomeCoordinator.start()
+            addChildCoordinator(welcomeCoordinator)
         }
     }
 }
