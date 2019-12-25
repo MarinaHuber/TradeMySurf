@@ -14,7 +14,7 @@ protocol LoadingViewControllerDelegate: class {
 }
 
 class LoadingStateViewController: UIViewController {
-	weak var delegate: LoadingViewControllerDelegate?
+    weak var delegate: LoadingViewControllerDelegate?
 	let loadAnimateView = AnimationView(name: "loader_animation")
 
     override func viewDidLoad() {

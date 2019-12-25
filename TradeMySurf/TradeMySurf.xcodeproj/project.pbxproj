@@ -130,7 +130,7 @@
 		9C90A232238897A400E735D3 /* air.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = air.json; sourceTree = "<group>"; };
 		9C90BC542386BD020090E346 /* Enums.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Enums.swift; sourceTree = "<group>"; };
 		9C990AAA2398114800B17AE5 /* LoadingStateViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = LoadingStateViewController.swift; path = TradeMySurf/ViewController/LoadingStateViewController.swift; sourceTree = SOURCE_ROOT; };
-		9C990AAC2398119200B17AE5 /* LoadingStateCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoadingStateCoordinator.swift; sourceTree = "<group>"; };
+		9C990AAC2398119200B17AE5 /* LoadingStateCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoadingStateCoordinator.swift; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.swift; };
 		9C9F836B2366BDAA00FA4F41 /* TabBarCoordinatorTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabBarCoordinatorTests.swift; sourceTree = "<group>"; };
 		9CBDE2972395A9E600317F51 /* TimeHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TimeHelper.swift; sourceTree = "<group>"; };
 		9CC59F18234AA41600F5ADD0 /* TabBarCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabBarCoordinator.swift; sourceTree = "<group>"; };
@@ -189,6 +189,7 @@
 		9C3F533B234BD7F900D5F65E /* Protocols */ = {
 			isa = PBXGroup;
 			children = (
+				9C3F533C234BD80E00D5F65E /* Coordinator.swift */,
 				9C53D5BF234C126600A3BD80 /* StoryboardProtocol.swift */,
 			);
 			path = Protocols;
@@ -384,7 +385,6 @@
 		9CC59F15234AA3B200F5ADD0 /* Coordinators */ = {
 			isa = PBXGroup;
 			children = (
-				9C3F533C234BD80E00D5F65E /* Coordinator.swift */,
 				9CC59F18234AA41600F5ADD0 /* TabBarCoordinator.swift */,
 			);
 			path = Coordinators;

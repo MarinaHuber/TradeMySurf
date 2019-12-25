@@ -19,11 +19,13 @@ final class SurfTripCoordinator: Coordinator {
 	func start() {
 		let storyboard: UIStoryboard = UIStoryboard(name: Constants.Storyboards.surfTripViewController, bundle: nil)
 		let viewController: SurfTripViewController = SurfTripViewController.instantiate(from: storyboard)
+        //when pushing from welcome rootVC
+        presenter.isNavigationBarHidden = true
 		presenter.pushViewController(viewController, animated: true)
 	}
 }
-
+     // MARK: - LoadingViewControllerDelegate
 extension SurfTripCoordinator : SurfViewControllerDelegate {
-    func performSwitchToWelcome() { }
+    func tabBarCoordinatorDidDismiss() { }
     //TO DO: https://irace.me/navigation-coordinators
 }

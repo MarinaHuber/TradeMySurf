@@ -10,29 +10,19 @@ import Foundation
 import UIKit
 
 protocol SurfViewControllerDelegate: class {
-    func performSwitchToWelcome()
+    func tabBarCoordinatorDidDismiss()
 }
 
 class SurfTripViewController: UIViewController {
 
-    weak var delegate: SurfViewControllerDelegate?
 	private var selectedLevel = UserDefaults.standard.selectedLevel
 	private var selectedDate = UserDefaults.standard.surfingTime
-	private weak var coordinator: SurfTripCoordinator?
 
     private(set) var collectionView: UICollectionView!
 	private var sections: [TripSection] = []
     private(set) var dataSource: UICollectionViewDiffableDataSource<TripSection, TripItem>! // retain data source!
     private(set) var appData: RecommendedTripArray = RecommendedTripArray()
-    lazy var leftBtn: UIBarButtonItem = {
-        let button = UIButton(type: .system)
-        button.setImage(UIImage(systemName: "arrow.turn.up.left"), for: .normal)
-        button.sizeToFit()
-        button.addTarget(self,
-                         action: #selector(self.popToRoot(_:)),
-                         for: .touchUpInside)
-      return UIBarButtonItem(customView: button)
-    }()
+
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -41,16 +31,13 @@ class SurfTripViewController: UIViewController {
        // UserDefaults.standard.userWasHere = true
     }
     override func viewDidAppear(_ animated: Bool) {
-        super.viewDidAppear(true)
-        navigationItem.leftBarButtonItem = leftBtn
+        super.viewDidAppear(animated)
     }
-     func viewDidDisappear() {
-        super.viewDidDisappear(true)
+    override func viewDidDisappear(_ animated: Bool) {
+        super.viewDidDisappear(animated)
         //UserDefaults.standard.userWasHere = false
     }
-    @objc func popToRoot(_ sender: UIBarButtonItem) {
-        delegate?.performSwitchToWelcome()
-    }
+
 }
 
 private extension SurfTripViewController {

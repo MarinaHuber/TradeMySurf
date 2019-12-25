@@ -22,6 +22,7 @@ final class SavedTripsCoordinator: Coordinator {
 	func start() {
 		let storyboard: UIStoryboard = UIStoryboard(name: Constants.Storyboards.savedTripsViewController, bundle: nil)
 		let viewController: SavedTripsViewController = SavedTripsViewController.instantiate(from: storyboard)
+        presenter.isNavigationBarHidden = true
 		presenter.pushViewController(viewController, animated: true)
 	}
 }
