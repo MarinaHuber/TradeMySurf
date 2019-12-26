@@ -13,15 +13,15 @@ import UIKit
 // *******************************************************************************************
 
 final class TabBarCoordinator: NSObject, Coordinator {
-
 	internal var presenter: UINavigationController
 	internal var tabBarController: UITabBarController?
-	internal var childCoordinators: [Coordinator]	
+	internal var childCoordinators: [Coordinator]
 
 	init(window: UIWindow, tabBarController: UITabBarController) {
 		self.tabBarController = tabBarController
 		childCoordinators = []
 		self.presenter = UINavigationController()
+
     }
 	 func start() {
 		performGetTabBar()
@@ -35,20 +35,9 @@ final class TabBarCoordinator: NSObject, Coordinator {
 		})
 
 		let presenters: [UIViewController] = coordinators.map({ coordinator -> UIViewController in
-            if UserDefaults.standard.userWasHere == true {
-              coordinator.presenter.setNavigationBarHidden(false, animated: true)
-            } else {
-              coordinator.presenter.setNavigationBarHidden(true, animated: true)
-            }
 			return coordinator.presenter
 		})
-        let button = UIButton(type: .system)
-        button.setImage(UIImage(systemName: "arrow.turn.up.left"), for: .normal)
-        button.sizeToFit()
-        button.addTarget(self, action: #selector(popToRoot(sender:)), for: .touchUpInside)
-        let leftBtn = UIBarButtonItem(customView: button)
-        leftBtn.style = .plain
-        tabBarController?.navigationItem.leftBarButtonItem = leftBtn
+
 		tabBarController?.setViewControllers(presenters, animated: false)
 		selectTab(type: SurfTripCoordinator.self)
 	}
@@ -59,9 +48,15 @@ final class TabBarCoordinator: NSObject, Coordinator {
 		let sellCoordinator: SavedTripsCoordinator = SavedTripsCoordinator(presenter: UINavigationController())
 		return [calculatorCoordinator, tripCoordinator, sellCoordinator]
 	}
+    deinit {
+        
+        self.childCoordinators.removeAll()
+        print("removing tabbar comlete")
+    }
+
 }
 
-extension TabBarCoordinator {
+extension TabBarCoordinator: UINavigationControllerDelegate {
 
 	func selectTab<T: Coordinator>(type _: T.Type) {
 		guard let index = childCoordinators.firstIndex(where: { coordinator in
@@ -70,9 +65,14 @@ extension TabBarCoordinator {
 			return
 		}
 		tabBarController?.selectedIndex = index
-	}
-    
-    @objc private func popToRoot(sender: UIBarButtonItem) {
-        //self.view.window!.rootViewController?.dismiss(animated: false, completion: nil)
+ }
+
+}
+
+extension TabBarCoordinator: SurfViewControllerDelegate {
+    //never called delegate not set
+    func childDidFinish() {
+       childCoordinators.removeAll()
     }
+
 }

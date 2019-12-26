@@ -9,7 +9,7 @@
 /* Begin PBXBuildFile section */
 		9C193AFB23A2ACA7000DE1AB /* coin-wallet.json in Resources */ = {isa = PBXBuildFile; fileRef = 9C193AFA23A2ACA7000DE1AB /* coin-wallet.json */; };
 		9C3C703B239B154A00B721CC /* Surfs.mlmodel in Sources */ = {isa = PBXBuildFile; fileRef = 9C3C703A239B154900B721CC /* Surfs.mlmodel */; };
-		9C3F533D234BD80E00D5F65E /* Coordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C3F533C234BD80E00D5F65E /* Coordinator.swift */; };
+		9C425FA823B4A3C3006A48DE /* CoordinatedNavigationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C425FA723B4A3C2006A48DE /* CoordinatedNavigationController.swift */; };
 		9C45E661234D238F0054A5FD /* SurfTripViewController.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9C45E660234D238E0054A5FD /* SurfTripViewController.storyboard */; };
 		9C467C67234F2A7D009F4D58 /* Surfboard.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C467C66234F2A7D009F4D58 /* Surfboard.swift */; };
 		9C4C54742349C28500FB2653 /* SavedTripsViewController.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9C4C54732349C28500FB2653 /* SavedTripsViewController.storyboard */; };
@@ -53,9 +53,9 @@
 		9C990AAD2398119200B17AE5 /* LoadingStateCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C990AAC2398119200B17AE5 /* LoadingStateCoordinator.swift */; };
 		9C9F836C2366BDAA00FA4F41 /* TabBarCoordinatorTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C9F836B2366BDAA00FA4F41 /* TabBarCoordinatorTests.swift */; };
 		9CBDE2982395A9E600317F51 /* TimeHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9CBDE2972395A9E600317F51 /* TimeHelper.swift */; };
-		9CC59F17234AA3EF00F5ADD0 /* AppCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9CC59F16234AA3EF00F5ADD0 /* AppCoordinator.swift */; };
 		9CC59F19234AA41600F5ADD0 /* TabBarCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9CC59F18234AA41600F5ADD0 /* TabBarCoordinator.swift */; };
 		9CC59F1B234AA87700F5ADD0 /* WelcomeCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9CC59F1A234AA87700F5ADD0 /* WelcomeCoordinator.swift */; };
+		9CDFA4DF23B2C1A1002EB44B /* Coordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C3F533C234BD80E00D5F65E /* Coordinator.swift */; };
 		9CFDFD36236718E400760F25 /* CoordinatorTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9CFDFD35236718E400760F25 /* CoordinatorTests.swift */; };
 		9CFDFD3D2367221C00760F25 /* AddDateViewController.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9CFDFD3C2367221C00760F25 /* AddDateViewController.storyboard */; };
 		9CFDFD3F2367226C00760F25 /* AddDateViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9CFDFD3E2367226C00760F25 /* AddDateViewController.swift */; };
@@ -86,6 +86,7 @@
 		9C193AFA23A2ACA7000DE1AB /* coin-wallet.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = "coin-wallet.json"; sourceTree = "<group>"; };
 		9C3C703A239B154900B721CC /* Surfs.mlmodel */ = {isa = PBXFileReference; lastKnownFileType = file.mlmodel; path = Surfs.mlmodel; sourceTree = "<group>"; };
 		9C3F533C234BD80E00D5F65E /* Coordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Coordinator.swift; sourceTree = "<group>"; };
+		9C425FA723B4A3C2006A48DE /* CoordinatedNavigationController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoordinatedNavigationController.swift; sourceTree = "<group>"; };
 		9C45E660234D238E0054A5FD /* SurfTripViewController.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = SurfTripViewController.storyboard; sourceTree = "<group>"; };
 		9C467C66234F2A7D009F4D58 /* Surfboard.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Surfboard.swift; sourceTree = "<group>"; };
 		9C4C54732349C28500FB2653 /* SavedTripsViewController.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = SavedTripsViewController.storyboard; sourceTree = "<group>"; };
@@ -131,10 +132,9 @@
 		9C90A232238897A400E735D3 /* air.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = air.json; sourceTree = "<group>"; };
 		9C90BC542386BD020090E346 /* Enums.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Enums.swift; sourceTree = "<group>"; };
 		9C990AAA2398114800B17AE5 /* LoadingStateViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = LoadingStateViewController.swift; path = TradeMySurf/ViewController/LoadingStateViewController.swift; sourceTree = SOURCE_ROOT; };
-		9C990AAC2398119200B17AE5 /* LoadingStateCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoadingStateCoordinator.swift; sourceTree = "<group>"; };
+		9C990AAC2398119200B17AE5 /* LoadingStateCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoadingStateCoordinator.swift; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.swift; };
 		9C9F836B2366BDAA00FA4F41 /* TabBarCoordinatorTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabBarCoordinatorTests.swift; sourceTree = "<group>"; };
 		9CBDE2972395A9E600317F51 /* TimeHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TimeHelper.swift; sourceTree = "<group>"; };
-		9CC59F16234AA3EF00F5ADD0 /* AppCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppCoordinator.swift; sourceTree = "<group>"; };
 		9CC59F18234AA41600F5ADD0 /* TabBarCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabBarCoordinator.swift; sourceTree = "<group>"; };
 		9CC59F1A234AA87700F5ADD0 /* WelcomeCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WelcomeCoordinator.swift; sourceTree = "<group>"; };
 		9CFDFD35236718E400760F25 /* CoordinatorTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoordinatorTests.swift; sourceTree = "<group>"; };
@@ -261,7 +261,6 @@
 				9CC59F15234AA3B200F5ADD0 /* Coordinators */,
 				9C76F09F2349471000853FD9 /* ViewController */,
 				9C76F09E234946D500853FD9 /* Resources */,
-				9CC59F16234AA3EF00F5ADD0 /* AppCoordinator.swift */,
 				9C3C703A239B154900B721CC /* Surfs.mlmodel */,
 				9C5B644B232A506C000727E6 /* AppDelegate.swift */,
 				9C71A14B2348946C00A67323 /* Info.plist */,
@@ -381,6 +380,7 @@
 				9C62416D238AE68E00A4B7C9 /* ReuseIdentifierHelper.swift */,
 				9CBDE2972395A9E600317F51 /* TimeHelper.swift */,
 				9C8F330123994CDD0070751F /* FontHelper.swift */,
+				9C425FA723B4A3C2006A48DE /* CoordinatedNavigationController.swift */,
 			);
 			path = Helpers;
 			sourceTree = "<group>";
@@ -628,16 +628,15 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				9CDFA4DF23B2C1A1002EB44B /* Coordinator.swift in Sources */,
 				9CBDE2982395A9E600317F51 /* TimeHelper.swift in Sources */,
 				9C53D5C6234C145B00A3BD80 /* SavedTripsCoordinator.swift in Sources */,
 				9C69CE76234CD9B9003E386F /* Location.swift in Sources */,
 				9C53D5C2234C142A00A3BD80 /* CalculatorCoordinator.swift in Sources */,
 				9C467C67234F2A7D009F4D58 /* Surfboard.swift in Sources */,
-				9CC59F17234AA3EF00F5ADD0 /* AppCoordinator.swift in Sources */,
 				9C990AAB2398114800B17AE5 /* LoadingStateViewController.swift in Sources */,
 				9CC59F1B234AA87700F5ADD0 /* WelcomeCoordinator.swift in Sources */,
 				9C6F64CD2379D2A200B0224D /* AddLevelViewCoordinator.swift in Sources */,
-				9C3F533D234BD80E00D5F65E /* Coordinator.swift in Sources */,
 				9C5B6450232A506C000727E6 /* PriceCalculatorViewController.swift in Sources */,
 				9CFDFD412367228300760F25 /* AddLevelViewController.swift in Sources */,
 				9CC59F19234AA41600F5ADD0 /* TabBarCoordinator.swift in Sources */,
@@ -657,6 +656,7 @@
 				9C8F330223994CDD0070751F /* FontHelper.swift in Sources */,
 				9CFDFD3F2367226C00760F25 /* AddDateViewController.swift in Sources */,
 				9C76F09623493EDA00853FD9 /* SurfTripViewController.swift in Sources */,
+				9C425FA823B4A3C3006A48DE /* CoordinatedNavigationController.swift in Sources */,
 				9C62417C239156C200A4B7C9 /* UserDefaultsHelper.swift in Sources */,
 				9C990AAD2398119200B17AE5 /* LoadingStateCoordinator.swift in Sources */,
 				9C90BC552386BD020090E346 /* Enums.swift in Sources */,

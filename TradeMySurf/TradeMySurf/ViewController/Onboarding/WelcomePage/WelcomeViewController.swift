@@ -17,8 +17,7 @@ protocol WelcomeViewControllerDelegate: class {
 class WelcomeViewController: UIViewController, CAAnimationDelegate {
     @IBOutlet weak var startButton: UIButton!
     @IBOutlet weak var welcomeLabel: UILabel!
-    @IBOutlet weak var introLabel: UILabel!
-    
+    @IBOutlet weak var introLabel: UILabel!    
 	weak var delegate: WelcomeViewControllerDelegate?
 	weak var coordinator: TabBarCoordinator?
     private var firstTime: Bool?

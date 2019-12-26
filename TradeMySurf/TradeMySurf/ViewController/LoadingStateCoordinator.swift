@@ -8,41 +8,47 @@
 
 import UIKit
 
-class LoadingStateCoordinator: NSObject, Coordinator {
-	internal var childCoordinators: [Coordinator]
-	internal var presenter: UINavigationController
-	let window: UIWindow
-
+final class LoadingStateCoordinator: NSObject, Coordinator {
+    // MARK: - Inputs
+    var childCoordinators: [Coordinator]
+    var presenter: UINavigationController
+	private let window: UIWindow
+    // MARK: - Initialization
 	init(window: UIWindow) {
 		self.window = window
 		childCoordinators = []
 		presenter = UINavigationController()
-        //TODO: makes navigation bar transparent extract in func
+      // TODO: makes navigation bar transparent extract in func
 		self.presenter.navigationBar.barTintColor = .clear
 		self.presenter.navigationBar.tintColor = .black
 		self.presenter.navigationBar.setBackgroundImage(UIImage(), for: UIBarPosition.any, barMetrics: UIBarMetrics.default)
 		self.presenter.navigationBar.shadowImage = UIImage()
 		self.presenter.navigationBar.titleTextAttributes = [.foregroundColor : UIColor.black as Any]
 	}
-
+    // MARK: - Coordinator
 	 func start() {
 		let controller: LoadingStateViewController = LoadingStateViewController.instantiate()
 		window.rootViewController = controller
 		controller.delegate = self
 		}
+
+
 }
+    // MARK: - LoadingViewControllerDelegate
 extension LoadingStateCoordinator : LoadingViewControllerDelegate {
     func performScreenSwitch() {
-        if UserDefaults.standard.userWasHere == true {
+        if UserDefaults.standard.userWasHere == false {
             let tabCoordinator: TabBarCoordinator = TabBarCoordinator(window: window, tabBarController: UITabBarController())
-            //addChildCoordinator(tabCoordinator)
-            window.rootViewController = tabCoordinator.tabBarController
+            window.rootViewController = presenter
+            presenter.setNavigationBarHidden(true, animated: true)
+            addChildCoordinator(tabCoordinator)
             tabCoordinator.start()
+            presenter.setViewControllers([tabCoordinator.tabBarController!], animated: true)
 
         } else {
             let welcomeCoordinator = WelcomeCoordinator(window: window, presenter: presenter)
-            addChildCoordinator(welcomeCoordinator)
             window.rootViewController = welcomeCoordinator.presenter
+            addChildCoordinator(welcomeCoordinator)
             welcomeCoordinator.start()
         }
     }

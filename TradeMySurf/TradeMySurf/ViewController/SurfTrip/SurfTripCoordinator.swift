@@ -6,12 +6,13 @@
 import UIKit
 
 final class SurfTripCoordinator: Coordinator {
-	var coordinator: SurfTripCoordinator?
+	weak var coordinator: TabBarCoordinator?
 	internal var presenter: UINavigationController
 	internal var childCoordinators: [Coordinator]
 
 	init(presenter: UINavigationController) {
 		self.presenter = presenter
+       // presenter.setNavigationBarHidden(true, animated: true)
 		childCoordinators = []
 		presenter.tabBarItem = UITabBarItem(title: "RECOMMENDED", image: nil, selectedImage: nil)
 	}
@@ -22,3 +23,23 @@ final class SurfTripCoordinator: Coordinator {
 		presenter.pushViewController(viewController, animated: true)
 	}
 }
+     // MARK: - LoadingViewControllerDelegate
+//extension SurfTripCoordinator : SurfViewControllerDelegate {
+//    
+//    //Coordinators should always be classes so we can use ===
+//    func childDidFinish() {
+//    let coordinatorTab: TabBarCoordinator = TabBarCoordinator(window: UIWindow(), tabBarController: UITabBarController())
+//        coordinatorTab.childCoordinators.removeAll()
+////       for (index, coordinator) in childCoordinators.enumerated() {
+////            if coordinator === coordinatorTab {
+////               childCoordinators.remove(at: index)
+////                break
+////            }
+////        }
+//    }
+////   func tabBarCoordinatorDidDismiss() {
+////        removeChildCoordinator(coordinator!)
+////    }
+//    //TO DO: https://irace.me/navigation-coordinators
+//    //view.window?.rootViewController?.dismiss(animated: true, completion: nil)
+//}

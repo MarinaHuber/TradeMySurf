@@ -31,7 +31,7 @@ extension Coordinator {
 
      - Parameter childCoordinator: The coordinator to release.
      */
-
+// removes only one child
     func removeChildCoordinator(_ coordinator: Coordinator) {
 		if let idx = childCoordinators.firstIndex(where: { $0 === coordinator }) {
             childCoordinators.remove(at: idx)

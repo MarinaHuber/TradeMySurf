@@ -10,7 +10,6 @@ import Foundation
 import UIKit
 
  class WelcomeCoordinator: NSObject, Coordinator {
-
 	internal var presenter: UINavigationController
 	var childCoordinators: [Coordinator]
 

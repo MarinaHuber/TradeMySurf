@@ -9,11 +9,25 @@
 import Foundation
 import UIKit
 
+protocol SurfViewControllerDelegate: class {
+    func childDidFinish()
+}
+
 class SurfTripViewController: UIViewController {
+    weak var delegate: SurfViewControllerDelegate?
+   // var coordinator: TabBarCoordinator?
+    lazy var leftBtn: UIBarButtonItem = {
+        let button = UIButton(type: .system)
+        button.setImage(UIImage(systemName: "arrow.turn.up.left"), for: .normal)
+        button.sizeToFit()
+        button.addTarget(self,
+                         action: #selector(self.popToRoot(_:)),
+                         for: .touchUpInside)
+        return UIBarButtonItem(customView: button)
+    }()
 
 	private var selectedLevel = UserDefaults.standard.selectedLevel
 	private var selectedDate = UserDefaults.standard.surfingTime
-	private weak var coordinator: SurfTripCoordinator?
 
     private(set) var collectionView: UICollectionView!
 	private var sections: [TripSection] = []
@@ -24,28 +38,26 @@ class SurfTripViewController: UIViewController {
         super.viewDidLoad()
         addCollectionView()
         configureCollectionView()
-        UserDefaults.standard.userWasHere = true
     }
-    
     override func viewDidAppear(_ animated: Bool) {
-        super.viewDidAppear(true)
-        let button = UIButton(type: .system)
-        button.setImage(UIImage(systemName: "arrow.turn.up.left"), for: .normal)
-        button.sizeToFit()
-        button.addTarget(self, action: #selector(popToRoot(sender:)), for: .touchUpInside)
-        let leftBtn = UIBarButtonItem(customView: button)
-        leftBtn.style = .plain
-        navigationItem.leftBarButtonItem = leftBtn
-        
+        super.viewDidAppear(animated)
+        self.navigationItem.leftBarButtonItem = leftBtn
     }
-     func viewDidDisappear() {
-        super.viewDidDisappear(true)
-        UserDefaults.standard.userWasHere = false
+    override func viewDidDisappear(_ animated: Bool) {
+        super.viewDidDisappear(animated)
+        //UserDefaults.standard.userWasHere = false
+    }    
+    @objc func popToRoot(_ sender: UIBarButtonItem) {
+        if UserDefaults.standard.userWasHere == false {
+        let storyboard: UIStoryboard = UIStoryboard(name: Constants.Storyboards.welcomeViewCoordinator, bundle: nil)
+        let controller: WelcomeViewController = WelcomeViewController.instantiate(from: storyboard)
+        delegate?.childDidFinish()
+            self.view.window?.rootViewController?.show(controller, sender: nil)
+        } else {
+           self.view.window?.rootViewController?.dismiss(animated: true, completion: nil)
+        }
     }
-    
-    @objc private func popToRoot(sender: UIBarButtonItem) {
-        self.view.window!.rootViewController?.dismiss(animated: false, completion: nil)
-    }
+
 }
 
 private extension SurfTripViewController {
