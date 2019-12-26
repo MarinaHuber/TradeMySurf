@@ -7,16 +7,16 @@
       <BreakpointProxy
          BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
          <BreakpointContent
-            uuid = "038B640A-5D6C-4DCE-BA42-BB00B98E3EC7"
+            uuid = "6D81272D-3CBF-4A66-9C12-CF744D7D5144"
             shouldBeEnabled = "Yes"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "TradeMySurf/ViewController/SurfTrip/SurfTripCoordinator.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "31"
-            endingLineNumber = "31"
-            landmarkName = "childDidFinish(_:)"
+            startingLineNumber = "35"
+            endingLineNumber = "35"
+            landmarkName = "childDidFinish()"
             landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>

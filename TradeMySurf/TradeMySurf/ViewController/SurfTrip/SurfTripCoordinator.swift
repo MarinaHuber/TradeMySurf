@@ -20,18 +20,21 @@ final class SurfTripCoordinator: Coordinator {
 	func start() {
 		let storyboard: UIStoryboard = UIStoryboard(name: Constants.Storyboards.surfTripViewController, bundle: nil)
 		let viewController: SurfTripViewController = SurfTripViewController.instantiate(from: storyboard)
+        viewController.delegate = self
 		presenter.pushViewController(viewController, animated: true)
 	}
 }
      // MARK: - LoadingViewControllerDelegate
 extension SurfTripCoordinator : SurfViewControllerDelegate {
     //Coordinators should always be classes so we can use ===
-    func childDidFinish(_ child: Coordinator?) {
-        for (index, coordinator) in childCoordinators.enumerated() {
-            if coordinator === child {
-                childCoordinators.remove(at: index)
-                break
-            }
+    func childDidFinish() {
+        let coordinatorTab: TabBarCoordinator = TabBarCoordinator(window: UIWindow(), tabBarController: UITabBarController())
+        removeChildCoordinator(coordinatorTab)
+       for (index, coordinator) in childCoordinators.enumerated() {
+//            if coordinator === child {
+               childCoordinators.remove(at: index)
+//                break
+//            }
         }
     }
 //   func tabBarCoordinatorDidDismiss() {

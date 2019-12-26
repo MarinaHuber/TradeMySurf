@@ -10,12 +10,12 @@ import Foundation
 import UIKit
 
 protocol SurfViewControllerDelegate: class {
-    func childDidFinish(_: Coordinator?)
+    func childDidFinish()
 }
 
 class SurfTripViewController: UIViewController {
     weak var delegate: SurfViewControllerDelegate?
-    private (set) var coordinator: TabBarCoordinator?
+   // var coordinator: TabBarCoordinator?
     lazy var leftBtn: UIBarButtonItem = {
         let button = UIButton(type: .system)
         button.setImage(UIImage(systemName: "arrow.turn.up.left"), for: .normal)
@@ -51,7 +51,7 @@ class SurfTripViewController: UIViewController {
         if UserDefaults.standard.userWasHere == false {
         let storyboard: UIStoryboard = UIStoryboard(name: Constants.Storyboards.welcomeViewCoordinator, bundle: nil)
         let controller: WelcomeViewController = WelcomeViewController.instantiate(from: storyboard)
-            delegate?.childDidFinish(coordinator!)
+        delegate?.childDidFinish()
         navigationController?.setViewControllers([controller], animated: true)
         } else {
            self.view.window?.rootViewController?.dismiss(animated: true, completion: nil)

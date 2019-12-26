@@ -33,7 +33,7 @@ extension Coordinator {
      */
 
     func removeChildCoordinator(_ coordinator: Coordinator) {
-		if let idx = childCoordinators.firstIndex(where: { $0 === coordinator }) {
+		if let idx = childCoordinators.enumerated(where: { $0 === coordinator }) {
             childCoordinators.remove(at: idx)
         }
 	}
