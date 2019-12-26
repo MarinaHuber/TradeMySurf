@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		9C193AFB23A2ACA7000DE1AB /* coin-wallet.json in Resources */ = {isa = PBXBuildFile; fileRef = 9C193AFA23A2ACA7000DE1AB /* coin-wallet.json */; };
 		9C3C703B239B154A00B721CC /* Surfs.mlmodel in Sources */ = {isa = PBXBuildFile; fileRef = 9C3C703A239B154900B721CC /* Surfs.mlmodel */; };
+		9C425FA823B4A3C3006A48DE /* CoordinatedNavigationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C425FA723B4A3C2006A48DE /* CoordinatedNavigationController.swift */; };
 		9C45E661234D238F0054A5FD /* SurfTripViewController.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9C45E660234D238E0054A5FD /* SurfTripViewController.storyboard */; };
 		9C467C67234F2A7D009F4D58 /* Surfboard.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C467C66234F2A7D009F4D58 /* Surfboard.swift */; };
 		9C4C54742349C28500FB2653 /* SavedTripsViewController.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9C4C54732349C28500FB2653 /* SavedTripsViewController.storyboard */; };
@@ -85,6 +86,7 @@
 		9C193AFA23A2ACA7000DE1AB /* coin-wallet.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = "coin-wallet.json"; sourceTree = "<group>"; };
 		9C3C703A239B154900B721CC /* Surfs.mlmodel */ = {isa = PBXFileReference; lastKnownFileType = file.mlmodel; path = Surfs.mlmodel; sourceTree = "<group>"; };
 		9C3F533C234BD80E00D5F65E /* Coordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Coordinator.swift; sourceTree = "<group>"; };
+		9C425FA723B4A3C2006A48DE /* CoordinatedNavigationController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoordinatedNavigationController.swift; sourceTree = "<group>"; };
 		9C45E660234D238E0054A5FD /* SurfTripViewController.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = SurfTripViewController.storyboard; sourceTree = "<group>"; };
 		9C467C66234F2A7D009F4D58 /* Surfboard.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Surfboard.swift; sourceTree = "<group>"; };
 		9C4C54732349C28500FB2653 /* SavedTripsViewController.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = SavedTripsViewController.storyboard; sourceTree = "<group>"; };
@@ -378,6 +380,7 @@
 				9C62416D238AE68E00A4B7C9 /* ReuseIdentifierHelper.swift */,
 				9CBDE2972395A9E600317F51 /* TimeHelper.swift */,
 				9C8F330123994CDD0070751F /* FontHelper.swift */,
+				9C425FA723B4A3C2006A48DE /* CoordinatedNavigationController.swift */,
 			);
 			path = Helpers;
 			sourceTree = "<group>";
@@ -653,6 +656,7 @@
 				9C8F330223994CDD0070751F /* FontHelper.swift in Sources */,
 				9CFDFD3F2367226C00760F25 /* AddDateViewController.swift in Sources */,
 				9C76F09623493EDA00853FD9 /* SurfTripViewController.swift in Sources */,
+				9C425FA823B4A3C3006A48DE /* CoordinatedNavigationController.swift in Sources */,
 				9C62417C239156C200A4B7C9 /* UserDefaultsHelper.swift in Sources */,
 				9C990AAD2398119200B17AE5 /* LoadingStateCoordinator.swift in Sources */,
 				9C90BC552386BD020090E346 /* Enums.swift in Sources */,

@@ -23,7 +23,11 @@ class AddLevelViewController: UIViewController {
         super.viewDidLoad()
         setPickerPopover()
     }
-
+    
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        setPickerPopover()
+    }
 }
 
 private extension AddLevelViewController {

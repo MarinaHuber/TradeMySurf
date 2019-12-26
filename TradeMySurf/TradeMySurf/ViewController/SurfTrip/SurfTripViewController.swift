@@ -10,10 +10,21 @@ import Foundation
 import UIKit
 
 protocol SurfViewControllerDelegate: class {
-    func tabBarCoordinatorDidDismiss()
+    func childDidFinish(_: Coordinator?)
 }
 
 class SurfTripViewController: UIViewController {
+    weak var delegate: SurfViewControllerDelegate?
+    private (set) var coordinator: TabBarCoordinator?
+    lazy var leftBtn: UIBarButtonItem = {
+        let button = UIButton(type: .system)
+        button.setImage(UIImage(systemName: "arrow.turn.up.left"), for: .normal)
+        button.sizeToFit()
+        button.addTarget(self,
+                         action: #selector(self.popToRoot(_:)),
+                         for: .touchUpInside)
+        return UIBarButtonItem(customView: button)
+    }()
 
 	private var selectedLevel = UserDefaults.standard.selectedLevel
 	private var selectedDate = UserDefaults.standard.surfingTime
@@ -23,19 +34,28 @@ class SurfTripViewController: UIViewController {
     private(set) var dataSource: UICollectionViewDiffableDataSource<TripSection, TripItem>! // retain data source!
     private(set) var appData: RecommendedTripArray = RecommendedTripArray()
 
-
     override func viewDidLoad() {
         super.viewDidLoad()
         addCollectionView()
         configureCollectionView()
-       // UserDefaults.standard.userWasHere = true
     }
     override func viewDidAppear(_ animated: Bool) {
         super.viewDidAppear(animated)
+        self.navigationItem.leftBarButtonItem = leftBtn
     }
     override func viewDidDisappear(_ animated: Bool) {
         super.viewDidDisappear(animated)
         //UserDefaults.standard.userWasHere = false
+    }    
+    @objc func popToRoot(_ sender: UIBarButtonItem) {
+        if UserDefaults.standard.userWasHere == false {
+        let storyboard: UIStoryboard = UIStoryboard(name: Constants.Storyboards.welcomeViewCoordinator, bundle: nil)
+        let controller: WelcomeViewController = WelcomeViewController.instantiate(from: storyboard)
+            delegate?.childDidFinish(coordinator!)
+        navigationController?.setViewControllers([controller], animated: true)
+        } else {
+           self.view.window?.rootViewController?.dismiss(animated: true, completion: nil)
+        }
     }
 
 }

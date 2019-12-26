@@ -31,15 +31,7 @@ final class LoadingStateCoordinator: NSObject, Coordinator {
 		window.rootViewController = controller
 		controller.delegate = self
 		}
-    //Coordinators should always be classes so we can use ===
-    func childDidFinish(_ child: Coordinator?) {
-        for (index, coordinator) in childCoordinators.enumerated() {
-            if coordinator === child {
-                childCoordinators.remove(at: index)
-                break
-            }
-        }
-    }
+
 
 }
     // MARK: - LoadingViewControllerDelegate
@@ -48,9 +40,10 @@ extension LoadingStateCoordinator : LoadingViewControllerDelegate {
         if UserDefaults.standard.userWasHere == false {
             let tabCoordinator: TabBarCoordinator = TabBarCoordinator(window: window, tabBarController: UITabBarController())
             window.rootViewController = presenter
+            presenter.setNavigationBarHidden(true, animated: true)
             addChildCoordinator(tabCoordinator)
             tabCoordinator.start()
-            presenter.pushViewController(tabCoordinator.tabBarController!, animated: true)
+            presenter.setViewControllers([tabCoordinator.tabBarController!], animated: true)
 
         } else {
             let welcomeCoordinator = WelcomeCoordinator(window: window, presenter: presenter)
