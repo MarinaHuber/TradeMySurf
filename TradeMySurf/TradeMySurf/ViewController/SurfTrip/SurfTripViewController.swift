@@ -52,7 +52,7 @@ class SurfTripViewController: UIViewController {
         let storyboard: UIStoryboard = UIStoryboard(name: Constants.Storyboards.welcomeViewCoordinator, bundle: nil)
         let controller: WelcomeViewController = WelcomeViewController.instantiate(from: storyboard)
         delegate?.childDidFinish()
-        navigationController?.setViewControllers([controller], animated: true)
+            self.view.window?.rootViewController?.show(controller, sender: nil)
         } else {
            self.view.window?.rootViewController?.dismiss(animated: true, completion: nil)
         }

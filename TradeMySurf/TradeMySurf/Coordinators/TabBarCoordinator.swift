@@ -16,7 +16,6 @@ final class TabBarCoordinator: NSObject, Coordinator {
 	internal var presenter: UINavigationController
 	internal var tabBarController: UITabBarController?
 	internal var childCoordinators: [Coordinator]
-    var parentCoordinator: LoadingStateCoordinator?
 
 	init(window: UIWindow, tabBarController: UITabBarController) {
 		self.tabBarController = tabBarController
@@ -36,8 +35,6 @@ final class TabBarCoordinator: NSObject, Coordinator {
 		})
 
 		let presenters: [UIViewController] = coordinators.map({ coordinator -> UIViewController in
-           // coordinator.presenter.setNavigationBarHidden(true, animated: true)
-            //tabBarController?.navigationController!.isNavigationBarHidden = true
 			return coordinator.presenter
 		})
 
@@ -51,13 +48,12 @@ final class TabBarCoordinator: NSObject, Coordinator {
 		let sellCoordinator: SavedTripsCoordinator = SavedTripsCoordinator(presenter: UINavigationController())
 		return [calculatorCoordinator, tripCoordinator, sellCoordinator]
 	}
-    
-    @objc func popToRoot(_ sender: UIBarButtonItem) {
-        let storyboard: UIStoryboard = UIStoryboard(name: Constants.Storyboards.welcomeViewCoordinator, bundle: nil)
-        let controller: WelcomeViewController = WelcomeViewController.instantiate(from: storyboard)
-        tabBarController?.navigationController?.pushViewController(controller, animated: true)
-
+    deinit {
+        
+        self.childCoordinators.removeAll()
+        print("removing tabbar comlete")
     }
+
 }
 
 extension TabBarCoordinator: UINavigationControllerDelegate {
@@ -70,4 +66,13 @@ extension TabBarCoordinator: UINavigationControllerDelegate {
 		}
 		tabBarController?.selectedIndex = index
  }
+
+}
+
+extension TabBarCoordinator: SurfViewControllerDelegate {
+    //never called delegate not set
+    func childDidFinish() {
+       childCoordinators.removeAll()
+    }
+
 }
