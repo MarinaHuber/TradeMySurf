@@ -31,8 +31,6 @@ final class LoadingStateCoordinator: NSObject, Coordinator {
 		window.rootViewController = controller
 		controller.delegate = self
 		}
-
-
 }
     // MARK: - LoadingViewControllerDelegate
 extension LoadingStateCoordinator : LoadingViewControllerDelegate {
@@ -46,10 +44,10 @@ extension LoadingStateCoordinator : LoadingViewControllerDelegate {
             presenter.setViewControllers([tabCoordinator.tabBarController!], animated: true)
 
         } else {
-            let welcomeCoordinator = WelcomeCoordinator(window: window, presenter: presenter)
-            window.rootViewController = welcomeCoordinator.presenter
+            let welcomeCoordinator = WelcomeCoordinator(window: window, presenter: presenter, viewController: UIViewController())
             addChildCoordinator(welcomeCoordinator)
             welcomeCoordinator.start()
+            window.rootViewController = welcomeCoordinator.presenter
         }
     }
 }

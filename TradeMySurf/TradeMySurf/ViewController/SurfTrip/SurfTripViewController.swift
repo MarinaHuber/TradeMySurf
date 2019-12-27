@@ -14,8 +14,7 @@ protocol SurfViewControllerDelegate: class {
 }
 
 class SurfTripViewController: UIViewController {
-    weak var delegate: SurfViewControllerDelegate?
-   // var coordinator: TabBarCoordinator?
+
     lazy var leftBtn: UIBarButtonItem = {
         let button = UIButton(type: .system)
         button.setImage(UIImage(systemName: "arrow.turn.up.left"), for: .normal)
@@ -51,8 +50,8 @@ class SurfTripViewController: UIViewController {
         if UserDefaults.standard.userWasHere == false {
         let storyboard: UIStoryboard = UIStoryboard(name: Constants.Storyboards.welcomeViewCoordinator, bundle: nil)
         let controller: WelcomeViewController = WelcomeViewController.instantiate(from: storyboard)
-        delegate?.childDidFinish()
-            self.view.window?.rootViewController?.show(controller, sender: nil)
+        let welcomeCoordinator = WelcomeCoordinator(window: UIWindow(), presenter: UINavigationController(), viewController: controller)
+            self.view.window?.rootViewController = welcomeCoordinator.viewController
         } else {
            self.view.window?.rootViewController?.dismiss(animated: true, completion: nil)
         }

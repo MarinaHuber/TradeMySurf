@@ -10,13 +10,14 @@ import Foundation
 import UIKit
 
  class WelcomeCoordinator: NSObject, Coordinator {
-	internal var presenter: UINavigationController
+	var presenter: UINavigationController
 	var childCoordinators: [Coordinator]
+    var viewController: UIViewController?
 
-	init(window: UIWindow, presenter: UINavigationController) {
+    init(window: UIWindow, presenter: UINavigationController, viewController : UIViewController) {
 		self.presenter = presenter
-		childCoordinators = []
-		
+        self.viewController = viewController
+		childCoordinators = []		
 	}
 	func start() {
 		let storyboard: UIStoryboard = UIStoryboard(name: Constants.Storyboards.welcomeViewCoordinator, bundle: nil)
@@ -31,6 +32,7 @@ extension WelcomeCoordinator : WelcomeViewControllerDelegate {
 	func performAddLevel() {
 		let addLevelCoordinator: AddLevelViewCoordinator = AddLevelViewCoordinator(presenter: UINavigationController())
 		addLevelCoordinator.start()
+        // adds the next coordinator ??
 		addChildCoordinator(addLevelCoordinator)
 		addLevelCoordinator.presenter.modalPresentationStyle = .fullScreen
 		presenter.present(addLevelCoordinator.presenter, animated: true, completion: nil)

@@ -13,9 +13,9 @@ import UIKit
 // *******************************************************************************************
 
 final class TabBarCoordinator: NSObject, Coordinator {
-	internal var presenter: UINavigationController
-	internal var tabBarController: UITabBarController?
-	internal var childCoordinators: [Coordinator]
+	 var presenter: UINavigationController
+	 var tabBarController: UITabBarController?
+	 var childCoordinators: [Coordinator]
 
 	init(window: UIWindow, tabBarController: UITabBarController) {
 		self.tabBarController = tabBarController
@@ -51,7 +51,7 @@ final class TabBarCoordinator: NSObject, Coordinator {
     deinit {
         
         self.childCoordinators.removeAll()
-        print("removing tabbar comlete")
+     //   assertionFailure("removing tabbar complete")
     }
 
 }
