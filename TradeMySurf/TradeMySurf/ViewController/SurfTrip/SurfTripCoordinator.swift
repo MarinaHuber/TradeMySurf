@@ -26,10 +26,13 @@ final class SurfTripCoordinator: Coordinator {
 }
      // MARK: - LoadingViewControllerDelegate
 extension SurfTripCoordinator : SurfViewControllerDelegate {
+    func clearCoordinatorTabBar() {
+    }
+    
     
     //Coordinators should always be classes so we can use ===
     func performBackToRoot() {
-        let welcomeCoordinator = WelcomeCoordinator(window: UIWindow(), presenter: UINavigationController(), viewController: UIViewController())
+        let welcomeCoordinator = WelcomeOnboardingCoordinator(window: UIWindow())
         addChildCoordinator(welcomeCoordinator)
         welcomeCoordinator.start()
         let tab = TabBarMainCoordinator(window: window, tabBarController: UITabBarController())

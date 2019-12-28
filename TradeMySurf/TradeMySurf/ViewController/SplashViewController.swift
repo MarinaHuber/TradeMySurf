@@ -9,12 +9,12 @@
 import UIKit
 import Lottie
 
-protocol LoadingViewControllerDelegate: class {
+protocol SplashViewControllerDelegate: class {
 	func performScreenSwitch()
 }
 
-class LoadingStateViewController: UIViewController {
-    weak var delegate: LoadingViewControllerDelegate?
+class SplashViewController: UIViewController {
+    weak var delegate: SplashViewControllerDelegate?
 	let loadAnimateView = AnimationView(name: "loader_animation")
 
     override func viewDidLoad() {
@@ -31,4 +31,4 @@ class LoadingStateViewController: UIViewController {
         })
     }
 }
-extension LoadingStateViewController: StoryboardProtocol {}
+extension SplashViewController: StoryboardProtocol {}

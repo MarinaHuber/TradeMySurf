@@ -8,32 +8,41 @@
 
 import UIKit
 
-final class LoadingStateCoordinator: NSObject, Coordinator {
+final class SplashMainCoordinator: RootViewCoordinator {
+    
     // MARK: - Inputs
+    var rootViewController: UIViewController {
+        return self.presenter
+    }
     var childCoordinators: [Coordinator]
-    var presenter: UINavigationController
+
+    lazy var presenter: UINavigationController = {
+         let presenter = UINavigationController()
+         presenter.isNavigationBarHidden = true
+         return presenter
+     }()
+    /// Window to manage
 	private let window: UIWindow
+    
     // MARK: - Initialization
 	init(window: UIWindow) {
 		self.window = window
 		childCoordinators = []
-		presenter = UINavigationController()
-      // TODO: makes navigation bar transparent extract in func
-		self.presenter.navigationBar.barTintColor = .clear
-		self.presenter.navigationBar.tintColor = .black
-		self.presenter.navigationBar.setBackgroundImage(UIImage(), for: UIBarPosition.any, barMetrics: UIBarMetrics.default)
-		self.presenter.navigationBar.shadowImage = UIImage()
-		self.presenter.navigationBar.titleTextAttributes = [.foregroundColor : UIColor.black as Any]
 	}
+
     // MARK: - Coordinator
-	 func start() {
-		let controller: LoadingStateViewController = LoadingStateViewController.instantiate()
-		window.rootViewController = controller
-		controller.delegate = self
-		}
+	public func start() {
+		showSplashViewControler()
+    }
+    
+    private func showSplashViewControler () {
+        let controller: SplashViewController = SplashViewController.instantiate()
+        window.rootViewController = controller
+        controller.delegate = self
+    }
     
     func showOnboardingFlow() {
-        let welcomeCoordinator = WelcomeCoordinator(window: window, presenter: presenter, viewController: UIViewController())
+        let welcomeCoordinator = WelcomeOnboardingCoordinator(window: window)
         addChildCoordinator(welcomeCoordinator)
         welcomeCoordinator.start()
         window.rootViewController = welcomeCoordinator.presenter
@@ -48,18 +57,15 @@ final class LoadingStateCoordinator: NSObject, Coordinator {
         presenter.setViewControllers([tabCoordinator.tabBarController!], animated: true)
     }
 }
-    // MARK: - LoadingViewControllerDelegate
-extension LoadingStateCoordinator : LoadingViewControllerDelegate {
- // this is neede but where?
-    func userPerformedOnboarding(coordinator: Coordinator) {
-        removeChildCoordinator(coordinator)
-        showTabBarFlow()
-        }
+    // MARK: - SplashViewControllerDelegate
+extension SplashMainCoordinator : SplashViewControllerDelegate {
     
     func performScreenSwitch() {
         if UserDefaults.standard.userWasHere == false {
-            showTabBarFlow()
+            showOnboardingFlow()
+           // showTabBarFlow()
         } else {
+            //showTabBarFlow()
             showOnboardingFlow()
         }
     }

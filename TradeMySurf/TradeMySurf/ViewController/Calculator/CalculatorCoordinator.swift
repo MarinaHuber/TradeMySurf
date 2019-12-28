@@ -24,6 +24,6 @@ final class CalculatorCoordinator: Coordinator {
 		let storyboard: UIStoryboard = UIStoryboard(name: Constants.Storyboards.priceCalculatorViewController, bundle: nil)
 		let viewController: PriceCalculatorViewController = PriceCalculatorViewController.instantiate(from: storyboard)
         presenter.isNavigationBarHidden = true
-		presenter.pushViewController(viewController, animated: true)
+		presenter.show(viewController, sender: true)
 	}
 }

@@ -11,6 +11,7 @@ import UIKit
 
 protocol SurfViewControllerDelegate: class {
     func performBackToRoot()
+    func clearCoordinatorTabBar()
 }
 
 class SurfTripViewController: UIViewController {
@@ -48,17 +49,13 @@ class SurfTripViewController: UIViewController {
         //UserDefaults.standard.userWasHere = false
     }    
     @objc func popToRoot(_ sender: UIBarButtonItem) {
-        if UserDefaults.standard.userWasHere == false {
+        if UserDefaults.standard.userWasHere == true {
             delegate?.performBackToRoot()
-            let storyboard: UIStoryboard = UIStoryboard(name: Constants.Storyboards.welcomeViewCoordinator, bundle: nil)
-            let controller: WelcomeViewController = WelcomeViewController.instantiate(from: storyboard)
-            let welcomeCoordinator = WelcomeCoordinator(window: UIWindow(), presenter: UINavigationController(), viewController: controller)
-            self.view.window?.rootViewController?.show(welcomeCoordinator.viewController!, sender: nil)
         } else {
            self.view.window?.rootViewController?.dismiss(animated: true, completion: nil)
+            delegate?.clearCoordinatorTabBar()
         }
     }
-
 }
 
 private extension SurfTripViewController {

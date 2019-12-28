@@ -30,12 +30,14 @@ final class TabBarMainCoordinator: NSObject, Coordinator {
 		let coordinators: [Coordinator] = generateTabCoordinators()
 
 		coordinators.forEach({ coordinator in
+            //start() is from Coordinator protocol
 			coordinator.start()
 			addChildCoordinator(coordinator)
 		})
 
 		let presenters: [UIViewController] = coordinators.map({ coordinator -> UIViewController in
-			return coordinator.presenter
+            //presenter is from Coordinator protocol
+            return coordinator.presenter
 		})
 
 		tabBarController?.setViewControllers(presenters, animated: false)
@@ -67,4 +69,13 @@ extension TabBarMainCoordinator: UINavigationControllerDelegate {
 		tabBarController?.selectedIndex = index
  }
 
+}
+
+extension TabBarMainCoordinator: SurfViewControllerDelegate {
+    func performBackToRoot() {
+    }
+    
+    public func clearCoordinatorTabBar() {
+        removeChildCoordinator(self)
+    }
 }

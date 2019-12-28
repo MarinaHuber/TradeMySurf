@@ -12,8 +12,8 @@ import UIKit
 class AppDelegate: UIResponder, UIApplicationDelegate {
 
 	var window: UIWindow?
-	private lazy var appCoordinator: LoadingStateCoordinator = {
-		return LoadingStateCoordinator(window: self.window!)
+	private lazy var appCoordinator: SplashMainCoordinator = {
+		return SplashMainCoordinator(window: self.window!)
 	}()
 
 	func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
@@ -24,7 +24,17 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
 		// configure Fonts missing
         FontHelper.registerAllFonts()
+        customiseNavBar()
 
 		return true
 	}
+    
+    func customiseNavBar () {
+        guard let navigationController = self.window?.rootViewController as? UINavigationController else { return }
+        navigationController.navigationBar.barTintColor = .clear
+        navigationController.navigationBar.tintColor = .black
+        navigationController.navigationBar.setBackgroundImage(UIImage(), for: UIBarPosition.any, barMetrics: UIBarMetrics.default)
+        navigationController.navigationBar.shadowImage = UIImage()
+        navigationController.navigationBar.titleTextAttributes = [.foregroundColor : UIColor.black as Any]
+    }
 }

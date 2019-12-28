@@ -11,7 +11,7 @@ import UIKit
 import Lottie
 
 protocol WelcomeViewControllerDelegate: class {
-	func performAddLevel()
+	func welcomeViewControllerTapGetStarted(viewController: WelcomeViewController)
 }
 
 class WelcomeViewController: UIViewController, CAAnimationDelegate {
@@ -19,7 +19,6 @@ class WelcomeViewController: UIViewController, CAAnimationDelegate {
     @IBOutlet weak var welcomeLabel: UILabel!
     @IBOutlet weak var introLabel: UILabel!    
     weak var delegate: WelcomeViewControllerDelegate?
-    weak var coordinator: WelcomeCoordinator?
     @IBOutlet private(set) weak var lottieBoard: AnimationView! {
         didSet {
             lottieBoard.animation = Animation.named("clip-board")
@@ -48,9 +47,10 @@ class WelcomeViewController: UIViewController, CAAnimationDelegate {
         }
     }
     @IBOutlet weak var bgStackView: UIView!
+    
+    
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(true)
-        delegate?.performAddLevel()
         startButton.alpha = 0
         welcomeLabel.alpha = 0
         introLabel.alpha = 0
@@ -101,12 +101,7 @@ class WelcomeViewController: UIViewController, CAAnimationDelegate {
         super.viewWillDisappear(animated)
     }
     @IBAction func openNext(_ sender: Any) {
-        delegate?.performAddLevel()
-        let addLevelCoordinator: AddLevelViewCoordinator = AddLevelViewCoordinator(presenter: UINavigationController())
-        addLevelCoordinator.start()
-        //coordinator!.addChildCoordinator(addLevelCoordinator)
-        addLevelCoordinator.presenter.modalPresentationStyle = .fullScreen
-        navigationController?.present(addLevelCoordinator.presenter, animated: true, completion: nil)
+        self.delegate?.welcomeViewControllerTapGetStarted(viewController: self)
     }
 }
 
