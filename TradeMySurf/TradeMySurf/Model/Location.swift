@@ -7,11 +7,11 @@
 //
 import  Foundation
 
-struct Location: Hashable {
-    var id: UUID = UUID()
-    var countryName: String
-    var continentName: String
-    var imageFlag: String
+public struct Location: Hashable {
+    public let id: UUID = UUID()
+    public let countryName: String
+    public let continentName: String
+    public let imageFlag: String
 }
 
 

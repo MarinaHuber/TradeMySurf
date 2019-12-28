@@ -8,9 +8,9 @@
 
 import Foundation
 
-struct Surfboard: Hashable {
-    let id: UUID = UUID()
-	let title: String, volume: String
-	let weight: Int
-	let weightUnit: String, imageName: String
+public struct Surfboard: Hashable {
+    public let id: UUID = UUID()
+	public let title: String, volume: String
+	public let weight: Int
+	public let weightUnit: String, imageName: String
 }

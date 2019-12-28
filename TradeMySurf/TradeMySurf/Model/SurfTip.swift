@@ -8,8 +8,8 @@
 
 import Foundation
 
-struct SurfTip: Hashable {
-    let id: UUID = UUID()
-    let title: String
-    let description: String
+public struct SurfTip: Hashable {
+    public let id: UUID = UUID()
+    public let title: String
+    public let description: String
 }
