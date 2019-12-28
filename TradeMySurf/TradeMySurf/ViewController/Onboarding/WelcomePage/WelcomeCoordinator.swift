@@ -13,8 +13,10 @@ import UIKit
 	var presenter: UINavigationController
 	var childCoordinators: [Coordinator]
     var viewController: UIViewController?
+    var window: UIWindow
 
     init(window: UIWindow, presenter: UINavigationController, viewController : UIViewController) {
+        self.window = window
 		self.presenter = presenter
         self.viewController = viewController
 		childCoordinators = []		
@@ -22,7 +24,7 @@ import UIKit
 	func start() {
 		let storyboard: UIStoryboard = UIStoryboard(name: Constants.Storyboards.welcomeViewCoordinator, bundle: nil)
 		let controller: WelcomeViewController = WelcomeViewController.instantiate(from: storyboard)
-		controller.delegate = self
+        controller.delegate = self
 		presenter.pushViewController(controller, animated: true)
 	}
 }

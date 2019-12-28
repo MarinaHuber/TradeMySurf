@@ -12,7 +12,7 @@ import UIKit
 // https://www.hackingwithswift.com/articles/175/advanced-coordinator-pattern-tutorial-ios
 // *******************************************************************************************
 
-final class TabBarCoordinator: NSObject, Coordinator {
+final class TabBarMainCoordinator: NSObject, Coordinator {
 	 var presenter: UINavigationController
 	 var tabBarController: UITabBarController?
 	 var childCoordinators: [Coordinator]
@@ -56,7 +56,7 @@ final class TabBarCoordinator: NSObject, Coordinator {
 
 }
 
-extension TabBarCoordinator: UINavigationControllerDelegate {
+extension TabBarMainCoordinator: UINavigationControllerDelegate {
 
 	func selectTab<T: Coordinator>(type _: T.Type) {
 		guard let index = childCoordinators.firstIndex(where: { coordinator in
@@ -66,13 +66,5 @@ extension TabBarCoordinator: UINavigationControllerDelegate {
 		}
 		tabBarController?.selectedIndex = index
  }
-
-}
-
-extension TabBarCoordinator: SurfViewControllerDelegate {
-    //never called delegate not set
-    func childDidFinish() {
-       childCoordinators.removeAll()
-    }
 
 }

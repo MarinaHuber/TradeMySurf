@@ -14,27 +14,35 @@ protocol Coordinator: AnyObject {
     /** Any child coordinators to keep track of, to prevent them from getting deallocated in memory. */
     var childCoordinators: [Coordinator] { get set }
     /** Used for handling startup tasks - think of it as the `viewDidLoad()` of coordinators. */
-	func start()
+    func start()
+    func addChildCoordinator(_ coordinator: Coordinator)
+    func removeChildCoordinator(_ coordinator: Coordinator)
+    func popViewController(animated: Bool)
+    func dismissViewController(animated: Bool, completion: (() -> Void)?)
 }
 
 extension Coordinator {
-    /**
-     Adds a child coordinator to the parent, preventing it from getting deallocated in memory.
-
-     - Parameter childCoordinator: The coordinator to keep allocated in memory.
-     */
-    func addChildCoordinator(_ childCoordinator: Coordinator) {
-        childCoordinators.append(childCoordinator)
-    }
-    /**
-     Removes a child coordinator from its parent, releasing it from memory.
-
-     - Parameter childCoordinator: The coordinator to release.
-     */
-// removes only one child
-    func removeChildCoordinator(_ coordinator: Coordinator) {
-		if let idx = childCoordinators.firstIndex(where: { $0 === coordinator }) {
-            childCoordinators.remove(at: idx)
+    func addChildCoordinator(_ coordinator: Coordinator) {
+        for element in childCoordinators {
+            if element === coordinator {
+                return
+            }
         }
-	}
+        childCoordinators.append(coordinator)
+    }    
+    func removeChildCoordinator(_ coordinator: Coordinator) {
+        guard !childCoordinators.isEmpty else { return }
+        for (index, element) in childCoordinators.enumerated() {
+            if element === coordinator {
+                childCoordinators.remove(at: index)
+                break
+            }
+        }
+    }
+    func popViewController(animated: Bool) {
+        presenter.popViewController(animated: animated)
+    }
+    func dismissViewController(animated: Bool, completion: (() -> Void)?) {
+        presenter.dismiss(animated: animated, completion: completion)
+ }
 }

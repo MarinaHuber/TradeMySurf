@@ -16,7 +16,6 @@ protocol AddLevelViewControllerDelegate: class {
 class AddLevelViewController: UIViewController {
 	@IBOutlet weak var pickerView: UIView!
 	weak var delegate: AddLevelViewControllerDelegate?
-	weak var coordinator: TabBarCoordinator?
 	let levels = [Level.beginner.rawValue, Level.beginnerIntemediate.rawValue, Level.intermediate.rawValue, Level.advanced.rawValue, Level.professional.rawValue]
 
     override func viewDidLoad() {

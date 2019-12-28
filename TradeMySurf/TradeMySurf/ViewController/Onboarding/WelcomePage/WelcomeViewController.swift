@@ -48,10 +48,9 @@ class WelcomeViewController: UIViewController, CAAnimationDelegate {
         }
     }
     @IBOutlet weak var bgStackView: UIView!
-    
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(true)
-        //startButton.addTarget(self, action: #selector(openNext(_:)), for: .touchUpInside)
+        delegate?.performAddLevel()
         startButton.alpha = 0
         welcomeLabel.alpha = 0
         introLabel.alpha = 0
@@ -100,16 +99,14 @@ class WelcomeViewController: UIViewController, CAAnimationDelegate {
     
     override func viewWillDisappear(_ animated: Bool) {
         super.viewWillDisappear(animated)
-        
     }
-    
     @IBAction func openNext(_ sender: Any) {
         delegate?.performAddLevel()
-//        let addLevelCoordinator: AddLevelViewCoordinator = AddLevelViewCoordinator(presenter: UINavigationController())
-//        addLevelCoordinator.start()
-//      //  coordinator!.addChildCoordinator(addLevelCoordinator)
-//        addLevelCoordinator.presenter.modalPresentationStyle = .fullScreen
-//        navigationController?.present(addLevelCoordinator.presenter, animated: true, completion: nil)
+        let addLevelCoordinator: AddLevelViewCoordinator = AddLevelViewCoordinator(presenter: UINavigationController())
+        addLevelCoordinator.start()
+        //coordinator!.addChildCoordinator(addLevelCoordinator)
+        addLevelCoordinator.presenter.modalPresentationStyle = .fullScreen
+        navigationController?.present(addLevelCoordinator.presenter, animated: true, completion: nil)
     }
 }
 

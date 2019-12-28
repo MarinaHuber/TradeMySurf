@@ -31,23 +31,36 @@ final class LoadingStateCoordinator: NSObject, Coordinator {
 		window.rootViewController = controller
 		controller.delegate = self
 		}
+    
+    func showOnboardingFlow() {
+        let welcomeCoordinator = WelcomeCoordinator(window: window, presenter: presenter, viewController: UIViewController())
+        addChildCoordinator(welcomeCoordinator)
+        welcomeCoordinator.start()
+        window.rootViewController = welcomeCoordinator.presenter
+    }
+    
+    func showTabBarFlow() {
+        let tabCoordinator: TabBarMainCoordinator = TabBarMainCoordinator(window: window, tabBarController: UITabBarController())
+        window.rootViewController = presenter
+        presenter.setNavigationBarHidden(true, animated: true)
+        addChildCoordinator(tabCoordinator)
+        tabCoordinator.start()
+        presenter.setViewControllers([tabCoordinator.tabBarController!], animated: true)
+    }
 }
     // MARK: - LoadingViewControllerDelegate
 extension LoadingStateCoordinator : LoadingViewControllerDelegate {
+ // this is neede but where?
+    func userPerformedOnboarding(coordinator: Coordinator) {
+        removeChildCoordinator(coordinator)
+        showTabBarFlow()
+        }
+    
     func performScreenSwitch() {
         if UserDefaults.standard.userWasHere == false {
-            let tabCoordinator: TabBarCoordinator = TabBarCoordinator(window: window, tabBarController: UITabBarController())
-            window.rootViewController = presenter
-            presenter.setNavigationBarHidden(true, animated: true)
-            addChildCoordinator(tabCoordinator)
-            tabCoordinator.start()
-            presenter.setViewControllers([tabCoordinator.tabBarController!], animated: true)
-
+            showTabBarFlow()
         } else {
-            let welcomeCoordinator = WelcomeCoordinator(window: window, presenter: presenter, viewController: UIViewController())
-            addChildCoordinator(welcomeCoordinator)
-            welcomeCoordinator.start()
-            window.rootViewController = welcomeCoordinator.presenter
+            showOnboardingFlow()
         }
     }
 }

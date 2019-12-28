@@ -8,7 +8,7 @@
 
 import UIKit
 
-
+/// Object, that adopts this protocol, will use identifier that matches name of its class.
 protocol StoryboardProtocol: AnyObject {
 	static func instantiate(from storyboard: UIStoryboard) -> Self
 	static func instantiate() -> Self
