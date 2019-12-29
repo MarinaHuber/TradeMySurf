@@ -27,7 +27,7 @@ As a surfer I want to set clear surf goal. To accomplish this goal I need a corr
 
 # Technologies / Stack used
 ###  Navigation scheme: MVC + Coordinator manager Using the UIResponder
-Illustrates flow of the app:
+Illustrates flow of the app: User always needs to come back to the begining- Welcome screen
 ![alt tag](https://github.com/MarinaHuber/TradeMySurf/blob/corrections-branch/Working/coordination.png)
  + Splash screen
  + Welcome screen
