@@ -26,7 +26,7 @@ As a surfer I want to set clear surf goal. To accomplish this goal I need a corr
  Lottie
 
 # Technologies / Stack used
-###  Navigation scheme: MVC + Coordinator manager
+###  Navigation scheme: MVC + Coordinator manager Using the UIResponder
 Illustrates flow of the app:
 ![alt tag](https://github.com/MarinaHuber/TradeMySurf/blob/corrections-branch/Working/coordination.png)
  + Splash screen
