@@ -10,6 +10,7 @@ import Foundation
 import UIKit
 
 final class WelcomeOnboardingCoordinator: RootViewCoordinator {
+    
     // MARK: - Inputs
     var rootViewController: UIViewController {
         return self.presenter

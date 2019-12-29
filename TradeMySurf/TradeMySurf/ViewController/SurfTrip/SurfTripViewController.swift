@@ -17,6 +17,7 @@ protocol SurfViewControllerDelegate: class {
 class SurfTripViewController: UIViewController {
     
     weak var delegate: SurfViewControllerDelegate?
+    
     lazy var leftBtn: UIBarButtonItem = {
         let button = UIButton(type: .system)
         button.setImage(UIImage(systemName: "arrow.turn.up.left"), for: .normal)
@@ -49,12 +50,10 @@ class SurfTripViewController: UIViewController {
         //UserDefaults.standard.userWasHere = false
     }    
     @objc func popToRoot(_ sender: UIBarButtonItem) {
-        if UserDefaults.standard.userWasHere == true {
-            delegate?.performBackToRoot()
-        } else {
-           self.view.window?.rootViewController?.dismiss(animated: true, completion: nil)
-            delegate?.clearCoordinatorTabBar()
-        }
+
+        delegate?.performBackToRoot()
+        //self.view.window?.rootViewController?.dismiss(animated: true, completion: nil)
+
     }
 }
 

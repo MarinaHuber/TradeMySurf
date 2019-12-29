@@ -11,17 +11,15 @@ import UIKit
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate {
 
-	var window: UIWindow?
-	private lazy var appCoordinator: SplashMainCoordinator = {
-		return SplashMainCoordinator(window: self.window!)
-	}()
+    private var coordinator: CoordinatorTest? = nil
+    var window: UIWindow?
+
 
 	func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
 		// configure Coordinators
-		window = UIWindow(frame: UIScreen.main.bounds)
         guard let window = window else { fatalError() }
-		appCoordinator.start()
-        window.makeKeyAndVisible()
+        coordinator = CoordinatorTest(window: window)
+        return true
 
 		// configure Fonts missing
         FontHelper.registerAllFonts()
@@ -29,6 +27,10 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
 		return true
 	}
+   // override var next: UIResponder? {
+     //   return sceneManager
+   // }
+
     
     func customiseNavBar () {
         guard let navigationController = self.window?.rootViewController as? UINavigationController else { return }

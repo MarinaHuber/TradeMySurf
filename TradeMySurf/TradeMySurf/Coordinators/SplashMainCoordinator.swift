@@ -10,6 +10,7 @@ import UIKit
 
 final class SplashMainCoordinator: RootViewCoordinator {
     
+    
     // MARK: - Inputs
     var rootViewController: UIViewController {
         return self.presenter
@@ -36,7 +37,7 @@ final class SplashMainCoordinator: RootViewCoordinator {
     }
     
     private func showSplashViewControler () {
-        let controller: SplashViewController = SplashViewController.instantiate()
+       let controller: SplashViewController = SplashViewController.instantiate()
         window.rootViewController = controller
         controller.delegate = self
     }
@@ -62,11 +63,11 @@ extension SplashMainCoordinator : SplashViewControllerDelegate {
     
     func performScreenSwitch() {
         if UserDefaults.standard.userWasHere == false {
-            showWelcomeFlow()
-           // showTabBarFlow()
+            //showWelcomeFlow()
+            showTabBarFlow()
         } else {
-            //showTabBarFlow()
-            showWelcomeFlow()
+            showTabBarFlow()
+           // showWelcomeFlow()
         }
     }
 }

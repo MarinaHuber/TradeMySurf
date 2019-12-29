@@ -8,16 +8,15 @@
 
 import UIKit
 
-// https://github.com/giulio92/Coordinator
-// https://www.hackingwithswift.com/articles/175/advanced-coordinator-pattern-tutorial-ios
-// *******************************************************************************************
 
 final class TabBarMainCoordinator: NSObject, Coordinator {
 	 var presenter: UINavigationController
 	 var tabBarController: UITabBarController?
 	 var childCoordinators: [Coordinator]
+     private let window: UIWindow
 
 	init(window: UIWindow, tabBarController: UITabBarController) {
+        self.window = window
 		self.tabBarController = tabBarController
 		childCoordinators = []
 		self.presenter = UINavigationController()
@@ -72,7 +71,12 @@ extension TabBarMainCoordinator: UINavigationControllerDelegate {
 }
 
 extension TabBarMainCoordinator: SurfViewControllerDelegate {
+    
     func performBackToRoot() {
+        let welcomeCoordinator = WelcomeOnboardingCoordinator(window: window)
+        addChildCoordinator(welcomeCoordinator)
+        welcomeCoordinator.start()
+        window.rootViewController = welcomeCoordinator.presenter
     }
     
     public func clearCoordinatorTabBar() {
