@@ -19,8 +19,9 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 	func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
 		// configure Coordinators
 		window = UIWindow(frame: UIScreen.main.bounds)
+        guard let window = window else { fatalError() }
 		appCoordinator.start()
-		window?.makeKeyAndVisible()
+        window.makeKeyAndVisible()
 
 		// configure Fonts missing
         FontHelper.registerAllFonts()

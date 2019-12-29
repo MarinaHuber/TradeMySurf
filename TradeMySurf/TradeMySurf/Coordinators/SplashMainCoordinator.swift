@@ -41,7 +41,7 @@ final class SplashMainCoordinator: RootViewCoordinator {
         controller.delegate = self
     }
     
-    func showOnboardingFlow() {
+    func showWelcomeFlow() {
         let welcomeCoordinator = WelcomeOnboardingCoordinator(window: window)
         addChildCoordinator(welcomeCoordinator)
         welcomeCoordinator.start()
@@ -62,11 +62,11 @@ extension SplashMainCoordinator : SplashViewControllerDelegate {
     
     func performScreenSwitch() {
         if UserDefaults.standard.userWasHere == false {
-            showOnboardingFlow()
+            showWelcomeFlow()
            // showTabBarFlow()
         } else {
             //showTabBarFlow()
-            showOnboardingFlow()
+            showWelcomeFlow()
         }
     }
 }
