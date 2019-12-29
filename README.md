@@ -5,10 +5,9 @@
 Survey by surfers:
 https://docs.google.com/forms/d/e/1FAIpQLSdzwVMycAc3ISaFck8lxFKnC8e5i4BmnzlVo_N9-Z0lRCYeJg/viewform?usp=sf_link
 
-Presentation: https://docs.google.com/presentation/d/1hmtwfkfkYBY4rAdn2Nz3Hf__6SqDF5T0Yd6LlU8GkVY/edit?usp=sharing
 
 📌  As of November 2019, this project requires Xcode 11+ (Swift 5.0)
-### Publish on: - - not jet
+### Publish on: - - tbc
 ### Deployed for: iOS 13
 
 # Why did you undertake the project?
@@ -27,18 +26,18 @@ As a surfer I want to set clear my surf goal. To accomplish this goal I need a c
  Lottie
 
 # Technologies / Stack used
-###  Navigation scheme: MVC + Coordinator pattern
+###  Navigation scheme: MVC + Coordinator manager
 Illustrates flow of the app:
-
+![alt tag](https://github.com/MarinaHuber/TradeMySurf/blob/corrections-branch/Working/coordination.png)
  + LoadingState screen
  + Welcome screen
  + Add level flow
  + Add date flow
  + TabBar Main Coordinator
  + Recommendations for trip
- + Previous trips - (check wish list)
+ + Previous trips - (check a list)
  + Calculator for board prices
-![alt tag](https://pbs.twimg.com/media/EGN6v1YWwAEa2bc?format=jpg&name=large)
+![alt tag](https://github.com/MarinaHuber/TradeMySurf/blob/corrections-branch/Working/coordination2.png)
 
 ###  Linear Regression
 CoreML and prediction model for the surfboard prices
@@ -81,8 +80,8 @@ Open the workspace open ```TradeMySurf.xcworkspace```.
 *This GitHub Page and Project is in development so It will be changing frequently.*
 I created a [Trello](https://trello.com/b/PD4vhnSl/trade-my-surf) to try to organize myself with everything I would like to develop for this App.
 
-I would be happy to have suggestions that you can do in the BackLog tab
+I would be happy to have suggestions that you can add in the BackLog tab.
 
-Thanks to read and be interest to this project.
+Thanks for read and interest at this project!
 
 
