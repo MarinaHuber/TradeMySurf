@@ -29,7 +29,7 @@ As a surfer I want to set clear my surf goal. To accomplish this goal I need a c
 ###  Navigation scheme: MVC + Coordinator manager
 Illustrates flow of the app:
 ![alt tag](https://github.com/MarinaHuber/TradeMySurf/blob/corrections-branch/Working/coordination.png)
- + LoadingState screen
+ + Splash screen
  + Welcome screen
  + Add level flow
  + Add date flow
