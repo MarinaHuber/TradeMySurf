@@ -10,35 +10,43 @@ import Foundation
 import UIKit
 
 final class CoordinatorTest: UIResponder, CoorinatorPresenting {
+
+    
     
     // MARK: Creating the Scene Manager
     var presenter: UINavigationController
     var tabBarController: UITabBarController?
-    var childCoordinators: [Coordinator]
     
     let window: UIWindow
     
     
     init(window: UIWindow) {
         self.window = window
+        self.presenter = UINavigationController()
+        self.tabBarController = UITabBarController()
+        super.init()
     }
     
+    
     // MARK: Presenting Coordinators
+    
+    func presentTabBar() {
+        let controller: SplashViewController = SplashViewController.instantiate()
+        let navigationController = UINavigationController(rootViewController: controller)
+        window.rootViewController = navigationController
+        controller.delegate = self as SplashViewControllerDelegate
+    
+    }
+    
     func presentSplash() {
         
     }
+}
+
+    // MARK: - SplashViewControllerDelegate
+extension CoordinatorTest : SplashViewControllerDelegate {
     
-    func presentOnboardingWelcome() {
-        
+    func performScreenSwitch() {
+            presentSplash()
     }
-    
-    func presentOnboardingLevel() {
-        
-    }
-    
-    func presentOnboardingDate() {
-        
-    }
-    
-    
 }

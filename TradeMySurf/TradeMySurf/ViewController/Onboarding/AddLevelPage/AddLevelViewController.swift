@@ -13,7 +13,7 @@ protocol AddLevelViewControllerDelegate: class {
 	func levelViewControllerTapAddDate(viewController: AddLevelViewController)
 }
 
-class AddLevelViewController: UIViewController {
+class AddLevelViewController: UIViewController, StoryboardProtocol {
 	@IBOutlet weak var pickerView: UIView!
 	weak var delegate: AddLevelViewControllerDelegate?
 	let levels = [Level.beginner.rawValue, Level.beginnerIntemediate.rawValue, Level.intermediate.rawValue, Level.advanced.rawValue, Level.professional.rawValue]
@@ -46,5 +46,3 @@ private extension AddLevelViewController {
             .appear(originView: pickerView, baseViewController: self)
     }
 }
-
-extension AddLevelViewController: StoryboardProtocol {}

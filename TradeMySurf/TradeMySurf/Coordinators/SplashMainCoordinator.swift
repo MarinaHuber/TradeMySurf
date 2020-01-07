@@ -8,29 +8,23 @@
 
 import UIKit
 
-final class SplashMainCoordinator: RootViewCoordinator {
-    
+final class SplashMainCoordinator: UIViewController {
     
     // MARK: - Inputs
-    var rootViewController: UIViewController {
-        return self.presenter
-    }
-    var childCoordinators: [Coordinator]
 
-    lazy var presenter: UINavigationController = {
-         let presenter = UINavigationController()
-         presenter.isNavigationBarHidden = true
-         return presenter
-     }()
     /// Window to manage
 	private let window: UIWindow
     
     // MARK: - Initialization
 	init(window: UIWindow) {
 		self.window = window
-		childCoordinators = []
+        super.init(nibName: Constants.CoordinatorKeys.splashViewController.rawValue, bundle: nil)
 	}
-
+    
+    required init?(coder: NSCoder) {
+        fatalError("init(coder:) has not been implemented")
+    }
+    
     // MARK: - Coordinator
 	public func start() {
 		showSplashViewControler()
@@ -43,19 +37,11 @@ final class SplashMainCoordinator: RootViewCoordinator {
     }
     
     func showWelcomeFlow() {
-        let welcomeCoordinator = WelcomeOnboardingCoordinator(window: window)
-        addChildCoordinator(welcomeCoordinator)
-        welcomeCoordinator.start()
-        window.rootViewController = welcomeCoordinator.presenter
+
     }
     
     func showTabBarFlow() {
-        let tabCoordinator: TabBarMainCoordinator = TabBarMainCoordinator(window: window, tabBarController: UITabBarController())
-        window.rootViewController = presenter
-        presenter.setNavigationBarHidden(true, animated: true)
-        addChildCoordinator(tabCoordinator)
-        tabCoordinator.start()
-        presenter.setViewControllers([tabCoordinator.tabBarController!], animated: true)
+
     }
 }
     // MARK: - SplashViewControllerDelegate

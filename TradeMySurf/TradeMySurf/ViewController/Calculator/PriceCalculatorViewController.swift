@@ -8,8 +8,7 @@
 
 import UIKit
 
-class PriceCalculatorViewController: UIViewController {
-	weak var coordinator: CalculatorCoordinator?
+class PriceCalculatorViewController: UIViewController, StoryboardProtocol {
 
     let surfBoards = Surfs()
 
@@ -49,5 +48,3 @@ class PriceCalculatorViewController: UIViewController {
     }
 
 }
-
-extension PriceCalculatorViewController: StoryboardProtocol {}

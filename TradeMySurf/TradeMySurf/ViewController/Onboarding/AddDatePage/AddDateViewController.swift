@@ -13,7 +13,7 @@ protocol AddDateViewControllerDelegate: class {
     func viewControllerTapPerformTabBar(viewController: AddDateViewController)
 }
 
-class AddDateViewController: UIViewController {
+class AddDateViewController: UIViewController, StoryboardProtocol {
 	weak var delegate: AddDateViewControllerDelegate?
 	@IBOutlet weak var pickerViewDate: UIView!
 
@@ -44,5 +44,3 @@ private extension AddDateViewController {
             .appear(originView: pickerViewDate, baseViewController: self)
     }
 }
-
-extension AddDateViewController: StoryboardProtocol {}

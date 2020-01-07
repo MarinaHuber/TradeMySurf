@@ -14,7 +14,7 @@ protocol SurfViewControllerDelegate: class {
     func clearCoordinatorTabBar()
 }
 
-class SurfTripViewController: UIViewController {
+class SurfTripViewController: UIViewController, StoryboardProtocol {
     
     weak var delegate: SurfViewControllerDelegate?
     
@@ -255,5 +255,4 @@ private extension SurfTripViewController {
         configureDiffableDataSource()
     }
 }
-// MARK: - Basic Navigation protocol -
-extension SurfTripViewController: StoryboardProtocol {}
+

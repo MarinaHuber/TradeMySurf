@@ -13,7 +13,7 @@ protocol SplashViewControllerDelegate: class {
 	func performScreenSwitch()
 }
 
-class SplashViewController: UIViewController {
+class SplashViewController: UIViewController, StoryboardProtocol {
     weak var delegate: SplashViewControllerDelegate?
 	let loadAnimateView = AnimationView(name: "loader_animation")
 
@@ -31,4 +31,3 @@ class SplashViewController: UIViewController {
         })
     }
 }
-extension SplashViewController: StoryboardProtocol {}

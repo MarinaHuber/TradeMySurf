@@ -14,7 +14,7 @@ protocol WelcomeViewControllerDelegate: class {
 	func welcomeViewControllerTapGetStarted(viewController: WelcomeViewController)
 }
 
-class WelcomeViewController: UIViewController, CAAnimationDelegate {
+class WelcomeViewController: UIViewController, CAAnimationDelegate, StoryboardProtocol {
     @IBOutlet weak var startButton: UIButton!
     @IBOutlet weak var welcomeLabel: UILabel!
     @IBOutlet weak var introLabel: UILabel!    
@@ -104,5 +104,3 @@ class WelcomeViewController: UIViewController, CAAnimationDelegate {
         self.delegate?.welcomeViewControllerTapGetStarted(viewController: self)
     }
 }
-
-extension WelcomeViewController: StoryboardProtocol {}

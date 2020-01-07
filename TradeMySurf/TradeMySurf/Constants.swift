@@ -9,7 +9,7 @@
 enum Constants {
 
 	enum CoordinatorKeys: String {
-		case loadViewController
+		case splashViewController
 		case welcomeViewCoordinator
 		case addLevelCoordinator
 		case addDateCoordinator
@@ -17,7 +17,7 @@ enum Constants {
 	}
 
 	enum Storyboards {
-		static let loadViewController = "LoadingStateViewController"
+		static let splashViewController = "SplashViewController"
 		static let welcomeViewCoordinator = "Welcome"
 		static let addLevelViewController = "AddLevelViewController"
 		static let addDateViewController = "AddDateViewController"

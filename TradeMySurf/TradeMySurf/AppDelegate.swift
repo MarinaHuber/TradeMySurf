@@ -18,6 +18,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 	func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
 		// configure Coordinators
         guard let window = window else { fatalError() }
+       // window = UIWindow(frame: UIScreen.main.bounds)
         coordinator = CoordinatorTest(window: window)
         return true
 
@@ -27,9 +28,9 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
 		return true
 	}
-   // override var next: UIResponder? {
-     //   return sceneManager
-   // }
+    override var next: UIResponder? {
+        return coordinator
+    }
 
     
     func customiseNavBar () {
