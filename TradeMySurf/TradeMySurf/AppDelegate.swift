@@ -11,19 +11,20 @@ import UIKit
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate {
 
-    private var coordinator: CoordinatorTest? = nil
+    private var coordinator: Coordinator? = nil
     var window: UIWindow?
-
+    private lazy var appCoordinator: Coordinator = {
+        return Coordinator(window: self.window!)
+    }()
 
 	func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
-		// configure Coordinators
+        
+		window = UIWindow(frame: UIScreen.main.bounds)
         guard let window = window else { fatalError() }
-       // window = UIWindow(frame: UIScreen.main.bounds)
-        coordinator = CoordinatorTest(window: window)
-        return true
-
+        appCoordinator = Coordinator(window: window)
+        window.makeKeyAndVisible()
+        appCoordinator.presentSplash()
 		// configure Fonts missing
-        FontHelper.registerAllFonts()
         customiseNavBar()
 
 		return true

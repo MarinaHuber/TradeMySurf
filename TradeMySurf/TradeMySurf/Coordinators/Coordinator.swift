@@ -9,7 +9,7 @@
 import Foundation
 import UIKit
 
-final class CoordinatorTest: UIResponder, CoorinatorPresenting {
+final class Coordinator: UIResponder, CoorinatorPresenting {
 
     
     
@@ -24,29 +24,32 @@ final class CoordinatorTest: UIResponder, CoorinatorPresenting {
         self.window = window
         self.presenter = UINavigationController()
         self.tabBarController = UITabBarController()
-        super.init()
     }
     
     
     // MARK: Presenting Coordinators
     
     func presentTabBar() {
-        let controller: SplashViewController = SplashViewController.instantiate()
-        let navigationController = UINavigationController(rootViewController: controller)
-        window.rootViewController = navigationController
-        controller.delegate = self as SplashViewControllerDelegate
+//        let controller: SplashViewController = SplashViewController.instantiate()
+//        let navigationController = UINavigationController(rootViewController: controller)
+//        window.rootViewController = navigationController
+//        controller.delegate = self as SplashViewControllerDelegate
     
     }
     
     func presentSplash() {
+        let controller: SplashViewController = SplashViewController.instantiate()
+        let navigationController = UINavigationController(rootViewController: controller)
+        window.rootViewController = navigationController
+        controller.delegate = self as SplashViewControllerDelegate
         
     }
 }
 
     // MARK: - SplashViewControllerDelegate
-extension CoordinatorTest : SplashViewControllerDelegate {
+extension Coordinator: SplashViewControllerDelegate {
     
     func performScreenSwitch() {
-            presentSplash()
+           // presentSplash()
     }
 }
