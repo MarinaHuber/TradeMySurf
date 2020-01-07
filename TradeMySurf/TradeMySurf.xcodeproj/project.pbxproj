@@ -32,6 +32,7 @@
 		9C69CE87234D0749003E386F /* Welcome.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9C69CE86234D0749003E386F /* Welcome.storyboard */; };
 		9C6F64CE2379F86400B0224D /* AddLevelViewController.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9CFDFD3A2367220300760F25 /* AddLevelViewController.storyboard */; };
 		9C6F64D02379FB7800B0224D /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C6F64CF2379FB7800B0224D /* Constants.swift */; };
+		9C73011723C51F5D00B98F8C /* TabBarViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C73011623C51F5D00B98F8C /* TabBarViewController.swift */; };
 		9C73E26623B963570028B9AC /* CoordinatorPresenting.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C73E26523B963570028B9AC /* CoordinatorPresenting.swift */; };
 		9C73E26823B964560028B9AC /* CoordinatorTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C73E26723B964560028B9AC /* CoordinatorTest.swift */; };
 		9C76F09423493DAB00853FD9 /* WelcomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C76F09323493DAB00853FD9 /* WelcomeViewController.swift */; };
@@ -106,6 +107,7 @@
 		9C71A14B2348946C00A67323 /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		9C71A14E234894CD00A67323 /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		9C71A150234894D500A67323 /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		9C73011623C51F5D00B98F8C /* TabBarViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TabBarViewController.swift; sourceTree = "<group>"; };
 		9C73E26523B963570028B9AC /* CoordinatorPresenting.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoordinatorPresenting.swift; sourceTree = "<group>"; };
 		9C73E26723B964560028B9AC /* CoordinatorTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoordinatorTest.swift; sourceTree = "<group>"; };
 		9C76F09323493DAB00853FD9 /* WelcomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WelcomeViewController.swift; sourceTree = "<group>"; };
@@ -318,6 +320,17 @@
 			path = SupportingViews;
 			sourceTree = "<group>";
 		};
+		9C73011523C51F0900B98F8C /* TabBarVC */ = {
+			isa = PBXGroup;
+			children = (
+				9C73011623C51F5D00B98F8C /* TabBarViewController.swift */,
+				9C53D5C9234CB1A800A3BD80 /* Calculator */,
+				9C53D5C8234CB19900A3BD80 /* SurfTrip */,
+				9C53D5C7234CB18600A3BD80 /* Saved */,
+			);
+			path = TabBarVC;
+			sourceTree = "<group>";
+		};
 		9C76F09E234946D500853FD9 /* Resources */ = {
 			isa = PBXGroup;
 			children = (
@@ -334,9 +347,7 @@
 				9C8F32FB239943350070751F /* SplashViewController.storyboard */,
 				9C990AAA2398114800B17AE5 /* SplashViewController.swift */,
 				9CFDFD3723671C2500760F25 /* Onboarding */,
-				9C53D5C9234CB1A800A3BD80 /* Calculator */,
-				9C53D5C8234CB19900A3BD80 /* SurfTrip */,
-				9C53D5C7234CB18600A3BD80 /* Saved */,
+				9C73011523C51F0900B98F8C /* TabBarVC */,
 			);
 			path = ViewController;
 			sourceTree = "<group>";
@@ -625,6 +636,7 @@
 				9C53D5C0234C126600A3BD80 /* StoryboardProtocol.swift in Sources */,
 				9C5B644C232A506C000727E6 /* AppDelegate.swift in Sources */,
 				9C62416E238AE68E00A4B7C9 /* ReuseIdentifierHelper.swift in Sources */,
+				9C73011723C51F5D00B98F8C /* TabBarViewController.swift in Sources */,
 				9C624174238AFC1400A4B7C9 /* SmallTableViewCell.swift in Sources */,
 				9C5B6456232A506C000727E6 /* TradeMySurf.xcdatamodeld in Sources */,
 				9C8F330223994CDD0070751F /* FontHelper.swift in Sources */,
