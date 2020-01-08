@@ -9,13 +9,9 @@
 import UIKit
 import Lottie
 
-protocol SplashViewControllerDelegate: class {
-	func performScreenSwitch()
-}
-
 class SplashViewController: UIViewController, StoryboardProtocol {
-    weak var delegate: SplashViewControllerDelegate?
-	let loadAnimateView = AnimationView(name: "loader_animation")
+
+    let loadAnimateView = AnimationView(name: "loader_animation")
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -27,7 +23,8 @@ class SplashViewController: UIViewController, StoryboardProtocol {
             self.view.alpha = 0.3
             
         }, completion: { _ in
-            self.delegate?.performScreenSwitch()
+          //  if UserDefaults.standard.userWasHere == false {
+            self.scenePresenter?.presentTabBar()
         })
     }
 }

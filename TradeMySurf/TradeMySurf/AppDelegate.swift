@@ -13,18 +13,17 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
     private var coordinator: Coordinator? = nil
     var window: UIWindow?
-    private lazy var appCoordinator: Coordinator = {
-        return Coordinator(window: self.window!)
-    }()
 
 	func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
         
+    // MARK: Configure Coordinator without storyboard
 		window = UIWindow(frame: UIScreen.main.bounds)
         guard let window = window else { fatalError() }
-        appCoordinator = Coordinator(window: window)
+        coordinator = Coordinator(window: window)
         window.makeKeyAndVisible()
-        appCoordinator.presentSplash()
-		// configure Fonts missing
+        scenePresenter?.presentSplash()
+        
+    // configure Fonts here
         customiseNavBar()
 
 		return true

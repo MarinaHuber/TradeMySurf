@@ -13,43 +13,30 @@ final class Coordinator: UIResponder, CoorinatorPresenting {
 
     
     
-    // MARK: Creating the Scene Manager
-    var presenter: UINavigationController
-    var tabBarController: UITabBarController?
+    // MARK: Creating the Coordinator
     
     let window: UIWindow
     
     
     init(window: UIWindow) {
         self.window = window
-        self.presenter = UINavigationController()
-        self.tabBarController = UITabBarController()
     }
     
     
     // MARK: Presenting Coordinators
     
     func presentTabBar() {
-//        let controller: SplashViewController = SplashViewController.instantiate()
-//        let navigationController = UINavigationController(rootViewController: controller)
-//        window.rootViewController = navigationController
-//        controller.delegate = self as SplashViewControllerDelegate
-    
+        let viewController = TabBarViewController()
+        guard let navigationController = window.rootViewController as? UINavigationController else { fatalError() }
+        ///removes the double nav bar
+        navigationController.setNavigationBarHidden(true, animated: true)
+        navigationController.pushViewController(viewController, animated: true)
+        
     }
     
     func presentSplash() {
         let controller: SplashViewController = SplashViewController.instantiate()
         let navigationController = UINavigationController(rootViewController: controller)
-        window.rootViewController = navigationController
-        controller.delegate = self as SplashViewControllerDelegate
-        
-    }
-}
-
-    // MARK: - SplashViewControllerDelegate
-extension Coordinator: SplashViewControllerDelegate {
-    
-    func performScreenSwitch() {
-           // presentSplash()
+        window.rootViewController = navigationController        
     }
 }

@@ -51,8 +51,7 @@ class SurfTripViewController: UIViewController, StoryboardProtocol {
     }    
     @objc func popToRoot(_ sender: UIBarButtonItem) {
 
-        delegate?.performBackToRoot()
-        //self.view.window?.rootViewController?.dismiss(animated: true, completion: nil)
+        scenePresenter?.presentSplash()
 
     }
 }
