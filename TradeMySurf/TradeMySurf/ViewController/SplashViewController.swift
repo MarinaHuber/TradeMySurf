@@ -24,7 +24,7 @@ class SplashViewController: UIViewController, StoryboardProtocol {
             
         }, completion: { _ in
           //  if UserDefaults.standard.userWasHere == false {
-            self.scenePresenter?.presentTabBar()
+            self.scenePresenter?.presentWelcome()
         })
     }
 }

@@ -9,19 +9,15 @@
 import UIKit
 import  SwiftyPickerPopover
 
-protocol AddDateViewControllerDelegate: class {
-    func viewControllerTapPerformTabBar(viewController: AddDateViewController)
-}
-
 class AddDateViewController: UIViewController, StoryboardProtocol {
-	weak var delegate: AddDateViewControllerDelegate?
-	@IBOutlet weak var pickerViewDate: UIView!
+
+    @IBOutlet weak var pickerViewDate: UIView!
 
     override func viewDidLoad() {
         super.viewDidLoad()
     }
-    override func viewDidAppear(_ animated: Bool) {
-        super.viewDidAppear(animated)
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
         
         tapDateSpringPopoverPicker()
     }
@@ -39,7 +35,7 @@ private extension AddDateViewController {
             .setDoneButton(title: "Done", font: UIFont.boldSystemFont(ofSize: 17), color: .systemBlue, action: { popover, date in
                 UserDefaults.standard.surfingTime = date
                 popover.disappear()
-                self.delegate?.viewControllerTapPerformTabBar(viewController: self)
+                self.scenePresenter?.presentTabBar()
             })
             .appear(originView: pickerViewDate, baseViewController: self)
     }

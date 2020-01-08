@@ -10,15 +10,12 @@ import Foundation
 import UIKit
 import Lottie
 
-protocol WelcomeViewControllerDelegate: class {
-	func welcomeViewControllerTapGetStarted(viewController: WelcomeViewController)
-}
 
 class WelcomeViewController: UIViewController, CAAnimationDelegate, StoryboardProtocol {
+    
     @IBOutlet weak var startButton: UIButton!
     @IBOutlet weak var welcomeLabel: UILabel!
     @IBOutlet weak var introLabel: UILabel!    
-    weak var delegate: WelcomeViewControllerDelegate?
     @IBOutlet private(set) weak var lottieBoard: AnimationView! {
         didSet {
             lottieBoard.animation = Animation.named("clip-board")
@@ -100,7 +97,7 @@ class WelcomeViewController: UIViewController, CAAnimationDelegate, StoryboardPr
     override func viewWillDisappear(_ animated: Bool) {
         super.viewWillDisappear(animated)
     }
-    @IBAction func openNext(_ sender: Any) {
-        self.delegate?.welcomeViewControllerTapGetStarted(viewController: self)
+    @IBAction func openNext(_ sender: UIButton) {
+        scenePresenter?.presentAddLevel()
     }
 }

@@ -50,9 +50,7 @@ class SurfTripViewController: UIViewController, StoryboardProtocol {
         //UserDefaults.standard.userWasHere = false
     }    
     @objc func popToRoot(_ sender: UIBarButtonItem) {
-
-        scenePresenter?.presentSplash()
-
+        scenePresenter?.presentWelcome()
     }
 }
 

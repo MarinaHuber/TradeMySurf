@@ -10,6 +10,9 @@ import UIKit
 
 protocol CoorinatorPresenting {
     func presentSplash()
+    func presentWelcome()
+    func presentAddLevel()
+    func presentAddDate()
     func presentTabBar()
 
 }

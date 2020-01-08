@@ -29,9 +29,6 @@ final class TabBarViewController: UITabBarController {
         let priceVC: PriceCalculatorViewController = PriceCalculatorViewController.instantiate(from: storyboardPrice)
         priceVC.title = "Calculator"
         priceVC.view.backgroundColor = .cyan
-//        saveVC.tabBarItem = UITabBarItem(tabBarSystemItem: .favorites, tag: 0)
-//        recommendVC.tabBarItem = UITabBarItem(tabBarSystemItem: .downloads, tag: 1)
-//        priceVC.tabBarItem = UITabBarItem(tabBarSystemItem: .history, tag: 2)
         let controllers = [saveVC, recommendVC, priceVC]
         self.viewControllers = controllers.map { UINavigationController(rootViewController: $0)}
         
