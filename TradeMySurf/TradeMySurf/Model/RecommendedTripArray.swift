@@ -102,13 +102,40 @@ public struct RecommendedTripArray {
 			  Location(countryName: "South Africa", continentName: "Africa", imageFlag: "indonesia")
 		  ]
 	  }()
-
-    public var tips: [SurfTip] = {
+    
+    public var tipBeginner: [SurfTip] = {
         return [
-            SurfTip(title: "Beginner surf goal",
-                     description: "Volumen is the most important element to consider when choosing a surfboard. It's the factor that can most affect the number of waves you catch, and how much fun you have in water.But it isn't everything. Understanding how the curved shapes and the surfboard's dimensions affect your surfing will also help you find better surfboardsfor your surf level, and have positive impact on your progression."),
-//            SurfTip(title: "Reading the wave",
-//                     description: "This is a specially hard for beginners.")
+            SurfTip(title: "Learning to stand up in white water waves",
+                    description: "Volumen is important element to consider when choosing a surfboard. It's the factor that can most affect the number of waves you catch, and how much fun you have in water.But it isn't everything. Understanding how the curved shapes and the surfboard's dimensions affect your surfing will also help you find better surfboardsfor your surf level, and have positive impact on your progression.")
         ]
     }()
+    public var tipBeginnerInter: [SurfTip] = {
+         return [
+             SurfTip(title: "Paddling out, dropping straight down the face of the wave",
+                     description: "Volumen is important element to consider when choosing a surfboard. It's the factor that can most affect the number of waves you catch, and how much fun you have in water.But it isn't everything. Understanding how the curved shapes and the surfboard's dimensions affect your surfing will also help you find better surfboardsfor your surf level, and have positive impact on your progression.")
+         ]
+     }()
+    
+    public var tipIntermediate: [SurfTip] = {
+        return [
+            SurfTip(title: "Trimming down the middle line of the wave",
+                    description: "Volumen is important element to consider when choosing a surfboard. It's the factor that can most affect the number of waves you catch, and how much fun you have in water.But it isn't everything. Understanding how the curved shapes and the surfboard's dimensions affect your surfing will also help you find better surfboardsfor your surf level, and have positive impact on your progression.")
+        ]
+    }()
+    
+    public var tipAdvanced: [SurfTip] = {
+        return [
+            SurfTip(title: "Performing full carving changes",
+                    description: "Volumen is important element to consider when choosing a surfboard. It's the factor that can most affect the number of waves you catch, and how much fun you have in water.But it isn't everything. Understanding how the curved shapes and the surfboard's dimensions affect your surfing will also help you find better surfboardsfor your surf level, and have positive impact on your progression.")
+        ]
+    }()
+    
+    public var tipPro: [SurfTip] = {
+        return [
+            SurfTip(title: "Professional level speed, power and flow maneuvers",
+                    description: "Volumen is important element to consider when choosing a surfboard. It's the factor that can most affect the number of waves you catch, and how much fun you have in water.But it isn't everything. Understanding how the curved shapes and the surfboard's dimensions affect your surfing will also help you find better surfboardsfor your surf level, and have positive impact on your progression.")
+        ]
+    }()
+    
+    
 }

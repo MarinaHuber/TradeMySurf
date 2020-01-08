@@ -50,7 +50,7 @@ class SurfTripViewController: UIViewController, StoryboardProtocol {
         //UserDefaults.standard.userWasHere = false
     }    
     @objc func popToRoot(_ sender: UIBarButtonItem) {
-        scenePresenter?.presentWelcome()
+        scenePresenter?.presentAddLevel()
     }
 }
 
@@ -61,7 +61,7 @@ func configureDiffableDataSource() {
         (collectionView: UICollectionView, indexPath: IndexPath, item: TripItem) -> UICollectionViewCell? in
 
 		switch item {
-		case .tip(let tip):
+            case .tipBeginner(let tip), .tipBeginnerInter(let tip), .tipIntermediate(let tip), .tipAdvanced(let tip), .tipPro(let tip):
 			let cell = collectionView.dequeueCell(ofType: SmallTableViewCell.self, for: indexPath)
 			cell.fillWithData(tip)
 			return cell
@@ -83,24 +83,37 @@ func configureDiffableDataSource() {
     func updateSnapshot(animated: Bool = true) {
 
 		var snapshot = NSDiffableDataSourceSnapshot<TripSection, TripItem>()
-		snapshot.appendSections([.tips])
-		snapshot.appendItems(appData.tips.map({ TripItem.tip($0) }))
 
 		let pickerString = Level.enumFromString(string: selectedLevel ?? "")
 		switch pickerString {
 		case .beginner:
+            snapshot.appendSections([.tipBeginner])
+            snapshot.appendItems(appData.tipBeginner.map({ TripItem.tipBeginner($0) }))
+            
 			snapshot.appendSections([.surfboardsBeginner])
 			snapshot.appendItems(appData.surfboardsBeginner.map({ TripItem.surfboardsBeginner($0) }))
 		case .beginnerIntemediate:
+            snapshot.appendSections([.tipBeginnerInter])
+            snapshot.appendItems(appData.tipBeginnerInter.map({ TripItem.tipBeginnerInter($0) }))
+            
 			snapshot.appendSections([.surfboardsBeginnerInter])
 			snapshot.appendItems(appData.surfboardsBeginnerInter.map({ TripItem.surfboardsBeginnerInter($0) }))
 		case .intermediate:
+            snapshot.appendSections([.tipIntermediate])
+            snapshot.appendItems(appData.tipIntermediate.map({ TripItem.tipIntermediate($0) }))
+            
 			snapshot.appendSections([.surfboardsIntermediate])
 			snapshot.appendItems(appData.surfboardsIntermediate.map({  TripItem.surfboardsIntermediate($0) }))
 		case .advanced:
+            snapshot.appendSections([.tipAdvanced])
+            snapshot.appendItems(appData.tipAdvanced.map({ TripItem.tipAdvanced($0) }))
+            
 			snapshot.appendSections([.surfboardsAdvanced])
 			snapshot.appendItems(appData.surfboardsAdvanced.map({  TripItem.surfboardsAdvanced($0) }))
 		case .professional:
+            snapshot.appendSections([.tipPro])
+            snapshot.appendItems(appData.tipPro.map({ TripItem.tipPro($0) }))
+            
 			snapshot.appendSections([.surfboardsPro])
 			snapshot.appendItems(appData.surfboardsPro.map({  TripItem.surfboardsPro($0) }))
         default: break
@@ -128,7 +141,7 @@ func configureDiffableDataSource() {
     }
 
 }
-// MARK: - Business logic -
+// MARK: - Date formatter logic -
 private extension SurfTripViewController {
 
 	func makeIntFromMonth() -> Int {
@@ -154,7 +167,7 @@ private extension SurfTripViewController {
 			let guideSection = strongSelf.sections[sectionIndex]
 			let section: NSCollectionLayoutSection
 				switch guideSection {
-				case .tips:
+                    case .tipBeginner, .tipBeginnerInter, .tipIntermediate, .tipAdvanced, .tipPro:
 					section = strongSelf.makeSmallTableSection()
 				case .surfboardsBeginner, .surfboardsBeginnerInter, .surfboardsIntermediate, .surfboardsAdvanced, .surfboardsPro:
 					section = strongSelf.makeSurfboardSection()
