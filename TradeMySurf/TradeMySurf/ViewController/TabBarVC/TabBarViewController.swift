@@ -13,7 +13,7 @@ final class TabBarViewController: UITabBarController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        setUpTabBar()
+        setUpTabBar() // Set tabBar before selected tab !!
         self.selectedIndex = 1
 
     }

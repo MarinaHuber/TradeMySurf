@@ -36,6 +36,7 @@ final class Coordinator: UIResponder, CoorinatorPresenting {
         let welcomeStoryboard: UIStoryboard = UIStoryboard(name: Constants.Storyboards.welcomeViewController, bundle: nil)
         let welcomeController: WelcomeViewController = WelcomeViewController.instantiate(from: welcomeStoryboard)
         let navigationWelcome = UINavigationController(rootViewController: welcomeController)
+        navigationWelcome.setNavigationBarHidden(true, animated: true)
         window.rootViewController = navigationWelcome
     }
     
@@ -43,6 +44,7 @@ final class Coordinator: UIResponder, CoorinatorPresenting {
         let storyboard: UIStoryboard = UIStoryboard(name: Constants.Storyboards.addLevelViewController, bundle: nil)
         let controller: AddLevelViewController = AddLevelViewController.instantiate(from: storyboard)
         let navigationController = UINavigationController(rootViewController: controller)
+        navigationController.setNavigationBarHidden(true, animated: true)
         window.rootViewController = navigationController
     }
     
@@ -50,6 +52,7 @@ final class Coordinator: UIResponder, CoorinatorPresenting {
         let storyboard: UIStoryboard = UIStoryboard(name: Constants.Storyboards.addDateViewController, bundle: nil)
         let controller: AddDateViewController = AddDateViewController.instantiate(from: storyboard)
         let navigationController = UINavigationController(rootViewController: controller)
+        navigationController.setNavigationBarHidden(true, animated: true)
         window.rootViewController = navigationController
     }
     
