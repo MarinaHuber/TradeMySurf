@@ -12,4 +12,5 @@ public struct SurfTip: Hashable {
     public let id: UUID = UUID()
     public let title: String
     public let description: String
+    public let descriptionLocation: String
 }

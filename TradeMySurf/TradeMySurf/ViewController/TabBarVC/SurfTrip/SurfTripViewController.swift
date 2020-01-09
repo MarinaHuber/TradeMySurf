@@ -9,15 +9,8 @@
 import Foundation
 import UIKit
 
-protocol SurfViewControllerDelegate: class {
-    func performBackToRoot()
-    func clearCoordinatorTabBar()
-}
-
 class SurfTripViewController: UIViewController, StoryboardProtocol {
-    
-    weak var delegate: SurfViewControllerDelegate?
-    
+        
     lazy var leftBtn: UIBarButtonItem = {
         let button = UIButton(type: .system)
         button.setImage(UIImage(systemName: "arrow.turn.up.left"), for: .normal)
@@ -57,24 +50,24 @@ class SurfTripViewController: UIViewController, StoryboardProtocol {
 private extension SurfTripViewController {
 
 func configureDiffableDataSource() {
-	let dataSource = UICollectionViewDiffableDataSource<TripSection, TripItem>(collectionView: collectionView) {
+    let dataSource = UICollectionViewDiffableDataSource<TripSection, TripItem>(collectionView: collectionView) {
         (collectionView: UICollectionView, indexPath: IndexPath, item: TripItem) -> UICollectionViewCell? in
-
-		switch item {
+        
+        switch item {
             case .tipBeginner(let tip), .tipBeginnerInter(let tip), .tipIntermediate(let tip), .tipAdvanced(let tip), .tipPro(let tip):
-			let cell = collectionView.dequeueCell(ofType: SmallTableViewCell.self, for: indexPath)
-			cell.fillWithData(tip)
-			return cell
-		case .surfboardsBeginner(let board), .surfboardsBeginnerInter(let board), .surfboardsIntermediate(let board), .surfboardsAdvanced(let board), .surfboardsPro(let board):
-			let cell = collectionView.dequeueCell(ofType: SurfBoardCollectionViewCell.self, for: indexPath)
-			cell.fillWithData(board)
-			return cell
-		case .surfCountrySummer(let location), .surfCountryAutumn(let location), .surfCountryWinter(let location), .surfCountrySpring(let location):
-			let cell = collectionView.dequeueCell(ofType: LocationCollectionViewCell.self, for: indexPath)
-			cell.fillWithData(location)
-			return cell
-		}
-	}
+                let cell = collectionView.dequeueCell(ofType: SmallTableViewCell.self, for: indexPath)
+                cell.fillWithData(tip)
+                return cell
+            case .surfboardsBeginner(let board), .surfboardsBeginnerInter(let board), .surfboardsIntermediate(let board), .surfboardsAdvanced(let board), .surfboardsPro(let board):
+                let cell = collectionView.dequeueCell(ofType: SurfBoardCollectionViewCell.self, for: indexPath)
+                cell.fillWithData(board)
+                return cell
+            case .surfCountrySummer(let location), .surfCountryAutumn(let location), .surfCountryWinter(let location), .surfCountrySpring(let location):
+                let cell = collectionView.dequeueCell(ofType: LocationCollectionViewCell.self, for: indexPath)
+                cell.fillWithData(location)
+                return cell
+        }
+    }
 
 	self.dataSource = dataSource
 	updateSnapshot(animated: false)
@@ -168,7 +161,7 @@ private extension SurfTripViewController {
 			let section: NSCollectionLayoutSection
 				switch guideSection {
                     case .tipBeginner, .tipBeginnerInter, .tipIntermediate, .tipAdvanced, .tipPro:
-					section = strongSelf.makeSmallTableSection()
+					section = strongSelf.makeSmallTipsSection()
 				case .surfboardsBeginner, .surfboardsBeginnerInter, .surfboardsIntermediate, .surfboardsAdvanced, .surfboardsPro:
 					section = strongSelf.makeSurfboardSection()
 				case .surfCountrySummer, .surfCountryAutumn, .surfCountryWinter, .surfCountrySpring:
@@ -180,7 +173,7 @@ private extension SurfTripViewController {
 		return layout
 	}
 
-	func makeSmallTableSection() -> NSCollectionLayoutSection {
+	func makeSmallTipsSection() -> NSCollectionLayoutSection {
 		let itemSize = NSCollectionLayoutSize(widthDimension: .fractionalWidth(1.0),
 											  heightDimension: .estimated(40))
 		let item = NSCollectionLayoutItem(layoutSize: itemSize)
