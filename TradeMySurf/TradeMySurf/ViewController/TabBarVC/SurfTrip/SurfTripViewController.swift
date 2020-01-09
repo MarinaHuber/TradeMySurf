@@ -253,6 +253,9 @@ private extension SurfTripViewController {
         collectionView.registerCell(ofType: SmallTableViewCell.self)
         collectionView.registerCell(ofType: SurfBoardCollectionViewCell.self)
         collectionView.registerCell(ofType: LocationCollectionViewCell.self)
+        
+        collectionView.registerReusableView(ofType: BoardSupplementaryView.self, forKind: UICollectionView.elementKindSectionHeader)
+        collectionView.registerReusableView(ofType: LocationSupplementaryView.self, forKind: UICollectionView.elementKindSectionHeader)
 
         collectionView.delegate = self // Set delegate before data source !!
         configureDiffableDataSource()

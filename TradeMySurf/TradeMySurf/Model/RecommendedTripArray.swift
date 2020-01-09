@@ -63,43 +63,43 @@ public struct RecommendedTripArray {
 
     public var surfCountrySummer: [Location] = {
         return [
-			Location(countryName: "Summer France",continentName: "Europe", imageFlag: "french"),
-            Location(countryName: "Costa Rica", continentName: "South America", imageFlag: "brazil"),
-            Location(countryName: "Morocco", continentName: "Africa", imageFlag: "indonesia"),
-            Location(countryName: "Japan", continentName: "Asia", imageFlag: "indonesia"),
-            Location(countryName: "California", continentName: "North America", imageFlag: "usa"),
-            Location(countryName: "South Africa", continentName: "Africa", imageFlag: "french")
+			Location(countryName: "Summer France", continentName: "Europe", imageFlag: "french", beaufortScaleWave: "0 - 1.4 m"),
+            Location(countryName: "Costa Rica", continentName: "South America", imageFlag: "brazil", beaufortScaleWave: "0 - 1.4 m"),
+            Location(countryName: "Morocco", continentName: "Africa", imageFlag: "indonesia", beaufortScaleWave: "0 - 1.4 m"),
+            Location(countryName: "Japan", continentName: "Asia", imageFlag: "indonesia", beaufortScaleWave: "0 - 1.4 m"),
+            Location(countryName: "California", continentName: "North America", imageFlag: "usa", beaufortScaleWave: "0 - 1.4 m"),
+            Location(countryName: "South Africa", continentName: "Africa", imageFlag: "french", beaufortScaleWave: "0 - 1.5 m")
         ]
     }()
 	public var surfCountryAutumn: [Location] = {
 		  return [
-              Location(countryName: "Costa Rica", continentName: "South America", imageFlag: "brazil"),
-			  Location(countryName: "Costa Rica", continentName: "South America", imageFlag: "morocco"),
-			  Location(countryName: "Morocco", continentName: "Africa", imageFlag: "morocco"),
-			  Location(countryName: "Japan", continentName: "Asia", imageFlag: "indonesia"),
-			  Location(countryName: "California", continentName: "North America", imageFlag: "usa"),
-			  Location(countryName: "South Africa", continentName: "Africa", imageFlag: "french")
+              Location(countryName: "Costa Rica", continentName: "South America", imageFlag: "brazil", beaufortScaleWave: "1 - 1.4 m"),
+			  Location(countryName: "Costa Rica", continentName: "South America", imageFlag: "morocco", beaufortScaleWave: "1 - 2.4 m"),
+			  Location(countryName: "Morocco", continentName: "Africa", imageFlag: "morocco", beaufortScaleWave: "1 - 2.4 m"),
+			  Location(countryName: "Japan", continentName: "Asia", imageFlag: "indonesia", beaufortScaleWave: "1 - 2.4 m"),
+			  Location(countryName: "California", continentName: "North America", imageFlag: "usa", beaufortScaleWave: "1 - 2.4 m"),
+			  Location(countryName: "South Africa", continentName: "Africa", imageFlag: "french", beaufortScaleWave: "1 - 2.4 m")
 		  ]
 	  }()
 
 	public var surfCountryWinter: [Location] = {
 		  return [
-			  Location(countryName: "Winter Morocco",continentName: "Europe", imageFlag: "morocco"),
-			  Location(countryName: "Costa Rica", continentName: "South America", imageFlag: "brazil"),
-			  Location(countryName: "Morocco", continentName: "Africa", imageFlag: "usa"),
-			  Location(countryName: "Japan", continentName: "Asia", imageFlag: "indonesia"),
-			  Location(countryName: "California", continentName: "North America", imageFlag: "usa"),
-			  Location(countryName: "South Africa", continentName: "Africa", imageFlag: "french")
+			  Location(countryName: "Winter Morocco",continentName: "Europe", imageFlag: "morocco", beaufortScaleWave: "2 - 1.4 m"),
+			  Location(countryName: "Costa Rica", continentName: "South America", imageFlag: "brazil", beaufortScaleWave: "2 - 1.4 m"),
+			  Location(countryName: "Morocco", continentName: "Africa", imageFlag: "usa", beaufortScaleWave: "2 - 1.4 m"),
+			  Location(countryName: "Japan", continentName: "Asia", imageFlag: "indonesia", beaufortScaleWave: "2 - 2.4 m"),
+			  Location(countryName: "California", continentName: "North America", imageFlag: "usa", beaufortScaleWave: "2 - 3 m"),
+			  Location(countryName: "South Africa", continentName: "Africa", imageFlag: "french", beaufortScaleWave: "2 - 3.4 m")
 		  ]
 	  }()
 	public var surfCountrySpring: [Location] = {
 		  return [
-			  Location(countryName: "Spring France",continentName: "Europe", imageFlag: "brazil"),
-			  Location(countryName: "Costa Rica", continentName: "South America", imageFlag: "usa"),
-			  Location(countryName: "Morocco", continentName: "Africa", imageFlag: "morocco"),
-			  Location(countryName: "Japan", continentName: "Asia", imageFlag: "indonesia"),
-			  Location(countryName: "California", continentName: "North America", imageFlag: "usa"),
-			  Location(countryName: "South Africa", continentName: "Africa", imageFlag: "indonesia")
+			  Location(countryName: "Spring France",continentName: "Europe", imageFlag: "brazil", beaufortScaleWave: "3 < m"),
+			  Location(countryName: "Costa Rica", continentName: "South America", imageFlag: "usa", beaufortScaleWave: "3 < m"),
+			  Location(countryName: "Morocco", continentName: "Africa", imageFlag: "morocco", beaufortScaleWave: "3 < m"),
+			  Location(countryName: "Japan", continentName: "Asia", imageFlag: "indonesia", beaufortScaleWave: "3 < m"),
+			  Location(countryName: "California", continentName: "North America", imageFlag: "usa", beaufortScaleWave: "3 < m"),
+			  Location(countryName: "South Africa", continentName: "Africa", imageFlag: "indonesia", beaufortScaleWave: "3 < m")
 		  ]
 	  }()
     

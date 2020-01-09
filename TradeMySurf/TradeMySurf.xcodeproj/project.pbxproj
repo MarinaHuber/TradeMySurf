@@ -9,7 +9,7 @@
 /* Begin PBXBuildFile section */
 		9C193AFB23A2ACA7000DE1AB /* coin-wallet.json in Resources */ = {isa = PBXBuildFile; fileRef = 9C193AFA23A2ACA7000DE1AB /* coin-wallet.json */; };
 		9C3C703B239B154A00B721CC /* Surfs.mlmodel in Sources */ = {isa = PBXBuildFile; fileRef = 9C3C703A239B154900B721CC /* Surfs.mlmodel */; };
-		9C3CC3DE23C75EE800359368 /* SectionHeader.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C3CC3DD23C75EE800359368 /* SectionHeader.swift */; };
+		9C3CC3DE23C75EE800359368 /* SupplementaryView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C3CC3DD23C75EE800359368 /* SupplementaryView.swift */; };
 		9C45E661234D238F0054A5FD /* SurfTripViewController.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9C45E660234D238E0054A5FD /* SurfTripViewController.storyboard */; };
 		9C467C67234F2A7D009F4D58 /* Surfboard.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C467C66234F2A7D009F4D58 /* Surfboard.swift */; };
 		9C4C54742349C28500FB2653 /* SavedTripsViewController.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9C4C54732349C28500FB2653 /* SavedTripsViewController.storyboard */; };
@@ -79,7 +79,7 @@
 		73594BCA3A691E66914D3EEA /* Pods-TradeMySurf.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TradeMySurf.debug.xcconfig"; path = "Target Support Files/Pods-TradeMySurf/Pods-TradeMySurf.debug.xcconfig"; sourceTree = "<group>"; };
 		9C193AFA23A2ACA7000DE1AB /* coin-wallet.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = "coin-wallet.json"; sourceTree = "<group>"; };
 		9C3C703A239B154900B721CC /* Surfs.mlmodel */ = {isa = PBXFileReference; lastKnownFileType = file.mlmodel; path = Surfs.mlmodel; sourceTree = "<group>"; };
-		9C3CC3DD23C75EE800359368 /* SectionHeader.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SectionHeader.swift; sourceTree = "<group>"; };
+		9C3CC3DD23C75EE800359368 /* SupplementaryView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SupplementaryView.swift; sourceTree = "<group>"; };
 		9C45E660234D238E0054A5FD /* SurfTripViewController.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = SurfTripViewController.storyboard; sourceTree = "<group>"; };
 		9C467C66234F2A7D009F4D58 /* Surfboard.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Surfboard.swift; sourceTree = "<group>"; };
 		9C4C54732349C28500FB2653 /* SavedTripsViewController.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = SavedTripsViewController.storyboard; sourceTree = "<group>"; };
@@ -278,7 +278,7 @@
 		9C62416C238AE35100A4B7C9 /* Cells */ = {
 			isa = PBXGroup;
 			children = (
-				9C3CC3DD23C75EE800359368 /* SectionHeader.swift */,
+				9C3CC3DD23C75EE800359368 /* SupplementaryView.swift */,
 				9C624173238AFC1400A4B7C9 /* SmallTableViewCell.swift */,
 				9C624177238B107B00A4B7C9 /* SurfboardCollectionViewCell.swift */,
 				9C624179238B374800A4B7C9 /* LocationaCollectionViewCell.swift */,
@@ -629,7 +629,7 @@
 				9C624178238B107B00A4B7C9 /* SurfboardCollectionViewCell.swift in Sources */,
 				9C76F09423493DAB00853FD9 /* WelcomeViewController.swift in Sources */,
 				9C3C703B239B154A00B721CC /* Surfs.mlmodel in Sources */,
-				9C3CC3DE23C75EE800359368 /* SectionHeader.swift in Sources */,
+				9C3CC3DE23C75EE800359368 /* SupplementaryView.swift in Sources */,
 				9C624172238AE81A00A4B7C9 /* SurfTip.swift in Sources */,
 				9C73E26623B963570028B9AC /* CoordinatorPresenting.swift in Sources */,
 				9C624170238AE75000A4B7C9 /* RecommendedTripArray.swift in Sources */,
