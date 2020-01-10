@@ -10,6 +10,14 @@ import Foundation
 
 public struct SurfTip: Hashable {
     public let id: UUID = UUID()
+    
+    public func hash(into hasher: inout Hasher) {
+        hasher.combine(id)
+    }
+
+    public static func == (lhs: SurfTip, rhs: SurfTip) -> Bool {
+        return lhs.id == rhs.id
+    }
     public let title: String
     public let description: String
     public let descriptionLocation: String

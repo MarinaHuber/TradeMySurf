@@ -81,14 +81,6 @@ private extension SurfTripViewController {
                     items.map {
                         _ = $0.map{
                             switch $0 {
-                                case .tipBeginner(_):
-                                break
-                                case .tipBeginnerInter(_):
-                                break
-                                case .tipIntermediate(_):
-                                break
-                                case .tipAdvanced(_):
-                                break
                                 case .surfboardsBeginner(let board):
                                 boardHeader.fillWithBoard(board)
                                 case .surfboardsBeginnerInter(let board):
@@ -97,14 +89,7 @@ private extension SurfTripViewController {
                                 boardHeader.fillWithBoard(board)
                                 case .surfboardsAdvanced(let board):
                                 boardHeader.fillWithBoard(board)
-                                case .surfCountrySummer(_):
-                                break
-                                case .surfCountryWinter(_):
-                                break
-                                case .surfCountrySpring(_):
-                                break
-                                case .surfCountryAutumn(_):
-                                break
+                                default: break
                             }
                          }
                       }
@@ -115,22 +100,6 @@ private extension SurfTripViewController {
                     items.map {
                         _ = $0.map{
                             switch $0 {
-                                case .tipBeginner(_):
-                                break
-                                case .tipBeginnerInter(_):
-                                break
-                                case .tipIntermediate(_):
-                                break
-                                case .tipAdvanced(_):
-                                break
-                                case .surfboardsBeginner(_):
-                                break
-                                case .surfboardsBeginnerInter(_):
-                                break
-                                case .surfboardsIntermediate(_):
-                                break
-                                case .surfboardsAdvanced(_):
-                                break
                                 case .surfCountrySummer(let location):
                                 locationHeader.fillWithLocation(location)
                                 case .surfCountryWinter(let location):
@@ -139,6 +108,7 @@ private extension SurfTripViewController {
                                 locationHeader.fillWithLocation(location)
                                 case .surfCountryAutumn(let location):
                                 locationHeader.fillWithLocation(location)
+                                default: break
                             }
                          }
                       }

@@ -10,6 +10,14 @@ import Foundation
 
 public struct Surfboard: Hashable {
     public let id: UUID = UUID()
+    
+    public func hash(into hasher: inout Hasher) {
+        hasher.combine(id)
+    }
+
+    public static func == (lhs: Surfboard, rhs: Surfboard) -> Bool {
+        return lhs.id == rhs.id
+    }
 	public let title: String, volume: String
 	public let weight: Int
 	public let weightUnit: String, imageName: String
