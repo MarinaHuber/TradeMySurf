@@ -21,6 +21,7 @@ class SurfTripViewController: UIViewController, StoryboardProtocol {
         return UIBarButtonItem(customView: button)
     }()
 
+    private var boardData: Surfboard?
 	private var selectedLevel = UserDefaults.standard.selectedLevel
 	private var selectedDate = UserDefaults.standard.surfingTime
 
@@ -49,29 +50,44 @@ class SurfTripViewController: UIViewController, StoryboardProtocol {
 
 private extension SurfTripViewController {
 
-func configureDiffableDataSource() {
-    let dataSource = UICollectionViewDiffableDataSource<TripSection, TripItem>(collectionView: collectionView) {
-        (collectionView: UICollectionView, indexPath: IndexPath, item: TripItem) -> UICollectionViewCell? in
-        
-        switch item {
-            case .tipBeginner(let tip), .tipBeginnerInter(let tip), .tipIntermediate(let tip), .tipAdvanced(let tip), .tipPro(let tip):
-                let cell = collectionView.dequeueCell(ofType: SmallTableViewCell.self, for: indexPath)
-                cell.fillWithData(tip)
-                return cell
-            case .surfboardsBeginner(let board), .surfboardsBeginnerInter(let board), .surfboardsIntermediate(let board), .surfboardsAdvanced(let board), .surfboardsPro(let board):
-                let cell = collectionView.dequeueCell(ofType: SurfBoardCollectionViewCell.self, for: indexPath)
-                cell.fillWithData(board)
-                return cell
-            case .surfCountrySummer(let location), .surfCountryAutumn(let location), .surfCountryWinter(let location), .surfCountrySpring(let location):
-                let cell = collectionView.dequeueCell(ofType: LocationCollectionViewCell.self, for: indexPath)
-                cell.fillWithData(location)
-                return cell
+    func configureDiffableDataSource() {
+        self.dataSource = UICollectionViewDiffableDataSource<TripSection, TripItem>(collectionView: collectionView) {
+            (collectionView: UICollectionView, indexPath: IndexPath, item: TripItem) -> UICollectionViewCell? in
+            
+            switch item {
+                case .tipBeginner(let tip), .tipBeginnerInter(let tip), .tipIntermediate(let tip), .tipAdvanced(let tip), .tipPro(let tip):
+                    let cell = collectionView.dequeueCell(ofType: SmallTableViewCell.self, for: indexPath)
+                    cell.fillWithData(tip)
+                    return cell
+                case .surfboardsBeginner(let board), .surfboardsBeginnerInter(let board), .surfboardsIntermediate(let board), .surfboardsAdvanced(let board), .surfboardsPro(let board):
+                    let cell = collectionView.dequeueCell(ofType: SurfBoardCollectionViewCell.self, for: indexPath)
+                    cell.fillWithData(board)
+                    return cell
+                case .surfCountrySummer(let location), .surfCountryAutumn(let location), .surfCountryWinter(let location), .surfCountrySpring(let location):
+                    let cell = collectionView.dequeueCell(ofType: LocationCollectionViewCell.self, for: indexPath)
+                    cell.fillWithData(location)
+                    return cell
+            }
         }
+        //ADD elementKindSectionHeader for surfboard and location section
+        self.dataSource.supplementaryViewProvider = { [weak self] (collectionView: UICollectionView, kind: String, indexPath: IndexPath) -> UICollectionReusableView? in
+            guard let itamSequence = self?.dataSource?.itemIdentifier(for: indexPath) else { return nil }
+            guard let section = self?.dataSource?.snapshot().sectionIdentifier(containingItem: itamSequence) else { return nil }
+            
+            switch section {
+                case .tipBeginner, .tipIntermediate, .tipBeginnerInter, .tipAdvanced, .tipPro:
+                    return UICollectionReusableView()
+                case .surfboardsBeginner, .surfboardsBeginnerInter, .surfboardsIntermediate, .surfboardsAdvanced, .surfboardsPro:
+                    let boardHeader = collectionView.dequeueReusableView(ofType: BoardSupplementaryView.self, forKind: UICollectionView.elementKindSectionHeader, for: indexPath)
+                    boardHeader.fillWithBoard()
+                    return boardHeader
+                case .surfCountryAutumn, .surfCountrySpring, .surfCountrySummer, .surfCountryWinter:
+                    let locationHeader = collectionView.dequeueReusableView(ofType: LocationSupplementaryView.self, forKind: UICollectionView.elementKindSectionHeader, for: indexPath)
+                    return locationHeader
+            }
+        }
+        updateSnapshot(animated: false)
     }
-
-	self.dataSource = dataSource
-	updateSnapshot(animated: false)
-  }
 
     func updateSnapshot(animated: Bool = true) {
 
@@ -198,6 +214,8 @@ private extension SurfTripViewController {
         let section = NSCollectionLayoutSection(group: groupOf3)
         section.interGroupSpacing = 10
         section.orthogonalScrollingBehavior = .continuousGroupLeadingBoundary
+        let layoutSectionHeader = makeSupplementaryHeader()
+        section.boundarySupplementaryItems = [layoutSectionHeader]
 
         return section
     }
@@ -213,8 +231,16 @@ private extension SurfTripViewController {
         let section = NSCollectionLayoutSection(group: group)
         section.interGroupSpacing = 10
         section.orthogonalScrollingBehavior = .continuousGroupLeadingBoundary
+        let layoutSectionHeader = makeSupplementaryHeader()
+        section.boundarySupplementaryItems = [layoutSectionHeader]
         return section
 	}
+    
+    func makeSupplementaryHeader() -> NSCollectionLayoutBoundarySupplementaryItem {
+        let layoutSectionHeaderSize = NSCollectionLayoutSize(widthDimension: .fractionalWidth(0.93), heightDimension: .estimated(80))
+        let layoutSectionHeader = NSCollectionLayoutBoundarySupplementaryItem(layoutSize: layoutSectionHeaderSize, elementKind: UICollectionView.elementKindSectionHeader, alignment: .top)
+        return layoutSectionHeader
+    }
 }
 
 // MARK: - Collection View Delegate -
@@ -235,7 +261,7 @@ private extension SurfTripViewController {
 
     func addCollectionView() {
         let layout = makeCompositionalLayout()
-        collectionView = UICollectionView(frame: CGRect.zero, collectionViewLayout: layout)
+        collectionView = UICollectionView(frame: view.bounds, collectionViewLayout: layout)
         collectionView.backgroundColor = .systemBackground
         collectionView.translatesAutoresizingMaskIntoConstraints = false
         collectionView.alwaysBounceVertical = true

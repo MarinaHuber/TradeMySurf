@@ -22,9 +22,9 @@ class BoardSupplementaryView: UICollectionReusableView {
         fatalError("Stop trying to make storyboards happen.")
     }
     
-    func fillWithBoard(_ data: Surfboard) {
-        title.text = "Surf board for: \(data.title)"
-        subtitle.text = "Shapes and gear for your level"
+    func fillWithBoard() {
+       // title.text = "Surf board for: \(data.title)"
+        title.text = "Shapes and gear for your level"
     }
     
     func configureUI() {
@@ -69,8 +69,8 @@ class LocationSupplementaryView: UICollectionReusableView {
     }
     
     func fillWithLocation(_ data: Location) {
-        title.text = "Surf loacation for: \(data.beaufortScaleWave)"
-        subtitle.text = "Beaufort scale measure for wave height"
+    //    title.text = "Surf loacation for: \(data.beaufortScaleWave)"
+        title.text = "Beaufort scale measure for wave height"
     }
     
     func configureUI() {
