@@ -8,7 +8,6 @@
 
 /* Begin PBXBuildFile section */
 		9C193AFB23A2ACA7000DE1AB /* coin-wallet.json in Resources */ = {isa = PBXBuildFile; fileRef = 9C193AFA23A2ACA7000DE1AB /* coin-wallet.json */; };
-		9C3C703B239B154A00B721CC /* Surfs.mlmodel in Sources */ = {isa = PBXBuildFile; fileRef = 9C3C703A239B154900B721CC /* Surfs.mlmodel */; };
 		9C3CC3DE23C75EE800359368 /* SupplementaryView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C3CC3DD23C75EE800359368 /* SupplementaryView.swift */; };
 		9C45E661234D238F0054A5FD /* SurfTripViewController.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9C45E660234D238E0054A5FD /* SurfTripViewController.storyboard */; };
 		9C467C67234F2A7D009F4D58 /* Surfboard.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C467C66234F2A7D009F4D58 /* Surfboard.swift */; };
@@ -50,6 +49,7 @@
 		9C990AAB2398114800B17AE5 /* SplashViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C990AAA2398114800B17AE5 /* SplashViewController.swift */; };
 		9C9F836C2366BDAA00FA4F41 /* TabBarCoordinatorTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C9F836B2366BDAA00FA4F41 /* TabBarCoordinatorTests.swift */; };
 		9CBDE2982395A9E600317F51 /* TimeHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9CBDE2972395A9E600317F51 /* TimeHelper.swift */; };
+		9CC4F8DA23C9306800F3ABAB /* Surfs.mlmodel in Sources */ = {isa = PBXBuildFile; fileRef = 9CC4F8D923C9306700F3ABAB /* Surfs.mlmodel */; };
 		9CFDFD36236718E400760F25 /* CoordinatorTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9CFDFD35236718E400760F25 /* CoordinatorTests.swift */; };
 		9CFDFD3D2367221C00760F25 /* AddDateViewController.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9CFDFD3C2367221C00760F25 /* AddDateViewController.storyboard */; };
 		9CFDFD3F2367226C00760F25 /* AddDateViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9CFDFD3E2367226C00760F25 /* AddDateViewController.swift */; };
@@ -78,7 +78,6 @@
 		2A0124D5F3B03C0085DAD269 /* Pods-TradeMySurf.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TradeMySurf.release.xcconfig"; path = "Target Support Files/Pods-TradeMySurf/Pods-TradeMySurf.release.xcconfig"; sourceTree = "<group>"; };
 		73594BCA3A691E66914D3EEA /* Pods-TradeMySurf.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TradeMySurf.debug.xcconfig"; path = "Target Support Files/Pods-TradeMySurf/Pods-TradeMySurf.debug.xcconfig"; sourceTree = "<group>"; };
 		9C193AFA23A2ACA7000DE1AB /* coin-wallet.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = "coin-wallet.json"; sourceTree = "<group>"; };
-		9C3C703A239B154900B721CC /* Surfs.mlmodel */ = {isa = PBXFileReference; lastKnownFileType = file.mlmodel; path = Surfs.mlmodel; sourceTree = "<group>"; };
 		9C3CC3DD23C75EE800359368 /* SupplementaryView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SupplementaryView.swift; sourceTree = "<group>"; };
 		9C45E660234D238E0054A5FD /* SurfTripViewController.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = SurfTripViewController.storyboard; sourceTree = "<group>"; };
 		9C467C66234F2A7D009F4D58 /* Surfboard.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Surfboard.swift; sourceTree = "<group>"; };
@@ -125,6 +124,7 @@
 		9C990AAA2398114800B17AE5 /* SplashViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = SplashViewController.swift; path = TradeMySurf/ViewController/SplashViewController.swift; sourceTree = SOURCE_ROOT; };
 		9C9F836B2366BDAA00FA4F41 /* TabBarCoordinatorTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabBarCoordinatorTests.swift; sourceTree = "<group>"; };
 		9CBDE2972395A9E600317F51 /* TimeHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TimeHelper.swift; sourceTree = "<group>"; };
+		9CC4F8D923C9306700F3ABAB /* Surfs.mlmodel */ = {isa = PBXFileReference; lastKnownFileType = file.mlmodel; name = Surfs.mlmodel; path = ../../Working/Surfboards/Surfs.mlmodel; sourceTree = "<group>"; };
 		9CFDFD35236718E400760F25 /* CoordinatorTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoordinatorTests.swift; sourceTree = "<group>"; };
 		9CFDFD3A2367220300760F25 /* AddLevelViewController.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = AddLevelViewController.storyboard; sourceTree = "<group>"; };
 		9CFDFD3C2367221C00760F25 /* AddDateViewController.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = AddDateViewController.storyboard; sourceTree = "<group>"; };
@@ -248,7 +248,7 @@
 				9CC59F15234AA3B200F5ADD0 /* Coordinators */,
 				9C76F09F2349471000853FD9 /* ViewController */,
 				9C76F09E234946D500853FD9 /* Resources */,
-				9C3C703A239B154900B721CC /* Surfs.mlmodel */,
+				9CC4F8D923C9306700F3ABAB /* Surfs.mlmodel */,
 				9C71A14B2348946C00A67323 /* Info.plist */,
 				9C5B6454232A506C000727E6 /* TradeMySurf.xcdatamodeld */,
 				9C624175238B089000A4B7C9 /* SceneDelegate.swift */,
@@ -620,6 +620,7 @@
 			files = (
 				9CBDE2982395A9E600317F51 /* TimeHelper.swift in Sources */,
 				9C69CE76234CD9B9003E386F /* Location.swift in Sources */,
+				9CC4F8DA23C9306800F3ABAB /* Surfs.mlmodel in Sources */,
 				9C467C67234F2A7D009F4D58 /* Surfboard.swift in Sources */,
 				9C990AAB2398114800B17AE5 /* SplashViewController.swift in Sources */,
 				9C5B6450232A506C000727E6 /* PriceCalculatorViewController.swift in Sources */,
@@ -628,7 +629,6 @@
 				9C62417A238B374A00A4B7C9 /* LocationaCollectionViewCell.swift in Sources */,
 				9C624178238B107B00A4B7C9 /* SurfboardCollectionViewCell.swift in Sources */,
 				9C76F09423493DAB00853FD9 /* WelcomeViewController.swift in Sources */,
-				9C3C703B239B154A00B721CC /* Surfs.mlmodel in Sources */,
 				9C3CC3DE23C75EE800359368 /* SupplementaryView.swift in Sources */,
 				9C624172238AE81A00A4B7C9 /* SurfTip.swift in Sources */,
 				9C73E26623B963570028B9AC /* CoordinatorPresenting.swift in Sources */,

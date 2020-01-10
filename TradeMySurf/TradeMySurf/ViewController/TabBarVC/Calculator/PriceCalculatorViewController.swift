@@ -39,7 +39,7 @@ class PriceCalculatorViewController: UIViewController, StoryboardProtocol {
         hoursLabel.text = "Hours on water (\(formattedMileage) hours)"
 
         if let prediction = try? surfBoards.prediction(model: Double(model.selectedSegmentIndex), gear: Double(gear.selectedSegmentIndex), production: Double(production.value), condition: Double(condition.selectedSegmentIndex)) {
-            let clampedValuation = max(1000, prediction.price)
+            let clampedValuation = max(100, prediction.price)
             formatter.numberStyle = .currency
             valuation.text = formatter.string(for: clampedValuation)
         } else {
