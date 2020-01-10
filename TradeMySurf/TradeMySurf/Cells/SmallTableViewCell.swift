@@ -8,10 +8,12 @@
 
 import UIKit
 
-class SmallTableViewCell : UICollectionViewCell {	
+class SmallTableViewCell : UICollectionViewCell {
+    
 	let titleLabel: UILabel = UILabel()
     let dateLabel: UILabel = UILabel()
 	let descriptionLabel: UILabel = UILabel()
+    let windDescription: UILabel = UILabel()
 	let selectedDate = UserDefaults.standard.surfingTime
 
 	override init(frame: CGRect) {
@@ -30,8 +32,9 @@ extension SmallTableViewCell {
 
 	func fillWithData(_ data: SurfTip) {
         titleLabel.text = "Your goal: \(data.title)"
-        dateLabel.text = "Date: \(selectedDate?.dateAsString(style: .long) ?? "")"
+        dateLabel.text = "You want to start surfing: \(selectedDate?.dateAsString(style: .long) ?? "")"
 		descriptionLabel.text = data.description
+        windDescription.text = data.descriptionLocation
 	}
 }
 // MARK: - UI -
@@ -43,19 +46,24 @@ private extension SmallTableViewCell {
         // Styling
 
         titleLabel.textAlignment = .natural
-        titleLabel.font = UIFont(descriptor: UIFont.preferredFont(forTextStyle: .headline).fontDescriptor.withSymbolicTraits(.traitLooseLeading)!, size: 0)
-        titleLabel.textColor = .systemBlue
+        titleLabel.font = UIFont(descriptor: UIFont.preferredFont(forTextStyle: .headline).fontDescriptor.withSymbolicTraits(.traitLooseLeading)!, size: 19)
+        titleLabel.textColor = .black
         titleLabel.numberOfLines = 0
 
         descriptionLabel.textAlignment = .natural
-        descriptionLabel.font = .preferredFont(forTextStyle: .caption2)
+        descriptionLabel.font = .preferredFont(forTextStyle: .body)
         descriptionLabel.numberOfLines = 0
         
         dateLabel.textAlignment = .natural
-        dateLabel.font = UIFont(descriptor: UIFont.preferredFont(forTextStyle: .subheadline).fontDescriptor.withSymbolicTraits(.traitLooseLeading)!, size: 0)
+        dateLabel.font = UIFont(descriptor: UIFont.preferredFont(forTextStyle: .headline).fontDescriptor.withSymbolicTraits(.traitLooseLeading)!, size: 19)
         dateLabel.textColor = .black
+        dateLabel.numberOfLines = 0
+        
+        windDescription.textAlignment = .natural
+        windDescription.font = .preferredFont(forTextStyle: .body)
+        windDescription.numberOfLines = 0
 
-        let stackView = UIStackView(arrangedSubviews: [titleLabel, descriptionLabel, dateLabel])
+        let stackView = UIStackView(arrangedSubviews: [titleLabel, descriptionLabel, dateLabel, windDescription])
         stackView.axis = .vertical
         stackView.distribution = .fill
         stackView.alignment = .fill

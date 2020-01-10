@@ -98,7 +98,7 @@ public struct RecommendedTripArray {
     public var tipBeginner: [SurfTip] = {
         return [
             SurfTip(title: "Learning to stand up in white water waves",
-                    description: "Beginners should start out on a foam surfboard: They are perfect for learning on and extremely forgiving when you fall (which you will do a lot). Volumen is important element to consider when choosing a surfboard. It's the factor that can most affect the number of waves you catch, and how much fun you have in water.But it isn't everything. Understanding how the curved shapes and the surfboard's dimensions affect your surfing will also help you find better surfboardsfor your surf level, and have positive impact on your progression.",
+                    description: "Beginners should start out on a foam surfboard: They are from soft material and perfect for learning. Volumen is important element to consider when choosing a surfboard. More weight you have the more volume you need.",
                     descriptionLocation: "Beaufort scale measure is important element to consider when choosing a surf location. It's the factor that can most affect the size and the power of waves in water. Just because you like the look of a beach doesn’t mean it will deliver the right waves for your ability. Do your research and watch the waves before you head out. There is no shame in moving to a beach with smaller waves or fewer crowds; it’s all about finding the right waves for your ability")
         ]
     }()
