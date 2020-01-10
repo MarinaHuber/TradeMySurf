@@ -21,7 +21,6 @@ class SurfTripViewController: UIViewController, StoryboardProtocol {
         return UIBarButtonItem(customView: button)
     }()
 
-    private var boardData: Surfboard?
 	private var selectedLevel = UserDefaults.standard.selectedLevel
 	private var selectedDate = UserDefaults.standard.surfingTime
 
@@ -55,11 +54,11 @@ private extension SurfTripViewController {
             (collectionView: UICollectionView, indexPath: IndexPath, item: TripItem) -> UICollectionViewCell? in
             
             switch item {
-                case .tipBeginner(let tip), .tipBeginnerInter(let tip), .tipIntermediate(let tip), .tipAdvanced(let tip), .tipPro(let tip):
+                case .tipBeginner(let tip), .tipBeginnerInter(let tip), .tipIntermediate(let tip), .tipAdvanced(let tip):
                     let cell = collectionView.dequeueCell(ofType: SmallTableViewCell.self, for: indexPath)
                     cell.fillWithData(tip)
                     return cell
-                case .surfboardsBeginner(let board), .surfboardsBeginnerInter(let board), .surfboardsIntermediate(let board), .surfboardsAdvanced(let board), .surfboardsPro(let board):
+                case .surfboardsBeginner(let board), .surfboardsBeginnerInter(let board), .surfboardsIntermediate(let board), .surfboardsAdvanced(let board):
                     let cell = collectionView.dequeueCell(ofType: SurfBoardCollectionViewCell.self, for: indexPath)
                     cell.fillWithData(board)
                     return cell
@@ -71,18 +70,79 @@ private extension SurfTripViewController {
         }
         //ADD elementKindSectionHeader for surfboard and location section
         self.dataSource.supplementaryViewProvider = { [weak self] (collectionView: UICollectionView, kind: String, indexPath: IndexPath) -> UICollectionReusableView? in
-            guard let itamSequence = self?.dataSource?.itemIdentifier(for: indexPath) else { return nil }
-            guard let section = self?.dataSource?.snapshot().sectionIdentifier(containingItem: itamSequence) else { return nil }
-            
+            guard let itemSequence = self?.dataSource?.itemIdentifier(for: indexPath) else { return nil }
+            guard let section = self?.dataSource?.snapshot().sectionIdentifier(containingItem: itemSequence) else { return nil }
             switch section {
-                case .tipBeginner, .tipIntermediate, .tipBeginnerInter, .tipAdvanced, .tipPro:
+                case .tipBeginner, .tipIntermediate, .tipBeginnerInter, .tipAdvanced:
                     return UICollectionReusableView()
-                case .surfboardsBeginner, .surfboardsBeginnerInter, .surfboardsIntermediate, .surfboardsAdvanced, .surfboardsPro:
+                case .surfboardsBeginner, .surfboardsBeginnerInter, .surfboardsIntermediate, .surfboardsAdvanced:
                     let boardHeader = collectionView.dequeueReusableView(ofType: BoardSupplementaryView.self, forKind: UICollectionView.elementKindSectionHeader, for: indexPath)
-                    boardHeader.fillWithBoard()
+                    let items = self?.dataSource?.snapshot().itemIdentifiers(inSection: section)
+                    items.map {
+                        _ = $0.map{
+                            switch $0 {
+                                case .tipBeginner(_):
+                                break
+                                case .tipBeginnerInter(_):
+                                break
+                                case .tipIntermediate(_):
+                                break
+                                case .tipAdvanced(_):
+                                break
+                                case .surfboardsBeginner(let board):
+                                boardHeader.fillWithBoard(board)
+                                case .surfboardsBeginnerInter(let board):
+                                boardHeader.fillWithBoard(board)
+                                case .surfboardsIntermediate(let board):
+                                boardHeader.fillWithBoard(board)
+                                case .surfboardsAdvanced(let board):
+                                boardHeader.fillWithBoard(board)
+                                case .surfCountrySummer(_):
+                                break
+                                case .surfCountryWinter(_):
+                                break
+                                case .surfCountrySpring(_):
+                                break
+                                case .surfCountryAutumn(_):
+                                break
+                            }
+                         }
+                      }
                     return boardHeader
                 case .surfCountryAutumn, .surfCountrySpring, .surfCountrySummer, .surfCountryWinter:
                     let locationHeader = collectionView.dequeueReusableView(ofType: LocationSupplementaryView.self, forKind: UICollectionView.elementKindSectionHeader, for: indexPath)
+                    let items = self?.dataSource?.snapshot().itemIdentifiers(inSection: section)
+                    items.map {
+                        _ = $0.map{
+                            switch $0 {
+                                case .tipBeginner(_):
+                                break
+                                case .tipBeginnerInter(_):
+                                break
+                                case .tipIntermediate(_):
+                                break
+                                case .tipAdvanced(_):
+                                break
+                                case .surfboardsBeginner(_):
+                                break
+                                case .surfboardsBeginnerInter(_):
+                                break
+                                case .surfboardsIntermediate(_):
+                                break
+                                case .surfboardsAdvanced(_):
+                                break
+                                case .surfCountrySummer(let location):
+                                locationHeader.fillWithLocation(location)
+                                case .surfCountryWinter(let location):
+                                locationHeader.fillWithLocation(location)
+                                case .surfCountrySpring(let location):
+                                locationHeader.fillWithLocation(location)
+                                case .surfCountryAutumn(let location):
+                                locationHeader.fillWithLocation(location)
+                            }
+                         }
+                      }
+
                     return locationHeader
             }
         }
@@ -119,19 +179,13 @@ private extension SurfTripViewController {
             
 			snapshot.appendSections([.surfboardsAdvanced])
 			snapshot.appendItems(appData.surfboardsAdvanced.map({  TripItem.surfboardsAdvanced($0) }))
-		case .professional:
-            snapshot.appendSections([.tipPro])
-            snapshot.appendItems(appData.tipPro.map({ TripItem.tipPro($0) }))
-            
-			snapshot.appendSections([.surfboardsPro])
-			snapshot.appendItems(appData.surfboardsPro.map({  TripItem.surfboardsPro($0) }))
         default: break
 		}
 		let selected = makeIntFromMonth()
 		let pickerDate = Season.sortBy(month: selected)
 		switch pickerDate {
 		case 0:
-			snapshot.appendSections([.surfCountryWinter])
+            snapshot.appendSections([.surfCountryWinter])
 			snapshot.appendItems(appData.surfCountryWinter.map({ TripItem.surfCountryWinter($0) }))
 		case 1:
 			snapshot.appendSections([.surfCountrySpring])
@@ -176,9 +230,9 @@ private extension SurfTripViewController {
 			let guideSection = strongSelf.sections[sectionIndex]
 			let section: NSCollectionLayoutSection
 				switch guideSection {
-                    case .tipBeginner, .tipBeginnerInter, .tipIntermediate, .tipAdvanced, .tipPro:
+                    case .tipBeginner, .tipBeginnerInter, .tipIntermediate, .tipAdvanced:
 					section = strongSelf.makeSmallTipsSection()
-				case .surfboardsBeginner, .surfboardsBeginnerInter, .surfboardsIntermediate, .surfboardsAdvanced, .surfboardsPro:
+				case .surfboardsBeginner, .surfboardsBeginnerInter, .surfboardsIntermediate, .surfboardsAdvanced:
 					section = strongSelf.makeSurfboardSection()
 				case .surfCountrySummer, .surfCountryAutumn, .surfCountryWinter, .surfCountrySpring:
 					section = strongSelf.makeLocationSection()

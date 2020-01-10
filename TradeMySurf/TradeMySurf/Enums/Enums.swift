@@ -13,8 +13,7 @@ enum Level: String, CaseIterable {
     case beginnerIntemediate = "Paddling out, dropping straight down the face of the wave"
     case intermediate = "Trimming down the middle line of the wave"
     case advanced = "Performing full carving changes"
-	case professional = "Professional level speed, power and flow maneuvers"
-
+    
 	 static func enumFromString(string: String) -> Level? {
 		return self.allCases.first { "\($0.rawValue)" == string }
 	}
@@ -43,13 +42,13 @@ enum Season: Int, CaseIterable {
 }
 
 enum TripSection: CaseIterable {
-	case tipBeginner, tipBeginnerInter, tipIntermediate, tipAdvanced, tipPro
-	case surfboardsBeginner, surfboardsBeginnerInter, surfboardsIntermediate, surfboardsAdvanced, surfboardsPro
+	case tipBeginner, tipBeginnerInter, tipIntermediate, tipAdvanced
+	case surfboardsBeginner, surfboardsBeginnerInter, surfboardsIntermediate, surfboardsAdvanced
 	case surfCountrySummer, surfCountryAutumn, surfCountryWinter, surfCountrySpring
 }
 
 enum TripItem: Hashable {
-	case tipBeginner(SurfTip), tipBeginnerInter(SurfTip), tipIntermediate(SurfTip), tipAdvanced(SurfTip), tipPro(SurfTip)
-	case surfboardsBeginner(Surfboard), surfboardsBeginnerInter(Surfboard), surfboardsIntermediate(Surfboard), surfboardsAdvanced(Surfboard), surfboardsPro(Surfboard)
-	case surfCountrySummer(Location),surfCountryAutumn(Location),surfCountryWinter(Location),surfCountrySpring(Location)
+	case tipBeginner(SurfTip), tipBeginnerInter(SurfTip), tipIntermediate(SurfTip), tipAdvanced(SurfTip)
+	case surfboardsBeginner(Surfboard), surfboardsBeginnerInter(Surfboard), surfboardsIntermediate(Surfboard), surfboardsAdvanced(Surfboard)
+    case surfCountrySummer(Location),surfCountryAutumn(Location),surfCountryWinter(Location),surfCountrySpring(Location)
 }

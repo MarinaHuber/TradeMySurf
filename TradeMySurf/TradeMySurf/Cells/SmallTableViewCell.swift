@@ -29,7 +29,7 @@ class SmallTableViewCell : UICollectionViewCell {
 extension SmallTableViewCell {
 
 	func fillWithData(_ data: SurfTip) {
-        titleLabel.text = "Surf goal: \(data.title)"
+        titleLabel.text = "Your goal: \(data.title)"
         dateLabel.text = "Date: \(selectedDate?.dateAsString(style: .long) ?? "")"
 		descriptionLabel.text = data.description
 	}
@@ -43,7 +43,7 @@ private extension SmallTableViewCell {
         // Styling
 
         titleLabel.textAlignment = .natural
-        titleLabel.font = UIFont(descriptor: UIFont.preferredFont(forTextStyle: .headline).fontDescriptor.withSymbolicTraits(.traitBold)!, size: 0)
+        titleLabel.font = UIFont(descriptor: UIFont.preferredFont(forTextStyle: .headline).fontDescriptor.withSymbolicTraits(.traitLooseLeading)!, size: 0)
         titleLabel.textColor = .systemBlue
         titleLabel.numberOfLines = 0
 
@@ -52,7 +52,7 @@ private extension SmallTableViewCell {
         descriptionLabel.numberOfLines = 0
         
         dateLabel.textAlignment = .natural
-        dateLabel.font = UIFont(descriptor: UIFont.preferredFont(forTextStyle: .subheadline).fontDescriptor.withSymbolicTraits(.traitBold)!, size: 0)
+        dateLabel.font = UIFont(descriptor: UIFont.preferredFont(forTextStyle: .subheadline).fontDescriptor.withSymbolicTraits(.traitLooseLeading)!, size: 0)
         dateLabel.textColor = .black
 
         let stackView = UIStackView(arrangedSubviews: [titleLabel, descriptionLabel, dateLabel])
