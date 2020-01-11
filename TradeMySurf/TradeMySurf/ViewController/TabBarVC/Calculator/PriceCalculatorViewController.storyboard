@@ -15,8 +15,27 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="jhZ-ak-Mj8">
+                                <rect key="frame" x="20" y="82" width="374" height="67"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="When looking for new surfboard, consider these options and get price predicted. " textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="3" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="bDH-Xx-fS3">
+                                        <rect key="frame" x="8" y="0.0" width="366" height="67"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                                        <color key="textColor" systemColor="secondaryLabelColor" red="0.23529411759999999" green="0.23529411759999999" blue="0.26274509800000001" alpha="0.59999999999999998" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                </subviews>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                                <constraints>
+                                    <constraint firstAttribute="bottom" secondItem="bDH-Xx-fS3" secondAttribute="bottom" id="8MA-fU-XId"/>
+                                    <constraint firstItem="bDH-Xx-fS3" firstAttribute="leading" secondItem="jhZ-ak-Mj8" secondAttribute="leading" constant="8" id="CeI-k3-WFk"/>
+                                    <constraint firstAttribute="trailing" secondItem="bDH-Xx-fS3" secondAttribute="trailing" id="Fyo-S0-yHH"/>
+                                    <constraint firstAttribute="height" constant="67" id="dM0-ob-ZJG"/>
+                                    <constraint firstItem="bDH-Xx-fS3" firstAttribute="top" secondItem="jhZ-ak-Mj8" secondAttribute="top" id="exr-8Y-5B7"/>
+                                </constraints>
+                            </view>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="5" translatesAutoresizingMaskIntoConstraints="NO" id="eQq-u4-VZ7">
-                                <rect key="frame" x="20" y="122" width="374" height="408.5"/>
+                                <rect key="frame" x="20" y="161" width="374" height="408.5"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="VENDOR" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="pi7-Xi-L6t">
                                         <rect key="frame" x="0.0" y="0.0" width="374" height="20.5"/>
@@ -43,10 +62,10 @@
                                     <segmentedControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="f12-EG-q2R">
                                         <rect key="frame" x="0.0" y="87" width="374" height="32"/>
                                         <segments>
-                                            <segment title="Bio resin"/>
-                                            <segment title="Epoxy"/>
-                                            <segment title="Fiberglass"/>
                                             <segment title="Foam"/>
+                                            <segment title="Fiberglass"/>
+                                            <segment title="Epoxy"/>
+                                            <segment title="Bio resin"/>
                                         </segments>
                                         <connections>
                                             <action selector="calculateValue:" destination="NuV-wN-EPR" eventType="valueChanged" id="Gag-cZ-W25"/>
@@ -73,10 +92,10 @@
                                     <segmentedControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="af1-0f-Ic1">
                                         <rect key="frame" x="0.0" y="209" width="374" height="32"/>
                                         <segments>
-                                            <segment title="Great"/>
-                                            <segment title="Good"/>
-                                            <segment title="Ok"/>
                                             <segment title="Poor"/>
+                                            <segment title="Ok"/>
+                                            <segment title="Good"/>
+                                            <segment title="Great"/>
                                         </segments>
                                         <connections>
                                             <action selector="calculateValue:" destination="NuV-wN-EPR" eventType="valueChanged" id="KHZ-JY-jfI"/>
@@ -117,8 +136,11 @@
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <color key="tintColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
-                            <constraint firstItem="eQq-u4-VZ7" firstAttribute="top" secondItem="lWU-n5-I3P" secondAttribute="top" constant="78" id="bge-id-PcJ"/>
+                            <constraint firstItem="jhZ-ak-Mj8" firstAttribute="top" secondItem="Hme-ax-p5J" secondAttribute="top" constant="82" id="2Xg-BQ-lIf"/>
+                            <constraint firstItem="jhZ-ak-Mj8" firstAttribute="leading" secondItem="lWU-n5-I3P" secondAttribute="leading" constant="20" id="IHj-c1-w9g"/>
+                            <constraint firstItem="eQq-u4-VZ7" firstAttribute="top" secondItem="jhZ-ak-Mj8" secondAttribute="bottom" constant="12" id="aPZ-iK-P2b"/>
                             <constraint firstItem="eQq-u4-VZ7" firstAttribute="leading" secondItem="lWU-n5-I3P" secondAttribute="leading" constant="20" id="h1t-du-WTH"/>
+                            <constraint firstItem="lWU-n5-I3P" firstAttribute="trailing" secondItem="jhZ-ak-Mj8" secondAttribute="trailing" constant="20" id="iss-4l-ksn"/>
                             <constraint firstItem="lWU-n5-I3P" firstAttribute="trailing" secondItem="eQq-u4-VZ7" secondAttribute="trailing" constant="20" id="v9J-kg-Tes"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="lWU-n5-I3P"/>
@@ -140,7 +162,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="yn9-6i-Jn2" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1251" y="-1812"/>
+            <point key="canvasLocation" x="1250.7246376811595" y="-1812.0535714285713"/>
         </scene>
     </scenes>
     <resources>
