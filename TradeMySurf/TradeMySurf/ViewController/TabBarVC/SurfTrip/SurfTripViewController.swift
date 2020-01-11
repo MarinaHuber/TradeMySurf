@@ -26,6 +26,7 @@ class SurfTripViewController: UIViewController, StoryboardProtocol {
 
     private(set) var collectionView: UICollectionView!
 	private var sections: [TripSection] = []
+    private var snapshot = NSDiffableDataSourceSnapshot<TripSection, TripItem>()
     private(set) var dataSource: UICollectionViewDiffableDataSource<TripSection, TripItem>! // retain data source!
     private(set) var appData: RecommendedTripArray = RecommendedTripArray()
 
@@ -121,16 +122,13 @@ private extension SurfTripViewController {
 
     func updateSnapshot(animated: Bool = true) {
 
-		var snapshot = NSDiffableDataSourceSnapshot<TripSection, TripItem>()
-
 		let pickerString = Level.enumFromString(string: selectedLevel ?? "")
 		switch pickerString {
 		case .beginner:
 			snapshot.appendSections([.surfboardsBeginner])
 			snapshot.appendItems(appData.surfboardsBeginner.map({ TripItem.surfboardsBeginner($0) }))
             
-            snapshot.appendSections([.surfCountrySummer])
-            snapshot.appendItems(appData.surfCountryWinter.map({ TripItem.surfCountrySummer($0) }))
+            updateLocationSection()
             
             snapshot.appendSections([.tipBeginner])
             snapshot.appendItems(appData.tipBeginner.map({ TripItem.tipBeginner($0) }))
@@ -138,8 +136,7 @@ private extension SurfTripViewController {
 			snapshot.appendSections([.surfboardsBeginnerInter])
 			snapshot.appendItems(appData.surfboardsBeginnerInter.map({ TripItem.surfboardsBeginnerInter($0) }))
             
-            snapshot.appendSections([.surfCountrySpring])
-            snapshot.appendItems(appData.surfCountrySpring.map({ TripItem.surfCountrySpring($0) }))
+            updateLocationSection()
             
             snapshot.appendSections([.tipBeginnerInter])
             snapshot.appendItems(appData.tipBeginnerInter.map({ TripItem.tipBeginnerInter($0) }))
@@ -147,8 +144,7 @@ private extension SurfTripViewController {
 			snapshot.appendSections([.surfboardsIntermediate])
 			snapshot.appendItems(appData.surfboardsIntermediate.map({  TripItem.surfboardsIntermediate($0) }))
             
-            snapshot.appendSections([.surfCountryAutumn])
-            snapshot.appendItems(appData.surfCountryAutumn.map({ TripItem.surfCountryAutumn($0) }))
+            updateLocationSection()
             
             snapshot.appendSections([.tipIntermediate])
             snapshot.appendItems(appData.tipIntermediate.map({ TripItem.tipIntermediate($0) }))
@@ -156,34 +152,40 @@ private extension SurfTripViewController {
 			snapshot.appendSections([.surfboardsAdvanced])
 			snapshot.appendItems(appData.surfboardsAdvanced.map({  TripItem.surfboardsAdvanced($0) }))
             
-            snapshot.appendSections([.surfCountryWinter])
-            snapshot.appendItems(appData.surfCountryWinter.map({ TripItem.surfCountryWinter($0) }))
+            updateLocationSection()
             
             snapshot.appendSections([.tipAdvanced])
             snapshot.appendItems(appData.tipAdvanced.map({ TripItem.tipAdvanced($0) }))
         default: break
 		}
-//		let selected = makeIntFromMonth()
-//		let pickerDate = Season.sortBy(month: selected)
-//		switch pickerDate {
-//		case 0:
-//            snapshot.appendSections([.surfCountryWinter])
-//			snapshot.appendItems(appData.surfCountryWinter.map({ TripItem.surfCountryWinter($0) }))
-//		case 1:
-//			snapshot.appendSections([.surfCountrySpring])
-//			snapshot.appendItems(appData.surfCountrySpring.map({ TripItem.surfCountrySpring($0) }))
-//		case 2:
-//			snapshot.appendSections([.surfCountrySummer])
-//			snapshot.appendItems(appData.surfCountrySummer.map({ TripItem.surfCountrySummer($0) }))
-//		case 3:
-//			snapshot.appendSections([.surfCountryAutumn])
-//			snapshot.appendItems(appData.surfCountryAutumn.map({ TripItem.surfCountryAutumn($0) }))
-//        default: break
-//		}
 
 		sections = snapshot.sectionIdentifiers
         dataSource.apply(snapshot, animatingDifferences: animated)
     }
+    
+    
+    func updateLocationSection() {
+        
+        let selected = makeIntFromMonth()
+        let pickerDate = Season.sortBy(month: selected)
+        switch pickerDate {
+        case 0:
+            snapshot.appendSections([.surfCountryWinter])
+            snapshot.appendItems(appData.surfCountryWinter.map({ TripItem.surfCountryWinter($0) }))
+        case 1:
+            snapshot.appendSections([.surfCountrySpring])
+            snapshot.appendItems(appData.surfCountrySpring.map({ TripItem.surfCountrySpring($0) }))
+        case 2:
+            snapshot.appendSections([.surfCountrySummer])
+            snapshot.appendItems(appData.surfCountrySummer.map({ TripItem.surfCountrySummer($0) }))
+        case 3:
+            snapshot.appendSections([.surfCountryAutumn])
+            snapshot.appendItems(appData.surfCountryAutumn.map({ TripItem.surfCountryAutumn($0) }))
+        default: break
+        }
+    }
+    
+    
 
 }
 // MARK: - Date formatter logic -
