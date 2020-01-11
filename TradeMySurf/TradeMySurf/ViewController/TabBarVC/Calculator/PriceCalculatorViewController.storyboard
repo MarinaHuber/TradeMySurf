@@ -16,7 +16,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="5" translatesAutoresizingMaskIntoConstraints="NO" id="eQq-u4-VZ7">
-                                <rect key="frame" x="20" y="122" width="374" height="347"/>
+                                <rect key="frame" x="20" y="122" width="374" height="408.5"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="VENDOR" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="pi7-Xi-L6t">
                                         <rect key="frame" x="0.0" y="0.0" width="374" height="20.5"/>
@@ -24,7 +24,7 @@
                                         <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                         <nil key="highlightedColor"/>
                                     </label>
-                                    <segmentedControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="1" translatesAutoresizingMaskIntoConstraints="NO" id="ftc-G7-AUk">
+                                    <segmentedControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="ftc-G7-AUk">
                                         <rect key="frame" x="0.0" y="25.5" width="374" height="32"/>
                                         <segments>
                                             <segment title="Mass produced"/>
@@ -34,7 +34,7 @@
                                             <action selector="calculateValue:" destination="NuV-wN-EPR" eventType="valueChanged" id="mcC-st-5Rc"/>
                                         </connections>
                                     </segmentedControl>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="GEAR" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="HaC-FZ-E91">
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="MATERIAL" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="HaC-FZ-E91">
                                         <rect key="frame" x="0.0" y="61.5" width="374" height="20.5"/>
                                         <fontDescription key="fontDescription" style="UICTFontTextStyleHeadline"/>
                                         <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
@@ -43,8 +43,10 @@
                                     <segmentedControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="f12-EG-q2R">
                                         <rect key="frame" x="0.0" y="87" width="374" height="32"/>
                                         <segments>
-                                            <segment title="With gear"/>
-                                            <segment title="Without"/>
+                                            <segment title="Bio resin"/>
+                                            <segment title="Epoxy"/>
+                                            <segment title="Fiberglass"/>
+                                            <segment title="Foam"/>
                                         </segments>
                                         <connections>
                                             <action selector="calculateValue:" destination="NuV-wN-EPR" eventType="valueChanged" id="Gag-cZ-W25"/>
@@ -56,7 +58,7 @@
                                         <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                         <nil key="highlightedColor"/>
                                     </label>
-                                    <slider opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" minValue="0.0" maxValue="16000" translatesAutoresizingMaskIntoConstraints="NO" id="KUn-Vj-i6S">
+                                    <slider opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="10" minValue="0.0" maxValue="5000" maximumValueImage="calendar" catalog="system" translatesAutoresizingMaskIntoConstraints="NO" id="KUn-Vj-i6S">
                                         <rect key="frame" x="-2" y="148.5" width="378" height="31"/>
                                         <connections>
                                             <action selector="calculateValue:" destination="NuV-wN-EPR" eventType="valueChanged" id="keV-gh-SRI"/>
@@ -68,26 +70,42 @@
                                         <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                         <nil key="highlightedColor"/>
                                     </label>
-                                    <segmentedControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="2" translatesAutoresizingMaskIntoConstraints="NO" id="af1-0f-Ic1">
+                                    <segmentedControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="af1-0f-Ic1">
                                         <rect key="frame" x="0.0" y="209" width="374" height="32"/>
                                         <segments>
-                                            <segment title="Poor"/>
-                                            <segment title="OK"/>
-                                            <segment title="Good"/>
                                             <segment title="Great"/>
+                                            <segment title="Good"/>
+                                            <segment title="Ok"/>
+                                            <segment title="Poor"/>
                                         </segments>
                                         <connections>
                                             <action selector="calculateValue:" destination="NuV-wN-EPR" eventType="valueChanged" id="KHZ-JY-jfI"/>
                                         </connections>
                                     </segmentedControl>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="TRADE BOARD PRICE" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="P3g-kf-HfF">
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="GEAR" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="OWk-RU-W6r">
                                         <rect key="frame" x="0.0" y="245" width="374" height="20.5"/>
                                         <fontDescription key="fontDescription" style="UICTFontTextStyleHeadline"/>
                                         <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                         <nil key="highlightedColor"/>
                                     </label>
+                                    <segmentedControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="2aB-0M-WxM">
+                                        <rect key="frame" x="0.0" y="270.5" width="374" height="32"/>
+                                        <segments>
+                                            <segment title="Included"/>
+                                            <segment title="Not included"/>
+                                        </segments>
+                                        <connections>
+                                            <action selector="calculateValue:" destination="NuV-wN-EPR" eventType="valueChanged" id="vWR-Xo-5sP"/>
+                                        </connections>
+                                    </segmentedControl>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="TRADE BOARD PRICE" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="P3g-kf-HfF">
+                                        <rect key="frame" x="0.0" y="306.5" width="374" height="20.5"/>
+                                        <fontDescription key="fontDescription" style="UICTFontTextStyleHeadline"/>
+                                        <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="$99,999" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="uts-nl-GW8">
-                                        <rect key="frame" x="0.0" y="270.5" width="374" height="76.5"/>
+                                        <rect key="frame" x="0.0" y="332" width="374" height="76.5"/>
                                         <fontDescription key="fontDescription" type="system" weight="thin" pointSize="64"/>
                                         <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                         <nil key="highlightedColor"/>
@@ -111,8 +129,9 @@
                     <navigationItem key="navigationItem" id="x3L-Wf-1HY"/>
                     <connections>
                         <outlet property="condition" destination="af1-0f-Ic1" id="xir-sI-fZo"/>
-                        <outlet property="gear" destination="f12-EG-q2R" id="pY5-Us-lt7"/>
+                        <outlet property="gear" destination="2aB-0M-WxM" id="4xT-4r-GFT"/>
                         <outlet property="hoursLabel" destination="o3k-vf-1gc" id="BCg-J9-lOF"/>
+                        <outlet property="materialSegmented" destination="f12-EG-q2R" id="rWJ-xR-yON"/>
                         <outlet property="model" destination="ftc-G7-AUk" id="P6w-Xt-Tfi"/>
                         <outlet property="production" destination="KUn-Vj-i6S" id="x5W-Ik-KNK"/>
                         <outlet property="stackView" destination="eQq-u4-VZ7" id="41c-WN-ycW"/>
@@ -125,6 +144,7 @@
         </scene>
     </scenes>
     <resources>
+        <image name="calendar" catalog="system" width="64" height="52"/>
         <image name="surf" width="25" height="25"/>
     </resources>
 </document>

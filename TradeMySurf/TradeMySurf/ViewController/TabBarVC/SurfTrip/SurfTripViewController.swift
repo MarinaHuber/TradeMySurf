@@ -82,13 +82,13 @@ private extension SurfTripViewController {
                         _ = $0.map{
                             switch $0 {
                                 case .surfboardsBeginner(let board):
-                                boardHeader.fillWithBoard(board)
+                                boardHeader.fillWith(board)
                                 case .surfboardsBeginnerInter(let board):
-                                boardHeader.fillWithBoard(board)
+                                boardHeader.fillWith(board)
                                 case .surfboardsIntermediate(let board):
-                                boardHeader.fillWithBoard(board)
+                                boardHeader.fillWith(board)
                                 case .surfboardsAdvanced(let board):
-                                boardHeader.fillWithBoard(board)
+                                boardHeader.fillWith(board)
                                 default: break
                             }
                          }
@@ -101,13 +101,13 @@ private extension SurfTripViewController {
                         _ = $0.map{
                             switch $0 {
                                 case .surfCountrySummer(let location):
-                                locationHeader.fillWithLocation(location)
+                                locationHeader.fillWith(location)
                                 case .surfCountryWinter(let location):
-                                locationHeader.fillWithLocation(location)
+                                locationHeader.fillWith(location)
                                 case .surfCountrySpring(let location):
-                                locationHeader.fillWithLocation(location)
+                                locationHeader.fillWith(location)
                                 case .surfCountryAutumn(let location):
-                                locationHeader.fillWithLocation(location)
+                                locationHeader.fillWith(location)
                                 default: break
                             }
                          }
