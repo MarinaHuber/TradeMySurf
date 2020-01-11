@@ -20,7 +20,6 @@ public struct Location: Hashable {
     public let countryName: String
     public let continentName: String
     public let imageFlag: String
-    public let beaufortScaleWave: String
 }
 
 

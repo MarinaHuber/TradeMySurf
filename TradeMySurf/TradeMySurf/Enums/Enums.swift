@@ -18,7 +18,7 @@ enum Level: String, CaseIterable {
 		return self.allCases.first { "\($0.rawValue)" == string }
 	}
 }
-
+// EASY TO TEST THIE LOGIC DATA?
 enum Season: Int, CaseIterable {
     case winter = 0
     case spring = 1

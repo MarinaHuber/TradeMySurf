@@ -21,4 +21,5 @@ public struct Surfboard: Hashable {
 	public let title: String, volume: String
 	public let weight: Int
 	public let weightUnit: String, imageName: String
+    public let beaufortScaleWave: String
 }

@@ -22,76 +22,78 @@ public struct Services {
 public struct RecommendedTripArray {
 
 	public var surfboardsBeginner: [Surfboard] = {
-        return [Surfboard(title: "The Beginner", volume: "80 L", weight: 40, weightUnit: ">", imageName: "1.2"),
-				Surfboard(title: "The Beginner", volume: "50 L", weight: 50, weightUnit: "<", imageName: "2.2"),
-				Surfboard(title: "The Beginner", volume: "60 L", weight: 60, weightUnit: "<", imageName: "3.2"),
-				Surfboard(title: "The Beginner", volume: "70 L", weight: 70, weightUnit: "<", imageName: "4.2")
+        return [Surfboard(title: "The Beginner", volume: "80 L", weight: 40, weightUnit: ">", imageName: "1.2", beaufortScaleWave: "0 - 1.4 m"),
+				Surfboard(title: "The Beginner", volume: "50 L", weight: 50, weightUnit: "<", imageName: "2.2", beaufortScaleWave: "0 - 1.4 m"),
+				Surfboard(title: "The Beginner", volume: "60 L", weight: 60, weightUnit: "<", imageName: "3.2", beaufortScaleWave: "0 - 1.4 m"),
+				Surfboard(title: "The Beginner", volume: "70 L", weight: 70, weightUnit: "<", imageName: "4.2", beaufortScaleWave: "0 - 1.4 m")
 			]
     }()
 	public var surfboardsBeginnerInter: [Surfboard] = {
-        return [Surfboard(title: "Beginner Inter", volume: "40 L", weight: 40, weightUnit: ">", imageName: "bg-splash"),
-				Surfboard(title: "Beginner Inter", volume: "50 L", weight: 50, weightUnit: "<", imageName: "bg-splash"),
-				Surfboard(title: "Beginner Inter", volume: "60 L", weight: 60, weightUnit: "<", imageName: "bg-splash"),
-				Surfboard(title: "Beginner Inter", volume: "70 L", weight: 70, weightUnit: "<", imageName: "bg-splash"),
-				Surfboard(title: "Beginner Inter", volume: "55 L", weight: 80, weightUnit: "<", imageName: "bg-splash"),
-				Surfboard(title: "Beginner Inter", volume: "45 L", weight: 90, weightUnit: "<", imageName: "bg-splash")
+        return [Surfboard(title: "Beginner Inter", volume: "40 L", weight: 40, weightUnit: ">", imageName: "bg-splash", beaufortScaleWave: "1 - 1.4 m"),
+				Surfboard(title: "Beginner Inter", volume: "50 L", weight: 50, weightUnit: "<", imageName: "bg-splash", beaufortScaleWave: "1 - 1.4 m"),
+				Surfboard(title: "Beginner Inter", volume: "60 L", weight: 60, weightUnit: "<", imageName: "bg-splash", beaufortScaleWave: "1 - 1.4 m"),
+				Surfboard(title: "Beginner Inter", volume: "70 L", weight: 70, weightUnit: "<", imageName: "bg-splash", beaufortScaleWave: "1 - 1.4 m"),
+				Surfboard(title: "Beginner Inter", volume: "55 L", weight: 80, weightUnit: "<", imageName: "bg-splash", beaufortScaleWave: "1 - 1.4 m"),
+				Surfboard(title: "Beginner Inter", volume: "45 L", weight: 90, weightUnit: "<", imageName: "bg-splash", beaufortScaleWave: "1 - 1.4 m")
 			]
     }()
 	public var surfboardsIntermediate: [Surfboard] = {
-        return [Surfboard(title: "The Intermediate", volume: "40 L", weight: 40, weightUnit: ">", imageName: "bg-splash"),
-				Surfboard(title: "The Intermediate", volume: "50 L", weight: 50, weightUnit: "<", imageName: "bg-splash"),
-				Surfboard(title: "The Intermediate", volume: "60 L", weight: 60, weightUnit: "<", imageName: "bg-splash"),
-				Surfboard(title: "The Intermediate", volume: "70 L", weight: 70, weightUnit: "<", imageName: "bg-splash"),
-				Surfboard(title: "The Intermediate", volume: "55 L", weight: 80, weightUnit: "<", imageName: "bg-splash"),
-				Surfboard(title: "The Intermediate", volume: "45 L", weight: 90, weightUnit: "<", imageName: "bg-splash")
+        return [Surfboard(title: "The Intermediate", volume: "40 L", weight: 40, weightUnit: ">", imageName: "bg-splash", beaufortScaleWave: "2 - 2.4 m"),
+				Surfboard(title: "The Intermediate", volume: "50 L", weight: 50, weightUnit: "<", imageName: "bg-splash", beaufortScaleWave: "2 - 2.4 m"),
+				Surfboard(title: "The Intermediate", volume: "60 L", weight: 60, weightUnit: "<", imageName: "bg-splash", beaufortScaleWave: "2 - 2.4 m"),
+				Surfboard(title: "The Intermediate", volume: "70 L", weight: 70, weightUnit: "<", imageName: "bg-splash", beaufortScaleWave: "2 - 2.4 m"),
+				Surfboard(title: "The Intermediate", volume: "55 L", weight: 80, weightUnit: "<", imageName: "bg-splash", beaufortScaleWave: "2 - 2.4 m"),
+				Surfboard(title: "The Intermediate", volume: "45 L", weight: 90, weightUnit: "<", imageName: "bg-splash", beaufortScaleWave: "2 - 2.4 m")
 			]
     }()
 	public var surfboardsAdvanced: [Surfboard] = {
-        return [Surfboard(title: "The Advanced", volume: "40 L", weight: 40, weightUnit: ">", imageName: "pro1"),
-				Surfboard(title: "The Advanced", volume: "50 L", weight: 50, weightUnit: "<", imageName: "pro"),
-                Surfboard(title: "The Advanced", volume: "50 L", weight: 50, weightUnit: "<", imageName: "pro1")
+        return [Surfboard(title: "The Advanced", volume: "40 L", weight: 40, weightUnit: ">", imageName: "pro1", beaufortScaleWave: "3 > m"),
+				Surfboard(title: "The Advanced", volume: "50 L", weight: 50, weightUnit: "<", imageName: "pro", beaufortScaleWave: "3 > m"),
+                Surfboard(title: "The Advanced", volume: "50 L", weight: 50, weightUnit: "<", imageName: "pro1", beaufortScaleWave: "3 > m")
 			]
     }()
 
     public var surfCountrySummer: [Location] = {
         return [
-			Location(countryName: "Summer France", continentName: "Europe", imageFlag: "french", beaufortScaleWave: "0 - 1.4 m"),
-            Location(countryName: "Costa Rica", continentName: "South America", imageFlag: "brazil", beaufortScaleWave: "0 - 1.4 m"),
-            Location(countryName: "Morocco", continentName: "Africa", imageFlag: "indonesia", beaufortScaleWave: "0 - 1.4 m"),
-            Location(countryName: "Japan", continentName: "Asia", imageFlag: "indonesia", beaufortScaleWave: "0 - 1.4 m"),
-            Location(countryName: "California", continentName: "North America", imageFlag: "usa", beaufortScaleWave: "0 - 1.4 m"),
-            Location(countryName: "South Africa", continentName: "Africa", imageFlag: "french", beaufortScaleWave: "0 - 1.5 m")
+			Location(countryName: "Summer France", continentName: "Europe", imageFlag: "french"),
+            Location(countryName: "Costa Rica", continentName: "South America", imageFlag: "brazil"),
+            Location(countryName: "Morocco", continentName: "Africa", imageFlag: "indonesia"),
+            Location(countryName: "Japan", continentName: "Asia", imageFlag: "indonesia"),
+            Location(countryName: "California", continentName: "North America", imageFlag: "usa"),
+            Location(countryName: "South Africa", continentName: "Africa", imageFlag: "french")
         ]
     }()
+    
+    public var surfCountrySpring: [Location] = {
+          return [
+              Location(countryName: "Biscay Bay",continentName: "Europe", imageFlag: "brazil"),
+              Location(countryName: "Costa Rica", continentName: "South America", imageFlag: "usa"),
+              Location(countryName: "Morocco", continentName: "Africa", imageFlag: "morocco"),
+              Location(countryName: "Japan", continentName: "Asia", imageFlag: "indonesia"),
+              Location(countryName: "California", continentName: "North America", imageFlag: "usa"),
+              Location(countryName: "South Africa", continentName: "Africa", imageFlag: "indonesia")
+          ]
+      }()
+    
 	public var surfCountryAutumn: [Location] = {
 		  return [
-              Location(countryName: "Costa Rica", continentName: "South America", imageFlag: "brazil", beaufortScaleWave: "1 - 1.4 m"),
-			  Location(countryName: "Costa Rica", continentName: "South America", imageFlag: "morocco", beaufortScaleWave: "1 - 2.4 m"),
-			  Location(countryName: "Morocco", continentName: "Africa", imageFlag: "morocco", beaufortScaleWave: "1 - 2.4 m"),
-			  Location(countryName: "Japan", continentName: "Asia", imageFlag: "indonesia", beaufortScaleWave: "1 - 2.4 m"),
-			  Location(countryName: "California", continentName: "North America", imageFlag: "usa", beaufortScaleWave: "1 - 2.4 m"),
-			  Location(countryName: "South Africa", continentName: "Africa", imageFlag: "french", beaufortScaleWave: "1 - 2.4 m")
+              Location(countryName: "Costa Rica", continentName: "South America", imageFlag: "brazil"),
+			  Location(countryName: "Costa Rica", continentName: "South America", imageFlag: "morocco"),
+			  Location(countryName: "Morocco", continentName: "Africa", imageFlag: "morocco"),
+			  Location(countryName: "Japan", continentName: "Asia", imageFlag: "indonesia"),
+			  Location(countryName: "California", continentName: "North America", imageFlag: "usa"),
+			  Location(countryName: "South Africa", continentName: "Africa", imageFlag: "french")
 		  ]
 	  }()
 
 	public var surfCountryWinter: [Location] = {
 		  return [
-			  Location(countryName: "Winter Morocco",continentName: "Europe", imageFlag: "morocco", beaufortScaleWave: "2 - 1.4 m"),
-			  Location(countryName: "CostaRica", continentName: "SouthAmerica", imageFlag: "brazil", beaufortScaleWave: "2 - 1.4m"),
-			  Location(countryName: "Imsouanne Bay", continentName: "Africa", imageFlag: "usa", beaufortScaleWave: "2 - 1.4 m"),
-			  Location(countryName: "Japan", continentName: "Asia", imageFlag: "indonesia", beaufortScaleWave: "2 - 2.4 m"),
-			  Location(countryName: "California", continentName: "North America", imageFlag: "usa", beaufortScaleWave: "2 - 3 m"),
-			  Location(countryName: "Biscay Bay", continentName: "Africa", imageFlag: "french", beaufortScaleWave: "2 - 3.4 m")
-		  ]
-	  }()
-	public var surfCountrySpring: [Location] = {
-		  return [
-			  Location(countryName: "Biscay Bay",continentName: "Europe", imageFlag: "brazil", beaufortScaleWave: "3 < m"),
-			  Location(countryName: "Costa Rica", continentName: "South America", imageFlag: "usa", beaufortScaleWave: "3 < m"),
-			  Location(countryName: "Morocco", continentName: "Africa", imageFlag: "morocco", beaufortScaleWave: "3 < m"),
-			  Location(countryName: "Japan", continentName: "Asia", imageFlag: "indonesia", beaufortScaleWave: "3 < m"),
-			  Location(countryName: "California", continentName: "North America", imageFlag: "usa", beaufortScaleWave: "3 < m"),
-			  Location(countryName: "South Africa", continentName: "Africa", imageFlag: "indonesia", beaufortScaleWave: "3 < m")
+			  Location(countryName: "Winter Morocco",continentName: "Europe", imageFlag: "morocco"),
+			  Location(countryName: "CostaRica", continentName: "SouthAmerica", imageFlag: "brazil"),
+			  Location(countryName: "Imsouanne Bay", continentName: "Africa", imageFlag: "usa"),
+			  Location(countryName: "Japan", continentName: "Asia", imageFlag: "indonesia"),
+			  Location(countryName: "California", continentName: "North America", imageFlag: "usa"),
+			  Location(countryName: "Biscay Bay", continentName: "Africa", imageFlag: "french")
 		  ]
 	  }()
     

@@ -69,7 +69,7 @@ class LocationSupplementaryView: UICollectionReusableView {
     }
     
     func fillWith(_ data: Location) {
-        title.text = "Surf loacation for: \(data.beaufortScaleWave)"
+       // title.text = "Surf loacation for: \(data.beaufortScaleWave)"
         subtitle.text = "Beaufort scale measure for wave height"
     }
     
