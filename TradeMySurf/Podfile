@@ -11,6 +11,7 @@ target 'TradeMySurf' do
 
   pod 'SwiftyPickerPopover'
   pod 'lottie-ios'
+  pod 'Presentr'
 
   target 'TradeMySurfTests' do
     inherit! :search_paths

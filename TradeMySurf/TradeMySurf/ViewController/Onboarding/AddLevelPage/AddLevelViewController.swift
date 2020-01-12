@@ -17,6 +17,7 @@ class AddLevelViewController: UIViewController, StoryboardProtocol {
 
     override func viewDidLoad() {
         super.viewDidLoad()
+        self.view.applyGradient(withColors: [.blue, .magenta], gradientOrientation: .horizontal)
     }
     
     override func viewWillAppear(_ animated: Bool) {

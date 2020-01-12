@@ -50,6 +50,7 @@
 		9C9F836C2366BDAA00FA4F41 /* TabBarCoordinatorTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C9F836B2366BDAA00FA4F41 /* TabBarCoordinatorTests.swift */; };
 		9CBDE2982395A9E600317F51 /* TimeHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9CBDE2972395A9E600317F51 /* TimeHelper.swift */; };
 		9CC4F8EA23CA536A00F3ABAB /* Surfs.mlmodel in Sources */ = {isa = PBXBuildFile; fileRef = 9CC4F8E923CA536A00F3ABAB /* Surfs.mlmodel */; };
+		9CF936E923CBC0AB00A8C72D /* UIView+Gradient.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9CF936E823CBC0AB00A8C72D /* UIView+Gradient.swift */; };
 		9CFDFD36236718E400760F25 /* CoordinatorTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9CFDFD35236718E400760F25 /* CoordinatorTests.swift */; };
 		9CFDFD3D2367221C00760F25 /* AddDateViewController.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9CFDFD3C2367221C00760F25 /* AddDateViewController.storyboard */; };
 		9CFDFD3F2367226C00760F25 /* AddDateViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9CFDFD3E2367226C00760F25 /* AddDateViewController.swift */; };
@@ -128,6 +129,7 @@
 		9C9F836B2366BDAA00FA4F41 /* TabBarCoordinatorTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabBarCoordinatorTests.swift; sourceTree = "<group>"; };
 		9CBDE2972395A9E600317F51 /* TimeHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TimeHelper.swift; sourceTree = "<group>"; };
 		9CC4F8E923CA536A00F3ABAB /* Surfs.mlmodel */ = {isa = PBXFileReference; lastKnownFileType = file.mlmodel; name = Surfs.mlmodel; path = ../../Working/Surfboards/Surfs.mlmodel; sourceTree = "<group>"; };
+		9CF936E823CBC0AB00A8C72D /* UIView+Gradient.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIView+Gradient.swift"; sourceTree = "<group>"; };
 		9CFDFD35236718E400760F25 /* CoordinatorTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoordinatorTests.swift; sourceTree = "<group>"; };
 		9CFDFD3A2367220300760F25 /* AddLevelViewController.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = AddLevelViewController.storyboard; sourceTree = "<group>"; };
 		9CFDFD3C2367221C00760F25 /* AddDateViewController.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = AddDateViewController.storyboard; sourceTree = "<group>"; };
@@ -381,6 +383,7 @@
 				9C62416D238AE68E00A4B7C9 /* ReuseIdentifierHelper.swift */,
 				9CBDE2972395A9E600317F51 /* TimeHelper.swift */,
 				9C8F330123994CDD0070751F /* FontHelper.swift */,
+				9CF936E823CBC0AB00A8C72D /* UIView+Gradient.swift */,
 			);
 			path = Helpers;
 			sourceTree = "<group>";
@@ -677,6 +680,7 @@
 				9C62417C239156C200A4B7C9 /* UserDefaultsHelper.swift in Sources */,
 				9C90BC552386BD020090E346 /* Enums.swift in Sources */,
 				9C76F09823493F0900853FD9 /* SavedTripsViewController.swift in Sources */,
+				9CF936E923CBC0AB00A8C72D /* UIView+Gradient.swift in Sources */,
 				9C6F64D02379FB7800B0224D /* Constants.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

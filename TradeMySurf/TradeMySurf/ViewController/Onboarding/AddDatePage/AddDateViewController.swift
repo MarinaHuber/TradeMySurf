@@ -15,6 +15,7 @@ class AddDateViewController: UIViewController, StoryboardProtocol {
 
     override func viewDidLoad() {
         super.viewDidLoad()
+        self.view.applyGradient(withColors: [.magenta, .blue], gradientOrientation: .horizontal)
     }
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
