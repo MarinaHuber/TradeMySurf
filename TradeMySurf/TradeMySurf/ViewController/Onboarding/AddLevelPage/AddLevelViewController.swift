@@ -9,19 +9,14 @@
 import UIKit
 import SwiftyPickerPopover
 
-protocol AddLevelViewControllerDelegate: class {
-	func performAddDate()
-}
 
-class AddLevelViewController: UIViewController {
+class AddLevelViewController: UIViewController, StoryboardProtocol {
+    
 	@IBOutlet weak var pickerView: UIView!
-	weak var delegate: AddLevelViewControllerDelegate?
-	weak var coordinator: TabBarCoordinator?
-	let levels = [Level.beginner.rawValue, Level.beginnerIntemediate.rawValue, Level.intermediate.rawValue, Level.advanced.rawValue, Level.professional.rawValue]
+	let levels = [Level.beginner.rawValue, Level.beginnerIntemediate.rawValue, Level.intermediate.rawValue, Level.advanced.rawValue]
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        setPickerPopover()
     }
     
     override func viewWillAppear(_ animated: Bool) {
@@ -42,10 +37,8 @@ private extension AddLevelViewController {
             .setDoneButton(title: "Next", font: UIFont.boldSystemFont(ofSize: 17), color: .systemBlue, action: { popover, _, selectedString in
                 UserDefaults.standard.selectedLevel = selectedString
                 popover.disappear()
-                self.delegate?.performAddDate()
+                self.scenePresenter?.presentAddDate()
             })
             .appear(originView: pickerView, baseViewController: self)
     }
 }
-
-extension AddLevelViewController: StoryboardProtocol {}

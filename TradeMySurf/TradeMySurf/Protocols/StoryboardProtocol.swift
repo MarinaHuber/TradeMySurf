@@ -8,10 +8,10 @@
 
 import UIKit
 
-
+/// Object, that adopts this protocol, will use identifier that matches name of its class.
 protocol StoryboardProtocol: AnyObject {
 	static func instantiate(from storyboard: UIStoryboard) -> Self
-	static func instantiate() -> Self
+	//static func instantiate() -> Self
 }
 
 extension StoryboardProtocol where Self: UIViewController {
@@ -29,9 +29,4 @@ extension StoryboardProtocol where Self: UIViewController {
 		return viewController
 	}
 
-	static func instantiate() -> Self {
-		let storyboardIdentifier = String(describing: self)
-		let storyboard = UIStoryboard(name: "LoadingStateViewController", bundle: Bundle.main)
-        return storyboard.instantiateViewController(withIdentifier: storyboardIdentifier) as! Self
-	}
 }

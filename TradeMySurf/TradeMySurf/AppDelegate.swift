@@ -11,20 +11,35 @@ import UIKit
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate {
 
-	var window: UIWindow?
-	private lazy var appCoordinator: LoadingStateCoordinator = {
-		return LoadingStateCoordinator(window: self.window!)
-	}()
+    private var coordinator: Coordinator? = nil
+    var window: UIWindow?
 
 	func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
-		// configure Coordinators
+        
+    // MARK: Configure Coordinator without storyboard
 		window = UIWindow(frame: UIScreen.main.bounds)
-		appCoordinator.start()
-		window?.makeKeyAndVisible()
-
-		// configure Fonts missing
-        FontHelper.registerAllFonts()
+        guard let window = window else { fatalError() }
+        coordinator = Coordinator(window: window)
+        window.makeKeyAndVisible()
+        scenePresenter?.presentSplash()
+        
+    // configure Fonts here
+        customiseNavBar()
 
 		return true
 	}
+    override var next: UIResponder? {
+        return coordinator
+    }
+
+    
+    func customiseNavBar () {
+        guard let navigationController = self.window?.rootViewController as? UINavigationController else { return }
+        navigationController.setNavigationBarHidden(true, animated: true)
+        navigationController.navigationBar.barTintColor = .clear
+        navigationController.navigationBar.tintColor = .black
+        navigationController.navigationBar.setBackgroundImage(UIImage(), for: UIBarPosition.any, barMetrics: UIBarMetrics.default)
+        navigationController.navigationBar.shadowImage = UIImage()
+        navigationController.navigationBar.titleTextAttributes = [.foregroundColor : UIColor.black as Any]
+    }
 }

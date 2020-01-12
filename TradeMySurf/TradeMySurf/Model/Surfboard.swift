@@ -8,9 +8,18 @@
 
 import Foundation
 
-struct Surfboard: Hashable {
-    let id: UUID = UUID()
-	let title: String, volume: String
-	let weight: Int
-	let weightUnit: String, imageName: String
+public struct Surfboard: Hashable {
+    public let id: UUID = UUID()
+    
+    public func hash(into hasher: inout Hasher) {
+        hasher.combine(id)
+    }
+
+    public static func == (lhs: Surfboard, rhs: Surfboard) -> Bool {
+        return lhs.id == rhs.id
+    }
+	public let level: String, volume: String
+	public let weight: Int
+	public let weightUnit: String, imageName: String
+    public let beaufortScaleWave: String
 }

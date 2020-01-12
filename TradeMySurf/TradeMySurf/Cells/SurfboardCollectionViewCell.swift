@@ -32,7 +32,7 @@ class SurfBoardCollectionViewCell: UICollectionViewCell {
 extension SurfBoardCollectionViewCell {
 
 	func fillWithData(_ model: Surfboard) {
-		titleLabel.text = model.title
+		titleLabel.text = model.level
 		volumeLabel.text = model.volume
 		weightLabel.text = "\(model.weight)"
 		weightUnit.text = model.weightUnit
@@ -53,10 +53,8 @@ private extension SurfBoardCollectionViewCell {
         titleLabel.textAlignment = .center
         titleLabel.numberOfLines = 2
         titleLabel.font = UIFont.preferredFont(forTextStyle: .headline)
-		//titleLabel.textColor = .label
 
 		volumeLabel.font = UIFont.preferredFont(forTextStyle: .title3)
-        //volumeLabel.textColor = .secondaryLabel
 
         imageView.contentMode = .scaleAspectFill
         imageView.backgroundColor = .systemTeal

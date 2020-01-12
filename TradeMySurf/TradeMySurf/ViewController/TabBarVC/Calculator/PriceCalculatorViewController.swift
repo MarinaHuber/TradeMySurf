@@ -8,11 +8,11 @@
 
 import UIKit
 
-class PriceCalculatorViewController: UIViewController {
-	weak var coordinator: CalculatorCoordinator?
+class PriceCalculatorViewController: UIViewController, StoryboardProtocol {
 
     let surfBoards = Surfs()
 
+    @IBOutlet weak var materialSegmented: UISegmentedControl!
     @IBOutlet var stackView: UIStackView!
     @IBOutlet var model: UISegmentedControl!
     @IBOutlet var gear: UISegmentedControl!
@@ -39,8 +39,8 @@ class PriceCalculatorViewController: UIViewController {
         let formattedMileage = formatter.string(for: production.value) ?? "0"
         hoursLabel.text = "Hours on water (\(formattedMileage) hours)"
 
-        if let prediction = try? surfBoards.prediction(model: Double(model.selectedSegmentIndex), gear: Double(gear.selectedSegmentIndex), production: Double(production.value), condition: Double(condition.selectedSegmentIndex)) {
-            let clampedValuation = max(1000, prediction.price)
+        if let prediction = try? surfBoards.prediction(model: Double(model.selectedSegmentIndex), material: Double(materialSegmented.selectedSegmentIndex), gear: Double(gear.selectedSegmentIndex), production: Double(production.value), condition: Double(condition.selectedSegmentIndex)) {
+            let clampedValuation = max(10, prediction.price)
             formatter.numberStyle = .currency
             valuation.text = formatter.string(for: clampedValuation)
         } else {
@@ -49,5 +49,3 @@ class PriceCalculatorViewController: UIViewController {
     }
 
 }
-
-extension PriceCalculatorViewController: StoryboardProtocol {}

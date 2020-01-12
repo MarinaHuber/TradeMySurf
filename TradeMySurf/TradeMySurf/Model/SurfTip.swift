@@ -8,8 +8,17 @@
 
 import Foundation
 
-struct SurfTip: Hashable {
-    let id: UUID = UUID()
-    let title: String
-    let description: String
+public struct SurfTip: Hashable {
+    public let id: UUID = UUID()
+    
+    public func hash(into hasher: inout Hasher) {
+        hasher.combine(id)
+    }
+
+    public static func == (lhs: SurfTip, rhs: SurfTip) -> Bool {
+        return lhs.id == rhs.id
+    }
+    public let goal: String
+    public let description: String
+    public let descriptionLocation: String
 }

@@ -7,11 +7,20 @@
 //
 import  Foundation
 
-struct Location: Hashable {
-    var id: UUID = UUID()
-    var countryName: String
-    var continentName: String
-    var imageFlag: String
+public struct Location: Hashable {
+    public let id: UUID = UUID()
+    
+    public func hash(into hasher: inout Hasher) {
+        hasher.combine(id)
+    }
+
+    public static func == (lhs: Location, rhs: Location) -> Bool {
+        return lhs.id == rhs.id
+    }
+    public let countryName: String
+    public let continentName: String
+    public let imageFlag: String
+    public let beaufortScaleWave: String
 }
 
 

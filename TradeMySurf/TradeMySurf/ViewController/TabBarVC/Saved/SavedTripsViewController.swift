@@ -9,7 +9,5 @@
 import Foundation
 import UIKit
 
-class SavedTripsViewController: UIViewController {
-	weak var coordinator: SavedTripsCoordinator?
+class SavedTripsViewController: UIViewController, StoryboardProtocol {
 }
-extension SavedTripsViewController: StoryboardProtocol {}
