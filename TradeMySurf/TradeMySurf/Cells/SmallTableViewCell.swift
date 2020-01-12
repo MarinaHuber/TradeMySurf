@@ -31,7 +31,7 @@ class SmallTableViewCell : UICollectionViewCell {
 extension SmallTableViewCell {
 
 	func fillWithData(_ data: SurfTip) {
-        titleLabel.text = "Your goal: \(data.title)"
+        titleLabel.text = "Your goal: \(data.goal)"
         dateLabel.text = "You want to surf on:  \(selectedDate?.dateAsString(style: .long) ?? "")"
 		descriptionLabel.text = data.description
         windDescription.text = data.descriptionLocation

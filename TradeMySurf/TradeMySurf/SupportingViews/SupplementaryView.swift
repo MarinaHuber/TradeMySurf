@@ -23,7 +23,7 @@ class BoardSupplementaryView: UICollectionReusableView {
     }
     
     func fillWith(_ data: Surfboard) {
-        title.text = "Surf board for: \(data.title)"
+        title.text = "Surf board for: \(data.level)"
         subtitle.text = "Shapes and gear for your level"
     }
     
@@ -42,7 +42,7 @@ class BoardSupplementaryView: UICollectionReusableView {
         addSubview(stackView)
 
         NSLayoutConstraint.activate([
-            separator.heightAnchor.constraint(equalToConstant: 1),
+            separator.heightAnchor.constraint(equalToConstant: 0),
 
             stackView.leadingAnchor.constraint(equalTo: leadingAnchor),
             stackView.trailingAnchor.constraint(equalTo: trailingAnchor),
@@ -69,7 +69,7 @@ class LocationSupplementaryView: UICollectionReusableView {
     }
     
     func fillWith(_ data: Location) {
-       // title.text = "Surf loacation for: \(data.beaufortScaleWave)"
+        title.text = "Surf loacation for:\(data.beaufortScaleWave)"
         subtitle.text = "Beaufort scale measure for wave height"
     }
     

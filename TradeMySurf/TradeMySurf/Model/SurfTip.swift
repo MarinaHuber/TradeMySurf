@@ -18,7 +18,7 @@ public struct SurfTip: Hashable {
     public static func == (lhs: SurfTip, rhs: SurfTip) -> Bool {
         return lhs.id == rhs.id
     }
-    public let title: String
+    public let goal: String
     public let description: String
     public let descriptionLocation: String
 }

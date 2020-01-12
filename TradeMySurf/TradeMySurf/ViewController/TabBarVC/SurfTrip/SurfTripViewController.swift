@@ -51,6 +51,7 @@ class SurfTripViewController: UIViewController, StoryboardProtocol {
 private extension SurfTripViewController {
 
     func configureDiffableDataSource() {
+        
         self.dataSource = UICollectionViewDiffableDataSource<TripSection, TripItem>(collectionView: collectionView) {
             (collectionView: UICollectionView, indexPath: IndexPath, item: TripItem) -> UICollectionViewCell? in
             
@@ -69,55 +70,62 @@ private extension SurfTripViewController {
                     return cell
             }
         }
-        //ADD elementKindSectionHeader for surfboard and location section
+        configureHeaderDiffableDataSource()
+        updateSnapshot(animated: false)
+ 
+    }
+    
+    func configureHeaderDiffableDataSource() {
+        
         self.dataSource.supplementaryViewProvider = { [weak self] (collectionView: UICollectionView, kind: String, indexPath: IndexPath) -> UICollectionReusableView? in
+            
             guard let itemSequence = self?.dataSource?.itemIdentifier(for: indexPath) else { return nil }
             guard let section = self?.dataSource?.snapshot().sectionIdentifier(containingItem: itemSequence) else { return nil }
+            let items = self?.dataSource?.snapshot().itemIdentifiers(inSection: section)
             switch section {
                 case .tipBeginner, .tipIntermediate, .tipBeginnerInter, .tipAdvanced:
                     return UICollectionReusableView()
                 case .surfboardsBeginner, .surfboardsBeginnerInter, .surfboardsIntermediate, .surfboardsAdvanced:
                     let boardHeader = collectionView.dequeueReusableView(ofType: BoardSupplementaryView.self, forKind: UICollectionView.elementKindSectionHeader, for: indexPath)
-                    let items = self?.dataSource?.snapshot().itemIdentifiers(inSection: section)
                     items.map {
                         _ = $0.map{
                             switch $0 {
                                 case .surfboardsBeginner(let board):
-                                boardHeader.fillWith(board)
+                                    boardHeader.fillWith(board)
                                 case .surfboardsBeginnerInter(let board):
-                                boardHeader.fillWith(board)
+                                    boardHeader.fillWith(board)
                                 case .surfboardsIntermediate(let board):
-                                boardHeader.fillWith(board)
+                                    boardHeader.fillWith(board)
                                 case .surfboardsAdvanced(let board):
-                                boardHeader.fillWith(board)
+                                    boardHeader.fillWith(board)
                                 default: break
                             }
-                         }
-                      }
+                        }
+                    }
                     return boardHeader
                 case .surfCountryAutumn, .surfCountrySpring, .surfCountrySummer, .surfCountryWinter:
                     let locationHeader = collectionView.dequeueReusableView(ofType: LocationSupplementaryView.self, forKind: UICollectionView.elementKindSectionHeader, for: indexPath)
-                    let items = self?.dataSource?.snapshot().itemIdentifiers(inSection: section)
                     items.map {
-                        _ = $0.map{
+                        _ = $0.map {
                             switch $0 {
-                                case .surfCountrySummer(let location):
-                                locationHeader.fillWith(location)
-                                case .surfCountryWinter(let location):
-                                locationHeader.fillWith(location)
-                                case .surfCountrySpring(let location):
-                                locationHeader.fillWith(location)
-                                case .surfCountryAutumn(let location):
-                                locationHeader.fillWith(location)
+                                
+                                case .surfCountrySpring(let date):
+                                    locationHeader.fillWith(date)
+                                case .surfCountrySummer(let date):
+                                    locationHeader.fillWith(date)
+                                case .surfCountryAutumn(let date):
+                                    locationHeader.fillWith(date)
+                                case .surfCountryWinter(let date):
+                                    locationHeader.fillWith(date)
                                 default: break
                             }
-                         }
-                      }
-
+                        }
+                    }
+                    
                     return locationHeader
             }
         }
-        updateSnapshot(animated: false)
+        
     }
 
     func updateSnapshot(animated: Bool = true) {
@@ -188,7 +196,7 @@ private extension SurfTripViewController {
     
 
 }
-// MARK: - Date formatter logic -
+// MARK: place - Date formatter logic - Extension
 private extension SurfTripViewController {
 
 	func makeIntFromMonth() -> Int {

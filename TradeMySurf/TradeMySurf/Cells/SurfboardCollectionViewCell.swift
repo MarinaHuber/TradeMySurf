@@ -32,7 +32,7 @@ class SurfBoardCollectionViewCell: UICollectionViewCell {
 extension SurfBoardCollectionViewCell {
 
 	func fillWithData(_ model: Surfboard) {
-		titleLabel.text = model.title
+		titleLabel.text = model.level
 		volumeLabel.text = model.volume
 		weightLabel.text = "\(model.weight)"
 		weightUnit.text = model.weightUnit
