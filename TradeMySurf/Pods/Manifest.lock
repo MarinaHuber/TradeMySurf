@@ -1,20 +1,28 @@
 PODS:
   - lottie-ios (3.1.5)
+  - QuickLayout (3.0.0)
+  - SwiftEntryKit (1.1.4):
+    - QuickLayout (= 3.0.0)
   - SwiftyPickerPopover (6.6.6)
 
 DEPENDENCIES:
   - lottie-ios
+  - SwiftEntryKit (~> 1.1.4)
   - SwiftyPickerPopover
 
 SPEC REPOS:
   trunk:
     - lottie-ios
+    - QuickLayout
+    - SwiftEntryKit
     - SwiftyPickerPopover
 
 SPEC CHECKSUMS:
   lottie-ios: 32bf84389337d86fbc8b12266e88452e0abf1dee
+  QuickLayout: 07b45a72b10083fee3f095990cfed1c1e7b27f0a
+  SwiftEntryKit: fa997eb1c45afb5cf27ab0145e680759dd7152ca
   SwiftyPickerPopover: a402960a6687c911ffcb4e9fb282a1bc61186ab4
 
-PODFILE CHECKSUM: 2c5eff02d7dde9fa120821f0bbfa1d5e1c60aaea
+PODFILE CHECKSUM: 1e5e9d8f7de3172ca481c643fc4c57da121087a7
 
 COCOAPODS: 1.8.4
