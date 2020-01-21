@@ -9,6 +9,8 @@
 enum Constants {
 
 	enum Storyboards {
+        
+        static let alertVC = "AlertVC"
 		static let splashViewController = "SplashViewController"
 		static let welcomeViewController = "Welcome"
 		static let addLevelViewController = "AddLevelViewController"

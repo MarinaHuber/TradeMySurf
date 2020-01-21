@@ -22,6 +22,24 @@ final class Coordinator: UIResponder, CoorinatorPresenting {
     init(window: UIWindow) {
         self.window = window
     }
+    let presenter: Presentr = {
+
+       let bounds = UIScreen.main.bounds
+       let height = ModalSize.fluid(percentage: 0.45)
+       let width = ModalSize.fluid(percentage: 0.90)
+       let center = ModalCenterPosition.customOrigin(origin: CGPoint(x: bounds.minX + 20, y: bounds.minY + 200))
+       let customType = PresentationType.custom(width: width, height: height, center: center)
+       let customPresenter = Presentr(presentationType: customType)
+          customPresenter.transitionType = .coverVerticalFromTop
+          customPresenter.dismissTransitionType = .coverVerticalFromTop
+          customPresenter.backgroundColor = .lightGray
+          customPresenter.roundCorners = true
+          customPresenter.cornerRadius = 13
+          customPresenter.backgroundOpacity = 0.4
+          customPresenter.dismissOnSwipe = true
+          customPresenter.dismissOnSwipeDirection = .top
+          return customPresenter
+      }()
     
     
     // MARK: Presenting Coordinators
@@ -64,6 +82,15 @@ final class Coordinator: UIResponder, CoorinatorPresenting {
         navigationController.setNavigationBarHidden(true, animated: true)
         navigationController.pushViewController(viewController, animated: true)
         
+    }
+    
+    func presentAlert() {
+        
+        let storyboard: UIStoryboard = UIStoryboard(name: Constants.Storyboards.alertVC, bundle: nil)
+        let controller: AlertVC = AlertVC.instantiate(from: storyboard)
+        guard let navigationController = window.rootViewController as? UINavigationController else { fatalError() }
+        navigationController.setNavigationBarHidden(true, animated: true)
+        navigationController.customPresentViewController(presenter, viewController: controller, animated: true, completion: nil)
     }
     
 }

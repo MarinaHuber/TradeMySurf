@@ -1,10 +1,6 @@
 //
 //  SectionHeader.swift
-//  TapStore
-//
-//  Created by Paul Hudson on 01/10/2019.
-//  Copyright © 2019 Hacking with Swift. All rights reserved.
-//
+
 
 import UIKit
 
@@ -23,8 +19,8 @@ class BoardSupplementaryView: UICollectionReusableView {
     }
     
     func fillWith(_ data: Surfboard) {
-        title.text = "Surf board for: \(data.level)"
-        subtitle.text = "Shapes and gear for your level"
+        title.text = "Surfboard for: \(data.level)"
+        subtitle.text = "Shapes and volume for your level"
     }
     
     func configureUI() {

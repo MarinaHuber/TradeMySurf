@@ -30,16 +30,16 @@ enum GradientOrientation {
         switch self {
 
         case .topRightBottomLeft:
-            return (CGPoint.init(x: 0.0, y: 1.0), CGPoint.init(x: 1.0, y: 0.0))
+            return (CGPoint(x: 0.0, y: 1.0), CGPoint(x: 1.0, y: 0.0))
 
         case .topLeftBottomRight:
-            return (CGPoint.init(x: 0.0, y: 0.0), CGPoint.init(x: 1, y: 1))
+            return (CGPoint(x: 0.0, y: 0.0), CGPoint(x: 1, y: 1))
 
         case .horizontal:
-            return (CGPoint.init(x: 0.0, y: 0.5), CGPoint.init(x: 1.0, y: 0.5))
+            return (CGPoint(x: 0.0, y: 0.5), CGPoint(x: 1.0, y: 0.5))
 
         case .vertical:
-            return (CGPoint.init(x: 0.0, y: 0.0), CGPoint.init(x: 0.0, y: 1.0))
+            return (CGPoint(x: 0.0, y: 0.0), CGPoint(x: 0.0, y: 1.0))
         }
     }
 }
@@ -65,5 +65,24 @@ extension UIView {
         gradient.startPoint = orientation.startPoint
         gradient.endPoint = orientation.endPoint
         self.layer.insertSublayer(gradient, at: 0)
+    }
+}
+
+class GradientView: UIView {
+    /// The color at the start of the gradient.
+    @IBInspectable var firstColor: UIColor = UIColor.white
+
+    /// The color at the end of the gradient.
+    @IBInspectable var secondColor: UIColor = UIColor.black
+
+    /// Requests that we get CAGradientLayer backing for this view.
+    override class var layerClass: AnyClass {
+        return CAGradientLayer.self
+    }
+
+    /// When it's time to lay things out, set up our gradient layer using the specified colors.
+    override func layoutSubviews() {
+        guard let layer = layer as? CAGradientLayer else { return }
+        layer.colors = [firstColor.cgColor, secondColor.cgColor]
     }
 }
