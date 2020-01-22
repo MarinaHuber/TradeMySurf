@@ -21,8 +21,8 @@
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="NLc-d1-wiJ">
                                         <rect key="frame" x="0.0" y="0.0" width="360" height="64"/>
                                         <subviews>
-                                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="bookmark" catalog="system" translatesAutoresizingMaskIntoConstraints="NO" id="dxP-sB-PhV">
-                                                <rect key="frame" x="148" y="0.0" width="64" height="64"/>
+                                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="checkmark" catalog="system" translatesAutoresizingMaskIntoConstraints="NO" id="dxP-sB-PhV">
+                                                <rect key="frame" x="148" y="2" width="64" height="60.5"/>
                                                 <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 <constraints>
                                                     <constraint firstAttribute="width" constant="64" id="e02-hX-EXK"/>
@@ -115,6 +115,6 @@
         </scene>
     </scenes>
     <resources>
-        <image name="bookmark" catalog="system" width="56" height="64"/>
+        <image name="checkmark" catalog="system" width="64" height="56"/>
     </resources>
 </document>

@@ -14,19 +14,25 @@ class AlertVC: UIViewController, StoryboardProtocol {
     @IBOutlet var titleLabel: UILabel!
     @IBOutlet var bodyLabel: UILabel!
     @IBOutlet var alternateButton: UIButton!
+    let selectedDate = UserDefaults.standard.surfingTime
+    let selectedLevel = UserDefaults.standard.selectedLevel
     
     // MARK: Managing the View
     
-    override func viewDidLoad() { }
+    override func viewDidLoad() {
+        titleLabel.text = "Your goal is set: \(selectedLevel ?? "")"
+        bodyLabel.text = "You will surf starting:  \(selectedDate?.dateAsString(style: .long) ?? "")"
+    }
     
     /// Called when the alternate button is tapped. This dismisses the alert then runs our alternate action.
     @IBAction func repeatTapped(_ sender: UIButton) {
         // dismiss the alert immediately
+        scenePresenter?.presentAddLevel()
     }
     
     /// Called when the OK button was tapped. If we have a coordinator let it decide what should happen; if not, just dismiss the alert.
     @IBAction func dismissTapped(_ sender: Any) {
-
+        dismiss(animated: true, completion: nil)
     }
 
 }

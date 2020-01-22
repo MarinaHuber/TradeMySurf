@@ -32,12 +32,12 @@ final class Coordinator: UIResponder, CoorinatorPresenting {
        let customPresenter = Presentr(presentationType: customType)
           customPresenter.transitionType = .coverVerticalFromTop
           customPresenter.dismissTransitionType = .coverVerticalFromTop
-          customPresenter.backgroundColor = .lightGray
+          customPresenter.backgroundColor = .blue
           customPresenter.roundCorners = true
           customPresenter.cornerRadius = 13
           customPresenter.backgroundOpacity = 0.5
-          customPresenter.dismissOnSwipe = true
-          customPresenter.dismissOnSwipeDirection = .top
+          customPresenter.dismissOnSwipe = false
+          customPresenter.outsideContextTap = .noAction
           return customPresenter
       }()
     
@@ -88,7 +88,6 @@ final class Coordinator: UIResponder, CoorinatorPresenting {
         let storyboard: UIStoryboard = UIStoryboard(name: Constants.Storyboards.alertVC, bundle: nil)
         let controller: AlertVC = AlertVC.instantiate(from: storyboard)
         guard let navigationController = window.rootViewController as? UINavigationController else { fatalError() }
-        navigationController.setNavigationBarHidden(true, animated: true)
         navigationController.customPresentViewController(presenter, viewController: controller, animated: true, completion: nil)
     }
     
