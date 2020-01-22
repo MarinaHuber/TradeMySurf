@@ -35,7 +35,7 @@ final class Coordinator: UIResponder, CoorinatorPresenting {
           customPresenter.backgroundColor = .lightGray
           customPresenter.roundCorners = true
           customPresenter.cornerRadius = 13
-          customPresenter.backgroundOpacity = 0.4
+          customPresenter.backgroundOpacity = 0.5
           customPresenter.dismissOnSwipe = true
           customPresenter.dismissOnSwipeDirection = .top
           return customPresenter
