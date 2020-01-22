@@ -39,6 +39,7 @@
 		9C76F09423493DAB00853FD9 /* WelcomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C76F09323493DAB00853FD9 /* WelcomeViewController.swift */; };
 		9C76F09623493EDA00853FD9 /* SurfTripViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C76F09523493EDA00853FD9 /* SurfTripViewController.swift */; };
 		9C76F09823493F0900853FD9 /* SavedTripsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C76F09723493F0900853FD9 /* SavedTripsViewController.swift */; };
+		9C89B61A23D863E000DB8DDF /* AlertVC.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9C89B61923D863E000DB8DDF /* AlertVC.storyboard */; };
 		9C8F32FC239943350070751F /* SplashViewController.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9C8F32FB239943350070751F /* SplashViewController.storyboard */; };
 		9C8F32FF239946090070751F /* logo_final.json in Resources */ = {isa = PBXBuildFile; fileRef = 9C8F32FD239946090070751F /* logo_final.json */; };
 		9C8F3300239946090070751F /* loader_animation.json in Resources */ = {isa = PBXBuildFile; fileRef = 9C8F32FE239946090070751F /* loader_animation.json */; };
@@ -84,7 +85,6 @@
 		73594BCA3A691E66914D3EEA /* Pods-TradeMySurf.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TradeMySurf.debug.xcconfig"; path = "Target Support Files/Pods-TradeMySurf/Pods-TradeMySurf.debug.xcconfig"; sourceTree = "<group>"; };
 		9C193AFA23A2ACA7000DE1AB /* coin-wallet.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = "coin-wallet.json"; sourceTree = "<group>"; };
 		9C1A985423D7A38E0050C7BC /* AlertVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AlertVC.swift; sourceTree = "<group>"; };
-		9C1A985623D7A3CE0050C7BC /* AlertVC.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = AlertVC.storyboard; path = /Users/marina/Desktop/Projects/TradeMySurf/TradeMySurf/TradeMySurf/ViewController/AlertVC.storyboard; sourceTree = "<absolute>"; };
 		9C3CC3DD23C75EE800359368 /* SupplementaryViews.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SupplementaryViews.swift; sourceTree = "<group>"; };
 		9C45E660234D238E0054A5FD /* SurfTripViewController.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = SurfTripViewController.storyboard; sourceTree = "<group>"; };
 		9C467C66234F2A7D009F4D58 /* Surfboard.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Surfboard.swift; sourceTree = "<group>"; };
@@ -120,6 +120,7 @@
 		9C76F09323493DAB00853FD9 /* WelcomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WelcomeViewController.swift; sourceTree = "<group>"; };
 		9C76F09523493EDA00853FD9 /* SurfTripViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SurfTripViewController.swift; sourceTree = "<group>"; };
 		9C76F09723493F0900853FD9 /* SavedTripsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SavedTripsViewController.swift; sourceTree = "<group>"; };
+		9C89B61923D863E000DB8DDF /* AlertVC.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = AlertVC.storyboard; sourceTree = "<group>"; };
 		9C8F32FB239943350070751F /* SplashViewController.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = SplashViewController.storyboard; sourceTree = "<group>"; };
 		9C8F32FD239946090070751F /* logo_final.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = logo_final.json; sourceTree = "<group>"; };
 		9C8F32FE239946090070751F /* loader_animation.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = loader_animation.json; sourceTree = "<group>"; };
@@ -358,7 +359,7 @@
 		9C76F09F2349471000853FD9 /* ViewController */ = {
 			isa = PBXGroup;
 			children = (
-				9C1A985623D7A3CE0050C7BC /* AlertVC.storyboard */,
+				9C89B61923D863E000DB8DDF /* AlertVC.storyboard */,
 				9C1A985423D7A38E0050C7BC /* AlertVC.swift */,
 				9C8F32FB239943350070751F /* SplashViewController.storyboard */,
 				9C990AAA2398114800B17AE5 /* SplashViewController.swift */,
@@ -541,6 +542,7 @@
 				9C45E661234D238F0054A5FD /* SurfTripViewController.storyboard in Resources */,
 				9C8F32FF239946090070751F /* logo_final.json in Resources */,
 				9C8F3300239946090070751F /* loader_animation.json in Resources */,
+				9C89B61A23D863E000DB8DDF /* AlertVC.storyboard in Resources */,
 				9C69CE87234D0749003E386F /* Welcome.storyboard in Resources */,
 				9C5B6458232A5073000727E6 /* Assets.xcassets in Resources */,
 				9C8F32FC239943350070751F /* SplashViewController.storyboard in Resources */,

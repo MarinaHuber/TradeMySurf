@@ -85,7 +85,6 @@ final class Coordinator: UIResponder, CoorinatorPresenting {
     }
     
     func presentAlert() {
-        
         let storyboard: UIStoryboard = UIStoryboard(name: Constants.Storyboards.alertVC, bundle: nil)
         let controller: AlertVC = AlertVC.instantiate(from: storyboard)
         guard let navigationController = window.rootViewController as? UINavigationController else { fatalError() }

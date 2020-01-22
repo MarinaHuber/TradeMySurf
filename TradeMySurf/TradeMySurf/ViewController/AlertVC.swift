@@ -8,8 +8,7 @@
 
 import UIKit
 
-
-final class AlertVC: UIViewController, StoryboardProtocol {
+class AlertVC: UIViewController, StoryboardProtocol {
     
     @IBOutlet var icon: UIImageView!
     @IBOutlet var titleLabel: UILabel!
