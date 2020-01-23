@@ -36,10 +36,10 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     func customiseNavBar () {
         guard let navigationController = self.window?.rootViewController as? UINavigationController else { return }
         navigationController.setNavigationBarHidden(true, animated: true)
-        navigationController.navigationBar.barTintColor = .clear
-        navigationController.navigationBar.tintColor = .black
-        navigationController.navigationBar.setBackgroundImage(UIImage(), for: UIBarPosition.any, barMetrics: UIBarMetrics.default)
-        navigationController.navigationBar.shadowImage = UIImage()
-        navigationController.navigationBar.titleTextAttributes = [.foregroundColor : UIColor.black as Any]
+//        navigationController.navigationBar.barTintColor = .clear
+//        navigationController.navigationBar.tintColor = .black
+//        navigationController.navigationBar.setBackgroundImage(UIImage(), for: UIBarPosition.any, barMetrics: UIBarMetrics.default)
+//        navigationController.navigationBar.shadowImage = UIImage()
+//        navigationController.navigationBar.titleTextAttributes = [.foregroundColor : UIColor.black as Any]
     }
 }

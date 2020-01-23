@@ -40,6 +40,8 @@
 		9C76F09623493EDA00853FD9 /* SurfTripViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C76F09523493EDA00853FD9 /* SurfTripViewController.swift */; };
 		9C76F09823493F0900853FD9 /* SavedTripsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C76F09723493F0900853FD9 /* SavedTripsViewController.swift */; };
 		9C89B61A23D863E000DB8DDF /* AlertVC.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9C89B61923D863E000DB8DDF /* AlertVC.storyboard */; };
+		9C89B61C23DA40D400DB8DDF /* UIView+Shadow.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C89B61B23DA40D400DB8DDF /* UIView+Shadow.swift */; };
+		9C89B61E23DA41A600DB8DDF /* BaseNavigationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C89B61D23DA41A600DB8DDF /* BaseNavigationController.swift */; };
 		9C8F32FC239943350070751F /* SplashViewController.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9C8F32FB239943350070751F /* SplashViewController.storyboard */; };
 		9C8F32FF239946090070751F /* logo_final.json in Resources */ = {isa = PBXBuildFile; fileRef = 9C8F32FD239946090070751F /* logo_final.json */; };
 		9C8F3300239946090070751F /* loader_animation.json in Resources */ = {isa = PBXBuildFile; fileRef = 9C8F32FE239946090070751F /* loader_animation.json */; };
@@ -121,6 +123,8 @@
 		9C76F09523493EDA00853FD9 /* SurfTripViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SurfTripViewController.swift; sourceTree = "<group>"; };
 		9C76F09723493F0900853FD9 /* SavedTripsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SavedTripsViewController.swift; sourceTree = "<group>"; };
 		9C89B61923D863E000DB8DDF /* AlertVC.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = AlertVC.storyboard; sourceTree = "<group>"; };
+		9C89B61B23DA40D400DB8DDF /* UIView+Shadow.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIView+Shadow.swift"; sourceTree = "<group>"; };
+		9C89B61D23DA41A600DB8DDF /* BaseNavigationController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseNavigationController.swift; sourceTree = "<group>"; };
 		9C8F32FB239943350070751F /* SplashViewController.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = SplashViewController.storyboard; sourceTree = "<group>"; };
 		9C8F32FD239946090070751F /* logo_final.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = logo_final.json; sourceTree = "<group>"; };
 		9C8F32FE239946090070751F /* loader_animation.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = loader_animation.json; sourceTree = "<group>"; };
@@ -365,6 +369,7 @@
 				9C990AAA2398114800B17AE5 /* SplashViewController.swift */,
 				9CFDFD3723671C2500760F25 /* Onboarding */,
 				9C73011523C51F0900B98F8C /* TabBarVC */,
+				9C89B61D23DA41A600DB8DDF /* BaseNavigationController.swift */,
 			);
 			path = ViewController;
 			sourceTree = "<group>";
@@ -385,6 +390,7 @@
 		9C90BC532386BCE50090E346 /* Helpers */ = {
 			isa = PBXGroup;
 			children = (
+				9C89B61B23DA40D400DB8DDF /* UIView+Shadow.swift */,
 				9C62417B239156C200A4B7C9 /* UserDefaultsHelper.swift */,
 				9C62416D238AE68E00A4B7C9 /* ReuseIdentifierHelper.swift */,
 				9CBDE2972395A9E600317F51 /* TimeHelper.swift */,
@@ -683,10 +689,12 @@
 				9C624174238AFC1400A4B7C9 /* SmallTableViewCell.swift in Sources */,
 				9C5B6456232A506C000727E6 /* TradeMySurf.xcdatamodeld in Sources */,
 				9C8F330223994CDD0070751F /* FontHelper.swift in Sources */,
+				9C89B61C23DA40D400DB8DDF /* UIView+Shadow.swift in Sources */,
 				9CFDFD3F2367226C00760F25 /* AddDateViewController.swift in Sources */,
 				9C76F09623493EDA00853FD9 /* SurfTripViewController.swift in Sources */,
 				9C62417C239156C200A4B7C9 /* UserDefaultsHelper.swift in Sources */,
 				9C90BC552386BD020090E346 /* Enums.swift in Sources */,
+				9C89B61E23DA41A600DB8DDF /* BaseNavigationController.swift in Sources */,
 				9C76F09823493F0900853FD9 /* SavedTripsViewController.swift in Sources */,
 				9CF936E923CBC0AB00A8C72D /* UIView+Gradient.swift in Sources */,
 				9C6F64D02379FB7800B0224D /* Constants.swift in Sources */,

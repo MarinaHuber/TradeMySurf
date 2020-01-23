@@ -30,7 +30,7 @@ final class TabBarViewController: UITabBarController {
         priceVC.title = "Calculator"
         priceVC.view.backgroundColor = .cyan
         let controllers = [saveVC, recommendVC, priceVC]
-        self.viewControllers = controllers.map { UINavigationController(rootViewController: $0)}
+        self.viewControllers = controllers.map { BaseNavigationController(rootViewController: $0)}
         
     }
 }
