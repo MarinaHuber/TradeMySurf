@@ -43,6 +43,7 @@ class SurfTripViewController: UIViewController, StoryboardProtocol {
 
 	private var selectedLevel = UserDefaults.standard.selectedLevel
 	private var selectedDate = UserDefaults.standard.surfingTime
+    private var userComingFromOnboarding = UserDefaults.standard.userWasHere
 
     private(set) var collectionView: UICollectionView!
 	private var sections: [TripSection] = []
@@ -54,16 +55,20 @@ class SurfTripViewController: UIViewController, StoryboardProtocol {
         super.viewDidLoad()
         addCollectionView()
         configureCollectionView()
+        self.userComingFromOnboarding = true
+
     }
     override func viewDidAppear(_ animated: Bool) {
         super.viewDidAppear(animated)
         self.navigationItem.leftBarButtonItem = leftBtn
-        scenePresenter?.presentAlert()
+        if userComingFromOnboarding == true {
+            scenePresenter?.presentAlert()
+        }
     }
     
     override func viewDidDisappear(_ animated: Bool) {
         super.viewDidDisappear(animated)
-        //UserDefaults.standard.userWasHere = false
+        self.userComingFromOnboarding = false
     }    
     @objc func popToRoot(_ sender: UIBarButtonItem) {
         scenePresenter?.presentAddLevel()

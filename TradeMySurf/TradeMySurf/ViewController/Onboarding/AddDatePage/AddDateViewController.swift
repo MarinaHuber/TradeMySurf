@@ -12,6 +12,7 @@ import  SwiftyPickerPopover
 class AddDateViewController: UIViewController, StoryboardProtocol {
 
     @IBOutlet weak var pickerViewDate: UIView!
+    private var userFinishedOnboarding = UserDefaults.standard.userWasHere
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -37,6 +38,7 @@ private extension AddDateViewController {
                 UserDefaults.standard.surfingTime = date
                 popover.disappear()
                 self.scenePresenter?.presentTabBar()
+                self.userFinishedOnboarding = true
             })
             .appear(originView: pickerViewDate, baseViewController: self)
     }
