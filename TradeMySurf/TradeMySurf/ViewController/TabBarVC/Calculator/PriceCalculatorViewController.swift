@@ -30,7 +30,6 @@ class PriceCalculatorViewController: UIViewController, StoryboardProtocol {
         stackView.setCustomSpacing(10, after: condition)
 
         calculateValue(self)
-        self.view.applyGradient(withColors: [.systemIndigo, .systemBlue, .systemTeal, .white], gradientOrientation: .topLeftBottomRight)
     }
 
     @IBAction func calculateValue(_ sender: Any) {

@@ -56,8 +56,9 @@ class SurfTripViewController: UIViewController, StoryboardProtocol {
         addCollectionView()
         configureCollectionView()
         self.userComingFromOnboarding = true
-
+        self.collectionView.backgroundColor = .clear
     }
+    
     override func viewDidAppear(_ animated: Bool) {
         super.viewDidAppear(animated)
         self.navigationItem.leftBarButtonItem = leftBtn
@@ -69,7 +70,7 @@ class SurfTripViewController: UIViewController, StoryboardProtocol {
     override func viewDidDisappear(_ animated: Bool) {
         super.viewDidDisappear(animated)
         self.userComingFromOnboarding = false
-    }    
+    }
     @objc func popToRoot(_ sender: UIBarButtonItem) {
         scenePresenter?.presentAddLevel()
     }
@@ -115,7 +116,7 @@ private extension SurfTripViewController {
                 case .surfboardsBeginner, .surfboardsBeginnerInter, .surfboardsIntermediate, .surfboardsAdvanced:
                     let boardHeader = collectionView.dequeueReusableView(ofType: BoardSupplementaryView.self, forKind: UICollectionView.elementKindSectionHeader, for: indexPath)
                     items.map {
-                        _ = $0.map{
+                        _ = $0.map {
                             switch $0 {
                                 case .surfboardsBeginner(let board):
                                     boardHeader.fillWith(board)

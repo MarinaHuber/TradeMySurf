@@ -47,20 +47,23 @@ enum GradientOrientation {
 extension UIView {
 
     /// Adds a gradient to UIView
-    func applyGradient(withColors colors: [UIColor], locations: [NSNumber]? = nil) {
-
-        let gradient: CAGradientLayer = CAGradientLayer()
-        gradient.frame = self.bounds
-        gradient.colors = colors.map { $0.cgColor }
-        gradient.locations = locations
-        self.layer.insertSublayer(gradient, at: 0)
-    }
-
-    /// Adds a gradient to UIView
     func applyGradient(withColors colors: [UIColor], gradientOrientation orientation: GradientOrientation) {
 
         let gradient: CAGradientLayer = CAGradientLayer()
         gradient.frame = self.bounds
+        gradient.colors = colors.map { $0.cgColor }
+        gradient.startPoint = orientation.startPoint
+        gradient.endPoint = orientation.endPoint
+        self.layer.insertSublayer(gradient, at: 0)
+    }
+    /// Adds a gradient to UIView
+    func applyGradientNavigation(withColors colors: [UIColor], gradientOrientation orientation: GradientOrientation) {
+
+        let gradient: CAGradientLayer = CAGradientLayer()
+        var bounds = self.bounds
+        let heightStatusBar = self.window?.windowScene?.statusBarManager?.statusBarFrame.height ?? 0
+        bounds.size.height += heightStatusBar
+        gradient.frame = bounds
         gradient.colors = colors.map { $0.cgColor }
         gradient.startPoint = orientation.startPoint
         gradient.endPoint = orientation.endPoint

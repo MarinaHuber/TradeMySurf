@@ -17,7 +17,8 @@ class AddLevelViewController: UIViewController, StoryboardProtocol {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        self.view.applyGradient(withColors: [.black, .systemGray3, .white], gradientOrientation: .topRightBottomLeft)
+        let pastelGreen = UIColor(named: "pastel")
+        self.view.applyGradient(withColors: [pastelGreen!, .systemGray3, .white], gradientOrientation: .horizontal)
     }
     
     override func viewWillAppear(_ animated: Bool) {
