@@ -25,10 +25,8 @@ class BoardSupplementaryView: UICollectionReusableView {
     
     func configureUI() {
         let separator = UIView(frame: .zero)
-        separator.translatesAutoresizingMaskIntoConstraints = false
-        separator.backgroundColor = .quaternaryLabel
 
-        title.textColor = .label
+        title.textColor = .white
         title.font = UIFontMetrics.default.scaledFont(for: UIFont.systemFont(ofSize: 22, weight: .bold))
         subtitle.textColor = .secondaryLabel
 
@@ -72,11 +70,11 @@ class LocationSupplementaryView: UICollectionReusableView {
     func configureUI() {
         let separator = UIView(frame: .zero)
         separator.translatesAutoresizingMaskIntoConstraints = false
-        separator.backgroundColor = .quaternaryLabel
+        separator.backgroundColor = .white
 
-        title.textColor = .label
+        title.textColor = .white
         title.font = UIFontMetrics.default.scaledFont(for: UIFont.systemFont(ofSize: 22, weight: .bold))
-        subtitle.textColor = .secondaryLabel
+        subtitle.textColor = .white
 
         let stackView = UIStackView(arrangedSubviews: [separator, title, subtitle])
         stackView.translatesAutoresizingMaskIntoConstraints = false

@@ -47,7 +47,7 @@ private extension SurfBoardCollectionViewCell {
 
         // Styling
 
-        contentView.layer.cornerRadius = 5
+        contentView.layer.cornerRadius = 10
         contentView.clipsToBounds = true
 
         titleLabel.textAlignment = .center
@@ -58,7 +58,7 @@ private extension SurfBoardCollectionViewCell {
 
         imageView.contentMode = .scaleAspectFill
         imageView.backgroundColor = .systemTeal
-		imageView.layer.cornerRadius = 15
+		imageView.layer.cornerRadius = 10
 		imageView.clipsToBounds = true
 
         // Layout

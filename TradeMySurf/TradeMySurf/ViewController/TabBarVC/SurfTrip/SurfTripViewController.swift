@@ -299,7 +299,7 @@ private extension SurfTripViewController {
                                               heightDimension: .fractionalHeight(1.0))
         let item = NSCollectionLayoutItem(layoutSize: itemSize)
         let groupSize = NSCollectionLayoutSize(widthDimension: .fractionalWidth(0.93),
-                                               heightDimension: .fractionalWidth(0.5))
+                                               heightDimension: .fractionalWidth(0.7))
         let group = NSCollectionLayoutGroup.vertical(layoutSize: groupSize, subitem: item, count: 3)
         group.interItemSpacing = NSCollectionLayoutSpacing.fixed(10)
         let section = NSCollectionLayoutSection(group: group)
