@@ -20,7 +20,7 @@ final class TabBarViewController: UITabBarController {
     private func setUpTabBar() {
         let storyboard: UIStoryboard = UIStoryboard(name: "SavedTripsViewController", bundle: nil)
         let saveVC: SavedTripsViewController = SavedTripsViewController.instantiate(from: storyboard)
-        saveVC.title = "Saved"
+        saveVC.title = "About surf"
         
         let storyboardSurf: UIStoryboard = UIStoryboard(name: "SurfTripViewController", bundle: nil)
         let recommendVC: SurfTripViewController = SurfTripViewController.instantiate(from: storyboardSurf)
