@@ -18,7 +18,7 @@ class AddLevelViewController: UIViewController, StoryboardProtocol {
     override func viewDidLoad() {
         super.viewDidLoad()
         let pastelGreen = UIColor(named: "pastel")
-        self.view.applyGradient(withColors: [pastelGreen!, .systemGray3, .white], gradientOrientation: .horizontal)
+        self.view.applyGradient(withColors: [pastelGreen!, .systemGray3, .white], gradientOrientation: .topRightBottomLeft)
     }
     
     override func viewWillAppear(_ animated: Bool) {
@@ -33,10 +33,12 @@ private extension AddLevelViewController {
             .setSize(width: view.bounds.size.width, height: 200)
             .setRowHeight(60)
             .setSelectedRow(2)
-            .setFontSize(16)
+            .setFontSize(17)
+            .setClearButton(title: "This is what will appear in your surf recommendations", font: UIFont.systemFont(ofSize: 11), color: .systemIndigo, action: {(popover, row, value) in
+            })
             .setPermittedArrowDirections([.up])
             .setOutsideTapDismissing(allowed: false)
-            .setDoneButton(title: "Next", font: UIFont.boldSystemFont(ofSize: 17), color: .systemBlue, action: { popover, _, selectedString in
+            .setDoneButton(title: "Next", font: UIFont.boldSystemFont(ofSize: 17), color: .systemIndigo, action: { popover, _, selectedString in
                 UserDefaults.standard.selectedLevel = selectedString
                 popover.disappear()
                 self.scenePresenter?.presentAddDate()

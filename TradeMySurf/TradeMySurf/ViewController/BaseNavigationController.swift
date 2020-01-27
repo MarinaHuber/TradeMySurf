@@ -9,11 +9,12 @@
 import UIKit
 
 class BaseNavigationController: UINavigationController {
-    let window = UIApplication.shared.windows.filter {$0.isKeyWindow}.first
-    lazy var statusBar = window?.windowScene?.statusBarManager?.statusBarFrame
+
 
     override func viewDidLoad() {
         super.viewDidLoad()
+        let window = UIApplication.shared.windows.filter {$0.isKeyWindow}.first
+        let statusBar = window?.windowScene?.statusBarManager?.statusBarFrame
         
         let statusView =  UIView()
         statusView.frame = statusBar!

@@ -158,7 +158,7 @@ private extension SurfTripViewController {
 
     func updateSnapshot(animated: Bool = true) {
 
-		let pickerString = Level.enumFromString(string: selectedLevel ?? "")
+		let pickerString = Level(rawValue: selectedLevel ?? "")
 		switch pickerString {
 		case .beginner:
 			snapshot.appendSections([.surfboardsBeginner])

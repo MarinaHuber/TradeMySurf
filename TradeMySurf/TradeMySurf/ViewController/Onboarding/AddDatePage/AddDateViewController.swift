@@ -17,7 +17,7 @@ class AddDateViewController: UIViewController, StoryboardProtocol {
     override func viewDidLoad() {
         super.viewDidLoad()
         let pastelGreen = UIColor(named: "pastel")
-        self.view.applyGradient(withColors: [pastelGreen!, .systemGray2, .white], gradientOrientation: .horizontal)
+        self.view.applyGradient(withColors: [pastelGreen!, .systemGray2, .white], gradientOrientation: .topRightBottomLeft)
     }
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
@@ -35,7 +35,12 @@ private extension AddDateViewController {
             .setOutsideTapDismissing(allowed: false)
             .setSize(width: view.bounds.size.width, height: 200)
             .setPermittedArrowDirections([.up])
-            .setDoneButton(title: "Done", font: UIFont.boldSystemFont(ofSize: 17), color: .systemBlue, action: { popover, date in
+            .setClearButton(title: "This is what will appear in your surf recommendations", font: UIFont.systemFont(ofSize: 11), color: .systemIndigo, action: { popover, selectedDate in
+                            print("clear")
+                            //Rewind
+                            popover.setSelectedDate(Date()).reload()
+                        })
+            .setDoneButton(title: "Done", font: UIFont.boldSystemFont(ofSize: 17), color: .systemIndigo, action: { popover, date in
                 UserDefaults.standard.surfingTime = date
                 popover.disappear()
                 self.scenePresenter?.presentTabBar()
