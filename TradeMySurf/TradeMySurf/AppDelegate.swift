@@ -16,6 +16,10 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
 	func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
         
+        if CommandLine.arguments.contains("--uitesting") {
+            // reset your app status for ui testing
+        }
+        
     // MARK: Configure Coordinator without storyboard
 		window = UIWindow(frame: UIScreen.main.bounds)
         guard let window = window else { fatalError() }
@@ -36,10 +40,5 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     func customiseNavBar () {
         guard let navigationController = self.window?.rootViewController as? UINavigationController else { return }
         navigationController.setNavigationBarHidden(true, animated: true)
-//        navigationController.navigationBar.barTintColor = .clear
-//        navigationController.navigationBar.tintColor = .black
-//        navigationController.navigationBar.setBackgroundImage(UIImage(), for: UIBarPosition.any, barMetrics: UIBarMetrics.default)
-//        navigationController.navigationBar.shadowImage = UIImage()
-//        navigationController.navigationBar.titleTextAttributes = [.foregroundColor : UIColor.black as Any]
     }
 }

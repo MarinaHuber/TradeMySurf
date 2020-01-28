@@ -24,7 +24,7 @@ final class TabBarViewController: UITabBarController {
         
         let storyboardSurf: UIStoryboard = UIStoryboard(name: "SurfTripViewController", bundle: nil)
         let recommendVC: SurfTripViewController = SurfTripViewController.instantiate(from: storyboardSurf)
-        recommendVC.title = "Recommend"
+        recommendVC.title = "Recommended"
         recommendVC.view.applyGradient(withColors: [.systemIndigo, .systemIndigo, .systemBlue, .systemTeal, .white], gradientOrientation: .vertical)
         
         let storyboardPrice: UIStoryboard = UIStoryboard(name: "PriceCalculatorViewController", bundle: nil)
