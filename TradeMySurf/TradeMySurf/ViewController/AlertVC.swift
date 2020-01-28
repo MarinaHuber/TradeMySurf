@@ -13,6 +13,7 @@ class AlertVC: UIViewController, StoryboardProtocol {
     @IBOutlet var icon: UIImageView!
     @IBOutlet var titleLabel: UILabel!
     @IBOutlet var bodyLabel: UILabel!
+    @IBOutlet weak var confirmButton: UIButton!
     @IBOutlet var alternateButton: UIButton!
     let selectedDate = UserDefaults.standard.surfingTime
     let selectedLevel = UserDefaults.standard.selectedLevel
@@ -20,8 +21,10 @@ class AlertVC: UIViewController, StoryboardProtocol {
     // MARK: Managing the View
     
     override func viewDidLoad() {
-        titleLabel.text = "Your goal is set: \(selectedLevel ?? "")"
-        bodyLabel.text = "You will surf starting:  \(selectedDate?.dateAsString(style: .long) ?? "")"
+        confirmButton.addBorder(color: .white, width: 0.5)
+        alternateButton.addBorder(color: .white, width: 0.5)
+        titleLabel.text = "\(selectedLevel ?? "")"
+        bodyLabel.text = "Surfing period:  \(selectedDate?.dateAsString(style: .long) ?? "")"
     }
     
     /// Called when the alternate button is tapped. This dismisses the alert then runs our alternate action.

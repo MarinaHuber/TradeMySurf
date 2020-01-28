@@ -32,7 +32,7 @@ private extension AddLevelViewController {
         StringPickerPopover(title: "Choose one", choices: levels)
             .setSize(width: view.bounds.size.width, height: 200)
             .setRowHeight(60)
-            .setSelectedRow(2)
+            //.setSelectedRow(2)
             .setFontSize(17)
             .setClearButton(title: "This is what will appear in your surf recommendations", font: UIFont.systemFont(ofSize: 11), color: .systemIndigo, action: {(popover, row, value) in
             })
