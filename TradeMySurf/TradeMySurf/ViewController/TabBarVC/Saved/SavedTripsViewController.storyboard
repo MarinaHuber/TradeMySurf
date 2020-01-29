@@ -3,7 +3,6 @@
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15509"/>
-        <capability name="Named colors" minToolsVersion="9.0"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -17,17 +16,16 @@
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <subviews>
                             <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="0b7-bv-RVH">
-                                <rect key="frame" x="0.0" y="0.0" width="414" height="2000"/>
+                                <rect key="frame" x="0.0" y="44" width="414" height="1956"/>
                                 <subviews>
                                     <view alpha="0.80000000000000004" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="JEJ-ea-VQq">
-                                        <rect key="frame" x="20" y="91" width="374" height="751"/>
+                                        <rect key="frame" x="20" y="21" width="374" height="1935"/>
                                         <subviews>
-                                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="boardSurf" translatesAutoresizingMaskIntoConstraints="NO" id="2UG-8y-nnT">
+                                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="boardSurf" translatesAutoresizingMaskIntoConstraints="NO" id="2UG-8y-nnT">
                                                 <rect key="frame" x="14" y="15" width="40" height="40"/>
-                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                             </imageView>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Quick surf refrence guide" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="6" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="m2j-pg-iUP">
-                                                <rect key="frame" x="34" y="10" width="306" height="32"/>
+                                                <rect key="frame" x="82" y="10" width="210" height="32"/>
                                                 <constraints>
                                                     <constraint firstAttribute="height" constant="32" id="PoY-Em-eqW"/>
                                                 </constraints>
@@ -36,7 +34,7 @@
                                                 <nil key="highlightedColor"/>
                                             </label>
                                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="4" translatesAutoresizingMaskIntoConstraints="NO" id="Zhb-8Z-0KT">
-                                                <rect key="frame" x="21" y="63" width="332" height="947.5"/>
+                                                <rect key="frame" x="21" y="59" width="332" height="947.5"/>
                                                 <subviews>
                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="How do I use calculator feature in the app?" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="2UY-SB-0hn">
                                                         <rect key="frame" x="0.0" y="0.0" width="332" height="22"/>
@@ -138,12 +136,15 @@
                                         </subviews>
                                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                                         <constraints>
-                                            <constraint firstItem="Zhb-8Z-0KT" firstAttribute="top" secondItem="m2j-pg-iUP" secondAttribute="bottom" constant="21" id="10f-Zg-sIk"/>
-                                            <constraint firstAttribute="trailing" secondItem="Zhb-8Z-0KT" secondAttribute="trailing" constant="21" id="8Et-SL-Y5Z"/>
-                                            <constraint firstItem="Zhb-8Z-0KT" firstAttribute="leading" secondItem="JEJ-ea-VQq" secondAttribute="leading" constant="21" id="BFs-ed-cRc"/>
+                                            <constraint firstItem="Zhb-8Z-0KT" firstAttribute="top" secondItem="m2j-pg-iUP" secondAttribute="bottom" constant="17" id="10f-Zg-sIk"/>
+                                            <constraint firstAttribute="trailing" secondItem="Zhb-8Z-0KT" secondAttribute="trailing" constant="21" id="3yH-6l-H5f"/>
+                                            <constraint firstItem="2UG-8y-nnT" firstAttribute="leading" secondItem="JEJ-ea-VQq" secondAttribute="leading" constant="14" id="K2C-CK-Dpw"/>
                                             <constraint firstItem="m2j-pg-iUP" firstAttribute="centerX" secondItem="Zhb-8Z-0KT" secondAttribute="centerX" id="VYc-rm-Lyk"/>
-                                            <constraint firstItem="m2j-pg-iUP" firstAttribute="leading" secondItem="JEJ-ea-VQq" secondAttribute="leading" constant="34" id="chu-ak-7qV"/>
-                                            <constraint firstItem="m2j-pg-iUP" firstAttribute="top" secondItem="JEJ-ea-VQq" secondAttribute="top" constant="10" id="ktH-dB-c85"/>
+                                            <constraint firstItem="Zhb-8Z-0KT" firstAttribute="leading" secondItem="JEJ-ea-VQq" secondAttribute="leading" constant="21" id="cCB-eg-nid"/>
+                                            <constraint firstItem="Zhb-8Z-0KT" firstAttribute="top" secondItem="2UG-8y-nnT" secondAttribute="bottom" constant="4" id="jUA-mf-GM1"/>
+                                            <constraint firstItem="m2j-pg-iUP" firstAttribute="leading" secondItem="2UG-8y-nnT" secondAttribute="trailing" constant="28" id="nqd-Q5-Hy3"/>
+                                            <constraint firstItem="m2j-pg-iUP" firstAttribute="top" secondItem="JEJ-ea-VQq" secondAttribute="top" constant="10" id="pub-yi-5Y4"/>
+                                            <constraint firstItem="2UG-8y-nnT" firstAttribute="top" secondItem="JEJ-ea-VQq" secondAttribute="top" constant="15" id="zPX-EU-Nbx"/>
                                         </constraints>
                                         <userDefinedRuntimeAttributes>
                                             <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
@@ -153,16 +154,12 @@
                                     </view>
                                 </subviews>
                                 <constraints>
-                                    <constraint firstItem="JEJ-ea-VQq" firstAttribute="leading" secondItem="rWR-VS-7ny" secondAttribute="leading" constant="20" id="40M-ux-Lks"/>
-                                    <constraint firstAttribute="trailing" secondItem="JEJ-ea-VQq" secondAttribute="trailing" constant="20" id="6RO-7m-7QV"/>
-                                    <constraint firstAttribute="height" constant="2000" id="Cct-8S-Fe4"/>
-                                    <constraint firstItem="rWR-VS-7ny" firstAttribute="trailing" secondItem="JEJ-ea-VQq" secondAttribute="trailing" constant="20" id="Exe-Js-3NA"/>
+                                    <constraint firstItem="JEJ-ea-VQq" firstAttribute="top" secondItem="0b7-bv-RVH" secondAttribute="top" constant="21" id="D9i-LM-Cv3"/>
+                                    <constraint firstItem="JEJ-ea-VQq" firstAttribute="bottom" secondItem="rWR-VS-7ny" secondAttribute="bottom" id="L03-ec-B94"/>
                                     <constraint firstAttribute="width" constant="414" id="UZi-g3-1Dy"/>
-                                    <constraint firstItem="JEJ-ea-VQq" firstAttribute="top" secondItem="rWR-VS-7ny" secondAttribute="top" constant="91" id="bSE-wf-CAi"/>
-                                    <constraint firstItem="rWR-VS-7ny" firstAttribute="bottom" secondItem="JEJ-ea-VQq" secondAttribute="bottom" constant="1158" id="eq2-D2-Zvy"/>
-                                    <constraint firstItem="JEJ-ea-VQq" firstAttribute="width" secondItem="0b7-bv-RVH" secondAttribute="width" multiplier="0.903382" id="f4P-jT-eGK"/>
-                                    <constraint firstItem="JEJ-ea-VQq" firstAttribute="height" secondItem="0b7-bv-RVH" secondAttribute="height" multiplier="0.3945" priority="999" id="nAY-sT-bDM"/>
-                                    <constraint firstAttribute="bottom" secondItem="JEJ-ea-VQq" secondAttribute="bottom" constant="167" id="ymS-cY-bNA"/>
+                                    <constraint firstAttribute="bottom" secondItem="JEJ-ea-VQq" secondAttribute="bottom" id="hKn-wb-I68"/>
+                                    <constraint firstItem="JEJ-ea-VQq" firstAttribute="leading" secondItem="0b7-bv-RVH" secondAttribute="leading" constant="20" id="iwm-fs-Fj1"/>
+                                    <constraint firstAttribute="trailing" secondItem="JEJ-ea-VQq" secondAttribute="trailing" constant="20" id="l9W-As-7F4"/>
                                 </constraints>
                                 <viewLayoutGuide key="contentLayoutGuide" id="mCJ-tB-q3a"/>
                                 <viewLayoutGuide key="frameLayoutGuide" id="rWR-VS-7ny"/>
@@ -170,17 +167,20 @@
                         </subviews>
                         <color key="tintColor" systemColor="systemTealColor" red="0.35294117650000001" green="0.7843137255" blue="0.98039215690000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
-                            <constraint firstItem="0b7-bv-RVH" firstAttribute="top" secondItem="8BQ-Rc-ssY" secondAttribute="top" id="YxX-IG-sFa"/>
+                            <constraint firstItem="h3f-dr-ghF" firstAttribute="top" secondItem="0b7-bv-RVH" secondAttribute="top" id="3Kp-rU-pK2"/>
+                            <constraint firstItem="h3f-dr-ghF" firstAttribute="trailing" secondItem="0b7-bv-RVH" secondAttribute="trailing" id="gf8-Bj-dVu"/>
+                            <constraint firstItem="0b7-bv-RVH" firstAttribute="leading" secondItem="h3f-dr-ghF" secondAttribute="leading" id="rDH-Y4-K0u"/>
+                            <constraint firstItem="0b7-bv-RVH" firstAttribute="bottom" secondItem="h3f-dr-ghF" secondAttribute="bottom" constant="1138" id="s8E-oT-Geu"/>
                             <constraint firstItem="0b7-bv-RVH" firstAttribute="leading" secondItem="8BQ-Rc-ssY" secondAttribute="leading" id="wFM-Qp-KbL"/>
                             <constraint firstAttribute="trailing" secondItem="0b7-bv-RVH" secondAttribute="trailing" id="yfS-yn-qei"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="h3f-dr-ghF"/>
                         <userDefinedRuntimeAttributes>
                             <userDefinedRuntimeAttribute type="color" keyPath="firstColor">
-                                <color key="value" white="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <color key="value" systemColor="systemIndigoColor" red="0.34509803919999998" green="0.33725490200000002" blue="0.83921568629999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                             </userDefinedRuntimeAttribute>
                             <userDefinedRuntimeAttribute type="color" keyPath="secondColor">
-                                <color key="value" name="pastel"/>
+                                <color key="value" white="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                             </userDefinedRuntimeAttribute>
                         </userDefinedRuntimeAttributes>
                     </view>
@@ -197,8 +197,5 @@
         <image name="boardSurf" width="150" height="150"/>
         <image name="info" catalog="system" width="46" height="64"/>
         <image name="trimming" width="1000" height="298"/>
-        <namedColor name="pastel">
-            <color red="0.2669999897480011" green="0.32300001382827759" blue="0.5559999942779541" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-        </namedColor>
     </resources>
 </document>
