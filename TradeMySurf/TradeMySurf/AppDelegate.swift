@@ -21,7 +21,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         }
         
     // MARK: Configure Coordinator without storyboard
-		window = UIWindow(frame: UIScreen.main.bounds)
+        window = UIWindow(frame: UIScreen.main.bounds)
         guard let window = window else { fatalError() }
         coordinator = Coordinator(window: window)
         window.makeKeyAndVisible()

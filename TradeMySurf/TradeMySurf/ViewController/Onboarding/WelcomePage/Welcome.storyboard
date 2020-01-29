@@ -23,7 +23,7 @@
                             </imageView>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="r8K-M5-40N">
                                 <rect key="frame" x="48" y="765" width="318" height="40"/>
-                                <color key="backgroundColor" systemColor="systemIndigoColor" red="0.34509803919999998" green="0.33725490200000002" blue="0.83921568629999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <color key="backgroundColor" systemColor="systemRedColor" red="1" green="0.23137254900000001" blue="0.18823529410000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="40" id="7iQ-6r-XVm"/>
                                 </constraints>
@@ -187,13 +187,6 @@
                                     </userDefinedRuntimeAttribute>
                                 </userDefinedRuntimeAttributes>
                             </view>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="wave" translatesAutoresizingMaskIntoConstraints="NO" id="yBm-4c-kaV">
-                                <rect key="frame" x="167" y="65" width="80" height="80"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="80" id="QIa-Bt-JBr"/>
-                                    <constraint firstAttribute="width" constant="80" id="krN-Yp-OSx"/>
-                                </constraints>
-                            </imageView>
                         </subviews>
                         <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
@@ -201,11 +194,8 @@
                             <constraint firstItem="GrG-Zn-ifo" firstAttribute="trailing" secondItem="r8K-M5-40N" secondAttribute="trailing" constant="48" id="FOY-4E-eDP"/>
                             <constraint firstItem="r8K-M5-40N" firstAttribute="top" secondItem="GIH-Ay-MhW" secondAttribute="bottom" constant="45" id="Hn1-Zu-yxQ"/>
                             <constraint firstItem="rr3-PX-WlU" firstAttribute="leading" secondItem="GrG-Zn-ifo" secondAttribute="leading" id="KhK-NL-rYz"/>
-                            <constraint firstItem="GrG-Zn-ifo" firstAttribute="trailing" secondItem="yBm-4c-kaV" secondAttribute="trailing" constant="167" id="Lgy-Zh-OHb"/>
-                            <constraint firstItem="yBm-4c-kaV" firstAttribute="leading" secondItem="GrG-Zn-ifo" secondAttribute="leading" constant="167" id="Lon-Em-vZ1"/>
                             <constraint firstAttribute="bottom" secondItem="rr3-PX-WlU" secondAttribute="bottom" id="M3e-QA-5tJ"/>
                             <constraint firstItem="GIH-Ay-MhW" firstAttribute="top" secondItem="9Ll-GN-ih1" secondAttribute="bottom" id="OtV-bR-6BH"/>
-                            <constraint firstItem="yBm-4c-kaV" firstAttribute="top" secondItem="GrG-Zn-ifo" secondAttribute="top" constant="21" id="SBX-F5-yIn"/>
                             <constraint firstItem="9Ll-GN-ih1" firstAttribute="top" secondItem="lAD-Yi-ibb" secondAttribute="bottom" constant="8" id="TEV-n1-k7G"/>
                             <constraint firstItem="lAD-Yi-ibb" firstAttribute="top" relation="greaterThanOrEqual" secondItem="GrG-Zn-ifo" secondAttribute="top" constant="100" id="VFk-6q-1ne"/>
                             <constraint firstItem="rr3-PX-WlU" firstAttribute="trailing" secondItem="GrG-Zn-ifo" secondAttribute="trailing" id="ahX-jk-GRY"/>
@@ -235,7 +225,6 @@
         <image name="boardSurf" width="150" height="150"/>
         <image name="calendar" width="150" height="150"/>
         <image name="sea-splash" width="150" height="150"/>
-        <image name="wave" width="150" height="150"/>
         <image name="yuliya-kosolapova" width="1000" height="1671"/>
     </resources>
 </document>
