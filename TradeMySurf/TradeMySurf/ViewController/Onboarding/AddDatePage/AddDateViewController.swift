@@ -33,7 +33,7 @@ private extension AddDateViewController {
             .setSelectedDate(Date())
             .setLocale(identifier: "en_GB_POSIX")
             .setOutsideTapDismissing(allowed: false)
-            .setSize(width: view.bounds.size.width, height: 200)
+            .setSize(width: view.bounds.size.width, height: 250)
             .setPermittedArrowDirections([.up])
             .setClearButton(title: "This is what will appear in your surf recommendations", font: UIFont.systemFont(ofSize: 11), color: .systemIndigo, action: { popover, selectedDate in
                             print("clear")

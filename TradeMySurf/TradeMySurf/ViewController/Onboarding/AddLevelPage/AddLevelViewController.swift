@@ -13,7 +13,7 @@ import SwiftyPickerPopover
 class AddLevelViewController: UIViewController, StoryboardProtocol {
     
 	@IBOutlet weak var pickerView: UIView!
-	let levels = [Level.beginner.rawValue, Level.beginnerIntemediate.rawValue, Level.intermediate.rawValue, Level.advanced.rawValue]
+    let levels = [Level.Beginner.rawValue, Level.BeginnerIntemediate.rawValue, Level.Intermediate.rawValue, Level.Advanced.rawValue]
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -30,12 +30,10 @@ class AddLevelViewController: UIViewController, StoryboardProtocol {
 private extension AddLevelViewController {
     private func setPickerPopover() {
         StringPickerPopover(title: "Choose one", choices: levels)
-            .setSize(width: view.bounds.size.width, height: 200)
+            .setSize(width: view.bounds.size.width, height: 250)
             .setRowHeight(60)
-            //.setSelectedRow(2)
+            .setSelectedRow(0)
             .setFontSize(17)
-            .setClearButton(title: "This is what will appear in your surf recommendations", font: UIFont.systemFont(ofSize: 11), color: .systemIndigo, action: {(popover, row, value) in
-            })
             .setPermittedArrowDirections([.up])
             .setOutsideTapDismissing(allowed: false)
             .setDoneButton(title: "Next", font: UIFont.boldSystemFont(ofSize: 17), color: .systemIndigo, action: { popover, _, selectedString in

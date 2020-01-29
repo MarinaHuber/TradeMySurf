@@ -160,7 +160,7 @@ private extension SurfTripViewController {
 
 		let pickerString = Level(rawValue: selectedLevel ?? "")
 		switch pickerString {
-		case .beginner:
+		case .Beginner:
 			snapshot.appendSections([.surfboardsBeginner])
 			snapshot.appendItems(appData.surfboardsBeginner.map({ TripItem.surfboardsBeginner($0) }))
             
@@ -168,7 +168,7 @@ private extension SurfTripViewController {
             
             snapshot.appendSections([.tipBeginner])
             snapshot.appendItems(appData.tipBeginner.map({ TripItem.tipBeginner($0) }))
-		case .beginnerIntemediate:
+		case .BeginnerIntemediate:
 			snapshot.appendSections([.surfboardsBeginnerInter])
 			snapshot.appendItems(appData.surfboardsBeginnerInter.map({ TripItem.surfboardsBeginnerInter($0) }))
             
@@ -176,7 +176,7 @@ private extension SurfTripViewController {
             
             snapshot.appendSections([.tipBeginnerInter])
             snapshot.appendItems(appData.tipBeginnerInter.map({ TripItem.tipBeginnerInter($0) }))
-		case .intermediate:
+		case .Intermediate:
 			snapshot.appendSections([.surfboardsIntermediate])
 			snapshot.appendItems(appData.surfboardsIntermediate.map({  TripItem.surfboardsIntermediate($0) }))
             
@@ -184,7 +184,7 @@ private extension SurfTripViewController {
             
             snapshot.appendSections([.tipIntermediate])
             snapshot.appendItems(appData.tipIntermediate.map({ TripItem.tipIntermediate($0) }))
-		case .advanced:
+		case .Advanced:
 			snapshot.appendSections([.surfboardsAdvanced])
 			snapshot.appendItems(appData.surfboardsAdvanced.map({  TripItem.surfboardsAdvanced($0) }))
             

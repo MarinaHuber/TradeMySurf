@@ -13,10 +13,13 @@ class AlertVC: UIViewController, StoryboardProtocol {
     @IBOutlet var icon: UIImageView!
     @IBOutlet var titleLabel: UILabel!
     @IBOutlet var bodyLabel: UILabel!
+    @IBOutlet weak var bodyText: UILabel!
+    
     @IBOutlet weak var confirmButton: UIButton!
     @IBOutlet var alternateButton: UIButton!
     let selectedDate = UserDefaults.standard.surfingTime
     let selectedLevel = UserDefaults.standard.selectedLevel
+    let levels = [Level.Beginner.rawValue, Level.BeginnerIntemediate.rawValue, Level.Intermediate.rawValue, Level.Advanced.rawValue]
     
     // MARK: Managing the View
     
@@ -25,6 +28,12 @@ class AlertVC: UIViewController, StoryboardProtocol {
         alternateButton.addBorder(color: .white, width: 0.5)
         titleLabel.text = "\(selectedLevel ?? "")"
         bodyLabel.text = "Surfing period:  \(selectedDate?.dateAsString(style: .long) ?? "")"
+        _ = levels.map {
+            if $0 == selectedLevel {
+                let levelEnum = Level(rawValue: $0)
+                bodyText.text = "Your goal is matched to surfboards and locations suitable for your \(levelEnum.unsafelyUnwrapped) level. Find that surf confidence and buy a board that will bring more progress and fun. "
+        }
+      }
     }
     
     /// Called when the alternate button is tapped. This dismisses the alert then runs our alternate action.
