@@ -39,7 +39,7 @@ final class Coordinator: UIResponder, CoorinatorPresenting {
                 case 1792:
                      heightFloat = 0.50
                 default:
-                     heightFloat = 0.45
+                     heightFloat = 0.50
             }
         }
        let height = ModalSize.fluid(percentage: heightFloat)

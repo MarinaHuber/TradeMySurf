@@ -9,12 +9,17 @@
       "color" : {
         "color-space" : "srgb",
         "components" : {
-          "red" : "0.267",
-          "alpha" : "1.000",
-          "blue" : "0.556",
-          "green" : "0.323"
+          "red" : "0.295",
+          "alpha" : "0.980",
+          "blue" : "0.759",
+          "green" : "0.360"
         }
-      }
+      },
+      "display-gamut" : "sRGB"
+    },
+    {
+      "idiom" : "universal",
+      "display-gamut" : "display-P3"
     }
   ]
 }

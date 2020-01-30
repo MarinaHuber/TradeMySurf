@@ -41,6 +41,7 @@ private extension AddLevelViewController {
                 popover.disappear()
                 self.scenePresenter?.presentAddDate()
             })
+            .setClearButton(title: "This is what will appear in your surf recommendations", font: UIFont.systemFont(ofSize: 11), color: .systemIndigo, action:  { popover, _, _ in })
             .appear(originView: pickerView, baseViewController: self)
     }
 }

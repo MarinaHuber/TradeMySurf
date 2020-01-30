@@ -22,16 +22,19 @@
                                 </constraints>
                             </imageView>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="equalSpacing" spacing="4" translatesAutoresizingMaskIntoConstraints="NO" id="arq-2M-O0u">
-                                <rect key="frame" x="47" y="134" width="320" height="49.333333333333343"/>
+                                <rect key="frame" x="47" y="143" width="320" height="81"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="When do you plan surfing?" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Hvw-mn-vaH">
-                                        <rect key="frame" x="0.0" y="0.0" width="320" height="34.333333333333336"/>
-                                        <fontDescription key="fontDescription" name="AvenirNext-DemiBold" family="Avenir Next" pointSize="25"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="320" height="66"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="66" id="J6Y-dS-yx2"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" name="AvenirNext-DemiBold" family="Avenir Next" pointSize="24"/>
                                         <nil key="textColor"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="xsM-Jl-g9d">
-                                        <rect key="frame" x="0.0" y="38.333333333333343" width="320" height="11"/>
+                                        <rect key="frame" x="0.0" y="70" width="320" height="11"/>
                                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="11" id="bF3-N2-pg5"/>
@@ -48,7 +51,7 @@
                             <constraint firstItem="arq-2M-O0u" firstAttribute="centerX" secondItem="2H6-JY-Mis" secondAttribute="centerX" id="ecw-ar-HTE"/>
                             <constraint firstAttribute="bottom" secondItem="frO-2d-BxM" secondAttribute="bottom" id="j1L-WD-ctl"/>
                             <constraint firstItem="frO-2d-BxM" firstAttribute="leading" secondItem="IVB-pQ-fdR" secondAttribute="leading" id="syj-ZB-NLO"/>
-                            <constraint firstItem="arq-2M-O0u" firstAttribute="top" secondItem="IVB-pQ-fdR" secondAttribute="top" constant="90" id="u7o-hb-GZm"/>
+                            <constraint firstItem="arq-2M-O0u" firstAttribute="top" secondItem="IVB-pQ-fdR" secondAttribute="top" constant="99" id="u7o-hb-GZm"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="IVB-pQ-fdR"/>
                     </view>
