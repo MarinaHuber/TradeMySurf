@@ -327,6 +327,8 @@ extension SurfTripViewController: UICollectionViewDelegate {
 
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
         collectionView.deselectItem(at: indexPath, animated: false)
+         guard let item = dataSource.itemIdentifier(for: indexPath) else {   return}
+          print(item)
     }
 }
 // MARK: - Basic UI -
