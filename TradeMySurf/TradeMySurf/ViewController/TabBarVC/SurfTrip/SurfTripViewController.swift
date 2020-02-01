@@ -10,10 +10,15 @@ import Foundation
 import UIKit
 import Presentr
 
+protocol DetailViewControllerDelegate {
+    func presentDetailViewController(with name: String?)
+}
+
 class SurfTripViewController: UIViewController, StoryboardProtocol {
     
+    private var delegate: DetailViewControllerDelegate?
     let presenter: Presentr = {
-
+        
        let bounds = UIScreen.main.bounds
        let height = ModalSize.fluid(percentage: 0.45)
        let width = ModalSize.fluid(percentage: 0.90)
@@ -41,18 +46,19 @@ class SurfTripViewController: UIViewController, StoryboardProtocol {
         return UIBarButtonItem(customView: button)
     }()
 
-	private var selectedLevel = UserDefaults.standard.selectedLevel
-	private var selectedDate = UserDefaults.standard.surfingTime
+    private var selectedLevel = UserDefaults.standard.selectedLevel
+    private var selectedDate = UserDefaults.standard.surfingTime
     private var userComingFromOnboarding = UserDefaults.standard.userWasHere
 
     private(set) var collectionView: UICollectionView!
-	private var sections: [TripSection] = []
+    private var sections: [TripSection] = []
     private var snapshot = NSDiffableDataSourceSnapshot<TripSection, TripItem>()
     private(set) var dataSource: UICollectionViewDiffableDataSource<TripSection, TripItem>! // retain data source!
     private(set) var appData: RecommendedTripArray = RecommendedTripArray()
 
     override func viewDidLoad() {
         super.viewDidLoad()
+        self.delegate = self
         addCollectionView()
         configureCollectionView()
         self.userComingFromOnboarding = true
@@ -79,24 +85,23 @@ class SurfTripViewController: UIViewController, StoryboardProtocol {
 private extension SurfTripViewController {
 
     func configureDiffableDataSource() {
+        
         self.dataSource = UICollectionViewDiffableDataSource<TripSection, TripItem>(collectionView: collectionView) {
             (collectionView: UICollectionView, indexPath: IndexPath, item: TripItem) -> UICollectionViewCell? in
             
             switch item {
-                case .surfboard(let board, .all):
+                case .surfboardsBeginner(let board), .surfboardsBeginnerInter(let board), .surfboardsIntermediate(let board), .surfboardsAdvanced(let board):
                     let cell = collectionView.dequeueCell(ofType: SurfBoardCollectionViewCell.self, for: indexPath)
                     cell.fillWithData(board)
                     return cell
-                case .surfCountry(let location, .all):
+                case .surfCountrySummer(let location), .surfCountryAutumn(let location), .surfCountryWinter(let location), .surfCountrySpring(let location):
                     let cell = collectionView.dequeueCell(ofType: LocationCollectionViewCell.self, for: indexPath)
                     cell.fillWithData(location)
                     return cell
-                case .tip(let tip, .all):
+                case .tipBeginner(let tip), .tipBeginnerInter(let tip), .tipIntermediate(let tip), .tipAdvanced(let tip):
                     let cell = collectionView.dequeueCell(ofType: SmallTableViewCell.self, for: indexPath)
                     cell.fillWithData(tip)
                     return cell
-                default:
-                    return nil
             }
         }
         configureHeaderDiffableDataSource()
@@ -119,7 +124,13 @@ private extension SurfTripViewController {
                     items.map {
                         _ = $0.map {
                             switch $0 {
-                                case .surfboard(let board, .all):
+                                case .surfboardsBeginner(let board):
+                                    boardHeader.fillWith(board)
+                                case .surfboardsBeginnerInter(let board):
+                                    boardHeader.fillWith(board)
+                                case .surfboardsIntermediate(let board):
+                                    boardHeader.fillWith(board)
+                                case .surfboardsAdvanced(let board):
                                     boardHeader.fillWith(board)
                                 default: break
                             }
@@ -132,7 +143,13 @@ private extension SurfTripViewController {
                         _ = $0.map {
                             switch $0 {
                                 
-                                case .surfCountry(let date, .all):
+                                case .surfCountrySpring(let date):
+                                    locationHeader.fillWith(date)
+                                case .surfCountrySummer(let date):
+                                    locationHeader.fillWith(date)
+                                case .surfCountryAutumn(let date):
+                                    locationHeader.fillWith(date)
+                                case .surfCountryWinter(let date):
                                     locationHeader.fillWith(date)
                                 default: break
                             }
@@ -147,44 +164,44 @@ private extension SurfTripViewController {
 
     func updateSnapshot(animated: Bool = true) {
 
-		let pickerString = Level(rawValue: selectedLevel ?? "")
-		switch pickerString {
-		case .Beginner:
-			snapshot.appendSections([.surfboardsBeginner])
-            snapshot.appendItems(appData.surfboardsBeginner.map({ TripItem.surfboard($0, .Beginner) }))
+        let pickerString = Level(rawValue: selectedLevel ?? "")
+        switch pickerString {
+        case .Beginner:
+            snapshot.appendSections([.surfboardsBeginner])
+            snapshot.appendItems(appData.surfboardsBeginner.map({ TripItem.surfboardsBeginner($0) }))
             
             updateLocationSection()
             
             snapshot.appendSections([.tipBeginner])
-            snapshot.appendItems(appData.tipBeginner.map({ TripItem.tip($0, .Beginner) }))
-		case .BeginnerIntemediate:
-			snapshot.appendSections([.surfboardsBeginnerInter])
-            snapshot.appendItems(appData.surfboardsBeginnerInter.map({ TripItem.surfboard($0, .BeginnerIntemediate) }))
+            snapshot.appendItems(appData.tipBeginner.map({ TripItem.tipBeginner($0) }))
+        case .BeginnerIntemediate:
+            snapshot.appendSections([.surfboardsBeginnerInter])
+            snapshot.appendItems(appData.surfboardsBeginnerInter.map({ TripItem.surfboardsBeginnerInter($0) }))
             
             updateLocationSection()
             
             snapshot.appendSections([.tipBeginnerInter])
-            snapshot.appendItems(appData.tipBeginnerInter.map({ TripItem.tip($0, .BeginnerIntemediate) }))
-		case .Intermediate:
-			snapshot.appendSections([.surfboardsIntermediate])
-            snapshot.appendItems(appData.surfboardsIntermediate.map({  TripItem.surfboard($0, .Intermediate) }))
+            snapshot.appendItems(appData.tipBeginnerInter.map({ TripItem.tipBeginnerInter($0) }))
+        case .Intermediate:
+            snapshot.appendSections([.surfboardsIntermediate])
+            snapshot.appendItems(appData.surfboardsIntermediate.map({  TripItem.surfboardsIntermediate($0) }))
             
             updateLocationSection()
             
             snapshot.appendSections([.tipIntermediate])
-            snapshot.appendItems(appData.tipIntermediate.map({ TripItem.tip($0, .Intermediate) }))
-		case .Advanced:
-			snapshot.appendSections([.surfboardsAdvanced])
-            snapshot.appendItems(appData.surfboardsAdvanced.map({  TripItem.surfboard($0, .Advanced) }))
+            snapshot.appendItems(appData.tipIntermediate.map({ TripItem.tipIntermediate($0) }))
+        case .Advanced:
+            snapshot.appendSections([.surfboardsAdvanced])
+            snapshot.appendItems(appData.surfboardsAdvanced.map({  TripItem.surfboardsAdvanced($0) }))
             
             updateLocationSection()
             
             snapshot.appendSections([.tipAdvanced])
-            snapshot.appendItems(appData.tipAdvanced.map({ TripItem.tip($0, .Advanced) }))
+            snapshot.appendItems(appData.tipAdvanced.map({ TripItem.tipAdvanced($0) }))
         default: break
-		}
+        }
 
-		sections = snapshot.sectionIdentifiers
+        sections = snapshot.sectionIdentifiers
         dataSource.apply(snapshot, animatingDifferences: animated)
     }
     
@@ -196,16 +213,16 @@ private extension SurfTripViewController {
         switch pickerDate {
         case 0:
             snapshot.appendSections([.surfCountryWinter])
-            snapshot.appendItems(appData.surfCountryWinter.map({ TripItem.surfCountry($0, .winter) }))
+            snapshot.appendItems(appData.surfCountryWinter.map({ TripItem.surfCountryWinter($0) }))
         case 1:
             snapshot.appendSections([.surfCountrySpring])
-            snapshot.appendItems(appData.surfCountrySpring.map({ TripItem.surfCountry($0, .spring) }))
+            snapshot.appendItems(appData.surfCountrySpring.map({ TripItem.surfCountrySpring($0) }))
         case 2:
             snapshot.appendSections([.surfCountrySummer])
-            snapshot.appendItems(appData.surfCountrySummer.map({ TripItem.surfCountry($0, .summer) }))
+            snapshot.appendItems(appData.surfCountrySummer.map({ TripItem.surfCountrySummer($0) }))
         case 3:
             snapshot.appendSections([.surfCountryAutumn])
-            snapshot.appendItems(appData.surfCountryAutumn.map({ TripItem.surfCountry($0, .autumn) }))
+            snapshot.appendItems(appData.surfCountryAutumn.map({ TripItem.surfCountryAutumn($0) }))
         default: break
         }
     }
@@ -216,62 +233,62 @@ private extension SurfTripViewController {
 // MARK: place - Date formatter logic - Extension
 private extension SurfTripViewController {
 
-	func makeIntFromMonth() -> Int {
-		let monthOfYear = selectedDate?.month
-		let dateFormat = DateFormatter()
-		dateFormat.dateFormat = "LLLL"
-		let date = dateFormat.date(from: monthOfYear ?? "")
-		let monthInt = Calendar.current.component(.month, from: date ?? Date())
-		return monthInt
-	}
+    func makeIntFromMonth() -> Int {
+        let monthOfYear = selectedDate?.month
+        let dateFormat = DateFormatter()
+        dateFormat.dateFormat = "LLLL"
+        let date = dateFormat.date(from: monthOfYear ?? "")
+        let monthInt = Calendar.current.component(.month, from: date ?? Date())
+        return monthInt
+    }
 }
 // MARK: - Collection View Layout -
 
 private extension SurfTripViewController {
 
-	func makeCompositionalLayout() -> UICollectionViewLayout {
-		let configuration = UICollectionViewCompositionalLayoutConfiguration()
-		configuration.interSectionSpacing = 10
-		let layout = UICollectionViewCompositionalLayout(sectionProvider: { [weak self] (sectionIndex: Int, _ : NSCollectionLayoutEnvironment) -> NSCollectionLayoutSection? in
-			guard let strongSelf = self else {
-				return nil
-			}
-			let guideSection = strongSelf.sections[sectionIndex]
-			let section: NSCollectionLayoutSection
-				switch guideSection {
-				case .surfboardsBeginner, .surfboardsBeginnerInter, .surfboardsIntermediate, .surfboardsAdvanced:
-					section = strongSelf.makeSurfboardSection()
-				case .surfCountrySummer, .surfCountryAutumn, .surfCountryWinter, .surfCountrySpring:
-					section = strongSelf.makeLocationSection()
+    func makeCompositionalLayout() -> UICollectionViewLayout {
+        let configuration = UICollectionViewCompositionalLayoutConfiguration()
+        configuration.interSectionSpacing = 10
+        let layout = UICollectionViewCompositionalLayout(sectionProvider: { [weak self] (sectionIndex: Int, _ : NSCollectionLayoutEnvironment) -> NSCollectionLayoutSection? in
+            guard let strongSelf = self else {
+                return nil
+            }
+            let guideSection = strongSelf.sections[sectionIndex]
+            let section: NSCollectionLayoutSection
+                switch guideSection {
+                case .surfboardsBeginner, .surfboardsBeginnerInter, .surfboardsIntermediate, .surfboardsAdvanced:
+                    section = strongSelf.makeSurfboardSection()
+                case .surfCountrySummer, .surfCountryAutumn, .surfCountryWinter, .surfCountrySpring:
+                    section = strongSelf.makeLocationSection()
                 case .tipBeginner, .tipBeginnerInter, .tipIntermediate, .tipAdvanced:
                     section = strongSelf.makeSmallTipsSection()
-			}
-			section.contentInsets = NSDirectionalEdgeInsets(top: 0, leading: 10, bottom: 0, trailing: 10)
-			return section
-			}, configuration: configuration)
-		return layout
-	}
+            }
+            section.contentInsets = NSDirectionalEdgeInsets(top: 0, leading: 10, bottom: 0, trailing: 10)
+            return section
+            }, configuration: configuration)
+        return layout
+    }
 
-	func makeSmallTipsSection() -> NSCollectionLayoutSection {
-		let itemSize = NSCollectionLayoutSize(widthDimension: .fractionalWidth(1.0),
-											  heightDimension: .estimated(40))
-		let item = NSCollectionLayoutItem(layoutSize: itemSize)
-		let groupSize = NSCollectionLayoutSize(widthDimension: .fractionalWidth(1.0),
-											   heightDimension: .estimated(100)) // this value doesn't matter
-		let group = NSCollectionLayoutGroup.horizontal(layoutSize: groupSize, subitems: [item])
-		group.interItemSpacing = NSCollectionLayoutSpacing.fixed(10)
-		let section = NSCollectionLayoutSection(group: group)
-		section.interGroupSpacing = 10
+    func makeSmallTipsSection() -> NSCollectionLayoutSection {
+        let itemSize = NSCollectionLayoutSize(widthDimension: .fractionalWidth(1.0),
+                                              heightDimension: .estimated(40))
+        let item = NSCollectionLayoutItem(layoutSize: itemSize)
+        let groupSize = NSCollectionLayoutSize(widthDimension: .fractionalWidth(1.0),
+                                               heightDimension: .estimated(100)) // this value doesn't matter
+        let group = NSCollectionLayoutGroup.horizontal(layoutSize: groupSize, subitems: [item])
+        group.interItemSpacing = NSCollectionLayoutSpacing.fixed(10)
+        let section = NSCollectionLayoutSection(group: group)
+        section.interGroupSpacing = 10
 
-		return section
-	}
+        return section
+    }
 
     func makeSurfboardSection() -> NSCollectionLayoutSection {
-		let largeItemSize = NSCollectionLayoutSize(widthDimension: .absolute(view.frame.size.width / 3),
-												   heightDimension: .fractionalHeight(1.0))
+        let largeItemSize = NSCollectionLayoutSize(widthDimension: .absolute(view.frame.size.width / 3),
+                                                   heightDimension: .fractionalHeight(1.0))
         let largeItem = NSCollectionLayoutItem(layoutSize: largeItemSize)
         let groupOf2Size = NSCollectionLayoutSize(widthDimension: .fractionalWidth(view.frame.size.width * 2),
-												  heightDimension: .estimated(300))
+                                                  heightDimension: .estimated(300))
         let groupOf3 = NSCollectionLayoutGroup.horizontal(layoutSize: groupOf2Size, subitems: [largeItem])
         groupOf3.interItemSpacing = .fixed(10)
         let section = NSCollectionLayoutSection(group: groupOf3)
@@ -283,8 +300,8 @@ private extension SurfTripViewController {
         return section
     }
 
-	 func makeLocationSection() -> NSCollectionLayoutSection {
-		let itemSize = NSCollectionLayoutSize(widthDimension: .fractionalWidth(1.0),
+     func makeLocationSection() -> NSCollectionLayoutSection {
+        let itemSize = NSCollectionLayoutSize(widthDimension: .fractionalWidth(1.0),
                                               heightDimension: .fractionalHeight(1.0))
         let item = NSCollectionLayoutItem(layoutSize: itemSize)
         let groupSize = NSCollectionLayoutSize(widthDimension: .fractionalWidth(0.93),
@@ -297,7 +314,7 @@ private extension SurfTripViewController {
         let layoutSectionHeader = makeSupplementaryHeader()
         section.boundarySupplementaryItems = [layoutSectionHeader]
         return section
-	}
+    }
     
     func makeSupplementaryHeader() -> NSCollectionLayoutBoundarySupplementaryItem {
         let layoutSectionHeaderSize = NSCollectionLayoutSize(widthDimension: .fractionalWidth(0.93), heightDimension: .estimated(80))
@@ -316,8 +333,13 @@ extension SurfTripViewController: UICollectionViewDelegate {
 
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
         collectionView.deselectItem(at: indexPath, animated: false)
-         guard let item = dataSource.itemIdentifier(for: indexPath) else {   return}
-          print(item)
+         guard let item = dataSource.itemIdentifier(for: indexPath) else { return }
+        print(item)
+        switch item {
+            case .surfboardsBeginner(let surf), .surfboardsBeginnerInter(let surf), .surfboardsIntermediate(let surf), .surfboardsAdvanced(let surf):
+                delegate?.presentDetailViewController(with: surf.imageName)
+            default : break
+        }
     }
 }
 // MARK: - Basic UI -
@@ -351,5 +373,16 @@ private extension SurfTripViewController {
         collectionView.delegate = self // Set delegate before data source !!
         configureDiffableDataSource()
     }
+}
+
+extension SurfTripViewController: DetailViewControllerDelegate {
+    
+    func presentDetailViewController(with name: String?) {
+        let storyboard: UIStoryboard = UIStoryboard(name: "DetailViewController", bundle: nil)
+        let vc: DetailViewController = DetailViewController.instantiate(from: storyboard)
+        vc.selectedImageBoard = name ?? ""
+        navigationController?.pushViewController(vc, animated: false)
+        
+        }
 }
 

@@ -9,6 +9,8 @@
 /* Begin PBXBuildFile section */
 		9C193AFB23A2ACA7000DE1AB /* coin-wallet.json in Resources */ = {isa = PBXBuildFile; fileRef = 9C193AFA23A2ACA7000DE1AB /* coin-wallet.json */; };
 		9C1A985523D7A38E0050C7BC /* AlertVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C1A985423D7A38E0050C7BC /* AlertVC.swift */; };
+		9C31EB8A23E3AA2100060143 /* DetailViewController.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9C31EB8923E3AA2100060143 /* DetailViewController.storyboard */; };
+		9C31EB8C23E3AB1A00060143 /* DetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C31EB8B23E3AB1A00060143 /* DetailViewController.swift */; };
 		9C3CC3DE23C75EE800359368 /* SupplementaryViews.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C3CC3DD23C75EE800359368 /* SupplementaryViews.swift */; };
 		9C45E661234D238F0054A5FD /* SurfTripViewController.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9C45E660234D238E0054A5FD /* SurfTripViewController.storyboard */; };
 		9C467C67234F2A7D009F4D58 /* Surfboard.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C467C66234F2A7D009F4D58 /* Surfboard.swift */; };
@@ -87,6 +89,8 @@
 		73594BCA3A691E66914D3EEA /* Pods-TradeMySurf.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TradeMySurf.debug.xcconfig"; path = "Target Support Files/Pods-TradeMySurf/Pods-TradeMySurf.debug.xcconfig"; sourceTree = "<group>"; };
 		9C193AFA23A2ACA7000DE1AB /* coin-wallet.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = "coin-wallet.json"; sourceTree = "<group>"; };
 		9C1A985423D7A38E0050C7BC /* AlertVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AlertVC.swift; sourceTree = "<group>"; };
+		9C31EB8923E3AA2100060143 /* DetailViewController.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = DetailViewController.storyboard; sourceTree = "<group>"; };
+		9C31EB8B23E3AB1A00060143 /* DetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailViewController.swift; sourceTree = "<group>"; };
 		9C3CC3DD23C75EE800359368 /* SupplementaryViews.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SupplementaryViews.swift; sourceTree = "<group>"; };
 		9C45E660234D238E0054A5FD /* SurfTripViewController.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = SurfTripViewController.storyboard; sourceTree = "<group>"; };
 		9C467C66234F2A7D009F4D58 /* Surfboard.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Surfboard.swift; sourceTree = "<group>"; };
@@ -363,6 +367,8 @@
 		9C76F09F2349471000853FD9 /* ViewController */ = {
 			isa = PBXGroup;
 			children = (
+				9C31EB8923E3AA2100060143 /* DetailViewController.storyboard */,
+				9C31EB8B23E3AB1A00060143 /* DetailViewController.swift */,
 				9C89B61923D863E000DB8DDF /* AlertVC.storyboard */,
 				9C1A985423D7A38E0050C7BC /* AlertVC.swift */,
 				9C8F32FB239943350070751F /* SplashViewController.storyboard */,
@@ -547,6 +553,7 @@
 				9C5B645B232A5073000727E6 /* LaunchScreen.storyboard in Resources */,
 				9C45E661234D238F0054A5FD /* SurfTripViewController.storyboard in Resources */,
 				9C8F32FF239946090070751F /* logo_final.json in Resources */,
+				9C31EB8A23E3AA2100060143 /* DetailViewController.storyboard in Resources */,
 				9C8F3300239946090070751F /* loader_animation.json in Resources */,
 				9C89B61A23D863E000DB8DDF /* AlertVC.storyboard in Resources */,
 				9C69CE87234D0749003E386F /* Welcome.storyboard in Resources */,
@@ -666,6 +673,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				9CBDE2982395A9E600317F51 /* TimeHelper.swift in Sources */,
+				9C31EB8C23E3AB1A00060143 /* DetailViewController.swift in Sources */,
 				9C69CE76234CD9B9003E386F /* Location.swift in Sources */,
 				9C1A985523D7A38E0050C7BC /* AlertVC.swift in Sources */,
 				9CC4F8EA23CA536A00F3ABAB /* Surfs.mlmodel in Sources */,

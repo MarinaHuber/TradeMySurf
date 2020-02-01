@@ -109,4 +109,7 @@ final class Coordinator: UIResponder, CoorinatorPresenting {
         navigationController.customPresentViewController(presenter, viewController: controller, animated: true, completion: nil)
     }
     
+    func presentDetail() {
+    }
+    
 }
