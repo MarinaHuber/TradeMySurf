@@ -3,6 +3,7 @@
     <device id="retina6_5" orientation="portrait" appearance="light"/>
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15509"/>
+        <capability name="Named colors" minToolsVersion="9.0"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -10,7 +11,7 @@
         <!--Welcome View Controller-->
         <scene sceneID="mB9-10-hPS">
             <objects>
-                <viewController storyboardIdentifier="WelcomeViewController" id="btd-kb-JMM" customClass="WelcomeViewController" customModule="TradeMySurf" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="WelcomeViewController" id="btd-kb-JMM" customClass="WelcomeViewController" customModule="Match_my_Surf" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="fie-jj-q1a">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -23,7 +24,7 @@
                             </imageView>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="r8K-M5-40N">
                                 <rect key="frame" x="48" y="765" width="318" height="40"/>
-                                <color key="backgroundColor" systemColor="systemRedColor" red="1" green="0.23137254900000001" blue="0.18823529410000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <color key="backgroundColor" name="pastel"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="40" id="7iQ-6r-XVm"/>
                                 </constraints>
@@ -226,5 +227,8 @@
         <image name="calendar" width="150" height="150"/>
         <image name="sea-splash" width="150" height="150"/>
         <image name="yuliya-kosolapova" width="1000" height="1671"/>
+        <namedColor name="pastel">
+            <color red="0.29499998688697815" green="0.36000001430511475" blue="0.75900000333786011" alpha="0.98000001907348633" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
     </resources>
 </document>
