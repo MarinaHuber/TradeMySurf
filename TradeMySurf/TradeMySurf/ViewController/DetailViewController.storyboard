@@ -10,7 +10,7 @@
         <!--Detail View Controller-->
         <scene sceneID="HHm-Uu-3gA">
             <objects>
-                <viewController storyboardIdentifier="DetailViewController" id="ScI-gv-ovi" customClass="DetailViewController" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="DetailViewController" id="ScI-gv-ovi" customClass="DetailViewController" customModule="TradeMySurf" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="dYT-do-R8d" customClass="GradientView" customModule="TradeMySurf" customModuleProvider="target">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>

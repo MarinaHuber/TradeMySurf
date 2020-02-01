@@ -381,7 +381,7 @@ extension SurfTripViewController: DetailViewControllerDelegate {
         let storyboard: UIStoryboard = UIStoryboard(name: "DetailViewController", bundle: nil)
         let vc: DetailViewController = DetailViewController.instantiate(from: storyboard)
         vc.selectedImageBoard = name ?? ""
-        navigationController?.pushViewController(vc, animated: false)
+        navigationController?.present(vc, animated: true, completion: nil)
         
         }
 }
