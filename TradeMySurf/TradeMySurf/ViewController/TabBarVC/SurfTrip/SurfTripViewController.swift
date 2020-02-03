@@ -83,20 +83,18 @@ private extension SurfTripViewController {
             (collectionView: UICollectionView, indexPath: IndexPath, item: TripItem) -> UICollectionViewCell? in
             
             switch item {
-                case .surfboard(let board, .all):
+                case .surfboard(let board, _):
                     let cell = collectionView.dequeueCell(ofType: SurfBoardCollectionViewCell.self, for: indexPath)
                     cell.fillWithData(board)
                     return cell
-                case .surfCountry(let location, .all):
+                case .surfCountry(let location, _):
                     let cell = collectionView.dequeueCell(ofType: LocationCollectionViewCell.self, for: indexPath)
                     cell.fillWithData(location)
                     return cell
-                case .tip(let tip, .all):
+                case .tip(let tip, _):
                     let cell = collectionView.dequeueCell(ofType: SmallTableViewCell.self, for: indexPath)
                     cell.fillWithData(tip)
                     return cell
-                default:
-                    return nil
             }
         }
         configureHeaderDiffableDataSource()
@@ -119,7 +117,7 @@ private extension SurfTripViewController {
                     items.map {
                         _ = $0.map {
                             switch $0 {
-                                case .surfboard(let board, .all):
+                                case .surfboard(let board, _):
                                     boardHeader.fillWith(board)
                                 default: break
                             }
@@ -132,7 +130,7 @@ private extension SurfTripViewController {
                         _ = $0.map {
                             switch $0 {
                                 
-                                case .surfCountry(let date, .all):
+                                case .surfCountry(let date, _):
                                     locationHeader.fillWith(date)
                                 default: break
                             }

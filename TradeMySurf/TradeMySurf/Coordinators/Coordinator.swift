@@ -109,4 +109,11 @@ final class Coordinator: UIResponder, CoorinatorPresenting {
         navigationController.customPresentViewController(presenter, viewController: controller, animated: true, completion: nil)
     }
     
+    func presentDetailBoard(_ name: String?) {
+        let storyboard: UIStoryboard = UIStoryboard(name: Constants.Storyboards.alertVC, bundle: nil)
+        let controller: AlertVC = AlertVC.instantiate(from: storyboard)
+        guard let navigationController = window.rootViewController as? UINavigationController else { fatalError() }
+        navigationController.present(controller, animated: true, completion: nil)
+    }
+    
 }
