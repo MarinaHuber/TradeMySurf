@@ -19,11 +19,12 @@ class AlertVC: UIViewController, StoryboardProtocol {
     @IBOutlet var alternateButton: UIButton!
     let selectedDate = UserDefaults.standard.surfingTime
     let selectedLevel = UserDefaults.standard.selectedLevel
-    let levels = [Level.Beginner.rawValue, Level.BeginnerIntemediate.rawValue, Level.Intermediate.rawValue, Level.Advanced.rawValue]
+    let levels = [Level.Beginner.rawValue, Level.BeginnerIntermediate.rawValue, Level.Intermediate.rawValue, Level.Advanced.rawValue]
     
     // MARK: Managing the View
     
-    override func viewDidLoad() {
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(false)
         confirmButton.addBorder(color: .white, width: 0.5)
         alternateButton.addBorder(color: .white, width: 0.5)
         titleLabel.text = "\(selectedLevel ?? "")"

@@ -11,8 +11,8 @@ import UIKit
 class BaseNavigationController: UINavigationController {
 
 
-    override func viewDidLoad() {
-        super.viewDidLoad()
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(false)
         let window = UIApplication.shared.windows.filter {$0.isKeyWindow}.first
         let statusBar = window?.windowScene?.statusBarManager?.statusBarFrame
         

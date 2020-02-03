@@ -13,7 +13,7 @@ import SwiftyPickerPopover
 class AddLevelViewController: UIViewController, StoryboardProtocol {
     
 	@IBOutlet weak var pickerView: UIView!
-    let levels = [Level.Beginner.rawValue, Level.BeginnerIntemediate.rawValue, Level.Intermediate.rawValue, Level.Advanced.rawValue]
+    let levels = [Level.Beginner.rawValue, Level.BeginnerIntermediate.rawValue, Level.Intermediate.rawValue, Level.Advanced.rawValue]
 
     override func viewDidLoad() {
         super.viewDidLoad()
