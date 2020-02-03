@@ -90,15 +90,15 @@ private extension SurfTripViewController {
             (collectionView: UICollectionView, indexPath: IndexPath, item: TripItem) -> UICollectionViewCell? in
             
             switch item {
-                case .surfboardsBeginner(let board), .surfboardsBeginnerInter(let board), .surfboardsIntermediate(let board), .surfboardsAdvanced(let board):
+                case .surfboard(let board, _):
                     let cell = collectionView.dequeueCell(ofType: SurfBoardCollectionViewCell.self, for: indexPath)
                     cell.fillWithData(board)
                     return cell
-                case .surfCountrySummer(let location), .surfCountryAutumn(let location), .surfCountryWinter(let location), .surfCountrySpring(let location):
+                case .surfCountry(let location, _):
                     let cell = collectionView.dequeueCell(ofType: LocationCollectionViewCell.self, for: indexPath)
                     cell.fillWithData(location)
                     return cell
-                case .tipBeginner(let tip), .tipBeginnerInter(let tip), .tipIntermediate(let tip), .tipAdvanced(let tip):
+                case .tip(let tip, _):
                     let cell = collectionView.dequeueCell(ofType: SmallTableViewCell.self, for: indexPath)
                     cell.fillWithData(tip)
                     return cell
@@ -124,15 +124,8 @@ private extension SurfTripViewController {
                     items.map {
                         _ = $0.map {
                             switch $0 {
-                                case .surfboardsBeginner(let board):
+                                case .surfboard(let board, _):
                                     boardHeader.fillWith(board)
-                                case .surfboardsBeginnerInter(let board):
-                                    boardHeader.fillWith(board)
-                                case .surfboardsIntermediate(let board):
-                                    boardHeader.fillWith(board)
-                                case .surfboardsAdvanced(let board):
-                                    boardHeader.fillWith(board)
-                                default: break
                             }
                         }
                     }
@@ -142,16 +135,8 @@ private extension SurfTripViewController {
                     items.map {
                         _ = $0.map {
                             switch $0 {
-                                
-                                case .surfCountrySpring(let date):
+                                case .surfCountry(let date, _):
                                     locationHeader.fillWith(date)
-                                case .surfCountrySummer(let date):
-                                    locationHeader.fillWith(date)
-                                case .surfCountryAutumn(let date):
-                                    locationHeader.fillWith(date)
-                                case .surfCountryWinter(let date):
-                                    locationHeader.fillWith(date)
-                                default: break
                             }
                         }
                     }
@@ -168,36 +153,36 @@ private extension SurfTripViewController {
         switch pickerString {
         case .Beginner:
             snapshot.appendSections([.surfboardsBeginner])
-            snapshot.appendItems(appData.surfboardsBeginner.map({ TripItem.surfboardsBeginner($0) }))
+            snapshot.appendItems(appData.surfboardsBeginner.map({ TripItem.surfboard($0, _) }))
             
             updateLocationSection()
             
             snapshot.appendSections([.tipBeginner])
-            snapshot.appendItems(appData.tipBeginner.map({ TripItem.tipBeginner($0) }))
+            snapshot.appendItems(appData.tipBeginner.map({ TripItem.tip($0, _) }))
         case .BeginnerIntemediate:
             snapshot.appendSections([.surfboardsBeginnerInter])
-            snapshot.appendItems(appData.surfboardsBeginnerInter.map({ TripItem.surfboardsBeginnerInter($0) }))
+            snapshot.appendItems(appData.surfboardsBeginnerInter.map({ TripItem.surfboard($0, _) }))
             
             updateLocationSection()
             
             snapshot.appendSections([.tipBeginnerInter])
-            snapshot.appendItems(appData.tipBeginnerInter.map({ TripItem.tipBeginnerInter($0) }))
+            snapshot.appendItems(appData.tipBeginnerInter.map({ TripItem.tip($0) }))
         case .Intermediate:
             snapshot.appendSections([.surfboardsIntermediate])
-            snapshot.appendItems(appData.surfboardsIntermediate.map({  TripItem.surfboardsIntermediate($0) }))
+            snapshot.appendItems(appData.surfboardsIntermediate.map({  TripItem.surfboard($0) }))
             
             updateLocationSection()
             
             snapshot.appendSections([.tipIntermediate])
-            snapshot.appendItems(appData.tipIntermediate.map({ TripItem.tipIntermediate($0) }))
+            snapshot.appendItems(appData.tipIntermediate.map({ TripItem.tip($0) }))
         case .Advanced:
             snapshot.appendSections([.surfboardsAdvanced])
-            snapshot.appendItems(appData.surfboardsAdvanced.map({  TripItem.surfboardsAdvanced($0) }))
+            snapshot.appendItems(appData.surfboardsAdvanced.map({  TripItem.surfboard($0) }))
             
             updateLocationSection()
             
             snapshot.appendSections([.tipAdvanced])
-            snapshot.appendItems(appData.tipAdvanced.map({ TripItem.tipAdvanced($0) }))
+            snapshot.appendItems(appData.tipAdvanced.map({ TripItem.tip($0) }))
         default: break
         }
 
@@ -213,16 +198,16 @@ private extension SurfTripViewController {
         switch pickerDate {
         case 0:
             snapshot.appendSections([.surfCountryWinter])
-            snapshot.appendItems(appData.surfCountryWinter.map({ TripItem.surfCountryWinter($0) }))
+            snapshot.appendItems(appData.surfCountryWinter.map({ TripItem.surfCountry($0) }))
         case 1:
             snapshot.appendSections([.surfCountrySpring])
-            snapshot.appendItems(appData.surfCountrySpring.map({ TripItem.surfCountrySpring($0) }))
+            snapshot.appendItems(appData.surfCountrySpring.map({ TripItem.surfCountry($0) }))
         case 2:
             snapshot.appendSections([.surfCountrySummer])
-            snapshot.appendItems(appData.surfCountrySummer.map({ TripItem.surfCountrySummer($0) }))
+            snapshot.appendItems(appData.surfCountrySummer.map({ TripItem.surfCountry($0) }))
         case 3:
             snapshot.appendSections([.surfCountryAutumn])
-            snapshot.appendItems(appData.surfCountryAutumn.map({ TripItem.surfCountryAutumn($0) }))
+            snapshot.appendItems(appData.surfCountryAutumn.map({ TripItem.surfCountry($0) }))
         default: break
         }
     }
