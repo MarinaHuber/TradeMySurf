@@ -136,6 +136,10 @@ private extension SurfTripViewController {
                     items.map {
                         _ = $0.map {
                             switch $0 {
+<<<<<<< HEAD
+=======
+                                
+>>>>>>> master
                                 case .surfCountry(let date, _):
                                     locationHeader.fillWith(date)
                                 default: break
