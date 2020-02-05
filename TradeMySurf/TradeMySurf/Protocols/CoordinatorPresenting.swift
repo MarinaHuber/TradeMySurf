@@ -14,6 +14,7 @@ protocol CoorinatorPresenting {
     func presentAddLevel()
     func presentAddDate()
     func presentTabBar()
+    func presentAlert()
 
 }
 

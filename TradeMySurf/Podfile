@@ -1,7 +1,20 @@
  platform :ios, '12.0'
 
 target 'TradeMySurf' do
+  # Comment the next line if you're not using Swift and don't want to use dynamic frameworks
   use_frameworks!
+
+  # There isn't a lot we can do about warnings in these pods, so silence them
+  inhibit_all_warnings!
+
+  use_frameworks!
+
   pod 'SwiftyPickerPopover'
   pod 'lottie-ios'
+  pod 'Presentr'
+
+  target 'TradeMySurfTests' do
+    inherit! :search_paths
+    # Pods for testing
+   end
 end

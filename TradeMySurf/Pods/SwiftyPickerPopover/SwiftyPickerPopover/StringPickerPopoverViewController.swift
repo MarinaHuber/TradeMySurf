@@ -46,7 +46,7 @@ public class StringPickerPopoverViewController: AbstractPickerPopoverViewControl
             cancelButton.setTitleTextAttributes([NSAttributedString.Key.font: font], for: .normal)
         }
         cancelButton.tintColor = popover.cancelButton.color ?? popover.tintColor
-        navigationItem.setLeftBarButton(cancelButton, animated: false)
+        //navigationItem.setLeftBarButton(cancelButton, animated: false)
         
         doneButton.title = popover.doneButton.title
         if let font = popover.doneButton.font {
@@ -86,7 +86,7 @@ public class StringPickerPopoverViewController: AbstractPickerPopoverViewControl
     ///
     /// - Parameter sender: Cancel button
     @IBAction func tappedCancel(_ sender: AnyObject? = nil) {
-        tapped(button: popover.cancelButton)
+ //       tapped(button: popover.cancelButton)
     }
     
     private func tapped(button: StringPickerPopover.ButtonParameterType?) {

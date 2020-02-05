@@ -45,6 +45,7 @@ private extension LocationCollectionViewCell {
 func configureUI() {
 
 	// Styling
+    contentView.layer.cornerRadius = 10
 	nameCountryLabel.font = UIFont.preferredFont(forTextStyle: .headline)
 	nameCountryLabel.textColor = .label
 

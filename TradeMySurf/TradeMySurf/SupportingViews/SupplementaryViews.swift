@@ -1,10 +1,6 @@
 //
 //  SectionHeader.swift
-//  TapStore
-//
-//  Created by Paul Hudson on 01/10/2019.
-//  Copyright © 2019 Hacking with Swift. All rights reserved.
-//
+
 
 import UIKit
 
@@ -23,16 +19,14 @@ class BoardSupplementaryView: UICollectionReusableView {
     }
     
     func fillWith(_ data: Surfboard) {
-        title.text = "Surf board for: \(data.level)"
-        subtitle.text = "Shapes and gear for your level"
+        title.text = "Surfboard for: \(data.level)"
+        subtitle.text = "Shapes and volume for your level"
     }
     
     func configureUI() {
         let separator = UIView(frame: .zero)
-        separator.translatesAutoresizingMaskIntoConstraints = false
-        separator.backgroundColor = .quaternaryLabel
 
-        title.textColor = .label
+        title.textColor = .white
         title.font = UIFontMetrics.default.scaledFont(for: UIFont.systemFont(ofSize: 22, weight: .bold))
         subtitle.textColor = .secondaryLabel
 
@@ -76,11 +70,11 @@ class LocationSupplementaryView: UICollectionReusableView {
     func configureUI() {
         let separator = UIView(frame: .zero)
         separator.translatesAutoresizingMaskIntoConstraints = false
-        separator.backgroundColor = .quaternaryLabel
+        separator.backgroundColor = .white
 
-        title.textColor = .label
+        title.textColor = .white
         title.font = UIFontMetrics.default.scaledFont(for: UIFont.systemFont(ofSize: 22, weight: .bold))
-        subtitle.textColor = .secondaryLabel
+        subtitle.textColor = .white
 
         let stackView = UIStackView(arrangedSubviews: [separator, title, subtitle])
         stackView.translatesAutoresizingMaskIntoConstraints = false

@@ -9,21 +9,31 @@
 import Foundation
 
 enum Level: String, CaseIterable {
-    case beginner = "Learning to stand up in white water waves"
-    case beginnerIntemediate = "Paddling out, dropping straight down the face of the wave"
-    case intermediate = "Trimming down the middle line of the wave"
-    case advanced = "Performing full carving changes"
+    case Beginner = "Learning to stand up in white water waves"
+    case BeginnerIntemediate = "Paddling out, dropping straight down the face of the wave"
+    case Intermediate = "Trimming down the middle line of the wave"
+    case Advanced = "Performing full carving changes"
     
-	 static func enumFromString(string: String) -> Level? {
-		return self.allCases.first { "\($0.rawValue)" == string }
-	}
+    static var allCases: [Level] {
+        return [.Beginner, .BeginnerIntemediate, .Intermediate, .Advanced]
+    }
+    @available(*, unavailable)
+    case all
+
 }
-// EASY TO TEST THIE LOGIC DATA?
+
 enum Season: Int, CaseIterable {
+    static var allCases: [Season] {
+        return [.winter, .spring, .summer, .autumn]
+    }
+    
     case winter = 0
     case spring = 1
     case summer = 2
     case autumn = 3
+    
+    @available(*, unavailable)
+    case all
 
 	static func sortBy(month: Int) -> Int {
 		 switch month {
@@ -47,8 +57,20 @@ enum TripSection: CaseIterable {
 	case surfCountrySummer, surfCountryAutumn, surfCountryWinter, surfCountrySpring
 }
 
+//enum TripItem: Hashable {
+//
+//	case tipBeginner(SurfTip), tipBeginnerInter(SurfTip), tipIntermediate(SurfTip), tipAdvanced(SurfTip)
+//
+//	case surfboardsBeginner(Surfboard), surfboardsBeginnerInter(Surfboard), surfboardsIntermediate(Surfboard), surfboardsAdvanced(Surfboard)
+//
+//    case surfCountrySummer(Location), surfCountryAutumn(Location), surfCountryWinter(Location), surfCountrySpring(Location)
+//}
+
 enum TripItem: Hashable {
-	case tipBeginner(SurfTip), tipBeginnerInter(SurfTip), tipIntermediate(SurfTip), tipAdvanced(SurfTip)
-	case surfboardsBeginner(Surfboard), surfboardsBeginnerInter(Surfboard), surfboardsIntermediate(Surfboard), surfboardsAdvanced(Surfboard)
-    case surfCountrySummer(Location),surfCountryAutumn(Location),surfCountryWinter(Location),surfCountrySpring(Location)
+    case tip(SurfTip, Level)
+    case surfboard(Surfboard, Level)
+    case surfCountry(Location, Season)
 }
+
+
+

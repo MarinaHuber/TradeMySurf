@@ -1,20 +1,24 @@
 PODS:
   - lottie-ios (3.1.5)
+  - Presentr (1.9)
   - SwiftyPickerPopover (6.6.6)
 
 DEPENDENCIES:
   - lottie-ios
+  - Presentr
   - SwiftyPickerPopover
 
 SPEC REPOS:
   trunk:
     - lottie-ios
+    - Presentr
     - SwiftyPickerPopover
 
 SPEC CHECKSUMS:
   lottie-ios: 32bf84389337d86fbc8b12266e88452e0abf1dee
+  Presentr: 7078d7eb5d1661ebeaae60c9e42a1e534de1b993
   SwiftyPickerPopover: a402960a6687c911ffcb4e9fb282a1bc61186ab4
 
-PODFILE CHECKSUM: 2c5eff02d7dde9fa120821f0bbfa1d5e1c60aaea
+PODFILE CHECKSUM: f020b27270e7d469ebdf29601f5fe8331d9bca2e
 
 COCOAPODS: 1.8.4

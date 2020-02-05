@@ -20,17 +20,20 @@ final class TabBarViewController: UITabBarController {
     private func setUpTabBar() {
         let storyboard: UIStoryboard = UIStoryboard(name: "SavedTripsViewController", bundle: nil)
         let saveVC: SavedTripsViewController = SavedTripsViewController.instantiate(from: storyboard)
-        saveVC.title = "Saved"
+        saveVC.title = "About surf"
+        
         let storyboardSurf: UIStoryboard = UIStoryboard(name: "SurfTripViewController", bundle: nil)
         let recommendVC: SurfTripViewController = SurfTripViewController.instantiate(from: storyboardSurf)
-        recommendVC.title = "Recommend"
-        recommendVC.view.backgroundColor = .blue
+        recommendVC.title = "Recommended"
+        recommendVC.view.applyGradient(withColors: [.systemIndigo, .systemIndigo, .systemBlue, .systemTeal, .white], gradientOrientation: .vertical)
+        
         let storyboardPrice: UIStoryboard = UIStoryboard(name: "PriceCalculatorViewController", bundle: nil)
         let priceVC: PriceCalculatorViewController = PriceCalculatorViewController.instantiate(from: storyboardPrice)
         priceVC.title = "Calculator"
-        priceVC.view.backgroundColor = .cyan
+        priceVC.view.applyGradient(withColors: [.systemIndigo, .systemIndigo, .systemTeal, .white], gradientOrientation: .topLeftBottomRight)
+        
         let controllers = [saveVC, recommendVC, priceVC]
-        self.viewControllers = controllers.map { UINavigationController(rootViewController: $0)}
+        self.viewControllers = controllers.map { BaseNavigationController(rootViewController: $0)}
         
     }
 }

@@ -3,7 +3,6 @@
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15509"/>
-        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
@@ -11,54 +10,202 @@
         <scene sceneID="2Op-iH-4u0">
             <objects>
                 <viewController storyboardIdentifier="SavedTripsViewController" id="taf-X9-iD4" userLabel="Saved" customClass="SavedTripsViewController" customModule="TradeMySurf" customModuleProvider="target" sceneMemberID="viewController">
-                    <view key="view" contentMode="scaleToFill" id="8BQ-Rc-ssY">
+                    <view key="view" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="8BQ-Rc-ssY" customClass="GradientView" customModule="TradeMySurf" customModuleProvider="target">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="6" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="m2j-pg-iUP">
-                                <rect key="frame" x="72" y="328" width="269" height="155"/>
+                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" showsHorizontalScrollIndicator="NO" indicatorStyle="black" bouncesZoom="NO" translatesAutoresizingMaskIntoConstraints="NO" id="0b7-bv-RVH">
+                                <rect key="frame" x="0.0" y="0.0" width="414" height="1089"/>
+                                <subviews>
+                                    <view alpha="0.80000000000000004" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="JEJ-ea-VQq">
+                                        <rect key="frame" x="20" y="0.0" width="374" height="1044"/>
+                                        <subviews>
+                                            <stackView opaque="NO" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="Zhb-8Z-0KT">
+                                                <rect key="frame" x="20" y="55" width="334" height="978.5"/>
+                                                <subviews>
+                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="How do I use calculator feature in the app?" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="2UY-SB-0hn">
+                                                        <rect key="frame" x="0.0" y="0.0" width="334" height="46"/>
+                                                        <constraints>
+                                                            <constraint firstAttribute="height" constant="46" id="Ltn-Ns-nBc"/>
+                                                        </constraints>
+                                                        <fontDescription key="fontDescription" name="AvenirNext-Medium" family="Avenir Next" pointSize="16"/>
+                                                        <nil key="textColor"/>
+                                                        <nil key="highlightedColor"/>
+                                                    </label>
+                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="10" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="1Gn-Bg-T9U">
+                                                        <rect key="frame" x="0.0" y="46" width="334" height="167.5"/>
+                                                        <string key="text">Nothing is worse than buying a board for an advanced + rider and struggling to ride it. You'll end up needing to sell it and buy a board more suited to your need. If you have ever walked into a surf shop, or browsed online, you’ll know that there is more than a couple to choose from. It seems like a new brand is coming out weekly from mass produced or custom makers. Calculator is here to give you variaty of choices you ca name and range of money you will need to purchase.</string>
+                                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                                        <nil key="textColor"/>
+                                                        <nil key="highlightedColor"/>
+                                                    </label>
+                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="What is surfboard volume?" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="N2t-xy-vHs" userLabel="What is surfboard volume?">
+                                                        <rect key="frame" x="0.0" y="213.5" width="334" height="22"/>
+                                                        <fontDescription key="fontDescription" name="AvenirNext-Medium" family="Avenir Next" pointSize="16"/>
+                                                        <nil key="textColor"/>
+                                                        <nil key="highlightedColor"/>
+                                                    </label>
+                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="11" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ZTs-du-77p">
+                                                        <rect key="frame" x="0.0" y="235.5" width="334" height="134"/>
+                                                        <string key="text">Volume is important element to consider when choosing a surfboard. It's the factor that can most affect the number of waves you catch, and how much fun you have in water.But it isn't everything. Understanding how the curved shapes and the surfboard's dimensions affect your surfing will also help you find better surfboardsfor your surf level, and have positive impact on your progression.</string>
+                                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                                        <nil key="textColor"/>
+                                                        <nil key="highlightedColor"/>
+                                                    </label>
+                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="What is Beaufort scale measure for wave height?" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="gYx-3D-HVX" userLabel="Boufort">
+                                                        <rect key="frame" x="0.0" y="369.5" width="334" height="44"/>
+                                                        <fontDescription key="fontDescription" name="AvenirNext-Medium" family="Avenir Next" pointSize="16"/>
+                                                        <nil key="textColor"/>
+                                                        <nil key="highlightedColor"/>
+                                                    </label>
+                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="7" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="FoR-18-WYe">
+                                                        <rect key="frame" x="0.0" y="413.5" width="334" height="117"/>
+                                                        <string key="text">Beaufort scale measure is important element to consider when choosing a surf location. It's the factor that can most affect the size and the power of waves in water. But it isn't everything. Understanding the scale ranging from 0-17 is understanding the global wind speed to observed conditions at sea and land.</string>
+                                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                                        <nil key="textColor"/>
+                                                        <nil key="highlightedColor"/>
+                                                    </label>
+                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="What means trimming down the middle line of the wave?" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="GxR-qa-Rtg">
+                                                        <rect key="frame" x="0.0" y="530.5" width="334" height="44"/>
+                                                        <fontDescription key="fontDescription" name="AvenirNext-Medium" family="Avenir Next" pointSize="16"/>
+                                                        <nil key="textColor"/>
+                                                        <nil key="highlightedColor"/>
+                                                    </label>
+                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="10" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="29K-xp-ja5">
+                                                        <rect key="frame" x="0.0" y="574.5" width="334" height="134"/>
+                                                        <string key="text">A surfboard moves a bit like a boat, meaning that if a boat needs to to a sharp turn to change direction, then the nose of the boat will go up in order to pivot easily (carving). If a boat needs to turn at high speed, the nose will stay closer to the water and the turn will be less sharp (trimming). A surfboard does the same thing. Fast breaking wave: Trimming, slow braking: Carving.</string>
+                                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                                        <nil key="textColor"/>
+                                                        <nil key="highlightedColor"/>
+                                                    </label>
+                                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="trimming" translatesAutoresizingMaskIntoConstraints="NO" id="m7Y-tI-J0v">
+                                                        <rect key="frame" x="0.0" y="708.5" width="334" height="100"/>
+                                                        <constraints>
+                                                            <constraint firstAttribute="height" constant="100" id="dI7-Z9-8bZ"/>
+                                                        </constraints>
+                                                    </imageView>
+                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="How do I know if I am goofy or regular?" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="S0e-6D-G4q">
+                                                        <rect key="frame" x="0.0" y="808.5" width="334" height="22"/>
+                                                        <constraints>
+                                                            <constraint firstAttribute="height" constant="22" id="a4h-IV-U0b"/>
+                                                        </constraints>
+                                                        <fontDescription key="fontDescription" name="AvenirNext-Medium" family="Avenir Next" pointSize="17"/>
+                                                        <nil key="textColor"/>
+                                                        <nil key="highlightedColor"/>
+                                                    </label>
+                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="What are best surf exercises?" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="qDe-my-yMM">
+                                                        <rect key="frame" x="0.0" y="830.5" width="334" height="20.5"/>
+                                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                        <nil key="textColor"/>
+                                                        <nil key="highlightedColor"/>
+                                                    </label>
+                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="0KR-Se-Xp6">
+                                                        <rect key="frame" x="0.0" y="851" width="334" height="20.5"/>
+                                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                        <nil key="textColor"/>
+                                                        <nil key="highlightedColor"/>
+                                                    </label>
+                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Where can I fins best surf videos?" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="22e-mz-2Kb">
+                                                        <rect key="frame" x="0.0" y="871.5" width="334" height="20.5"/>
+                                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                        <nil key="textColor"/>
+                                                        <nil key="highlightedColor"/>
+                                                    </label>
+                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="MoP-R8-Mbl">
+                                                        <rect key="frame" x="0.0" y="892" width="334" height="20.5"/>
+                                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                        <nil key="textColor"/>
+                                                        <nil key="highlightedColor"/>
+                                                    </label>
+                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Whats surf music Blitz?" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="rBd-hE-Z2A">
+                                                        <rect key="frame" x="0.0" y="912.5" width="334" height="22"/>
+                                                        <fontDescription key="fontDescription" name="AvenirNext-Regular" family="Avenir Next" pointSize="16"/>
+                                                        <nil key="textColor"/>
+                                                        <nil key="highlightedColor"/>
+                                                    </label>
+                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ufH-a1-uBL">
+                                                        <rect key="frame" x="0.0" y="934.5" width="334" height="20.5"/>
+                                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                        <nil key="textColor"/>
+                                                        <nil key="highlightedColor"/>
+                                                    </label>
+                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="trJ-Hf-vcI">
+                                                        <rect key="frame" x="0.0" y="955" width="334" height="20.5"/>
+                                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                        <nil key="textColor"/>
+                                                        <nil key="highlightedColor"/>
+                                                    </label>
+                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" verticalCompressionResistancePriority="749" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="RnP-Cz-VP3">
+                                                        <rect key="frame" x="0.0" y="975.5" width="334" height="3"/>
+                                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                        <nil key="textColor"/>
+                                                        <nil key="highlightedColor"/>
+                                                    </label>
+                                                </subviews>
+                                            </stackView>
+                                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="boardSurf" translatesAutoresizingMaskIntoConstraints="NO" id="2UG-8y-nnT">
+                                                <rect key="frame" x="15" y="12" width="40" height="43"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="width" constant="40" id="BHp-Au-iBR"/>
+                                                </constraints>
+                                            </imageView>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Quick surf refrence guide" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="m2j-pg-iUP">
+                                                <rect key="frame" x="56" y="22.5" width="256" height="22"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="height" constant="22" id="Ptj-b9-dId"/>
+                                                </constraints>
+                                                <fontDescription key="fontDescription" name="AvenirNext-Medium" family="Avenir Next" pointSize="19"/>
+                                                <nil key="textColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                        </subviews>
+                                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                                        <constraints>
+                                            <constraint firstItem="m2j-pg-iUP" firstAttribute="leading" secondItem="2UG-8y-nnT" secondAttribute="trailing" constant="1" id="7AL-KL-zAB"/>
+                                            <constraint firstItem="Zhb-8Z-0KT" firstAttribute="leading" secondItem="JEJ-ea-VQq" secondAttribute="leading" constant="20" id="BDB-lq-8NA"/>
+                                            <constraint firstAttribute="trailing" secondItem="m2j-pg-iUP" secondAttribute="trailing" constant="62" id="DBx-FY-Uuc"/>
+                                            <constraint firstItem="2UG-8y-nnT" firstAttribute="top" secondItem="JEJ-ea-VQq" secondAttribute="top" constant="12" id="Df1-8N-q7a"/>
+                                            <constraint firstItem="Zhb-8Z-0KT" firstAttribute="top" secondItem="m2j-pg-iUP" secondAttribute="bottom" constant="10.5" id="LS0-aK-xTX"/>
+                                            <constraint firstAttribute="height" constant="1044" id="Nzh-vl-pho"/>
+                                            <constraint firstItem="Zhb-8Z-0KT" firstAttribute="centerX" secondItem="JEJ-ea-VQq" secondAttribute="centerX" id="UQ2-0Y-6xx"/>
+                                            <constraint firstAttribute="bottom" secondItem="Zhb-8Z-0KT" secondAttribute="bottom" constant="10.5" id="Wub-c0-cNy"/>
+                                            <constraint firstItem="2UG-8y-nnT" firstAttribute="centerY" secondItem="m2j-pg-iUP" secondAttribute="centerY" id="Wyu-Wl-Mem"/>
+                                            <constraint firstItem="2UG-8y-nnT" firstAttribute="leading" secondItem="JEJ-ea-VQq" secondAttribute="leading" constant="15" id="afU-RZ-DEo"/>
+                                            <constraint firstItem="Zhb-8Z-0KT" firstAttribute="top" secondItem="2UG-8y-nnT" secondAttribute="bottom" id="fHK-tP-Q8r"/>
+                                        </constraints>
+                                        <userDefinedRuntimeAttributes>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                                <integer key="value" value="7"/>
+                                            </userDefinedRuntimeAttribute>
+                                        </userDefinedRuntimeAttributes>
+                                    </view>
+                                </subviews>
                                 <constraints>
-                                    <constraint firstAttribute="height" constant="155" id="IE6-Wn-Iyz"/>
+                                    <constraint firstItem="JEJ-ea-VQq" firstAttribute="top" secondItem="0b7-bv-RVH" secondAttribute="top" id="4I7-O5-3XU"/>
+                                    <constraint firstItem="JEJ-ea-VQq" firstAttribute="centerX" secondItem="0b7-bv-RVH" secondAttribute="centerX" id="DTK-Qy-ndu"/>
+                                    <constraint firstAttribute="trailing" secondItem="JEJ-ea-VQq" secondAttribute="trailing" constant="20" id="HTs-fV-pie"/>
+                                    <constraint firstItem="JEJ-ea-VQq" firstAttribute="leading" secondItem="0b7-bv-RVH" secondAttribute="leading" constant="20" id="Wzh-qT-gy2"/>
+                                    <constraint firstAttribute="bottom" secondItem="JEJ-ea-VQq" secondAttribute="bottom" constant="45" id="y1s-EO-sb0"/>
                                 </constraints>
-                                <string key="text">Feature flag                                                               ..let me know if you want to save here your future surf trips?</string>
-                                <fontDescription key="fontDescription" name="AvenirNext-Regular" family="Avenir Next" pointSize="17"/>
-                                <nil key="textColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="boardSurf" translatesAutoresizingMaskIntoConstraints="NO" id="2UG-8y-nnT">
-                                <rect key="frame" x="176" y="230" width="62" height="88"/>
-                                <constraints>
-                                    <constraint firstAttribute="width" constant="62" id="0X1-Wc-m7s"/>
-                                    <constraint firstAttribute="height" constant="88" id="LhP-Y7-kK8"/>
-                                </constraints>
-                            </imageView>
-                            <segmentedControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="tIu-7f-hhM">
-                                <rect key="frame" x="167" y="512" width="81" height="32"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="31" id="Q2Z-gL-NhR"/>
-                                    <constraint firstAttribute="width" constant="81" id="ZSe-Ly-68d"/>
-                                </constraints>
-                                <segments>
-                                    <segment title="Yes"/>
-                                    <segment title="No"/>
-                                </segments>
-                            </segmentedControl>
+                            </scrollView>
                         </subviews>
-                        <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <color key="tintColor" systemColor="systemTealColor" red="0.35294117650000001" green="0.7843137255" blue="0.98039215690000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
-                            <constraint firstItem="m2j-pg-iUP" firstAttribute="leading" secondItem="h3f-dr-ghF" secondAttribute="leading" constant="72" id="DB8-Hq-Ipb"/>
-                            <constraint firstItem="tIu-7f-hhM" firstAttribute="top" secondItem="m2j-pg-iUP" secondAttribute="bottom" constant="29" id="Qr0-vt-G4d"/>
-                            <constraint firstItem="h3f-dr-ghF" firstAttribute="trailing" secondItem="tIu-7f-hhM" secondAttribute="trailing" constant="166" id="WTU-Xl-zub"/>
-                            <constraint firstItem="h3f-dr-ghF" firstAttribute="trailing" secondItem="m2j-pg-iUP" secondAttribute="trailing" constant="73" id="Y4h-Ie-3BF"/>
-                            <constraint firstItem="2UG-8y-nnT" firstAttribute="centerX" secondItem="8BQ-Rc-ssY" secondAttribute="centerX" id="glK-qd-F1c"/>
-                            <constraint firstItem="m2j-pg-iUP" firstAttribute="top" secondItem="2UG-8y-nnT" secondAttribute="bottom" constant="10" id="oHH-9e-4fu"/>
-                            <constraint firstItem="2UG-8y-nnT" firstAttribute="top" secondItem="h3f-dr-ghF" secondAttribute="top" constant="186" id="xNO-wv-dmc"/>
-                            <constraint firstItem="tIu-7f-hhM" firstAttribute="leading" secondItem="h3f-dr-ghF" secondAttribute="leading" constant="167" id="zbF-Bg-VmX"/>
+                            <constraint firstItem="0b7-bv-RVH" firstAttribute="centerX" secondItem="8BQ-Rc-ssY" secondAttribute="centerX" id="2qt-Fq-fmm"/>
+                            <constraint firstAttribute="bottom" secondItem="0b7-bv-RVH" secondAttribute="bottom" constant="-193" id="PTp-82-mKT"/>
+                            <constraint firstItem="0b7-bv-RVH" firstAttribute="leading" secondItem="8BQ-Rc-ssY" secondAttribute="leadingMargin" constant="-20" id="UQH-Wi-oLQ"/>
+                            <constraint firstItem="0b7-bv-RVH" firstAttribute="top" secondItem="8BQ-Rc-ssY" secondAttribute="topMargin" id="qqs-pu-ZyY"/>
                         </constraints>
-                        <viewLayoutGuide key="safeArea" id="h3f-dr-ghF"/>
+                        <userDefinedRuntimeAttributes>
+                            <userDefinedRuntimeAttribute type="color" keyPath="firstColor">
+                                <color key="value" systemColor="systemIndigoColor" red="0.34509803919999998" green="0.33725490200000002" blue="0.83921568629999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                            </userDefinedRuntimeAttribute>
+                            <userDefinedRuntimeAttribute type="color" keyPath="secondColor">
+                                <color key="value" white="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            </userDefinedRuntimeAttribute>
+                        </userDefinedRuntimeAttributes>
                     </view>
-                    <tabBarItem key="tabBarItem" title="SAVED" image="savebutton" id="byX-hE-gt8">
+                    <tabBarItem key="tabBarItem" title="ABOUT" image="info" catalog="system" id="byX-hE-gt8">
                         <color key="badgeColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                     </tabBarItem>
                 </viewController>
@@ -69,6 +216,7 @@
     </scenes>
     <resources>
         <image name="boardSurf" width="150" height="150"/>
-        <image name="savebutton" width="25" height="25"/>
+        <image name="info" catalog="system" width="46" height="64"/>
+        <image name="trimming" width="1000" height="298"/>
     </resources>
 </document>

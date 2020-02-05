@@ -44,7 +44,7 @@ private extension SmallTableViewCell {
     func configureUI() {
 
         // Styling
-
+        contentView.layer.cornerRadius = 10
         titleLabel.textAlignment = .natural
         titleLabel.font = UIFont(descriptor: UIFont.preferredFont(forTextStyle: .headline).fontDescriptor.withSymbolicTraits(.traitLooseLeading)!, size: 19)
         titleLabel.textColor = .black
