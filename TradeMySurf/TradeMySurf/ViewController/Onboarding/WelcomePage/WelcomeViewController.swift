@@ -55,7 +55,7 @@ class WelcomeViewController: UIViewController, CAAnimationDelegate, StoryboardPr
     
     
     override func viewWillAppear(_ animated: Bool) {
-        super.viewWillAppear(true)
+        super.viewWillAppear(animated)
         startButton.alpha = 0
         welcomeLabel.alpha = 0
         introLabel.alpha = 0

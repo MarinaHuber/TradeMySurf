@@ -24,7 +24,7 @@ class AlertVC: UIViewController, StoryboardProtocol {
     // MARK: Managing the View
     
     override func viewWillAppear(_ animated: Bool) {
-        super.viewWillAppear(false)
+        super.viewWillAppear(animated)
         confirmButton.addBorder(color: .white, width: 0.5)
         alternateButton.addBorder(color: .white, width: 0.5)
         titleLabel.text = "\(selectedLevel ?? "")"

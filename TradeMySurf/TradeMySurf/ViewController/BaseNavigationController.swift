@@ -12,7 +12,7 @@ class BaseNavigationController: UINavigationController {
 
 
     override func viewWillAppear(_ animated: Bool) {
-        super.viewWillAppear(false)
+        super.viewWillAppear(animated)
         let window = UIApplication.shared.windows.filter {$0.isKeyWindow}.first
         let statusBar = window?.windowScene?.statusBarManager?.statusBarFrame
         
