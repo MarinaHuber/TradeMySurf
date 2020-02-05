@@ -10,21 +10,19 @@ import UIKit
 
 class BaseNavigationController: UINavigationController {
 
-
-    override func viewWillAppear(_ animated: Bool) {
-        super.viewWillAppear(animated)
-        let window = UIApplication.shared.windows.filter {$0.isKeyWindow}.first
-        let statusBar = window?.windowScene?.statusBarManager?.statusBarFrame
-        
-        let statusView =  UIView()
-        statusView.frame = statusBar!
-        statusView.backgroundColor = .systemIndigo
-        self.navigationBar.backgroundColor = .systemIndigo
-        UIApplication.shared.delegate?.window??.addSubview(statusView)
-        self.navigationBar.setBackgroundImage(UIImage(), for: UIBarPosition.any, barMetrics: UIBarMetrics.default)
-        self.navigationBar.shadowImage = UIImage()
-        self.navigationBar.tintColor = .white
-        self.navigationBar.titleTextAttributes = [.foregroundColor : UIColor.white as Any]
+    override func viewDidLoad() {
+        super.viewDidLoad()
+        let navBarAppearance = UINavigationBarAppearance()
+        navBarAppearance.configureWithOpaqueBackground()
+        navBarAppearance.titleTextAttributes = [.foregroundColor: UIColor.white]
+        navBarAppearance.largeTitleTextAttributes = [.foregroundColor: UIColor.white]
+        navBarAppearance.backgroundColor = .systemIndigo
+        navBarAppearance.shadowImage = nil // line
+        navBarAppearance.shadowColor = nil
+        navigationBar.standardAppearance = navBarAppearance
+        navigationBar.scrollEdgeAppearance = navBarAppearance
+        navigationBar.tintColor = .white
+        navigationBar.backgroundColor = .systemIndigo
 
     }
 
