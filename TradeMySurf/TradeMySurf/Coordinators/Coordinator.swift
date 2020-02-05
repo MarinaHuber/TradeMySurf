@@ -110,14 +110,9 @@ final class Coordinator: UIResponder, CoorinatorPresenting {
     }
     
     func presentDetailBoard(_ name: String?) {
-<<<<<<< HEAD
         let storyboard: UIStoryboard = UIStoryboard(name: Constants.Storyboards.detailViewController, bundle: nil)
         let controller: DetailViewController = DetailViewController.instantiate(from: storyboard)
         controller.selectedImageBoard = name ?? ""
-=======
-        let storyboard: UIStoryboard = UIStoryboard(name: Constants.Storyboards.alertVC, bundle: nil)
-        let controller: AlertVC = AlertVC.instantiate(from: storyboard)
->>>>>>> master
         guard let navigationController = window.rootViewController as? UINavigationController else { fatalError() }
         navigationController.present(controller, animated: true, completion: nil)
     }
