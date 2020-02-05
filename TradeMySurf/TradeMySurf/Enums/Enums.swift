@@ -45,15 +45,6 @@ enum TripSection: CaseIterable {
 	case surfCountrySummer, surfCountryAutumn, surfCountryWinter, surfCountrySpring
 }
 
-//enum TripItem: Hashable {
-//
-//	case tipBeginner(SurfTip), tipBeginnerInter(SurfTip), tipIntermediate(SurfTip), tipAdvanced(SurfTip)
-//
-//	case surfboardsBeginner(Surfboard), surfboardsBeginnerInter(Surfboard), surfboardsIntermediate(Surfboard), surfboardsAdvanced(Surfboard)
-//
-//    case surfCountrySummer(Location), surfCountryAutumn(Location), surfCountryWinter(Location), surfCountrySpring(Location)
-//}
-
 enum TripItem: Hashable {
 
     case tip(SurfTip, Level)
