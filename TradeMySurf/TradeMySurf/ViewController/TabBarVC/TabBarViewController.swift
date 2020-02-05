@@ -29,7 +29,7 @@ final class TabBarViewController: UITabBarController {
         
         let storyboardPrice: UIStoryboard = UIStoryboard(name: "PriceCalculatorViewController", bundle: nil)
         let priceVC: PriceCalculatorViewController = PriceCalculatorViewController.instantiate(from: storyboardPrice)
-        priceVC.title = "Calculator"
+        priceVC.title = "Price compare"
         priceVC.view.applyGradient(withColors: [.systemIndigo, .systemIndigo, .systemTeal, .white], gradientOrientation: .topLeftBottomRight)
         
         let controllers = [saveVC, recommendVC, priceVC]

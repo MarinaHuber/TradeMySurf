@@ -28,7 +28,7 @@ class BoardSupplementaryView: UICollectionReusableView {
 
         title.textColor = .white
         title.font = UIFontMetrics.default.scaledFont(for: UIFont.systemFont(ofSize: 22, weight: .bold))
-        subtitle.textColor = .secondaryLabel
+        subtitle.textColor = .white
 
         let stackView = UIStackView(arrangedSubviews: [separator, title, subtitle])
         stackView.translatesAutoresizingMaskIntoConstraints = false

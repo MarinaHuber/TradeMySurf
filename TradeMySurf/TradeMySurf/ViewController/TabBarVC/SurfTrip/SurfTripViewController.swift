@@ -324,7 +324,7 @@ extension SurfTripViewController: UICollectionViewDelegate {
         print(item)
         switch item {
             case .surfboard(let surf, _):
-                delegate?.presentDetailViewController(with: surf.imageName)
+                scenePresenter?.presentDetailBoard(surf.imageName)
             default : break
         }
     }

@@ -33,7 +33,7 @@ final class Coordinator: UIResponder, CoorinatorPresenting {
                 case 1920, 2208:
                      heightFloat = 0.55
                 case 2436:
-                     heightFloat = 0.45
+                     heightFloat = 0.50
                 case 2688:
                      heightFloat = 0.45
                 case 1792:
@@ -103,15 +103,16 @@ final class Coordinator: UIResponder, CoorinatorPresenting {
     }
     
     func presentAlert() {
-        let storyboard: UIStoryboard = UIStoryboard(name: Constants.Storyboards.alertVC, bundle: nil)
+        let storyboard: UIStoryboard = UIStoryboard(name: Constants.Storyboards.alertViewController, bundle: nil)
         let controller: AlertVC = AlertVC.instantiate(from: storyboard)
         guard let navigationController = window.rootViewController as? UINavigationController else { fatalError() }
         navigationController.customPresentViewController(presenter, viewController: controller, animated: true, completion: nil)
     }
     
-        func presentDetailBoard(_ name: String?) {
-        let storyboard: UIStoryboard = UIStoryboard(name: Constants.Storyboards.alertVC, bundle: nil)
+    func presentDetailBoard(_ name: String?) {
+        let storyboard: UIStoryboard = UIStoryboard(name: Constants.Storyboards.detailViewController, bundle: nil)
         let controller: DetailViewController = DetailViewController.instantiate(from: storyboard)
+        controller.selectedImageBoard = name ?? ""
         guard let navigationController = window.rootViewController as? UINavigationController else { fatalError() }
         navigationController.present(controller, animated: true, completion: nil)
     }

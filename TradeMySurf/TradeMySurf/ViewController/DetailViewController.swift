@@ -18,5 +18,11 @@ class DetailViewController: UIViewController, StoryboardProtocol {
        }
        // MARK: - Network load
        
-    private func loadSelectedName(newName: String) { }
+    private func loadSelectedName(name: String) {
+        guard
+            name == selectedImageBoard,
+            name.isEmpty == false
+            else {  return }
+        
+    }
 }

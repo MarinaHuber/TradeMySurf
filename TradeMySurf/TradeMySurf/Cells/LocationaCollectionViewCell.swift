@@ -16,7 +16,6 @@ class LocationCollectionViewCell: UICollectionViewCell {
 
     override init(frame: CGRect) {
         super.init(frame: frame)
-
         self.configureUI()
     }
 
@@ -56,7 +55,7 @@ func configureUI() {
 	imageView.backgroundColor = .systemTeal
 	imageView.contentMode = .scaleAspectFill
 	imageView.clipsToBounds = true
-
+    
 	// Layout
 
 	imageView.setContentHuggingPriority(.defaultHigh, for: .horizontal)
@@ -75,7 +74,7 @@ func configureUI() {
 
 	 let container = self.contentView
 	container.addSubview(outerStackView)
-
+    imageView.leadingAnchor.constraint(equalTo: container.leadingAnchor, constant: 10.0).isActive = true
     outerStackView.leadingAnchor.constraint(equalTo: container.leadingAnchor).isActive = true
 	outerStackView.trailingAnchor.constraint(equalTo: container.trailingAnchor).isActive = true
 	outerStackView.topAnchor.constraint(equalTo: container.topAnchor).isActive = true
