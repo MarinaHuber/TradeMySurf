@@ -17,24 +17,6 @@ protocol DetailViewControllerDelegate {
 class SurfTripViewController: UIViewController, StoryboardProtocol {
     
     private var delegate: DetailViewControllerDelegate?
-    let presenter: Presentr = {
-        
-       let bounds = UIScreen.main.bounds
-       let height = ModalSize.fluid(percentage: 0.45)
-       let width = ModalSize.fluid(percentage: 0.90)
-       let center = ModalCenterPosition.customOrigin(origin: CGPoint(x: bounds.minX + 20, y: bounds.minY + 200))
-       let customType = PresentationType.custom(width: width, height: height, center: center)
-       let customPresenter = Presentr(presentationType: customType)
-          customPresenter.transitionType = .coverVerticalFromTop
-          customPresenter.dismissTransitionType = .coverVerticalFromTop
-          customPresenter.backgroundColor = .lightGray
-          customPresenter.roundCorners = true
-          customPresenter.cornerRadius = 13
-          customPresenter.backgroundOpacity = 0.4
-          customPresenter.dismissOnSwipe = true
-          customPresenter.dismissOnSwipeDirection = .top
-          return customPresenter
-      }()
     
     lazy var leftBtn: UIBarButtonItem = {
         let button = UIButton(type: .system)
