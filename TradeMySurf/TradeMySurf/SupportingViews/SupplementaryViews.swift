@@ -25,6 +25,8 @@ class BoardSupplementaryView: UICollectionReusableView {
     
     func configureUI() {
         let separator = UIView(frame: .zero)
+        separator.translatesAutoresizingMaskIntoConstraints = false
+        separator.backgroundColor = .white
 
         title.textColor = .white
         title.font = UIFontMetrics.default.scaledFont(for: UIFont.systemFont(ofSize: 22, weight: .bold))
@@ -36,7 +38,7 @@ class BoardSupplementaryView: UICollectionReusableView {
         addSubview(stackView)
 
         NSLayoutConstraint.activate([
-            separator.heightAnchor.constraint(equalToConstant: 0),
+            separator.heightAnchor.constraint(equalToConstant: 1),
 
             stackView.leadingAnchor.constraint(equalTo: leadingAnchor),
             stackView.trailingAnchor.constraint(equalTo: trailingAnchor),
