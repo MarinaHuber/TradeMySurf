@@ -17,7 +17,7 @@ enum Constants {
 		static let addDateViewController = "AddDateViewController"
 		static let priceCalculatorViewController = "PriceCalculatorViewController"
 		static let surfTripViewController = "SurfTripViewController"
-		static let savedTripsViewController = "SavedTripsViewController"
+		static let guideViewController = "GuideViewController"
         static let detailViewController = "DetailViewController"
 	}
 }

@@ -18,16 +18,16 @@ final class TabBarViewController: UITabBarController {
 
     }
     private func setUpTabBar() {
-        let storyboard: UIStoryboard = UIStoryboard(name: "SavedTripsViewController", bundle: nil)
-        let saveVC: SavedTripsViewController = SavedTripsViewController.instantiate(from: storyboard)
+        let storyboard: UIStoryboard = UIStoryboard(name: Constants.Storyboards.guideViewController, bundle: nil)
+        let saveVC: GuideViewController = GuideViewController.instantiate(from: storyboard)
         saveVC.title = "About surf"
         
-        let storyboardSurf: UIStoryboard = UIStoryboard(name: "SurfTripViewController", bundle: nil)
+        let storyboardSurf: UIStoryboard = UIStoryboard(name: Constants.Storyboards.surfTripViewController, bundle: nil)
         let recommendVC: SurfTripViewController = SurfTripViewController.instantiate(from: storyboardSurf)
         recommendVC.title = "Recommended"
         recommendVC.view.applyGradient(withColors: [.systemIndigo, .systemIndigo, .systemBlue, .systemTeal, .white], gradientOrientation: .vertical)
         
-        let storyboardPrice: UIStoryboard = UIStoryboard(name: "PriceCalculatorViewController", bundle: nil)
+       let storyboardPrice: UIStoryboard = UIStoryboard(name: Constants.Storyboards.priceCalculatorViewController, bundle: nil)
         let priceVC: PriceCalculatorViewController = PriceCalculatorViewController.instantiate(from: storyboardPrice)
         priceVC.title = "Price compare"
         priceVC.view.applyGradient(withColors: [.systemIndigo, .systemIndigo, .systemTeal, .lightGray], gradientOrientation: .topLeftBottomRight)

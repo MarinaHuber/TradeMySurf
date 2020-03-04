@@ -1,16 +1,17 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="15505" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="15702" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15509"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15704"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
         <!--Saved-->
         <scene sceneID="2Op-iH-4u0">
             <objects>
-                <viewController storyboardIdentifier="SavedTripsViewController" id="taf-X9-iD4" userLabel="Saved" customClass="SavedTripsViewController" customModule="TradeMySurf" customModuleProvider="target" sceneMemberID="viewController">
-                    <view key="view" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="8BQ-Rc-ssY" customClass="GradientView" customModule="TradeMySurf" customModuleProvider="target">
+                <viewController storyboardIdentifier="GuideViewController" id="taf-X9-iD4" userLabel="Saved" customClass="GuideViewController" customModule="Match_my_Surf" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="8BQ-Rc-ssY" customClass="GradientView" customModule="Match_my_Surf" customModuleProvider="target">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <subviews>
@@ -196,6 +197,7 @@
                             <constraint firstItem="0b7-bv-RVH" firstAttribute="leading" secondItem="8BQ-Rc-ssY" secondAttribute="leadingMargin" constant="-20" id="UQH-Wi-oLQ"/>
                             <constraint firstItem="0b7-bv-RVH" firstAttribute="top" secondItem="8BQ-Rc-ssY" secondAttribute="topMargin" id="qqs-pu-ZyY"/>
                         </constraints>
+                        <viewLayoutGuide key="safeArea" id="rdf-8D-Dua"/>
                         <userDefinedRuntimeAttributes>
                             <userDefinedRuntimeAttribute type="color" keyPath="firstColor">
                                 <color key="value" systemColor="systemIndigoColor" red="0.34509803919999998" green="0.33725490200000002" blue="0.83921568629999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>

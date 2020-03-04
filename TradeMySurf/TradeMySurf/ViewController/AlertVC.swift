@@ -32,7 +32,7 @@ class AlertVC: UIViewController, StoryboardProtocol {
         _ = levels.map {
             if $0 == selectedLevel {
                 let levelEnum = Level(rawValue: $0)
-                bodyText.text = "Your goal is matched to surfboards and locations suitable for your \(levelEnum.unsafelyUnwrapped) level. Find that surf confidence and buy a board that will bring more progress and fun. "
+                bodyText.text = "Your goal is matched to surfboards and locations suitable for your \(levelEnum.unsafelyUnwrapped) level. Find surf guide and get a board that will bring more progress."
         }
       }
     }

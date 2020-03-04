@@ -1,26 +1,24 @@
-//
-//  UIView+Shadow.swift
-//
-//  Created by Anja Törpsch on 15/08/2018.
+//  Copyright © 2020 Marina Huber. All rights reserved.
 //
 
 import UIKit
 
 extension UIView {
-
-
-//    public func addShadow(color: UIColor = .black, radius: CGFloat = 2.0, opacity: Float = 0.24, offset: CGSize = CGSize(width: 0.0, height: 2.0)) {
-//
-//        self.layer.shadowColor = color.cgColor
-//        self.layer.shadowOpacity = opacity
-//        self.layer.shadowOffset = offset
-//        self.layer.shadowRadius = radius
-//    }
-
-//
-//        self.layer.borderWidth = width
-//        self.layer.borderColor = color.cgColor
-//    }
+    
+    func pinToEdges(of superview: UIView) {
+        translatesAutoresizingMaskIntoConstraints = false
+        NSLayoutConstraint.activate([
+            topAnchor.constraint(equalTo: superview.topAnchor),
+            leadingAnchor.constraint(equalTo: superview.leadingAnchor),
+            trailingAnchor.constraint(equalTo: superview.trailingAnchor),
+            bottomAnchor.constraint(equalTo: superview.bottomAnchor)
+        ])
+    }
+    
+    
+    func addSubviews(_ views: UIView...) {
+        for view in views { addSubview(view) }
+    }
 }
 
 extension UIButton {
