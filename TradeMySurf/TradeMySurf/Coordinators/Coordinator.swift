@@ -94,11 +94,14 @@ final class Coordinator: UIResponder, CoorinatorPresenting {
     }
     
     func presentTabBar() {
-        let viewController = TabBarViewController()
-        guard let navigationController = window.rootViewController as? UINavigationController else { preconditionFailure() }
+//        let viewController = TabBarVC()
+//        guard let navigationController = window.rootViewController as? UINavigationController else { preconditionFailure() }
         ///removes the double nav bar
+        let storyboard: UIStoryboard = UIStoryboard(name: "TabBarVC", bundle: nil)
+        let controller: TabBarVC = TabBarVC.instantiate(from: storyboard)
+        let navigationController = UINavigationController(rootViewController: controller)
         navigationController.setNavigationBarHidden(true, animated: false)
-        navigationController.pushViewController(viewController, animated: true)
+        window.rootViewController = navigationController
         
     }
     

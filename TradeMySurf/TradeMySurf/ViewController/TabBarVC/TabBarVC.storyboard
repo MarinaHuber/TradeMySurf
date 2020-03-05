@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="15702" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15704"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Tab BarVC-->
+        <scene sceneID="va3-Wc-c3C">
+            <objects>
+                <viewController storyboardIdentifier="TabBarVC" id="NdL-7P-eWX" customClass="TabBarVC" customModule="Match_my_Surf" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="gwX-Kb-Yay">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="zQd-86-B32">
+                                <rect key="frame" x="0.0" y="872" width="414" height="24"/>
+                                <color key="backgroundColor" systemColor="systemIndigoColor" red="0.34509803919999998" green="0.33725490200000002" blue="0.83921568629999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="24" id="thZ-8b-TBL"/>
+                                </constraints>
+                            </view>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Sgo-eH-v0Y">
+                                <rect key="frame" x="0.0" y="816" width="414" height="57"/>
+                                <subviews>
+                                    <stackView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="x5Z-OV-xST">
+                                        <rect key="frame" x="0.0" y="0.0" width="414" height="49"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="49" id="bGL-w8-GX1"/>
+                                        </constraints>
+                                    </stackView>
+                                </subviews>
+                                <color key="backgroundColor" systemColor="systemIndigoColor" red="0.34509803919999998" green="0.33725490200000002" blue="0.83921568629999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstItem="x5Z-OV-xST" firstAttribute="leading" secondItem="Sgo-eH-v0Y" secondAttribute="leading" id="B0l-gX-sRz"/>
+                                    <constraint firstItem="x5Z-OV-xST" firstAttribute="top" secondItem="Sgo-eH-v0Y" secondAttribute="top" id="UVb-Qn-imK"/>
+                                    <constraint firstItem="x5Z-OV-xST" firstAttribute="centerX" secondItem="Sgo-eH-v0Y" secondAttribute="centerX" id="tP0-IW-TFv"/>
+                                </constraints>
+                            </view>
+                            <containerView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="foy-Yj-P6T">
+                                <rect key="frame" x="0.0" y="0.0" width="414" height="816"/>
+                            </containerView>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <constraints>
+                            <constraint firstItem="Sgo-eH-v0Y" firstAttribute="top" secondItem="gwX-Kb-Yay" secondAttribute="top" constant="816" id="5jT-i3-XWD"/>
+                            <constraint firstAttribute="trailing" secondItem="zQd-86-B32" secondAttribute="trailing" id="I59-pb-p2l"/>
+                            <constraint firstAttribute="bottom" secondItem="zQd-86-B32" secondAttribute="bottom" id="T2T-ax-LFT"/>
+                            <constraint firstItem="Sgo-eH-v0Y" firstAttribute="leading" secondItem="foy-Yj-P6T" secondAttribute="leading" id="Vw4-hp-mCn"/>
+                            <constraint firstItem="foy-Yj-P6T" firstAttribute="top" secondItem="gwX-Kb-Yay" secondAttribute="topMargin" constant="-44" id="bd2-vJ-AFv"/>
+                            <constraint firstAttribute="bottomMargin" secondItem="Sgo-eH-v0Y" secondAttribute="bottom" constant="-11" id="d7S-2i-OFm"/>
+                            <constraint firstItem="Sgo-eH-v0Y" firstAttribute="leading" secondItem="zQd-86-B32" secondAttribute="leading" id="kzx-Uy-PdY"/>
+                            <constraint firstItem="zQd-86-B32" firstAttribute="leading" secondItem="gwX-Kb-Yay" secondAttribute="leading" id="mdQ-Zn-4go"/>
+                            <constraint firstItem="Sgo-eH-v0Y" firstAttribute="trailing" secondItem="foy-Yj-P6T" secondAttribute="trailing" id="r48-R8-WV8"/>
+                            <constraint firstItem="Sgo-eH-v0Y" firstAttribute="top" secondItem="foy-Yj-P6T" secondAttribute="bottom" id="sPI-mc-Ber"/>
+                            <constraint firstItem="Sgo-eH-v0Y" firstAttribute="trailing" secondItem="zQd-86-B32" secondAttribute="trailing" id="vuL-pz-CUw"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="5TH-iM-ncD"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="Pg5-aB-U3Y"/>
+                    <connections>
+                        <outlet property="container" destination="foy-Yj-P6T" id="nbW-dK-6Sa"/>
+                        <outlet property="spaceholderView" destination="zQd-86-B32" id="aY8-LK-6FN"/>
+                        <outlet property="tabbarBackgroundView" destination="Sgo-eH-v0Y" id="67s-XW-PR1"/>
+                        <outlet property="tabbarStackView" destination="x5Z-OV-xST" id="kcq-X6-EmZ"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="xEC-gV-QSA" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-10975" y="-547"/>
+        </scene>
+    </scenes>
+</document>

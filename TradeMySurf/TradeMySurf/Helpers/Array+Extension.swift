@@ -15,7 +15,7 @@ public extension Array {
     ///
     /// - Parameter index: index of element.
     /// - Returns: optional element (if exists).
-    public func item(at index: Int) -> Element? {
+     func item(at index: Int) -> Element? {
         
         if 0..<self.count ~= index {
             return self[index]
