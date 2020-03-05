@@ -25,8 +25,8 @@ class TabBarVC: UIViewController, StoryboardProtocol {
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        self.tabbarBackgroundView.backgroundColor = .systemIndigo
-        self.spaceholderView.backgroundColor = .systemIndigo
+//        self.tabbarBackgroundView.backgroundColor = .systemIndigo
+//        self.spaceholderView.backgroundColor = .systemIndigo
 
         self.configureTabbar()
         self.swapViewController(for: .recommended)

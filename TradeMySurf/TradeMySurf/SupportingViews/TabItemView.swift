@@ -42,10 +42,9 @@ class TabItemView: UIView {
         self.tabbarEntry = item
         self.tag = item.rawValue
         self.backgroundColor = .clear
-        self.backgroundColor = .clear
-        self.titleLabel.textColor = .systemIndigo
-        self.titleLabel.isHidden = true
-        self.titleLabel.text = nil
+        self.titleLabel.textColor = .white
+       // self.titleLabel.isHidden = true
+       // self.titleLabel.text = nil
         configureImageView()
        // configureTitleLabel()
     }
@@ -70,7 +69,7 @@ class TabItemView: UIView {
             stackView.leadingAnchor.constraint(equalTo: leadingAnchor),
             stackView.trailingAnchor.constraint(equalTo: trailingAnchor),
             stackView.topAnchor.constraint(equalTo: topAnchor),
-            stackView.bottomAnchor.constraint(equalTo: bottomAnchor, constant: 0)
+            stackView.bottomAnchor.constraint(equalTo: bottomAnchor, constant: -7)
         ])
     }
     
