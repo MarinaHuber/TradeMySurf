@@ -1,18 +1,15 @@
-//
-//  TabBarViewController.swift
-//  
-//
 //  Created by Marina Huber on 1/7/20.
 //
 
 import UIKit
-final class TabBarViewController: UITabBarController {
+
+class TabBarViewController: UIViewController {
     
     // MARK: - Outlets
-      @IBOutlet private weak var containerView: UIView!
-      @IBOutlet private weak var tabbarBackgroundView: UIView!
-      @IBOutlet private weak var spaceholderView: UIView!
-      @IBOutlet private weak var tabbarStackView: UIStackView!
+    @IBOutlet weak var tabBarBackground: UIView!
+    @IBOutlet weak var containerView: UIView!
+      @IBOutlet weak var spaceholderView: UIView!
+      @IBOutlet weak var tabbarStackView: UIStackView!
 
       // MARK: - Properties
       private var selectedEntry: TabbarEntry = .recommended
@@ -22,10 +19,10 @@ final class TabBarViewController: UITabBarController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        setUpTabBar() // Set tabBar before selected tab !!
-        self.selectedIndex = 1
-//        self.tabbarBackgroundView.backgroundColor = .systemGray
-//        self.spaceholderView.backgroundColor = .black
+     //   setUpTabBar() // Set tabBar before selected tab !!
+     //   self.selectedIndex = 1
+        self.tabBarBackground.backgroundColor = .systemIndigo
+//        self.spaceholderView.backgroundColor = .systemIndigo
 
         self.configureTabbar()
         self.swapViewController(for: .recommended)
@@ -39,15 +36,14 @@ final class TabBarViewController: UITabBarController {
         let storyboardSurf: UIStoryboard = UIStoryboard(name: Constants.Storyboards.surfTripViewController, bundle: nil)
         let recommendVC: SurfTripViewController = SurfTripViewController.instantiate(from: storyboardSurf)
         recommendVC.title = "Recommended"
-        recommendVC.view.applyGradient(withColors: [.systemIndigo, .systemIndigo, .systemBlue, .systemTeal, .white], gradientOrientation: .vertical)
-        
+
        let storyboardPrice: UIStoryboard = UIStoryboard(name: Constants.Storyboards.priceCalculatorViewController, bundle: nil)
         let priceVC: PriceCalculatorViewController = PriceCalculatorViewController.instantiate(from: storyboardPrice)
         priceVC.title = "Price compare"
-        priceVC.view.applyGradient(withColors: [.systemIndigo, .systemIndigo, .systemTeal, .lightGray], gradientOrientation: .topLeftBottomRight)
+
         
-        let controllers = [saveVC, recommendVC, priceVC]
-        self.viewControllers = controllers.map { BaseNavigationController(rootViewController: $0)}
+//        let controllers = [saveVC, recommendVC, priceVC]
+//        self.viewControllers = controllers.map { BaseNavigationController(rootViewController: $0)}
         
     }
 
@@ -56,7 +52,7 @@ final class TabBarViewController: UITabBarController {
 
           for entry in TabbarEntry.allCases {
 
-              let itemView = TabItemView(frame: CGRect(x: 0.0, y: 0.0, width: self.view.frame.size.width / 3, height: self.tabbarBackgroundView.frame.size.height))
+              let itemView = TabItemView(frame: CGRect(x: 0.0, y: 0.0, width: self.view.frame.size.width / 3, height: self.tabBarBackground.frame.size.height))
               itemView.configure(with: entry)
               itemView.isSelected = self.selectedEntry == entry
               self.tabbarStackView.addArrangedSubview(itemView)

@@ -40,6 +40,7 @@ class SurfTripViewController: UIViewController, StoryboardProtocol {
 
     override func viewDidLoad() {
         super.viewDidLoad()
+        view.applyGradient(withColors: [.systemIndigo, .systemIndigo, .systemBlue, .systemTeal, .white], gradientOrientation: .vertical)
         self.delegate = self
         addCollectionView()
         configureCollectionView()
