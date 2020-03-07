@@ -5,15 +5,15 @@ import UIKit
 
 enum TabbarEntry: Int, CaseIterable {
 
-    case guide, recommended, prices
+    case recommended, prices, guide
 
     var title: String {
 
         switch self {
 
-        case .guide: return "About surf"
+        case .guide: return "About"
         case .recommended: return "Recommend"
-        case .prices: return "Price compare"
+        case .prices: return "Price board"
 
         }
     }

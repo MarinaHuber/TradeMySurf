@@ -43,7 +43,7 @@ class TabItemView: UIView {
         self.backgroundColor = .clear
         self.configureIconView()
         self.textLabel.textColor = .white
-        self.textLabel.font = UIFont.boldSystemFont(ofSize: 11)
+        self.textLabel.font = UIFont.systemFont(ofSize: 14, weight: .heavy)
         self.textLabel.isHidden = true
         self.textLabel.text = nil
             
@@ -68,11 +68,8 @@ class TabItemView: UIView {
     
     func configureIconView() {
 
-        self.contentView = self.loadFromNib(withName: String(describing: type(of: self)).components(separatedBy: ".").first!, owner: self, bundle: Bundle.main)
-        self.contentView.autoresizingMask = [.flexibleWidth, .flexibleHeight]
+        self.contentView = self.loadFromNib(withName: "TabItemView", owner: self, bundle: .main)
         self.addSubview(self.contentView)
-        
-        self.contentView.contrainToSuperviewEdges()
         self.contentView.backgroundColor = .clear
         
     }

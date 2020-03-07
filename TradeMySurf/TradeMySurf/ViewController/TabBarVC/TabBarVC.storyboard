@@ -3,6 +3,7 @@
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15704"/>
+        <capability name="Named colors" minToolsVersion="9.0"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -17,7 +18,7 @@
                         <subviews>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="zQd-86-B32">
                                 <rect key="frame" x="0.0" y="862" width="414" height="34"/>
-                                <color key="backgroundColor" systemColor="systemIndigoColor" red="0.34509803919999998" green="0.33725490200000002" blue="0.83921568629999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <color key="backgroundColor" name="pastel"/>
                             </view>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Sgo-eH-v0Y">
                                 <rect key="frame" x="0.0" y="814" width="414" height="48"/>
@@ -26,9 +27,8 @@
                                         <rect key="frame" x="0.0" y="0.0" width="414" height="48"/>
                                     </stackView>
                                 </subviews>
-                                <color key="backgroundColor" systemColor="systemIndigoColor" red="0.34509803919999998" green="0.33725490200000002" blue="0.83921568629999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <color key="backgroundColor" name="pastel"/>
                                 <constraints>
-                                    <constraint firstAttribute="width" secondItem="x5Z-OV-xST" secondAttribute="height" multiplier="69:8" id="J90-G6-0Cj"/>
                                     <constraint firstItem="x5Z-OV-xST" firstAttribute="leading" secondItem="Sgo-eH-v0Y" secondAttribute="leading" id="Jnr-cv-jvG"/>
                                     <constraint firstAttribute="trailing" secondItem="x5Z-OV-xST" secondAttribute="trailing" id="Q3r-Tm-E6E"/>
                                     <constraint firstAttribute="bottom" secondItem="x5Z-OV-xST" secondAttribute="bottom" id="b7W-Qd-ANw"/>
@@ -87,4 +87,9 @@
             <point key="canvasLocation" x="-10975.36231884058" y="-547.09821428571422"/>
         </scene>
     </scenes>
+    <resources>
+        <namedColor name="pastel">
+            <color red="0.30536466836929321" green="0.33944945844506519" blue="0.71943151240521763" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+    </resources>
 </document>
