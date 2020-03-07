@@ -11,8 +11,8 @@ import UIKit
 class TabItemView: UIView {
 
     // MARK: - Outlets
-    let iconTab         = UIImageView()
-    let titleLabel      = TitleLabel(textAlignment: .center, fontSize: 9)
+    let iconTab          = UIImageView()
+    let titleLabel       = TitleLabel(textAlignment: .center, fontSize: 9)
     
     let padding: CGFloat = 0
 
@@ -30,10 +30,22 @@ class TabItemView: UIView {
     // MARK: - Lifecycle
     public override init(frame: CGRect) {
         super.init(frame: frame)
+         self.commonInit()
     }
 
     required public init?(coder aDecoder: NSCoder) {
         super.init(coder: aDecoder)
+         self.commonInit()
+    }
+    
+    func commonInit() {
+        self.backgroundColor = .clear
+        self.titleLabel.textColor = .white
+        self.titleLabel.isHidden = true
+        self.titleLabel.text = nil
+        
+        self.configureIconView()
+        
     }
 
     // MARK: - Configuration
@@ -41,12 +53,7 @@ class TabItemView: UIView {
 
         self.tabbarEntry = item
         self.tag = item.rawValue
-        self.backgroundColor = .clear
-        self.titleLabel.textColor = .white
-       // self.titleLabel.isHidden = true
-       // self.titleLabel.text = nil
-        configureImageView()
-       // configureTitleLabel()
+
     }
 
     // MARK: - Helper
@@ -58,28 +65,27 @@ class TabItemView: UIView {
         self.iconTab.image = selected ? self.tabbarEntry?.selectedImage : self.tabbarEntry?.image
     }
     
-    func configureImageView() {
+    func configureIconView() {
         iconTab.translatesAutoresizingMaskIntoConstraints = false
         let stackView = UIStackView(arrangedSubviews: [iconTab, titleLabel])
         stackView.translatesAutoresizingMaskIntoConstraints = false
-        stackView.axis = .vertical
+        stackView.axis = .horizontal
+        stackView.autoresizingMask = [.flexibleWidth, .flexibleHeight]
         addSubview(stackView)
-        
-        NSLayoutConstraint.activate([
-            stackView.leadingAnchor.constraint(equalTo: leadingAnchor),
-            stackView.trailingAnchor.constraint(equalTo: trailingAnchor),
-            stackView.topAnchor.constraint(equalTo: topAnchor),
-            stackView.bottomAnchor.constraint(equalTo: bottomAnchor, constant: -7)
-        ])
-    }
-    
-//    func configureTitleLabel() {
+        stackView.contrainToSuperviewEdges()
+//        guard let superview = self.superview else {
+//            return
+//        }
+//        superview.translatesAutoresizingMaskIntoConstraints = false
+//        self.frame = superview.bounds
 //
 //        NSLayoutConstraint.activate([
-//            titleLabel.topAnchor.constraint(equalTo: iconTab.topAnchor, constant: padding),
-//            titleLabel.leadingAnchor.constraint(equalTo: iconTab.leadingAnchor, constant: padding),
-//            titleLabel.trailingAnchor.constraint(equalTo: iconTab.trailingAnchor, constant: -padding),
-//            titleLabel.heightAnchor.constraint(equalToConstant: 10)
+//            stackView.leadingAnchor.constraint(equalTo: superview.leadingAnchor, constant: 0.0),
+//            stackView.trailingAnchor.constraint(equalTo: superview.trailingAnchor, constant: 0.0),
+//            stackView.topAnchor.constraint(equalTo: superview.topAnchor, constant: 3),
+//            stackView.bottomAnchor.constraint(equalTo: superview.bottomAnchor, constant: -3)
+//
 //        ])
-//    }
+    }
+    
 }

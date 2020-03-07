@@ -30,4 +30,20 @@ extension UIView {
             item: superview, attribute: attribute, relatedBy: NSLayoutConstraint.Relation.equal,
             toItem: self, attribute: attribute, multiplier: multiplier, constant: constant))
     }
+    
+    func contrainToSuperviewEdges() {
+        guard let superview = self.superview else {
+            return
+        }
+
+        self.translatesAutoresizingMaskIntoConstraints = false
+
+        NSLayoutConstraint.activate([
+            self.leadingAnchor.constraint(equalTo: superview.leadingAnchor, constant: 0.0),
+            self.trailingAnchor.constraint(equalTo: superview.trailingAnchor, constant: 0.0),
+            self.topAnchor.constraint(equalTo: superview.topAnchor),
+            self.bottomAnchor.constraint(equalTo: superview.bottomAnchor)
+
+            ])
+    }
 }

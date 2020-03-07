@@ -5,15 +5,15 @@ import UIKit
 
 enum TabbarEntry: Int, CaseIterable {
 
-    case recommended, prices, guide
+    case guide, recommended, prices
 
     var title: String {
 
         switch self {
 
-        case .recommended: return "Recommended"
-        case .prices: return "Price compare"
         case .guide: return "About surf"
+        case .recommended: return "Recommend"
+        case .prices: return "Price compare"
 
         }
     }
@@ -22,9 +22,9 @@ enum TabbarEntry: Int, CaseIterable {
 
         switch self {
 
-            case .recommended: return UIImage(named:"") ?? UIImage()
-            case .prices: return UIImage(named:"") ?? UIImage()
-            case .guide: return UIImage(named:"") ?? UIImage()
+            case .guide: return UIImage(named:"info_active") ?? UIImage()
+            case .recommended: return UIImage(named:"recommend_active") ?? UIImage()
+            case .prices: return UIImage(named:"price_active") ?? UIImage()
 
         }
     }
@@ -33,9 +33,9 @@ enum TabbarEntry: Int, CaseIterable {
 
         switch self {
 
-        case .recommended: return UIImage(named:"map") ?? UIImage() // placeholder
-        case .prices: return UIImage(named:"surf") ?? UIImage()
-        case .guide: return UIImage(systemName:"info") ?? UIImage()
+        case .guide: return UIImage(systemName:"info_inactive") ?? UIImage()
+        case .recommended: return UIImage(named:"recommend_active") ?? UIImage()
+        case .prices: return UIImage(named:"price_active") ?? UIImage()
 
         }
     }
@@ -48,9 +48,9 @@ enum TabbarEntry: Int, CaseIterable {
 
         switch self {
 
+        case .guide: return GuideViewController.instantiate(from: storyboardGuide)
         case .recommended: return SurfTripViewController.instantiate(from: storyboardSurf)
         case .prices: return PriceCalculatorViewController.instantiate(from: storyboardPrice)
-        case .guide: return GuideViewController.instantiate(from: storyboardGuide)
 
         }
     }

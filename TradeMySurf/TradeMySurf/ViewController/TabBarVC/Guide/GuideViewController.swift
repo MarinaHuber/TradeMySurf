@@ -5,4 +5,9 @@ import Foundation
 import UIKit
 
 class GuideViewController: UIViewController, StoryboardProtocol {
+    
+    override func viewDidLoad() {
+        super.viewDidLoad()
+        title = "About surf"
+    }
 }

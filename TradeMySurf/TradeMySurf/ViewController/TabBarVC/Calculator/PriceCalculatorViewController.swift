@@ -23,6 +23,7 @@ class PriceCalculatorViewController: UIViewController, StoryboardProtocol {
 
     override func viewDidLoad() {
         super.viewDidLoad()
+        title = "Price compare"
         view.applyGradient(withColors: [.systemIndigo, .systemIndigo, .systemTeal, .lightGray], gradientOrientation: .topLeftBottomRight)
         stackView.setCustomSpacing(10, after: model)
         stackView.setCustomSpacing(10, after: gear)
