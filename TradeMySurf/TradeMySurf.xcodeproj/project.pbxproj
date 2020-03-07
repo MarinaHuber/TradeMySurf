@@ -55,6 +55,7 @@
 		9C9F836C2366BDAA00FA4F41 /* TabBarCoordinatorTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C9F836B2366BDAA00FA4F41 /* TabBarCoordinatorTests.swift */; };
 		9CBDE2982395A9E600317F51 /* TimeHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9CBDE2972395A9E600317F51 /* TimeHelper.swift */; };
 		9CC4F8EA23CA536A00F3ABAB /* Surfs.mlmodel in Sources */ = {isa = PBXBuildFile; fileRef = 9CC4F8E923CA536A00F3ABAB /* Surfs.mlmodel */; };
+		9CE09C302413FAFA00F0FE08 /* TabItemView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 9CE09C2F2413FAFA00F0FE08 /* TabItemView.xib */; };
 		9CF1CC24241136950067533C /* TabBarVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9CF1CC23241136950067533C /* TabBarVC.swift */; };
 		9CF77BDC24101D8300C92725 /* TabbarEntry.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9CF77BDB24101D8300C92725 /* TabbarEntry.swift */; };
 		9CF77BDE24104B5800C92725 /* CustomAlertVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9CF77BDD24104B5800C92725 /* CustomAlertVC.swift */; };
@@ -150,6 +151,7 @@
 		9C9F836B2366BDAA00FA4F41 /* TabBarCoordinatorTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabBarCoordinatorTests.swift; sourceTree = "<group>"; };
 		9CBDE2972395A9E600317F51 /* TimeHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TimeHelper.swift; sourceTree = "<group>"; };
 		9CC4F8E923CA536A00F3ABAB /* Surfs.mlmodel */ = {isa = PBXFileReference; lastKnownFileType = file.mlmodel; name = Surfs.mlmodel; path = ../../Working/Surfboards/Surfs.mlmodel; sourceTree = "<group>"; };
+		9CE09C2F2413FAFA00F0FE08 /* TabItemView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = TabItemView.xib; sourceTree = "<group>"; };
 		9CF1CC23241136950067533C /* TabBarVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabBarVC.swift; sourceTree = "<group>"; };
 		9CF77BDB24101D8300C92725 /* TabbarEntry.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TabbarEntry.swift; sourceTree = "<group>"; };
 		9CF77BDD24104B5800C92725 /* CustomAlertVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomAlertVC.swift; sourceTree = "<group>"; };
@@ -359,12 +361,13 @@
 			isa = PBXGroup;
 			children = (
 				9C3CC3DD23C75EE800359368 /* SupplementaryViews.swift */,
-				9CF77BDB24101D8300C92725 /* TabbarEntry.swift */,
 				9CF77BDF24104B9400C92725 /* AlertContainerView.swift */,
 				9CF77BE124104BAA00C92725 /* TitleLabel.swift */,
 				9CF77BE324104BC700C92725 /* BodyLabel.swift */,
 				9CF77BE524104BDB00C92725 /* Button.swift */,
+				9CF77BDB24101D8300C92725 /* TabbarEntry.swift */,
 				9CF77BE72410669B00C92725 /* TabItemView.swift */,
+				9CE09C2F2413FAFA00F0FE08 /* TabItemView.xib */,
 			);
 			path = SupportingViews;
 			sourceTree = "<group>";
@@ -597,6 +600,7 @@
 				9C193AFB23A2ACA7000DE1AB /* coin-wallet.json in Resources */,
 				9C69CE85234D06D7003E386F /* PriceCalculatorViewController.storyboard in Resources */,
 				9C65758C24111E0100CCF6AF /* TabBarVC.storyboard in Resources */,
+				9CE09C302413FAFA00F0FE08 /* TabItemView.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

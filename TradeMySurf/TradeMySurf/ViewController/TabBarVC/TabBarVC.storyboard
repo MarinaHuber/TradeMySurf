@@ -20,25 +20,23 @@
                                 <color key="backgroundColor" systemColor="systemIndigoColor" red="0.34509803919999998" green="0.33725490200000002" blue="0.83921568629999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                             </view>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Sgo-eH-v0Y">
-                                <rect key="frame" x="0.0" y="812" width="414" height="50"/>
+                                <rect key="frame" x="0.0" y="814" width="414" height="48"/>
                                 <subviews>
                                     <stackView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="x5Z-OV-xST">
-                                        <rect key="frame" x="0.0" y="0.0" width="414" height="50"/>
-                                        <constraints>
-                                            <constraint firstAttribute="height" constant="50" id="bGL-w8-GX1"/>
-                                        </constraints>
+                                        <rect key="frame" x="0.0" y="0.0" width="414" height="48"/>
                                     </stackView>
                                 </subviews>
                                 <color key="backgroundColor" systemColor="systemIndigoColor" red="0.34509803919999998" green="0.33725490200000002" blue="0.83921568629999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <constraints>
                                     <constraint firstAttribute="trailing" secondItem="x5Z-OV-xST" secondAttribute="trailing" id="Q3r-Tm-E6E"/>
                                     <constraint firstAttribute="bottom" secondItem="x5Z-OV-xST" secondAttribute="bottom" id="b7W-Qd-ANw"/>
+                                    <constraint firstAttribute="height" constant="48" id="cCB-mj-sT5"/>
                                     <constraint firstItem="x5Z-OV-xST" firstAttribute="leading" secondItem="Sgo-eH-v0Y" secondAttribute="leading" id="erZ-Ef-kCc"/>
                                     <constraint firstItem="x5Z-OV-xST" firstAttribute="top" secondItem="Sgo-eH-v0Y" secondAttribute="top" id="hb1-bF-FpU"/>
                                 </constraints>
                             </view>
                             <containerView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="foy-Yj-P6T">
-                                <rect key="frame" x="0.0" y="0.0" width="414" height="812"/>
+                                <rect key="frame" x="0.0" y="0.0" width="414" height="814"/>
                             </containerView>
                         </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
