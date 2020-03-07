@@ -18,8 +18,8 @@
             <rect key="frame" x="0.0" y="0.0" width="116" height="61"/>
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
-                <stackView opaque="NO" contentMode="scaleToFill" spacing="12" translatesAutoresizingMaskIntoConstraints="NO" id="yIZ-si-sH0">
-                    <rect key="frame" x="12" y="11.5" width="92" height="38"/>
+                <stackView opaque="NO" contentMode="scaleToFill" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="yIZ-si-sH0">
+                    <rect key="frame" x="14" y="11.5" width="88" height="38"/>
                     <subviews>
                         <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="v7S-6r-khq">
                             <rect key="frame" x="0.0" y="0.0" width="38" height="38"/>
@@ -29,7 +29,7 @@
                             </constraints>
                         </imageView>
                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="skD-Bu-30v" customClass="TabbarTextLabel" customModule="SportDe" customModuleProvider="target">
-                            <rect key="frame" x="50" y="0.0" width="42" height="38"/>
+                            <rect key="frame" x="46" y="0.0" width="42" height="38"/>
                             <fontDescription key="fontDescription" type="system" pointSize="17"/>
                             <nil key="textColor"/>
                             <nil key="highlightedColor"/>

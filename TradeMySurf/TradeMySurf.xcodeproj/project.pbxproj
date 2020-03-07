@@ -332,6 +332,7 @@
 		9C62417D23915AA800A4B7C9 /* Enums */ = {
 			isa = PBXGroup;
 			children = (
+				9CF77BDB24101D8300C92725 /* TabbarEntry.swift */,
 				9C90BC542386BD020090E346 /* Enums.swift */,
 			);
 			path = Enums;
@@ -365,7 +366,6 @@
 				9CF77BE124104BAA00C92725 /* TitleLabel.swift */,
 				9CF77BE324104BC700C92725 /* BodyLabel.swift */,
 				9CF77BE524104BDB00C92725 /* Button.swift */,
-				9CF77BDB24101D8300C92725 /* TabbarEntry.swift */,
 				9CF77BE72410669B00C92725 /* TabItemView.swift */,
 				9CE09C2F2413FAFA00F0FE08 /* TabItemView.xib */,
 			);

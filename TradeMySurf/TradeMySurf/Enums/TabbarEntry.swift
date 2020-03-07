@@ -22,9 +22,9 @@ enum TabbarEntry: Int, CaseIterable {
 
         switch self {
 
-            case .guide: return UIImage(named:"info_active") ?? UIImage()
-            case .recommended: return UIImage(named:"recommend_active") ?? UIImage()
-            case .prices: return UIImage(named:"price_active") ?? UIImage()
+            case .guide: return UIImage(named:"info_active")!
+            case .recommended: return UIImage(named:"recommend_active")!
+            case .prices: return UIImage(named:"price_active")!
 
         }
     }
@@ -33,9 +33,9 @@ enum TabbarEntry: Int, CaseIterable {
 
         switch self {
 
-        case .guide: return UIImage(systemName:"info_inactive") ?? UIImage()
-        case .recommended: return UIImage(named:"recommend_active") ?? UIImage()
-        case .prices: return UIImage(named:"price_active") ?? UIImage()
+        case .guide: return UIImage(named:"info_inactive")!
+        case .recommended: return UIImage(named:"recommend_inactive")!
+        case .prices: return UIImage(named:"price_inactive")!
 
         }
     }

@@ -43,7 +43,7 @@ class TabItemView: UIView {
         self.backgroundColor = .clear
         self.configureIconView()
         self.textLabel.textColor = .white
-        self.textLabel.font = UIFont.boldSystemFont(ofSize: 9)
+        self.textLabel.font = UIFont.boldSystemFont(ofSize: 11)
         self.textLabel.isHidden = true
         self.textLabel.text = nil
             
