@@ -22,37 +22,36 @@ public struct Services {
 public struct RecommendedTripArray {
 
 	public var surfboardsBeginner: [Surfboard] = {
-        return [Surfboard(level: "The Beginner", volume: "80 L", weight: 40, weightUnit: ">", imageName: "1.2", beaufortScaleWave: "0 - 1.4 m"),
-				Surfboard(level: "The Beginner", volume: "50 L", weight: 50, weightUnit: "<", imageName: "2.2", beaufortScaleWave: "0 - 1.4 m"),
-				Surfboard(level: "The Beginner", volume: "60 L", weight: 60, weightUnit: "<", imageName: "3.2", beaufortScaleWave: "0 - 1.4 m"),
-				Surfboard(level: "The Beginner", volume: "70 L", weight: 70, weightUnit: "<", imageName: "4.2", beaufortScaleWave: "0 - 1.4 m")
+        return [Surfboard(level: "The Beginner", volume: "80 L", imageName: "1.2", weight: 40, weightUnit: ">", beaufortScaleWave: "0 - 1.4 m"),
+                Surfboard(level: "The Beginner", volume: "50 L", imageName: "2.2", weight: 50, weightUnit: "<", beaufortScaleWave: " 0 - 1.4 m"),
+                Surfboard(level: "The Beginner", volume: "60 L", imageName: "3.2", weight: 60, weightUnit: "<", beaufortScaleWave: " 0 - 1.4 m"),
+                Surfboard(level: "The Beginner", volume: "70 L", imageName: "4.2", weight: 70, weightUnit: "<", beaufortScaleWave: " 0 - 1.4 m")
 			]
     }()
 	public var surfboardsBeginnerInter: [Surfboard] = {
-        return [Surfboard(level: "Beginner Inter", volume: "40 L", weight: 40, weightUnit: ">", imageName: "bg-splash", beaufortScaleWave: "1 - 1.4 m"),
-				Surfboard(level: "Beginner Inter", volume: "50 L", weight: 50, weightUnit: "<", imageName: "bg-splash", beaufortScaleWave: "1 - 1.4 m"),
-				Surfboard(level: "Beginner Inter", volume: "60 L", weight: 60, weightUnit: "<", imageName: "bg-splash", beaufortScaleWave: "1 - 1.4 m"),
-				Surfboard(level: "Beginner Inter", volume: "70 L", weight: 70, weightUnit: "<", imageName: "bg-splash", beaufortScaleWave: "1 - 1.4 m"),
-				Surfboard(level: "Beginner Inter", volume: "55 L", weight: 80, weightUnit: "<", imageName: "bg-splash", beaufortScaleWave: "1 - 1.4 m"),
-				Surfboard(level: "Beginner Inter", volume: "45 L", weight: 90, weightUnit: "<", imageName: "bg-splash", beaufortScaleWave: "1 - 1.4 m")
-			]
+        return [Surfboard(level: "Beginner Inter", volume: "40 L", imageName: "1", weight: 40, weightUnit: ">", beaufortScaleWave: "1 - 1.4 m"),
+                Surfboard(level: "Beginner Inter", volume: "50 L", imageName: "2", weight: 50, weightUnit: "<", beaufortScaleWave: " 1 - 1.4 m"),
+                Surfboard(level: "Beginner Inter", volume: "60 L", imageName: "3", weight: 60, weightUnit: "<", beaufortScaleWave: " 1 - 1.4 m"),
+                Surfboard(level: "Beginner Inter", volume: "70 L", imageName: "4", weight: 70, weightUnit: "<", beaufortScaleWave: " 1 - 1.4 m"),
+                Surfboard(level: "Beginner Inter", volume: "55 L", imageName: "5", weight: 80, weightUnit: "<", beaufortScaleWave: " 1 - 1.4 m")
+        ]
     }()
 	public var surfboardsIntermediate: [Surfboard] = {
-        return [Surfboard(level: "The Intermediate", volume: "40 L", weight: 40, weightUnit: ">", imageName: "bg-splash", beaufortScaleWave: "2 - 2.4 m"),
-				Surfboard(level: "The Intermediate", volume: "50 L", weight: 50, weightUnit: "<", imageName: "bg-splash", beaufortScaleWave: "2 - 2.4 m"),
-				Surfboard(level: "The Intermediate", volume: "60 L", weight: 60, weightUnit: "<", imageName: "bg-splash", beaufortScaleWave: "2 - 2.4 m"),
-				Surfboard(level: "The Intermediate", volume: "70 L", weight: 70, weightUnit: "<", imageName: "bg-splash", beaufortScaleWave: "2 - 2.4 m"),
-				Surfboard(level: "The Intermediate", volume: "55 L", weight: 80, weightUnit: "<", imageName: "bg-splash", beaufortScaleWave: "2 - 2.4 m"),
-				Surfboard(level: "The Intermediate", volume: "45 L", weight: 90, weightUnit: "<", imageName: "bg-splash", beaufortScaleWave: "2 - 2.4 m")
+        return [Surfboard(level: "The Intermediate", volume: "40 L", imageName: "inter1", weight: 40, weightUnit: ">", beaufortScaleWave: "2 - 2.4 m"),
+                Surfboard(level: "The Intermediate", volume: "50 L", imageName: "inter2", weight: 50, weightUnit: "<", beaufortScaleWave: "2 - 2.4 m"),
+                Surfboard(level: "The Intermediate", volume: "60 L", imageName: "inter3", weight: 60, weightUnit: "<", beaufortScaleWave: "2 - 2.4 m")
 			]
     }()
 	public var surfboardsAdvanced: [Surfboard] = {
-        return [Surfboard(level: "The Advanced", volume: "40 L", weight: 40, weightUnit: ">", imageName: "pro1", beaufortScaleWave: "3 > m"),
-				Surfboard(level: "The Advanced", volume: "50 L", weight: 50, weightUnit: "<", imageName: "pro", beaufortScaleWave: "3 > m"),
-                Surfboard(level: "The Advanced", volume: "50 L", weight: 50, weightUnit: "<", imageName: "pro1", beaufortScaleWave: "3 > m")
+        return [Surfboard(level: "The Advanced", volume: "40 L", imageName: "pro1", weight: 40, weightUnit: ">", beaufortScaleWave: "3 > m"),
+                Surfboard(level: "The Advanced", volume: "50 L", imageName: "pro", weight: 50, weightUnit: "<", beaufortScaleWave: "3 > m"),
+                Surfboard(level: "The Advanced", volume: "50 L", imageName: "pro1", weight: 50, weightUnit: "<", beaufortScaleWave: "3 > m")
 			]
     }()
 
+    
+    
+    
     public var surfCountrySummer: [Location] = {
         return [
 			Location(countryName: "Summer France", continentName: "Europe", imageFlag: "french", beaufortScaleWave: "0 - 1.4 m"),

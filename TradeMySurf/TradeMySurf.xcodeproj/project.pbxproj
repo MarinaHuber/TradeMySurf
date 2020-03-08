@@ -220,6 +220,15 @@
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
+		9C1630CA24157A4B00DB9BBC /* Detail */ = {
+			isa = PBXGroup;
+			children = (
+				9C31EB8B23E3AB1A00060143 /* DetailViewController.swift */,
+				9C31EB8923E3AA2100060143 /* DetailViewController.storyboard */,
+			);
+			path = Detail;
+			sourceTree = "<group>";
+		};
 		9C3F533B234BD7F900D5F65E /* Protocols */ = {
 			isa = PBXGroup;
 			children = (
@@ -396,8 +405,7 @@
 		9C76F09F2349471000853FD9 /* ViewController */ = {
 			isa = PBXGroup;
 			children = (
-				9C31EB8923E3AA2100060143 /* DetailViewController.storyboard */,
-				9C31EB8B23E3AB1A00060143 /* DetailViewController.swift */,
+				9C1630CA24157A4B00DB9BBC /* Detail */,
 				9C89B61923D863E000DB8DDF /* AlertVC.storyboard */,
 				9C1A985423D7A38E0050C7BC /* AlertVC.swift */,
 				9CF77BDD24104B5800C92725 /* CustomAlertVC.swift */,

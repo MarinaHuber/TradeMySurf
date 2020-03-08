@@ -36,16 +36,14 @@ class BoardSupplementaryView: UICollectionReusableView {
         stackView.translatesAutoresizingMaskIntoConstraints = false
         stackView.axis = .vertical
         addSubview(stackView)
+        
+        separator.heightAnchor.constraint(equalToConstant: 1).isActive = true
 
-        NSLayoutConstraint.activate([
-            separator.heightAnchor.constraint(equalToConstant: 1),
-
-            stackView.leadingAnchor.constraint(equalTo: leadingAnchor),
-            stackView.trailingAnchor.constraint(equalTo: trailingAnchor),
-            stackView.topAnchor.constraint(equalTo: topAnchor),
-            stackView.bottomAnchor.constraint(equalTo: bottomAnchor, constant: -10)
-        ])
-
+        stackView.leadingAnchor.constraint(equalTo: leadingAnchor).isActive = true
+        stackView.trailingAnchor.constraint(equalTo: trailingAnchor).isActive = true
+        stackView.topAnchor.constraint(equalTo: topAnchor).isActive = true
+        stackView.bottomAnchor.constraint(equalTo: bottomAnchor, constant: -10).isActive = true
+        
         stackView.setCustomSpacing(10, after: separator)
     }
 }
@@ -82,15 +80,13 @@ class LocationSupplementaryView: UICollectionReusableView {
         stackView.translatesAutoresizingMaskIntoConstraints = false
         stackView.axis = .vertical
         addSubview(stackView)
-
-        NSLayoutConstraint.activate([
-            separator.heightAnchor.constraint(equalToConstant: 1),
-
-            stackView.leadingAnchor.constraint(equalTo: leadingAnchor),
-            stackView.trailingAnchor.constraint(equalTo: trailingAnchor),
-            stackView.topAnchor.constraint(equalTo: topAnchor),
-            stackView.bottomAnchor.constraint(equalTo: bottomAnchor, constant: -10)
-        ])
+        
+        separator.heightAnchor.constraint(equalToConstant: 1).isActive = true
+        
+        stackView.leadingAnchor.constraint(equalTo: leadingAnchor).isActive = true
+        stackView.trailingAnchor.constraint(equalTo: trailingAnchor).isActive = true
+        stackView.topAnchor.constraint(equalTo: topAnchor).isActive = true
+        stackView.bottomAnchor.constraint(equalTo: bottomAnchor, constant: -10).isActive = true
 
         stackView.setCustomSpacing(10, after: separator)
     }
