@@ -5,7 +5,7 @@ import UIKit
 
 enum TabbarEntry: Int, CaseIterable {
 
-    case recommended, prices, guide
+    case guide, recommended, prices
 
     var title: String {
 
@@ -23,8 +23,8 @@ enum TabbarEntry: Int, CaseIterable {
         switch self {
 
             case .guide: return UIImage(named:"info_tabActive")!
-            case .recommended: return UIImage(named:"recommend_active")!
-            case .prices: return UIImage(named:"price_active")!
+            case .recommended: return UIImage(named:"recommend_tabActive")!
+            case .prices: return UIImage(named:"price_tabActive")!
 
         }
     }
