@@ -33,7 +33,7 @@ class TabBarVC: UIViewController, StoryboardProtocol {
 
         for entry in TabbarEntry.allCases {
 
-            let itemView = TabItemView(frame: CGRect(x: 0.0, y: 0.0, width: view.frame.size.width / 3, height: self.tabbarBackgroundView.frame.size.height))
+            let itemView = TabItemView(frame: CGRect(x: 0.0, y: 0.0, width: self.tabbarBackgroundView.frame.size.width / 3, height: self.tabbarBackgroundView.frame.size.height))
             itemView.fill(with: entry)
             itemView.isSelected = self.selectedEntry == entry
             self.tabbarStackView.addArrangedSubview(itemView)

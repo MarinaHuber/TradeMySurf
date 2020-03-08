@@ -14,7 +14,7 @@ class TabItemView: UIView {
     @IBOutlet weak var iconImageView: UIImageView!
     @IBOutlet private weak var textLabel: UILabel!
     
-    var contentView: UIView!
+    var containerView: UIView!
     
     let padding: CGFloat = 0
 
@@ -68,9 +68,10 @@ class TabItemView: UIView {
     
     func configureIconView() {
 
-        self.contentView = self.loadFromNib(withName: "TabItemView", owner: self, bundle: .main)
-        self.addSubview(self.contentView)
-        self.contentView.backgroundColor = .clear
+        self.containerView = self.loadFromNib(withName: "TabItemView", owner: self, bundle: .main)
+        self.addSubview(self.containerView)
+        self.containerView.backgroundColor = .clear
+
         
     }
     
