@@ -12,7 +12,7 @@ enum TabbarEntry: Int, CaseIterable {
         switch self {
 
         case .guide: return "Surf guide"
-        case .recommended: return "Recommend"
+        case .recommended: return "Recommended"
         case .prices: return "Board price"
 
         }

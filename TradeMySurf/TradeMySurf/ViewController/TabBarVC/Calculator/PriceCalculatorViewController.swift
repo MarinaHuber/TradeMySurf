@@ -23,13 +23,17 @@ class PriceCalculatorViewController: UIViewController, StoryboardProtocol {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        title = "Price compare"
+        let image : UIImage = UIImage(named: "testPng")!
+        let imageView = UIImageView(frame: CGRect(x: 0, y: 0, width: 40, height: 40))
+        imageView.contentMode = .scaleAspectFit
+        imageView.image = image
+        navigationItem.titleView = imageView
         view.applyGradient(withColors: [.systemIndigo, .systemIndigo, .systemTeal, .lightGray], gradientOrientation: .topLeftBottomRight)
         stackView.setCustomSpacing(10, after: model)
         stackView.setCustomSpacing(10, after: gear)
         stackView.setCustomSpacing(10, after: production)
         stackView.setCustomSpacing(10, after: condition)
-
+        
         calculateValue(self)
     }
 

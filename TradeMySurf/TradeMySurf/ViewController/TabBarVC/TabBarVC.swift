@@ -30,14 +30,14 @@ class TabBarVC: UIViewController, StoryboardProtocol {
 
     // MARK: - Helper
     private func configureTabbar() {
-
+        
         for entry in TabbarEntry.allCases {
-
+            
             let itemView = TabItemView(frame: CGRect(x: 0.0, y: 0.0, width: self.tabbarBackgroundView.frame.size.width / 3, height: self.tabbarBackgroundView.frame.size.height))
             itemView.fill(with: entry)
             itemView.isSelected = self.selectedEntry == entry
             self.tabbarStackView.addArrangedSubview(itemView)
-
+            
             let recognizer = UITapGestureRecognizer(target: self, action: #selector(self.tapItem(_:)))
             itemView.addGestureRecognizer(recognizer)
         }
@@ -60,7 +60,7 @@ class TabBarVC: UIViewController, StoryboardProtocol {
 
         // add new ViewController
         if let newViewController = self.viewControllers[entry] {
-
+            
             self.configureChildViewController(for: newViewController, onView: self.container)
 
         } else {
@@ -69,6 +69,7 @@ class TabBarVC: UIViewController, StoryboardProtocol {
             let navController = BaseNavigationController(rootViewController: vc)
             self.viewControllers[entry] = navController
             self.configureChildViewController(for: navController, onView: self.container)
+            
         }
 
         // switch item selection

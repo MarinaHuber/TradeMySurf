@@ -62,6 +62,7 @@ final class Coordinator: UIResponder, CoorinatorPresenting {
     // MARK: Presenting Coordinators
     
     func presentSplash() {
+        
         let storyboard: UIStoryboard = UIStoryboard(name: Constants.Storyboards.splashViewController, bundle: nil)
         let controller: SplashViewController = SplashViewController.instantiate(from: storyboard)
         let navigationController = UINavigationController(rootViewController: controller)
@@ -70,6 +71,7 @@ final class Coordinator: UIResponder, CoorinatorPresenting {
     }
     
     func presentWelcome() {
+        
         let welcomeStoryboard: UIStoryboard = UIStoryboard(name: Constants.Storyboards.welcomeViewController, bundle: nil)
         let welcomeController: WelcomeViewController = WelcomeViewController.instantiate(from: welcomeStoryboard)
         let navigationWelcome = UINavigationController(rootViewController: welcomeController)
@@ -78,6 +80,7 @@ final class Coordinator: UIResponder, CoorinatorPresenting {
     }
     
     func presentAddLevel() {
+        
         let storyboard: UIStoryboard = UIStoryboard(name: Constants.Storyboards.addLevelViewController, bundle: nil)
         let controller: AddLevelViewController = AddLevelViewController.instantiate(from: storyboard)
         let navigationController = UINavigationController(rootViewController: controller)
@@ -86,6 +89,7 @@ final class Coordinator: UIResponder, CoorinatorPresenting {
     }
     
     func presentAddDate() {
+        
         let storyboard: UIStoryboard = UIStoryboard(name: Constants.Storyboards.addDateViewController, bundle: nil)
         let controller: AddDateViewController = AddDateViewController.instantiate(from: storyboard)
         let navigationController = UINavigationController(rootViewController: controller)
@@ -94,18 +98,17 @@ final class Coordinator: UIResponder, CoorinatorPresenting {
     }
     
     func presentTabBar() {
-//        let viewController = TabBarVC()
-//        guard let navigationController = window.rootViewController as? UINavigationController else { preconditionFailure() }
+        
         ///removes the double nav bar
         let storyboard: UIStoryboard = UIStoryboard(name: "TabBarVC", bundle: nil)
         let controller: TabBarVC = TabBarVC.instantiate(from: storyboard)
         let navigationController = UINavigationController(rootViewController: controller)
         navigationController.setNavigationBarHidden(true, animated: false)
         window.rootViewController = navigationController
-        
     }
     
     func presentAlert() {
+        
         let storyboard: UIStoryboard = UIStoryboard(name: Constants.Storyboards.alertViewController, bundle: nil)
         let controller: AlertVC = AlertVC.instantiate(from: storyboard)
         guard let navigationController = window.rootViewController as? UINavigationController else { fatalError() }
@@ -113,6 +116,7 @@ final class Coordinator: UIResponder, CoorinatorPresenting {
     }
     
     func presentDetailBoard(_ name: String?) {
+        
         let storyboard: UIStoryboard = UIStoryboard(name: Constants.Storyboards.detailViewController, bundle: nil)
         let controller: DetailViewController = DetailViewController.instantiate(from: storyboard)
         controller.selectedImageBoard = name ?? ""
