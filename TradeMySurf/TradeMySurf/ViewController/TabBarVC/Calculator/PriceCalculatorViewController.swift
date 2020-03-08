@@ -23,9 +23,9 @@ class PriceCalculatorViewController: UIViewController, StoryboardProtocol {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        let image : UIImage = UIImage(named: "testPng")!
-        let imageView = UIImageView(frame: CGRect(x: 0, y: 0, width: 40, height: 40))
-        imageView.contentMode = .scaleAspectFit
+        let image : UIImage = UIImage(named: "logo_wave")!
+        let imageView = UIImageView(frame: CGRect(x: 0, y: 0, width: 70, height: 70))
+        imageView.contentMode = .scaleAspectFill
         imageView.image = image
         navigationItem.titleView = imageView
         view.applyGradient(withColors: [.systemIndigo, .systemIndigo, .systemTeal, .lightGray], gradientOrientation: .topLeftBottomRight)
