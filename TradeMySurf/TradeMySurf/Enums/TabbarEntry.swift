@@ -22,7 +22,7 @@ enum TabbarEntry: Int, CaseIterable {
 
         switch self {
 
-            case .guide: return UIImage(named:"info_active")!
+            case .guide: return UIImage(named:"info_tabActive")!
             case .recommended: return UIImage(named:"recommend_active")!
             case .prices: return UIImage(named:"price_active")!
 
