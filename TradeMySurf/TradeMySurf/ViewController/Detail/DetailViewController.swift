@@ -10,28 +10,34 @@ import UIKit
 
 class DetailViewController: UIViewController, StoryboardProtocol {
     
+    
+    @IBOutlet weak var levelLabel: UILabel!
+    @IBOutlet var volumeLabel: UILabel!
+    @IBOutlet var weightLabel: UILabel!
+    
     @IBOutlet weak var boardImageView: UIImageView!
-    var selectedImageBoard: String?
+    var selectedImageName: String?
+    var surfBoardData: Surfboard?
     
     override func viewDidLoad() {
-           super.viewDidLoad()
+        super.viewDidLoad()
+        loadSelectedBoard()
 
-       }
-       // MARK: - Data load
-       
-    private func loadSelectedBoard(name: String) {
+    }
+    
+    // MARK: - Pass data static
+    
+    private func loadSelectedBoard() {
         guard
-            name == selectedImageBoard,
-            name.isEmpty == false
+            surfBoardData != nil
             else {  return }
+        boardImageView.image = UIImage(named: surfBoardData?.imageName ?? "")
+        levelLabel.text = surfBoardData?.level
+        volumeLabel.text = surfBoardData?.volume
+        weightLabel.text = "\(surfBoardData?.weight ?? "") kg"
+
         
     }
     
-    func fillWithData(_ data: Surfboard) {
-        //            levelLabel.text = data.leve
-        //            volumeLabel.text = data.volume
-        //            weightLabel.text = "\(data.weight) kg"
-        boardImageView.image = UIImage(named: data.imageName)
-    }
-    }
+}
 

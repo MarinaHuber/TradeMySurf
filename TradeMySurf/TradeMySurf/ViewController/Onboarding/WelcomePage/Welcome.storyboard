@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="15702" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="btd-kb-JMM">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="15705" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="btd-kb-JMM">
     <device id="retina6_5" orientation="portrait" appearance="light"/>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15704"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15706"/>
         <capability name="Named colors" minToolsVersion="9.0"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
@@ -23,10 +23,10 @@
                                 </constraints>
                             </imageView>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="r8K-M5-40N">
-                                <rect key="frame" x="48" y="765" width="318" height="40"/>
+                                <rect key="frame" x="48" y="755" width="318" height="50"/>
                                 <color key="backgroundColor" name="pastel"/>
                                 <constraints>
-                                    <constraint firstAttribute="height" constant="40" id="7iQ-6r-XVm"/>
+                                    <constraint firstAttribute="height" constant="50" id="7iQ-6r-XVm"/>
                                 </constraints>
                                 <fontDescription key="fontDescription" name="AvenirNext-Regular" family="Avenir Next" pointSize="21"/>
                                 <state key="normal" title="Get started">
@@ -34,7 +34,7 @@
                                 </state>
                                 <userDefinedRuntimeAttributes>
                                     <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
-                                        <integer key="value" value="23"/>
+                                        <integer key="value" value="4"/>
                                     </userDefinedRuntimeAttribute>
                                 </userDefinedRuntimeAttributes>
                                 <connections>
@@ -42,7 +42,7 @@
                                 </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Welcome to Match my Surf" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="9Ll-GN-ih1">
-                                <rect key="frame" x="77" y="606.33333333333337" width="261" height="79.333333333333371"/>
+                                <rect key="frame" x="77" y="596.33333333333337" width="261" height="79.333333333333371"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="261" id="RJT-8n-NWv"/>
                                 </constraints>
@@ -51,7 +51,7 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Your surf goals in one place" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="4" baselineAdjustment="alignBaselines" adjustsLetterSpacingToFitWidth="YES" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="GIH-Ay-MhW">
-                                <rect key="frame" x="81.333333333333329" y="685.66666666666663" width="251.66666666666669" height="34.333333333333371"/>
+                                <rect key="frame" x="81.333333333333329" y="675.66666666666663" width="251.66666666666669" height="34.333333333333371"/>
                                 <constraints>
                                     <constraint firstAttribute="width" secondItem="GIH-Ay-MhW" secondAttribute="height" multiplier="73:10" constant="1.0333333333330188" id="DXp-GJ-HHN"/>
                                 </constraints>
@@ -60,7 +60,7 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <view alpha="0.69999999999999996" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="lAD-Yi-ibb">
-                                <rect key="frame" x="54.333333333333343" y="281" width="305.33333333333326" height="317.33333333333326"/>
+                                <rect key="frame" x="54.333333333333343" y="271" width="305.33333333333326" height="317.33333333333326"/>
                                 <subviews>
                                     <stackView opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" axis="vertical" distribution="fillEqually" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="1gZ-V7-pvI">
                                         <rect key="frame" x="0.0" y="0.0" width="305.33333333333331" height="317.33333333333331"/>
@@ -228,7 +228,7 @@
         <image name="sea-splash" width="150" height="150"/>
         <image name="yuliya-kosolapova" width="1000" height="1671"/>
         <namedColor name="pastel">
-            <color red="0.29499998688697815" green="0.36000001430511475" blue="0.75900000333786011" alpha="0.98000001907348633" colorSpace="custom" customColorSpace="sRGB"/>
+            <color red="0.21299999952316284" green="0.23399999737739563" blue="0.66200000047683716" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </namedColor>
     </resources>
 </document>

@@ -16,7 +16,7 @@ protocol DetailViewControllerDelegate {
 
 class SurfTripViewController: UIViewController, StoryboardProtocol {
     
-    private var delegate: DetailViewControllerDelegate?
+   // private var delegate: DetailViewControllerDelegate?
     
     lazy var leftBtn: UIBarButtonItem = {
         let button = UIButton(type: .system)
@@ -33,10 +33,10 @@ class SurfTripViewController: UIViewController, StoryboardProtocol {
     private var userComingFromOnboarding = UserDefaults.standard.userWasHere
 
     private(set) var collectionView: UICollectionView!
-    private var sections: [TripSection] = []
+   private var sections: [TripSection] = []
     private var snapshot = NSDiffableDataSourceSnapshot<TripSection, TripItem>()
     private(set) var dataSource: UICollectionViewDiffableDataSource<TripSection, TripItem>! // retain data source!
-    private(set) var appData: RecommendedTripArray = RecommendedTripArray()
+   // private(set) var appData: RecommendedTripArray = RecommendedTripArray()
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -46,7 +46,7 @@ class SurfTripViewController: UIViewController, StoryboardProtocol {
         imageView.image = image
         navigationItem.titleView = imageView
         view.applyGradient(withColors: [.systemIndigo, .systemIndigo, .systemBlue, .systemTeal, .white], gradientOrientation: .vertical)
-        self.delegate = self
+        //self.delegate = self
         addCollectionView()
         configureCollectionView()
         self.userComingFromOnboarding = true
@@ -143,36 +143,36 @@ private extension SurfTripViewController {
         switch pickerString {
         case .Beginner:
             snapshot.appendSections([.surfboardsBeginner])
-            snapshot.appendItems(appData.surfboardsBeginner.map({ TripItem.surfboard($0, .Beginner) }))
+            snapshot.appendItems(Services().dataService.surfboardsBeginner.map({ TripItem.surfboard($0, .Beginner) }))
             
             updateLocationSection()
             
             snapshot.appendSections([.tipBeginner])
-            snapshot.appendItems(appData.tipBeginner.map({ TripItem.tip($0, .Beginner) }))
+            snapshot.appendItems(Services().dataService.tipBeginner.map({ TripItem.tip($0, .Beginner) }))
         case .BeginnerIntermediate:
             snapshot.appendSections([.surfboardsBeginnerInter])
-            snapshot.appendItems(appData.surfboardsBeginnerInter.map({ TripItem.surfboard($0, .BeginnerIntermediate) }))
+            snapshot.appendItems(Services().dataService.surfboardsBeginnerInter.map({ TripItem.surfboard($0, .BeginnerIntermediate) }))
             
             updateLocationSection()
             
             snapshot.appendSections([.tipBeginnerInter])
-            snapshot.appendItems(appData.tipBeginnerInter.map({ TripItem.tip($0, .BeginnerIntermediate) }))
+            snapshot.appendItems(Services().dataService.tipBeginnerInter.map({ TripItem.tip($0, .BeginnerIntermediate) }))
         case .Intermediate:
             snapshot.appendSections([.surfboardsIntermediate])
-            snapshot.appendItems(appData.surfboardsIntermediate.map({  TripItem.surfboard($0, .Intermediate) }))
+            snapshot.appendItems(Services().dataService.surfboardsIntermediate.map({  TripItem.surfboard($0, .Intermediate) }))
             
             updateLocationSection()
             
             snapshot.appendSections([.tipIntermediate])
-            snapshot.appendItems(appData.tipIntermediate.map({ TripItem.tip($0, .Intermediate) }))
+            snapshot.appendItems(Services().dataService.tipIntermediate.map({ TripItem.tip($0, .Intermediate) }))
         case .Advanced:
             snapshot.appendSections([.surfboardsAdvanced])
-            snapshot.appendItems(appData.surfboardsAdvanced.map({  TripItem.surfboard($0, .Advanced) }))
+            snapshot.appendItems(Services().dataService.surfboardsAdvanced.map({  TripItem.surfboard($0, .Advanced) }))
             
             updateLocationSection()
             
             snapshot.appendSections([.tipAdvanced])
-            snapshot.appendItems(appData.tipAdvanced.map({ TripItem.tip($0, .Advanced) }))
+            snapshot.appendItems(Services().dataService.tipAdvanced.map({ TripItem.tip($0, .Advanced) }))
         default: break
         }
 
@@ -188,16 +188,16 @@ private extension SurfTripViewController {
         switch pickerDate {
         case 0:
             snapshot.appendSections([.surfCountryWinter])
-            snapshot.appendItems(appData.surfCountryWinter.map({ TripItem.surfCountry($0, .winter) }))
+            snapshot.appendItems(Services().dataService.surfCountryWinter.map({ TripItem.surfCountry($0, .winter) }))
         case 1:
             snapshot.appendSections([.surfCountrySpring])
-            snapshot.appendItems(appData.surfCountrySpring.map({ TripItem.surfCountry($0, .spring) }))
+            snapshot.appendItems(Services().dataService.surfCountrySpring.map({ TripItem.surfCountry($0, .spring) }))
         case 2:
             snapshot.appendSections([.surfCountrySummer])
-            snapshot.appendItems(appData.surfCountrySummer.map({ TripItem.surfCountry($0, .summer) }))
+            snapshot.appendItems(Services().dataService.surfCountrySummer.map({ TripItem.surfCountry($0, .summer) }))
         case 3:
             snapshot.appendSections([.surfCountryAutumn])
-            snapshot.appendItems(appData.surfCountryAutumn.map({ TripItem.surfCountry($0, .autumn) }))
+            snapshot.appendItems(Services().dataService.surfCountryAutumn.map({ TripItem.surfCountry($0, .autumn) }))
         default: break
         }
     }
@@ -305,14 +305,16 @@ extension SurfTripViewController: UICollectionViewDelegate {
     func collectionView(_ collectionView: UICollectionView, willDisplay cell: UICollectionViewCell, forItemAt indexPath: IndexPath) {
         cell.contentView.backgroundColor = UIColor.systemGray6
     }
-
+//Pass selected image to detail
+//https://stackoverflow.com/questions/28315133/swift-pass-uitableviewcell-label-to-new-viewcontroller
+    
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
         collectionView.deselectItem(at: indexPath, animated: false)
          guard let item = dataSource.itemIdentifier(for: indexPath) else { return }
         print(item)
         switch item {
             case .surfboard(let surf, _):
-                scenePresenter?.presentDetailBoard(surf.imageName)
+                scenePresenter?.presentDetailBoard(surf)
             default : break
         }
     }
@@ -350,14 +352,14 @@ private extension SurfTripViewController {
     }
 }
 
-extension SurfTripViewController: DetailViewControllerDelegate {
-    
-    func presentDetailViewController(with name: String?) {
-        let storyboard: UIStoryboard = UIStoryboard(name: "DetailViewController", bundle: nil)
-        let vc: DetailViewController = DetailViewController.instantiate(from: storyboard)
-        vc.selectedImageBoard = name ?? ""
-        navigationController?.present(vc, animated: true, completion: nil)
-        
-        }
-}
+//extension SurfTripViewController: DetailViewControllerDelegate {
+//
+//    func presentDetailViewController(with name: String?) {
+//        let storyboard: UIStoryboard = UIStoryboard(name: "DetailViewController", bundle: nil)
+//        let vc: DetailViewController = DetailViewController.instantiate(from: storyboard)
+//        vc.selectedImageName = name ?? ""
+//        navigationController?.present(vc, animated: true, completion: nil)
+//
+//        }
+//}
 

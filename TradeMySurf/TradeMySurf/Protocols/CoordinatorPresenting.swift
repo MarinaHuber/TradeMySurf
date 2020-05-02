@@ -15,7 +15,7 @@ protocol CoorinatorPresenting {
     func presentAddDate()
     func presentTabBar()
     func presentAlert()
-    func presentDetailBoard(_ name: String?)
+    func presentDetailBoard(_ data: Surfboard)
 
 }
 

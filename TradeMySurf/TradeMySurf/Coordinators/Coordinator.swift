@@ -11,8 +11,6 @@ import UIKit
 import Presentr
 
 final class Coordinator: UIResponder, CoorinatorPresenting {
-
-    
     
     // MARK: Creating the Coordinator
     
@@ -115,11 +113,11 @@ final class Coordinator: UIResponder, CoorinatorPresenting {
         navigationController.customPresentViewController(presenter, viewController: controller, animated: true, completion: nil)
     }
     
-    func presentDetailBoard(_ name: String?) {
+    func presentDetailBoard(_ data: Surfboard) {
         
         let storyboard: UIStoryboard = UIStoryboard(name: Constants.Storyboards.detailViewController, bundle: nil)
         let controller: DetailViewController = DetailViewController.instantiate(from: storyboard)
-        controller.selectedImageBoard = name ?? ""
+        controller.surfBoardData = data
         guard let navigationController = window.rootViewController as? UINavigationController else { fatalError() }
         navigationController.present(controller, animated: true, completion: nil)
     }

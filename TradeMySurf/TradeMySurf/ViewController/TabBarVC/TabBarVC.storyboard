@@ -89,7 +89,7 @@
     </scenes>
     <resources>
         <namedColor name="pastel">
-            <color red="0.21345634320564119" green="0.23439448573313329" blue="0.6622059478043274" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <color red="0.21299999952316284" green="0.23399999737739563" blue="0.66200000047683716" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </namedColor>
     </resources>
 </document>

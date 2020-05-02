@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="15702" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="15705" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15704"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15706"/>
         <capability name="Named colors" minToolsVersion="9.0"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
@@ -20,8 +20,8 @@
                                 <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                                 <color key="backgroundColor" name="pastel"/>
                             </imageView>
-                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="aer-le-4pw">
-                                <rect key="frame" x="50" y="100" width="264.5" height="76"/>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="aer-le-4pw">
+                                <rect key="frame" x="50" y="100" width="264.5" height="92"/>
                                 <subviews>
                                     <stackView opaque="NO" contentMode="scaleToFill" spacing="5" translatesAutoresizingMaskIntoConstraints="NO" id="9S6-fN-vHU">
                                         <rect key="frame" x="0.0" y="0.0" width="264.5" height="24"/>
@@ -44,7 +44,7 @@
                                         </subviews>
                                     </stackView>
                                     <stackView opaque="NO" contentMode="scaleToFill" spacing="5" translatesAutoresizingMaskIntoConstraints="NO" id="81J-9M-1Bt">
-                                        <rect key="frame" x="0.0" y="24" width="264.5" height="28"/>
+                                        <rect key="frame" x="0.0" y="32" width="264.5" height="28"/>
                                         <subviews>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Board Volume:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="uer-cH-3yh">
                                                 <rect key="frame" x="0.0" y="0.0" width="150.5" height="28"/>
@@ -64,7 +64,7 @@
                                         </subviews>
                                     </stackView>
                                     <stackView opaque="NO" contentMode="scaleToFill" spacing="5" translatesAutoresizingMaskIntoConstraints="NO" id="lGv-SC-Jsc">
-                                        <rect key="frame" x="0.0" y="52" width="264.5" height="24"/>
+                                        <rect key="frame" x="0.0" y="68" width="264.5" height="24"/>
                                         <subviews>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" verticalHuggingPriority="251" text="Sutable for body weight:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="V7n-HZ-IxJ">
                                                 <rect key="frame" x="0.0" y="0.0" width="211.5" height="24"/>
@@ -97,13 +97,17 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="EO0-zy-by8"/>
                     </view>
+                    <navigationItem key="navigationItem" id="6PI-OS-wqG"/>
                     <connections>
                         <outlet property="boardImageView" destination="nh2-y9-FfD" id="Vz5-Ov-M7n"/>
+                        <outlet property="levelLabel" destination="5Ii-G2-mSx" id="3sI-Z8-VMH"/>
+                        <outlet property="volumeLabel" destination="PPz-ML-yoi" id="HTY-pt-uAv"/>
+                        <outlet property="weightLabel" destination="IVr-zd-3k7" id="NoL-Dj-sGx"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="mMi-CP-I3k" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="137.68115942028987" y="94.419642857142847"/>
+            <point key="canvasLocation" x="1047.8260869565217" y="94.419642857142847"/>
         </scene>
     </scenes>
     <resources>
