@@ -30,13 +30,12 @@ class DetailViewController: UIViewController, StoryboardProtocol {
     private func loadSelectedBoard() {
         guard
             surfBoardData != nil
-            else {  return }
+            else { return }
         boardImageView.image = UIImage(named: surfBoardData?.imageName ?? "")
         levelLabel.text = surfBoardData?.level
         volumeLabel.text = surfBoardData?.volume
-        weightLabel.text = "\(surfBoardData?.weight ?? "") kg"
+        weightLabel.text = "\(surfBoardData?.weight ?? 0) kg"
 
-        
     }
     
 }
