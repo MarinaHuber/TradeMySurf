@@ -38,6 +38,8 @@ enum Season: Int, CaseIterable {
 		 return 0
 	 }
 }
+/* check refactor commit: https://github.com/MarinaHuber/TradeMySurf/commit/017a05c724edeba5984daa269a44754fdf8f7420
+*/
 
 enum TripSection: CaseIterable {
 	case tipBeginner, tipBeginnerInter, tipIntermediate, tipAdvanced
