@@ -305,9 +305,7 @@ extension SurfTripViewController: UICollectionViewDelegate {
     func collectionView(_ collectionView: UICollectionView, willDisplay cell: UICollectionViewCell, forItemAt indexPath: IndexPath) {
         cell.contentView.backgroundColor = UIColor.systemGray6
     }
-//Pass selected image to detail
-//https://stackoverflow.com/questions/28315133/swift-pass-uitableviewcell-label-to-new-viewcontroller
-    
+  
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
         collectionView.deselectItem(at: indexPath, animated: false)
          guard let item = dataSource.itemIdentifier(for: indexPath) else { return }

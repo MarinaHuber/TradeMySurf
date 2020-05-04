@@ -23,13 +23,27 @@ class BoardSupplementaryView: UICollectionReusableView {
         subtitle.text = "Shapes and volume for your level"
     }
     
+    func printFonts() {
+        let fontFamilyNames = UIFont.familyNames
+        for familyName in fontFamilyNames {
+            print("------------------------------")
+            print("Font Family Name = [\(familyName)]")
+            let names = UIFont.fontNames(forFamilyName: familyName)
+            print("Font Names = [\(names)]")
+        }
+    }
+    
     func configureUI() {
+        printFonts()
         let separator = UIView(frame: .zero)
         separator.translatesAutoresizingMaskIntoConstraints = false
         separator.backgroundColor = .white
 
         title.textColor = .white
-        title.font = UIFontMetrics.default.scaledFont(for: UIFont.systemFont(ofSize: 22, weight: .bold))
+        title.textAlignment = .center
+        title.font = UIFont(name: "AvenirNext-Bold", size: 22)
+        subtitle.font = UIFont(name: "AvenirNext-Regular", size: 14)
+        subtitle.textAlignment = .center
         subtitle.textColor = .white
 
         let stackView = UIStackView(arrangedSubviews: [separator, title, subtitle])
@@ -63,7 +77,7 @@ class LocationSupplementaryView: UICollectionReusableView {
     }
     
     func fillWith(_ data: Location) {
-        title.text = "Surf loacation for:\(data.beaufortScaleWave)"
+        title.text = "Surf location for: \(data.beaufortScaleWave)"
         subtitle.text = "Beaufort scale measure for wave height"
     }
     
@@ -73,7 +87,10 @@ class LocationSupplementaryView: UICollectionReusableView {
         separator.backgroundColor = .white
 
         title.textColor = .white
-        title.font = UIFontMetrics.default.scaledFont(for: UIFont.systemFont(ofSize: 22, weight: .bold))
+        title.textAlignment = .center
+        title.font = UIFont(name: "AvenirNext-Bold", size: 22)
+        subtitle.font = UIFont(name: "AvenirNext-Regular", size: 14)
+        subtitle.textAlignment = .center
         subtitle.textColor = .white
 
         let stackView = UIStackView(arrangedSubviews: [separator, title, subtitle])
