@@ -11,12 +11,12 @@
         <!--Welcome View Controller-->
         <scene sceneID="mB9-10-hPS">
             <objects>
-                <viewController storyboardIdentifier="WelcomeViewController" id="btd-kb-JMM" customClass="WelcomeViewController" customModule="Match_my_Surf" customModuleProvider="target" sceneMemberID="viewController">
-                    <view key="view" contentMode="scaleToFill" id="fie-jj-q1a">
+                <viewController storyboardIdentifier="WelcomeViewController" id="btd-kb-JMM" customClass="WelcomeViewController" customModule="Surf_Curve" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" alpha="0.90000000000000002" contentMode="scaleToFill" id="fie-jj-q1a">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" alpha="0.20000000000000001" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="yuliya-kosolapova" translatesAutoresizingMaskIntoConstraints="NO" id="rr3-PX-WlU">
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" alpha="0.40000000000000002" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="yuliya-kosolapova" translatesAutoresizingMaskIntoConstraints="NO" id="rr3-PX-WlU">
                                 <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                                 <constraints>
                                     <constraint firstAttribute="width" secondItem="rr3-PX-WlU" secondAttribute="height" multiplier="207:256" constant="-310.5" id="Z05-3G-bK8"/>
@@ -59,14 +59,14 @@
                                 <color key="textColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <view alpha="0.69999999999999996" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="lAD-Yi-ibb">
-                                <rect key="frame" x="64.666666666666657" y="296" width="284.66666666666674" height="296.33333333333326"/>
+                            <view alpha="0.59999999999999998" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="lAD-Yi-ibb">
+                                <rect key="frame" x="72" y="296" width="270" height="296.33333333333326"/>
                                 <subviews>
                                     <stackView opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" axis="vertical" distribution="fillEqually" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="1gZ-V7-pvI">
-                                        <rect key="frame" x="0.0" y="0.0" width="284.66666666666669" height="296.33333333333331"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="270" height="296.33333333333331"/>
                                         <subviews>
                                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Kzz-QI-nYH">
-                                                <rect key="frame" x="0.0" y="0.0" width="284.66666666666669" height="93.333333333333329"/>
+                                                <rect key="frame" x="0.0" y="0.0" width="270" height="93.333333333333329"/>
                                                 <subviews>
                                                     <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="boardSurf" translatesAutoresizingMaskIntoConstraints="NO" id="yxA-cX-5V6">
                                                         <rect key="frame" x="8" y="11" width="81" height="81"/>
@@ -80,7 +80,7 @@
                                                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                     </view>
                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="249" verticalHuggingPriority="251" text="Recommend surf equipment according to your level" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="3" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Zbw-fK-Fs8">
-                                                        <rect key="frame" x="99.999999999999986" y="8" width="181.66666666666663" height="85.333333333333329"/>
+                                                        <rect key="frame" x="100" y="8" width="167" height="85.333333333333329"/>
                                                         <fontDescription key="fontDescription" name="AvenirNext-Medium" family="Avenir Next" pointSize="14"/>
                                                         <color key="textColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                                                         <nil key="highlightedColor"/>
@@ -102,7 +102,7 @@
                                                 </constraints>
                                             </view>
                                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="npM-Zg-42a">
-                                                <rect key="frame" x="0.0" y="101.33333333333331" width="284.66666666666669" height="93.666666666666686"/>
+                                                <rect key="frame" x="0.0" y="101.33333333333331" width="270" height="93.666666666666686"/>
                                                 <subviews>
                                                     <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="calendar" translatesAutoresizingMaskIntoConstraints="NO" id="i7C-uU-pPb">
                                                         <rect key="frame" x="8" y="8" width="88" height="77.666666666666671"/>
@@ -113,7 +113,7 @@
                                                         </constraints>
                                                     </imageView>
                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Your surf locations according to a surf season" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="3" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="mjz-Z2-hma">
-                                                        <rect key="frame" x="105.99999999999999" y="8" width="167.66666666666663" height="77.666666666666671"/>
+                                                        <rect key="frame" x="106" y="8" width="153" height="77.666666666666671"/>
                                                         <fontDescription key="fontDescription" name="AvenirNext-Medium" family="Avenir Next" pointSize="14"/>
                                                         <color key="textColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                                                         <nil key="highlightedColor"/>
@@ -138,7 +138,7 @@
                                                 </constraints>
                                             </view>
                                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="kht-kd-LqN">
-                                                <rect key="frame" x="0.0" y="203" width="284.66666666666669" height="93.333333333333314"/>
+                                                <rect key="frame" x="0.0" y="203" width="270" height="93.333333333333314"/>
                                                 <subviews>
                                                     <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="sea-splash" translatesAutoresizingMaskIntoConstraints="NO" id="7MQ-OX-yzg">
                                                         <rect key="frame" x="8" y="8" width="90" height="77.333333333333329"/>
@@ -147,7 +147,7 @@
                                                         </constraints>
                                                     </imageView>
                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Help with buying a board and price prediction" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="3" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="xXy-El-CSh">
-                                                        <rect key="frame" x="107.99999999999999" y="8" width="162.66666666666663" height="77.333333333333329"/>
+                                                        <rect key="frame" x="108" y="8" width="148" height="77.333333333333329"/>
                                                         <fontDescription key="fontDescription" name="AvenirNext-Medium" family="Avenir Next" pointSize="14"/>
                                                         <color key="textColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                                                         <nil key="highlightedColor"/>
@@ -174,13 +174,13 @@
                                         </subviews>
                                     </stackView>
                                 </subviews>
-                                <color key="backgroundColor" white="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <color key="backgroundColor" red="0.045845570859999997" green="0.1064943424" blue="0.23888843909999999" alpha="0.96583406689999995" colorSpace="custom" customColorSpace="sRGB"/>
                                 <constraints>
                                     <constraint firstAttribute="trailing" secondItem="1gZ-V7-pvI" secondAttribute="trailing" id="9f0-cz-JeF"/>
                                     <constraint firstItem="1gZ-V7-pvI" firstAttribute="leading" secondItem="lAD-Yi-ibb" secondAttribute="leading" id="AO7-nx-o0m"/>
                                     <constraint firstAttribute="bottom" secondItem="1gZ-V7-pvI" secondAttribute="bottom" id="ULM-hB-Swz"/>
                                     <constraint firstItem="1gZ-V7-pvI" firstAttribute="top" secondItem="lAD-Yi-ibb" secondAttribute="top" id="UnY-Gc-aXH"/>
-                                    <constraint firstAttribute="width" secondItem="lAD-Yi-ibb" secondAttribute="height" multiplier="318:325" constant="-5.1579487179487273" id="wfh-4P-odd"/>
+                                    <constraint firstAttribute="width" secondItem="lAD-Yi-ibb" secondAttribute="height" multiplier="318:325" constant="-20" id="wfh-4P-odd"/>
                                 </constraints>
                                 <userDefinedRuntimeAttributes>
                                     <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
@@ -189,7 +189,7 @@
                                 </userDefinedRuntimeAttributes>
                             </view>
                         </subviews>
-                        <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <color key="backgroundColor" red="0.045845570859999997" green="0.1064943424" blue="0.23888843909999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
                             <constraint firstItem="r8K-M5-40N" firstAttribute="leading" secondItem="GrG-Zn-ifo" secondAttribute="leading" constant="50" id="15j-BN-4jc"/>
                             <constraint firstItem="GrG-Zn-ifo" firstAttribute="trailing" secondItem="r8K-M5-40N" secondAttribute="trailing" constant="50" id="FOY-4E-eDP"/>

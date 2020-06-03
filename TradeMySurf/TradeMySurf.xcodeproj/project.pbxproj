@@ -107,7 +107,7 @@
 		9C467C66234F2A7D009F4D58 /* Surfboard.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Surfboard.swift; sourceTree = "<group>"; };
 		9C4C54732349C28500FB2653 /* GuideViewController.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = GuideViewController.storyboard; sourceTree = "<group>"; };
 		9C53D5BF234C126600A3BD80 /* StoryboardProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StoryboardProtocol.swift; sourceTree = "<group>"; };
-		9C5B6448232A506C000727E6 /* Match my Surf.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Match my Surf.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		9C5B6448232A506C000727E6 /* Surf Curve.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Surf Curve.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		9C5B644B232A506C000727E6 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		9C5B644F232A506C000727E6 /* PriceCalculatorViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PriceCalculatorViewController.swift; sourceTree = "<group>"; };
 		9C5B6455232A506C000727E6 /* TradeMySurf.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = TradeMySurf.xcdatamodel; sourceTree = "<group>"; };
@@ -280,7 +280,7 @@
 		9C5B6449232A506C000727E6 /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				9C5B6448232A506C000727E6 /* Match my Surf.app */,
+				9C5B6448232A506C000727E6 /* Surf Curve.app */,
 				9C5B6461232A5073000727E6 /* TradeMySurfTests.xctest */,
 				9C5B646C232A5073000727E6 /* TradeMySurfUITests.xctest */,
 			);
@@ -503,7 +503,7 @@
 			);
 			name = TradeMySurf;
 			productName = TradeMySurf;
-			productReference = 9C5B6448232A506C000727E6 /* Match my Surf.app */;
+			productReference = 9C5B6448232A506C000727E6 /* Surf Curve.app */;
 			productType = "com.apple.product-type.application";
 		};
 		9C5B6460232A5073000727E6 /* TradeMySurfTests */ = {
@@ -928,7 +928,7 @@
 					"@executable_path/Frameworks",
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.marinahuber;
-				PRODUCT_NAME = "Match my Surf";
+				PRODUCT_NAME = "Surf Curve";
 				PROVISIONING_PROFILE_SPECIFIER = "";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = 1;
@@ -951,7 +951,7 @@
 					"@executable_path/Frameworks",
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.marinahuber;
-				PRODUCT_NAME = "Match my Surf";
+				PRODUCT_NAME = "Surf Curve";
 				PROVISIONING_PROFILE_SPECIFIER = "";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = 1;
