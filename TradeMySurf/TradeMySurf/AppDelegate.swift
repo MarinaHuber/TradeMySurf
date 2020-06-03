@@ -26,9 +26,8 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         coordinator = Coordinator(window: window)
         window.makeKeyAndVisible()
         scenePresenter?.presentSplash()
-        
-    // configure Fonts here
-        customiseNavBar()
+    
+        customizeNavBar()
 
 		return true
 	}
@@ -37,8 +36,21 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     }
 
     
-    func customiseNavBar () {
+    func customizeNavBar () {
         guard let navigationController = self.window?.rootViewController as? UINavigationController else { return }
         navigationController.setNavigationBarHidden(true, animated: true)
+    }
+}
+
+func applicationDidEnterBackground(_ application: UIApplication) {
+    if UserDefaults.standard.userWasHere {
+        UserDefaults.standard.userWasHere = true
+    }
+}
+
+func applicationWillTerminate(_ application: UIApplication) {
+    // Called when the application is about to terminate. Save data if appropriate. See also applicationDidEnterBackground:.
+    if UserDefaults.standard.userWasHere {
+        UserDefaults.standard.userWasHere = true
     }
 }

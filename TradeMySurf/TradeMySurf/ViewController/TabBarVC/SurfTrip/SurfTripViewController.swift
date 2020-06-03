@@ -65,8 +65,10 @@ class SurfTripViewController: UIViewController, StoryboardProtocol {
         super.viewDidDisappear(animated)
         self.userComingFromOnboarding = false
     }
+    
     @objc func popToRoot(_ sender: UIBarButtonItem) {
         scenePresenter?.presentAddLevel()
+        self.userComingFromOnboarding = false
     }
 }
 
