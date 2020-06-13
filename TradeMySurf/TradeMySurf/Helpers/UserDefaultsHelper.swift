@@ -28,7 +28,7 @@ extension UserDefaults {
 		get {
 			///// Register the app default:
 			/// Initialize value from UserDefaults returns T
-			UserDefaults.standard.register(defaults: ["userWasHere" : false])
+//			UserDefaults.standard.register(defaults: ["userWasHere" : false])
 			return UserDefaults.standard.bool(forKey: "userWasHere")
 		}
 		set {

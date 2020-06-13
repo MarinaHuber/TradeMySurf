@@ -927,7 +927,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = com.marinahuber;
+				PRODUCT_BUNDLE_IDENTIFIER = com.marinahuber.surfcurve;
 				PRODUCT_NAME = "Surf Curve";
 				PROVISIONING_PROFILE_SPECIFIER = "";
 				SWIFT_VERSION = 5.0;
@@ -950,7 +950,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = com.marinahuber;
+				PRODUCT_BUNDLE_IDENTIFIER = com.marinahuber.surfcurve;
 				PRODUCT_NAME = "Surf Curve";
 				PROVISIONING_PROFILE_SPECIFIER = "";
 				SWIFT_VERSION = 5.0;

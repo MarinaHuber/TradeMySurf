@@ -43,14 +43,14 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 }
 
 func applicationDidEnterBackground(_ application: UIApplication) {
-    if UserDefaults.standard.userWasHere {
+    if UserDefaults.standard.userWasHere == true {
         UserDefaults.standard.userWasHere = true
     }
 }
 
 func applicationWillTerminate(_ application: UIApplication) {
     // Called when the application is about to terminate. Save data if appropriate. See also applicationDidEnterBackground:.
-    if UserDefaults.standard.userWasHere {
+    if UserDefaults.standard.userWasHere == true {
         UserDefaults.standard.userWasHere = true
     }
 }

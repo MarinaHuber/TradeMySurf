@@ -68,21 +68,15 @@ private extension SmallTableViewCell {
         stackView.distribution = .fill
         stackView.alignment = .fill
         stackView.spacing = 5
-
-        // Layout
-
-        titleLabel.translatesAutoresizingMaskIntoConstraints = false
-        dateLabel.translatesAutoresizingMaskIntoConstraints = false
-        descriptionLabel.translatesAutoresizingMaskIntoConstraints = false
         stackView.translatesAutoresizingMaskIntoConstraints = false
 
         let container = self.contentView
 
         container.addSubview(stackView)
 
-        stackView.leadingAnchor.constraint(equalTo: container.leadingAnchor, constant: UIEdgeInsets(top: 0, left: 0, bottom: 0, right: 0).left).isActive = true
-        stackView.trailingAnchor.constraint(equalTo: container.trailingAnchor, constant: UIEdgeInsets(top: 0, left: 0, bottom: 0, right: 3).left).isActive = true
-        stackView.topAnchor.constraint(equalTo: container.topAnchor, constant: UIEdgeInsets(top: 0, left: 5, bottom: 3, right: 0).left).isActive = true
-        stackView.bottomAnchor.constraint(lessThanOrEqualTo: container.bottomAnchor, constant: UIEdgeInsets(top: 0, left: 5, bottom: 3, right: 3).left).isActive = true
+        stackView.leadingAnchor.constraint(equalTo: container.leadingAnchor, constant: 10).isActive = true
+        stackView.trailingAnchor.constraint(equalTo: container.trailingAnchor, constant: -10).isActive = true
+        stackView.topAnchor.constraint(equalTo: container.topAnchor, constant: 10).isActive = true
+        stackView.bottomAnchor.constraint(equalTo: container.bottomAnchor, constant: -10).isActive = true
     }
 }
