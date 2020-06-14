@@ -28,119 +28,119 @@
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <stackView opaque="NO" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" axis="vertical" spacing="12" translatesAutoresizingMaskIntoConstraints="NO" id="Zhb-8Z-0KT">
-                                        <rect key="frame" x="0.0" y="44" width="414" height="1326"/>
+                                        <rect key="frame" x="0.0" y="44" width="414" height="1375"/>
                                         <subviews>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="How do I use calculator feature in the app?" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="2UY-SB-0hn">
-                                                <rect key="frame" x="0.0" y="0.0" width="414" height="22"/>
+                                                <rect key="frame" x="8" y="8" width="398" height="22"/>
                                                 <fontDescription key="fontDescription" name="AvenirNext-Medium" family="Avenir Next" pointSize="16"/>
                                                 <nil key="textColor"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="10" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="1Gn-Bg-T9U">
-                                                <rect key="frame" x="0.0" y="34" width="414" height="134"/>
+                                                <rect key="frame" x="8" y="42" width="398" height="150.5"/>
                                                 <string key="text">Nothing is worse than buying a board for an advanced + rider and struggling to ride it. You'll end up needing to sell it and buy a board more suited to your need. If you have ever walked into a surf shop, or browsed online, you’ll know that there is more than a couple to choose from. It seems like a new brand is coming out weekly from mass produced or custom makers. Calculator is here to give you variaty of choices you ca name and range of money you will need to purchase.</string>
                                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                                 <nil key="textColor"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="What is surfboard volume?" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="N2t-xy-vHs" userLabel="What is surfboard volume?">
-                                                <rect key="frame" x="0.0" y="180" width="414" height="22"/>
+                                                <rect key="frame" x="8" y="204.5" width="398" height="22"/>
                                                 <fontDescription key="fontDescription" name="AvenirNext-Medium" family="Avenir Next" pointSize="16"/>
                                                 <nil key="textColor"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="11" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ZTs-du-77p">
-                                                <rect key="frame" x="0.0" y="214" width="414" height="117"/>
+                                                <rect key="frame" x="8" y="238.5" width="398" height="117"/>
                                                 <string key="text">Volume is important element to consider when choosing a surfboard. It's the factor that can most affect the number of waves you catch, and how much fun you have in water.But it isn't everything. Understanding how the curved shapes and the surfboard's dimensions affect your surfing will also help you find better surfboardsfor your surf level, and have positive impact on your progression.</string>
                                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                                 <nil key="textColor"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="What is Beaufort scale measure for wave height?" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="gYx-3D-HVX" userLabel="Boufort">
-                                                <rect key="frame" x="0.0" y="343" width="414" height="22"/>
+                                                <rect key="frame" x="8" y="367.5" width="398" height="22"/>
                                                 <fontDescription key="fontDescription" name="AvenirNext-Medium" family="Avenir Next" pointSize="16"/>
                                                 <nil key="textColor"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="7" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="FoR-18-WYe">
-                                                <rect key="frame" x="0.0" y="377" width="414" height="84"/>
+                                                <rect key="frame" x="8" y="401.5" width="398" height="100.5"/>
                                                 <string key="text">Beaufort scale measure is important element to consider when choosing a surf location. It's the factor that can most affect the size and the power of waves in water. But it isn't everything. Understanding the scale ranging from 0-17 is understanding the global wind speed to observed conditions at sea and land.</string>
                                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                                 <nil key="textColor"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="What means trimming down the middle line of the wave?" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="GxR-qa-Rtg">
-                                                <rect key="frame" x="0.0" y="473" width="414" height="44"/>
+                                                <rect key="frame" x="8" y="514" width="398" height="44"/>
                                                 <fontDescription key="fontDescription" name="AvenirNext-Medium" family="Avenir Next" pointSize="16"/>
                                                 <nil key="textColor"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="10" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="29K-xp-ja5">
-                                                <rect key="frame" x="0.0" y="529" width="414" height="117"/>
+                                                <rect key="frame" x="8" y="570" width="398" height="117"/>
                                                 <string key="text">A surfboard moves a bit like a boat, meaning that if a boat needs to to a sharp turn to change direction, then the nose of the boat will go up in order to pivot easily (carving). If a boat needs to turn at high speed, the nose will stay closer to the water and the turn will be less sharp (trimming). A surfboard does the same thing. Fast breaking wave: Trimming, slow braking: Carving.</string>
                                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                                 <nil key="textColor"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
                                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="trimming" translatesAutoresizingMaskIntoConstraints="NO" id="m7Y-tI-J0v">
-                                                <rect key="frame" x="0.0" y="658" width="414" height="95"/>
+                                                <rect key="frame" x="8" y="699" width="398" height="95"/>
                                                 <constraints>
                                                     <constraint firstAttribute="height" constant="95" id="V8a-Q9-mQH"/>
                                                 </constraints>
                                             </imageView>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="How do I know if I am goofy or regular?" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="S0e-6D-G4q">
-                                                <rect key="frame" x="0.0" y="765" width="414" height="23.5"/>
+                                                <rect key="frame" x="8" y="806" width="398" height="23.5"/>
                                                 <fontDescription key="fontDescription" name="AvenirNext-Medium" family="Avenir Next" pointSize="17"/>
                                                 <nil key="textColor"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="What are best surf exercises?" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="qDe-my-yMM">
-                                                <rect key="frame" x="0.0" y="800.5" width="414" height="20.5"/>
+                                                <rect key="frame" x="8" y="841.5" width="398" height="20.5"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                 <nil key="textColor"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="0KR-Se-Xp6">
-                                                <rect key="frame" x="0.0" y="833" width="414" height="81.5"/>
+                                                <rect key="frame" x="8" y="874" width="398" height="81.5"/>
                                                 <string key="text">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec at rhoncus est. Vivamus ut diam ac mauris sagittis scelerisque. Aliquam sed dictum risus, quis cursus metus.</string>
                                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                 <nil key="textColor"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Where can I fins best surf videos?" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="22e-mz-2Kb">
-                                                <rect key="frame" x="0.0" y="926.5" width="414" height="20.5"/>
+                                                <rect key="frame" x="8" y="967.5" width="398" height="20.5"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                 <nil key="textColor"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="7" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="MoP-R8-Mbl">
-                                                <rect key="frame" x="0.0" y="959" width="414" height="67"/>
+                                                <rect key="frame" x="8" y="1000" width="398" height="67"/>
                                                 <string key="text">Nullam mattis, lectus vitae ultrices sollicitudin, dolor ipsum semper augue, sed semper dui arcu quis velit. Aliquam quis ipsum felis. Vestibulum non tellus ac tellus imperdiet egestas id vitae nibh.</string>
                                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                                 <nil key="textColor"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Whats surf music Blitz?" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="rBd-hE-Z2A">
-                                                <rect key="frame" x="0.0" y="1038" width="414" height="22"/>
+                                                <rect key="frame" x="8" y="1079" width="398" height="22"/>
                                                 <fontDescription key="fontDescription" name="AvenirNext-Regular" family="Avenir Next" pointSize="16"/>
                                                 <nil key="textColor"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Fusce ut imperdiet enim. Pellentesque semper porta nibh, id maximus nisi euismod a." textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="3" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ufH-a1-uBL">
-                                                <rect key="frame" x="0.0" y="1072" width="414" height="41"/>
+                                                <rect key="frame" x="8" y="1113" width="398" height="41"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                 <nil key="textColor"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="5" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="trJ-Hf-vcI">
-                                                <rect key="frame" x="0.0" y="1125" width="414" height="87.5"/>
+                                                <rect key="frame" x="8" y="1166" width="398" height="87.5"/>
                                                 <string key="text">Vivamus non enim velit. Duis nisl erat, luctus sed pulvinar at, vehicula in ligula. Nullam euismod, ex nec pretium posuere, purus turpis ultrices nibh, sit amet placerat mauris justo eu urna. </string>
                                                 <fontDescription key="fontDescription" name="AvenirNext-Regular" family="Avenir Next" pointSize="16"/>
                                                 <nil key="textColor"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" verticalCompressionResistancePriority="749" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="10" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="RnP-Cz-VP3">
-                                                <rect key="frame" x="0.0" y="1224.5" width="414" height="101.5"/>
+                                                <rect key="frame" x="8" y="1265.5" width="398" height="101.5"/>
                                                 <string key="text">Duis leo leo, placerat ut orci non, viverra luctus odio. Nunc pharetra luctus mi, et condimentum sapien aliquet quis. Curabitur tincidunt nulla metus, nec blandit quam tempus vel. Etiam est diam, tristique sit amet malesuada id, maximus sed erat.</string>
                                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                 <nil key="textColor"/>
@@ -148,6 +148,8 @@
                                             </label>
                                         </subviews>
                                         <color key="backgroundColor" systemColor="systemGreenColor" red="0.20392156859999999" green="0.78039215689999997" blue="0.34901960780000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <directionalEdgeInsets key="directionalLayoutMargins" top="8" leading="8" bottom="8" trailing="8"/>
+                                        <viewLayoutGuide key="safeArea" id="HFM-Xn-NuK"/>
                                     </stackView>
                                 </subviews>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
