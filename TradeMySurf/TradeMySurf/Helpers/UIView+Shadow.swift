@@ -19,6 +19,15 @@ extension UIView {
     func addSubviews(_ views: UIView...) {
         for view in views { addSubview(view) }
     }
+    
+    func verShake(){
+        
+        let animation = CAKeyframeAnimation(keyPath: "transform.translation.y")
+        animation.timingFunction = CAMediaTimingFunction(name: CAMediaTimingFunctionName.linear)
+        animation.duration = 5
+        animation.values = [0, -2, 2, -2, 2, -2, 2, -2, 2, 0]
+        layer.add(animation, forKey: "shake")
+    }
 }
 
 extension UIButton {
