@@ -30,7 +30,7 @@ class AddLevelViewController: UIViewController, StoryboardProtocol {
 
 private extension AddLevelViewController {
     private func setPickerPopover() {
-        StringPickerPopover(title: "Please choose one", choices: levels)
+        StringPickerPopover(title: "Pick a surf goal", choices: levels)
             .setSize(width: view.bounds.size.width, height: 200)
             .setRowHeight(60)
             .setSelectedRow(0)

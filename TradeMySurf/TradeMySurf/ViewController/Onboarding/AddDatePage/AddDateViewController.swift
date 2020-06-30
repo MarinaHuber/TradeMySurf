@@ -38,7 +38,6 @@ private extension AddDateViewController {
             .setDimmedBackgroundView(enabled: true)
             .setOutsideTapDismissing(allowed: false)
             .setClearButton(title: "This is what will appear in your surf recommendations", font: UIFont.systemFont(ofSize: 11), color: .systemIndigo, action: { popover, selectedDate in
-                            print("clear")
                             //Rewind
                             popover.setSelectedDate(Date()).reload()
                         })
