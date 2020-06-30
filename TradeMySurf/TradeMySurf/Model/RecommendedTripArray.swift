@@ -25,7 +25,7 @@ public struct RecommendedTripArray {
         return [Surfboard(level: "Beginner", volume: "80 L", imageName: "1.2", weight: 40, weightUnit: ">", beaufortScaleWave: "0 - 1.4 m"),
                 Surfboard(level: "Beginner", volume: "50 L", imageName: "2.2", weight: 50, weightUnit: "<", beaufortScaleWave: " 0 - 1.4 m"),
                 Surfboard(level: "Beginner", volume: "60 L", imageName: "3.2", weight: 60, weightUnit: "<", beaufortScaleWave: " 0 - 1.4 m"),
-                Surfboard(level: "TBeginner", volume: "70 L", imageName: "4.2", weight: 70, weightUnit: "<", beaufortScaleWave: " 0 - 1.4 m")
+                Surfboard(level: "Beginner", volume: "70 L", imageName: "4.2", weight: 70, weightUnit: "<", beaufortScaleWave: " 0 - 1.4 m")
 			]
     }()
 	public var surfboardsBeginnerInter: [Surfboard] = {
@@ -99,8 +99,8 @@ public struct RecommendedTripArray {
     public var tipBeginner: [SurfTip] = {
         return [
             SurfTip(goal: "Learning to stand up in white water waves",
-                    description: "White water waves are broken waves they belong to the fourth stage of the wave shape. Beginners should start out on a foam surfboard: They are from soft material and perfect for learning.",
-                    descriptionLocation: " Volumen is important element to consider when choosing a surfboard. More weight you have the more volume you need and more waves you can catch.")
+                    description: "White water waves are broken waves they belong to the fourth stage of the wave shape. Beginners should start out on a foam surfboard made of soft material and good for learning.",
+                    descriptionLocation: "Volumen is important element to consider when choosing a surfboard. More weight you have the more volume you need and more waves you can catch.")
         ]
     }()
     

@@ -46,7 +46,7 @@ private extension SmallTableViewCell {
         // Styling
         contentView.layer.cornerRadius = 10
         titleLabel.textAlignment = .natural
-        titleLabel.font = UIFont(descriptor: UIFont.preferredFont(forTextStyle: .headline).fontDescriptor.withSymbolicTraits(.traitLooseLeading)!, size: 18)
+        titleLabel.font = UIFont(descriptor: UIFont.preferredFont(forTextStyle: .headline).fontDescriptor.withSymbolicTraits(.traitLooseLeading)!, size: 17)
         titleLabel.textColor = .black
         titleLabel.numberOfLines = 0
 

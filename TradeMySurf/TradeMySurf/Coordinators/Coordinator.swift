@@ -123,4 +123,13 @@ final class Coordinator: UIResponder, CoorinatorPresenting {
         navigationController.present(controller, animated: true, completion: nil)
     }
     
+    func presentDetailLocation(_ data: Location) {
+        
+//        let storyboard: UIStoryboard = UIStoryboard(name: Constants.Storyboards.locationViewController, bundle: nil)
+//        let controller: DetailViewController = DetailViewController.instantiate(from: storyboard)
+//        controller.surfBoardData = data
+//        guard let navigationController = window.rootViewController as? UINavigationController else { fatalError() }
+//        navigationController.present(controller, animated: true, completion: nil)
+    }
+    
 }
