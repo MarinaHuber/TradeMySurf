@@ -29,7 +29,7 @@ class SurfTripViewController: UIViewController, StoryboardProtocol {
     }()
 
     private var selectedLevel = UserDefaults.standard.selectedLevel
-    private var selectedDate = UserDefaults.standard.surfingTime
+   // private var selectedDate = UserDefaults.standard.surfingTime
     private var userComingFromOnboarding = UserDefaults.standard.userWasHere
 
     private(set) var collectionView: UICollectionView!
@@ -84,7 +84,7 @@ private extension SurfTripViewController {
                     let cell = collectionView.dequeueCell(ofType: SurfBoardCollectionViewCell.self, for: indexPath)
                     cell.fillWithData(board)
                     return cell
-                case .surfCountry(let location, _, _):
+                case .surfCountry(let location, _):
                     let cell = collectionView.dequeueCell(ofType: LocationCollectionViewCell.self, for: indexPath)
                     cell.fillWithData(location)
                     return cell
@@ -121,7 +121,7 @@ private extension SurfTripViewController {
                         }
                     }
                     return boardHeader
-                case .surfCountryAutumn, .surfCountrySpring, .surfCountrySummer, .surfCountryWinter:
+                case .surfCountrySummer, .surfCountryAutumn, .surfCountryWinter, .surfCountrySpring:
                     let locationHeader = collectionView.dequeueReusableView(ofType: LocationSupplementaryView.self, forKind: UICollectionView.elementKindSectionHeader, for: indexPath)
                     items.map {
                         _ = $0.map {
@@ -147,7 +147,8 @@ private extension SurfTripViewController {
             snapshot.appendSections([.surfboardsBeginner])
             snapshot.appendItems(Services().dataService.surfboardsBeginner.map({ TripItem.surfboard($0, .Beginner) }))
             
-            updateLocationSection()
+            snapshot.appendSections([.surfCountrySummer])
+            snapshot.appendItems(Services().dataService.surfCountrySummer.map({ TripItem.surfCountry($0, .Beginner) }))
             
             snapshot.appendSections([.tipBeginner])
             snapshot.appendItems(Services().dataService.tipBeginner.map({ TripItem.tip($0, .Beginner) }))
@@ -155,7 +156,8 @@ private extension SurfTripViewController {
             snapshot.appendSections([.surfboardsBeginnerInter])
             snapshot.appendItems(Services().dataService.surfboardsBeginnerInter.map({ TripItem.surfboard($0, .BeginnerIntermediate) }))
             
-            updateLocationSection()
+            snapshot.appendSections([.surfCountryAutumn])
+            snapshot.appendItems(Services().dataService.surfCountryAutumn.map({ TripItem.surfCountry($0, .BeginnerIntermediate) }))
             
             snapshot.appendSections([.tipBeginnerInter])
             snapshot.appendItems(Services().dataService.tipBeginnerInter.map({ TripItem.tip($0, .BeginnerIntermediate) }))
@@ -163,7 +165,8 @@ private extension SurfTripViewController {
             snapshot.appendSections([.surfboardsIntermediate])
             snapshot.appendItems(Services().dataService.surfboardsIntermediate.map({  TripItem.surfboard($0, .Intermediate) }))
             
-            updateLocationSection()
+            snapshot.appendSections([.surfCountryWinter])
+            snapshot.appendItems(Services().dataService.surfCountryWinter.map({ TripItem.surfCountry($0, .Intermediate) }))
             
             snapshot.appendSections([.tipIntermediate])
             snapshot.appendItems(Services().dataService.tipIntermediate.map({ TripItem.tip($0, .Intermediate) }))
@@ -171,7 +174,8 @@ private extension SurfTripViewController {
             snapshot.appendSections([.surfboardsAdvanced])
             snapshot.appendItems(Services().dataService.surfboardsAdvanced.map({  TripItem.surfboard($0, .Advanced) }))
             
-            updateLocationSection()
+            snapshot.appendSections([.surfCountrySpring])
+            snapshot.appendItems(Services().dataService.surfCountrySpring.map({ TripItem.surfCountry($0, .Advanced) }))
             
             snapshot.appendSections([.tipAdvanced])
             snapshot.appendItems(Services().dataService.tipAdvanced.map({ TripItem.tip($0, .Advanced) }))
@@ -183,26 +187,26 @@ private extension SurfTripViewController {
     }
     
     
-    func updateLocationSection() {
-        
-        let selected = makeIntFromMonth()
-        let pickerDate = Season.sortBy(month: selected)
-        switch pickerDate {
-        case 0:
-            snapshot.appendSections([.surfCountryWinter])
-            snapshot.appendItems(Services().dataService.surfCountryWinter.map({ TripItem.surfCountry($0, .Beginner) }))
-        case 1:
-            snapshot.appendSections([.surfCountrySpring])
-            snapshot.appendItems(Services().dataService.surfCountrySpring.map({ TripItem.surfCountry($0, .spring) }))
-        case 2:
-            snapshot.appendSections([.surfCountrySummer])
-            snapshot.appendItems(Services().dataService.surfCountrySummer.map({ TripItem.surfCountry($0, .summer) }))
-        case 3:
-            snapshot.appendSections([.surfCountryAutumn])
-            snapshot.appendItems(Services().dataService.surfCountryAutumn.map({ TripItem.surfCountry($0, .autumn, <#Surfboard#>) }))
-        default: break
-        }
-    }
+//    func updateLocationSection() {
+//
+//        let selected = makeIntFromMonth()
+//        let pickerDate = Season.sortBy(month: selected)
+//        switch pickerDate {
+//        case 0:
+//            snapshot.appendSections([.surfCountryWinter])
+//            snapshot.appendItems(Services().dataService.surfCountryWinter.map({ TripItem.surfCountry($0, .Beginner) }))
+//        case 1:
+//            snapshot.appendSections([.surfCountrySpring])
+//            snapshot.appendItems(Services().dataService.surfCountrySpring.map({ TripItem.surfCountry($0, .BeginnerIntermediate) }))
+//        case 2:
+//            snapshot.appendSections([.surfCountrySummer])
+//            snapshot.appendItems(Services().dataService.surfCountrySummer.map({ TripItem.surfCountry($0, .Intermediate) }))
+//        case 3:
+//            snapshot.appendSections([.surfCountryAutumn])
+//            snapshot.appendItems(Services().dataService.surfCountryAutumn.map({ TripItem.surfCountry($0, .Advanced) }))
+//        default: break
+//        }
+//    }
     
     
 
@@ -210,14 +214,14 @@ private extension SurfTripViewController {
 // MARK: place - Date formatter logic - Extension
 private extension SurfTripViewController {
 
-    func makeIntFromMonth() -> Int {
-        let monthOfYear = selectedDate?.month
-        let dateFormat = DateFormatter()
-        dateFormat.dateFormat = "LLLL"
-        let date = dateFormat.date(from: monthOfYear ?? "")
-        let monthInt = Calendar.current.component(.month, from: date ?? Date())
-        return monthInt
-    }
+//    func makeIntFromMonth() -> Int {
+//        let monthOfYear = selectedDate?.month
+//        let dateFormat = DateFormatter()
+//        dateFormat.dateFormat = "LLLL"
+//        let date = dateFormat.date(from: monthOfYear ?? "")
+//        let monthInt = Calendar.current.component(.month, from: date ?? Date())
+//        return monthInt
+//    }
 }
 // MARK: - Collection View Layout -
 

@@ -29,7 +29,7 @@ class LocationCollectionViewCell: UICollectionViewCell {
 
 extension LocationCollectionViewCell {
 
-    func fillWithData(_ data: Location) {
+    func fillWithData(_ data: Surfboard) {
         nameCountryLabel.text = data.countryName
 		subtitle.text = data.continentName
         imageView.image = UIImage(named: data.imageFlag)

@@ -52,47 +52,48 @@ public struct RecommendedTripArray {
     
     
     
+    
     public var surfCountrySummer: [Surfboard] = {
         return [
-			Surfboard(countryName: "Biscay Bay", continentName: "Surf Europe", imageFlag: "french", beaufortScaleWave: "0 - 1.4 m"),
-            Surfboard(countryName: "Brazil", continentName: "Surf Latin America", imageFlag: "brazil", beaufortScaleWave: "0 - 1.4 m"),
-            Surfboard(countryName: "Morocco", continentName: "Surf Africa", imageFlag: "SA", beaufortScaleWave: "0 - 1.4 m"),
-            Surfboard(countryName: "Bali", continentName: "Surf Asia", imageFlag: "indonesia", beaufortScaleWave: "0 - 1.4 m"),
-            Surfboard(countryName: "California", continentName: "Surf North America", imageFlag: "usa", beaufortScaleWave: "0 - 1.4 m"),
-            Surfboard(countryName: "South Africa", continentName: "Surf Africa", imageFlag: "morocco", beaufortScaleWave: "0 - 1.4 m")
+			Surfboard(level: "Beginner", volume: "40 L", imageName: "2.2", weightUnit: "<", beaufortScaleWave: "0 - 1.4 m", countryName: "Biscay Bay", continentName: "Surf Europe", imageFlag: "french", weight: 50),
+            Surfboard(level: "Beginner", volume: "40 L", imageName: "2.2", weightUnit: "<", beaufortScaleWave: "0 - 1.4 m", countryName: "Brazil", continentName: "Surf Latin America", imageFlag: "brazil", weight: 50),
+            Surfboard(level: "Beginner", volume: "40 L", imageName: "2.2", weightUnit: "<", beaufortScaleWave: "0 - 1.4 m", countryName: "Morocco", continentName: "Surf Africa", imageFlag: "SA", weight: 50),
+            Surfboard(level: "Beginner", volume: "40 L", imageName: "2.2", weightUnit: "<", beaufortScaleWave: "0 - 1.4 m", countryName: "Bali", continentName: "Surf Asia", imageFlag: "indonesia", weight: 50),
+            Surfboard(level: "Beginner", volume: "40 L", imageName: "2.2", weightUnit: "<", beaufortScaleWave: "0 - 1.4 m", countryName: "California", continentName: "Surf North America", imageFlag: "usa", weight: 50),
+            Surfboard(level: "Beginner", volume: "40 L", imageName: "2.2", weightUnit: "<", beaufortScaleWave: "0 - 1.4 m", countryName: "South Africa", continentName: "Surf Africa", imageFlag: "morocco", weight: 50)
         ]
     }()
     
     public var surfCountrySpring: [Surfboard] = {
           return [
-              Surfboard(countryName: "Biscay Bay",continentName: "Surf Europe", imageFlag: "french", beaufortScaleWave: "1 - 1.4 m"),
-              Surfboard(countryName: "Brazil", continentName: "Surf Latin America", imageFlag: "brazil", beaufortScaleWave: "1 - 1.4 m"),
-              Surfboard(countryName: "Morocco", continentName: "Surf Africa", imageFlag: "morocco", beaufortScaleWave: "1 - 1.4 m"),
-              Surfboard(countryName: "Bali", continentName: "Surf Asia", imageFlag: "indonesia", beaufortScaleWave: "1 - 1.4 m"),
-              Surfboard(countryName: "California", continentName: "Surf North America", imageFlag: "usa", beaufortScaleWave: "1 - 1.4 m"),
-              Surfboard(countryName: "South Africa", continentName: "Surf Africa", imageFlag: "SA", beaufortScaleWave: "1 - 1.4 m")
+              Surfboard(level: "Beginner-Intermediate", volume: "40 L", imageName: "1", weightUnit: "<", beaufortScaleWave: "1 - 2 m", countryName: "Biscay Bay",continentName: "Surf Europe", imageFlag: "french", weight: 50),
+              Surfboard(level: "Beginner-Intermediate", volume: "40 L", imageName: "1", weightUnit: "<", beaufortScaleWave: "1 - 2 m", countryName: "Brazil", continentName: "Surf Latin America", imageFlag: "brazil", weight: 50),
+              Surfboard(level: "Beginner-Intermediate", volume: "40 L", imageName: "1", weightUnit: "<", beaufortScaleWave: "1 - 2 m", countryName: "Morocco", continentName: "Surf Africa", imageFlag: "morocco", weight: 50),
+              Surfboard(level: "Beginner-Intermediate", volume: "40 L", imageName: "1", weightUnit: "<", beaufortScaleWave: "1 - 2 m", countryName: "Bali", continentName: "Surf Asia", imageFlag: "indonesia", weight: 50),
+              Surfboard(level: "Beginner-Intermediate", volume: "40 L", imageName: "1", weightUnit: "<", beaufortScaleWave: "1 - 2 m", countryName: "California", continentName: "Surf North America", imageFlag: "usa", weight: 50),
+              Surfboard(level: "Beginner-Intermediate", volume: "40 L", imageName: "1", weightUnit: "<", beaufortScaleWave: "1 - 2 m", countryName: "South Africa", continentName: "Surf Africa", imageFlag: "SA", weight: 50)
           ]
       }()
     
 	public var surfCountryAutumn: [Surfboard] = {
 		  return [
-              Surfboard(countryName: "Biscay Bay", continentName: "Surf Europe", imageFlag: "french", beaufortScaleWave: "2 - 2.4 m"),
-			  Surfboard(countryName: "Brazil", continentName: "Surf Latin America", imageFlag: "brazil", beaufortScaleWave: "2 - 2.4 m"),
-			  Surfboard(countryName: "Morocco", continentName: "Surf Africa", imageFlag: "morocco", beaufortScaleWave: "2 - 2.4 m"),
-			  Surfboard(countryName: "Bali", continentName: "Surf Asia", imageFlag: "indonesia", beaufortScaleWave: "2 - 2.4 m"),
-			  Surfboard(countryName: "California", continentName: "Surf North America", imageFlag: "usa", beaufortScaleWave: "2 - 2.4 m"),
-			  Surfboard(countryName: "South Africa", continentName: "Surf Africa", imageFlag: "SA", beaufortScaleWave: "2 - 2.4 m")
+              Surfboard(level: "Intermediate", volume: "40 L", imageName: "inter1", weightUnit: "<", beaufortScaleWave: "2 - 3 m", countryName: "Biscay Bay", continentName: "Surf Europe", imageFlag: "french", weight: 50),
+			  Surfboard(level: "Intermediate", volume: "40 L", imageName: "inter1", weightUnit: "<", beaufortScaleWave: "2 - 3 m", countryName: "Brazil", continentName: "Surf Latin America", imageFlag: "brazil", weight: 50),
+			  Surfboard(level: "Intermediate", volume: "40 L", imageName: "inter1", weightUnit: "<", beaufortScaleWave: "2 - 3 m", countryName: "Morocco", continentName: "Surf Africa", imageFlag: "morocco", weight: 50),
+			  Surfboard(level: "Intermediate", volume: "40 L", imageName: "inter1", weightUnit: "<", beaufortScaleWave: "2 - 3 m", countryName: "Bali", continentName: "Surf Asia", imageFlag: "indonesia", weight: 50),
+			  Surfboard(level: "Intermediate", volume: "40 L", imageName: "inter1", weightUnit: "<", beaufortScaleWave: "2 - 3 m", countryName: "California", continentName: "Surf North America", imageFlag: "usa", weight: 50),
+			  Surfboard(level: "Intermediate", volume: "40 L", imageName: "inter1", weightUnit: "<", beaufortScaleWave: "2 - 3 m", countryName: "South Africa", continentName: "Surf Africa", imageFlag: "SA", weight: 50)
 		  ]
 	  }()
 
 	public var surfCountryWinter: [Surfboard] = {
 		  return [
-			  Surfboard(countryName: "Biscay Bay",continentName: "Surf Europe", imageFlag: "french", beaufortScaleWave: "3 > m"),
-			  Surfboard(countryName: "Brazil", continentName: "Surf Latin America", imageFlag: "brazil", beaufortScaleWave: "3 > m"),
-			  Surfboard(countryName: "South Africa", continentName: "Surf Africa", imageFlag: "SA", beaufortScaleWave: "3 > m"),
-			  Surfboard(countryName: "Bali", continentName: "Surf Asia", imageFlag: "indonesia", beaufortScaleWave: "3 > m"),
-			  Surfboard(countryName: "California", continentName: "Surf North America", imageFlag: "usa", beaufortScaleWave: "3 > m"),
-			  Surfboard(countryName: "Morocco", continentName: "Surf Africa", imageFlag: "morocco", beaufortScaleWave: "3 > m")
+			  Surfboard(level: "Advanced", volume: "40 L", imageName: "pro1", weightUnit: "<", beaufortScaleWave: "3 > m", countryName: "Biscay Bay",continentName: "Surf Europe", imageFlag: "french", weight: 50),
+			  Surfboard(level: "Advanced", volume: "40 L", imageName: "pro1", weightUnit: "<", beaufortScaleWave: "3 > m", countryName: "Brazil", continentName: "Surf Latin America", imageFlag: "brazil", weight: 50),
+			  Surfboard(level: "Advanced", volume: "40 L", imageName: "pro1", weightUnit: "<", beaufortScaleWave: "3 > m", countryName: "South Africa", continentName: "Surf Africa", imageFlag: "SA", weight: 50),
+			  Surfboard(level: "Advanced", volume: "40 L", imageName: "pro1", weightUnit: "<", beaufortScaleWave: "3 > m", countryName: "Bali", continentName: "Surf Asia", imageFlag: "indonesia", weight: 50),
+			  Surfboard(level: "Advanced", volume: "40 L", imageName: "pro1", weightUnit: "<", beaufortScaleWave: "3 > m", countryName: "California", continentName: "Surf North America", imageFlag: "usa", weight: 50),
+			  Surfboard(level: "Advanced", volume: "40 L", imageName: "pro1", weightUnit: "<", beaufortScaleWave: "3 > m", countryName: "Morocco", continentName: "Surf Africa", imageFlag: "morocco", weight: 50)
 		  ]
 	  }()
     

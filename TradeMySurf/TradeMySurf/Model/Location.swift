@@ -8,18 +8,18 @@
 import  Foundation
 
 public struct Location: Hashable {
-    public let id: UUID = UUID()
-    
-    public func hash(into hasher: inout Hasher) {
-        hasher.combine(id)
-    }
-
-    public static func == (lhs: Location, rhs: Location) -> Bool {
-        return lhs.id == rhs.id
-    }
-    public let countryName: String, continentName: String
-    public let imageFlag: String
-    public let beaufortScaleWave: String
+//    public let id: UUID = UUID()
+//    
+//    public func hash(into hasher: inout Hasher) {
+//        hasher.combine(id)
+//    }
+//
+//    public static func == (lhs: Location, rhs: Location) -> Bool {
+//        return lhs.id == rhs.id
+//    }
+//    public let countryName: String, continentName: String
+//    public let imageFlag: String
+//    public let beaufortScaleWave: String
 }
 
 
