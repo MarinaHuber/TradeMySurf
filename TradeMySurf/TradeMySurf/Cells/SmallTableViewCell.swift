@@ -32,7 +32,7 @@ extension SmallTableViewCell {
 
 	func fillWithData(_ data: SurfTip) {
         titleLabel.text = "Your goal: \(data.goal)"
-        dateLabel.text = "You want to surf on:  \(selectedDate?.dateAsString(style: .long) ?? "")"
+       // dateLabel.text = "You want to surf on:  \(selectedDate?.dateAsString(style: .long) ?? "")"
 		descriptionLabel.text = data.description
         windDescription.text = data.descriptionLocation
 	}
@@ -46,21 +46,21 @@ private extension SmallTableViewCell {
         // Styling
         contentView.layer.cornerRadius = 10
         titleLabel.textAlignment = .natural
-        titleLabel.font = UIFont(descriptor: UIFont.preferredFont(forTextStyle: .headline).fontDescriptor.withSymbolicTraits(.traitLooseLeading)!, size: 19)
+        titleLabel.font = UIFont(descriptor: UIFont.preferredFont(forTextStyle: .headline).fontDescriptor.withSymbolicTraits(.traitLooseLeading)!, size: 18)
         titleLabel.textColor = .black
         titleLabel.numberOfLines = 0
 
         descriptionLabel.textAlignment = .natural
-        descriptionLabel.font = .preferredFont(forTextStyle: .body)
+        descriptionLabel.font = .preferredFont(forTextStyle: .callout)
         descriptionLabel.numberOfLines = 0
         
-        dateLabel.textAlignment = .natural
-        dateLabel.font = UIFont(descriptor: UIFont.preferredFont(forTextStyle: .headline).fontDescriptor.withSymbolicTraits(.traitLooseLeading)!, size: 19)
-        dateLabel.textColor = .black
-        dateLabel.numberOfLines = 0
+//        dateLabel.textAlignment = .natural
+//        dateLabel.font = UIFont(descriptor: UIFont.preferredFont(forTextStyle: .headline).fontDescriptor.withSymbolicTraits(.traitLooseLeading)!, size: 19)
+//        dateLabel.textColor = .black
+//        dateLabel.numberOfLines = 0
         
         windDescription.textAlignment = .natural
-        windDescription.font = .preferredFont(forTextStyle: .body)
+        windDescription.font = .preferredFont(forTextStyle: .callout)
         windDescription.numberOfLines = 0
 
         let stackView = UIStackView(arrangedSubviews: [titleLabel, descriptionLabel, dateLabel, windDescription])

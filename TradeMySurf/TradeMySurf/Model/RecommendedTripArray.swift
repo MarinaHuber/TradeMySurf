@@ -57,7 +57,7 @@ public struct RecommendedTripArray {
 			Location(countryName: "Biscay Bay", continentName: "Surf Europe", imageFlag: "french", beaufortScaleWave: "0 - 1.4 m"),
             Location(countryName: "Costa Rica", continentName: "Surf Latin America", imageFlag: "brazil", beaufortScaleWave: "0 - 1.4 m"),
             Location(countryName: "Morocco", continentName: "Surf Africa", imageFlag: "indonesia", beaufortScaleWave: "0 - 1.4 m"),
-            Location(countryName: "Japan", continentName: "Surf Asia", imageFlag: "indonesia", beaufortScaleWave: "0 - 1.4 m"),
+            Location(countryName: "Indonesia", continentName: "Surf Asia", imageFlag: "indonesia", beaufortScaleWave: "0 - 1.4 m"),
             Location(countryName: "California", continentName: "Surf North America", imageFlag: "usa", beaufortScaleWave: "0 - 1.4 m"),
             Location(countryName: "South Africa", continentName: "Surf Africa", imageFlag: "french", beaufortScaleWave: "0 - 1.4 m")
         ]
@@ -68,7 +68,7 @@ public struct RecommendedTripArray {
               Location(countryName: "Biscay Bay",continentName: "Surf Europe", imageFlag: "brazil", beaufortScaleWave: "1 - 1.4 m"),
               Location(countryName: "Costa Rica", continentName: "Surf Latin America", imageFlag: "usa", beaufortScaleWave: "1 - 1.4 m"),
               Location(countryName: "Morocco", continentName: "Surf Africa", imageFlag: "morocco", beaufortScaleWave: "1 - 1.4 m"),
-              Location(countryName: "Japan", continentName: "Surf Asia", imageFlag: "indonesia", beaufortScaleWave: "1 - 1.4 m"),
+              Location(countryName: "Indonesia", continentName: "Surf Asia", imageFlag: "indonesia", beaufortScaleWave: "1 - 1.4 m"),
               Location(countryName: "California", continentName: "Surf North America", imageFlag: "usa", beaufortScaleWave: "1 - 1.4 m"),
               Location(countryName: "South Africa", continentName: "Surf Africa", imageFlag: "indonesia", beaufortScaleWave: "1 - 1.4 m")
           ]
@@ -76,46 +76,46 @@ public struct RecommendedTripArray {
     
 	public var surfCountryAutumn: [Location] = {
 		  return [
-              Location(countryName: "Costa Rica", continentName: "South America", imageFlag: "brazil", beaufortScaleWave: "2 - 2.4 m"),
-			  Location(countryName: "Costa Rica", continentName: "South America", imageFlag: "morocco", beaufortScaleWave: "2 - 2.4 m"),
-			  Location(countryName: "Morocco", continentName: "Africa", imageFlag: "morocco", beaufortScaleWave: "2 - 2.4 m"),
-			  Location(countryName: "Japan", continentName: "Asia", imageFlag: "indonesia", beaufortScaleWave: "2 - 2.4 m"),
-			  Location(countryName: "California", continentName: "North America", imageFlag: "usa", beaufortScaleWave: "2 - 2.4 m"),
-			  Location(countryName: "South Africa", continentName: "Africa", imageFlag: "french", beaufortScaleWave: "2 - 2.4 m")
+              Location(countryName: "Biscay Bay", continentName: "Surf Europe", imageFlag: "brazil", beaufortScaleWave: "2 - 2.4 m"),
+			  Location(countryName: "Brazil", continentName: "Surf Latin America", imageFlag: "morocco", beaufortScaleWave: "2 - 2.4 m"),
+			  Location(countryName: "Morocco", continentName: "Surf Africa", imageFlag: "morocco", beaufortScaleWave: "2 - 2.4 m"),
+			  Location(countryName: "Indonesia", continentName: "Surf Asia", imageFlag: "indonesia", beaufortScaleWave: "2 - 2.4 m"),
+			  Location(countryName: "California", continentName: "Surf North America", imageFlag: "usa", beaufortScaleWave: "2 - 2.4 m"),
+			  Location(countryName: "South Africa", continentName: "Surf Africa", imageFlag: "french", beaufortScaleWave: "2 - 2.4 m")
 		  ]
 	  }()
 
 	public var surfCountryWinter: [Location] = {
 		  return [
-			  Location(countryName: "Winter Morocco",continentName: "Europe", imageFlag: "morocco", beaufortScaleWave: "3 > m"),
-			  Location(countryName: "CostaRica", continentName: "SouthAmerica", imageFlag: "brazil", beaufortScaleWave: "3 > m"),
-			  Location(countryName: "Imsouanne Bay", continentName: "Africa", imageFlag: "usa", beaufortScaleWave: "3 > m"),
-			  Location(countryName: "Japan", continentName: "Asia", imageFlag: "indonesia", beaufortScaleWave: "3 > m"),
-			  Location(countryName: "California", continentName: "North America", imageFlag: "usa", beaufortScaleWave: "3 > m"),
-			  Location(countryName: "Biscay Bay", continentName: "Africa", imageFlag: "french", beaufortScaleWave: "3 > m")
+			  Location(countryName: "Biscay Bay",continentName: "Surf Europe", imageFlag: "morocco", beaufortScaleWave: "3 > m"),
+			  Location(countryName: "Brazil", continentName: "Surf Latin America", imageFlag: "brazil", beaufortScaleWave: "3 > m"),
+			  Location(countryName: "South Africa", continentName: "Surf Africa", imageFlag: "usa", beaufortScaleWave: "3 > m"),
+			  Location(countryName: "Indonesia", continentName: "Surf Asia", imageFlag: "indonesia", beaufortScaleWave: "3 > m"),
+			  Location(countryName: "California", continentName: "Surf North America", imageFlag: "usa", beaufortScaleWave: "3 > m"),
+			  Location(countryName: "Morocco", continentName: "Surf Africa", imageFlag: "french", beaufortScaleWave: "3 > m")
 		  ]
 	  }()
     
     public var tipBeginner: [SurfTip] = {
         return [
             SurfTip(goal: "Learning to stand up in white water waves",
-                    description: "Beginners should start out on a foam surfboard: They are from soft material and perfect for learning. Volumen is important element to consider when choosing a surfboard. More weight you have the more volume you need.",
-                    descriptionLocation: "Beaufort scale measure is important element to consider when choosing a surf location. It's the factor that can most affect the size and the power of waves in water. Just because you like the look of a beach doesn’t mean it will deliver the right waves for your ability. Do your research and watch the waves before you head out. There is no shame in moving to a beach with smaller waves or fewer crowds; it’s all about finding the right waves for your ability")
+                    description: "White water waves are broken waves they belong to the fourth stage of the wave shape. Beginners should start out on a foam surfboard: They are from soft material and perfect for learning.",
+                    descriptionLocation: " Volumen is important element to consider when choosing a surfboard. More weight you have the more volume you need and more waves you can catch.")
         ]
     }()
     
     public var tipBeginnerInter: [SurfTip] = {
          return [
-             SurfTip(goal: "Paddling out, dropping straight down the face of the wave",
+             SurfTip(goal: "Paddling out, dropping down the face of the wave",
                      description: "A proper pop-up and surf stance is one of the keys to unlocking your surfing potential. With the proper technique, you will gain more balance and you will be comfortable shifting weight forwards, backwards and sideways.",
-                     descriptionLocation: "Beaufort scale measure is important element to consider when choosing a surf location. It's the factor that can most affect the size and the power of waves in water. Do your research and watch the waves before you head out.")
+                     descriptionLocation: "Position yourself to find, catch & stick on unbroken “green” waves.")
          ]
      }()
     
     public var tipIntermediate: [SurfTip] = {
         return [
             SurfTip(goal: "Trimming down the middle line of the wave",
-                    description: " If a surfboard needs to turn at high speed, the nose will stay closer to the water and the turn will be less sharp that is called trimming",
+                    description: "If a surfboard needs to turn at high speed, the nose will stay closer to the water and the turn will be less sharp that is called trimming",
                    descriptionLocation: "Surfers “trim” in order to adjust to the shape of a wave, going slightly higher or lower to wave edge. Trimming can’t be used to change direction.")
         ]
     }()
