@@ -47,10 +47,10 @@ final class Coordinator: UIResponder, CoorinatorPresenting {
        let customPresenter = Presentr(presentationType: customType)
           customPresenter.transitionType = .coverVertical
           customPresenter.dismissTransitionType = .coverVertical
-          customPresenter.backgroundColor = .blue
+          customPresenter.backgroundColor = .black
+          customPresenter.backgroundOpacity = 0.7
           customPresenter.roundCorners = true
           customPresenter.cornerRadius = 13
-          customPresenter.backgroundOpacity = 0.5
           customPresenter.dismissOnSwipe = false
           customPresenter.outsideContextTap = .noAction
           return customPresenter

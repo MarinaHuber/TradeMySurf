@@ -33,7 +33,7 @@ class SurfTripViewController: UIViewController, StoryboardProtocol {
     private var userComingFromOnboarding = UserDefaults.standard.userWasHere
 
     private(set) var collectionView: UICollectionView!
-   private var sections: [TripSection] = []
+    private var sections: [TripSection] = []
     private var snapshot = NSDiffableDataSourceSnapshot<TripSection, TripItem>()
     private(set) var dataSource: UICollectionViewDiffableDataSource<TripSection, TripItem>! // retain data source!
    // private(set) var appData: RecommendedTripArray = RecommendedTripArray()

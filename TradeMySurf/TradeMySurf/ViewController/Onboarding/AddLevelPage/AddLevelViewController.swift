@@ -24,6 +24,7 @@ class AddLevelViewController: UIViewController, StoryboardProtocol {
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
         setPickerPopover()
+        self.view.verShake()
     }
 }
 
@@ -35,6 +36,7 @@ private extension AddLevelViewController {
             .setSelectedRow(0)
             .setFontSize(17)
             .setPermittedArrowDirections([.up])
+            .setDimmedBackgroundView(enabled: true)
             .setOutsideTapDismissing(allowed: false)
             .setDoneButton(title: "Next", font: UIFont.boldSystemFont(ofSize: 17), color: .systemIndigo, action: { popover, _, selectedString in
                 UserDefaults.standard.selectedLevel = selectedString

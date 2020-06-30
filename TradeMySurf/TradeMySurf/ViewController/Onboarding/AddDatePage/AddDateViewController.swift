@@ -21,8 +21,8 @@ class AddDateViewController: UIViewController, StoryboardProtocol {
     }
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
-        
         tapDateSpringPopoverPicker()
+        self.view.verShake()
     }
 }
 
@@ -35,6 +35,8 @@ private extension AddDateViewController {
             .setOutsideTapDismissing(allowed: false)
             .setSize(width: view.bounds.size.width, height: 250)
             .setPermittedArrowDirections([.up])
+            .setDimmedBackgroundView(enabled: true)
+            .setOutsideTapDismissing(allowed: false)
             .setClearButton(title: "This is what will appear in your surf recommendations", font: UIFont.systemFont(ofSize: 11), color: .systemIndigo, action: { popover, selectedDate in
                             print("clear")
                             //Rewind

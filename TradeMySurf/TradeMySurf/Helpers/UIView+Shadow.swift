@@ -21,11 +21,10 @@ extension UIView {
     }
     
     func verShake(){
-        
         let animation = CAKeyframeAnimation(keyPath: "transform.translation.y")
         animation.timingFunction = CAMediaTimingFunction(name: CAMediaTimingFunctionName.linear)
-        animation.duration = 5
-        animation.values = [0, -2, 2, -2, 2, -2, 2, -2, 2, 0]
+        animation.duration = 2
+        animation.values = [0, -7, 2, -7, 2, -7, 2, -7, 2, 0]
         layer.add(animation, forKey: "shake")
     }
 }
