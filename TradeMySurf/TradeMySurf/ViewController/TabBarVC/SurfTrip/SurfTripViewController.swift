@@ -30,7 +30,6 @@ class SurfTripViewController: UIViewController, StoryboardProtocol {
 
     private var selectedLevel = UserDefaults.standard.selectedLevel
    // private var selectedDate = UserDefaults.standard.surfingTime
-    private var userComingFromOnboarding = UserDefaults.standard.userWasHere
 
     private(set) var collectionView: UICollectionView!
     private var sections: [TripSection] = []
@@ -49,26 +48,28 @@ class SurfTripViewController: UIViewController, StoryboardProtocol {
         //self.delegate = self
         addCollectionView()
         configureCollectionView()
-        self.userComingFromOnboarding = true
+        UserDefaults.standard.userWasHere = true
         self.collectionView.backgroundColor = .clear
     }
     
     override func viewDidAppear(_ animated: Bool) {
         super.viewDidAppear(animated)
         self.navigationItem.leftBarButtonItem = leftBtn
-        if userComingFromOnboarding == true {
-            scenePresenter?.presentAlert()
-        }
+        scenePresenter?.presentAlert()
+//        if UserDefaults.standard.userWasHere == true {
+//            scenePresenter?.presentAlert()
+//        }
     }
     
     override func viewDidDisappear(_ animated: Bool) {
         super.viewDidDisappear(animated)
-        self.userComingFromOnboarding = false
+        UserDefaults.standard.userWasHere = false
     }
     
     @objc func popToRoot(_ sender: UIBarButtonItem) {
         scenePresenter?.presentAddLevel()
-        self.userComingFromOnboarding = false
+        UserDefaults.standard.userWasHere = false
+        self.selectedLevel = nil
     }
 }
 
@@ -148,7 +149,7 @@ private extension SurfTripViewController {
             snapshot.appendItems(Services().dataService.surfboardsBeginner.map({ TripItem.surfboard($0, .Beginner) }))
             
             snapshot.appendSections([.surfCountrySummer])
-            snapshot.appendItems(Services().dataService.surfCountrySummer.map({ TripItem.surfCountry($0, .Beginner) }))
+            snapshot.appendItems(Services().dataService.surfCountryBegginer.map({ TripItem.surfCountry($0, .Beginner) }))
             
             snapshot.appendSections([.tipBeginner])
             snapshot.appendItems(Services().dataService.tipBeginner.map({ TripItem.tip($0, .Beginner) }))
@@ -157,7 +158,7 @@ private extension SurfTripViewController {
             snapshot.appendItems(Services().dataService.surfboardsBeginnerInter.map({ TripItem.surfboard($0, .BeginnerIntermediate) }))
             
             snapshot.appendSections([.surfCountryAutumn])
-            snapshot.appendItems(Services().dataService.surfCountryAutumn.map({ TripItem.surfCountry($0, .BeginnerIntermediate) }))
+            snapshot.appendItems(Services().dataService.surfCountryBI.map({ TripItem.surfCountry($0, .BeginnerIntermediate) }))
             
             snapshot.appendSections([.tipBeginnerInter])
             snapshot.appendItems(Services().dataService.tipBeginnerInter.map({ TripItem.tip($0, .BeginnerIntermediate) }))
@@ -166,7 +167,7 @@ private extension SurfTripViewController {
             snapshot.appendItems(Services().dataService.surfboardsIntermediate.map({  TripItem.surfboard($0, .Intermediate) }))
             
             snapshot.appendSections([.surfCountryWinter])
-            snapshot.appendItems(Services().dataService.surfCountryWinter.map({ TripItem.surfCountry($0, .Intermediate) }))
+            snapshot.appendItems(Services().dataService.surfCountryInter.map({ TripItem.surfCountry($0, .Intermediate) }))
             
             snapshot.appendSections([.tipIntermediate])
             snapshot.appendItems(Services().dataService.tipIntermediate.map({ TripItem.tip($0, .Intermediate) }))
@@ -175,7 +176,7 @@ private extension SurfTripViewController {
             snapshot.appendItems(Services().dataService.surfboardsAdvanced.map({  TripItem.surfboard($0, .Advanced) }))
             
             snapshot.appendSections([.surfCountrySpring])
-            snapshot.appendItems(Services().dataService.surfCountrySpring.map({ TripItem.surfCountry($0, .Advanced) }))
+            snapshot.appendItems(Services().dataService.surfCountryAdvanced.map({ TripItem.surfCountry($0, .Advanced) }))
             
             snapshot.appendSections([.tipAdvanced])
             snapshot.appendItems(Services().dataService.tipAdvanced.map({ TripItem.tip($0, .Advanced) }))

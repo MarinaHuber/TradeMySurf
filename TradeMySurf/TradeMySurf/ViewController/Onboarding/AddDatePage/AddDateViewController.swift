@@ -42,7 +42,7 @@ private extension AddDateViewController {
                             popover.setSelectedDate(Date()).reload()
                         })
             .setDoneButton(title: "Done", font: UIFont.boldSystemFont(ofSize: 17), color: .systemIndigo, action: { popover, date in
-                UserDefaults.standard.surfingTime = date
+               // UserDefaults.standard.surfingTime = date
                 popover.disappear()
                 self.scenePresenter?.presentTabBar()
                 self.userFinishedOnboarding = true

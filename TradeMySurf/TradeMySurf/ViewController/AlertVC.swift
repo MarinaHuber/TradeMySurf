@@ -18,8 +18,8 @@ class AlertVC: UIViewController, StoryboardProtocol {
     @IBOutlet weak var confirmButton: UIButton!
     @IBOutlet var alternateButton: UIButton!
     
-    let selectedDate = UserDefaults.standard.surfingTime
-    let selectedLevel = UserDefaults.standard.selectedLevel
+    var selectedDate = UserDefaults.standard.surfingTime
+    var selectedLevel = UserDefaults.standard.selectedLevel
     let levels = [Level.Beginner.rawValue, Level.BeginnerIntermediate.rawValue, Level.Intermediate.rawValue, Level.Advanced.rawValue]
     
     // MARK: Managing the Lifecycle
@@ -51,6 +51,9 @@ class AlertVC: UIViewController, StoryboardProtocol {
     @IBAction func repeatTapped(_ sender: UIButton) {
         // dismiss the alert immediately
         scenePresenter?.presentAddLevel()
+        selectedLevel = nil
+        selectedDate = nil
+        UserDefaults.standard.userWasHere = false
     }
     
     /// Called when the OK button was tapped. If we have a coordinator let it decide what should happen; if not, just dismiss the alert.
