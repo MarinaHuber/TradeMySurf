@@ -76,7 +76,7 @@ class LocationSupplementaryView: UICollectionReusableView {
         fatalError("Stop trying to make storyboards happen.")
     }
     
-    func fillWith(_ data: Location) {
+    func fillWith(_ data: Surfboard) {
         title.text = "Surf location for: \(data.beaufortScaleWave)"
         subtitle.text = "Beaufort scale measure for wave height"
     }

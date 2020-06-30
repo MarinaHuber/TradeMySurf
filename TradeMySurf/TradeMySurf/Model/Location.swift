@@ -17,8 +17,7 @@ public struct Location: Hashable {
     public static func == (lhs: Location, rhs: Location) -> Bool {
         return lhs.id == rhs.id
     }
-    public let countryName: String
-    public let continentName: String
+    public let countryName: String, continentName: String
     public let imageFlag: String
     public let beaufortScaleWave: String
 }

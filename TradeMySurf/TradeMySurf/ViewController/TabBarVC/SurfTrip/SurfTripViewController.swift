@@ -84,7 +84,7 @@ private extension SurfTripViewController {
                     let cell = collectionView.dequeueCell(ofType: SurfBoardCollectionViewCell.self, for: indexPath)
                     cell.fillWithData(board)
                     return cell
-                case .surfCountry(let location, _):
+                case .surfCountry(let location, _, _):
                     let cell = collectionView.dequeueCell(ofType: LocationCollectionViewCell.self, for: indexPath)
                     cell.fillWithData(location)
                     return cell
@@ -126,8 +126,8 @@ private extension SurfTripViewController {
                     items.map {
                         _ = $0.map {
                             switch $0 {
-                                case .surfCountry(let date, _):
-                                    locationHeader.fillWith(date)
+                                case .surfCountry(let wave, _):
+                                    locationHeader.fillWith(wave)
                                 default: break
                             }
                         }
@@ -190,7 +190,7 @@ private extension SurfTripViewController {
         switch pickerDate {
         case 0:
             snapshot.appendSections([.surfCountryWinter])
-            snapshot.appendItems(Services().dataService.surfCountryWinter.map({ TripItem.surfCountry($0, .winter) }))
+            snapshot.appendItems(Services().dataService.surfCountryWinter.map({ TripItem.surfCountry($0, .Beginner) }))
         case 1:
             snapshot.appendSections([.surfCountrySpring])
             snapshot.appendItems(Services().dataService.surfCountrySpring.map({ TripItem.surfCountry($0, .spring) }))
@@ -199,7 +199,7 @@ private extension SurfTripViewController {
             snapshot.appendItems(Services().dataService.surfCountrySummer.map({ TripItem.surfCountry($0, .summer) }))
         case 3:
             snapshot.appendSections([.surfCountryAutumn])
-            snapshot.appendItems(Services().dataService.surfCountryAutumn.map({ TripItem.surfCountry($0, .autumn) }))
+            snapshot.appendItems(Services().dataService.surfCountryAutumn.map({ TripItem.surfCountry($0, .autumn, <#Surfboard#>) }))
         default: break
         }
     }
