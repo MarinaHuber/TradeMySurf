@@ -41,6 +41,8 @@ class BoardSupplementaryView: UICollectionReusableView {
 
         title.textColor = .white
         title.textAlignment = .center
+        title.lineBreakMode = .byWordWrapping
+        title.numberOfLines = 0
         title.font = UIFont(name: "AvenirNext-Bold", size: 22)
         subtitle.font = UIFont(name: "AvenirNext-Regular", size: 14)
         subtitle.textAlignment = .center

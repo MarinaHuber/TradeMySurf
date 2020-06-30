@@ -56,9 +56,6 @@ class SurfTripViewController: UIViewController, StoryboardProtocol {
         super.viewDidAppear(animated)
         self.navigationItem.leftBarButtonItem = leftBtn
         scenePresenter?.presentAlert()
-//        if UserDefaults.standard.userWasHere == true {
-//            scenePresenter?.presentAlert()
-//        }
     }
     
     override func viewDidDisappear(_ animated: Bool) {
