@@ -101,8 +101,8 @@
                                         <rect key="frame" x="0.0" y="209" width="374" height="32"/>
                                         <segments>
                                             <segment title="Poor"/>
-                                            <segment title="Ok"/>
                                             <segment title="Good"/>
+                                            <segment title="Great"/>
                                             <segment title="New"/>
                                         </segments>
                                         <connections>

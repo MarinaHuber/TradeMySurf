@@ -20,7 +20,7 @@ class BoardSupplementaryView: UICollectionReusableView {
     
     func fillWith(_ data: Surfboard) {
         title.text = "Surfboard for: \(data.level)"
-        subtitle.text = "Shapes and volume for your level"
+        subtitle.text = "Shape and volume for your level"
     }
     
     func printFonts() {
