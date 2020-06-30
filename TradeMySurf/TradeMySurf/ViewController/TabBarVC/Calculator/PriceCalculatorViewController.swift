@@ -39,8 +39,7 @@ class PriceCalculatorViewController: UIViewController, StoryboardProtocol {
 
     @IBAction func calculateValue(_ sender: Any) {
         let formatter = NumberFormatter()
-        formatter.numberStyle = .decimal
-        formatter.maximumFractionDigits = 1
+        formatter.numberStyle = .none
         let formattedMileage = formatter.string(for: production.value) ?? "0"
         hoursLabel.text = "Hours on water (\(formattedMileage) hours)"
 

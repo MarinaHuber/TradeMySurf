@@ -38,11 +38,11 @@ class AlertVC: UIViewController, StoryboardProtocol {
         confirmButton.addBorder(color: .white, width: 0.5)
         alternateButton.addBorder(color: .white, width: 0.5)
         titleLabel.text = "\(selectedLevel ?? "")"
-        bodyLabel.text = "Surfing period:  \(selectedDate?.dateAsString(style: .long) ?? "")"
+        bodyLabel.text = "For surfing on:  \(selectedDate?.dateAsString(style: .long) ?? "")"
         _ = levels.map {
             if $0 == selectedLevel {
                 let levelEnum = Level(rawValue: $0)
-                bodyText.text = "Your goal is matched to surfboards and locations suitable for your \(levelEnum.unsafelyUnwrapped) level!"
+                bodyText.text = "Your goal is matched to surfboards and locations suitable for your \(levelEnum.unsafelyUnwrapped) surfer level!"
         }
       }
     }

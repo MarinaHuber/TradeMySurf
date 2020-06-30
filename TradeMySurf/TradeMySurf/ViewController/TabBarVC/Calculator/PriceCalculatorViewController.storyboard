@@ -16,11 +16,10 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <view alpha="0.80000000000000004" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="jhZ-ak-Mj8">
-                                <rect key="frame" x="20" y="97" width="374" height="98"/>
+                                <rect key="frame" x="20" y="95" width="374" height="60"/>
                                 <subviews>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="5" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="bDH-Xx-fS3">
-                                        <rect key="frame" x="8" y="0.0" width="366" height="98"/>
-                                        <string key="text">When looking for new surfboard, consider these options: volumen, material, maker and  board condition. Volumen is important element to consider when choosing a surfboard. It's the factor that can most affect the number of waves you catch.</string>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="When buying a surfboard, consider these options: volumen, material, your level and  board condition. " textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="6" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="bDH-Xx-fS3">
+                                        <rect key="frame" x="5" y="0.0" width="364" height="60"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="15"/>
                                         <color key="textColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <nil key="highlightedColor"/>
@@ -32,9 +31,9 @@
                                 <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                                 <constraints>
                                     <constraint firstAttribute="bottom" secondItem="bDH-Xx-fS3" secondAttribute="bottom" id="8MA-fU-XId"/>
-                                    <constraint firstItem="bDH-Xx-fS3" firstAttribute="leading" secondItem="jhZ-ak-Mj8" secondAttribute="leading" constant="8" id="CeI-k3-WFk"/>
-                                    <constraint firstAttribute="trailing" secondItem="bDH-Xx-fS3" secondAttribute="trailing" id="Fyo-S0-yHH"/>
-                                    <constraint firstAttribute="height" constant="98" id="dM0-ob-ZJG"/>
+                                    <constraint firstItem="bDH-Xx-fS3" firstAttribute="leading" secondItem="jhZ-ak-Mj8" secondAttribute="leading" constant="5" id="CeI-k3-WFk"/>
+                                    <constraint firstAttribute="trailing" secondItem="bDH-Xx-fS3" secondAttribute="trailing" constant="5" id="Fyo-S0-yHH"/>
+                                    <constraint firstAttribute="height" constant="60" id="dM0-ob-ZJG"/>
                                     <constraint firstItem="bDH-Xx-fS3" firstAttribute="top" secondItem="jhZ-ak-Mj8" secondAttribute="top" id="exr-8Y-5B7"/>
                                 </constraints>
                                 <userDefinedRuntimeAttributes>
@@ -44,7 +43,7 @@
                                 </userDefinedRuntimeAttributes>
                             </view>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="5" translatesAutoresizingMaskIntoConstraints="NO" id="eQq-u4-VZ7">
-                                <rect key="frame" x="20" y="207" width="374" height="408.5"/>
+                                <rect key="frame" x="20" y="167" width="374" height="408.5"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="MAKER" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="pi7-Xi-L6t">
                                         <rect key="frame" x="0.0" y="0.0" width="374" height="20.5"/>
@@ -86,7 +85,7 @@
                                         <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                         <nil key="highlightedColor"/>
                                     </label>
-                                    <slider opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="10" minValue="0.0" maxValue="5000" maximumValueImage="calendar" catalog="system" translatesAutoresizingMaskIntoConstraints="NO" id="KUn-Vj-i6S">
+                                    <slider opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" minValue="0.0" maxValue="4000" maximumValueImage="calendar" catalog="system" translatesAutoresizingMaskIntoConstraints="NO" id="KUn-Vj-i6S">
                                         <rect key="frame" x="-2" y="148.5" width="378" height="31"/>
                                         <connections>
                                             <action selector="calculateValue:" destination="NuV-wN-EPR" eventType="valueChanged" id="keV-gh-SRI"/>
@@ -104,7 +103,7 @@
                                             <segment title="Poor"/>
                                             <segment title="Ok"/>
                                             <segment title="Good"/>
-                                            <segment title="Great"/>
+                                            <segment title="New"/>
                                         </segments>
                                         <connections>
                                             <action selector="calculateValue:" destination="NuV-wN-EPR" eventType="valueChanged" id="KHZ-JY-jfI"/>
@@ -145,7 +144,7 @@
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <color key="tintColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
-                            <constraint firstItem="jhZ-ak-Mj8" firstAttribute="top" secondItem="Hme-ax-p5J" secondAttribute="top" constant="97" id="2Xg-BQ-lIf"/>
+                            <constraint firstItem="jhZ-ak-Mj8" firstAttribute="top" secondItem="Hme-ax-p5J" secondAttribute="top" constant="95" id="2Xg-BQ-lIf"/>
                             <constraint firstItem="jhZ-ak-Mj8" firstAttribute="leading" secondItem="lWU-n5-I3P" secondAttribute="leading" constant="20" id="IHj-c1-w9g"/>
                             <constraint firstItem="eQq-u4-VZ7" firstAttribute="top" secondItem="jhZ-ak-Mj8" secondAttribute="bottom" constant="12" id="aPZ-iK-P2b"/>
                             <constraint firstItem="eQq-u4-VZ7" firstAttribute="leading" secondItem="lWU-n5-I3P" secondAttribute="leading" constant="20" id="h1t-du-WTH"/>

@@ -115,7 +115,7 @@ public struct RecommendedTripArray {
     public var tipIntermediate: [SurfTip] = {
         return [
             SurfTip(goal: "Trimming down the middle line of the wave",
-                    description: "Volume is important element to consider when choosing a surfboard. It's the factor that can most affect the number of waves you catch, and how much fun you have in water.But it isn't everything. Understanding how the curved shapes and the surfboard's dimensions affect your surfing will also help you find better surfboardsfor your surf level, and have positive impact on your progression.",
+                    description: "",
                    descriptionLocation: "Beaufort scale measure is important element to consider when choosing a surf location. It's the factor that can most affect the size and the power of waves in water. But it isn't everything. Understanding the scale ranging from 0-17 is understanding the global wind speed to observed conditions at sea and land")
         ]
     }()
