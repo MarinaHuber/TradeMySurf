@@ -71,9 +71,10 @@
                                         <rect key="frame" x="0.0" y="87" width="374" height="32"/>
                                         <segments>
                                             <segment title="Foam"/>
-                                            <segment title="Fiberglass"/>
+                                            <segment title="Polyester"/>
                                             <segment title="Epoxy"/>
                                             <segment title="Wood"/>
+                                            <segment title="Helium"/>
                                         </segments>
                                         <connections>
                                             <action selector="calculateValue:" destination="NuV-wN-EPR" eventType="valueChanged" id="Gag-cZ-W25"/>

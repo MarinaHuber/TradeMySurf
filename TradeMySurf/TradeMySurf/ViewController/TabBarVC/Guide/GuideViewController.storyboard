@@ -28,7 +28,7 @@
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <stackView opaque="NO" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" axis="vertical" spacing="12" translatesAutoresizingMaskIntoConstraints="NO" id="Zhb-8Z-0KT">
-                                        <rect key="frame" x="0.0" y="44" width="390" height="1736"/>
+                                        <rect key="frame" x="0.0" y="44" width="390" height="1978.5"/>
                                         <subviews>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="How do I use board price feature in the app?" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="2UY-SB-0hn">
                                                 <rect key="frame" x="8" y="8" width="374" height="22"/>
@@ -37,118 +37,137 @@
                                                 <nil key="highlightedColor"/>
                                             </label>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="10" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="1Gn-Bg-T9U">
-                                                <rect key="frame" x="8" y="42" width="374" height="150.5"/>
-                                                <string key="text">Nothing is worse than buying a board for an advanced rider and struggling to ride it. You'll end up needing to sell it and buy a board more suited to your need. If you have ever walked into a surf shop, or browsed online, you’ll know that there is more than a couple to choose from. It seems like a new brand is coming out weekly from mass produced or custom makers. Equipment calculator is here to give you variaty of choices you can find and amount of money you need to purchase it.</string>
+                                                <rect key="frame" x="8" y="42" width="374" height="134"/>
+                                                <string key="text">Nothing is worse than buying a board for an advanced rider and struggling to ride it. You'll end up needing to sell it and buy a board more suited to your need. If you have ever walked into a surf shop, or browsed online, you’ll know that there is more than a couple to choose from. Equipment calculator is Machine learning tool here to help you with variaty of choices you can find and amount of money you need to purchase it.</string>
                                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                                 <nil key="textColor"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="What is surfboard volume?" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="N2t-xy-vHs" userLabel="What is surfboard volume?">
-                                                <rect key="frame" x="8" y="204.5" width="374" height="22"/>
+                                                <rect key="frame" x="8" y="188" width="374" height="22"/>
                                                 <fontDescription key="fontDescription" name="AvenirNext-Medium" family="Avenir Next" pointSize="16"/>
                                                 <nil key="textColor"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
-                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="11" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ZTs-du-77p">
-                                                <rect key="frame" x="8" y="238.5" width="374" height="134"/>
-                                                <string key="text">Volume is important element to consider when choosing a surfboard. It's the factor that can most affect the number of waves you catch, and how much fun you have in water.But it isn't everything. Understanding how the curved shapes and the surfboard's dimensions affect your surfing will also help you find better surfboardsfor your surf level, and have positive impact on your progression.</string>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ZTs-du-77p">
+                                                <rect key="frame" x="8" y="222" width="374" height="167.5"/>
+                                                <mutableString key="text">Volume is important element to consider when choosing a surfboard. It's the factor that can most affect the number of waves you catch, and how much fun you have in water.But it isn't everything. Understanding how the curved shapes and the surfboard's dimensions affect your surfing will also help you find better surfboardsfor your surf level, and have positive impact on your progression. Volume is calculated in liters and it takes yout weight and height to do so, check the online calculator and find out your ideal board vloume.</mutableString>
+                                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                                <nil key="textColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Go to volume calculator" textAlignment="natural" lineBreakMode="characterWrap" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="z7F-7N-Y5C">
+                                                <rect key="frame" x="8" y="401.5" width="374" height="17"/>
+                                                <fontDescription key="fontDescription" type="system" weight="light" pointSize="14"/>
+                                                <nil key="textColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="What is surfboard lenght?" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ucJ-rC-ROg" userLabel="What is surfboard volume?">
+                                                <rect key="frame" x="8" y="430.5" width="374" height="22"/>
+                                                <fontDescription key="fontDescription" name="AvenirNext-Medium" family="Avenir Next" pointSize="16"/>
+                                                <nil key="textColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="11" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="lXJ-Eb-kIH">
+                                                <rect key="frame" x="8" y="464.5" width="374" height="150.5"/>
+                                                <string key="text">Traditionally lenght is something that you get accustom to and is hard to change, tipically there are few of those: longboard, funboard, fish and shortboard but it is really individally different for every surfer out there. Surfers get so consumed on a certain lenght of a board that they are riding instead of focusing on the rails, rockers and concaves of the board shape. These can change a whole loose feeling and performance of the board more than the lenght alone. </string>
                                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                                 <nil key="textColor"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="What is Beaufort scale measure for wave height?" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="gYx-3D-HVX" userLabel="Boufort">
-                                                <rect key="frame" x="8" y="384.5" width="374" height="22"/>
+                                                <rect key="frame" x="8" y="627" width="374" height="22"/>
                                                 <fontDescription key="fontDescription" name="AvenirNext-Medium" family="Avenir Next" pointSize="16"/>
                                                 <nil key="textColor"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="7" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="FoR-18-WYe">
-                                                <rect key="frame" x="8" y="418.5" width="374" height="100.5"/>
-                                                <string key="text">Beaufort scale measure is important element to consider when choosing a surf location. It's the factor that can most affect the size and the power of waves at the sea. But it isn't everything. Understanding the scale ranging from 0-17 is understanding the global wind speed to observed conditions at sea and land is crutial.</string>
-                                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                                <nil key="textColor"/>
-                                                <nil key="highlightedColor"/>
-                                            </label>
-                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="What means trimming down the middle line of the wave?" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="GxR-qa-Rtg">
-                                                <rect key="frame" x="8" y="531" width="374" height="44"/>
-                                                <fontDescription key="fontDescription" name="AvenirNext-Medium" family="Avenir Next" pointSize="16"/>
-                                                <nil key="textColor"/>
-                                                <nil key="highlightedColor"/>
-                                            </label>
-                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="10" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="29K-xp-ja5">
-                                                <rect key="frame" x="8" y="587" width="374" height="134"/>
-                                                <string key="text">Surfers “trim” in order to adjust to the shape of a wave, going slightly higher or lower to surf the shoulder with the necessary speed to stay in the optimal position. These small adjustments are made by slightly leaning your body and putting a bit of weight on either your heels or toes, especially over the front foot. Trimming can’t be used to change direction. Fast breaking wave: Trimming, slow braking: Carving.</string>
-                                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                                <nil key="textColor"/>
-                                                <nil key="highlightedColor"/>
-                                            </label>
-                                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="trimming" translatesAutoresizingMaskIntoConstraints="NO" id="m7Y-tI-J0v">
-                                                <rect key="frame" x="8" y="733" width="374" height="95"/>
-                                                <constraints>
-                                                    <constraint firstAttribute="height" constant="95" id="V8a-Q9-mQH"/>
-                                                </constraints>
-                                            </imageView>
-                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="How do I know if I am goofy or regular?" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="S0e-6D-G4q">
-                                                <rect key="frame" x="8" y="840" width="374" height="22"/>
-                                                <fontDescription key="fontDescription" name="AvenirNext-Medium" family="Avenir Next" pointSize="16"/>
-                                                <nil key="textColor"/>
-                                                <nil key="highlightedColor"/>
-                                            </label>
-                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="qDe-my-yMM">
-                                                <rect key="frame" x="8" y="874" width="374" height="84"/>
-                                                <string key="text">The easiest way to figure out if you’re a regular or goofy footed surfer is to identify your dominant foot. When standing on a surfboard, your dominant foot is usually the foot placed behind the front foot (closer to the tail of a surfboard). </string>
+                                                <rect key="frame" x="8" y="661" width="374" height="100.5"/>
+                                                <string key="text">Beaufort scale measure is important element to consider when choosing a surf location. It's the factor that can most affect the size and the power of waves at the sea. But it isn't everything. Understanding the scale ranging from 0-17 is understanding the global wind speed to observed conditions at sea and land.</string>
                                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                                 <nil key="textColor"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="How to read waves?" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="0KR-Se-Xp6">
-                                                <rect key="frame" x="8" y="970" width="374" height="22"/>
+                                                <rect key="frame" x="8" y="773.5" width="374" height="22"/>
                                                 <fontDescription key="fontDescription" name="AvenirNext-Medium" family="Avenir Next" pointSize="16"/>
                                                 <nil key="textColor"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="0sc-a4-DWV">
-                                                <rect key="frame" x="8" y="1004" width="374" height="200.5"/>
-                                                <mutableString key="text">“How do I know if the wave is a right or a left”? “How can I know when a wave is going to break”? “What is a closeout”? These are very common questions in surfing. One of the most important aspects of wave reading is being able to identify (and properly name) the different parts of a wave. Lip: The top part of the wave, Shoulder (or “Face”): The part of a wave that has not broken yet, Curl: The advanced “concave” part, White water (or Foam): After the wave breaks, Impact Zone: The spot where the lip crashes down on the flat water, Tube (or Barrel) and Peak: The highest point on a wave, also the first part of the wave that breaks.</mutableString>
+                                                <rect key="frame" x="8" y="807.5" width="374" height="200.5"/>
+                                                <string key="text">“How do I know if the wave is a right or a left”? “How can I know when a wave is going to break”? “What is a closeout”? These are very common questions in surfing. One of the most important aspects of wave reading is being able to identify (and properly name) the different parts of a wave. Lip: The top part of the wave, Shoulder (or “Face”): The part of a wave that has not broken yet, Curl: The advanced “concave” part, White water (or Foam): After the wave breaks, Impact Zone: The spot where the lip crashes down on the flat water, Tube (or Barrel) and Peak: The highest point on a wave, also the first part of the wave that breaks.</string>
                                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                                 <nil key="textColor"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
-                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Where can I fins best surf videos and apps?" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="22e-mz-2Kb">
-                                                <rect key="frame" x="8" y="1216.5" width="374" height="22"/>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="What means trimming down the middle line of the wave?" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="GxR-qa-Rtg">
+                                                <rect key="frame" x="8" y="1020" width="374" height="44"/>
                                                 <fontDescription key="fontDescription" name="AvenirNext-Medium" family="Avenir Next" pointSize="16"/>
                                                 <nil key="textColor"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
-                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="MoP-R8-Mbl">
-                                                <rect key="frame" x="8" y="1250.5" width="374" height="134"/>
-                                                <string key="text">Great video content is streamed daily at WLC which is the official world surfing league chanel and also has the app version, another one for videos is Nobody Surf. Most used app is MagicSeadweed useful for finding waves, wind and swell. Some other handy apps: Da Surf Engine, Endangered waves (for environmental issues), Dorsal (for shark detection), Surftracker (dokumenting surf sessions), Surfline (weather forecast).</string>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="10" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="29K-xp-ja5">
+                                                <rect key="frame" x="8" y="1076" width="374" height="134"/>
+                                                <string key="text">Surfers “trim” in order to adjust to the shape of a wave, going slightly higher or lower to surf the wave "shoulder " with the necessary speed to stay in the optimal position. These small adjustments are made by slightly leaning your body and putting a bit of weight on either your heels or toes, especially over the front foot. Trimming can’t be used to change direction. Fast breaking wave: Trimming, slow breaking waves: Carving.</string>
+                                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                                <nil key="textColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="trimming" translatesAutoresizingMaskIntoConstraints="NO" id="m7Y-tI-J0v">
+                                                <rect key="frame" x="8" y="1222" width="374" height="95"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="height" constant="95" id="V8a-Q9-mQH"/>
+                                                </constraints>
+                                            </imageView>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="How do I know if I am goofy or regular?" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="S0e-6D-G4q">
+                                                <rect key="frame" x="8" y="1329" width="374" height="22"/>
+                                                <fontDescription key="fontDescription" name="AvenirNext-Medium" family="Avenir Next" pointSize="16"/>
+                                                <nil key="textColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="qDe-my-yMM">
+                                                <rect key="frame" x="8" y="1363" width="374" height="84"/>
+                                                <string key="text">The easiest way to figure out if you’re a regular or goofy footed surfer is to identify your dominant foot. When standing on a surfboard, your dominant foot is usually the foot placed behind the front foot (closer to the tail of a surfboard). </string>
                                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                                 <nil key="textColor"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="What are best surf exercises?" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="rBd-hE-Z2A">
-                                                <rect key="frame" x="8" y="1396.5" width="374" height="22"/>
+                                                <rect key="frame" x="8" y="1459" width="374" height="22"/>
                                                 <fontDescription key="fontDescription" name="AvenirNext-Medium" family="Avenir Next" pointSize="16"/>
                                                 <nil key="textColor"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ufH-a1-uBL">
-                                                <rect key="frame" x="8" y="1430.5" width="374" height="84"/>
+                                                <rect key="frame" x="8" y="1493" width="374" height="84"/>
                                                 <string key="text">Surfing is a highly athletic endeavour. It’s this beautiful mix of strength, power, fluidity, speed, endurance, flexibility, flow. You need stronger upper body, flexible joints and hips. So chosen exercises are: front squats, ring chinups, turkish get-up, pushups and yoga.</string>
                                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                                 <nil key="textColor"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Where can I find surf videos and apps?" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="22e-mz-2Kb">
+                                                <rect key="frame" x="8" y="1589" width="374" height="22"/>
+                                                <fontDescription key="fontDescription" name="AvenirNext-Medium" family="Avenir Next" pointSize="16"/>
+                                                <nil key="textColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="MoP-R8-Mbl">
+                                                <rect key="frame" x="8" y="1623" width="374" height="134"/>
+                                                <string key="text">Great video content is streamed daily at WLC which is the official world surfing league chanel and also has the app version, another one for videos is Nobody Surf. Most used app is MagicSeadweed useful for finding waves, wind and swell. Some other handy apps: Da Surf Engine, Endangered waves (for environmental issues), Dorsal (for shark detection), Surftracker (dokumenting surf sessions), Surfline (weather forecast).</string>
+                                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                                <nil key="textColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="What is surf lifestyle?" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="5" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="trJ-Hf-vcI">
-                                                <rect key="frame" x="8" y="1526.5" width="374" height="22"/>
+                                                <rect key="frame" x="8" y="1769" width="374" height="22"/>
                                                 <fontDescription key="fontDescription" name="AvenirNext-Medium" family="Avenir Next" pointSize="16"/>
                                                 <nil key="textColor"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" verticalCompressionResistancePriority="749" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="RnP-Cz-VP3">
-                                                <rect key="frame" x="8" y="1560.5" width="374" height="167.5"/>
-                                                <mutableString key="text">The simple life is eating fresh fruit every morning, going to catch some waves or paddling out even if there are no wave, sharing some moments with others, having real conversations face-to-face and not texting/facebooking/whatsapping… It’s wearing the same shirt for 3 days in a row, living in a super rustic cabaña that doesn’t have hot water (and that sometimes doesn’t even have water at all), doing an afternoon nap, waking up super early just to see the sun rise, enjoying that perfect moment of surfing while watching the sunset…</mutableString>
+                                                <rect key="frame" x="8" y="1803" width="374" height="167.5"/>
+                                                <string key="text">It is the simple life - eating fruit every morning, going to catch some waves or paddling out even if there are no wave, sharing some moments with others, having real conversations face-to-face and not texting/facebooking… It’s wearing the same shirt for 3 days in a row, living in an old hut that doesn’t have hot water (and that sometimes doesn’t even have water at all), doing an afternoon nap, waking up super early just to see the sun rise, enjoying that perfect moment of surfing while watching the sunset…</string>
                                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                                 <nil key="textColor"/>
                                                 <nil key="highlightedColor"/>
@@ -193,6 +212,9 @@
                     <tabBarItem key="tabBarItem" title="ABOUT" image="info" catalog="system" id="byX-hE-gt8">
                         <color key="badgeColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                     </tabBarItem>
+                    <connections>
+                        <outlet property="goToWeb" destination="z7F-7N-Y5C" id="gpa-eA-cXq"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Y2y-No-9hG" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>

@@ -317,6 +317,8 @@ extension SurfTripViewController: UICollectionViewDelegate {
         switch item {
             case .surfboard(let surf, _):
                 scenePresenter?.presentDetailBoard(surf)
+            case .surfCountry(let location, _):
+                scenePresenter?.presentDetailLocation(location)
             default : break
         }
     }

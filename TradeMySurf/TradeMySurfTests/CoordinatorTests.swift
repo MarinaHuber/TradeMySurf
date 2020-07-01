@@ -7,7 +7,7 @@
 //
 
 import XCTest
-@testable import TradeMySurf
+@testable import Surf_Curve
 
 final class CoordinatorTests: XCTestCase {
 //	typealias CoordinatorType = LoadingStateCoordinator

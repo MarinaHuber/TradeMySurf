@@ -10,8 +10,8 @@
         <!--AlertVC-->
         <scene sceneID="NXS-T2-k8S">
             <objects>
-                <viewController storyboardIdentifier="AlertVC" id="12B-QJ-lBY" customClass="AlertVC" customModule="Match_my_Surf" customModuleProvider="target" sceneMemberID="viewController">
-                    <view key="view" contentMode="scaleToFill" id="E8r-HV-hpH" customClass="GradientView" customModule="Match_my_Surf" customModuleProvider="target">
+                <viewController storyboardIdentifier="AlertVC" id="12B-QJ-lBY" customClass="AlertVC" customModule="Surf_Curve" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="E8r-HV-hpH" customClass="GradientView" customModule="Surf_Curve" customModuleProvider="target">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <subviews>
@@ -58,7 +58,7 @@
                                         <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <nil key="highlightedColor"/>
                                     </label>
-                                    <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="prS-8i-0HF">
+                                    <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="center" lineBreakMode="characterWrap" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="prS-8i-0HF">
                                         <rect key="frame" x="0.0" y="192" width="360" height="22"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="22" id="7X8-O7-M9w"/>
