@@ -9,11 +9,24 @@
 import UIKit
 
 class LocationViewController: UIViewController, StoryboardProtocol {
-
+    @IBOutlet var gradientViewHidden: UIView!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        // Do any additional setup after loading the view.
+//         let standartAppearence = UINavigationBarAppearance()
+//         standartAppearence.configureWithDefaultBackground()
+//
+//         let backButtonAppearence = UIBarButtonItemAppearance()
+//         let titleTextAttributes = [NSAttributedString.Key.foregroundColor: UIColor.black]
+//         backButtonAppearence.normal.titleTextAttributes = titleTextAttributes
+//         backButtonAppearence.highlighted.titleTextAttributes = titleTextAttributes
+//         standartAppearence.backButtonAppearance = backButtonAppearence
+//
+//         UINavigationBar.appearance().standardAppearance = standartAppearence
+//         UINavigationBar.appearance().compactAppearance = standartAppearence
+//         UINavigationBar.appearance().scrollEdgeAppearance = standartAppearence
+
     }
     
 

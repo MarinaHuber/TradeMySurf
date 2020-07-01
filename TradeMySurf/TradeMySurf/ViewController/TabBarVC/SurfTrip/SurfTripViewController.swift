@@ -45,7 +45,6 @@ class SurfTripViewController: UIViewController, StoryboardProtocol {
         imageView.image = image
         navigationItem.titleView = imageView
         view.applyGradient(withColors: [.systemIndigo, .systemIndigo, .systemBlue, .systemTeal, .white], gradientOrientation: .vertical)
-        //self.delegate = self
         addCollectionView()
         configureCollectionView()
         UserDefaults.standard.userWasHere = true
@@ -55,7 +54,9 @@ class SurfTripViewController: UIViewController, StoryboardProtocol {
     override func viewDidAppear(_ animated: Bool) {
         super.viewDidAppear(animated)
         self.navigationItem.leftBarButtonItem = leftBtn
-        scenePresenter?.presentAlert()
+        if UserDefaults.standard.userWasHere == true {
+            scenePresenter?.presentAlert()
+        }
     }
     
     override func viewDidDisappear(_ animated: Bool) {
