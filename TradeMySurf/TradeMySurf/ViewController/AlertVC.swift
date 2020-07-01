@@ -22,17 +22,17 @@ class AlertVC: UIViewController, StoryboardProtocol {
     var selectedLevel = UserDefaults.standard.selectedLevel
     let levels = [Level.Beginner.rawValue, Level.BeginnerIntermediate.rawValue, Level.Intermediate.rawValue, Level.Advanced.rawValue]
     
-    // MARK: Managing the Lifecycle
-//    override func viewDidLoad() {
-//        super.viewDidLoad()
+// MARK: Managing the Lifecycle
+    override func viewDidLoad() {
+        super.viewDidLoad()
 //        if UserDefaults.standard.userWasHere == false {
 //            self.view.isHidden = false
 //            UserDefaults.standard.userWasHere = true
 //        } else {
 //            self.view.isHidden = true
 //        }
-//    }
-//
+    }
+
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
         confirmButton.addBorder(color: .white, width: 0.5)
