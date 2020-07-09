@@ -15,7 +15,6 @@
 		9C45E661234D238F0054A5FD /* SurfTripViewController.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9C45E660234D238E0054A5FD /* SurfTripViewController.storyboard */; };
 		9C467C67234F2A7D009F4D58 /* Surfboard.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C467C66234F2A7D009F4D58 /* Surfboard.swift */; };
 		9C46991924AC9FED00B2F59C /* LocationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C46991824AC9FED00B2F59C /* LocationViewController.swift */; };
-		9C46991A24ACDA0C00B2F59C /* LocationViewController.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9C46991724AC9F2C00B2F59C /* LocationViewController.storyboard */; };
 		9C4C54742349C28500FB2653 /* GuideViewController.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9C4C54732349C28500FB2653 /* GuideViewController.storyboard */; };
 		9C53D5C0234C126600A3BD80 /* StoryboardProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C53D5BF234C126600A3BD80 /* StoryboardProtocol.swift */; };
 		9C5B644C232A506C000727E6 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C5B644B232A506C000727E6 /* AppDelegate.swift */; };
@@ -49,6 +48,7 @@
 		9C8F32FF239946090070751F /* logo_final.json in Resources */ = {isa = PBXBuildFile; fileRef = 9C8F32FD239946090070751F /* logo_final.json */; };
 		9C8F3300239946090070751F /* loader_animation.json in Resources */ = {isa = PBXBuildFile; fileRef = 9C8F32FE239946090070751F /* loader_animation.json */; };
 		9C8F330223994CDD0070751F /* FontHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C8F330123994CDD0070751F /* FontHelper.swift */; };
+		9C8F824C24B7276B00BA7500 /* LocationViewController.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9C8F824B24B7276B00BA7500 /* LocationViewController.storyboard */; };
 		9C90A22B2388887700E735D3 /* clip-board.json in Resources */ = {isa = PBXBuildFile; fileRef = 9C90A22A2388887700E735D3 /* clip-board.json */; };
 		9C90A22F2388888B00E735D3 /* shop.json in Resources */ = {isa = PBXBuildFile; fileRef = 9C90A22E2388888B00E735D3 /* shop.json */; };
 		9C90A233238897A500E735D3 /* air.json in Resources */ = {isa = PBXBuildFile; fileRef = 9C90A232238897A400E735D3 /* air.json */; };
@@ -107,7 +107,6 @@
 		9C3CC3DD23C75EE800359368 /* SupplementaryViews.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SupplementaryViews.swift; sourceTree = "<group>"; };
 		9C45E660234D238E0054A5FD /* SurfTripViewController.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = SurfTripViewController.storyboard; sourceTree = "<group>"; };
 		9C467C66234F2A7D009F4D58 /* Surfboard.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Surfboard.swift; sourceTree = "<group>"; };
-		9C46991724AC9F2C00B2F59C /* LocationViewController.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = LocationViewController.storyboard; path = /Users/marina/Desktop/Projects/TradeMySurf/TradeMySurf/TradeMySurf/ViewController/Detail/LocationViewController.storyboard; sourceTree = "<absolute>"; };
 		9C46991824AC9FED00B2F59C /* LocationViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationViewController.swift; sourceTree = "<group>"; };
 		9C4C54732349C28500FB2653 /* GuideViewController.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = GuideViewController.storyboard; sourceTree = "<group>"; };
 		9C53D5BF234C126600A3BD80 /* StoryboardProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StoryboardProtocol.swift; sourceTree = "<group>"; };
@@ -147,6 +146,7 @@
 		9C8F32FD239946090070751F /* logo_final.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = logo_final.json; sourceTree = "<group>"; };
 		9C8F32FE239946090070751F /* loader_animation.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = loader_animation.json; sourceTree = "<group>"; };
 		9C8F330123994CDD0070751F /* FontHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FontHelper.swift; sourceTree = "<group>"; };
+		9C8F824B24B7276B00BA7500 /* LocationViewController.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = LocationViewController.storyboard; sourceTree = "<group>"; };
 		9C90A22A2388887700E735D3 /* clip-board.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = "clip-board.json"; sourceTree = "<group>"; };
 		9C90A22E2388888B00E735D3 /* shop.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = shop.json; sourceTree = "<group>"; };
 		9C90A232238897A400E735D3 /* air.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = air.json; sourceTree = "<group>"; };
@@ -227,7 +227,7 @@
 		9C1630CA24157A4B00DB9BBC /* Detail */ = {
 			isa = PBXGroup;
 			children = (
-				9C46991724AC9F2C00B2F59C /* LocationViewController.storyboard */,
+				9C8F824B24B7276B00BA7500 /* LocationViewController.storyboard */,
 				9C46991824AC9FED00B2F59C /* LocationViewController.swift */,
 				9C31EB8B23E3AB1A00060143 /* DetailViewController.swift */,
 				9C31EB8923E3AA2100060143 /* DetailViewController.storyboard */,
@@ -610,7 +610,7 @@
 				9C90A22B2388887700E735D3 /* clip-board.json in Resources */,
 				9C4C54742349C28500FB2653 /* GuideViewController.storyboard in Resources */,
 				9C6F64CE2379F86400B0224D /* AddLevelViewController.storyboard in Resources */,
-				9C46991A24ACDA0C00B2F59C /* LocationViewController.storyboard in Resources */,
+				9C8F824C24B7276B00BA7500 /* LocationViewController.storyboard in Resources */,
 				9C90A22F2388888B00E735D3 /* shop.json in Resources */,
 				9C193AFB23A2ACA7000DE1AB /* coin-wallet.json in Resources */,
 				9C69CE85234D06D7003E386F /* PriceCalculatorViewController.storyboard in Resources */,

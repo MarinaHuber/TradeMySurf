@@ -2,9 +2,6 @@
 <Workspace
    version = "1.0">
    <FileRef
-      location = "group:/Users/marina/Desktop/Projects/TradeMySurf/TradeMySurf/TradeMySurf/ViewController/Detail/LocationViewController.storyboard">
-   </FileRef>
-   <FileRef
       location = "group:TradeMySurf.xcodeproj">
    </FileRef>
    <FileRef

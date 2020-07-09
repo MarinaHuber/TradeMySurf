@@ -3,7 +3,7 @@
 <plist version="1.0">
 <dict>
 	<key>Bundle Display Name</key>
-	<string>Surf Curve</string>
+	<string>Surf Curve - Your surf trip matcher</string>
 	<key>CFBundleDevelopmentRegion</key>
 	<string>$(DEVELOPMENT_LANGUAGE)</string>
 	<key>CFBundleExecutable</key>
