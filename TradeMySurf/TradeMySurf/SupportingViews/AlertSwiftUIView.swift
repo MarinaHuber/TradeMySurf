@@ -11,6 +11,7 @@ import SwiftUI
 
 class ViewModel {
     var closeAction: () -> Void = {}
+    var backAction: () -> Void = {}
 }
 
 struct AlertSwiftUIView: View {
@@ -42,7 +43,7 @@ struct AlertSwiftUIView: View {
                 HStack {
                     Spacer()
                     SwiftUI.Button(action: {
-
+                        self.vm.backAction()
                     }) {
                         Text("Try again")
                             .foregroundColor(Color.white)
@@ -94,6 +95,3 @@ struct AlertSwiftUIView_Previews: PreviewProvider {
     }
 }
 
-
-
->>>>>>> Stashed changes
