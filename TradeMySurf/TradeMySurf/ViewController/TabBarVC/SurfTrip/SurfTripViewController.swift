@@ -56,7 +56,6 @@ class SurfTripViewController: UIViewController, StoryboardProtocol {
         self.navigationItem.leftBarButtonItem = leftBtn
         if UserDefaults.standard.userWasHere == true {
             let bridge = ViewModel()
-            //let alertView = AlertSwiftUIView()
             let vc = UIHostingController(rootView: AlertSwiftUIView(vm: bridge))
             vc.modalPresentationStyle = .overFullScreen
             vc.view.backgroundColor = .clear
