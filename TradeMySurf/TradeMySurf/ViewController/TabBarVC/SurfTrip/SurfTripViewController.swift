@@ -16,8 +16,7 @@ protocol DetailViewControllerDelegate {
 }
 
 class SurfTripViewController: UIViewController, StoryboardProtocol {
-    
-   // private var delegate: DetailViewControllerDelegate?
+
     
     lazy var leftBtn: UIBarButtonItem = {
         let button = UIButton(type: .system)
@@ -30,13 +29,10 @@ class SurfTripViewController: UIViewController, StoryboardProtocol {
     }()
 
     private var selectedLevel = UserDefaults.standard.selectedLevel
-   // private var selectedDate = UserDefaults.standard.surfingTime
-
     private(set) var collectionView: UICollectionView!
     private var sections: [TripSection] = []
     private var snapshot = NSDiffableDataSourceSnapshot<TripSection, TripItem>()
     private(set) var dataSource: UICollectionViewDiffableDataSource<TripSection, TripItem>! // retain data source!
-   // private(set) var appData: RecommendedTripArray = RecommendedTripArray()
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -365,14 +361,4 @@ private extension SurfTripViewController {
     }
 }
 
-//extension SurfTripViewController: DetailViewControllerDelegate {
-//
-//    func presentDetailViewController(with name: String?) {
-//        let storyboard: UIStoryboard = UIStoryboard(name: "DetailViewController", bundle: nil)
-//        let vc: DetailViewController = DetailViewController.instantiate(from: storyboard)
-//        vc.selectedImageName = name ?? ""
-//        navigationController?.present(vc, animated: true, completion: nil)
-//
-//        }
-//}
 
