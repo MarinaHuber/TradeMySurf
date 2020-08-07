@@ -55,7 +55,15 @@ class SurfTripViewController: UIViewController, StoryboardProtocol {
         super.viewDidAppear(animated)
         self.navigationItem.leftBarButtonItem = leftBtn
         if UserDefaults.standard.userWasHere == true {
-            scenePresenter?.presentAlert()
+            let bridge = ViewModel()
+            //let alertView = AlertSwiftUIView()
+            let vc = UIHostingController(rootView: AlertSwiftUIView(vm: bridge))
+            vc.modalPresentationStyle = .overFullScreen
+            vc.view.backgroundColor = .clear
+            bridge.closeAction = { [weak vc] in
+                vc?.dismiss(animated: true)
+            }
+            self.present(vc, animated: true, completion: nil)
         }
     }
     
