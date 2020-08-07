@@ -9,6 +9,7 @@
 import Foundation
 import UIKit
 import Presentr
+import SwiftUI
 
 protocol DetailViewControllerDelegate {
     func presentDetailViewController(with name: String?)

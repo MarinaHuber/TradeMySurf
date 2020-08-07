@@ -41,6 +41,7 @@
 		9C76F09423493DAB00853FD9 /* WelcomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C76F09323493DAB00853FD9 /* WelcomeViewController.swift */; };
 		9C76F09623493EDA00853FD9 /* SurfTripViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C76F09523493EDA00853FD9 /* SurfTripViewController.swift */; };
 		9C76F09823493F0900853FD9 /* GuideViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C76F09723493F0900853FD9 /* GuideViewController.swift */; };
+		9C78559424DD7FAA00C8E253 /* AlertSwiftUIView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C78559324DD7FAA00C8E253 /* AlertSwiftUIView.swift */; };
 		9C89B61A23D863E000DB8DDF /* AlertVC.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9C89B61923D863E000DB8DDF /* AlertVC.storyboard */; };
 		9C89B61C23DA40D400DB8DDF /* UIView+Shadow.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C89B61B23DA40D400DB8DDF /* UIView+Shadow.swift */; };
 		9C89B61E23DA41A600DB8DDF /* BaseNavigationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C89B61D23DA41A600DB8DDF /* BaseNavigationController.swift */; };
@@ -139,6 +140,7 @@
 		9C76F09323493DAB00853FD9 /* WelcomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WelcomeViewController.swift; sourceTree = "<group>"; };
 		9C76F09523493EDA00853FD9 /* SurfTripViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SurfTripViewController.swift; sourceTree = "<group>"; };
 		9C76F09723493F0900853FD9 /* GuideViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GuideViewController.swift; sourceTree = "<group>"; };
+		9C78559324DD7FAA00C8E253 /* AlertSwiftUIView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = AlertSwiftUIView.swift; path = "../../../../../TradeMySurf copy/TradeMySurf/SupportingViews/AlertSwiftUIView.swift"; sourceTree = "<group>"; };
 		9C89B61923D863E000DB8DDF /* AlertVC.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = AlertVC.storyboard; sourceTree = "<group>"; };
 		9C89B61B23DA40D400DB8DDF /* UIView+Shadow.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIView+Shadow.swift"; sourceTree = "<group>"; };
 		9C89B61D23DA41A600DB8DDF /* BaseNavigationController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseNavigationController.swift; sourceTree = "<group>"; };
@@ -378,6 +380,7 @@
 			children = (
 				9C3CC3DD23C75EE800359368 /* SupplementaryViews.swift */,
 				9CF77BDF24104B9400C92725 /* AlertContainerView.swift */,
+				9C78559324DD7FAA00C8E253 /* AlertSwiftUIView.swift */,
 				9CF77BE124104BAA00C92725 /* TitleLabel.swift */,
 				9CF77BE324104BC700C92725 /* BodyLabel.swift */,
 				9CF77BE524104BDB00C92725 /* Button.swift */,
@@ -728,6 +731,7 @@
 				9CF77BEA2410690000C92725 /* UIView+Constraints.swift in Sources */,
 				9C1A985523D7A38E0050C7BC /* AlertVC.swift in Sources */,
 				9CC4F8EA23CA536A00F3ABAB /* Surfs.mlmodel in Sources */,
+				9C78559424DD7FAA00C8E253 /* AlertSwiftUIView.swift in Sources */,
 				9C467C67234F2A7D009F4D58 /* Surfboard.swift in Sources */,
 				9C990AAB2398114800B17AE5 /* SplashViewController.swift in Sources */,
 				9C5B6450232A506C000727E6 /* PriceCalculatorViewController.swift in Sources */,
