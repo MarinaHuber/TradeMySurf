@@ -1,5 +1,4 @@
-<<<<<<< Updated upstream
-=======
+
 //
 //  AlertSwiftUIView.swift
 //  TradeMySurf
