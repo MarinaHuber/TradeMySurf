@@ -59,6 +59,10 @@ class SurfTripViewController: UIViewController, StoryboardProtocol {
             bridge.closeAction = { [weak vc] in
                 vc?.dismiss(animated: true)
             }
+            bridge.backAction = { [weak vc] in
+                vc?.dismiss(animated: true)
+                self.scenePresenter?.presentAddLevel()
+            }
             self.present(vc, animated: true, completion: nil)
         }
     }
