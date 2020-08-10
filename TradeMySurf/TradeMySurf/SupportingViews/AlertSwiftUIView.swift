@@ -16,10 +16,14 @@ class ViewModel {
 
 struct AlertSwiftUIView: View {
     
+    @State private var selectedDate = UserDefaults.standard.surfingTime
+    @State private var selectedLevel = UserDefaults.standard.selectedLevel
+    @State private var levels = [Level.Beginner.rawValue, Level.BeginnerIntermediate.rawValue, Level.Intermediate.rawValue, Level.Advanced.rawValue]
+    
     var vm: ViewModel
-    @State var gradient = [Color.red, Color.blue, Color.gray]
-    @State var startPoint = UnitPoint(x: 0, y: 0)
-    @State var endPoint = UnitPoint(x: 0, y: 2)
+    @State private var gradient = [Color.red, Color.blue, Color.gray]
+    @State private var startPoint = UnitPoint(x: 0, y: 0)
+    @State private var endPoint = UnitPoint(x: 0, y: 2)
     
     var body: some View {
         
@@ -28,18 +32,25 @@ struct AlertSwiftUIView: View {
                 Image(systemName: "checkmark")
                     .foregroundColor(Color.white)
                     .font(Font.system(.largeTitle).bold())
+                    .padding(.top, 10)
+                Text("You have been matched for:")
+                .foregroundColor(Color.white)
+                    .font(Font.system(.subheadline))
+                    .multilineTextAlignment(.center)
                     .padding()
-                Text("Learning to stand up in white water waves")
+                Text("\(self.selectedLevel ?? "")")
                     .foregroundColor(Color.white)
                     .font(Font.system(.title).bold())
                     .multilineTextAlignment(.center)
-                    .padding()
-                Text("Surfing start")
+                    .lineLimit(4)
+                    .padding(10)
+                Text("Surfing start: \(self.selectedDate?.dateAsString(style: .long) ?? "")")
                     .foregroundColor(Color.white)
                 Text("You are matched to surfboards and locations suitable for your level and date")
                     .foregroundColor(Color.white)
                     .multilineTextAlignment(.center)
-                    .padding()
+                    .lineLimit(3)
+                    .padding(15)
                 HStack {
                     Spacer()
                     SwiftUI.Button(action: {
@@ -70,7 +81,7 @@ struct AlertSwiftUIView: View {
                 }
             }.padding(15) //makes view content off the edges
                 .background(LinearGradient(gradient: Gradient(colors: self.gradient), startPoint: self.startPoint, endPoint: self.endPoint).clipShape(RoundedRectangle(cornerRadius: 12.0))
-                    .frame(width: geometry.size.width - 30 , height: geometry.size.height - 300)
+                    .frame(width: geometry.size.width - 30 , height: geometry.size.height / 1.5, alignment: .center)
                     .onAppear {
                         self.startPoint = UnitPoint(x: 1, y: -1)
                         self.endPoint = UnitPoint(x: 0, y: 1)

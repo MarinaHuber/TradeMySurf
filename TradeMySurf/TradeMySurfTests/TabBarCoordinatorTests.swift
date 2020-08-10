@@ -7,7 +7,7 @@
 //
 
 import XCTest
-@testable import Surf_Curve
+//@testable import Surf_Curve
 
 final class TabBarCoordinatorTests: XCTestCase {
 //	typealias CoordinatorType = TabBarCoordinator
