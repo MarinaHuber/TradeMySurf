@@ -85,7 +85,7 @@ struct AlertSwiftUIView: View {
                   }
                    .padding(30) //makes view content off the edges
                    .background(LinearGradient(gradient: Gradient(colors: self.gradient), startPoint: self.startPoint, endPoint: self.endPoint).clipShape(RoundedRectangle(cornerRadius: 12.0))
-                   .frame(width: geometry.size.width - 200 , height: geometry.size.height / 3.0, alignment: .center)
+                   .frame(width: geometry.size.width - 180 , height: geometry.size.height / 3.0, alignment: .center)
                    .onAppear {
                               self.startPoint = UnitPoint(x: 1, y: -1)
                               self.endPoint = UnitPoint(x: 0, y: 1)
