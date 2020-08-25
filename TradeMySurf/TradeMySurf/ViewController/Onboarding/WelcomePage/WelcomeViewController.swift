@@ -45,6 +45,9 @@ class WelcomeViewController: UIViewController, CAAnimationDelegate, StoryboardPr
     }
     @IBOutlet weak var bgStackView: UIView!
     @IBOutlet var bgStackViewWidth: NSLayoutConstraint!
+    @IBOutlet var firstText: UILabel!
+    @IBOutlet var secondText: UILabel!
+    @IBOutlet var thirdText: UILabel!
     //MARK: fix warning Presenting view controllers on detached view controllers is discouraged
     /*
       let time = dispatch_time(DISPATCH_TIME_NOW, Int64(0.001 * Double(NSEC_PER_SEC)))
@@ -59,7 +62,10 @@ class WelcomeViewController: UIViewController, CAAnimationDelegate, StoryboardPr
         super.viewWillAppear(animated)
         UserDefaults.standard.userWasHere = false
         if UIDevice().userInterfaceIdiom == .pad {
-            bgStackViewWidth.constant = 550
+            bgStackViewWidth.constant = 500
+            firstText.font = UIFont(name: "AvenirNext-Regular", size: 19)
+            secondText.font = UIFont(name: "AvenirNext-Regular", size: 19)
+            thirdText.font = UIFont(name: "AvenirNext-Regular", size: 19)
             
         } else {
             bgStackViewWidth.constant = 300
