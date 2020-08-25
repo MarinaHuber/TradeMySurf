@@ -44,7 +44,8 @@ class WelcomeViewController: UIViewController, CAAnimationDelegate, StoryboardPr
         }
     }
     @IBOutlet weak var bgStackView: UIView!
-//MARK: fix warning Presenting view controllers on detached view controllers is discouraged
+    @IBOutlet var bgStackViewWidth: NSLayoutConstraint!
+    //MARK: fix warning Presenting view controllers on detached view controllers is discouraged
     /*
       let time = dispatch_time(DISPATCH_TIME_NOW, Int64(0.001 * Double(NSEC_PER_SEC)))
 
@@ -56,6 +57,13 @@ class WelcomeViewController: UIViewController, CAAnimationDelegate, StoryboardPr
     
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
+        UserDefaults.standard.userWasHere = false
+        if UIDevice().userInterfaceIdiom == .pad {
+            bgStackViewWidth.constant = 550
+            
+        } else {
+            bgStackViewWidth.constant = 300
+        }
         startButton.alpha = 0
         welcomeLabel.alpha = 0
         introLabel.alpha = 0
@@ -91,11 +99,13 @@ class WelcomeViewController: UIViewController, CAAnimationDelegate, StoryboardPr
                     post.toValue = view.bounds.size.height - 500
                 case 1792:
                     post.toValue = view.bounds.size.height - 500
-                case 2732:
-                    post.toValue = view.bounds.size.height - 500
+//                case 2732:
+//                    post.toValue = view.bounds.size.height - 500
                 default:
                     post.toValue = view.bounds.size.height - 500
             }
+        } else {
+             post.toValue = view.bounds.size.height - 500
         }
         post.duration = 2
         post.isRemovedOnCompletion =  false
@@ -109,5 +119,6 @@ class WelcomeViewController: UIViewController, CAAnimationDelegate, StoryboardPr
     }
     @IBAction func openNext(_ sender: UIButton) {
         scenePresenter?.presentAddLevel()
+        UserDefaults.standard.userWasHere = true
     }
 }
