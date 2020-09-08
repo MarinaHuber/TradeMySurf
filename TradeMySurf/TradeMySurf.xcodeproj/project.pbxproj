@@ -13,7 +13,6 @@
 		9C3CC3DE23C75EE800359368 /* SupplementaryViews.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C3CC3DD23C75EE800359368 /* SupplementaryViews.swift */; };
 		9C45E661234D238F0054A5FD /* SurfTripViewController.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9C45E660234D238E0054A5FD /* SurfTripViewController.storyboard */; };
 		9C467C67234F2A7D009F4D58 /* Surfboard.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C467C66234F2A7D009F4D58 /* Surfboard.swift */; };
-		9C46991924AC9FED00B2F59C /* LocationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C46991824AC9FED00B2F59C /* LocationViewController.swift */; };
 		9C4C54742349C28500FB2653 /* GuideViewController.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9C4C54732349C28500FB2653 /* GuideViewController.storyboard */; };
 		9C53D5C0234C126600A3BD80 /* StoryboardProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C53D5BF234C126600A3BD80 /* StoryboardProtocol.swift */; };
 		9C5B644C232A506C000727E6 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C5B644B232A506C000727E6 /* AppDelegate.swift */; };
@@ -47,7 +46,6 @@
 		9C8F32FF239946090070751F /* logo_final.json in Resources */ = {isa = PBXBuildFile; fileRef = 9C8F32FD239946090070751F /* logo_final.json */; };
 		9C8F3300239946090070751F /* loader_animation.json in Resources */ = {isa = PBXBuildFile; fileRef = 9C8F32FE239946090070751F /* loader_animation.json */; };
 		9C8F330223994CDD0070751F /* FontHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C8F330123994CDD0070751F /* FontHelper.swift */; };
-		9C8F824C24B7276B00BA7500 /* LocationViewController.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9C8F824B24B7276B00BA7500 /* LocationViewController.storyboard */; };
 		9C90A22B2388887700E735D3 /* clip-board.json in Resources */ = {isa = PBXBuildFile; fileRef = 9C90A22A2388887700E735D3 /* clip-board.json */; };
 		9C90A22F2388888B00E735D3 /* shop.json in Resources */ = {isa = PBXBuildFile; fileRef = 9C90A22E2388888B00E735D3 /* shop.json */; };
 		9C90A233238897A500E735D3 /* air.json in Resources */ = {isa = PBXBuildFile; fileRef = 9C90A232238897A400E735D3 /* air.json */; };
@@ -57,6 +55,8 @@
 		9CBDE2982395A9E600317F51 /* TimeHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9CBDE2972395A9E600317F51 /* TimeHelper.swift */; };
 		9CC4F8EA23CA536A00F3ABAB /* Surfs.mlmodel in Sources */ = {isa = PBXBuildFile; fileRef = 9CC4F8E923CA536A00F3ABAB /* Surfs.mlmodel */; };
 		9CE09C302413FAFA00F0FE08 /* TabItemView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 9CE09C2F2413FAFA00F0FE08 /* TabItemView.xib */; };
+		9CE21BB22507C9BF00B6B20C /* LocationViewController.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9CE21BB02507C9BF00B6B20C /* LocationViewController.storyboard */; };
+		9CE21BB32507C9BF00B6B20C /* LocationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9CE21BB12507C9BF00B6B20C /* LocationViewController.swift */; };
 		9CF1CC24241136950067533C /* TabBarVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9CF1CC23241136950067533C /* TabBarVC.swift */; };
 		9CF77BDC24101D8300C92725 /* TabbarEntry.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9CF77BDB24101D8300C92725 /* TabbarEntry.swift */; };
 		9CF77BE024104B9400C92725 /* AlertContainerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9CF77BDF24104B9400C92725 /* AlertContainerView.swift */; };
@@ -104,10 +104,9 @@
 		9C3CC3DD23C75EE800359368 /* SupplementaryViews.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SupplementaryViews.swift; sourceTree = "<group>"; };
 		9C45E660234D238E0054A5FD /* SurfTripViewController.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = SurfTripViewController.storyboard; sourceTree = "<group>"; };
 		9C467C66234F2A7D009F4D58 /* Surfboard.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Surfboard.swift; sourceTree = "<group>"; };
-		9C46991824AC9FED00B2F59C /* LocationViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationViewController.swift; sourceTree = "<group>"; };
 		9C4C54732349C28500FB2653 /* GuideViewController.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = GuideViewController.storyboard; sourceTree = "<group>"; };
 		9C53D5BF234C126600A3BD80 /* StoryboardProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StoryboardProtocol.swift; sourceTree = "<group>"; };
-		9C5B6448232A506C000727E6 /* Surf Curve.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Surf Curve.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		9C5B6448232A506C000727E6 /* SurfCurve.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SurfCurve.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		9C5B644B232A506C000727E6 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		9C5B644F232A506C000727E6 /* PriceCalculatorViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PriceCalculatorViewController.swift; sourceTree = "<group>"; };
 		9C5B6455232A506C000727E6 /* TradeMySurf.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = TradeMySurf.xcdatamodel; sourceTree = "<group>"; };
@@ -143,7 +142,6 @@
 		9C8F32FD239946090070751F /* logo_final.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = logo_final.json; sourceTree = "<group>"; };
 		9C8F32FE239946090070751F /* loader_animation.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = loader_animation.json; sourceTree = "<group>"; };
 		9C8F330123994CDD0070751F /* FontHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FontHelper.swift; sourceTree = "<group>"; };
-		9C8F824B24B7276B00BA7500 /* LocationViewController.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = LocationViewController.storyboard; sourceTree = "<group>"; };
 		9C90A22A2388887700E735D3 /* clip-board.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = "clip-board.json"; sourceTree = "<group>"; };
 		9C90A22E2388888B00E735D3 /* shop.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = shop.json; sourceTree = "<group>"; };
 		9C90A232238897A400E735D3 /* air.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = air.json; sourceTree = "<group>"; };
@@ -153,6 +151,8 @@
 		9CBDE2972395A9E600317F51 /* TimeHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TimeHelper.swift; sourceTree = "<group>"; };
 		9CC4F8E923CA536A00F3ABAB /* Surfs.mlmodel */ = {isa = PBXFileReference; lastKnownFileType = file.mlmodel; name = Surfs.mlmodel; path = ../../Working/Surfboards/Surfs.mlmodel; sourceTree = "<group>"; };
 		9CE09C2F2413FAFA00F0FE08 /* TabItemView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = TabItemView.xib; sourceTree = "<group>"; };
+		9CE21BB02507C9BF00B6B20C /* LocationViewController.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = LocationViewController.storyboard; sourceTree = "<group>"; };
+		9CE21BB12507C9BF00B6B20C /* LocationViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LocationViewController.swift; sourceTree = "<group>"; };
 		9CF1CC23241136950067533C /* TabBarVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabBarVC.swift; sourceTree = "<group>"; };
 		9CF77BDB24101D8300C92725 /* TabbarEntry.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TabbarEntry.swift; sourceTree = "<group>"; };
 		9CF77BDF24104B9400C92725 /* AlertContainerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlertContainerView.swift; sourceTree = "<group>"; };
@@ -223,8 +223,8 @@
 		9C1630CA24157A4B00DB9BBC /* Detail */ = {
 			isa = PBXGroup;
 			children = (
-				9C8F824B24B7276B00BA7500 /* LocationViewController.storyboard */,
-				9C46991824AC9FED00B2F59C /* LocationViewController.swift */,
+				9CE21BB02507C9BF00B6B20C /* LocationViewController.storyboard */,
+				9CE21BB12507C9BF00B6B20C /* LocationViewController.swift */,
 				9C31EB8B23E3AB1A00060143 /* DetailViewController.swift */,
 				9C31EB8923E3AA2100060143 /* DetailViewController.storyboard */,
 			);
@@ -282,7 +282,7 @@
 		9C5B6449232A506C000727E6 /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				9C5B6448232A506C000727E6 /* Surf Curve.app */,
+				9C5B6448232A506C000727E6 /* SurfCurve.app */,
 				9C5B6461232A5073000727E6 /* TradeMySurfTests.xctest */,
 				9C5B646C232A5073000727E6 /* TradeMySurfUITests.xctest */,
 			);
@@ -496,6 +496,7 @@
 				9C5B6446232A506C000727E6 /* Resources */,
 				9C6F64C02379ADCA00B0224D /* ShellScript */,
 				50836E4BF80526DB1CF33D8B /* [CP] Embed Pods Frameworks */,
+				95B28676036963452B5DF257 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -503,7 +504,7 @@
 			);
 			name = TradeMySurf;
 			productName = TradeMySurf;
-			productReference = 9C5B6448232A506C000727E6 /* Surf Curve.app */;
+			productReference = 9C5B6448232A506C000727E6 /* SurfCurve.app */;
 			productType = "com.apple.product-type.application";
 		};
 		9C5B6460232A5073000727E6 /* TradeMySurfTests */ = {
@@ -603,7 +604,7 @@
 				9C90A22B2388887700E735D3 /* clip-board.json in Resources */,
 				9C4C54742349C28500FB2653 /* GuideViewController.storyboard in Resources */,
 				9C6F64CE2379F86400B0224D /* AddLevelViewController.storyboard in Resources */,
-				9C8F824C24B7276B00BA7500 /* LocationViewController.storyboard in Resources */,
+				9CE21BB22507C9BF00B6B20C /* LocationViewController.storyboard in Resources */,
 				9C90A22F2388888B00E735D3 /* shop.json in Resources */,
 				9C193AFB23A2ACA7000DE1AB /* coin-wallet.json in Resources */,
 				9C69CE85234D06D7003E386F /* PriceCalculatorViewController.storyboard in Resources */,
@@ -659,13 +660,50 @@
 			inputFileListPaths = (
 				"${PODS_ROOT}/Target Support Files/Pods-TradeMySurf/Pods-TradeMySurf-frameworks-${CONFIGURATION}-input-files.xcfilelist",
 			);
+			inputPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-TradeMySurf/Pods-TradeMySurf-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/Presentr/Presentr.framework",
+				"${BUILT_PRODUCTS_DIR}/SwiftyPickerPopover/SwiftyPickerPopover.framework",
+				"${BUILT_PRODUCTS_DIR}/lottie-ios/Lottie.framework",
+			);
 			name = "[CP] Embed Pods Frameworks";
 			outputFileListPaths = (
 				"${PODS_ROOT}/Target Support Files/Pods-TradeMySurf/Pods-TradeMySurf-frameworks-${CONFIGURATION}-output-files.xcfilelist",
 			);
+			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Presentr.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SwiftyPickerPopover.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Lottie.framework",
+			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
 			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-TradeMySurf/Pods-TradeMySurf-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		95B28676036963452B5DF257 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-TradeMySurf/Pods-TradeMySurf-resources.sh",
+				"${PODS_ROOT}/GoogleMaps/Maps/Frameworks/GoogleMaps.framework/Resources/GoogleMaps.bundle",
+				"${PODS_ROOT}/GooglePlacePicker/Frameworks/GooglePlacePicker.framework/Resources/GooglePlacePicker.bundle",
+				"${PODS_ROOT}/GooglePlaces/Frameworks/GooglePlaces.framework/Resources/GooglePlaces.bundle",
+			);
+			name = "[CP] Copy Pods Resources";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/GoogleMaps.bundle",
+				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/GooglePlacePicker.bundle",
+				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/GooglePlaces.bundle",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-TradeMySurf/Pods-TradeMySurf-resources.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
 		9C6F64C02379ADCA00B0224D /* ShellScript */ = {
@@ -729,7 +767,7 @@
 				9C62417A238B374A00A4B7C9 /* LocationaCollectionViewCell.swift in Sources */,
 				9C624178238B107B00A4B7C9 /* SurfboardCollectionViewCell.swift in Sources */,
 				9C76F09423493DAB00853FD9 /* WelcomeViewController.swift in Sources */,
-				9C46991924AC9FED00B2F59C /* LocationViewController.swift in Sources */,
+				9CE21BB32507C9BF00B6B20C /* LocationViewController.swift in Sources */,
 				9C3CC3DE23C75EE800359368 /* SupplementaryViews.swift in Sources */,
 				9C624172238AE81A00A4B7C9 /* SurfTip.swift in Sources */,
 				9CF77BE224104BAA00C92725 /* TitleLabel.swift in Sources */,
@@ -849,7 +887,7 @@
 				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
 				MTL_FAST_MATH = YES;
 				ONLY_ACTIVE_ARCH = YES;
-				PRODUCT_BUNDLE_IDENTIFIER = "Match my Surf";
+				PRODUCT_BUNDLE_IDENTIFIER = "Surf Curve";
 				SDKROOT = iphoneos;
 				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
@@ -904,7 +942,7 @@
 				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				MTL_FAST_MATH = YES;
-				PRODUCT_BUNDLE_IDENTIFIER = "Match my Surf";
+				PRODUCT_BUNDLE_IDENTIFIER = "Surf Curve";
 				SDKROOT = iphoneos;
 				SWIFT_COMPILATION_MODE = wholemodule;
 				SWIFT_OPTIMIZATION_LEVEL = "-O";
@@ -919,6 +957,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_IDENTITY = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1.1;
 				DEFINES_MODULE = YES;
 				DEVELOPMENT_TEAM = HBS2B82CVU;
 				INFOPLIST_FILE = TradeMySurf/Info.plist;
@@ -927,9 +966,9 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				MARKETING_VERSION = 1.0.1;
-				PRODUCT_BUNDLE_IDENTIFIER = com.marinahuber.trademysurf;
-				PRODUCT_NAME = "Surf Curve";
+				MARKETING_VERSION = 1.0.2;
+				PRODUCT_BUNDLE_IDENTIFIER = com.marinahuber;
+				PRODUCT_NAME = SurfCurve;
 				PROVISIONING_PROFILE_SPECIFIER = "";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -943,6 +982,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_IDENTITY = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1.1;
 				DEFINES_MODULE = YES;
 				DEVELOPMENT_TEAM = HBS2B82CVU;
 				INFOPLIST_FILE = TradeMySurf/Info.plist;
@@ -951,9 +991,9 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				MARKETING_VERSION = 1.0.1;
-				PRODUCT_BUNDLE_IDENTIFIER = com.marinahuber.trademysurf;
-				PRODUCT_NAME = "Surf Curve";
+				MARKETING_VERSION = 1.0.2;
+				PRODUCT_BUNDLE_IDENTIFIER = com.marinahuber;
+				PRODUCT_NAME = SurfCurve;
 				PROVISIONING_PROFILE_SPECIFIER = "";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
