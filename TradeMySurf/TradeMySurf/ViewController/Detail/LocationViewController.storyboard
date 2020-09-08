@@ -11,7 +11,7 @@
         <!--Location View Controller-->
         <scene sceneID="pDk-zi-gsR">
             <objects>
-                <viewController storyboardIdentifier="LocationViewController" id="FX6-ds-vsR" customClass="LocationViewController" customModule="Surf_Curve" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="LocationViewController" id="FX6-ds-vsR" customClass="LocationViewController" customModule="SurfCurve" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="ZGm-oe-PZj">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>

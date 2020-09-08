@@ -11,7 +11,7 @@
         <!--Detail View Controller-->
         <scene sceneID="HHm-Uu-3gA">
             <objects>
-                <viewController storyboardIdentifier="DetailViewController" id="ScI-gv-ovi" customClass="DetailViewController" customModule="Surf_Curve" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="DetailViewController" id="ScI-gv-ovi" customClass="DetailViewController" customModule="SurfCurve" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="dYT-do-R8d">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
