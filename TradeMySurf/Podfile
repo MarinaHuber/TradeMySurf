@@ -14,9 +14,8 @@ target 'TradeMySurf' do
   pod 'lottie-ios'
   pod 'Presentr'
   pod 'GoogleMaps'
-  pod 'GoogleMaps'
-  pod 'GooglePlacePicker'
-
+  pod 'GooglePlaces'
+  
   target 'TradeMySurfTests' do
     inherit! :search_paths
     # Pods for testing

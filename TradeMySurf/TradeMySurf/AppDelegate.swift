@@ -8,6 +8,7 @@
 
 import UIKit
 import GoogleMaps
+import GooglePlaces
 
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate {
@@ -29,7 +30,8 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         scenePresenter?.presentSplash()
     
         customizeNavBar()
-        [GMSServices .provideAPIKey("AIzaSyCzsrbKVIQ0f_5O53U6D2bTzgmuxlQ89j4")]
+        GMSServices.provideAPIKey("AIzaSyCzsrbKVIQ0f_5O53U6D2bTzgmuxlQ89j4")
+        GMSPlacesClient.provideAPIKey("AIzaSyCzsrbKVIQ0f_5O53U6D2bTzgmuxlQ89j4")
 		return true
 	}
     override var next: UIResponder? {

@@ -5,10 +5,6 @@ This application makes use of the following third party libraries:
 
 Copyright 2019 Google
 
-## GooglePlacePicker
-
-Copyright 2019 Google
-
 ## GooglePlaces
 
 Copyright 2019 Google

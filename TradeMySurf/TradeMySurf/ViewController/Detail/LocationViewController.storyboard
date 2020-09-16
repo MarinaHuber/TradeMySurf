@@ -16,10 +16,11 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <subviews>
-                            <mapView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" mapType="hybrid" scrollEnabled="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Eh1-ax-JDR">
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="2aR-H6-oWU" customClass="GMSMapView">
                                 <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
-                            </mapView>
-                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="U9V-AS-aO0" customClass="GradientView" customModule="Surf_Curve">
+                                <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                            </view>
+                            <view hidden="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="U9V-AS-aO0" customClass="GradientView" customModule="Surf_Curve">
                                 <rect key="frame" x="0.0" y="297" width="414" height="395"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="ML combined with sufers intelligence to fuel your surf goals." textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="nWh-CP-D8A">
@@ -143,17 +144,18 @@
                         <constraints>
                             <constraint firstItem="oja-Jj-tfi" firstAttribute="bottom" secondItem="U9V-AS-aO0" secondAttribute="bottom" constant="170" id="HWf-gz-6J2"/>
                             <constraint firstItem="U9V-AS-aO0" firstAttribute="leading" secondItem="oja-Jj-tfi" secondAttribute="leading" id="NnV-t8-leq"/>
-                            <constraint firstItem="Eh1-ax-JDR" firstAttribute="top" secondItem="ZGm-oe-PZj" secondAttribute="top" id="OfL-Ih-Ws6"/>
-                            <constraint firstItem="Eh1-ax-JDR" firstAttribute="leading" secondItem="oja-Jj-tfi" secondAttribute="leading" id="PI9-GV-geG"/>
+                            <constraint firstItem="2aR-H6-oWU" firstAttribute="top" secondItem="ZGm-oe-PZj" secondAttribute="top" id="S1m-ER-Ba1"/>
+                            <constraint firstAttribute="bottom" secondItem="2aR-H6-oWU" secondAttribute="bottom" id="Ye7-Ij-1ts"/>
                             <constraint firstItem="U9V-AS-aO0" firstAttribute="trailing" secondItem="oja-Jj-tfi" secondAttribute="trailing" id="dld-Co-LJk"/>
-                            <constraint firstAttribute="bottom" secondItem="Eh1-ax-JDR" secondAttribute="bottom" id="eOY-Hy-rT9"/>
-                            <constraint firstItem="Eh1-ax-JDR" firstAttribute="trailing" secondItem="oja-Jj-tfi" secondAttribute="trailing" id="zaz-IM-piO"/>
+                            <constraint firstItem="2aR-H6-oWU" firstAttribute="leading" secondItem="oja-Jj-tfi" secondAttribute="leading" id="f6C-qZ-G3F"/>
+                            <constraint firstItem="2aR-H6-oWU" firstAttribute="trailing" secondItem="oja-Jj-tfi" secondAttribute="trailing" id="jqf-8d-tNw"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="oja-Jj-tfi"/>
                     </view>
                     <navigationItem key="navigationItem" id="gia-4b-kDl"/>
                     <connections>
                         <outlet property="gradientViewHidden" destination="U9V-AS-aO0" id="sJ9-BC-IlF"/>
+                        <outlet property="mapView" destination="2aR-H6-oWU" id="Rli-Iw-ONe"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="60H-ek-Lae" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
