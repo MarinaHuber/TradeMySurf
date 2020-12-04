@@ -30,20 +30,7 @@ class LocationViewController: UIViewController, StoryboardProtocol, GMSMapViewDe
 //https://stackoverflow.com/questions/37753742/how-to-filter-autocomplete-country-in-google-maps-ios-sdk
 //let filter = GMSAutocompleteFilter()
 //filter.country = "YOURCountryCode"
-        
-        
-//         let standartAppearence = UINavigationBarAppearance()
-//         standartAppearence.configureWithDefaultBackground()
-//
-//         let backButtonAppearence = UIBarButtonItemAppearance()
-//         let titleTextAttributes = [NSAttributedString.Key.foregroundColor: UIColor.black]
-//         backButtonAppearence.normal.titleTextAttributes = titleTextAttributes
-//         backButtonAppearence.highlighted.titleTextAttributes = titleTextAttributes
-//         standartAppearence.backButtonAppearance = backButtonAppearence
-//
-//         UINavigationBar.appearance().standardAppearance = standartAppearence
-//         UINavigationBar.appearance().compactAppearance = standartAppearence
-//         UINavigationBar.appearance().scrollEdgeAppearance = standartAppearence
+
 
     }
 
