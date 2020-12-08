@@ -47,7 +47,7 @@
 		<string>UIInterfaceOrientationLandscapeRight</string>
 	</array>
 	<key>NSLocationWhenInUseUsageDescription</key>
-	<string>Allow</string>
+	<string>Allow application to access your location when the application is in use. Thanks</string>
 	<key>UIUserInterfaceStyle</key>
 	<string>Light</string>
 </dict>

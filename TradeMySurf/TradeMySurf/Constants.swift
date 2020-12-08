@@ -22,3 +22,6 @@ enum Constants {
         static let locationViewController = "LocationViewController"
 	}
 }
+enum Keys {
+    static let publicKey = "AIzaSyBXG1-z2jdCHR65l6GsbATWSMfHk34Cm1M"
+}

@@ -15,6 +15,16 @@ class LocationViewController: UIViewController, StoryboardProtocol, GMSMapViewDe
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        ApiMapsRequest.client.request(.search(matching: "Surf Morocco"), model: MapModel.self) { result in
+            switch result {
+                case .success(let location):
+                    print("____________________________:\(location.results[0].name)")
+                case .failure(.parseError(_)):
+                break
+                case .failure(.responseError):
+                break
+            }
+        }
         let camera = GMSCameraPosition.camera(withLatitude: 45.557038, longitude: -3.163216, zoom: 7.0) // point the initial location of map
           mapView.camera = camera
           mapView.delegate = self

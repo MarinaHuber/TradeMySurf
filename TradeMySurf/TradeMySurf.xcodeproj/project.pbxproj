@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		9C193AFB23A2ACA7000DE1AB /* coin-wallet.json in Resources */ = {isa = PBXBuildFile; fileRef = 9C193AFA23A2ACA7000DE1AB /* coin-wallet.json */; };
+		9C1A985523D7A38E0050C7BC /* AlertVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C1A985423D7A38E0050C7BC /* AlertVC.swift */; };
 		9C31EB8A23E3AA2100060143 /* DetailViewController.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9C31EB8923E3AA2100060143 /* DetailViewController.storyboard */; };
 		9C31EB8C23E3AB1A00060143 /* DetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C31EB8B23E3AB1A00060143 /* DetailViewController.swift */; };
 		9C3CC3DE23C75EE800359368 /* SupplementaryViews.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C3CC3DD23C75EE800359368 /* SupplementaryViews.swift */; };
@@ -15,6 +16,9 @@
 		9C467C67234F2A7D009F4D58 /* Surfboard.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C467C66234F2A7D009F4D58 /* Surfboard.swift */; };
 		9C4C54742349C28500FB2653 /* GuideViewController.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9C4C54732349C28500FB2653 /* GuideViewController.storyboard */; };
 		9C53D5C0234C126600A3BD80 /* StoryboardProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C53D5BF234C126600A3BD80 /* StoryboardProtocol.swift */; };
+		9C587298257FFA8300524BA7 /* ApiMapsRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C587297257FFA8300524BA7 /* ApiMapsRequest.swift */; };
+		9C58729A25801C6200524BA7 /* MapModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C58729925801C6200524BA7 /* MapModel.swift */; };
+		9C58729C258023D800524BA7 /* ApiEndpoint.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C58729B258023D800524BA7 /* ApiEndpoint.swift */; };
 		9C5B644C232A506C000727E6 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C5B644B232A506C000727E6 /* AppDelegate.swift */; };
 		9C5B6450232A506C000727E6 /* PriceCalculatorViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C5B644F232A506C000727E6 /* PriceCalculatorViewController.swift */; };
 		9C5B6456232A506C000727E6 /* TradeMySurf.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 9C5B6454232A506C000727E6 /* TradeMySurf.xcdatamodeld */; };
@@ -39,7 +43,7 @@
 		9C76F09423493DAB00853FD9 /* WelcomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C76F09323493DAB00853FD9 /* WelcomeViewController.swift */; };
 		9C76F09623493EDA00853FD9 /* SurfTripViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C76F09523493EDA00853FD9 /* SurfTripViewController.swift */; };
 		9C76F09823493F0900853FD9 /* GuideViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C76F09723493F0900853FD9 /* GuideViewController.swift */; };
-		9C78559624DDD92F00C8E253 /* AlertSwiftUIView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C78559524DDD92F00C8E253 /* AlertSwiftUIView.swift */; };
+		9C89B61A23D863E000DB8DDF /* AlertVC.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9C89B61923D863E000DB8DDF /* AlertVC.storyboard */; };
 		9C89B61C23DA40D400DB8DDF /* UIView+Shadow.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C89B61B23DA40D400DB8DDF /* UIView+Shadow.swift */; };
 		9C89B61E23DA41A600DB8DDF /* BaseNavigationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C89B61D23DA41A600DB8DDF /* BaseNavigationController.swift */; };
 		9C8F32FC239943350070751F /* SplashViewController.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9C8F32FB239943350070751F /* SplashViewController.storyboard */; };
@@ -59,6 +63,7 @@
 		9CE21BB32507C9BF00B6B20C /* LocationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9CE21BB12507C9BF00B6B20C /* LocationViewController.swift */; };
 		9CF1CC24241136950067533C /* TabBarVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9CF1CC23241136950067533C /* TabBarVC.swift */; };
 		9CF77BDC24101D8300C92725 /* TabbarEntry.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9CF77BDB24101D8300C92725 /* TabbarEntry.swift */; };
+		9CF77BDE24104B5800C92725 /* CustomAlertVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9CF77BDD24104B5800C92725 /* CustomAlertVC.swift */; };
 		9CF77BE024104B9400C92725 /* AlertContainerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9CF77BDF24104B9400C92725 /* AlertContainerView.swift */; };
 		9CF77BE224104BAA00C92725 /* TitleLabel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9CF77BE124104BAA00C92725 /* TitleLabel.swift */; };
 		9CF77BE424104BC700C92725 /* BodyLabel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9CF77BE324104BC700C92725 /* BodyLabel.swift */; };
@@ -99,6 +104,7 @@
 		4510A5DB5E6D5379DA0C696C /* Pods-TradeMySurfTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TradeMySurfTests.release.xcconfig"; path = "Target Support Files/Pods-TradeMySurfTests/Pods-TradeMySurfTests.release.xcconfig"; sourceTree = "<group>"; };
 		73594BCA3A691E66914D3EEA /* Pods-TradeMySurf.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TradeMySurf.debug.xcconfig"; path = "Target Support Files/Pods-TradeMySurf/Pods-TradeMySurf.debug.xcconfig"; sourceTree = "<group>"; };
 		9C193AFA23A2ACA7000DE1AB /* coin-wallet.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = "coin-wallet.json"; sourceTree = "<group>"; };
+		9C1A985423D7A38E0050C7BC /* AlertVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AlertVC.swift; sourceTree = "<group>"; };
 		9C31EB8923E3AA2100060143 /* DetailViewController.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = DetailViewController.storyboard; sourceTree = "<group>"; };
 		9C31EB8B23E3AB1A00060143 /* DetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailViewController.swift; sourceTree = "<group>"; };
 		9C3CC3DD23C75EE800359368 /* SupplementaryViews.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SupplementaryViews.swift; sourceTree = "<group>"; };
@@ -106,6 +112,9 @@
 		9C467C66234F2A7D009F4D58 /* Surfboard.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Surfboard.swift; sourceTree = "<group>"; };
 		9C4C54732349C28500FB2653 /* GuideViewController.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = GuideViewController.storyboard; sourceTree = "<group>"; };
 		9C53D5BF234C126600A3BD80 /* StoryboardProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StoryboardProtocol.swift; sourceTree = "<group>"; };
+		9C587297257FFA8300524BA7 /* ApiMapsRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ApiMapsRequest.swift; sourceTree = "<group>"; };
+		9C58729925801C6200524BA7 /* MapModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = MapModel.swift; path = /Users/marina/Desktop/Projects/TradeMySurf/TradeMySurf/TradeMySurf/Model/MapModel.swift; sourceTree = "<absolute>"; };
+		9C58729B258023D800524BA7 /* ApiEndpoint.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ApiEndpoint.swift; sourceTree = "<group>"; };
 		9C5B6448232A506C000727E6 /* SurfCurve.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SurfCurve.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		9C5B644B232A506C000727E6 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		9C5B644F232A506C000727E6 /* PriceCalculatorViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PriceCalculatorViewController.swift; sourceTree = "<group>"; };
@@ -135,7 +144,7 @@
 		9C76F09323493DAB00853FD9 /* WelcomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WelcomeViewController.swift; sourceTree = "<group>"; };
 		9C76F09523493EDA00853FD9 /* SurfTripViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SurfTripViewController.swift; sourceTree = "<group>"; };
 		9C76F09723493F0900853FD9 /* GuideViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GuideViewController.swift; sourceTree = "<group>"; };
-		9C78559524DDD92F00C8E253 /* AlertSwiftUIView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AlertSwiftUIView.swift; sourceTree = "<group>"; };
+		9C89B61923D863E000DB8DDF /* AlertVC.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = AlertVC.storyboard; sourceTree = "<group>"; };
 		9C89B61B23DA40D400DB8DDF /* UIView+Shadow.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIView+Shadow.swift"; sourceTree = "<group>"; };
 		9C89B61D23DA41A600DB8DDF /* BaseNavigationController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseNavigationController.swift; sourceTree = "<group>"; };
 		9C8F32FB239943350070751F /* SplashViewController.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = SplashViewController.storyboard; sourceTree = "<group>"; };
@@ -155,6 +164,7 @@
 		9CE21BB12507C9BF00B6B20C /* LocationViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LocationViewController.swift; sourceTree = "<group>"; };
 		9CF1CC23241136950067533C /* TabBarVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabBarVC.swift; sourceTree = "<group>"; };
 		9CF77BDB24101D8300C92725 /* TabbarEntry.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TabbarEntry.swift; sourceTree = "<group>"; };
+		9CF77BDD24104B5800C92725 /* CustomAlertVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomAlertVC.swift; sourceTree = "<group>"; };
 		9CF77BDF24104B9400C92725 /* AlertContainerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlertContainerView.swift; sourceTree = "<group>"; };
 		9CF77BE124104BAA00C92725 /* TitleLabel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TitleLabel.swift; sourceTree = "<group>"; };
 		9CF77BE324104BC700C92725 /* BodyLabel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BodyLabel.swift; sourceTree = "<group>"; };
@@ -267,6 +277,15 @@
 			path = Calculator;
 			sourceTree = "<group>";
 		};
+		9C587296257FFA4B00524BA7 /* ApiService */ = {
+			isa = PBXGroup;
+			children = (
+				9C587297257FFA8300524BA7 /* ApiMapsRequest.swift */,
+				9C58729B258023D800524BA7 /* ApiEndpoint.swift */,
+			);
+			path = ApiService;
+			sourceTree = "<group>";
+		};
 		9C5B643F232A506C000727E6 = {
 			isa = PBXGroup;
 			children = (
@@ -292,6 +311,7 @@
 		9C5B644A232A506C000727E6 /* TradeMySurf */ = {
 			isa = PBXGroup;
 			children = (
+				9C587296257FFA4B00524BA7 /* ApiService */,
 				9C5B644B232A506C000727E6 /* AppDelegate.swift */,
 				9C6F64CF2379FB7800B0224D /* Constants.swift */,
 				9C62417D23915AA800A4B7C9 /* Enums */,
@@ -353,6 +373,7 @@
 			isa = PBXGroup;
 			children = (
 				9C69CE75234CD9B9003E386F /* Location.swift */,
+				9C58729925801C6200524BA7 /* MapModel.swift */,
 				9C467C66234F2A7D009F4D58 /* Surfboard.swift */,
 				9C624171238AE81A00A4B7C9 /* SurfTip.swift */,
 				9C62416F238AE75000A4B7C9 /* RecommendedTripArray.swift */,
@@ -372,7 +393,6 @@
 		9C6F64C52379BD7E00B0224D /* SupportingViews */ = {
 			isa = PBXGroup;
 			children = (
-				9C78559524DDD92F00C8E253 /* AlertSwiftUIView.swift */,
 				9C3CC3DD23C75EE800359368 /* SupplementaryViews.swift */,
 				9CF77BDF24104B9400C92725 /* AlertContainerView.swift */,
 				9CF77BE124104BAA00C92725 /* TitleLabel.swift */,
@@ -409,6 +429,9 @@
 			isa = PBXGroup;
 			children = (
 				9C1630CA24157A4B00DB9BBC /* Detail */,
+				9C89B61923D863E000DB8DDF /* AlertVC.storyboard */,
+				9C1A985423D7A38E0050C7BC /* AlertVC.swift */,
+				9CF77BDD24104B5800C92725 /* CustomAlertVC.swift */,
 				9C8F32FB239943350070751F /* SplashViewController.storyboard */,
 				9C990AAA2398114800B17AE5 /* SplashViewController.swift */,
 				9CFDFD3723671C2500760F25 /* Onboarding */,
@@ -596,6 +619,7 @@
 				9C8F32FF239946090070751F /* logo_final.json in Resources */,
 				9C31EB8A23E3AA2100060143 /* DetailViewController.storyboard in Resources */,
 				9C8F3300239946090070751F /* loader_animation.json in Resources */,
+				9C89B61A23D863E000DB8DDF /* AlertVC.storyboard in Resources */,
 				9C69CE87234D0749003E386F /* Welcome.storyboard in Resources */,
 				9C5B6458232A5073000727E6 /* Assets.xcassets in Resources */,
 				9C8F32FC239943350070751F /* SplashViewController.storyboard in Resources */,
@@ -751,11 +775,12 @@
 			buildActionMask = 2147483647;
 			files = (
 				9CBDE2982395A9E600317F51 /* TimeHelper.swift in Sources */,
-				9C78559624DDD92F00C8E253 /* AlertSwiftUIView.swift in Sources */,
+				9C587298257FFA8300524BA7 /* ApiMapsRequest.swift in Sources */,
 				9C31EB8C23E3AB1A00060143 /* DetailViewController.swift in Sources */,
 				9C69CE76234CD9B9003E386F /* Location.swift in Sources */,
 				9CF77BEE24106A1A00C92725 /* Array+Extension.swift in Sources */,
 				9CF77BEA2410690000C92725 /* UIView+Constraints.swift in Sources */,
+				9C1A985523D7A38E0050C7BC /* AlertVC.swift in Sources */,
 				9CC4F8EA23CA536A00F3ABAB /* Surfs.mlmodel in Sources */,
 				9C467C67234F2A7D009F4D58 /* Surfboard.swift in Sources */,
 				9C990AAB2398114800B17AE5 /* SplashViewController.swift in Sources */,
@@ -772,6 +797,7 @@
 				9C73E26623B963570028B9AC /* CoordinatorPresenting.swift in Sources */,
 				9CF77BE024104B9400C92725 /* AlertContainerView.swift in Sources */,
 				9C624170238AE75000A4B7C9 /* RecommendedTripArray.swift in Sources */,
+				9C58729C258023D800524BA7 /* ApiEndpoint.swift in Sources */,
 				9C73E26823B964560028B9AC /* Coordinator.swift in Sources */,
 				9C53D5C0234C126600A3BD80 /* StoryboardProtocol.swift in Sources */,
 				9C5B644C232A506C000727E6 /* AppDelegate.swift in Sources */,
@@ -783,9 +809,11 @@
 				9C89B61C23DA40D400DB8DDF /* UIView+Shadow.swift in Sources */,
 				9CF1CC24241136950067533C /* TabBarVC.swift in Sources */,
 				9CF77BDC24101D8300C92725 /* TabbarEntry.swift in Sources */,
+				9C58729A25801C6200524BA7 /* MapModel.swift in Sources */,
 				9CFDFD3F2367226C00760F25 /* AddDateViewController.swift in Sources */,
 				9C76F09623493EDA00853FD9 /* SurfTripViewController.swift in Sources */,
 				9C62417C239156C200A4B7C9 /* UserDefaultsHelper.swift in Sources */,
+				9CF77BDE24104B5800C92725 /* CustomAlertVC.swift in Sources */,
 				9CF77BE424104BC700C92725 /* BodyLabel.swift in Sources */,
 				9C90BC552386BD020090E346 /* Enums.swift in Sources */,
 				9CF77BE624104BDB00C92725 /* Button.swift in Sources */,
@@ -969,7 +997,7 @@
 				PRODUCT_NAME = SurfCurve;
 				PROVISIONING_PROFILE_SPECIFIER = "";
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Debug;
 		};
@@ -994,7 +1022,7 @@
 				PRODUCT_NAME = SurfCurve;
 				PROVISIONING_PROFILE_SPECIFIER = "";
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Release;
 		};
