@@ -37,18 +37,35 @@ struct MapModel: Codable {
         case results
     }
 }
+//
+//// MARK: - Result
+//struct Results: Codable {
+//
+//    let name: String
+//
+//}
 
 // MARK: - Result
 struct Results: Codable {
-
+    let formattedAddress: String
+    let geometry: Geometry
     let name: String
+}
 
+// MARK: - Geometry
+struct Geometry: Codable {
+    let location: Location
+    let viewport: Viewport
+}
 
-    enum CodingKeys: String, CodingKey {
+// MARK: - Location
+struct Location: Codable {
+    let lat, lng: Double
+}
 
-        case name
-
-    }
+// MARK: - Viewport
+struct Viewport: Codable {
+    let northeast, southwest: Location
 }
 
 

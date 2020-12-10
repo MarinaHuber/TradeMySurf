@@ -10,9 +10,27 @@ import UIKit
 
 class LocationCollectionViewCell: UICollectionViewCell {
 
-    let nameCountryLabel: UILabel = UILabel()
-	let subtitle: UILabel = UILabel()
-    let imageView: UIImageView = UIImageView()
+    let nameCountryLabel: UILabel = {
+        let nameCountryLabel = UILabel()
+        nameCountryLabel.font = UIFont.preferredFont(forTextStyle: .headline)
+        nameCountryLabel.textColor = .label
+        return nameCountryLabel
+    }()
+	let subtitle: UILabel = {
+        let subtitle = UILabel()
+        subtitle.font = UIFont.preferredFont(forTextStyle: .subheadline)
+        subtitle.textColor = .secondaryLabel
+        return subtitle
+    }()
+    
+    let imageView: UIImageView = {
+        let imageView = UIImageView()
+        imageView.layer.cornerRadius = 15
+        imageView.backgroundColor = .systemTeal
+        imageView.contentMode = .scaleAspectFill
+        imageView.clipsToBounds = true
+        return imageView
+    }()
 
     override init(frame: CGRect) {
         super.init(frame: frame)
@@ -40,24 +58,11 @@ extension LocationCollectionViewCell {
 // MARK: - UI -
 
 private extension LocationCollectionViewCell {
+    
+    
 
 func configureUI() {
-
-	// Styling
     contentView.layer.cornerRadius = 10
-	nameCountryLabel.font = UIFont.preferredFont(forTextStyle: .headline)
-	nameCountryLabel.textColor = .label
-
-	subtitle.font = UIFont.preferredFont(forTextStyle: .subheadline)
-	subtitle.textColor = .secondaryLabel
-
-	imageView.layer.cornerRadius = 15
-	imageView.backgroundColor = .systemTeal
-	imageView.contentMode = .scaleAspectFill
-	imageView.clipsToBounds = true
-    
-	// Layout
-
 	imageView.setContentHuggingPriority(.defaultHigh, for: .horizontal)
 
 	let labelStackView = UIStackView(arrangedSubviews: [nameCountryLabel, subtitle])

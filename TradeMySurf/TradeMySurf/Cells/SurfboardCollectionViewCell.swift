@@ -9,8 +9,18 @@ import UIKit
 
 class SurfBoardCollectionViewCell: UICollectionViewCell {
 
-    let titleLabel: UILabel = UILabel()
-	let volumeLabel: UILabel = UILabel()
+    let titleLabel: UILabel = {
+        let titleLabel = UILabel()
+        titleLabel.textAlignment = .center
+        titleLabel.numberOfLines = 2
+        titleLabel.font = UIFont.preferredFont(forTextStyle: .headline)
+        return titleLabel
+    }()
+	let volumeLabel: UILabel = {
+        let volumeLabel = UILabel()
+        volumeLabel.font = UIFont.preferredFont(forTextStyle: .title3)
+        return volumeLabel
+    }()
 	let weightLabel: UILabel = UILabel()
 	let weightUnit: UILabel = UILabel()
     let imageView: UIImageView = UIImageView()
@@ -42,16 +52,8 @@ private extension SurfBoardCollectionViewCell {
 
     func configureUI() {
 
-        // Styling
-
         contentView.layer.cornerRadius = 10
         contentView.clipsToBounds = true
-
-        titleLabel.textAlignment = .center
-        titleLabel.numberOfLines = 2
-        titleLabel.font = UIFont.preferredFont(forTextStyle: .headline)
-
-		volumeLabel.font = UIFont.preferredFont(forTextStyle: .title3)
 
         imageView.contentMode = .scaleAspectFill
         imageView.backgroundColor = .systemTeal

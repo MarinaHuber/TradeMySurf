@@ -7,7 +7,7 @@
 //
 import  Foundation
 
-public struct Location: Hashable {
+public struct Locations: Hashable {
 //    public let id: UUID = UUID()
 //    
 //    public func hash(into hasher: inout Hasher) {

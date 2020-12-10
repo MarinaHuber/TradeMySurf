@@ -10,9 +10,22 @@ import UIKit
 
 class SmallTableViewCell : UICollectionViewCell {
     
-	let titleLabel: UILabel = UILabel()
+    let titleLabel: UILabel = {
+        let titleLabel =  UILabel()
+        titleLabel.textAlignment = .natural
+        titleLabel.font = UIFont(descriptor: UIFont.preferredFont(forTextStyle: .headline).fontDescriptor.withSymbolicTraits(.traitLooseLeading)!, size: 17)
+        titleLabel.textColor = .black
+        titleLabel.numberOfLines = 0
+        return titleLabel
+    }()
     let dateLabel: UILabel = UILabel()
-	let descriptionLabel: UILabel = UILabel()
+    let descriptionLabel: UILabel = {
+        let descriptionLabel = UILabel()
+        descriptionLabel.textAlignment = .natural
+        descriptionLabel.font = .preferredFont(forTextStyle: .callout)
+        descriptionLabel.numberOfLines = 0
+        return descriptionLabel
+    }()
     let windDescription: UILabel = UILabel()
 	let selectedDate = UserDefaults.standard.surfingTime
 
@@ -45,14 +58,6 @@ private extension SmallTableViewCell {
 
         // Styling
         contentView.layer.cornerRadius = 10
-        titleLabel.textAlignment = .natural
-        titleLabel.font = UIFont(descriptor: UIFont.preferredFont(forTextStyle: .headline).fontDescriptor.withSymbolicTraits(.traitLooseLeading)!, size: 17)
-        titleLabel.textColor = .black
-        titleLabel.numberOfLines = 0
-
-        descriptionLabel.textAlignment = .natural
-        descriptionLabel.font = .preferredFont(forTextStyle: .callout)
-        descriptionLabel.numberOfLines = 0
         
 //        dateLabel.textAlignment = .natural
 //        dateLabel.font = UIFont(descriptor: UIFont.preferredFont(forTextStyle: .headline).fontDescriptor.withSymbolicTraits(.traitLooseLeading)!, size: 19)
