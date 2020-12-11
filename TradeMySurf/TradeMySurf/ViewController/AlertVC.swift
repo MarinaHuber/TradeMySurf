@@ -35,8 +35,8 @@ class AlertVC: UIViewController, StoryboardProtocol {
 
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
-        confirmButton.addBorder(color: .white, width: 0.5)
-        alternateButton.addBorder(color: .white, width: 0.5)
+        confirmButton.addBorder(color: .black, width: 0.5)
+        alternateButton.addBorder(color: .black, width: 0.5)
         titleLabel.text = "\(selectedLevel ?? "")"
         bodyLabel.text = "Surfing start:  \(selectedDate?.dateAsString(style: .long) ?? "")"
         _ = levels.map {
