@@ -24,17 +24,19 @@ class AddLevelViewController: UIViewController, StoryboardProtocol {
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
         setPickerPopover()
+        self.view.verShake()
     }
 }
 
 private extension AddLevelViewController {
     private func setPickerPopover() {
-        StringPickerPopover(title: "Please choose one", choices: levels)
+        StringPickerPopover(title: "Pick a surf goal", choices: levels)
             .setSize(width: view.bounds.size.width, height: 200)
             .setRowHeight(60)
             .setSelectedRow(0)
             .setFontSize(17)
             .setPermittedArrowDirections([.up])
+            .setDimmedBackgroundView(enabled: true)
             .setOutsideTapDismissing(allowed: false)
             .setDoneButton(title: "Next", font: UIFont.boldSystemFont(ofSize: 17), color: .systemIndigo, action: { popover, _, selectedString in
                 UserDefaults.standard.selectedLevel = selectedString

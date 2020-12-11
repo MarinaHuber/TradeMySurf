@@ -19,5 +19,6 @@ enum Constants {
 		static let surfTripViewController = "SurfTripViewController"
 		static let guideViewController = "GuideViewController"
         static let detailViewController = "DetailViewController"
+        static let locationViewController = "LocationViewController"
 	}
 }

@@ -14,8 +14,8 @@ protocol CoorinatorPresenting {
     func presentAddLevel()
     func presentAddDate()
     func presentTabBar()
-    func presentAlert()
     func presentDetailBoard(_ data: Surfboard)
+    func presentDetailLocation(_ data: Surfboard)
 
 }
 

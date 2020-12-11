@@ -9,14 +9,14 @@
 import Foundation
 import UIKit
 import Presentr
+import SwiftUI
 
 protocol DetailViewControllerDelegate {
     func presentDetailViewController(with name: String?)
 }
 
 class SurfTripViewController: UIViewController, StoryboardProtocol {
-    
-   // private var delegate: DetailViewControllerDelegate?
+
     
     lazy var leftBtn: UIBarButtonItem = {
         let button = UIButton(type: .system)
@@ -29,14 +29,10 @@ class SurfTripViewController: UIViewController, StoryboardProtocol {
     }()
 
     private var selectedLevel = UserDefaults.standard.selectedLevel
-    private var selectedDate = UserDefaults.standard.surfingTime
-    private var userComingFromOnboarding = UserDefaults.standard.userWasHere
-
     private(set) var collectionView: UICollectionView!
-   private var sections: [TripSection] = []
+    private var sections: [TripSection] = []
     private var snapshot = NSDiffableDataSourceSnapshot<TripSection, TripItem>()
     private(set) var dataSource: UICollectionViewDiffableDataSource<TripSection, TripItem>! // retain data source!
-   // private(set) var appData: RecommendedTripArray = RecommendedTripArray()
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -45,28 +41,41 @@ class SurfTripViewController: UIViewController, StoryboardProtocol {
         imageView.contentMode = .scaleAspectFill
         imageView.image = image
         navigationItem.titleView = imageView
-        view.applyGradient(withColors: [.systemIndigo, .systemIndigo, .systemBlue, .systemTeal, .white], gradientOrientation: .vertical)
-        //self.delegate = self
+        view.applyGradient(withColors: [.systemIndigo, .systemIndigo, .systemBlue, .systemOrange, .white], gradientOrientation: .vertical)
         addCollectionView()
         configureCollectionView()
-        self.userComingFromOnboarding = true
+        UserDefaults.standard.userWasHere = true
         self.collectionView.backgroundColor = .clear
     }
     
     override func viewDidAppear(_ animated: Bool) {
         super.viewDidAppear(animated)
         self.navigationItem.leftBarButtonItem = leftBtn
-        if userComingFromOnboarding == true {
-            scenePresenter?.presentAlert()
+        if UserDefaults.standard.userWasHere == true {
+            let bridge = ViewModel()
+            let vc = UIHostingController(rootView: AlertSwiftUIView(vm: bridge))
+            vc.modalPresentationStyle = .overFullScreen
+            vc.view.backgroundColor = .clear
+            bridge.closeAction = { [weak vc] in
+                vc?.dismiss(animated: true)
+            }
+            bridge.backAction = { [weak vc] in
+                vc?.dismiss(animated: true)
+                self.scenePresenter?.presentAddLevel()
+            }
+            self.present(vc, animated: true, completion: nil)
         }
     }
     
     override func viewDidDisappear(_ animated: Bool) {
         super.viewDidDisappear(animated)
-        self.userComingFromOnboarding = false
+        UserDefaults.standard.userWasHere = false
     }
+    
     @objc func popToRoot(_ sender: UIBarButtonItem) {
         scenePresenter?.presentAddLevel()
+        UserDefaults.standard.userWasHere = false
+        self.selectedLevel = nil
     }
 }
 
@@ -119,13 +128,13 @@ private extension SurfTripViewController {
                         }
                     }
                     return boardHeader
-                case .surfCountryAutumn, .surfCountrySpring, .surfCountrySummer, .surfCountryWinter:
+                case .surfCountrySummer, .surfCountryAutumn, .surfCountryWinter, .surfCountrySpring:
                     let locationHeader = collectionView.dequeueReusableView(ofType: LocationSupplementaryView.self, forKind: UICollectionView.elementKindSectionHeader, for: indexPath)
                     items.map {
                         _ = $0.map {
                             switch $0 {
-                                case .surfCountry(let date, _):
-                                    locationHeader.fillWith(date)
+                                case .surfCountry(let wave, _):
+                                    locationHeader.fillWith(wave)
                                 default: break
                             }
                         }
@@ -145,7 +154,8 @@ private extension SurfTripViewController {
             snapshot.appendSections([.surfboardsBeginner])
             snapshot.appendItems(Services().dataService.surfboardsBeginner.map({ TripItem.surfboard($0, .Beginner) }))
             
-            updateLocationSection()
+            snapshot.appendSections([.surfCountrySummer])
+            snapshot.appendItems(Services().dataService.surfCountryBegginer.map({ TripItem.surfCountry($0, .Beginner) }))
             
             snapshot.appendSections([.tipBeginner])
             snapshot.appendItems(Services().dataService.tipBeginner.map({ TripItem.tip($0, .Beginner) }))
@@ -153,7 +163,8 @@ private extension SurfTripViewController {
             snapshot.appendSections([.surfboardsBeginnerInter])
             snapshot.appendItems(Services().dataService.surfboardsBeginnerInter.map({ TripItem.surfboard($0, .BeginnerIntermediate) }))
             
-            updateLocationSection()
+            snapshot.appendSections([.surfCountryAutumn])
+            snapshot.appendItems(Services().dataService.surfCountryBI.map({ TripItem.surfCountry($0, .BeginnerIntermediate) }))
             
             snapshot.appendSections([.tipBeginnerInter])
             snapshot.appendItems(Services().dataService.tipBeginnerInter.map({ TripItem.tip($0, .BeginnerIntermediate) }))
@@ -161,7 +172,8 @@ private extension SurfTripViewController {
             snapshot.appendSections([.surfboardsIntermediate])
             snapshot.appendItems(Services().dataService.surfboardsIntermediate.map({  TripItem.surfboard($0, .Intermediate) }))
             
-            updateLocationSection()
+            snapshot.appendSections([.surfCountryWinter])
+            snapshot.appendItems(Services().dataService.surfCountryInter.map({ TripItem.surfCountry($0, .Intermediate) }))
             
             snapshot.appendSections([.tipIntermediate])
             snapshot.appendItems(Services().dataService.tipIntermediate.map({ TripItem.tip($0, .Intermediate) }))
@@ -169,7 +181,8 @@ private extension SurfTripViewController {
             snapshot.appendSections([.surfboardsAdvanced])
             snapshot.appendItems(Services().dataService.surfboardsAdvanced.map({  TripItem.surfboard($0, .Advanced) }))
             
-            updateLocationSection()
+            snapshot.appendSections([.surfCountrySpring])
+            snapshot.appendItems(Services().dataService.surfCountryAdvanced.map({ TripItem.surfCountry($0, .Advanced) }))
             
             snapshot.appendSections([.tipAdvanced])
             snapshot.appendItems(Services().dataService.tipAdvanced.map({ TripItem.tip($0, .Advanced) }))
@@ -181,26 +194,26 @@ private extension SurfTripViewController {
     }
     
     
-    func updateLocationSection() {
-        
-        let selected = makeIntFromMonth()
-        let pickerDate = Season.sortBy(month: selected)
-        switch pickerDate {
-        case 0:
-            snapshot.appendSections([.surfCountryWinter])
-            snapshot.appendItems(Services().dataService.surfCountryWinter.map({ TripItem.surfCountry($0, .winter) }))
-        case 1:
-            snapshot.appendSections([.surfCountrySpring])
-            snapshot.appendItems(Services().dataService.surfCountrySpring.map({ TripItem.surfCountry($0, .spring) }))
-        case 2:
-            snapshot.appendSections([.surfCountrySummer])
-            snapshot.appendItems(Services().dataService.surfCountrySummer.map({ TripItem.surfCountry($0, .summer) }))
-        case 3:
-            snapshot.appendSections([.surfCountryAutumn])
-            snapshot.appendItems(Services().dataService.surfCountryAutumn.map({ TripItem.surfCountry($0, .autumn) }))
-        default: break
-        }
-    }
+//    func updateLocationSection() {
+//
+//        let selected = makeIntFromMonth()
+//        let pickerDate = Season.sortBy(month: selected)
+//        switch pickerDate {
+//        case 0:
+//            snapshot.appendSections([.surfCountryWinter])
+//            snapshot.appendItems(Services().dataService.surfCountryWinter.map({ TripItem.surfCountry($0, .Beginner) }))
+//        case 1:
+//            snapshot.appendSections([.surfCountrySpring])
+//            snapshot.appendItems(Services().dataService.surfCountrySpring.map({ TripItem.surfCountry($0, .BeginnerIntermediate) }))
+//        case 2:
+//            snapshot.appendSections([.surfCountrySummer])
+//            snapshot.appendItems(Services().dataService.surfCountrySummer.map({ TripItem.surfCountry($0, .Intermediate) }))
+//        case 3:
+//            snapshot.appendSections([.surfCountryAutumn])
+//            snapshot.appendItems(Services().dataService.surfCountryAutumn.map({ TripItem.surfCountry($0, .Advanced) }))
+//        default: break
+//        }
+//    }
     
     
 
@@ -208,14 +221,14 @@ private extension SurfTripViewController {
 // MARK: place - Date formatter logic - Extension
 private extension SurfTripViewController {
 
-    func makeIntFromMonth() -> Int {
-        let monthOfYear = selectedDate?.month
-        let dateFormat = DateFormatter()
-        dateFormat.dateFormat = "LLLL"
-        let date = dateFormat.date(from: monthOfYear ?? "")
-        let monthInt = Calendar.current.component(.month, from: date ?? Date())
-        return monthInt
-    }
+//    func makeIntFromMonth() -> Int {
+//        let monthOfYear = selectedDate?.month
+//        let dateFormat = DateFormatter()
+//        dateFormat.dateFormat = "LLLL"
+//        let date = dateFormat.date(from: monthOfYear ?? "")
+//        let monthInt = Calendar.current.component(.month, from: date ?? Date())
+//        return monthInt
+//    }
 }
 // MARK: - Collection View Layout -
 
@@ -313,6 +326,8 @@ extension SurfTripViewController: UICollectionViewDelegate {
         switch item {
             case .surfboard(let surf, _):
                 scenePresenter?.presentDetailBoard(surf)
+            case .surfCountry(let location, _):
+                scenePresenter?.presentDetailLocation(location)
             default : break
         }
     }
@@ -350,14 +365,4 @@ private extension SurfTripViewController {
     }
 }
 
-//extension SurfTripViewController: DetailViewControllerDelegate {
-//
-//    func presentDetailViewController(with name: String?) {
-//        let storyboard: UIStoryboard = UIStoryboard(name: "DetailViewController", bundle: nil)
-//        let vc: DetailViewController = DetailViewController.instantiate(from: storyboard)
-//        vc.selectedImageName = name ?? ""
-//        navigationController?.present(vc, animated: true, completion: nil)
-//
-//        }
-//}
 

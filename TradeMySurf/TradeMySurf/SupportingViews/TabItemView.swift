@@ -69,6 +69,9 @@ class TabItemView: UIView {
     func configureIconView() {
 
         self.containerView = self.loadFromNib(withName: "TabItemView", owner: self, bundle: .main)
+        if UIDevice().userInterfaceIdiom == .pad {
+            self.containerView.frame.size.width = 10
+        }
         self.addSubview(self.containerView)
         self.containerView.backgroundColor = .clear
 

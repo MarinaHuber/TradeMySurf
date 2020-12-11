@@ -21,40 +21,41 @@ final class Coordinator: UIResponder, CoorinatorPresenting {
         self.window = window
     }
     let presenter: Presentr = {
-
-       let bounds = UIScreen.main.bounds
-       var heightFloat = Float()
+        
+        let bounds = UIScreen.main.bounds
+        var heightFloat = Float()
         if UIDevice().userInterfaceIdiom == .phone {
             switch UIScreen.main.nativeBounds.height {
                 case 1334:
-                     heightFloat = 0.60
+                    heightFloat = 0.60
                 case 1920, 2208:
-                     heightFloat = 0.55
+                    heightFloat = 0.55
                 case 2436:
-                     heightFloat = 0.50
+                    heightFloat = 0.50
                 case 2688:
-                     heightFloat = 0.45
+                    heightFloat = 0.45
                 case 1792:
-                     heightFloat = 0.50
+                    heightFloat = 0.50
                 default:
-                     heightFloat = 0.50
+                    heightFloat = 0.50
             }
         }
-       let height = ModalSize.fluid(percentage: heightFloat)
-       let width = ModalSize.fluid(percentage: 0.90)
-       let center = ModalCenterPosition.customOrigin(origin: CGPoint(x: bounds.minX + 20, y: bounds.minY + 200))
-       let customType = PresentationType.custom(width: width, height: height, center: center)
-       let customPresenter = Presentr(presentationType: customType)
-          customPresenter.transitionType = .coverVertical
-          customPresenter.dismissTransitionType = .coverVertical
-          customPresenter.backgroundColor = .blue
-          customPresenter.roundCorners = true
-          customPresenter.cornerRadius = 13
-          customPresenter.backgroundOpacity = 0.5
-          customPresenter.dismissOnSwipe = false
-          customPresenter.outsideContextTap = .noAction
-          return customPresenter
-      }()
+        let height = ModalSize.fluid(percentage: heightFloat)
+        let width = ModalSize.fluid(percentage: 0.90)
+        let center = ModalCenterPosition.customOrigin(origin: CGPoint(x: bounds.minX + 20, y: bounds.minY + 200))
+        let customType = PresentationType.custom(width: width, height: height, center: center)
+        let customPresenter = Presentr(presentationType: customType)
+        customPresenter.transitionType = .coverVertical
+        customPresenter.dismissTransitionType = .coverVertical
+        customPresenter.backgroundColor = .black
+        customPresenter.backgroundOpacity = 0.7
+        customPresenter.roundCorners = true
+        customPresenter.cornerRadius = 13
+        customPresenter.dismissOnSwipe = false
+        customPresenter.backgroundTap = .noAction
+        customPresenter.outsideContextTap = .noAction
+        return customPresenter
+    }()
     
     
     // MARK: Presenting Coordinators
@@ -105,19 +106,20 @@ final class Coordinator: UIResponder, CoorinatorPresenting {
         window.rootViewController = navigationController
     }
     
-    func presentAlert() {
-        
-        let storyboard: UIStoryboard = UIStoryboard(name: Constants.Storyboards.alertViewController, bundle: nil)
-        let controller: AlertVC = AlertVC.instantiate(from: storyboard)
-        guard let navigationController = window.rootViewController as? UINavigationController else { fatalError() }
-        navigationController.customPresentViewController(presenter, viewController: controller, animated: true, completion: nil)
-    }
-    
     func presentDetailBoard(_ data: Surfboard) {
         
         let storyboard: UIStoryboard = UIStoryboard(name: Constants.Storyboards.detailViewController, bundle: nil)
         let controller: DetailViewController = DetailViewController.instantiate(from: storyboard)
         controller.surfBoardData = data
+        guard let navigationController = window.rootViewController as? UINavigationController else { fatalError() }
+        navigationController.present(controller, animated: true, completion: nil)
+    }
+    
+    func presentDetailLocation(_ data: Surfboard) {
+        
+        let storyboard: UIStoryboard = UIStoryboard(name: Constants.Storyboards.locationViewController, bundle: nil)
+        let controller: LocationViewController = LocationViewController.instantiate(from: storyboard)
+       // controller.surfBoardData = data
         guard let navigationController = window.rootViewController as? UINavigationController else { fatalError() }
         navigationController.present(controller, animated: true, completion: nil)
     }

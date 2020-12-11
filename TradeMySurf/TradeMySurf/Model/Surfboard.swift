@@ -18,8 +18,6 @@ public struct Surfboard: Hashable {
     public static func == (lhs: Surfboard, rhs: Surfboard) -> Bool {
         return lhs.id == rhs.id
     }
-	public let level: String, volume: String, imageName: String
+    public let level: String, volume: String, imageName: String, weightUnit: String, beaufortScaleWave: String, countryName: String, continentName: String, imageFlag: String
 	public let weight: Int
-	public let weightUnit: String
-    public let beaufortScaleWave: String
 }

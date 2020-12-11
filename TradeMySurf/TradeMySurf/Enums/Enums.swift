@@ -51,7 +51,7 @@ enum TripItem: Hashable {
 
     case tip(SurfTip, Level)
     case surfboard(Surfboard, Level)
-    case surfCountry(Location, Season)
+    case surfCountry(Surfboard, Level)
 }
 
 

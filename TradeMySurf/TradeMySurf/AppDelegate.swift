@@ -26,9 +26,8 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         coordinator = Coordinator(window: window)
         window.makeKeyAndVisible()
         scenePresenter?.presentSplash()
-        
-    // configure Fonts here
-        customiseNavBar()
+    
+        customizeNavBar()
 
 		return true
 	}
@@ -37,7 +36,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     }
 
     
-    func customiseNavBar () {
+    func customizeNavBar () {
         guard let navigationController = self.window?.rootViewController as? UINavigationController else { return }
         navigationController.setNavigationBarHidden(true, animated: true)
     }

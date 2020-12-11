@@ -20,7 +20,7 @@ class BoardSupplementaryView: UICollectionReusableView {
     
     func fillWith(_ data: Surfboard) {
         title.text = "Surfboard for: \(data.level)"
-        subtitle.text = "Shapes and volume for your level"
+        subtitle.text = "Shape and volume for your level"
     }
     
     func printFonts() {
@@ -41,6 +41,8 @@ class BoardSupplementaryView: UICollectionReusableView {
 
         title.textColor = .white
         title.textAlignment = .center
+        title.lineBreakMode = .byWordWrapping
+        title.numberOfLines = 0
         title.font = UIFont(name: "AvenirNext-Bold", size: 22)
         subtitle.font = UIFont(name: "AvenirNext-Regular", size: 14)
         subtitle.textAlignment = .center
@@ -76,7 +78,7 @@ class LocationSupplementaryView: UICollectionReusableView {
         fatalError("Stop trying to make storyboards happen.")
     }
     
-    func fillWith(_ data: Location) {
+    func fillWith(_ data: Surfboard) {
         title.text = "Surf location for: \(data.beaufortScaleWave)"
         subtitle.text = "Beaufort scale measure for wave height"
     }

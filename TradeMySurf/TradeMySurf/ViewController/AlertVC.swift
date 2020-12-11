@@ -17,22 +17,32 @@ class AlertVC: UIViewController, StoryboardProtocol {
     
     @IBOutlet weak var confirmButton: UIButton!
     @IBOutlet var alternateButton: UIButton!
-    let selectedDate = UserDefaults.standard.surfingTime
-    let selectedLevel = UserDefaults.standard.selectedLevel
+    
+    var selectedDate = UserDefaults.standard.surfingTime
+    var selectedLevel = UserDefaults.standard.selectedLevel
     let levels = [Level.Beginner.rawValue, Level.BeginnerIntermediate.rawValue, Level.Intermediate.rawValue, Level.Advanced.rawValue]
     
-    // MARK: Managing the View
-    
+// MARK: Managing the Lifecycle
+    override func viewDidLoad() {
+        super.viewDidLoad()
+//        if UserDefaults.standard.userWasHere == false {
+//            self.view.isHidden = false
+//            UserDefaults.standard.userWasHere = true
+//        } else {
+//            self.view.isHidden = true
+//        }
+    }
+
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
-        confirmButton.addBorder(color: .white, width: 0.5)
-        alternateButton.addBorder(color: .white, width: 0.5)
+        confirmButton.addBorder(color: .black, width: 0.5)
+        alternateButton.addBorder(color: .black, width: 0.5)
         titleLabel.text = "\(selectedLevel ?? "")"
-        bodyLabel.text = "Surfing period:  \(selectedDate?.dateAsString(style: .long) ?? "")"
+        bodyLabel.text = "Surfing start:  \(selectedDate?.dateAsString(style: .long) ?? "")"
         _ = levels.map {
             if $0 == selectedLevel {
                 let levelEnum = Level(rawValue: $0)
-                bodyText.text = "Your goal is matched to surfboards and locations suitable for your \(levelEnum.unsafelyUnwrapped) level. Find surf guide and get a board that will bring more progress."
+                bodyText.text = "You are matched to surfboards and locations suitable for your \(levelEnum.unsafelyUnwrapped) level and date!"
         }
       }
     }
@@ -41,6 +51,9 @@ class AlertVC: UIViewController, StoryboardProtocol {
     @IBAction func repeatTapped(_ sender: UIButton) {
         // dismiss the alert immediately
         scenePresenter?.presentAddLevel()
+        selectedLevel = nil
+        selectedDate = nil
+        UserDefaults.standard.userWasHere = false
     }
     
     /// Called when the OK button was tapped. If we have a coordinator let it decide what should happen; if not, just dismiss the alert.
