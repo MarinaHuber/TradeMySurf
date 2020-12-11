@@ -43,11 +43,16 @@ class LocationViewController: UIViewController, StoryboardProtocol, GMSMapViewDe
             marker.title = $0.name
             marker.snippet = "Surf stuff"
             marker.map = mapView
+           // marker.icon = UIImage.animatedImage(with: imagesArray as! [UIImage], duration: 1.2)
             
         }
         
     }
     
+    //TODO:  infoWindow custom here
     
+    func mapView(_ mapView: GMSMapView, markerInfoWindow marker: GMSMarker) -> UIView? {
+       return UIView()
+    }
     
 }
