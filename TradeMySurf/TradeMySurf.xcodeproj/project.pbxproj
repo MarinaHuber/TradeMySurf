@@ -311,9 +311,9 @@
 		9C5B644A232A506C000727E6 /* TradeMySurf */ = {
 			isa = PBXGroup;
 			children = (
-				9C587296257FFA4B00524BA7 /* ApiService */,
 				9C5B644B232A506C000727E6 /* AppDelegate.swift */,
 				9C6F64CF2379FB7800B0224D /* Constants.swift */,
+				9C587296257FFA4B00524BA7 /* ApiService */,
 				9C62417D23915AA800A4B7C9 /* Enums */,
 				9C62416C238AE35100A4B7C9 /* Cells */,
 				9C90BC532386BCE50090E346 /* Helpers */,
