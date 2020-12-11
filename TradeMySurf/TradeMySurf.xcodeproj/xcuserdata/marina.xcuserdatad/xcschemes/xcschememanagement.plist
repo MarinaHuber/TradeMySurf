@@ -9,27 +9,11 @@
 			<key>orderHint</key>
 			<integer>0</integer>
 		</dict>
-	</dict>
-<<<<<<< HEAD
-=======
-	<key>SuppressBuildableAutocreation</key>
-	<dict>
-		<key>9C5B6447232A506C000727E6</key>
+		<key>TradeMySurfTests.xcscheme_^#shared#^_</key>
 		<dict>
-			<key>primary</key>
-			<true/>
-		</dict>
-		<key>9C5B6460232A5073000727E6</key>
-		<dict>
-			<key>primary</key>
-			<true/>
-		</dict>
-		<key>9C5B646B232A5073000727E6</key>
-		<dict>
-			<key>primary</key>
-			<true/>
+			<key>orderHint</key>
+			<integer>1</integer>
 		</dict>
 	</dict>
->>>>>>> development
 </dict>
 </plist>
