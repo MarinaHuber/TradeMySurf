@@ -7,37 +7,53 @@
 //
 
 import UIKit
+import GoogleMaps
 
-class LocationViewController: UIViewController, StoryboardProtocol {
+class LocationViewController: UIViewController, StoryboardProtocol, GMSMapViewDelegate {
     @IBOutlet var gradientViewHidden: UIView!
+    @IBOutlet var mapView: GMSMapView!
+    private var queryLocation: String = ""
+    
     
     override func viewDidLoad() {
         super.viewDidLoad()
-
-//         let standartAppearence = UINavigationBarAppearance()
-//         standartAppearence.configureWithDefaultBackground()
-//
-//         let backButtonAppearence = UIBarButtonItemAppearance()
-//         let titleTextAttributes = [NSAttributedString.Key.foregroundColor: UIColor.black]
-//         backButtonAppearence.normal.titleTextAttributes = titleTextAttributes
-//         backButtonAppearence.highlighted.titleTextAttributes = titleTextAttributes
-//         standartAppearence.backButtonAppearance = backButtonAppearence
-//
-//         UINavigationBar.appearance().standardAppearance = standartAppearence
-//         UINavigationBar.appearance().compactAppearance = standartAppearence
-//         UINavigationBar.appearance().scrollEdgeAppearance = standartAppearence
-
+        fetchGooglePlaces()
+        mapView.delegate = self
+        mapView.isMyLocationEnabled = true
+        mapView.settings.myLocationButton = true
+        
+    }
+    func fetchGooglePlaces() {
+        ApiMapsRequest.client.request(.search(matching: "Surf Morocco"), model: MapModel.self) { result in
+            switch result {
+                case .success(let location):
+                    DispatchQueue.main.async {
+                        self.showGooglePlaces(location)
+                    }
+                case .failure(let error):
+                    print(error)
+            }
+        }
     }
     
-
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
+    func showGooglePlaces(_ mapModel: MapModel) {
+        let markers = mapModel.results.map {
+            let marker = GMSMarker()
+            marker.position = CLLocationCoordinate2D(latitude: $0.geometry.location.lat, longitude: $0.geometry.location.lng)
+            marker.title = $0.name
+            marker.opacity = 0.9
+            marker.snippet = "Surf stuff"
+            marker.map = mapView
+           // marker.icon = UIImage.animatedImage(with: imagesArray as! [UIImage], duration: 1.2)
+            
+        }
+        
     }
-    */
-
+    
+    //TODO:  infoWindow custom here
+    
+    func mapView(_ mapView: GMSMapView, markerInfoWindow marker: GMSMarker) -> UIView? {
+       return UIView()
+    }
+    
 }
