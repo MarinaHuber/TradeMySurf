@@ -180,19 +180,3 @@ struct AlertSwiftUIView_Previews: PreviewProvider {
         AlertSwiftUIView(vm: ViewModel())
     }
 }
-
-
-//GeometryReader { geometry in
-//if geometry.size.height > geometry.size.width {
-//       print("portrait")
-//} else {
-//       print("landscape")
-//}
-
-//return GeometryReader { geometry in
-//  if geometry.size.width > 324.0/2.0 { // 40mm watch resolution in points
-//    Text("BIG view here")
-//  } else {
-//    Text("small view here")
-//  }
-//}
