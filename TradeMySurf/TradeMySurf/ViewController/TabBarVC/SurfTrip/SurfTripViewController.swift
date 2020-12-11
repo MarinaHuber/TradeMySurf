@@ -41,7 +41,7 @@ class SurfTripViewController: UIViewController, StoryboardProtocol {
         imageView.contentMode = .scaleAspectFill
         imageView.image = image
         navigationItem.titleView = imageView
-        view.applyGradient(withColors: [.systemIndigo, .systemIndigo, .systemBlue, .systemTeal, .white], gradientOrientation: .vertical)
+        view.applyGradient(withColors: [.systemIndigo, .systemIndigo, .systemBlue, .systemOrange, .white], gradientOrientation: .vertical)
         addCollectionView()
         configureCollectionView()
         UserDefaults.standard.userWasHere = true
