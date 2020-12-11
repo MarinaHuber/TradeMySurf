@@ -42,6 +42,7 @@ class LocationViewController: UIViewController, StoryboardProtocol, GMSMapViewDe
             marker.position = CLLocationCoordinate2D(latitude: $0.geometry.location.lat, longitude: $0.geometry.location.lng)
             marker.title = $0.name
             marker.snippet = "Surf stuff"
+            marker.opacity = 0.7
             marker.map = mapView
            // marker.icon = UIImage.animatedImage(with: imagesArray as! [UIImage], duration: 1.2)
             
