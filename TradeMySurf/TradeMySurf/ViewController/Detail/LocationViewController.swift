@@ -39,12 +39,17 @@ class LocationViewController: UIViewController, StoryboardProtocol, GMSMapViewDe
     func showGooglePlaces(_ mapModel: MapModel) {
         let markers = mapModel.results.map {
             let marker = GMSMarker()
-            marker.position = CLLocationCoordinate2D(latitude: $0.geometry.location.lat, longitude: $0.geometry.location.lng)
+//            marker.position = CLLocationCoordinate2D(latitude: $0.geometry.location.lat, longitude: $0.geometry.location.lng)
+            let camera = GMSCameraPosition.camera(withLatitude: $0.geometry.location.lat, longitude: $0.geometry.location.lng, zoom: 10.0)
+
+            mapView.camera = camera
             marker.title = $0.name
             marker.snippet = "Surf stuff"
             marker.opacity = 0.7
             marker.map = mapView
-           // marker.icon = UIImage.animatedImage(with: imagesArray as! [UIImage], duration: 1.2)
+            marker.icon = UIImage(named: "logo_wave")
+            marker.iconView?.sizeThatFits(CGSize(width: 40, height: 40))
+            marker.appearAnimation = .pop
             
         }
         
