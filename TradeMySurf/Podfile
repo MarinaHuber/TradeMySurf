@@ -13,7 +13,6 @@ target 'TradeMySurf' do
   pod 'SwiftyPickerPopover'
   pod 'lottie-ios'
   pod 'Presentr'
-  pod 'GoogleMaps'
   
   target 'TradeMySurfTests' do
     inherit! :search_paths
