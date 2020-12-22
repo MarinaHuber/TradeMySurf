@@ -14,7 +14,7 @@
             buildForAnalyzing = "YES">
             <BuildableReference
                BuildableIdentifier = "primary"
-               BlueprintIdentifier = "14453CA438DF029F3FA679D72EB9BD60"
+               BlueprintIdentifier = "8742C6943D5EF52A81341D5CC5677C86"
                BuildableName = "Pods_TradeMySurf.framework"
                BlueprintName = "Pods-TradeMySurf"
                ReferencedContainer = "container:Pods.xcodeproj">

@@ -1,10 +1,6 @@
 # Acknowledgements
 This application makes use of the following third party libraries:
 
-## GoogleMaps
-
-Copyright 2019 Google
-
 ## Presentr
 
 MIT License

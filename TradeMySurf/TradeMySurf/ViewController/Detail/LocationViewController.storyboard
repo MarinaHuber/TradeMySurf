@@ -1,10 +1,12 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="15705" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="17156" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15706"/>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17125"/>
         <capability name="Named colors" minToolsVersion="9.0"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
@@ -16,11 +18,13 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <subviews>
-                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="2aR-H6-oWU" customClass="GMSMapView">
+                            <mapView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" mapType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="5fr-xS-AF4">
                                 <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
-                                <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
-                            </view>
-                            <view hidden="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="U9V-AS-aO0" customClass="GradientView" customModule="Surf_Curve">
+                                <connections>
+                                    <outlet property="delegate" destination="FX6-ds-vsR" id="MNx-EK-lOI"/>
+                                </connections>
+                            </mapView>
+                            <view hidden="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="U9V-AS-aO0" customClass="GradientView" customModule="SurfCurve" customModuleProvider="target">
                                 <rect key="frame" x="0.0" y="297" width="414" height="395"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="ML combined with sufers intelligence to fuel your surf goals." textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="nWh-CP-D8A">
@@ -36,7 +40,7 @@
                                         <rect key="frame" x="9" y="225" width="396" height="162"/>
                                         <subviews>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Premium Plan" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="f4L-uU-O2X">
-                                                <rect key="frame" x="102" y="8" width="192" height="36"/>
+                                                <rect key="frame" x="102" y="8" width="192.5" height="36"/>
                                                 <fontDescription key="fontDescription" type="boldSystem" pointSize="30"/>
                                                 <color key="textColor" red="0.23921568630000001" green="0.25098039220000001" blue="0.35686274509999999" alpha="1" colorSpace="calibratedRGB"/>
                                                 <nil key="highlightedColor"/>
@@ -100,8 +104,8 @@
                                         <color key="textColor" red="0.57647058819999997" green="0.90196078430000004" blue="0.70588235290000001" alpha="1" colorSpace="calibratedRGB"/>
                                         <nil key="highlightedColor"/>
                                     </label>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="You can’t upgrade to Premium in the app." textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Px4-sB-ID5">
-                                        <rect key="frame" x="57.5" y="82" width="300" height="25"/>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="You can’t upgrade to Premium in the app." textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Px4-sB-ID5">
+                                        <rect key="frame" x="57" y="87" width="300" height="25"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="12"/>
                                         <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <nil key="highlightedColor"/>
@@ -140,22 +144,21 @@
                                 </userDefinedRuntimeAttributes>
                             </view>
                         </subviews>
-                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <viewLayoutGuide key="safeArea" id="oja-Jj-tfi"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
+                            <constraint firstItem="5fr-xS-AF4" firstAttribute="top" secondItem="ZGm-oe-PZj" secondAttribute="top" id="DNJ-e0-cOW"/>
                             <constraint firstItem="oja-Jj-tfi" firstAttribute="bottom" secondItem="U9V-AS-aO0" secondAttribute="bottom" constant="170" id="HWf-gz-6J2"/>
                             <constraint firstItem="U9V-AS-aO0" firstAttribute="leading" secondItem="oja-Jj-tfi" secondAttribute="leading" id="NnV-t8-leq"/>
-                            <constraint firstItem="2aR-H6-oWU" firstAttribute="top" secondItem="ZGm-oe-PZj" secondAttribute="top" id="S1m-ER-Ba1"/>
-                            <constraint firstAttribute="bottom" secondItem="2aR-H6-oWU" secondAttribute="bottom" id="Ye7-Ij-1ts"/>
+                            <constraint firstItem="5fr-xS-AF4" firstAttribute="trailing" secondItem="oja-Jj-tfi" secondAttribute="trailing" id="QFY-E5-QFC"/>
                             <constraint firstItem="U9V-AS-aO0" firstAttribute="trailing" secondItem="oja-Jj-tfi" secondAttribute="trailing" id="dld-Co-LJk"/>
-                            <constraint firstItem="2aR-H6-oWU" firstAttribute="leading" secondItem="oja-Jj-tfi" secondAttribute="leading" id="f6C-qZ-G3F"/>
-                            <constraint firstItem="2aR-H6-oWU" firstAttribute="trailing" secondItem="oja-Jj-tfi" secondAttribute="trailing" id="jqf-8d-tNw"/>
+                            <constraint firstItem="5fr-xS-AF4" firstAttribute="leading" secondItem="oja-Jj-tfi" secondAttribute="leading" id="htF-5I-aan"/>
+                            <constraint firstAttribute="bottom" secondItem="5fr-xS-AF4" secondAttribute="bottom" id="wgB-fU-Exn"/>
                         </constraints>
-                        <viewLayoutGuide key="safeArea" id="oja-Jj-tfi"/>
                     </view>
                     <navigationItem key="navigationItem" id="gia-4b-kDl"/>
                     <connections>
-                        <outlet property="gradientViewHidden" destination="U9V-AS-aO0" id="sJ9-BC-IlF"/>
-                        <outlet property="mapView" destination="2aR-H6-oWU" id="Rli-Iw-ONe"/>
+                        <outlet property="mapView" destination="5fr-xS-AF4" id="FMj-u8-ZEL"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="60H-ek-Lae" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
@@ -167,5 +170,8 @@
         <namedColor name="pastel">
             <color red="0.21299999952316284" green="0.23399999737739563" blue="0.66200000047683716" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </namedColor>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
     </resources>
 </document>

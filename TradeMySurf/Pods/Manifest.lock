@@ -1,32 +1,24 @@
 PODS:
-  - GoogleMaps (3.1.0):
-    - GoogleMaps/Maps (= 3.1.0)
-  - GoogleMaps/Base (3.1.0)
-  - GoogleMaps/Maps (3.1.0):
-    - GoogleMaps/Base
   - lottie-ios (3.1.8)
   - Presentr (1.9)
   - SwiftyPickerPopover (6.6.6)
 
 DEPENDENCIES:
-  - GoogleMaps
   - lottie-ios
   - Presentr
   - SwiftyPickerPopover
 
 SPEC REPOS:
   https://github.com/cocoapods/specs.git:
-    - GoogleMaps
     - lottie-ios
     - Presentr
     - SwiftyPickerPopover
 
 SPEC CHECKSUMS:
-  GoogleMaps: 5c13302e6fe6bb6e686b267196586b91cd594225
   lottie-ios: 48fac6be217c76937e36e340e2d09cf7b10b7f5f
   Presentr: 7078d7eb5d1661ebeaae60c9e42a1e534de1b993
   SwiftyPickerPopover: a402960a6687c911ffcb4e9fb282a1bc61186ab4
 
-PODFILE CHECKSUM: 8722a8fa4f57b94da0a5c2494ceab2c188ee3e51
+PODFILE CHECKSUM: ad36763efe79856382b2d063540010d68614f101
 
 COCOAPODS: 1.6.1

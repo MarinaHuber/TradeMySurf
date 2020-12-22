@@ -7,21 +7,16 @@
 //
 
 import UIKit
-import GoogleMaps
+import MapKit
 
-class LocationViewController: UIViewController, StoryboardProtocol, GMSMapViewDelegate {
+class LocationViewController: UIViewController, StoryboardProtocol, MKMapViewDelegate {
     @IBOutlet var gradientViewHidden: UIView!
-    @IBOutlet var mapView: GMSMapView!
+    @IBOutlet weak var mapView: MKMapView!
     private var queryLocation: String = ""
-    
     
     override func viewDidLoad() {
         super.viewDidLoad()
         fetchGooglePlaces()
-        mapView.delegate = self
-        mapView.isMyLocationEnabled = true
-        mapView.settings.myLocationButton = true
-        
     }
     func fetchGooglePlaces() {
         ApiMapsRequest.client.request(.search(matching: "Surf Morocco"), model: MapModel.self) { result in
@@ -37,28 +32,34 @@ class LocationViewController: UIViewController, StoryboardProtocol, GMSMapViewDe
     }
     
     func showGooglePlaces(_ mapModel: MapModel) {
-        let markers = mapModel.results.map {
-            let marker = GMSMarker()
-//            marker.position = CLLocationCoordinate2D(latitude: $0.geometry.location.lat, longitude: $0.geometry.location.lng)
-            let camera = GMSCameraPosition.camera(withLatitude: $0.geometry.location.lat, longitude: $0.geometry.location.lng, zoom: 10.0)
-
-            mapView.camera = camera
-            marker.title = $0.name
-            marker.snippet = "Surf stuff"
-            marker.opacity = 0.7
-            marker.map = mapView
-            marker.icon = UIImage(named: "logo_wave")
-            marker.iconView?.sizeThatFits(CGSize(width: 40, height: 40))
-            marker.appearAnimation = .pop
+        _ = mapModel.results.map {
+            print("____test1____\($0.name)")
+            let annotation = MKPointAnnotation()
+            annotation.coordinate =  CLLocationCoordinate2D(latitude: $0.geometry.location.lat, longitude: $0.geometry.location.lng)
+            annotation.subtitle = "Subtitle"
+            let coordinateRegion = MKCoordinateRegion(center: annotation.coordinate, latitudinalMeters: 6000, longitudinalMeters: 6000)
+            mapView.setRegion(coordinateRegion, animated: true)
+            mapView?.addAnnotation(annotation)
             
         }
-        
     }
     
-    //TODO:  infoWindow custom here
-    
-    func mapView(_ mapView: GMSMapView, markerInfoWindow marker: GMSMarker) -> UIView? {
-       return UIView()
+    func mapView(_ mapView: MKMapView, viewFor annotation: MKAnnotation) -> MKAnnotationView? {
+        guard annotation is MKPointAnnotation else { return nil }
+
+        let identifier = "Annotation"
+        var annotationView = mapView.dequeueReusableAnnotationView(withIdentifier: identifier)
+
+        if annotationView == nil {
+            annotationView = MKPinAnnotationView(annotation: annotation, reuseIdentifier: identifier)
+            annotationView!.canShowCallout = true
+        } else {
+            annotationView!.annotation = annotation
+        }
+
+        return annotationView
     }
+
     
+
 }
