@@ -24,36 +24,29 @@ class LocationViewController: UIViewController, StoryboardProtocol {
         
     }
     func fetchGooglePlaces() {
-        ApiMapsRequest.client.request(.search(matching: "Surf Morocco"), model: MapModel.self) { result in
-            switch result {
-                case .success(let location):
-                    DispatchQueue.main.async {
-                        self.showGooglePlaces(location)
-                    }
-                case .failure(let error):
-                    print(error)
-            }
-        }
+//        ApiMapsRequest.client.request(.search(matching: "Surf Morocco"), model: MapModel.self) { result in
+//            switch result {
+//                case .success(let location):
+//                    DispatchQueue.main.async {
+//                        self.showGooglePlaces(location)
+//                    }
+//                case .failure(let error):
+//                    print(error)
+//            }
+//        }
     }
     
-    func showGooglePlaces(_ mapModel: MapModel) {
+//    func showGooglePlaces(_ mapModel: MapModel) {
 //        let markers = mapModel.results.map {
 //            let marker = GMSMarker()
-////            marker.position = CLLocationCoordinate2D(latitude: $0.geometry.location.lat, longitude: $0.geometry.location.lng)
-//            let camera = GMSCameraPosition.camera(withLatitude: $0.geometry.location.lat, longitude: $0.geometry.location.lng, zoom: 10.0)
-//
-//            mapView.camera = camera
+//            marker.position = CLLocationCoordinate2D(latitude: $0.geometry.location.lat, longitude: $0.geometry.location.lng)
 //            marker.title = $0.name
+//            marker.opacity = 0.9
 //            marker.snippet = "Surf stuff"
-//            marker.opacity = 0.7
 //            marker.map = mapView
-//            marker.icon = UIImage(named: "logo_wave")
-//            marker.iconView?.sizeThatFits(CGSize(width: 40, height: 40))
-//            marker.appearAnimation = .pop
+//           // marker.icon = UIImage.animatedImage(with: imagesArray as! [UIImage], duration: 1.2)
 //
 //        }
         
     }
     
-
-}
