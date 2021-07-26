@@ -23,18 +23,17 @@ class BoardSupplementaryView: UICollectionReusableView {
         subtitle.text = "Shape and volume for your level"
     }
     
-    func printFonts() {
-        let fontFamilyNames = UIFont.familyNames
-        for familyName in fontFamilyNames {
-//            print("------------------------------")
-//            print("Font Family Name = [\(familyName)]")
-//            let names = UIFont.fontNames(forFamilyName: familyName)
-//            print("Font Names = [\(names)]")
-        }
-    }
+//    func printFonts() {
+//        let fontFamilyNames = UIFont.familyNames
+//        for familyName in fontFamilyNames {
+////            print("------------------------------")
+////            print("Font Family Name = [\(familyName)]")
+////            let names = UIFont.fontNames(forFamilyName: familyName)
+////            print("Font Names = [\(names)]")
+//        }
+//    }
     
     func configureUI() {
-        printFonts()
         let separator = UIView(frame: .zero)
         separator.translatesAutoresizingMaskIntoConstraints = false
         separator.backgroundColor = .white

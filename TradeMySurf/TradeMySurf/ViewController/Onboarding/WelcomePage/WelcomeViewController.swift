@@ -99,14 +99,9 @@ class WelcomeViewController: UIViewController, CAAnimationDelegate, StoryboardPr
                     post.toValue = view.bounds.size.height - 400
                 case 1920, 2208:
                     post.toValue = view.bounds.size.height - 450
-                case 2436:
+                case 2436, 2688, 1792:
                     post.toValue = view.bounds.size.height - 500
-                case 2688:
-                    post.toValue = view.bounds.size.height - 500
-                case 1792:
-                    post.toValue = view.bounds.size.height - 500
-//                case 2732:
-//                    post.toValue = view.bounds.size.height - 500
+
                 default:
                     post.toValue = view.bounds.size.height - 500
             }
