@@ -33,3 +33,20 @@ extension UIResponder {
         return nil
     }
 }
+//- MARK: generic version of above
+
+//extension UIResponder {
+//    func next<T:UIResponder>(ofType: T.Type) -> T? {
+//        let r = self.next
+//        if let r = r as? T ?? r?.next(ofType: T.self) {
+//            return r
+//        } else {
+//            return nil
+//        }
+//    }
+//}
+
+/////USAGE
+//if let vc = self.next(ofType: UIViewController.self) {
+//    vc.present(imagePicker, animated: true, completion: nil)
+//}

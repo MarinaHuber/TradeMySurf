@@ -17,8 +17,8 @@ struct ApiMapsRequest {
     
      static let client = ApiMapsRequest()
     
-    // MARK: - Initializer
-     init() {}
+    // MARK: - Initializer private
+     private init() {}
     
     // MARK: - Requests
     func request<T: Decodable>(_ endpoint: Endpoint, model: T.Type, completion: @escaping (Result<T, APIServiceError>) -> ()) {

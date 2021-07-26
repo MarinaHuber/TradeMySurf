@@ -1,17 +1,19 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="15705" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="18122" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15706"/>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="18093"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
         <!--Saved-->
         <scene sceneID="2Op-iH-4u0">
             <objects>
-                <viewController storyboardIdentifier="GuideViewController" id="taf-X9-iD4" userLabel="Saved" customClass="GuideViewController" customModule="Surf_Curve" customModuleProvider="target" sceneMemberID="viewController">
-                    <view key="view" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="8BQ-Rc-ssY" customClass="GradientView" customModule="Surf_Curve" customModuleProvider="target">
+                <viewController storyboardIdentifier="GuideViewController" id="taf-X9-iD4" userLabel="Saved" customClass="GuideViewController" customModule="SurfCurve" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="8BQ-Rc-ssY" customClass="GradientView" customModule="SurfCurve" customModuleProvider="target">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <subviews>
@@ -51,7 +53,7 @@
                                             </label>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ZTs-du-77p">
                                                 <rect key="frame" x="8" y="222" width="374" height="167.5"/>
-                                                <mutableString key="text">Volume is important element to consider when choosing a surfboard. It's the factor that can most affect the number of waves you catch, and how much fun you have in water.But it isn't everything. Understanding how the curved shapes and the surfboard's dimensions affect your surfing will also help you find better surfboardsfor your surf level, and have positive impact on your progression. Volume is calculated in liters and it takes yout weight and height to do so, check the online calculator and find out your ideal board vloume.</mutableString>
+                                                <string key="text">Volume is important element to consider when choosing a surfboard. It's the factor that can most affect the number of waves you catch, and how much fun you have in water.But it isn't everything. Understanding how the curved shapes and the surfboard's dimensions affect your surfing will also help you find better surfboardsfor your surf level, and have positive impact on your progression. Volume is calculated in liters and it takes yout weight and height to do so, check the online calculator and find out your ideal board vloume.</string>
                                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                                 <nil key="textColor"/>
                                                 <nil key="highlightedColor"/>
@@ -173,9 +175,8 @@
                                                 <nil key="highlightedColor"/>
                                             </label>
                                         </subviews>
-                                        <color key="backgroundColor" systemColor="systemGreenColor" red="0.20392156859999999" green="0.78039215689999997" blue="0.34901960780000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                        <directionalEdgeInsets key="directionalLayoutMargins" top="8" leading="8" bottom="8" trailing="8"/>
                                         <viewLayoutGuide key="safeArea" id="HFM-Xn-NuK"/>
+                                        <directionalEdgeInsets key="directionalLayoutMargins" top="8" leading="8" bottom="8" trailing="8"/>
                                     </stackView>
                                 </subviews>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -191,7 +192,8 @@
                                 </constraints>
                             </scrollView>
                         </subviews>
-                        <color key="tintColor" systemColor="systemTealColor" red="0.35294117650000001" green="0.7843137255" blue="0.98039215690000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <viewLayoutGuide key="safeArea" id="rdf-8D-Dua"/>
+                        <color key="tintColor" systemColor="systemTealColor"/>
                         <constraints>
                             <constraint firstItem="0b7-bv-RVH" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="rdf-8D-Dua" secondAttribute="leading" constant="12" id="IaP-fV-2hH"/>
                             <constraint firstItem="0b7-bv-RVH" firstAttribute="bottom" secondItem="8BQ-Rc-ssY" secondAttribute="bottom" id="KSo-2U-X5e"/>
@@ -199,10 +201,9 @@
                             <constraint firstItem="rdf-8D-Dua" firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="0b7-bv-RVH" secondAttribute="trailing" constant="12" id="cet-vP-Cr0"/>
                             <constraint firstItem="rdf-8D-Dua" firstAttribute="top" secondItem="0b7-bv-RVH" secondAttribute="top" constant="44" id="l05-gw-Cfv"/>
                         </constraints>
-                        <viewLayoutGuide key="safeArea" id="rdf-8D-Dua"/>
                         <userDefinedRuntimeAttributes>
                             <userDefinedRuntimeAttribute type="color" keyPath="firstColor">
-                                <color key="value" systemColor="systemIndigoColor" red="0.34509803919999998" green="0.33725490200000002" blue="0.83921568629999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <color key="value" systemColor="systemIndigoColor"/>
                             </userDefinedRuntimeAttribute>
                             <userDefinedRuntimeAttribute type="color" keyPath="secondColor">
                                 <color key="value" white="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -210,7 +211,7 @@
                         </userDefinedRuntimeAttributes>
                     </view>
                     <tabBarItem key="tabBarItem" title="ABOUT" image="info" catalog="system" id="byX-hE-gt8">
-                        <color key="badgeColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <color key="badgeColor" systemColor="systemBackgroundColor"/>
                     </tabBarItem>
                     <connections>
                         <outlet property="goToWeb" destination="z7F-7N-Y5C" id="gpa-eA-cXq"/>
@@ -222,7 +223,16 @@
         </scene>
     </scenes>
     <resources>
-        <image name="info" catalog="system" width="46" height="64"/>
+        <image name="info" catalog="system" width="93" height="128"/>
         <image name="trimming" width="1000" height="298"/>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+        <systemColor name="systemIndigoColor">
+            <color red="0.34509803921568627" green="0.33725490196078434" blue="0.83921568627450982" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+        <systemColor name="systemTealColor">
+            <color red="0.35294117647058826" green="0.78431372549019607" blue="0.98039215686274506" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
     </resources>
 </document>

@@ -511,7 +511,6 @@
 				9C5B6444232A506C000727E6 /* Sources */,
 				9C5B6445232A506C000727E6 /* Frameworks */,
 				9C5B6446232A506C000727E6 /* Resources */,
-				9C6F64C02379ADCA00B0224D /* ShellScript */,
 				50836E4BF80526DB1CF33D8B /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
@@ -692,23 +691,6 @@
 			shellPath = /bin/sh;
 			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-TradeMySurf/Pods-TradeMySurf-frameworks.sh\"\n";
 			showEnvVarsInLog = 0;
-		};
-		9C6F64C02379ADCA00B0224D /* ShellScript */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputFileListPaths = (
-			);
-			inputPaths = (
-			);
-			outputFileListPaths = (
-			);
-			outputPaths = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "# if which swiftlint >/dev/null; then\n# swiftlint\n# else\n# echo \"warning: SwiftLint not installed, 'brew install swiftlint' or download from https://github.com/realm/SwiftLint\"\n# fi\n";
 		};
 		CEE4F4BDB2961797D17A282B /* [CP] Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;

@@ -10,8 +10,15 @@ import UIKit
 
 class PriceCalculatorViewController: UIViewController, StoryboardProtocol {
 
-    let surfBoards = Surfs()
-
+    private static let surfBoards: Surfs = {
+        do {
+            return try Surfs(configuration: .init())
+        } catch {
+            print(error)
+            fatalError("Couldn't create Surf")
+        }
+    }()
+    
     @IBOutlet weak var materialSegmented: UISegmentedControl!
     @IBOutlet var stackView: UIStackView!
     @IBOutlet var model: UISegmentedControl!
@@ -43,7 +50,7 @@ class PriceCalculatorViewController: UIViewController, StoryboardProtocol {
         let formattedMileage = formatter.string(for: production.value) ?? "0"
         hoursLabel.text = "Hours on water (\(formattedMileage) hours)"
 
-        if let prediction = try? surfBoards.prediction(model: Double(model.selectedSegmentIndex), material: Double(materialSegmented.selectedSegmentIndex), gear: Double(gear.selectedSegmentIndex), production: Double(production.value), condition: Double(condition.selectedSegmentIndex)) {
+        if let prediction = try? PriceCalculatorViewController.surfBoards.prediction(model: Double(model.selectedSegmentIndex), material: Double(materialSegmented.selectedSegmentIndex), gear: Double(gear.selectedSegmentIndex), production: Double(production.value), condition: Double(condition.selectedSegmentIndex)) {
             let clampedValuation = max(10, prediction.price)
             formatter.numberStyle = .currency
             valuation.text = formatter.string(for: clampedValuation)
