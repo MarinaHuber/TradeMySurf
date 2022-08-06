@@ -7,10 +7,8 @@
 //
 
 import Foundation
-//TO DO: load this as a bundle: https://www.hackingwithswift.com/example-code/system/how-to-decode-json-from-your-app-bundle-the-easy-way
 
-
-public struct Services {
+public struct MockService {
     
     public let dataService: RecommendedTripArray
     

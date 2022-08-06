@@ -13,32 +13,34 @@ enum APIServiceError: Error {
 }
 
 struct ApiMapsRequest {
-    // MARK: - Properties
+        // MARK: - Properties for propery injection
+    static let client = ApiMapsRequest()
     
-     static let client = ApiMapsRequest()
-    
-    // MARK: - Initializer private
-     private init() {}
-    
-    // MARK: - Requests
+        // MARK: - Initializer private for Sigleton instance
+    private init() {}
+
+}
+
+extension ApiMapsRequest {
+        // MARK: - Requests
     func request<T: Decodable>(_ endpoint: Endpoint, model: T.Type, completion: @escaping (Result<T, APIServiceError>) -> ()) {
         guard let url = endpoint.url else {
             return completion(.failure(.responseError))
         }
-            
+
         let task = URLSession.shared.dataTask(with: url) {
             data, response, error in
-            
+
             if let _ = error {
                 completion(.failure(.responseError))
                 return
             }
-            
+
             guard let response = response as? HTTPURLResponse, response.statusCode == 200 else {
                 completion(.failure(.responseError))
                 return
             }
-            
+
             guard let data = data else {
                 completion(.failure(.responseError))
                 return
@@ -48,7 +50,7 @@ struct ApiMapsRequest {
                 decoder.keyDecodingStrategy = .convertFromSnakeCase
                 decoder.dateDecodingStrategy = .iso8601
                 let model = try decoder.decode(T.self, from: data)
-                
+
                 completion(.success(model))
             } catch {
                 completion(.failure(.parseError(error)))
@@ -56,5 +58,6 @@ struct ApiMapsRequest {
         }
         task.resume()
     }
-  //  }
 }
+
+

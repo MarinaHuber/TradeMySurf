@@ -15,9 +15,10 @@
 		9C45E661234D238F0054A5FD /* SurfTripViewController.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9C45E660234D238E0054A5FD /* SurfTripViewController.storyboard */; };
 		9C467C67234F2A7D009F4D58 /* Surfboard.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C467C66234F2A7D009F4D58 /* Surfboard.swift */; };
 		9C4C54742349C28500FB2653 /* GuideViewController.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9C4C54732349C28500FB2653 /* GuideViewController.storyboard */; };
+		9C53CE1C289E9497000969F2 /* MapModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C53CE1B289E9497000969F2 /* MapModel.swift */; };
+		9C53CE1E289E94B5000969F2 /* SplashViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C53CE1D289E94B5000969F2 /* SplashViewController.swift */; };
 		9C53D5C0234C126600A3BD80 /* StoryboardProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C53D5BF234C126600A3BD80 /* StoryboardProtocol.swift */; };
 		9C587298257FFA8300524BA7 /* ApiMapsRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C587297257FFA8300524BA7 /* ApiMapsRequest.swift */; };
-		9C58729A25801C6200524BA7 /* MapModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C58729925801C6200524BA7 /* MapModel.swift */; };
 		9C58729C258023D800524BA7 /* ApiEndpoint.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C58729B258023D800524BA7 /* ApiEndpoint.swift */; };
 		9C5B644C232A506C000727E6 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C5B644B232A506C000727E6 /* AppDelegate.swift */; };
 		9C5B6450232A506C000727E6 /* PriceCalculatorViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C5B644F232A506C000727E6 /* PriceCalculatorViewController.swift */; };
@@ -25,7 +26,7 @@
 		9C5B6458232A5073000727E6 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 9C5B6457232A5073000727E6 /* Assets.xcassets */; };
 		9C5B6471232A5073000727E6 /* TradeMySurfUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C5B6470232A5073000727E6 /* TradeMySurfUITests.swift */; };
 		9C62416E238AE68E00A4B7C9 /* ReuseIdentifierHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C62416D238AE68E00A4B7C9 /* ReuseIdentifierHelper.swift */; };
-		9C624170238AE75000A4B7C9 /* RecommendedTripArray.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C62416F238AE75000A4B7C9 /* RecommendedTripArray.swift */; };
+		9C624170238AE75000A4B7C9 /* MockService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C62416F238AE75000A4B7C9 /* MockService.swift */; };
 		9C624172238AE81A00A4B7C9 /* SurfTip.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C624171238AE81A00A4B7C9 /* SurfTip.swift */; };
 		9C624174238AFC1400A4B7C9 /* SmallTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C624173238AFC1400A4B7C9 /* SmallTableViewCell.swift */; };
 		9C624176238B089000A4B7C9 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C624175238B089000A4B7C9 /* SceneDelegate.swift */; };
@@ -53,7 +54,6 @@
 		9C90A22F2388888B00E735D3 /* shop.json in Resources */ = {isa = PBXBuildFile; fileRef = 9C90A22E2388888B00E735D3 /* shop.json */; };
 		9C90A233238897A500E735D3 /* air.json in Resources */ = {isa = PBXBuildFile; fileRef = 9C90A232238897A400E735D3 /* air.json */; };
 		9C90BC552386BD020090E346 /* Enums.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C90BC542386BD020090E346 /* Enums.swift */; };
-		9C990AAB2398114800B17AE5 /* SplashViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C990AAA2398114800B17AE5 /* SplashViewController.swift */; };
 		9C9F836C2366BDAA00FA4F41 /* TabBarCoordinatorTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C9F836B2366BDAA00FA4F41 /* TabBarCoordinatorTests.swift */; };
 		9CBDE2982395A9E600317F51 /* TimeHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9CBDE2972395A9E600317F51 /* TimeHelper.swift */; };
 		9CC4F8EA23CA536A00F3ABAB /* Surfs.mlmodel in Sources */ = {isa = PBXBuildFile; fileRef = 9CC4F8E923CA536A00F3ABAB /* Surfs.mlmodel */; };
@@ -109,9 +109,10 @@
 		9C45E660234D238E0054A5FD /* SurfTripViewController.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = SurfTripViewController.storyboard; sourceTree = "<group>"; };
 		9C467C66234F2A7D009F4D58 /* Surfboard.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Surfboard.swift; sourceTree = "<group>"; };
 		9C4C54732349C28500FB2653 /* GuideViewController.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = GuideViewController.storyboard; sourceTree = "<group>"; };
+		9C53CE1B289E9497000969F2 /* MapModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MapModel.swift; sourceTree = "<group>"; };
+		9C53CE1D289E94B5000969F2 /* SplashViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SplashViewController.swift; sourceTree = "<group>"; };
 		9C53D5BF234C126600A3BD80 /* StoryboardProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StoryboardProtocol.swift; sourceTree = "<group>"; };
 		9C587297257FFA8300524BA7 /* ApiMapsRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ApiMapsRequest.swift; sourceTree = "<group>"; };
-		9C58729925801C6200524BA7 /* MapModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = MapModel.swift; path = /Users/marina/Desktop/Projects/TradeMySurf/TradeMySurf/TradeMySurf/Model/MapModel.swift; sourceTree = "<absolute>"; };
 		9C58729B258023D800524BA7 /* ApiEndpoint.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ApiEndpoint.swift; sourceTree = "<group>"; };
 		9C5B6448232A506C000727E6 /* SurfCurve.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SurfCurve.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		9C5B644B232A506C000727E6 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -122,7 +123,7 @@
 		9C5B646C232A5073000727E6 /* TradeMySurfUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = TradeMySurfUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		9C5B6470232A5073000727E6 /* TradeMySurfUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TradeMySurfUITests.swift; sourceTree = "<group>"; };
 		9C62416D238AE68E00A4B7C9 /* ReuseIdentifierHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReuseIdentifierHelper.swift; sourceTree = "<group>"; };
-		9C62416F238AE75000A4B7C9 /* RecommendedTripArray.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecommendedTripArray.swift; sourceTree = "<group>"; };
+		9C62416F238AE75000A4B7C9 /* MockService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockService.swift; sourceTree = "<group>"; };
 		9C624171238AE81A00A4B7C9 /* SurfTip.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SurfTip.swift; sourceTree = "<group>"; };
 		9C624173238AFC1400A4B7C9 /* SmallTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SmallTableViewCell.swift; sourceTree = "<group>"; };
 		9C624175238B089000A4B7C9 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -152,7 +153,6 @@
 		9C90A22E2388888B00E735D3 /* shop.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = shop.json; sourceTree = "<group>"; };
 		9C90A232238897A400E735D3 /* air.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = air.json; sourceTree = "<group>"; };
 		9C90BC542386BD020090E346 /* Enums.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Enums.swift; sourceTree = "<group>"; };
-		9C990AAA2398114800B17AE5 /* SplashViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = SplashViewController.swift; path = TradeMySurf/ViewController/SplashViewController.swift; sourceTree = SOURCE_ROOT; };
 		9C9F836B2366BDAA00FA4F41 /* TabBarCoordinatorTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabBarCoordinatorTests.swift; sourceTree = "<group>"; };
 		9CBDE2972395A9E600317F51 /* TimeHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TimeHelper.swift; sourceTree = "<group>"; };
 		9CC4F8E923CA536A00F3ABAB /* Surfs.mlmodel */ = {isa = PBXFileReference; lastKnownFileType = file.mlmodel; name = Surfs.mlmodel; path = ../../Working/Surfboards/Surfs.mlmodel; sourceTree = "<group>"; };
@@ -273,13 +273,14 @@
 			path = Calculator;
 			sourceTree = "<group>";
 		};
-		9C587296257FFA4B00524BA7 /* ApiService */ = {
+		9C587296257FFA4B00524BA7 /* Services */ = {
 			isa = PBXGroup;
 			children = (
 				9C587297257FFA8300524BA7 /* ApiMapsRequest.swift */,
 				9C58729B258023D800524BA7 /* ApiEndpoint.swift */,
+				9C62416F238AE75000A4B7C9 /* MockService.swift */,
 			);
-			path = ApiService;
+			path = Services;
 			sourceTree = "<group>";
 		};
 		9C5B643F232A506C000727E6 = {
@@ -309,15 +310,14 @@
 			children = (
 				9C5B644B232A506C000727E6 /* AppDelegate.swift */,
 				9C6F64CF2379FB7800B0224D /* Constants.swift */,
-				9C587296257FFA4B00524BA7 /* ApiService */,
+				9C587296257FFA4B00524BA7 /* Services */,
 				9C62417D23915AA800A4B7C9 /* Enums */,
-				9C62416C238AE35100A4B7C9 /* Cells */,
 				9C90BC532386BCE50090E346 /* Helpers */,
 				9C6F64C52379BD7E00B0224D /* SupportingViews */,
-				9C69CE74234CD992003E386F /* Model */,
+				9C69CE74234CD992003E386F /* Models */,
 				9C3F533B234BD7F900D5F65E /* Protocols */,
 				9CC59F15234AA3B200F5ADD0 /* Coordinators */,
-				9C76F09F2349471000853FD9 /* ViewController */,
+				9C76F09F2349471000853FD9 /* ViewControllers */,
 				9C76F09E234946D500853FD9 /* Resources */,
 				9CC4F8E923CA536A00F3ABAB /* Surfs.mlmodel */,
 				9C71A14B2348946C00A67323 /* Info.plist */,
@@ -365,16 +365,15 @@
 			path = Enums;
 			sourceTree = "<group>";
 		};
-		9C69CE74234CD992003E386F /* Model */ = {
+		9C69CE74234CD992003E386F /* Models */ = {
 			isa = PBXGroup;
 			children = (
+				9C53CE1B289E9497000969F2 /* MapModel.swift */,
 				9C69CE75234CD9B9003E386F /* Location.swift */,
-				9C58729925801C6200524BA7 /* MapModel.swift */,
 				9C467C66234F2A7D009F4D58 /* Surfboard.swift */,
 				9C624171238AE81A00A4B7C9 /* SurfTip.swift */,
-				9C62416F238AE75000A4B7C9 /* RecommendedTripArray.swift */,
 			);
-			path = Model;
+			path = Models;
 			sourceTree = "<group>";
 		};
 		9C69CE88234D1D87003E386F /* WelcomePage */ = {
@@ -389,6 +388,7 @@
 		9C6F64C52379BD7E00B0224D /* SupportingViews */ = {
 			isa = PBXGroup;
 			children = (
+				9C62416C238AE35100A4B7C9 /* Cells */,
 				9C446DED2583E7D900561830 /* AlertSwiftUIView.swift */,
 				9C3CC3DD23C75EE800359368 /* SupplementaryViews.swift */,
 				9CF77BDF24104B9400C92725 /* AlertContainerView.swift */,
@@ -422,17 +422,17 @@
 			path = Resources;
 			sourceTree = "<group>";
 		};
-		9C76F09F2349471000853FD9 /* ViewController */ = {
+		9C76F09F2349471000853FD9 /* ViewControllers */ = {
 			isa = PBXGroup;
 			children = (
+				9C53CE1D289E94B5000969F2 /* SplashViewController.swift */,
 				9C1630CA24157A4B00DB9BBC /* Detail */,
 				9C8F32FB239943350070751F /* SplashViewController.storyboard */,
-				9C990AAA2398114800B17AE5 /* SplashViewController.swift */,
 				9CFDFD3723671C2500760F25 /* Onboarding */,
 				9C73011523C51F0900B98F8C /* TabBarVC */,
 				9C89B61D23DA41A600DB8DDF /* BaseNavigationController.swift */,
 			);
-			path = ViewController;
+			path = ViewControllers;
 			sourceTree = "<group>";
 		};
 		9C90A2232388812400E735D3 /* Lottie */ = {
@@ -730,12 +730,12 @@
 				9CF77BEA2410690000C92725 /* UIView+Constraints.swift in Sources */,
 				9CC4F8EA23CA536A00F3ABAB /* Surfs.mlmodel in Sources */,
 				9C467C67234F2A7D009F4D58 /* Surfboard.swift in Sources */,
-				9C990AAB2398114800B17AE5 /* SplashViewController.swift in Sources */,
 				9C5B6450232A506C000727E6 /* PriceCalculatorViewController.swift in Sources */,
 				9CFDFD412367228300760F25 /* AddLevelViewController.swift in Sources */,
 				9C624176238B089000A4B7C9 /* SceneDelegate.swift in Sources */,
 				9C62417A238B374A00A4B7C9 /* LocationaCollectionViewCell.swift in Sources */,
 				9C624178238B107B00A4B7C9 /* SurfboardCollectionViewCell.swift in Sources */,
+				9C53CE1E289E94B5000969F2 /* SplashViewController.swift in Sources */,
 				9C76F09423493DAB00853FD9 /* WelcomeViewController.swift in Sources */,
 				9CE21BB32507C9BF00B6B20C /* LocationViewController.swift in Sources */,
 				9C3CC3DE23C75EE800359368 /* SupplementaryViews.swift in Sources */,
@@ -743,7 +743,7 @@
 				9CF77BE224104BAA00C92725 /* TitleLabel.swift in Sources */,
 				9C73E26623B963570028B9AC /* CoordinatorPresenting.swift in Sources */,
 				9CF77BE024104B9400C92725 /* AlertContainerView.swift in Sources */,
-				9C624170238AE75000A4B7C9 /* RecommendedTripArray.swift in Sources */,
+				9C624170238AE75000A4B7C9 /* MockService.swift in Sources */,
 				9C58729C258023D800524BA7 /* ApiEndpoint.swift in Sources */,
 				9C73E26823B964560028B9AC /* Coordinator.swift in Sources */,
 				9C53D5C0234C126600A3BD80 /* StoryboardProtocol.swift in Sources */,
@@ -756,11 +756,11 @@
 				9C89B61C23DA40D400DB8DDF /* UIView+Shadow.swift in Sources */,
 				9CF1CC24241136950067533C /* TabBarVC.swift in Sources */,
 				9CF77BDC24101D8300C92725 /* TabbarEntry.swift in Sources */,
-				9C58729A25801C6200524BA7 /* MapModel.swift in Sources */,
 				9CFDFD3F2367226C00760F25 /* AddDateViewController.swift in Sources */,
 				9C76F09623493EDA00853FD9 /* SurfTripViewController.swift in Sources */,
 				9C62417C239156C200A4B7C9 /* UserDefaultsHelper.swift in Sources */,
 				9CF77BE424104BC700C92725 /* BodyLabel.swift in Sources */,
+				9C53CE1C289E9497000969F2 /* MapModel.swift in Sources */,
 				9C90BC552386BD020090E346 /* Enums.swift in Sources */,
 				9CF77BE624104BDB00C92725 /* Button.swift in Sources */,
 				9C89B61E23DA41A600DB8DDF /* BaseNavigationController.swift in Sources */,

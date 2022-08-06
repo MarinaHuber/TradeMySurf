@@ -152,40 +152,40 @@ private extension SurfTripViewController {
         switch pickerString {
         case .Beginner:
             snapshot.appendSections([.surfboardsBeginner])
-            snapshot.appendItems(Services().dataService.surfboardsBeginner.map({ TripItem.surfboard($0, .Beginner) }))
+            snapshot.appendItems(MockService().dataService.surfboardsBeginner.map({ TripItem.surfboard($0, .Beginner) }))
             
             snapshot.appendSections([.surfCountrySummer])
-            snapshot.appendItems(Services().dataService.surfCountryBegginer.map({ TripItem.surfCountry($0, .Beginner) }))
+            snapshot.appendItems(MockService().dataService.surfCountryBegginer.map({ TripItem.surfCountry($0, .Beginner) }))
             
             snapshot.appendSections([.tipBeginner])
-            snapshot.appendItems(Services().dataService.tipBeginner.map({ TripItem.tip($0, .Beginner) }))
+            snapshot.appendItems(MockService().dataService.tipBeginner.map({ TripItem.tip($0, .Beginner) }))
         case .BeginnerIntermediate:
             snapshot.appendSections([.surfboardsBeginnerInter])
-            snapshot.appendItems(Services().dataService.surfboardsBeginnerInter.map({ TripItem.surfboard($0, .BeginnerIntermediate) }))
+            snapshot.appendItems(MockService().dataService.surfboardsBeginnerInter.map({ TripItem.surfboard($0, .BeginnerIntermediate) }))
             
             snapshot.appendSections([.surfCountryAutumn])
-            snapshot.appendItems(Services().dataService.surfCountryBI.map({ TripItem.surfCountry($0, .BeginnerIntermediate) }))
+            snapshot.appendItems(MockService().dataService.surfCountryBI.map({ TripItem.surfCountry($0, .BeginnerIntermediate) }))
             
             snapshot.appendSections([.tipBeginnerInter])
-            snapshot.appendItems(Services().dataService.tipBeginnerInter.map({ TripItem.tip($0, .BeginnerIntermediate) }))
+            snapshot.appendItems(MockService().dataService.tipBeginnerInter.map({ TripItem.tip($0, .BeginnerIntermediate) }))
         case .Intermediate:
             snapshot.appendSections([.surfboardsIntermediate])
-            snapshot.appendItems(Services().dataService.surfboardsIntermediate.map({  TripItem.surfboard($0, .Intermediate) }))
+            snapshot.appendItems(MockService().dataService.surfboardsIntermediate.map({  TripItem.surfboard($0, .Intermediate) }))
             
             snapshot.appendSections([.surfCountryWinter])
-            snapshot.appendItems(Services().dataService.surfCountryInter.map({ TripItem.surfCountry($0, .Intermediate) }))
+            snapshot.appendItems(MockService().dataService.surfCountryInter.map({ TripItem.surfCountry($0, .Intermediate) }))
             
             snapshot.appendSections([.tipIntermediate])
-            snapshot.appendItems(Services().dataService.tipIntermediate.map({ TripItem.tip($0, .Intermediate) }))
+            snapshot.appendItems(MockService().dataService.tipIntermediate.map({ TripItem.tip($0, .Intermediate) }))
         case .Advanced:
             snapshot.appendSections([.surfboardsAdvanced])
-            snapshot.appendItems(Services().dataService.surfboardsAdvanced.map({  TripItem.surfboard($0, .Advanced) }))
+            snapshot.appendItems(MockService().dataService.surfboardsAdvanced.map({  TripItem.surfboard($0, .Advanced) }))
             
             snapshot.appendSections([.surfCountrySpring])
-            snapshot.appendItems(Services().dataService.surfCountryAdvanced.map({ TripItem.surfCountry($0, .Advanced) }))
+            snapshot.appendItems(MockService().dataService.surfCountryAdvanced.map({ TripItem.surfCountry($0, .Advanced) }))
             
             snapshot.appendSections([.tipAdvanced])
-            snapshot.appendItems(Services().dataService.tipAdvanced.map({ TripItem.tip($0, .Advanced) }))
+            snapshot.appendItems(MockService().dataService.tipAdvanced.map({ TripItem.tip($0, .Advanced) }))
         default: break
         }
 
