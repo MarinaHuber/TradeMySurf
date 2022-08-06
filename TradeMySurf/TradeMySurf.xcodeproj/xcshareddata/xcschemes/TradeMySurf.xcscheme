@@ -15,7 +15,7 @@
             <BuildableReference
                BuildableIdentifier = "primary"
                BlueprintIdentifier = "9C5B6447232A506C000727E6"
-               BuildableName = "SurfCurve.app"
+               BuildableName = "Surf Curve.app"
                BlueprintName = "TradeMySurf"
                ReferencedContainer = "container:TradeMySurf.xcodeproj">
             </BuildableReference>
@@ -45,7 +45,7 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "9C5B6447232A506C000727E6"
-            BuildableName = "SurfCurve.app"
+            BuildableName = "Surf Curve.app"
             BlueprintName = "TradeMySurf"
             ReferencedContainer = "container:TradeMySurf.xcodeproj">
          </BuildableReference>
@@ -62,7 +62,7 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "9C5B6447232A506C000727E6"
-            BuildableName = "SurfCurve.app"
+            BuildableName = "Surf Curve.app"
             BlueprintName = "TradeMySurf"
             ReferencedContainer = "container:TradeMySurf.xcodeproj">
          </BuildableReference>
