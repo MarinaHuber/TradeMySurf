@@ -67,7 +67,7 @@ Install Dependencies with Cocoapods ```pod install```.
 Open the workspace open ```TradeMySurf.xcworkspace```.
 
 # Project Archirecture
-![alt tag]()
+![alt tag](https://github.com/MarinaHuber/TradeMySurf/blob/development/Working/dia.png)
 
 
 *This GitHub Page and Project is in development so It will be changing frequently.*
