@@ -6,9 +6,8 @@ Survey by surfers:
 https://docs.google.com/forms/d/e/1FAIpQLSdzwVMycAc3ISaFck8lxFKnC8e5i4BmnzlVo_N9-Z0lRCYeJg/viewform?usp=sf_link
 
 
-📌  As of November 2019, this project requires Xcode 11+ (Swift 5.0)
-### Publish on: - - tbc
-### Deployed for: iOS 13
+📌  project requires Xcode 13+ (Swift 5.0)
+### Deployed for: iOS 14+
 
 # Why did you undertake the project?
 This was a long passion of mine and I was lucky enough to get a mentorship through a Import Foundation programme where I presented my vague idea at the time. This led me to wonderful collaborations and learning path. Here is the result of Beta V1.0. surf app. It was created from idea: help surfers to learn from surf goals and expectations. Adding value to surf hobby by that extra planning, it is a developers approach to surfing.
@@ -58,10 +57,7 @@ that I would not be using a backend for the first version of the app (only mocks
 - App Store upload process
 
 # Wish list
-- Save the recommended surf trips into a storage (local or cloud)
-- Show map from recommended countries with map annotations for surf shops/camps
-- Add details to surfboard collection view
-- Implement tests for model and UI - automatisation
+- Implement tests for business logic and UI - automatisation
 
 # Installation
 Download the project.
@@ -72,16 +68,15 @@ Install Dependencies with Cocoapods ```pod install```.
 
 Open the workspace open ```TradeMySurf.xcworkspace```.
 
-# Credits
- + help from Import Foundation project.
-
+# Project Archirecture
+![alt tag]()
 
 
 *This GitHub Page and Project is in development so It will be changing frequently.*
 I created a [Trello](https://trello.com/b/PD4vhnSl/trade-my-surf) to try to organize myself with everything I would like to develop for this App.
 
-I would be happy to have suggestions that you can add in the BackLog tab.
+Feel free add suggestions to the the BackLog tab.
 
-Thanks for read and interest at this project!
+Thanks!
 
 
