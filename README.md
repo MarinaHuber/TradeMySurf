@@ -1,6 +1,5 @@
 
-### Recommendation iOS/Swift project from surfers to surfers
-![alt tag](https://img.shields.io/badge/swift%205-Surfo%20project-blue)
+### Recommendation app written for iOS from surfers to surfers
 
 Survey by surfers:
 https://docs.google.com/forms/d/e/1FAIpQLSdzwVMycAc3ISaFck8lxFKnC8e5i4BmnzlVo_N9-Z0lRCYeJg/viewform?usp=sf_link
@@ -14,6 +13,7 @@ This was a long passion of mine and I was lucky enough to get a mentorship throu
 
 # Scope / User story
 As a surfer I want to set clear surf goal. To accomplish this goal I need a correct sufboard and a location. I choose a level in the app and the date of expected surf and than the app opens the recommended boards and locations. As a surfer I want to buy a new or second hand surfboard but I do not know what kind would be useful for me. I tap claculator and see the choices I have for range I can spend.
+![alt tag](https://)
 
 # Used Libraries
  CoreML
@@ -36,7 +36,7 @@ Illustrates flow of the app: User always needs to come back to the begining- Wel
  + Recommendations for trip
  + Previous trips - (check a list)
  + Calculator for board prices
-![alt tag](https://github.com/MarinaHuber/TradeMySurf/blob/corrections-branch/Working/coordination2.png)
+
 
 ###  Linear Regression
 CoreML and prediction model for the surfboard prices
