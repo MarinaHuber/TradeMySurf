@@ -64,9 +64,6 @@
 		9CF1CC24241136950067533C /* TabBarVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9CF1CC23241136950067533C /* TabBarVC.swift */; };
 		9CF77BDC24101D8300C92725 /* TabbarEntry.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9CF77BDB24101D8300C92725 /* TabbarEntry.swift */; };
 		9CF77BE024104B9400C92725 /* AlertContainerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9CF77BDF24104B9400C92725 /* AlertContainerView.swift */; };
-		9CF77BE224104BAA00C92725 /* TitleLabel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9CF77BE124104BAA00C92725 /* TitleLabel.swift */; };
-		9CF77BE424104BC700C92725 /* BodyLabel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9CF77BE324104BC700C92725 /* BodyLabel.swift */; };
-		9CF77BE624104BDB00C92725 /* Button.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9CF77BE524104BDB00C92725 /* Button.swift */; };
 		9CF77BE82410669B00C92725 /* TabItemView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9CF77BE72410669B00C92725 /* TabItemView.swift */; };
 		9CF77BEA2410690000C92725 /* UIView+Constraints.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9CF77BE92410690000C92725 /* UIView+Constraints.swift */; };
 		9CF77BEC241069BA00C92725 /* UIViewController+ChildViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9CF77BEB241069BA00C92725 /* UIViewController+ChildViewController.swift */; };
@@ -164,9 +161,6 @@
 		9CF1CC23241136950067533C /* TabBarVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabBarVC.swift; sourceTree = "<group>"; };
 		9CF77BDB24101D8300C92725 /* TabbarEntry.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TabbarEntry.swift; sourceTree = "<group>"; };
 		9CF77BDF24104B9400C92725 /* AlertContainerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlertContainerView.swift; sourceTree = "<group>"; };
-		9CF77BE124104BAA00C92725 /* TitleLabel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TitleLabel.swift; sourceTree = "<group>"; };
-		9CF77BE324104BC700C92725 /* BodyLabel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BodyLabel.swift; sourceTree = "<group>"; };
-		9CF77BE524104BDB00C92725 /* Button.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Button.swift; sourceTree = "<group>"; };
 		9CF77BE72410669B00C92725 /* TabItemView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabItemView.swift; sourceTree = "<group>"; };
 		9CF77BE92410690000C92725 /* UIView+Constraints.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIView+Constraints.swift"; sourceTree = "<group>"; };
 		9CF77BEB241069BA00C92725 /* UIViewController+ChildViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIViewController+ChildViewController.swift"; sourceTree = "<group>"; };
@@ -403,9 +397,6 @@
 				9C62416C238AE35100A4B7C9 /* Cells */,
 				9C3CC3DD23C75EE800359368 /* SupplementaryViews.swift */,
 				9CF77BDF24104B9400C92725 /* AlertContainerView.swift */,
-				9CF77BE124104BAA00C92725 /* TitleLabel.swift */,
-				9CF77BE324104BC700C92725 /* BodyLabel.swift */,
-				9CF77BE524104BDB00C92725 /* Button.swift */,
 				9CF77BE72410669B00C92725 /* TabItemView.swift */,
 				9CE09C2F2413FAFA00F0FE08 /* TabItemView.xib */,
 			);
@@ -751,7 +742,6 @@
 				9CE21BB32507C9BF00B6B20C /* LocationViewController.swift in Sources */,
 				9C3CC3DE23C75EE800359368 /* SupplementaryViews.swift in Sources */,
 				9C624172238AE81A00A4B7C9 /* SurfTip.swift in Sources */,
-				9CF77BE224104BAA00C92725 /* TitleLabel.swift in Sources */,
 				9C73E26623B963570028B9AC /* CoordinatorPresenting.swift in Sources */,
 				9CF77BE024104B9400C92725 /* AlertContainerView.swift in Sources */,
 				9C624170238AE75000A4B7C9 /* MockService.swift in Sources */,
@@ -771,10 +761,8 @@
 				9CFDFD3F2367226C00760F25 /* AddDateViewController.swift in Sources */,
 				9C76F09623493EDA00853FD9 /* SurfTripViewController.swift in Sources */,
 				9C62417C239156C200A4B7C9 /* UserDefaultsHelper.swift in Sources */,
-				9CF77BE424104BC700C92725 /* BodyLabel.swift in Sources */,
 				9C53CE1C289E9497000969F2 /* MapModel.swift in Sources */,
 				9C90BC552386BD020090E346 /* Enums.swift in Sources */,
-				9CF77BE624104BDB00C92725 /* Button.swift in Sources */,
 				9C89B61E23DA41A600DB8DDF /* BaseNavigationController.swift in Sources */,
 				9C76F09823493F0900853FD9 /* GuideViewController.swift in Sources */,
 				9CF936E923CBC0AB00A8C72D /* UIView+Gradient.swift in Sources */,
@@ -943,7 +931,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_IDENTITY = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 1.1;
+				CURRENT_PROJECT_VERSION = 2;
 				DEFINES_MODULE = YES;
 				DEVELOPMENT_TEAM = HBS2B82CVU;
 				INFOPLIST_FILE = TradeMySurf/Info.plist;
@@ -971,7 +959,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_IDENTITY = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 1.1;
+				CURRENT_PROJECT_VERSION = 2;
 				DEFINES_MODULE = YES;
 				DEVELOPMENT_TEAM = HBS2B82CVU;
 				INFOPLIST_FILE = TradeMySurf/Info.plist;

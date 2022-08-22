@@ -194,6 +194,7 @@
                         <color key="backgroundColor" red="0.045845570859999997" green="0.1064943424" blue="0.23888843909999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
                             <constraint firstItem="r8K-M5-40N" firstAttribute="leading" secondItem="GrG-Zn-ifo" secondAttribute="leading" constant="50" id="15j-BN-4jc"/>
+                            <constraint firstItem="rr3-PX-WlU" firstAttribute="top" secondItem="fie-jj-q1a" secondAttribute="top" id="521-Y3-p2P"/>
                             <constraint firstItem="GrG-Zn-ifo" firstAttribute="trailing" secondItem="r8K-M5-40N" secondAttribute="trailing" constant="50" id="FOY-4E-eDP"/>
                             <constraint firstItem="r8K-M5-40N" firstAttribute="top" secondItem="GIH-Ay-MhW" secondAttribute="bottom" constant="36" id="Hn1-Zu-yxQ"/>
                             <constraint firstItem="rr3-PX-WlU" firstAttribute="leading" secondItem="GrG-Zn-ifo" secondAttribute="leading" id="KhK-NL-rYz"/>
@@ -226,11 +227,6 @@
             <point key="canvasLocation" x="-413.04347826086962" y="-2603.5714285714284"/>
         </scene>
     </scenes>
-    <designables>
-        <designable name="Mta-Vn-X3y"/>
-        <designable name="cfD-wQ-Q9V"/>
-        <designable name="syG-9V-u87"/>
-    </designables>
     <resources>
         <image name="boardSurf" width="150" height="150"/>
         <image name="calendar" width="150" height="150"/>

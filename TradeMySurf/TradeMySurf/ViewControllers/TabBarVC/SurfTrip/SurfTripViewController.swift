@@ -342,6 +342,7 @@ private extension SurfTripViewController {
         collectionView.translatesAutoresizingMaskIntoConstraints = false
         collectionView.alwaysBounceVertical = true
         collectionView.contentInset.top = 10
+        collectionView.contentInset.bottom = 10
 
         view.addSubview(collectionView)
 
