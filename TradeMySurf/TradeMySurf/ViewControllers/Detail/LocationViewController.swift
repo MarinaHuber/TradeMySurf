@@ -8,7 +8,7 @@
 
 import UIKit
 import MapKit
-
+//UIImage(systemName: "xmark")
 class LocationViewController: UIViewController, StoryboardProtocol, MKMapViewDelegate {
     @IBOutlet var gradientViewHidden: UIView!
     @IBOutlet weak var mapView: MKMapView!
@@ -42,6 +42,10 @@ class LocationViewController: UIViewController, StoryboardProtocol, MKMapViewDel
             mapView?.addAnnotation(annotation)
             
         }
+    }
+
+    @IBAction func closeModal(_ sender: UIButton) {
+        self.dismiss(animated: true, completion: nil)
     }
     
     func mapView(_ mapView: MKMapView, viewFor annotation: MKAnnotation) -> MKAnnotationView? {

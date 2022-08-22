@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="17156" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="20037" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17125"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="20020"/>
         <capability name="Named colors" minToolsVersion="9.0"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="System colors in document resources" minToolsVersion="11.0"/>
@@ -104,8 +104,8 @@
                                         <color key="textColor" red="0.57647058819999997" green="0.90196078430000004" blue="0.70588235290000001" alpha="1" colorSpace="calibratedRGB"/>
                                         <nil key="highlightedColor"/>
                                     </label>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="You can’t upgrade to Premium in the app." textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Px4-sB-ID5">
-                                        <rect key="frame" x="57" y="87" width="300" height="25"/>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="You can’t upgrade to Premium in the app." textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Px4-sB-ID5">
+                                        <rect key="frame" x="57.5" y="87" width="300" height="25"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="12"/>
                                         <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <nil key="highlightedColor"/>
@@ -123,13 +123,13 @@
                                     <constraint firstItem="tU0-fK-l45" firstAttribute="centerX" secondItem="U9V-AS-aO0" secondAttribute="centerX" id="SA6-TH-5LR"/>
                                     <constraint firstItem="b2S-EB-rd3" firstAttribute="leading" secondItem="U9V-AS-aO0" secondAttribute="leading" constant="29" id="SIt-yz-Sm4"/>
                                     <constraint firstAttribute="trailing" secondItem="nWh-CP-D8A" secondAttribute="trailing" constant="29" id="WHQ-Yl-MkN"/>
-                                    <constraint firstItem="nWh-CP-D8A" firstAttribute="top" secondItem="Px4-sB-ID5" secondAttribute="bottom" constant="3" id="ZJ4-WW-RXc"/>
+                                    <constraint firstItem="nWh-CP-D8A" firstAttribute="top" secondItem="Px4-sB-ID5" secondAttribute="bottom" constant="-2" id="ZJ4-WW-RXc"/>
                                     <constraint firstAttribute="trailing" secondItem="b2S-EB-rd3" secondAttribute="trailing" constant="29" id="apa-uM-Cll"/>
                                     <constraint firstItem="nWh-CP-D8A" firstAttribute="leading" secondItem="U9V-AS-aO0" secondAttribute="leading" constant="29" id="bSh-Fg-h2T"/>
                                     <constraint firstItem="b2S-EB-rd3" firstAttribute="top" secondItem="U9V-AS-aO0" secondAttribute="top" constant="7" id="eWj-tT-qsT"/>
                                     <constraint firstItem="3sT-WK-YnH" firstAttribute="leading" secondItem="U9V-AS-aO0" secondAttribute="leading" constant="9" id="fpE-Im-H9d"/>
                                     <constraint firstItem="nWh-CP-D8A" firstAttribute="centerX" secondItem="U9V-AS-aO0" secondAttribute="centerX" id="jvn-qB-bd4"/>
-                                    <constraint firstItem="Px4-sB-ID5" firstAttribute="top" secondItem="b2S-EB-rd3" secondAttribute="bottom" constant="3" id="khk-Y0-joC"/>
+                                    <constraint firstItem="Px4-sB-ID5" firstAttribute="top" secondItem="b2S-EB-rd3" secondAttribute="bottom" constant="8" id="khk-Y0-joC"/>
                                     <constraint firstItem="Px4-sB-ID5" firstAttribute="leading" secondItem="U9V-AS-aO0" secondAttribute="leading" constant="57.5" id="laW-XR-1IN"/>
                                     <constraint firstItem="3sT-WK-YnH" firstAttribute="top" secondItem="nWh-CP-D8A" secondAttribute="bottom" constant="8" id="nYu-sF-HPD"/>
                                     <constraint firstAttribute="trailing" secondItem="Px4-sB-ID5" secondAttribute="trailing" constant="56.5" id="zxf-0j-ul6"/>
@@ -143,17 +143,34 @@
                                     </userDefinedRuntimeAttribute>
                                 </userDefinedRuntimeAttributes>
                             </view>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Jvn-Iz-03f">
+                                <rect key="frame" x="354" y="15" width="45" height="45"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="45" id="C5J-J0-K54"/>
+                                    <constraint firstAttribute="width" constant="45" id="OuB-tW-Uvr"/>
+                                </constraints>
+                                <color key="tintColor" systemColor="systemGrayColor"/>
+                                <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                                <state key="normal" image="xmark" catalog="system">
+                                    <color key="titleColor" systemColor="systemGrayColor"/>
+                                </state>
+                                <connections>
+                                    <action selector="closeModal:" destination="FX6-ds-vsR" eventType="touchUpInside" id="Y2t-NQ-TxW"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="oja-Jj-tfi"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
                             <constraint firstItem="5fr-xS-AF4" firstAttribute="top" secondItem="ZGm-oe-PZj" secondAttribute="top" id="DNJ-e0-cOW"/>
+                            <constraint firstAttribute="trailing" secondItem="Jvn-Iz-03f" secondAttribute="trailing" constant="15" id="HW2-ve-C9A"/>
                             <constraint firstItem="oja-Jj-tfi" firstAttribute="bottom" secondItem="U9V-AS-aO0" secondAttribute="bottom" constant="170" id="HWf-gz-6J2"/>
                             <constraint firstItem="U9V-AS-aO0" firstAttribute="leading" secondItem="oja-Jj-tfi" secondAttribute="leading" id="NnV-t8-leq"/>
                             <constraint firstItem="5fr-xS-AF4" firstAttribute="trailing" secondItem="oja-Jj-tfi" secondAttribute="trailing" id="QFY-E5-QFC"/>
                             <constraint firstItem="U9V-AS-aO0" firstAttribute="trailing" secondItem="oja-Jj-tfi" secondAttribute="trailing" id="dld-Co-LJk"/>
                             <constraint firstItem="5fr-xS-AF4" firstAttribute="leading" secondItem="oja-Jj-tfi" secondAttribute="leading" id="htF-5I-aan"/>
                             <constraint firstAttribute="bottom" secondItem="5fr-xS-AF4" secondAttribute="bottom" id="wgB-fU-Exn"/>
+                            <constraint firstItem="Jvn-Iz-03f" firstAttribute="top" secondItem="ZGm-oe-PZj" secondAttribute="top" constant="15" id="wqA-YK-3Y2"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="gia-4b-kDl"/>
@@ -167,11 +184,15 @@
         </scene>
     </scenes>
     <resources>
+        <image name="xmark" catalog="system" width="128" height="113"/>
         <namedColor name="pastel">
             <color red="0.21299999952316284" green="0.23399999737739563" blue="0.66200000047683716" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </namedColor>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+        <systemColor name="systemGrayColor">
+            <color red="0.55686274509803924" green="0.55686274509803924" blue="0.57647058823529407" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
     </resources>
 </document>
