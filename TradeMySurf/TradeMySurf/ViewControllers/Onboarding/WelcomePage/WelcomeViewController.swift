@@ -97,7 +97,7 @@ class WelcomeViewController: UIViewController, CAAnimationDelegate, StoryboardPr
                     post.toValue = view.bounds.size.height - 300
                 case 1334:
                     post.toValue = view.bounds.size.height - 400
-                case 1920, 2208:
+                case 1920, 2208, 2340:
                     post.toValue = view.bounds.size.height - 450
                 case 2436, 2688, 1792:
                     post.toValue = view.bounds.size.height - 500
@@ -108,7 +108,7 @@ class WelcomeViewController: UIViewController, CAAnimationDelegate, StoryboardPr
         } else {
              post.toValue = view.bounds.size.height - 500
         }
-        post.duration = 2
+        post.duration = 1
         post.isRemovedOnCompletion =  false
         post.fillMode = CAMediaTimingFillMode.forwards
         item.layer.add(post, forKey: "post")

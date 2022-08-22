@@ -33,14 +33,14 @@ private extension AddDateViewController {
             .setSelectedDate(Date())
             .setLocale(identifier: "en_GB_POSIX")
             .setOutsideTapDismissing(allowed: false)
-            .setSize(width: view.bounds.size.width, height: 250)
+            .setSize(width: view.bounds.size.width, height: 30)
             .setPermittedArrowDirections([.up])
             .setDimmedBackgroundView(enabled: true)
             .setOutsideTapDismissing(allowed: false)
-            .setClearButton(title: "This is what will appear in your surf recommendations", font: UIFont.systemFont(ofSize: 11), color: .systemIndigo, action: { popover, selectedDate in
-                            //Rewind
-                            popover.setSelectedDate(Date()).reload()
-                        })
+//            .setClearButton(title: "This is what will appear in your surf recommendations", font: UIFont.systemFont(ofSize: 11), color: .systemIndigo, action: { popover, selectedDate in
+//                            //Rewind
+//                            popover.setSelectedDate(Date()).reload()
+//                        })
             .setDoneButton(title: "Done", font: UIFont.boldSystemFont(ofSize: 17), color: .systemIndigo, action: { popover, date in
                 UserDefaults.standard.surfingTime = date
                 popover.disappear()
