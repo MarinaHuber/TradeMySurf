@@ -23,27 +23,17 @@ class BoardSupplementaryView: UICollectionReusableView {
         subtitle.text = "Shape and volume for your level"
     }
     
-//    func printFonts() {
-//        let fontFamilyNames = UIFont.familyNames
-//        for familyName in fontFamilyNames {
-////            print("------------------------------")
-////            print("Font Family Name = [\(familyName)]")
-////            let names = UIFont.fontNames(forFamilyName: familyName)
-////            print("Font Names = [\(names)]")
-//        }
-//    }
-    
     func configureUI() {
         let separator = UIView(frame: .zero)
         separator.translatesAutoresizingMaskIntoConstraints = false
-        separator.backgroundColor = .white
+        separator.backgroundColor = .clear
 
         title.textColor = .white
         title.textAlignment = .center
         title.lineBreakMode = .byWordWrapping
         title.numberOfLines = 0
         title.font = UIFont(name: "AvenirNext-Bold", size: 22)
-        subtitle.font = UIFont(name: "AvenirNext-Regular", size: 14)
+        subtitle.font = UIFont(name: "AvenirNext-Regular", size: 15)
         subtitle.textAlignment = .center
         subtitle.textColor = .white
 
@@ -85,12 +75,12 @@ class LocationSupplementaryView: UICollectionReusableView {
     func configureUI() {
         let separator = UIView(frame: .zero)
         separator.translatesAutoresizingMaskIntoConstraints = false
-        separator.backgroundColor = .white
+        separator.backgroundColor = .clear
 
         title.textColor = .white
         title.textAlignment = .center
         title.font = UIFont(name: "AvenirNext-Bold", size: 22)
-        subtitle.font = UIFont(name: "AvenirNext-Regular", size: 14)
+        subtitle.font = UIFont(name: "AvenirNext-Regular", size: 15)
         subtitle.textAlignment = .center
         subtitle.textColor = .white
 

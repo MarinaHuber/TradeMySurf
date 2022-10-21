@@ -41,6 +41,7 @@ class TabItemView: UIView {
     
     func commonInit() {
         self.backgroundColor = .clear
+        self.clipsToBounds = false
         self.configureIconView()
         self.textLabel.textColor = .white
         self.textLabel.font = UIFont.systemFont(ofSize: 14, weight: .heavy)
@@ -73,9 +74,8 @@ class TabItemView: UIView {
             self.containerView.frame.size.width = 10
         }
         self.addSubview(self.containerView)
-        self.containerView.backgroundColor = .clear
-
-        
+//        self.containerView.backgroundColor = .red
+        self.containerView.clipsToBounds = false
     }
     
      func loadFromNib(withName nibName: String, owner: AnyObject? = nil, bundle: Bundle? = nil) -> UIView {

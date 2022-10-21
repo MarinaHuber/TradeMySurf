@@ -20,7 +20,6 @@ extension UIViewController {
         containerView.addSubview(childViewController.view)
         childViewController.view.positionEqualSuperview()
         containerView.layoutIfNeeded()
-
         childViewController.didMove(toParent: self)
     }
 }

@@ -71,7 +71,7 @@ extension UIView {
     }
 }
 
-class GradientView: UIView {
+class GradientViewOrginal: UIView {
     /// The color at the start of the gradient.
     @IBInspectable var firstColor: UIColor = UIColor.white
 
