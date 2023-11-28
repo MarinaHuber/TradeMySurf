@@ -74,8 +74,6 @@ class TabItemView: UIView {
         }
         self.addSubview(self.containerView)
         self.containerView.backgroundColor = .clear
-
-        
     }
     
      func loadFromNib(withName nibName: String, owner: AnyObject? = nil, bundle: Bundle? = nil) -> UIView {
