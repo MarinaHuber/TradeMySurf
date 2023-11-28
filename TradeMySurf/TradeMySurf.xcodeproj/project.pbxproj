@@ -11,7 +11,6 @@
 		9C31EB8A23E3AA2100060143 /* DetailViewController.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9C31EB8923E3AA2100060143 /* DetailViewController.storyboard */; };
 		9C31EB8C23E3AB1A00060143 /* DetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C31EB8B23E3AB1A00060143 /* DetailViewController.swift */; };
 		9C3CC3DE23C75EE800359368 /* SupplementaryViews.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C3CC3DD23C75EE800359368 /* SupplementaryViews.swift */; };
-		9C446DEE2583E7DA00561830 /* AlertSwiftUIView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C446DED2583E7D900561830 /* AlertSwiftUIView.swift */; };
 		9C45E661234D238F0054A5FD /* SurfTripViewController.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9C45E660234D238E0054A5FD /* SurfTripViewController.storyboard */; };
 		9C467C67234F2A7D009F4D58 /* Surfboard.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C467C66234F2A7D009F4D58 /* Surfboard.swift */; };
 		9C4C54742349C28500FB2653 /* GuideViewController.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9C4C54732349C28500FB2653 /* GuideViewController.storyboard */; };
@@ -25,6 +24,13 @@
 		9C5B6456232A506C000727E6 /* TradeMySurf.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 9C5B6454232A506C000727E6 /* TradeMySurf.xcdatamodeld */; };
 		9C5B6458232A5073000727E6 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 9C5B6457232A5073000727E6 /* Assets.xcassets */; };
 		9C5B6471232A5073000727E6 /* TradeMySurfUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C5B6470232A5073000727E6 /* TradeMySurfUITests.swift */; };
+		9C5B64CB2B1697A200360CAF /* RootViewApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C5B64C92B1697A100360CAF /* RootViewApp.swift */; };
+		9C5B64CC2B1697A200360CAF /* AppRoot.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C5B64CA2B1697A200360CAF /* AppRoot.swift */; };
+		9C5B64D42B16A07900360CAF /* Helper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C5B64D32B16A07900360CAF /* Helper.swift */; };
+		9C5B64D92B16A0A700360CAF /* AlertSwiftUIView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C5B64D52B16A0A700360CAF /* AlertSwiftUIView.swift */; };
+		9C5B64DA2B16A0A700360CAF /* SplashView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C5B64D62B16A0A700360CAF /* SplashView.swift */; };
+		9C5B64DB2B16A0A700360CAF /* WelcomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C5B64D72B16A0A700360CAF /* WelcomeView.swift */; };
+		9C5B64DC2B16A0A700360CAF /* AlertButtonView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C5B64D82B16A0A700360CAF /* AlertButtonView.swift */; };
 		9C62416E238AE68E00A4B7C9 /* ReuseIdentifierHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C62416D238AE68E00A4B7C9 /* ReuseIdentifierHelper.swift */; };
 		9C624170238AE75000A4B7C9 /* MockService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C62416F238AE75000A4B7C9 /* MockService.swift */; };
 		9C624172238AE81A00A4B7C9 /* SurfTip.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C624171238AE81A00A4B7C9 /* SurfTip.swift */; };
@@ -37,7 +43,6 @@
 		9C69CE76234CD9B9003E386F /* Location.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C69CE75234CD9B9003E386F /* Location.swift */; };
 		9C69CE85234D06D7003E386F /* PriceCalculatorViewController.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9C69CE84234D06D7003E386F /* PriceCalculatorViewController.storyboard */; };
 		9C69CE87234D0749003E386F /* Welcome.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9C69CE86234D0749003E386F /* Welcome.storyboard */; };
-		9C6B837628B3FBA80000FAB9 /* AlertButtonView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C6B837528B3FBA80000FAB9 /* AlertButtonView.swift */; };
 		9C6F64CE2379F86400B0224D /* AddLevelViewController.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9CFDFD3A2367220300760F25 /* AddLevelViewController.storyboard */; };
 		9C6F64D02379FB7800B0224D /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C6F64CF2379FB7800B0224D /* Constants.swift */; };
 		9C73E26623B963570028B9AC /* CoordinatorPresenting.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C73E26523B963570028B9AC /* CoordinatorPresenting.swift */; };
@@ -103,7 +108,6 @@
 		9C31EB8923E3AA2100060143 /* DetailViewController.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = DetailViewController.storyboard; sourceTree = "<group>"; };
 		9C31EB8B23E3AB1A00060143 /* DetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailViewController.swift; sourceTree = "<group>"; };
 		9C3CC3DD23C75EE800359368 /* SupplementaryViews.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SupplementaryViews.swift; sourceTree = "<group>"; };
-		9C446DED2583E7D900561830 /* AlertSwiftUIView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AlertSwiftUIView.swift; sourceTree = "<group>"; };
 		9C45E660234D238E0054A5FD /* SurfTripViewController.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = SurfTripViewController.storyboard; sourceTree = "<group>"; };
 		9C467C66234F2A7D009F4D58 /* Surfboard.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Surfboard.swift; sourceTree = "<group>"; };
 		9C4C54732349C28500FB2653 /* GuideViewController.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = GuideViewController.storyboard; sourceTree = "<group>"; };
@@ -120,6 +124,13 @@
 		9C5B6461232A5073000727E6 /* TradeMySurfTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = TradeMySurfTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		9C5B646C232A5073000727E6 /* TradeMySurfUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = TradeMySurfUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		9C5B6470232A5073000727E6 /* TradeMySurfUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TradeMySurfUITests.swift; sourceTree = "<group>"; };
+		9C5B64C92B1697A100360CAF /* RootViewApp.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RootViewApp.swift; sourceTree = "<group>"; };
+		9C5B64CA2B1697A200360CAF /* AppRoot.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AppRoot.swift; sourceTree = "<group>"; };
+		9C5B64D32B16A07900360CAF /* Helper.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Helper.swift; sourceTree = "<group>"; };
+		9C5B64D52B16A0A700360CAF /* AlertSwiftUIView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AlertSwiftUIView.swift; sourceTree = "<group>"; };
+		9C5B64D62B16A0A700360CAF /* SplashView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SplashView.swift; sourceTree = "<group>"; };
+		9C5B64D72B16A0A700360CAF /* WelcomeView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WelcomeView.swift; sourceTree = "<group>"; };
+		9C5B64D82B16A0A700360CAF /* AlertButtonView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AlertButtonView.swift; sourceTree = "<group>"; };
 		9C62416D238AE68E00A4B7C9 /* ReuseIdentifierHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReuseIdentifierHelper.swift; sourceTree = "<group>"; };
 		9C62416F238AE75000A4B7C9 /* MockService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockService.swift; sourceTree = "<group>"; };
 		9C624171238AE81A00A4B7C9 /* SurfTip.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SurfTip.swift; sourceTree = "<group>"; };
@@ -132,7 +143,6 @@
 		9C69CE75234CD9B9003E386F /* Location.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Location.swift; sourceTree = "<group>"; };
 		9C69CE84234D06D7003E386F /* PriceCalculatorViewController.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = PriceCalculatorViewController.storyboard; sourceTree = "<group>"; };
 		9C69CE86234D0749003E386F /* Welcome.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Welcome.storyboard; sourceTree = "<group>"; };
-		9C6B837528B3FBA80000FAB9 /* AlertButtonView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlertButtonView.swift; sourceTree = "<group>"; };
 		9C6F64CF2379FB7800B0224D /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
 		9C71A14B2348946C00A67323 /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		9C71A14E234894CD00A67323 /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -236,11 +246,24 @@
 		9C2F087B2B168D3700AE67D9 /* UIKit */ = {
 			isa = PBXGroup;
 			children = (
+				9C90BC532386BCE50090E346 /* Helpers */,
+				9C6F64C52379BD7E00B0224D /* SupportingViews */,
 				9C3F533B234BD7F900D5F65E /* Protocols */,
 				9CC59F15234AA3B200F5ADD0 /* Coordinators */,
 				9C76F09F2349471000853FD9 /* ViewControllers */,
 			);
 			path = UIKit;
+			sourceTree = "<group>";
+		};
+		9C2F087E2B168FED00AE67D9 /* SwiftUI */ = {
+			isa = PBXGroup;
+			children = (
+				9C5B64D22B16A06300360CAF /* Views */,
+				9C5B64D12B16A03500360CAF /* Helpers */,
+				9C5B64CA2B1697A200360CAF /* AppRoot.swift */,
+				9C5B64C92B1697A100360CAF /* RootViewApp.swift */,
+			);
+			path = SwiftUI;
 			sourceTree = "<group>";
 		};
 		9C3F533B234BD7F900D5F65E /* Protocols */ = {
@@ -314,13 +337,12 @@
 		9C5B644A232A506C000727E6 /* TradeMySurf */ = {
 			isa = PBXGroup;
 			children = (
+				9C2F087E2B168FED00AE67D9 /* SwiftUI */,
 				9C2F087B2B168D3700AE67D9 /* UIKit */,
 				9C5B644B232A506C000727E6 /* AppDelegate.swift */,
 				9C6F64CF2379FB7800B0224D /* Constants.swift */,
 				9C587296257FFA4B00524BA7 /* Services */,
 				9C62417D23915AA800A4B7C9 /* Enums */,
-				9C90BC532386BCE50090E346 /* Helpers */,
-				9C6F64C52379BD7E00B0224D /* SupportingViews */,
 				9C69CE74234CD992003E386F /* Models */,
 				9C76F09E234946D500853FD9 /* Resources */,
 				9CC4F8E923CA536A00F3ABAB /* Surfs.mlmodel */,
@@ -350,10 +372,28 @@
 			path = TradeMySurfUITests;
 			sourceTree = "<group>";
 		};
+		9C5B64D12B16A03500360CAF /* Helpers */ = {
+			isa = PBXGroup;
+			children = (
+				9C5B64D32B16A07900360CAF /* Helper.swift */,
+			);
+			path = Helpers;
+			sourceTree = "<group>";
+		};
+		9C5B64D22B16A06300360CAF /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				9C5B64D82B16A0A700360CAF /* AlertButtonView.swift */,
+				9C5B64D52B16A0A700360CAF /* AlertSwiftUIView.swift */,
+				9C5B64D62B16A0A700360CAF /* SplashView.swift */,
+				9C5B64D72B16A0A700360CAF /* WelcomeView.swift */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
 		9C62416C238AE35100A4B7C9 /* Cells */ = {
 			isa = PBXGroup;
 			children = (
-				9C6B837228B3FB580000FAB9 /* SwiftUI */,
 				9C624173238AFC1400A4B7C9 /* SmallTableViewCell.swift */,
 				9C624177238B107B00A4B7C9 /* SurfboardCollectionViewCell.swift */,
 				9C624179238B374800A4B7C9 /* LocationaCollectionViewCell.swift */,
@@ -388,15 +428,6 @@
 				9C76F09323493DAB00853FD9 /* WelcomeViewController.swift */,
 			);
 			path = WelcomePage;
-			sourceTree = "<group>";
-		};
-		9C6B837228B3FB580000FAB9 /* SwiftUI */ = {
-			isa = PBXGroup;
-			children = (
-				9C446DED2583E7D900561830 /* AlertSwiftUIView.swift */,
-				9C6B837528B3FBA80000FAB9 /* AlertButtonView.swift */,
-			);
-			path = SwiftUI;
 			sourceTree = "<group>";
 		};
 		9C6F64C52379BD7E00B0224D /* SupportingViews */ = {
@@ -732,9 +763,10 @@
 			buildActionMask = 2147483647;
 			files = (
 				9CBDE2982395A9E600317F51 /* TimeHelper.swift in Sources */,
-				9C446DEE2583E7DA00561830 /* AlertSwiftUIView.swift in Sources */,
 				9C587298257FFA8300524BA7 /* ApiMapsRequest.swift in Sources */,
+				9C5B64DC2B16A0A700360CAF /* AlertButtonView.swift in Sources */,
 				9C31EB8C23E3AB1A00060143 /* DetailViewController.swift in Sources */,
+				9C5B64CB2B1697A200360CAF /* RootViewApp.swift in Sources */,
 				9C69CE76234CD9B9003E386F /* Location.swift in Sources */,
 				9CF77BEE24106A1A00C92725 /* Array+Extension.swift in Sources */,
 				9CF77BEA2410690000C92725 /* UIView+Constraints.swift in Sources */,
@@ -743,6 +775,7 @@
 				9C5B6450232A506C000727E6 /* PriceCalculatorViewController.swift in Sources */,
 				9CFDFD412367228300760F25 /* AddLevelViewController.swift in Sources */,
 				9C624176238B089000A4B7C9 /* SceneDelegate.swift in Sources */,
+				9C5B64D92B16A0A700360CAF /* AlertSwiftUIView.swift in Sources */,
 				9C62417A238B374A00A4B7C9 /* LocationaCollectionViewCell.swift in Sources */,
 				9C624178238B107B00A4B7C9 /* SurfboardCollectionViewCell.swift in Sources */,
 				9C53CE1E289E94B5000969F2 /* SplashViewController.swift in Sources */,
@@ -751,17 +784,20 @@
 				9C3CC3DE23C75EE800359368 /* SupplementaryViews.swift in Sources */,
 				9C624172238AE81A00A4B7C9 /* SurfTip.swift in Sources */,
 				9C73E26623B963570028B9AC /* CoordinatorPresenting.swift in Sources */,
+				9C5B64DB2B16A0A700360CAF /* WelcomeView.swift in Sources */,
 				9CF77BE024104B9400C92725 /* AlertContainerView.swift in Sources */,
 				9C624170238AE75000A4B7C9 /* MockService.swift in Sources */,
+				9C5B64D42B16A07900360CAF /* Helper.swift in Sources */,
 				9C58729C258023D800524BA7 /* ApiEndpoint.swift in Sources */,
 				9C73E26823B964560028B9AC /* Coordinator.swift in Sources */,
+				9C5B64DA2B16A0A700360CAF /* SplashView.swift in Sources */,
 				9C53D5C0234C126600A3BD80 /* StoryboardProtocol.swift in Sources */,
+				9C5B64CC2B1697A200360CAF /* AppRoot.swift in Sources */,
 				9C5B644C232A506C000727E6 /* AppDelegate.swift in Sources */,
 				9C62416E238AE68E00A4B7C9 /* ReuseIdentifierHelper.swift in Sources */,
 				9C624174238AFC1400A4B7C9 /* SmallTableViewCell.swift in Sources */,
 				9C5B6456232A506C000727E6 /* TradeMySurf.xcdatamodeld in Sources */,
 				9CF77BEC241069BA00C92725 /* UIViewController+ChildViewController.swift in Sources */,
-				9C6B837628B3FBA80000FAB9 /* AlertButtonView.swift in Sources */,
 				9C8F330223994CDD0070751F /* FontHelper.swift in Sources */,
 				9C89B61C23DA40D400DB8DDF /* UIView+Shadow.swift in Sources */,
 				9CF1CC24241136950067533C /* TabBarVC.swift in Sources */,
@@ -943,6 +979,7 @@
 				DEFINES_MODULE = YES;
 				DEVELOPMENT_TEAM = HBS2B82CVU;
 				INFOPLIST_FILE = TradeMySurf/Info.plist;
+				INFOPLIST_KEY_LSApplicationCategoryType = "public.app-category.lifestyle";
 				IPHONEOS_DEPLOYMENT_TARGET = 16.5;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -971,6 +1008,7 @@
 				DEFINES_MODULE = YES;
 				DEVELOPMENT_TEAM = HBS2B82CVU;
 				INFOPLIST_FILE = TradeMySurf/Info.plist;
+				INFOPLIST_KEY_LSApplicationCategoryType = "public.app-category.lifestyle";
 				IPHONEOS_DEPLOYMENT_TARGET = 16.5;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",

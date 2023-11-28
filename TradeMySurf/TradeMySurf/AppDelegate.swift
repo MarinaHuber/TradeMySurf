@@ -8,7 +8,7 @@
 
 import UIKit
 
-@UIApplicationMain
+//@UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate {
 
     private var coordinator: Coordinator? = nil
