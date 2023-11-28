@@ -3,7 +3,7 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 51;
+	objectVersion = 54;
 	objects = {
 
 /* Begin PBXBuildFile section */
@@ -233,6 +233,16 @@
 			path = Detail;
 			sourceTree = "<group>";
 		};
+		9C2F087B2B168D3700AE67D9 /* UIKit */ = {
+			isa = PBXGroup;
+			children = (
+				9C3F533B234BD7F900D5F65E /* Protocols */,
+				9CC59F15234AA3B200F5ADD0 /* Coordinators */,
+				9C76F09F2349471000853FD9 /* ViewControllers */,
+			);
+			path = UIKit;
+			sourceTree = "<group>";
+		};
 		9C3F533B234BD7F900D5F65E /* Protocols */ = {
 			isa = PBXGroup;
 			children = (
@@ -304,6 +314,7 @@
 		9C5B644A232A506C000727E6 /* TradeMySurf */ = {
 			isa = PBXGroup;
 			children = (
+				9C2F087B2B168D3700AE67D9 /* UIKit */,
 				9C5B644B232A506C000727E6 /* AppDelegate.swift */,
 				9C6F64CF2379FB7800B0224D /* Constants.swift */,
 				9C587296257FFA4B00524BA7 /* Services */,
@@ -311,9 +322,6 @@
 				9C90BC532386BCE50090E346 /* Helpers */,
 				9C6F64C52379BD7E00B0224D /* SupportingViews */,
 				9C69CE74234CD992003E386F /* Models */,
-				9C3F533B234BD7F900D5F65E /* Protocols */,
-				9CC59F15234AA3B200F5ADD0 /* Coordinators */,
-				9C76F09F2349471000853FD9 /* ViewControllers */,
 				9C76F09E234946D500853FD9 /* Resources */,
 				9CC4F8E923CA536A00F3ABAB /* Surfs.mlmodel */,
 				9C71A14B2348946C00A67323 /* Info.plist */,
@@ -935,7 +943,7 @@
 				DEFINES_MODULE = YES;
 				DEVELOPMENT_TEAM = HBS2B82CVU;
 				INFOPLIST_FILE = TradeMySurf/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 16.5;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -963,7 +971,7 @@
 				DEFINES_MODULE = YES;
 				DEVELOPMENT_TEAM = HBS2B82CVU;
 				INFOPLIST_FILE = TradeMySurf/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 16.5;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
