@@ -11,7 +11,7 @@ import UIKit
 //@UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate {
 
-    private var coordinator: Coordinator? = nil
+    private var coordinator: CoordinatorUIKit? = nil
     var window: UIWindow?
 
 	func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
@@ -23,7 +23,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     // MARK: Configure Coordinator without storyboard
         window = UIWindow(frame: UIScreen.main.bounds)
         guard let window = window else { fatalError() }
-        coordinator = Coordinator(window: window)
+        coordinator = CoordinatorUIKit(window: window)
         window.makeKeyAndVisible()
         scenePresenter?.presentSplash()
     

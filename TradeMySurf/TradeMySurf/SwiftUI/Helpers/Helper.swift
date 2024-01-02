@@ -9,10 +9,27 @@
 import Foundation
 
 
-enum ActiveSheet: Identifiable {
+enum Sheet: Identifiable, CaseIterable {
+    case confirm, location, surfDetail
+
+    var id: Int {
+        hashValue
+    }
+}
+
+enum Page: Identifiable {
+    case surfTrip
+
+    var id: Int {
+        hashValue
+    }
+}
+
+enum FullScreenCover: Identifiable, CaseIterable {
     case splash, welcome, addLevel, addDate
 
     var id: Int {
         hashValue
     }
 }
+

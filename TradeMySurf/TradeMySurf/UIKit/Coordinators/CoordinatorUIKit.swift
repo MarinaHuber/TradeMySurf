@@ -1,5 +1,5 @@
 //
-//  CoordinatorOnboarding.swift
+//  CoordinatorUIKit.swift
 //  TradeMySurf
 //
 //  Created by Marina Huber on 12/29/19.
@@ -10,8 +10,8 @@ import Foundation
 import UIKit
 import Presentr
 
-final class Coordinator: UIResponder, CoorinatorPresenting {
-    
+final class CoordinatorUIKit: UIResponder, CoorinatorPresenting {
+
     // MARK: Creating the Coordinator
     
     let window: UIWindow

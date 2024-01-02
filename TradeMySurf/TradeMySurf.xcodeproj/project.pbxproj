@@ -13,6 +13,7 @@
 		9C3CC3DE23C75EE800359368 /* SupplementaryViews.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C3CC3DD23C75EE800359368 /* SupplementaryViews.swift */; };
 		9C45E661234D238F0054A5FD /* SurfTripViewController.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9C45E660234D238E0054A5FD /* SurfTripViewController.storyboard */; };
 		9C467C67234F2A7D009F4D58 /* Surfboard.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C467C66234F2A7D009F4D58 /* Surfboard.swift */; };
+		9C4BEF342B43E008004A0991 /* Coordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C4BEF332B43E008004A0991 /* Coordinator.swift */; };
 		9C4C54742349C28500FB2653 /* GuideViewController.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9C4C54732349C28500FB2653 /* GuideViewController.storyboard */; };
 		9C53CE1C289E9497000969F2 /* MapModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C53CE1B289E9497000969F2 /* MapModel.swift */; };
 		9C53CE1E289E94B5000969F2 /* SplashViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C53CE1D289E94B5000969F2 /* SplashViewController.swift */; };
@@ -46,7 +47,7 @@
 		9C6F64CE2379F86400B0224D /* AddLevelViewController.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9CFDFD3A2367220300760F25 /* AddLevelViewController.storyboard */; };
 		9C6F64D02379FB7800B0224D /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C6F64CF2379FB7800B0224D /* Constants.swift */; };
 		9C73E26623B963570028B9AC /* CoordinatorPresenting.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C73E26523B963570028B9AC /* CoordinatorPresenting.swift */; };
-		9C73E26823B964560028B9AC /* Coordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C73E26723B964560028B9AC /* Coordinator.swift */; };
+		9C73E26823B964560028B9AC /* CoordinatorUIKit.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C73E26723B964560028B9AC /* CoordinatorUIKit.swift */; };
 		9C76F09423493DAB00853FD9 /* WelcomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C76F09323493DAB00853FD9 /* WelcomeViewController.swift */; };
 		9C76F09623493EDA00853FD9 /* SurfTripViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C76F09523493EDA00853FD9 /* SurfTripViewController.swift */; };
 		9C76F09823493F0900853FD9 /* GuideViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C76F09723493F0900853FD9 /* GuideViewController.swift */; };
@@ -110,6 +111,7 @@
 		9C3CC3DD23C75EE800359368 /* SupplementaryViews.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SupplementaryViews.swift; sourceTree = "<group>"; };
 		9C45E660234D238E0054A5FD /* SurfTripViewController.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = SurfTripViewController.storyboard; sourceTree = "<group>"; };
 		9C467C66234F2A7D009F4D58 /* Surfboard.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Surfboard.swift; sourceTree = "<group>"; };
+		9C4BEF332B43E008004A0991 /* Coordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Coordinator.swift; sourceTree = "<group>"; };
 		9C4C54732349C28500FB2653 /* GuideViewController.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = GuideViewController.storyboard; sourceTree = "<group>"; };
 		9C53CE1B289E9497000969F2 /* MapModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MapModel.swift; sourceTree = "<group>"; };
 		9C53CE1D289E94B5000969F2 /* SplashViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SplashViewController.swift; sourceTree = "<group>"; };
@@ -148,7 +150,7 @@
 		9C71A14E234894CD00A67323 /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		9C71A150234894D500A67323 /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		9C73E26523B963570028B9AC /* CoordinatorPresenting.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoordinatorPresenting.swift; sourceTree = "<group>"; };
-		9C73E26723B964560028B9AC /* Coordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Coordinator.swift; sourceTree = "<group>"; };
+		9C73E26723B964560028B9AC /* CoordinatorUIKit.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoordinatorUIKit.swift; sourceTree = "<group>"; };
 		9C76F09323493DAB00853FD9 /* WelcomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WelcomeViewController.swift; sourceTree = "<group>"; };
 		9C76F09523493EDA00853FD9 /* SurfTripViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SurfTripViewController.swift; sourceTree = "<group>"; };
 		9C76F09723493F0900853FD9 /* GuideViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GuideViewController.swift; sourceTree = "<group>"; };
@@ -262,6 +264,7 @@
 				9C5B64D12B16A03500360CAF /* Helpers */,
 				9C5B64CA2B1697A200360CAF /* AppRoot.swift */,
 				9C5B64C92B1697A100360CAF /* RootViewApp.swift */,
+				9C4BEF332B43E008004A0991 /* Coordinator.swift */,
 			);
 			path = SwiftUI;
 			sourceTree = "<group>";
@@ -508,7 +511,7 @@
 		9CC59F15234AA3B200F5ADD0 /* Coordinators */ = {
 			isa = PBXGroup;
 			children = (
-				9C73E26723B964560028B9AC /* Coordinator.swift */,
+				9C73E26723B964560028B9AC /* CoordinatorUIKit.swift */,
 			);
 			path = Coordinators;
 			sourceTree = "<group>";
@@ -789,7 +792,7 @@
 				9C624170238AE75000A4B7C9 /* MockService.swift in Sources */,
 				9C5B64D42B16A07900360CAF /* Helper.swift in Sources */,
 				9C58729C258023D800524BA7 /* ApiEndpoint.swift in Sources */,
-				9C73E26823B964560028B9AC /* Coordinator.swift in Sources */,
+				9C73E26823B964560028B9AC /* CoordinatorUIKit.swift in Sources */,
 				9C5B64DA2B16A0A700360CAF /* SplashView.swift in Sources */,
 				9C53D5C0234C126600A3BD80 /* StoryboardProtocol.swift in Sources */,
 				9C5B64CC2B1697A200360CAF /* AppRoot.swift in Sources */,
@@ -806,6 +809,7 @@
 				9C76F09623493EDA00853FD9 /* SurfTripViewController.swift in Sources */,
 				9C62417C239156C200A4B7C9 /* UserDefaultsHelper.swift in Sources */,
 				9C53CE1C289E9497000969F2 /* MapModel.swift in Sources */,
+				9C4BEF342B43E008004A0991 /* Coordinator.swift in Sources */,
 				9C90BC552386BD020090E346 /* Enums.swift in Sources */,
 				9C89B61E23DA41A600DB8DDF /* BaseNavigationController.swift in Sources */,
 				9C76F09823493F0900853FD9 /* GuideViewController.swift in Sources */,

@@ -30,6 +30,7 @@ struct AlertSwiftUIView: View {
     var body: some View {
         GeometryReader { geometry in
             VStack(alignment: .center, spacing: 0) {
+                //optimize with Group
                 Image(systemName: "checkmark")
                     .foregroundColor(Color.white)
                     .font(Font.system(.largeTitle).bold())
