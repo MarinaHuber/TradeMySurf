@@ -16,7 +16,6 @@ protocol CoorinatorPresenting {
     func presentTabBar()
     func presentDetailBoard(_ data: Surfboard)
     func presentDetailLocation(_ data: Surfboard)
-
 }
 
 
