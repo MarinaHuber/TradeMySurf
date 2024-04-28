@@ -7,30 +7,28 @@
 //
 import Lottie
 import SwiftUI
+import Foundation
 
 struct SplashView: View {
     @State private var showNext: Bool = false
-    private let timer = Timer.publish(every: 3.0, on: .main, in: .common).autoconnect()
 
     var body: some View {
         VStack {
             LottieSplashView(animationName: "loader_animation")
         }
-        .background(
-            Color.clear
-                .onReceive(timer) { _ in
-                    withAnimation(.easeIn(duration: 2.5)) {
-                        if !UserDefaults.standard.userWasHere {
-                            showNext = true
-                        } else {
-
-                        }
-                    }
-
-                }
-        )
+        .animation(.easeInOut(duration: 1.0), value: showNext)
         .frame(width: UIScreen.main.bounds.width, height: UIScreen.main.bounds.height)
         .padding(.top , UIScreen.main.bounds.height / 1.4)
+        .onAppear {
+            DispatchQueue.main.asyncAfter(deadline: .now() + 2) {
+                    // time out splash view fo 2 sec
+                self.showNext = true
+            }
+        }
+        .fullScreenCover(isPresented: $showNext) {
+            WelcomeView()
+        }
+
     }
 
     struct LottieSplashView: UIViewRepresentable {

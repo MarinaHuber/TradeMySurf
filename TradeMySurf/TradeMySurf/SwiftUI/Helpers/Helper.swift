@@ -13,7 +13,11 @@ enum SheetRoute: Hashable {
     case confirm, location, surfDetail
 }
 
-enum FullScreenRoute: Hashable {
+enum FullScreenRoute: Hashable, Identifiable {
+    var id: Int {
+        hashValue
+    }
+
     case splash, welcome, addLevel, addDate
 }
 
