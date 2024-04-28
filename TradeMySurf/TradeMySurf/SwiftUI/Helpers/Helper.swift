@@ -9,27 +9,11 @@
 import Foundation
 
 
-enum Sheet: Identifiable, CaseIterable {
+enum SheetRoute: Hashable {
     case confirm, location, surfDetail
-
-    var id: Int {
-        hashValue
-    }
 }
 
-enum Page: Identifiable {
-    case surfTrip
-
-    var id: Int {
-        hashValue
-    }
-}
-
-enum FullScreenCover: Identifiable, CaseIterable {
+enum FullScreenRoute: Hashable {
     case splash, welcome, addLevel, addDate
-
-    var id: Int {
-        hashValue
-    }
 }
 
