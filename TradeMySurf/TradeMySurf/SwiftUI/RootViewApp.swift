@@ -15,7 +15,6 @@ public struct RootAppView: View {
         SplashView()
     }
 }
-}
 
 #Preview {
     RootAppView()

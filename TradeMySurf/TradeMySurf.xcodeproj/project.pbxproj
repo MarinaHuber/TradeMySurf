@@ -7,6 +7,10 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		9C0517882BE1745000DDBFDC /* CalculatorView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C0517872BE1745000DDBFDC /* CalculatorView.swift */; };
+		9C05178A2BE1745D00DDBFDC /* MainView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C0517892BE1745D00DDBFDC /* MainView.swift */; };
+		9C05178C2BE1746D00DDBFDC /* GuideView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C05178B2BE1746D00DDBFDC /* GuideView.swift */; };
+		9C05178F2BE17FDF00DDBFDC /* TabBarView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C05178E2BE17FDF00DDBFDC /* TabBarView.swift */; };
 		9C193AFB23A2ACA7000DE1AB /* coin-wallet.json in Resources */ = {isa = PBXBuildFile; fileRef = 9C193AFA23A2ACA7000DE1AB /* coin-wallet.json */; };
 		9C31EB8A23E3AA2100060143 /* DetailViewController.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9C31EB8923E3AA2100060143 /* DetailViewController.storyboard */; };
 		9C31EB8C23E3AB1A00060143 /* DetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C31EB8B23E3AB1A00060143 /* DetailViewController.swift */; };
@@ -62,6 +66,8 @@
 		9C90A233238897A500E735D3 /* air.json in Resources */ = {isa = PBXBuildFile; fileRef = 9C90A232238897A400E735D3 /* air.json */; };
 		9C90BC552386BD020090E346 /* Enums.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C90BC542386BD020090E346 /* Enums.swift */; };
 		9C9F836C2366BDAA00FA4F41 /* TabBarCoordinatorTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C9F836B2366BDAA00FA4F41 /* TabBarCoordinatorTests.swift */; };
+		9CB161562BE0335D0031C913 /* AddLevelView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9CB161552BE0335D0031C913 /* AddLevelView.swift */; };
+		9CB161582BE033660031C913 /* AddDateView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9CB161572BE033660031C913 /* AddDateView.swift */; };
 		9CBDE2982395A9E600317F51 /* TimeHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9CBDE2972395A9E600317F51 /* TimeHelper.swift */; };
 		9CC4F8EA23CA536A00F3ABAB /* Surfs.mlmodel in Sources */ = {isa = PBXBuildFile; fileRef = 9CC4F8E923CA536A00F3ABAB /* Surfs.mlmodel */; };
 		9CE09C302413FAFA00F0FE08 /* TabItemView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 9CE09C2F2413FAFA00F0FE08 /* TabItemView.xib */; };
@@ -105,6 +111,10 @@
 		3A1C042CB9EFA0254C2988FE /* Pods-TradeMySurfTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TradeMySurfTests.debug.xcconfig"; path = "Target Support Files/Pods-TradeMySurfTests/Pods-TradeMySurfTests.debug.xcconfig"; sourceTree = "<group>"; };
 		4510A5DB5E6D5379DA0C696C /* Pods-TradeMySurfTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TradeMySurfTests.release.xcconfig"; path = "Target Support Files/Pods-TradeMySurfTests/Pods-TradeMySurfTests.release.xcconfig"; sourceTree = "<group>"; };
 		73594BCA3A691E66914D3EEA /* Pods-TradeMySurf.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TradeMySurf.debug.xcconfig"; path = "Target Support Files/Pods-TradeMySurf/Pods-TradeMySurf.debug.xcconfig"; sourceTree = "<group>"; };
+		9C0517872BE1745000DDBFDC /* CalculatorView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CalculatorView.swift; sourceTree = "<group>"; };
+		9C0517892BE1745D00DDBFDC /* MainView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainView.swift; sourceTree = "<group>"; };
+		9C05178B2BE1746D00DDBFDC /* GuideView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GuideView.swift; sourceTree = "<group>"; };
+		9C05178E2BE17FDF00DDBFDC /* TabBarView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabBarView.swift; sourceTree = "<group>"; };
 		9C193AFA23A2ACA7000DE1AB /* coin-wallet.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = "coin-wallet.json"; sourceTree = "<group>"; };
 		9C31EB8923E3AA2100060143 /* DetailViewController.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = DetailViewController.storyboard; sourceTree = "<group>"; };
 		9C31EB8B23E3AB1A00060143 /* DetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailViewController.swift; sourceTree = "<group>"; };
@@ -165,6 +175,8 @@
 		9C90A232238897A400E735D3 /* air.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = air.json; sourceTree = "<group>"; };
 		9C90BC542386BD020090E346 /* Enums.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Enums.swift; sourceTree = "<group>"; };
 		9C9F836B2366BDAA00FA4F41 /* TabBarCoordinatorTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabBarCoordinatorTests.swift; sourceTree = "<group>"; };
+		9CB161552BE0335D0031C913 /* AddLevelView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddLevelView.swift; sourceTree = "<group>"; };
+		9CB161572BE033660031C913 /* AddDateView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddDateView.swift; sourceTree = "<group>"; };
 		9CBDE2972395A9E600317F51 /* TimeHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TimeHelper.swift; sourceTree = "<group>"; };
 		9CC4F8E923CA536A00F3ABAB /* Surfs.mlmodel */ = {isa = PBXFileReference; lastKnownFileType = file.mlmodel; name = Surfs.mlmodel; path = ../../Working/Surfboards/Surfs.mlmodel; sourceTree = "<group>"; };
 		9CE09C2F2413FAFA00F0FE08 /* TabItemView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = TabItemView.xib; sourceTree = "<group>"; };
@@ -232,6 +244,35 @@
 				CDD5482363EBB48A0782A828 /* Pods_TradeMySurfTests.framework */,
 			);
 			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		9C0517852BE1737200DDBFDC /* Onboarding */ = {
+			isa = PBXGroup;
+			children = (
+				9C5B64D62B16A0A700360CAF /* SplashView.swift */,
+				9C5B64D72B16A0A700360CAF /* WelcomeView.swift */,
+				9CB161552BE0335D0031C913 /* AddLevelView.swift */,
+				9CB161572BE033660031C913 /* AddDateView.swift */,
+			);
+			path = Onboarding;
+			sourceTree = "<group>";
+		};
+		9C0517862BE173EA00DDBFDC /* Main */ = {
+			isa = PBXGroup;
+			children = (
+				9C0517872BE1745000DDBFDC /* CalculatorView.swift */,
+				9C0517892BE1745D00DDBFDC /* MainView.swift */,
+				9C05178B2BE1746D00DDBFDC /* GuideView.swift */,
+			);
+			path = Main;
+			sourceTree = "<group>";
+		};
+		9C05178D2BE17FD100DDBFDC /* TabBar */ = {
+			isa = PBXGroup;
+			children = (
+				9C05178E2BE17FDF00DDBFDC /* TabBarView.swift */,
+			);
+			path = TabBar;
 			sourceTree = "<group>";
 		};
 		9C1630CA24157A4B00DB9BBC /* Detail */ = {
@@ -386,10 +427,11 @@
 		9C5B64D22B16A06300360CAF /* Views */ = {
 			isa = PBXGroup;
 			children = (
-				9C5B64D82B16A0A700360CAF /* AlertButtonView.swift */,
+				9C05178D2BE17FD100DDBFDC /* TabBar */,
 				9C5B64D52B16A0A700360CAF /* AlertSwiftUIView.swift */,
-				9C5B64D62B16A0A700360CAF /* SplashView.swift */,
-				9C5B64D72B16A0A700360CAF /* WelcomeView.swift */,
+				9C5B64D82B16A0A700360CAF /* AlertButtonView.swift */,
+				9C0517862BE173EA00DDBFDC /* Main */,
+				9C0517852BE1737200DDBFDC /* Onboarding */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -609,8 +651,9 @@
 		9C5B6440232A506C000727E6 /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
+				BuildIndependentTargetsInParallel = YES;
 				LastSwiftUpdateCheck = 1100;
-				LastUpgradeCheck = 1200;
+				LastUpgradeCheck = 1530;
 				ORGANIZATIONNAME = "Marina Huber";
 				TargetAttributes = {
 					9C5B6447232A506C000727E6 = {
@@ -776,6 +819,7 @@
 				9CC4F8EA23CA536A00F3ABAB /* Surfs.mlmodel in Sources */,
 				9C467C67234F2A7D009F4D58 /* Surfboard.swift in Sources */,
 				9C5B6450232A506C000727E6 /* PriceCalculatorViewController.swift in Sources */,
+				9C05178C2BE1746D00DDBFDC /* GuideView.swift in Sources */,
 				9CFDFD412367228300760F25 /* AddLevelViewController.swift in Sources */,
 				9C624176238B089000A4B7C9 /* SceneDelegate.swift in Sources */,
 				9C5B64D92B16A0A700360CAF /* AlertSwiftUIView.swift in Sources */,
@@ -783,12 +827,15 @@
 				9C624178238B107B00A4B7C9 /* SurfboardCollectionViewCell.swift in Sources */,
 				9C53CE1E289E94B5000969F2 /* SplashViewController.swift in Sources */,
 				9C76F09423493DAB00853FD9 /* WelcomeViewController.swift in Sources */,
+				9C05178A2BE1745D00DDBFDC /* MainView.swift in Sources */,
 				9CE21BB32507C9BF00B6B20C /* LocationViewController.swift in Sources */,
 				9C3CC3DE23C75EE800359368 /* SupplementaryViews.swift in Sources */,
 				9C624172238AE81A00A4B7C9 /* SurfTip.swift in Sources */,
 				9C73E26623B963570028B9AC /* CoordinatorPresenting.swift in Sources */,
 				9C5B64DB2B16A0A700360CAF /* WelcomeView.swift in Sources */,
+				9C05178F2BE17FDF00DDBFDC /* TabBarView.swift in Sources */,
 				9CF77BE024104B9400C92725 /* AlertContainerView.swift in Sources */,
+				9CB161562BE0335D0031C913 /* AddLevelView.swift in Sources */,
 				9C624170238AE75000A4B7C9 /* MockService.swift in Sources */,
 				9C5B64D42B16A07900360CAF /* Helper.swift in Sources */,
 				9C58729C258023D800524BA7 /* ApiEndpoint.swift in Sources */,
@@ -796,7 +843,9 @@
 				9C5B64DA2B16A0A700360CAF /* SplashView.swift in Sources */,
 				9C53D5C0234C126600A3BD80 /* StoryboardProtocol.swift in Sources */,
 				9C5B64CC2B1697A200360CAF /* AppRoot.swift in Sources */,
+				9CB161582BE033660031C913 /* AddDateView.swift in Sources */,
 				9C5B644C232A506C000727E6 /* AppDelegate.swift in Sources */,
+				9C0517882BE1745000DDBFDC /* CalculatorView.swift in Sources */,
 				9C62416E238AE68E00A4B7C9 /* ReuseIdentifierHelper.swift in Sources */,
 				9C624174238AFC1400A4B7C9 /* SmallTableViewCell.swift in Sources */,
 				9C5B6456232A506C000727E6 /* TradeMySurf.xcdatamodeld in Sources */,
@@ -888,8 +937,10 @@
 				COPY_PHASE_STRIP = NO;
 				DEBUG_INFORMATION_FORMAT = dwarf;
 				DEFINES_MODULE = YES;
+				ENABLE_MODULE_VERIFIER = YES;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
 				ENABLE_TESTABILITY = YES;
+				ENABLE_USER_SCRIPT_SANDBOXING = NO;
 				GCC_C_LANGUAGE_STANDARD = gnu11;
 				GCC_DYNAMIC_NO_PIC = NO;
 				GCC_NO_COMMON_BLOCKS = YES;
@@ -905,6 +956,7 @@
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
 				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
+				MODULE_VERIFIER_SUPPORTED_LANGUAGE_STANDARDS = "gnu11 gnu++14";
 				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
 				MTL_FAST_MATH = YES;
 				ONLY_ACTIVE_ARCH = YES;
@@ -951,8 +1003,10 @@
 				COPY_PHASE_STRIP = NO;
 				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
 				DEFINES_MODULE = YES;
+				ENABLE_MODULE_VERIFIER = YES;
 				ENABLE_NS_ASSERTIONS = NO;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_USER_SCRIPT_SANDBOXING = NO;
 				GCC_C_LANGUAGE_STANDARD = gnu11;
 				GCC_NO_COMMON_BLOCKS = YES;
 				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
@@ -962,6 +1016,7 @@
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
 				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
+				MODULE_VERIFIER_SUPPORTED_LANGUAGE_STANDARDS = "gnu11 gnu++14";
 				MTL_ENABLE_DEBUG_INFO = NO;
 				MTL_FAST_MATH = YES;
 				PRODUCT_BUNDLE_IDENTIFIER = "Surf Curve";
@@ -982,6 +1037,7 @@
 				CURRENT_PROJECT_VERSION = 2;
 				DEFINES_MODULE = YES;
 				DEVELOPMENT_TEAM = HBS2B82CVU;
+				ENABLE_MODULE_VERIFIER = YES;
 				INFOPLIST_FILE = TradeMySurf/Info.plist;
 				INFOPLIST_KEY_LSApplicationCategoryType = "public.app-category.lifestyle";
 				IPHONEOS_DEPLOYMENT_TARGET = 16.5;
@@ -990,6 +1046,7 @@
 					"@executable_path/Frameworks",
 				);
 				MARKETING_VERSION = 1.0.2;
+				MODULE_VERIFIER_SUPPORTED_LANGUAGE_STANDARDS = "gnu11 gnu++14";
 				PRODUCT_BUNDLE_IDENTIFIER = com.marinahuber;
 				PRODUCT_NAME = SurfCurve;
 				PROVISIONING_PROFILE_SPECIFIER = "";
@@ -1011,6 +1068,7 @@
 				CURRENT_PROJECT_VERSION = 2;
 				DEFINES_MODULE = YES;
 				DEVELOPMENT_TEAM = HBS2B82CVU;
+				ENABLE_MODULE_VERIFIER = YES;
 				INFOPLIST_FILE = TradeMySurf/Info.plist;
 				INFOPLIST_KEY_LSApplicationCategoryType = "public.app-category.lifestyle";
 				IPHONEOS_DEPLOYMENT_TARGET = 16.5;
@@ -1019,6 +1077,7 @@
 					"@executable_path/Frameworks",
 				);
 				MARKETING_VERSION = 1.0.2;
+				MODULE_VERIFIER_SUPPORTED_LANGUAGE_STANDARDS = "gnu11 gnu++14";
 				PRODUCT_BUNDLE_IDENTIFIER = com.marinahuber;
 				PRODUCT_NAME = SurfCurve;
 				PROVISIONING_PROFILE_SPECIFIER = "";

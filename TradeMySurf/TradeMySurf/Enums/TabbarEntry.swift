@@ -2,10 +2,11 @@
 //
 
 import UIKit
+import SwiftUI
 
 enum TabbarEntry: Int, CaseIterable {
 
-    case guide, recommended, prices
+    case guide, recommended, calculator
 
     var title: String {
 
@@ -13,7 +14,7 @@ enum TabbarEntry: Int, CaseIterable {
 
         case .guide: return "Surf guide"
         case .recommended: return "Matched"
-        case .prices: return "Equipment"
+        case .calculator: return "Equipment"
 
         }
     }
@@ -24,7 +25,7 @@ enum TabbarEntry: Int, CaseIterable {
 
             case .guide: return UIImage(named:"info_tabActive")!
             case .recommended: return UIImage(named:"recommend_tabActive")!
-            case .prices: return UIImage(named:"price_tabActive")!
+            case .calculator: return UIImage(named:"price_tabActive")!
 
         }
     }
@@ -35,13 +36,13 @@ enum TabbarEntry: Int, CaseIterable {
 
         case .guide: return UIImage(named:"info_inactive")!
         case .recommended: return UIImage(named:"recommend_inactive")!
-        case .prices: return UIImage(named:"price_inactive")!
+        case .calculator: return UIImage(named:"price_inactive")!
 
         }
     }
 
     var viewController: UIViewController {
-        
+
         let storyboardSurf: UIStoryboard = UIStoryboard(name: Constants.Storyboards.surfTripViewController, bundle: nil)
         let storyboardGuide: UIStoryboard = UIStoryboard(name: Constants.Storyboards.guideViewController, bundle: nil)
         let storyboardPrice: UIStoryboard = UIStoryboard(name: Constants.Storyboards.priceCalculatorViewController, bundle: nil)
@@ -50,7 +51,7 @@ enum TabbarEntry: Int, CaseIterable {
 
         case .guide: return GuideViewController.instantiate(from: storyboardGuide)
         case .recommended: return SurfTripViewController.instantiate(from: storyboardSurf)
-        case .prices: return PriceCalculatorViewController.instantiate(from: storyboardPrice)
+        case .calculator: return PriceCalculatorViewController.instantiate(from: storyboardPrice)
 
         }
     }

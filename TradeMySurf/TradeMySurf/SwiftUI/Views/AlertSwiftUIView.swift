@@ -16,6 +16,7 @@ class ViewModel {
 
 struct AlertSwiftUIView: View {
     
+    @State private var animationAmount = 1.0
     @State private var selectedDate = UserDefaults.standard.surfingTime
     @State private var selectedLevel = UserDefaults.standard.selectedLevel
     @State private var levels = [Level.Beginner.rawValue, Level.BeginnerIntermediate.rawValue, Level.Intermediate.rawValue, Level.Advanced.rawValue]
@@ -62,8 +63,9 @@ struct AlertSwiftUIView: View {
                     self.endPoint = UnitPoint(x: 0, y: 1)
                 }
                 .animation(
-                    Animation.easeIn(duration: 3)
-                        .repeatForever(autoreverses: false)
+                    .easeOut(duration: 2)
+                    .repeatForever(autoreverses: false),
+                    value: animationAmount
                 )
             )
         }

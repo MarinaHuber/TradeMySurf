@@ -13,7 +13,7 @@ class TabBarVC: UIViewController, StoryboardProtocol {
     // MARK: - Outlets
     
     @IBOutlet weak var container: UIView!
-    @IBOutlet private weak var tabbarBackgroundView: UIView!
+    @IBOutlet weak var tabbarBackgroundView: UIView!
     @IBOutlet private weak var spaceholderView: UIView!
     @IBOutlet private weak var tabbarStackView: UIStackView!
 
@@ -25,7 +25,7 @@ class TabBarVC: UIViewController, StoryboardProtocol {
     override func viewDidLoad() {
         super.viewDidLoad()
         self.configureTabbar()
-        self.swapViewController(for: .recommended)
+        self.swapViewController(for: .calculator)
     }
 
     // MARK: - Helper
@@ -33,11 +33,11 @@ class TabBarVC: UIViewController, StoryboardProtocol {
         
         for entry in TabbarEntry.allCases {
             
-            let itemView = TabItemView(frame: CGRect(x: 0.0, y: 0.0, width: self.tabbarBackgroundView.frame.size.width / 3, height: self.tabbarBackgroundView.frame.size.height))
+            let itemView = TabItemView(frame: CGRect(x: 0.0, y: 0.0, width: (self.tabbarBackgroundView?.frame.size.width ?? 0) / 3, height: self.tabbarBackgroundView?.frame.size.height ?? 0))
             itemView.fill(with: entry)
             itemView.isSelected = self.selectedEntry == entry
-            self.tabbarStackView.addArrangedSubview(itemView)
-            
+            self.tabbarStackView?.addArrangedSubview(itemView)
+
             let recognizer = UITapGestureRecognizer(target: self, action: #selector(self.tapItem(_:)))
             itemView.addGestureRecognizer(recognizer)
         }
@@ -73,8 +73,8 @@ class TabBarVC: UIViewController, StoryboardProtocol {
         }
 
         // switch item selection
-        if let previousTabView = self.tabbarStackView.arrangedSubviews.item(at: self.selectedEntry.rawValue) as? TabItemView,
-            let newTabView = self.tabbarStackView.arrangedSubviews.item(at: entry.rawValue) as? TabItemView {
+        if let previousTabView = self.tabbarStackView?.arrangedSubviews.item(at: self.selectedEntry.rawValue) as? TabItemView,
+            let newTabView = self.tabbarStackView?.arrangedSubviews.item(at: entry.rawValue) as? TabItemView {
 
             UIView.animate(withDuration: 0.3) {
 
