@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import SwiftUI
 
 class TabBarVC: UIViewController, StoryboardProtocol {
 
@@ -33,10 +34,10 @@ class TabBarVC: UIViewController, StoryboardProtocol {
         
         for entry in TabbarEntry.allCases {
             
-            let itemView = TabItemView(frame: CGRect(x: 0.0, y: 0.0, width: (self.tabbarBackgroundView?.frame.size.width ?? 0) / 3, height: self.tabbarBackgroundView?.frame.size.height ?? 0))
+            let itemView = TabItemView(frame: CGRect(x: 0.0, y: 0.0, width: (self.tabbarBackgroundView.frame.size.width) / 3, height: self.tabbarBackgroundView.frame.size.height))
             itemView.fill(with: entry)
             itemView.isSelected = self.selectedEntry == entry
-            self.tabbarStackView?.addArrangedSubview(itemView)
+            self.tabbarStackView.addArrangedSubview(itemView)
 
             let recognizer = UITapGestureRecognizer(target: self, action: #selector(self.tapItem(_:)))
             itemView.addGestureRecognizer(recognizer)
@@ -66,6 +67,7 @@ class TabBarVC: UIViewController, StoryboardProtocol {
         } else {
 
             let vc = entry.viewController
+            // this is not used to be moved into swiftUI
             let navController = BaseNavigationController(rootViewController: vc)
             self.viewControllers[entry] = navController
             self.configureChildViewController(for: navController, onView: self.container)

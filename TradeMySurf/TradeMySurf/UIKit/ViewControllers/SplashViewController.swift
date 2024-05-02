@@ -21,13 +21,13 @@ class SplashViewController: UIViewController, StoryboardProtocol {
         loadAnimateView.play()
         UIView.animate(withDuration: 2.5, delay: 1, options: .curveEaseIn, animations: {
             self.view.alpha = 0.3
-            
+
         }, completion: { _ in
-        if UserDefaults.standard.userWasHere == false {
-            self.scenePresenter?.presentWelcome()
-            UserDefaults.standard.userWasHere = true
-        } else {
-            self.scenePresenter?.presentTabBar()
+            if UserDefaults.standard.userWasHere == false {
+                self.scenePresenter?.presentWelcome()
+                UserDefaults.standard.userWasHere = true
+            } else {
+                self.scenePresenter?.presentTabBar()
             }
         })
     }

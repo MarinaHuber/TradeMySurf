@@ -10,19 +10,21 @@ import UIKit
 
 class BaseNavigationController: UINavigationController {
 
+    //TO DO: rewrite for SwiftUI
+
     override func viewDidLoad() {
         super.viewDidLoad()
-        let navBarAppearance = UINavigationBarAppearance()
-        navBarAppearance.configureWithOpaqueBackground()
-        navBarAppearance.titleTextAttributes = [.foregroundColor: UIColor.white]
-        navBarAppearance.largeTitleTextAttributes = [.foregroundColor: UIColor.white]
-        navBarAppearance.backgroundColor = .systemIndigo
-        navBarAppearance.shadowImage = nil // line
-        navBarAppearance.shadowColor = nil
-        navigationBar.standardAppearance = navBarAppearance
-        navigationBar.scrollEdgeAppearance = navBarAppearance
-        navigationBar.tintColor = .white
-        navigationBar.backgroundColor = .systemIndigo
+//        let navBarAppearance = UINavigationBarAppearance()
+//        navBarAppearance.configureWithOpaqueBackground()
+//        navBarAppearance.titleTextAttributes = [.foregroundColor: UIColor.white]
+//        navBarAppearance.largeTitleTextAttributes = [.foregroundColor: UIColor.white]
+//        navBarAppearance.backgroundColor = .black
+//        navBarAppearance.shadowImage = nil // line
+//        navBarAppearance.shadowColor = nil
+//        navigationBar.standardAppearance = navBarAppearance
+//        navigationBar.scrollEdgeAppearance = navBarAppearance
+//        navigationBar.tintColor = .white
+//        navigationBar.backgroundColor = .systemIndigo
 
     }
 

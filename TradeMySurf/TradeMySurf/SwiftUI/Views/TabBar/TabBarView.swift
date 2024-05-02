@@ -6,19 +6,17 @@
 //  Copyright © 2024 Marina Huber. All rights reserved.
 //
 
-import SwiftUI
-
+import UIKit
 import SwiftUI
 
 struct TabBarView: UIViewControllerRepresentable {
 
-    typealias UIViewControllerType = TabBarVC
-
     func makeUIViewController(context: Context) -> TabBarVC {
-        TabBarVC()
+        let storyboard: UIStoryboard = UIStoryboard(name: "TabBarVC", bundle: nil)
+        let controller: TabBarVC = TabBarVC.instantiate(from: storyboard)
+        return controller
     }
 
     func updateUIViewController(_ uiViewController: TabBarVC, context: Context) {
-            // Update the ViewController here
     }
 }
