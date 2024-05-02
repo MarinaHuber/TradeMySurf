@@ -1,11 +1,11 @@
 
-    //
-    //  AlertSwiftUIView.swift
-    //  TradeMySurf
-    //
-    //  Created by Marina Huber on 7/28/20.
-    //  Copyright © 2020 Marina Huber. All rights reserved.
-    //
+//
+//  AlertSwiftUIView.swift
+//  TradeMySurf
+//
+//  Created by Marina Huber on 7/28/23.
+//  Copyright © 2020 Marina Huber. All rights reserved.
+//
 
 import SwiftUI
 

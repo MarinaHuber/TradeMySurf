@@ -16,12 +16,12 @@ struct SplashView: View {
         VStack {
             LottieSplashView(animationName: "loader_animation")
         }
-        .animation(.easeInOut(duration: 1.0), value: showNext)
-        .frame(width: UIScreen.main.bounds.width, height: UIScreen.main.bounds.height)
+        .edgesIgnoringSafeArea(.all)
+        .animation(.easeInOut(duration: 4.0), value: showNext)
+        .frame(width: UIScreen.main.bounds.width, height: UIScreen.main.bounds.width)
         .padding(.top , UIScreen.main.bounds.height / 1.4)
         .onAppear {
-            DispatchQueue.main.asyncAfter(deadline: .now() + 2) {
-                    // time out splash view fo 2 sec
+            DispatchQueue.main.asyncAfter(deadline: .now() + 3) {
                 self.showNext = true
             }
         }
@@ -38,7 +38,7 @@ struct SplashView: View {
 
         func makeUIView(context: Context) -> AnimationView {
             let animationView = AnimationView(name: animationName)
-            animationView.loopMode = .loop
+            animationView.loopMode = .playOnce
             animationView.play()
             return animationView
         }

@@ -7,12 +7,12 @@
 //
 
 import SwiftUI
-import Foundation
 
 public struct RootAppView: View {
-
+    
     public var body: some View {
         SplashView()
+            .edgesIgnoringSafeArea(.all)
     }
 }
 
