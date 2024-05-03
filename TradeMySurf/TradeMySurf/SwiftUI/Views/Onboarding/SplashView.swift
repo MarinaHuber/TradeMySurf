@@ -13,38 +13,41 @@ struct SplashView: View {
     @State private var showNext: Bool = false
 
     var body: some View {
-        VStack(spacing: 10) {
-            LottieSplashView(animationName: "loader_animation")
-            Text("~ Copyrights Codable 2024 ~")
-                .padding()
-                .font(.system(size: 10).weight(.ultraLight))
+        VStack() {
+            LottieView(animation: .named("loader_animation"))
+                .playing(loopMode: .playOnce)
+                .scaleEffect(3)
+            Text("Copyrights Codable 2024")
+                .padding(.bottom, 20)
+                .font(.system(size: 11).weight(.light))
         }
         .edgesIgnoringSafeArea(.all)
-        .animation(.easeInOut(duration: 4.0), value: showNext)
-        .padding(.top , UIScreen.main.bounds.height / 3)
+        .padding(.top , UIScreen.main.bounds.height / 1.5)
         .onAppear {
-            DispatchQueue.main.asyncAfter(deadline: .now() + 3) {
+            DispatchQueue.main.asyncAfter(deadline: .now() + 2) {
                 self.showNext = true
             }
         }
+        .animation(.easeInOut(duration: 3.0), value: showNext)
         .fullScreenCover(isPresented: $showNext) {
             WelcomeView()
         }
 
     }
 
-    struct LottieSplashView: UIViewRepresentable {
-        let animationName: String
-
-        func updateUIView(_ uiView: Lottie.AnimationView, context: Context) {}
-
-        func makeUIView(context: Context) -> AnimationView {
-            let animationView = AnimationView(name: animationName)
-            animationView.loopMode = .playOnce
-            animationView.play()
-            return animationView
-        }
-    }
+//    struct LottieSplashView: UIViewRepresentable {
+//        let animationName: String
+//
+//        func updateUIView(_ uiView: Lottie.AnimationView, context: Context) {}
+//
+//        func makeUIView(context: Context) -> AnimationView {
+//            let animationView = AnimationView(name: animationName)
+//            animationView.loopMode = .playOnce
+//            animationView.contentMode = .scaleAspectFit
+//            animationView.play()
+//            return animationView
+//        }
+//    }
 }
 
 #Preview {

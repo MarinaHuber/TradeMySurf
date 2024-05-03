@@ -29,5 +29,15 @@
 	</dict>
 	<key>NSLocationWhenInUseUsageDescription</key>
 	<string>Allow application to access your location when the application is in use. Thanks</string>
+	<key>UIAppFonts</key>
+	<array>
+		<string>AvenirNextCyr-Demi.ttf</string>
+		<string>AvenirNextCyr-Heavy.ttf</string>
+		<string>AvenirNextCyr-Light.ttf</string>
+		<string>AvenirNextCyr-LightItalic.ttf</string>
+		<string>AvenirNextCyr-Medium.ttf</string>
+		<string>AvenirNextCyr-Regular.ttf</string>
+		<string>AvenirNextCyr-UltraLight.ttf</string>
+	</array>
 </dict>
 </plist>

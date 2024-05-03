@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <Scheme
-   LastUpgradeVersion = "1530"
+   LastUpgradeVersion = "1500"
    version = "1.3">
    <BuildAction
       parallelizeBuildables = "YES"
@@ -14,7 +14,7 @@
             buildForAnalyzing = "YES">
             <BuildableReference
                BuildableIdentifier = "primary"
-               BlueprintIdentifier = "8742C6943D5EF52A81341D5CC5677C86"
+               BlueprintIdentifier = "E1326C10C4FD32C0E6E60D2F436BF3C1"
                BuildableName = "Pods_TradeMySurf.framework"
                BlueprintName = "Pods-TradeMySurf"
                ReferencedContainer = "container:Pods.xcodeproj">

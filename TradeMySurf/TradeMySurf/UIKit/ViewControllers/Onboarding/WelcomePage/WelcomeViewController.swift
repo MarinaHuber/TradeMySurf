@@ -8,55 +8,18 @@
 
 import Foundation
 import UIKit
-import Lottie
-
 
 class WelcomeViewController: UIViewController, CAAnimationDelegate, StoryboardProtocol {
     
     @IBOutlet weak var startButton: UIButton!
     @IBOutlet weak var welcomeLabel: UILabel!
     @IBOutlet weak var introLabel: UILabel!    
-    @IBOutlet private(set) weak var lottieBoard: AnimationView! {
-        didSet {
-            lottieBoard.animation = Animation.named("clip-board")
-            lottieBoard.animationSpeed = 0.9
-            lottieBoard.contentMode = .scaleAspectFill
-            lottieBoard.loopMode = .loop
-            lottieBoard.play()
-        }
-    }
-    @IBOutlet private(set) weak var lottieCalculate: AnimationView! {
-        didSet {
-            lottieCalculate.animation = Animation.named("coin-wallet")
-            lottieCalculate.animationSpeed = 0.8
-            lottieCalculate.contentMode = .scaleAspectFill
-            lottieCalculate.loopMode = .loop
-            lottieCalculate.play()
-        }
-    }
-    @IBOutlet private(set) weak var lottieLocation: AnimationView! {
-        didSet {
-            lottieLocation.animation = Animation.named("air")
-            lottieLocation.animationSpeed = 0.8
-            lottieLocation.contentMode = .scaleAspectFill
-            lottieLocation.loopMode = .loop
-            lottieLocation.play()
-        }
-    }
+
     @IBOutlet weak var bgStackView: UIView!
     @IBOutlet var bgStackViewWidth: NSLayoutConstraint!
     @IBOutlet var firstText: UILabel!
     @IBOutlet var secondText: UILabel!
     @IBOutlet var thirdText: UILabel!
-    //MARK: fix warning Presenting view controllers on detached view controllers is discouraged
-    /*
-      let time = dispatch_time(DISPATCH_TIME_NOW, Int64(0.001 * Double(NSEC_PER_SEC)))
-
-             dispatch_after(time, dispatch_get_main_queue(), {
-        //present here
-            }
-     */
-    
     
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)

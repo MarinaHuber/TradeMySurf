@@ -171,6 +171,13 @@
 		9C90A232238897A400E735D3 /* air.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = air.json; sourceTree = "<group>"; };
 		9C90BC542386BD020090E346 /* Enums.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Enums.swift; sourceTree = "<group>"; };
 		9C9F836B2366BDAA00FA4F41 /* TabBarCoordinatorTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabBarCoordinatorTests.swift; sourceTree = "<group>"; };
+		9CAECD572BE539E300F0E7AC /* AvenirNextCyr-UltraLight.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "AvenirNextCyr-UltraLight.ttf"; sourceTree = "<group>"; };
+		9CAECD582BE539E300F0E7AC /* AvenirNextCyr-Heavy.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "AvenirNextCyr-Heavy.ttf"; sourceTree = "<group>"; };
+		9CAECD592BE539E300F0E7AC /* AvenirNextCyr-Light.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "AvenirNextCyr-Light.ttf"; sourceTree = "<group>"; };
+		9CAECD5A2BE539E300F0E7AC /* AvenirNextCyr-Medium.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "AvenirNextCyr-Medium.ttf"; sourceTree = "<group>"; };
+		9CAECD5B2BE539E300F0E7AC /* AvenirNextCyr-LightItalic.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "AvenirNextCyr-LightItalic.ttf"; sourceTree = "<group>"; };
+		9CAECD5C2BE539E300F0E7AC /* AvenirNextCyr-Demi.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "AvenirNextCyr-Demi.ttf"; sourceTree = "<group>"; };
+		9CAECD5D2BE539E300F0E7AC /* AvenirNextCyr-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "AvenirNextCyr-Regular.ttf"; sourceTree = "<group>"; };
 		9CB161552BE0335D0031C913 /* AddLevelView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddLevelView.swift; sourceTree = "<group>"; };
 		9CB161572BE033660031C913 /* AddDateView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddDateView.swift; sourceTree = "<group>"; };
 		9CBDE2972395A9E600317F51 /* TimeHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TimeHelper.swift; sourceTree = "<group>"; };
@@ -496,6 +503,7 @@
 		9C76F09E234946D500853FD9 /* Resources */ = {
 			isa = PBXGroup;
 			children = (
+				9CAECD562BE5374200F0E7AC /* Fonts */,
 				9C90A2232388812400E735D3 /* Lottie */,
 				9C5B6457232A5073000727E6 /* Assets.xcassets */,
 			);
@@ -542,6 +550,20 @@
 				9CF77BED24106A1A00C92725 /* Array+Extension.swift */,
 			);
 			path = Helpers;
+			sourceTree = "<group>";
+		};
+		9CAECD562BE5374200F0E7AC /* Fonts */ = {
+			isa = PBXGroup;
+			children = (
+				9CAECD5C2BE539E300F0E7AC /* AvenirNextCyr-Demi.ttf */,
+				9CAECD582BE539E300F0E7AC /* AvenirNextCyr-Heavy.ttf */,
+				9CAECD592BE539E300F0E7AC /* AvenirNextCyr-Light.ttf */,
+				9CAECD5B2BE539E300F0E7AC /* AvenirNextCyr-LightItalic.ttf */,
+				9CAECD5A2BE539E300F0E7AC /* AvenirNextCyr-Medium.ttf */,
+				9CAECD5D2BE539E300F0E7AC /* AvenirNextCyr-Regular.ttf */,
+				9CAECD572BE539E300F0E7AC /* AvenirNextCyr-UltraLight.ttf */,
+			);
+			path = Fonts;
 			sourceTree = "<group>";
 		};
 		9CC59F15234AA3B200F5ADD0 /* Coordinators */ = {
@@ -756,17 +778,9 @@
 			inputFileListPaths = (
 				"${PODS_ROOT}/Target Support Files/Pods-TradeMySurf/Pods-TradeMySurf-frameworks-${CONFIGURATION}-input-files.xcfilelist",
 			);
-			inputPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-TradeMySurf/Pods-TradeMySurf-frameworks.sh",
-				"${BUILT_PRODUCTS_DIR}/Presentr/Presentr.framework",
-				"${BUILT_PRODUCTS_DIR}/SwiftyPickerPopover/SwiftyPickerPopover.framework",
-				"${BUILT_PRODUCTS_DIR}/lottie-ios/Lottie.framework",
-			);
 			name = "[CP] Embed Pods Frameworks";
 			outputFileListPaths = (
 				"${PODS_ROOT}/Target Support Files/Pods-TradeMySurf/Pods-TradeMySurf-frameworks-${CONFIGURATION}-output-files.xcfilelist",
-			);
-			outputPaths = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
