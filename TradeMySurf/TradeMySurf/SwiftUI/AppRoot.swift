@@ -13,6 +13,9 @@ struct RootApp: App {
     var body: some Scene {
             WindowGroup {
                 RootAppView()
+                // -TODO: find wanted font
+                //Text("Custom font").font(Font.custom("OpenSans-Regular", size: 12.3))
+                    .environment(\.font, Font.custom("CustomFont", size: 12))
             }
     }
 
