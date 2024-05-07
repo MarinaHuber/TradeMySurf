@@ -29,7 +29,6 @@ struct WelcomeView: View {
                 .resizable()
                 .edgesIgnoringSafeArea(.all)
                 .frame(width: UIScreen.main.bounds.width, height: UIScreen.main.bounds.height)
-                .edgesIgnoringSafeArea(.all)
         )
     }
 
@@ -41,29 +40,37 @@ struct WelcomeView: View {
 }
 
 struct WelcomeAnimateView: View {
+    let animationNames = ["clip-board", "coin-wallet", "air"]
+    let imageNames = ["boardSurf", "calendar", "sea-splash"]
 
     var body: some View {
         ZStack() {
-            VStack() {
-                //Add ForEach
-                    LottieView(animation: .named("clip-board"))
-                    .playing(loopMode: .loop)
-                    LottieView(animation: .named("air"))
-                    .playing(loopMode: .loop)
-                    LottieView(animation: .named("coin-wallet"))
-                    .playing(loopMode: .loop)
-        }
-            .scaleEffect(0.4)
-            .padding(.leading, -UIScreen.main.bounds.height * 0.2)
+            VStack(spacing: 10) {
+                ForEach(Array(zip(animationNames, imageNames)), id: \.0) { animation, image in
+                    ZStack() {
+                        LottieView(animation: .named(animation))
+                            .playing(loopMode: .playOnce)
+                            .frame(width: 100, height: 100)
+                            .zIndex(1)
+                        Image(image)
+                            .resizable()
+                            .edgesIgnoringSafeArea(.all)
+                            .frame(width: 80, height: 80)
+                    }
+                }
+            }
             .zIndex(1)
+            .padding(.trailing, UIScreen.main.bounds.height * 0.2)
             Rectangle()
-                .frame(width: UIScreen.main.bounds.width * 0.8, height: UIScreen.main.bounds.height * 0.4)
-                .background(.black)
-                .opacity(0.2)
+                .opacity(0.3)
+                .background(Color(UIColor(named: "pastel") ?? .yellow))
                 .cornerRadius(15)
+                .opacity(0.2)
+                .padding(.all, 50)
                 .shadow(radius: 10)
         }
         .offset(y: 200)
+        .padding(.top, 50)
     }
 }
 
