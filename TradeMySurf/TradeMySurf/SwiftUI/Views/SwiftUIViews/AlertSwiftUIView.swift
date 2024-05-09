@@ -15,13 +15,10 @@ class ViewModel {
 }
 
 struct AlertSwiftUIView: View {
-    @State private var animationAmount = 1.0
+    @State private var animationAmount = 0.0
     @State private var selectedDate = UserDefaults.standard.surfingTime
     @State private var selectedLevel = UserDefaults.standard.selectedLevel
     @State private var levels = [Level.Beginner.rawValue, Level.BeginnerIntermediate.rawValue, Level.Intermediate.rawValue, Level.Advanced.rawValue]
-    @Environment(\.verticalSizeClass) var verticalSizeClass: UserInterfaceSizeClass?
-    @Environment(\.horizontalSizeClass) var horizontalSizeClass: UserInterfaceSizeClass?
-    
     var vm: ViewModel
     @State private var gradient = [Color.red, Color.blue, Color.gray]
     @State private var startPoint = UnitPoint(x: 0, y: 0)
@@ -57,6 +54,7 @@ struct AlertSwiftUIView: View {
                 .onAppear {
                     self.startPoint = UnitPoint(x: 1, y: -1)
                     self.endPoint = UnitPoint(x: 0, y: 1)
+                    animationAmount = 1.0
                 }
                 .animation(
                     .easeOut(duration: 2)

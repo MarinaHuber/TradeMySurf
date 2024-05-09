@@ -76,7 +76,7 @@ struct WelcomeAnimateView: View {
                     .font(.subheadline)
                 }
                 .padding(.trailing,30)
-                .frame(width: 190, height: .infinity) // end of text columns
+                .frame(maxWidth: 190, maxHeight: .infinity) // end of text columns
             }
             .zIndex(1)
             .padding(.leading, 30)
@@ -90,16 +90,17 @@ struct WelcomeIntroText: View {
     @State private var isUserHere = false
 
     var body: some View {
-        VStack(spacing: 20) {
+        VStack(spacing: 10) {
             Group {
                 Text("Welcome")
-                    .font(.title)
+                    .font(.largeTitle)
 
                 Text("Introductory Text")
                     .font(.headline)
+                    .padding(.bottom, 20)
             }
             .foregroundColor(Color.white)
-                ButtonAnimate(isUserHere: $isUserHere)
+            ButtonAnimate()
         }
     }
 }

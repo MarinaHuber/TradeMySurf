@@ -9,11 +9,12 @@
 import SwiftUI
 
 struct ButtonAnimate: View {
-    @State private var animationAmount = 1.0
-    @State private var gradient = [Color.purple, Color.blue, Color.white]
+    @State private var gradient = [Color(UIColor(named: "pastel") ?? .purple), Color.blue, Color(UIColor(named: "pastel") ?? .purple)]
     @State private var startPoint = UnitPoint(x: 0, y: 0)
     @State private var endPoint = UnitPoint(x: 0, y: 2)
-    @Binding var isUserHere: Bool
+    @State var isUserHere: Bool = false
+     @State private var animationProgress: Double = 0.0
+
 
     var body: some View {
         Button(action: {
@@ -26,19 +27,21 @@ struct ButtonAnimate: View {
         }
         .opacity(isUserHere ? 0 : 1)
         .frame(width: 300, height: 40, alignment: .center)
-        .animation(.easeInOut(duration: 2.0), value: isUserHere)
         .background(LinearGradient(gradient: Gradient(colors: self.gradient), startPoint: self.startPoint, endPoint: self.endPoint)
             .clipShape(RoundedRectangle(cornerRadius: 12.0))
-            .onAppear {
-                self.startPoint = UnitPoint(x: 1, y: -1)
-                self.endPoint = UnitPoint(x: 0, y: 1)
-            }
+                .onAppear {
+                    self.startPoint = UnitPoint(x: 1, y: -1)
+                    self.endPoint = UnitPoint(x: 0, y: 1)
+                }
             .animation(
-                .easeOut
+                .easeOut(duration: 3)
                 .repeatForever(autoreverses: false),
-                value: animationAmount
+                value: animationProgress
             )
         )
+        .onAppear {
+            animationProgress = 1.0
+        }
         .fullScreenCover(isPresented: $isUserHere, content: {
             AddLevelView()
         })
@@ -46,5 +49,5 @@ struct ButtonAnimate: View {
 }
 
 #Preview {
-    ButtonAnimate(isUserHere: .constant(true))
+    ButtonAnimate()
 }
