@@ -45,24 +45,36 @@ struct WelcomeAnimateView: View {
 
     var body: some View {
         ZStack() {
-            VStack(spacing: 10) {
-                ForEach(Array(zip(animationNames, imageNames)), id: \.0) { animation, image in
-                    ZStack() {
-                        LottieView(animation: .named(animation))
-                            .playing(loopMode: .playOnce)
-                            .frame(width: 100, height: 100)
-                            .zIndex(1)
-                        Image(image)
-                            .resizable()
-                            .edgesIgnoringSafeArea(.all)
-                            .frame(width: 80, height: 80)
+            HStack(spacing: 0) {
+                VStack(spacing: 10) {
+                    ForEach(Array(zip(animationNames, imageNames)), id: \.0) { animation, image in
+                        ZStack() {
+                            LottieView(animation: .named(animation))
+                                .playing(loopMode: .playOnce)
+                                .frame(width: 100, height: 100)
+                                .zIndex(1)
+                            Image(image)
+                                .resizable()
+                                .edgesIgnoringSafeArea(.all)
+                                .frame(width: 80, height: 80)
+                        }
                     }
                 }
+                VStack(alignment: .leading, spacing: 20) {
+                    Group {
+                        Text("Recommend surf board according to level")
+                        Text("Your surf locations according to level and season")
+                        Text("Help with buying a board and price prediction")
+                    }
+                    .foregroundColor(.white)
+                    .font(.subheadline)
+                }.padding(.all, 0)
+                    .frame(width: 180, height: .infinity)
             }
             .zIndex(1)
-            .padding(.trailing, UIScreen.main.bounds.height * 0.2)
+            .padding(.leading, 40)
             Rectangle()
-                .opacity(0.3)
+                .opacity(0.4)
                 .background(Color(UIColor(named: "pastel") ?? .yellow))
                 .cornerRadius(15)
                 .opacity(0.2)
