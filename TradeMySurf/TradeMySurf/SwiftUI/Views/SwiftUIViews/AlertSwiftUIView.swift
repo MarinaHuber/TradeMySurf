@@ -15,7 +15,6 @@ class ViewModel {
 }
 
 struct AlertSwiftUIView: View {
-    
     @State private var animationAmount = 1.0
     @State private var selectedDate = UserDefaults.standard.surfingTime
     @State private var selectedLevel = UserDefaults.standard.selectedLevel
@@ -31,28 +30,25 @@ struct AlertSwiftUIView: View {
     var body: some View {
         GeometryReader { geometry in
             VStack(alignment: .center, spacing: 0) {
-                //optimize with Group
-                Image(systemName: "checkmark")
-                    .foregroundColor(Color.white)
-                    .font(Font.system(.largeTitle).bold())
-                    .padding(.top, 10)
-                Text("You have been matched for:")
-                    .foregroundColor(Color.white)
-                    .font(Font.system(.subheadline))
-                    .padding()
-                Text("\(self.selectedLevel ?? "")")
-                    .foregroundColor(Color.white)
-                    .font(Font.system(.title).bold())
-                    .multilineTextAlignment(.center)
-                    .lineLimit(4)
-                    .padding(10)
-                Text("Surfing start: \(self.selectedDate?.dateAsString(style: .long) ?? "")")
-                    .foregroundColor(Color.white)
-                Text("Surfboards and locations for your level matched")
-                    .foregroundColor(Color.white)
-                    .multilineTextAlignment(.center)
-                    .lineLimit(3)
-                    .padding(10)
+                Group {
+                    Image(systemName: "checkmark")
+                        .font(Font.system(.largeTitle).bold())
+                        .padding(.top, 10)
+                    Text("You have been matched for:")
+                        .font(Font.system(.subheadline))
+                        .padding()
+                    Text("\(self.selectedLevel ?? "")")
+                        .font(Font.system(.title).bold())
+                        .multilineTextAlignment(.center)
+                        .lineLimit(4)
+                        .padding(10)
+                    Text("Surfing start: \(self.selectedDate?.dateAsString(style: .long) ?? "")")
+                    Text("Surfboards and locations for your level matched")
+                        .multilineTextAlignment(.center)
+                        .lineLimit(3)
+                        .padding(10)
+                }
+                .foregroundColor(Color.white)
                 AlertButtonView(vm: vm)
             }
             .frame(maxWidth: .infinity)

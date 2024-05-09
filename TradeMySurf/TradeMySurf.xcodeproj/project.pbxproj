@@ -53,6 +53,7 @@
 		9C76F09423493DAB00853FD9 /* WelcomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C76F09323493DAB00853FD9 /* WelcomeViewController.swift */; };
 		9C76F09623493EDA00853FD9 /* SurfTripViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C76F09523493EDA00853FD9 /* SurfTripViewController.swift */; };
 		9C76F09823493F0900853FD9 /* GuideViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C76F09723493F0900853FD9 /* GuideViewController.swift */; };
+		9C7ACD182BED206B00D2E915 /* ButtonAnimate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C7ACD172BED206B00D2E915 /* ButtonAnimate.swift */; };
 		9C89B61C23DA40D400DB8DDF /* UIView+Shadow.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C89B61B23DA40D400DB8DDF /* UIView+Shadow.swift */; };
 		9C89B61E23DA41A600DB8DDF /* BaseNavigationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C89B61D23DA41A600DB8DDF /* BaseNavigationController.swift */; };
 		9C8F32FC239943350070751F /* SplashViewController.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9C8F32FB239943350070751F /* SplashViewController.storyboard */; };
@@ -160,6 +161,7 @@
 		9C76F09323493DAB00853FD9 /* WelcomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WelcomeViewController.swift; sourceTree = "<group>"; };
 		9C76F09523493EDA00853FD9 /* SurfTripViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SurfTripViewController.swift; sourceTree = "<group>"; };
 		9C76F09723493F0900853FD9 /* GuideViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GuideViewController.swift; sourceTree = "<group>"; };
+		9C7ACD172BED206B00D2E915 /* ButtonAnimate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ButtonAnimate.swift; sourceTree = "<group>"; };
 		9C89B61B23DA40D400DB8DDF /* UIView+Shadow.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIView+Shadow.swift"; sourceTree = "<group>"; };
 		9C89B61D23DA41A600DB8DDF /* BaseNavigationController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseNavigationController.swift; sourceTree = "<group>"; };
 		9C8F32FB239943350070751F /* SplashViewController.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = SplashViewController.storyboard; sourceTree = "<group>"; };
@@ -428,9 +430,8 @@
 		9C5B64D22B16A06300360CAF /* Views */ = {
 			isa = PBXGroup;
 			children = (
+				9C7ACD162BED203D00D2E915 /* SwiftUIViews */,
 				9C05178D2BE17FD100DDBFDC /* TabBar */,
-				9C5B64D52B16A0A700360CAF /* AlertSwiftUIView.swift */,
-				9C5B64D82B16A0A700360CAF /* AlertButtonView.swift */,
 				9C0517862BE173EA00DDBFDC /* Main */,
 				9C0517852BE1737200DDBFDC /* Onboarding */,
 			);
@@ -521,6 +522,16 @@
 				9C89B61D23DA41A600DB8DDF /* BaseNavigationController.swift */,
 			);
 			path = ViewControllers;
+			sourceTree = "<group>";
+		};
+		9C7ACD162BED203D00D2E915 /* SwiftUIViews */ = {
+			isa = PBXGroup;
+			children = (
+				9C5B64D52B16A0A700360CAF /* AlertSwiftUIView.swift */,
+				9C5B64D82B16A0A700360CAF /* AlertButtonView.swift */,
+				9C7ACD172BED206B00D2E915 /* ButtonAnimate.swift */,
+			);
+			path = SwiftUIViews;
 			sourceTree = "<group>";
 		};
 		9C90A2232388812400E735D3 /* Lottie */ = {
@@ -817,6 +828,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				9CBDE2982395A9E600317F51 /* TimeHelper.swift in Sources */,
+				9C7ACD182BED206B00D2E915 /* ButtonAnimate.swift in Sources */,
 				9C587298257FFA8300524BA7 /* ApiMapsRequest.swift in Sources */,
 				9C5B64DC2B16A0A700360CAF /* AlertButtonView.swift in Sources */,
 				9C31EB8C23E3AB1A00060143 /* DetailViewController.swift in Sources */,

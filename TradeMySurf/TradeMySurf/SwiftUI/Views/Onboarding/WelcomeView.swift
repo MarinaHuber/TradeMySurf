@@ -14,7 +14,7 @@ struct WelcomeView: View {
     var body: some View {
         VStack() {
             WelcomeAnimateView()
-                .offset(y: isAnimated ? -200 : 0)
+                .offset(y: isAnimated ? -180 : 0)
             WelcomeIntroText()
                 .padding(.bottom, 30)
         }
@@ -45,11 +45,17 @@ struct WelcomeAnimateView: View {
 
     var body: some View {
         ZStack() {
+            Color(UIColor(named: "pastel") ?? .yellow)
+                .opacity(0.3) 
+                .cornerRadius(15)
+                .padding(.all, 50)
+                .shadow(radius: 10)
+                .ignoresSafeArea()
             HStack(spacing: 0) {
-                VStack(spacing: 10) {
-                    ForEach(Array(zip(animationNames, imageNames)), id: \.0) { animation, image in
+                VStack(spacing: 0) {
+                    ForEach(Array(zip(animationNames, imageNames)), id: \.0) { animationView, image in
                         ZStack() {
-                            LottieView(animation: .named(animation))
+                            LottieView(animation: .named(animationView))
                                 .playing(loopMode: .playOnce)
                                 .frame(width: 100, height: 100)
                                 .zIndex(1)
@@ -60,7 +66,7 @@ struct WelcomeAnimateView: View {
                         }
                     }
                 }
-                VStack(alignment: .leading, spacing: 20) {
+                VStack(alignment: .leading, spacing: 40) {
                     Group {
                         Text("Recommend surf board according to level")
                         Text("Your surf locations according to level and season")
@@ -68,21 +74,15 @@ struct WelcomeAnimateView: View {
                     }
                     .foregroundColor(.white)
                     .font(.subheadline)
-                }.padding(.all, 0)
-                    .frame(width: 180, height: .infinity)
+                }
+                .padding(.trailing,30)
+                .frame(width: 190, height: .infinity) // end of text columns
             }
             .zIndex(1)
-            .padding(.leading, 40)
-            Rectangle()
-                .opacity(0.4)
-                .background(Color(UIColor(named: "pastel") ?? .yellow))
-                .cornerRadius(15)
-                .opacity(0.2)
-                .padding(.all, 50)
-                .shadow(radius: 10)
+            .padding(.leading, 30)
         }
         .offset(y: 200)
-        .padding(.top, 50)
+        .padding([.top, .bottom], 50)
     }
 }
 
@@ -90,67 +90,19 @@ struct WelcomeIntroText: View {
     @State private var isUserHere = false
 
     var body: some View {
-        VStack(spacing: 10) {
+        VStack(spacing: 20) {
             Group {
                 Text("Welcome")
                     .font(.title)
 
                 Text("Introductory Text")
                     .font(.headline)
-
-                Button(action: {
-                    self.isUserHere.toggle()
-                }) {
-                    Text("Get started")
-                        .font(.headline)
-                        .padding()
-                        .background(Color.blue)
-                        .cornerRadius(10)
-                }
-                .fullScreenCover(isPresented: $isUserHere, content: {
-                    AddLevelView()
-                })
             }
-            .foregroundColor(.white)
-            .opacity(isUserHere ? 0 : 1)
-            .animation(.easeInOut(duration: 4.0), value: isUserHere)
+            .foregroundColor(Color.white)
+                ButtonAnimate(isUserHere: $isUserHere)
         }
     }
 }
-
-//struct LottieAnimationView: UIViewRepresentable {
-//    let name: String
-//    let speed: CGFloat
-//
-//    func makeUIView(context: Context) -> some UIView {
-//        let view = UIView(frame: .zero)
-//
-//
-//        let lottieAnimationView = LottieAnimationView(name: name, speed: speed)
-//
-//        lottieAnimationView.animation = animation
-//        lottieAnimationView.animationSpeed = speed
-//        lottieAnimationView.contentMode = .scaleAspectFill
-//        lottieAnimationView.loopMode = .loop
-//        lottieAnimationView.play()
-//
-//        lottieAnimationView.translatesAutoresizingMaskIntoConstraints = false
-//        view.addSubview(lottieAnimationView)
-//
-//        NSLayoutConstraint.activate([
-//            view.topAnchor.constraint(equalTo: lottieAnimationView.topAnchor),
-//            view.bottomAnchor.constraint(equalTo: lottieAnimationView.bottomAnchor),
-//            view.leadingAnchor.constraint(equalTo: lottieAnimationView.leadingAnchor),
-//            view.trailingAnchor.constraint(equalTo: lottieAnimationView.trailingAnchor),
-//            view.widthAnchor.constraint(equalTo: lottieAnimationView.widthAnchor),
-//            view.heightAnchor.constraint(equalTo: lottieAnimationView.heightAnchor),
-//        ])
-//        return view
-//    }
-//
-//    func updateUIView(_ uiView: UIViewType, context: UIViewRepresentableContext<LottieAnimationView>) {
-//    }
-//}
 
 #Preview {
     WelcomeView()

@@ -14,8 +14,7 @@ struct RootApp: App {
             WindowGroup {
                 RootAppView()
                 // -TODO: find wanted font
-                //Text("Custom font").font(Font.custom("OpenSans-Regular", size: 12.3))
-                    .environment(\.font, Font.custom("CustomFont", size: 12))
+                    .environment(\.font, Font.custom("AvenirNextCyr-Light.ttf", size: 12))
             }
     }
 
