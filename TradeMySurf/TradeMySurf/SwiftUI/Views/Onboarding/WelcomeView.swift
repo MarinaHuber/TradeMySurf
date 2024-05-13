@@ -42,10 +42,11 @@ struct WelcomeView: View {
 struct WelcomeAnimateView: View {
     let animationNames = ["clip-board", "coin-wallet", "air"]
     let imageNames = ["boardSurf", "calendar", "sea-splash"]
+    @EnvironmentObject private var themeManager: ThemeManager
 
     var body: some View {
         ZStack() {
-            Color(UIColor(named: "pastel") ?? .yellow)
+            Color(UIColor(named: "pastelPrimary") ?? .yellow)
                 .opacity(0.3) 
                 .cornerRadius(15)
                 .padding(.all, 50)
@@ -73,7 +74,7 @@ struct WelcomeAnimateView: View {
                         Text("Help with buying a board and price prediction")
                     }
                     .foregroundColor(.white)
-                    .font(.subheadline)
+                    .font(themeManager.selectedTheme.regularTitleFont)
                 }
                 .padding(.trailing,30)
                 .frame(maxWidth: 190, maxHeight: .infinity) // end of text columns
@@ -88,15 +89,16 @@ struct WelcomeAnimateView: View {
 
 struct WelcomeIntroText: View {
     @State private var isUserHere = false
+    @EnvironmentObject private var themeManager: ThemeManager
 
     var body: some View {
         VStack(spacing: 10) {
             Group {
                 Text("Welcome")
-                    .font(.largeTitle)
+                    .font(themeManager.selectedTheme.largeTitleFont)
 
-                Text("Introductory Text")
-                    .font(.headline)
+                Text("Your surf goals in one place")
+                    .font(themeManager.selectedTheme.captionTxtFont)
                     .padding(.bottom, 20)
             }
             .foregroundColor(Color.white)

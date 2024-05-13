@@ -25,7 +25,7 @@
 		<key>UIImageName</key>
 		<string>logo_wave</string>
 		<key>UIColorName</key>
-		<string>pastel</string>
+		<string>pastelPrimary</string>
 	</dict>
 	<key>NSLocationWhenInUseUsageDescription</key>
 	<string>Allow application to access your location when the application is in use. Thanks</string>

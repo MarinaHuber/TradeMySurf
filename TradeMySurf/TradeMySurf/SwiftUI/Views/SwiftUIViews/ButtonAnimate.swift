@@ -9,11 +9,12 @@
 import SwiftUI
 
 struct ButtonAnimate: View {
-    @State private var gradient = [Color(UIColor(named: "pastel") ?? .purple), Color.blue, Color(UIColor(named: "pastel") ?? .purple)]
+    @State private var gradient = [Color(UIColor(named: "pastelPrimary") ?? .purple), Color.blue, Color(UIColor(named: "pastelPrimary") ?? .purple)]
     @State private var startPoint = UnitPoint(x: 0, y: 0)
-    @State private var endPoint = UnitPoint(x: 0, y: 2)
+    @State private var endPoint = UnitPoint(x: 1, y: 0)
     @State var isUserHere: Bool = false
      @State private var animationProgress: Double = 0.0
+    @EnvironmentObject private var themeManager: ThemeManager
 
 
     var body: some View {
@@ -21,7 +22,7 @@ struct ButtonAnimate: View {
             self.isUserHere.toggle()
         }) {
             Text("Get started")
-                .font(.headline)
+                .font(themeManager.selectedTheme.textTitleFont)
                 .padding()
                 .foregroundColor(Color.white)
         }
@@ -31,11 +32,11 @@ struct ButtonAnimate: View {
             .clipShape(RoundedRectangle(cornerRadius: 12.0))
                 .onAppear {
                     self.startPoint = UnitPoint(x: 1, y: -1)
-                    self.endPoint = UnitPoint(x: 0, y: 1)
+                    self.endPoint = UnitPoint(x: 2, y: 2)
                 }
             .animation(
-                .easeOut(duration: 3)
-                .repeatForever(autoreverses: false),
+                .easeOut(duration: 1)
+                .repeatForever(autoreverses: true),
                 value: animationProgress
             )
         )

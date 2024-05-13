@@ -17,7 +17,7 @@ class AddLevelViewController: UIViewController, StoryboardProtocol {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        let pastelGreen = UIColor(named: "pastel")
+        let pastelGreen = UIColor(named: "pastelPrimary")
         self.view.applyGradient(withColors: [pastelGreen!, .systemGray3, .white], gradientOrientation: .topRightBottomLeft)
     }
     

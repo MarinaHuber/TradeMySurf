@@ -16,7 +16,7 @@ class AddDateViewController: UIViewController, StoryboardProtocol {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        let pastelGreen = UIColor(named: "pastel")
+        let pastelGreen = UIColor(named: "pastelPrimary")
         self.view.applyGradient(withColors: [pastelGreen!, .systemGray2, .white], gradientOrientation: .topRightBottomLeft)
     }
     override func viewWillAppear(_ animated: Bool) {

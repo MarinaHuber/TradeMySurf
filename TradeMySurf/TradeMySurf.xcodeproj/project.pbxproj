@@ -42,6 +42,10 @@
 		9C624178238B107B00A4B7C9 /* SurfboardCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C624177238B107B00A4B7C9 /* SurfboardCollectionViewCell.swift */; };
 		9C62417A238B374A00A4B7C9 /* LocationaCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C624179238B374800A4B7C9 /* LocationaCollectionViewCell.swift */; };
 		9C62417C239156C200A4B7C9 /* UserDefaultsHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C62417B239156C200A4B7C9 /* UserDefaultsHelper.swift */; };
+		9C627C7E2BF291B400CD16C4 /* ThemeProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C627C7D2BF291B400CD16C4 /* ThemeProtocol.swift */; };
+		9C627C802BF291D400CD16C4 /* SurfTheme.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C627C7F2BF291D400CD16C4 /* SurfTheme.swift */; };
+		9C627C822BF2927900CD16C4 /* Colors.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 9C627C812BF2927900CD16C4 /* Colors.xcassets */; };
+		9C627C842BF299EA00CD16C4 /* ThemeManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C627C832BF299EA00CD16C4 /* ThemeManager.swift */; };
 		9C65758C24111E0100CCF6AF /* TabBarVC.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9C65758B24111E0100CCF6AF /* TabBarVC.storyboard */; };
 		9C69CE76234CD9B9003E386F /* Location.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C69CE75234CD9B9003E386F /* Location.swift */; };
 		9C69CE85234D06D7003E386F /* PriceCalculatorViewController.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9C69CE84234D06D7003E386F /* PriceCalculatorViewController.storyboard */; };
@@ -148,6 +152,10 @@
 		9C624177238B107B00A4B7C9 /* SurfboardCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SurfboardCollectionViewCell.swift; sourceTree = "<group>"; };
 		9C624179238B374800A4B7C9 /* LocationaCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationaCollectionViewCell.swift; sourceTree = "<group>"; };
 		9C62417B239156C200A4B7C9 /* UserDefaultsHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserDefaultsHelper.swift; sourceTree = "<group>"; };
+		9C627C7D2BF291B400CD16C4 /* ThemeProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ThemeProtocol.swift; sourceTree = "<group>"; };
+		9C627C7F2BF291D400CD16C4 /* SurfTheme.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SurfTheme.swift; sourceTree = "<group>"; };
+		9C627C812BF2927900CD16C4 /* Colors.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Colors.xcassets; sourceTree = "<group>"; };
+		9C627C832BF299EA00CD16C4 /* ThemeManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ThemeManager.swift; sourceTree = "<group>"; };
 		9C65758B24111E0100CCF6AF /* TabBarVC.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = TabBarVC.storyboard; sourceTree = "<group>"; };
 		9C69CE75234CD9B9003E386F /* Location.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Location.swift; sourceTree = "<group>"; };
 		9C69CE84234D06D7003E386F /* PriceCalculatorViewController.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = PriceCalculatorViewController.storyboard; sourceTree = "<group>"; };
@@ -307,6 +315,7 @@
 		9C2F087E2B168FED00AE67D9 /* SwiftUI */ = {
 			isa = PBXGroup;
 			children = (
+				9C627C7C2BF2917700CD16C4 /* Utilities */,
 				9C5B64D22B16A06300360CAF /* Views */,
 				9C5B64D12B16A03500360CAF /* Helpers */,
 				9C5B64CA2B1697A200360CAF /* AppRoot.swift */,
@@ -457,6 +466,16 @@
 			path = Enums;
 			sourceTree = "<group>";
 		};
+		9C627C7C2BF2917700CD16C4 /* Utilities */ = {
+			isa = PBXGroup;
+			children = (
+				9C627C7D2BF291B400CD16C4 /* ThemeProtocol.swift */,
+				9C627C7F2BF291D400CD16C4 /* SurfTheme.swift */,
+				9C627C832BF299EA00CD16C4 /* ThemeManager.swift */,
+			);
+			path = Utilities;
+			sourceTree = "<group>";
+		};
 		9C69CE74234CD992003E386F /* Models */ = {
 			isa = PBXGroup;
 			children = (
@@ -507,6 +526,7 @@
 				9CAECD562BE5374200F0E7AC /* Fonts */,
 				9C90A2232388812400E735D3 /* Lottie */,
 				9C5B6457232A5073000727E6 /* Assets.xcassets */,
+				9C627C812BF2927900CD16C4 /* Colors.xcassets */,
 			);
 			path = Resources;
 			sourceTree = "<group>";
@@ -733,6 +753,7 @@
 				9C90A22B2388887700E735D3 /* clip-board.json in Resources */,
 				9C4C54742349C28500FB2653 /* GuideViewController.storyboard in Resources */,
 				9C6F64CE2379F86400B0224D /* AddLevelViewController.storyboard in Resources */,
+				9C627C822BF2927900CD16C4 /* Colors.xcassets in Resources */,
 				9CE21BB22507C9BF00B6B20C /* LocationViewController.storyboard in Resources */,
 				9C90A22F2388888B00E735D3 /* shop.json in Resources */,
 				9C193AFB23A2ACA7000DE1AB /* coin-wallet.json in Resources */,
@@ -835,6 +856,7 @@
 				9C5B64CB2B1697A200360CAF /* RootViewApp.swift in Sources */,
 				9C69CE76234CD9B9003E386F /* Location.swift in Sources */,
 				9CF77BEE24106A1A00C92725 /* Array+Extension.swift in Sources */,
+				9C627C842BF299EA00CD16C4 /* ThemeManager.swift in Sources */,
 				9CF77BEA2410690000C92725 /* UIView+Constraints.swift in Sources */,
 				9CC4F8EA23CA536A00F3ABAB /* Surfs.mlmodel in Sources */,
 				9C467C67234F2A7D009F4D58 /* Surfboard.swift in Sources */,
@@ -858,6 +880,7 @@
 				9C624170238AE75000A4B7C9 /* MockService.swift in Sources */,
 				9C5B64D42B16A07900360CAF /* Helper.swift in Sources */,
 				9C58729C258023D800524BA7 /* ApiEndpoint.swift in Sources */,
+				9C627C802BF291D400CD16C4 /* SurfTheme.swift in Sources */,
 				9C73E26823B964560028B9AC /* CoordinatorUIKit.swift in Sources */,
 				9C5B64DA2B16A0A700360CAF /* SplashView.swift in Sources */,
 				9C53D5C0234C126600A3BD80 /* StoryboardProtocol.swift in Sources */,
@@ -882,6 +905,7 @@
 				9C76F09823493F0900853FD9 /* GuideViewController.swift in Sources */,
 				9CF936E923CBC0AB00A8C72D /* UIView+Gradient.swift in Sources */,
 				9C6F64D02379FB7800B0224D /* Constants.swift in Sources */,
+				9C627C7E2BF291B400CD16C4 /* ThemeProtocol.swift in Sources */,
 				9CF77BE82410669B00C92725 /* TabItemView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
