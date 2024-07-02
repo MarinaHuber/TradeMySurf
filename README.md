@@ -8,7 +8,7 @@ https://docs.google.com/forms/d/e/1FAIpQLSdzwVMycAc3ISaFck8lxFKnC8e5i4BmnzlVo_N9
 
 
 📌  project requires Swift 5+
-### Deployed for: iOS 16+ rewriten from UIKit to SwiftUI
+### Deployed for: iOS 16+ rewritten from UIKit to SwiftUI
 
 # Why did you undertake the project?
 This was a long passion of mine and I was lucky enough to get a mentorship through a Import Foundation programme where I presented my vague idea at the time. This led me to wonderful collaborations and learning path. Here is the result of Beta V1.0. surf app. It was created from idea: help surfers to learn from surf goals and expectations. Adding value to surf hobby by that extra planning, it is a developers approach to surfing.
