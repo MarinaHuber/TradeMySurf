@@ -1,5 +1,5 @@
 
-### Apop idea
+### App idea
 :Recommendation iOS/Swift project from surfers to surfers
 ![alt tag](https://img.shields.io/badge/swift%205-Surfo%20project-blue)
 
