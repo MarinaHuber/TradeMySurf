@@ -15,6 +15,13 @@
 		9C31EB8A23E3AA2100060143 /* DetailViewController.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9C31EB8923E3AA2100060143 /* DetailViewController.storyboard */; };
 		9C31EB8C23E3AB1A00060143 /* DetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C31EB8B23E3AB1A00060143 /* DetailViewController.swift */; };
 		9C3CC3DE23C75EE800359368 /* SupplementaryViews.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C3CC3DD23C75EE800359368 /* SupplementaryViews.swift */; };
+		9C3CF4F42CA58F7C00E5D4E3 /* AvenirNextCyr-Demi.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 9CAECD5C2BE539E300F0E7AC /* AvenirNextCyr-Demi.ttf */; };
+		9C3CF4F52CA58F7C00E5D4E3 /* AvenirNextCyr-Heavy.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 9CAECD582BE539E300F0E7AC /* AvenirNextCyr-Heavy.ttf */; };
+		9C3CF4F62CA58F7C00E5D4E3 /* AvenirNextCyr-Light.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 9CAECD592BE539E300F0E7AC /* AvenirNextCyr-Light.ttf */; };
+		9C3CF4F72CA58F7C00E5D4E3 /* AvenirNextCyr-LightItalic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 9CAECD5B2BE539E300F0E7AC /* AvenirNextCyr-LightItalic.ttf */; };
+		9C3CF4F82CA58F7C00E5D4E3 /* AvenirNextCyr-Medium.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 9CAECD5A2BE539E300F0E7AC /* AvenirNextCyr-Medium.ttf */; };
+		9C3CF4F92CA58F7C00E5D4E3 /* AvenirNextCyr-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 9CAECD5D2BE539E300F0E7AC /* AvenirNextCyr-Regular.ttf */; };
+		9C3CF4FA2CA58F7C00E5D4E3 /* AvenirNextCyr-UltraLight.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 9CAECD572BE539E300F0E7AC /* AvenirNextCyr-UltraLight.ttf */; };
 		9C45E661234D238F0054A5FD /* SurfTripViewController.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9C45E660234D238E0054A5FD /* SurfTripViewController.storyboard */; };
 		9C467C67234F2A7D009F4D58 /* Surfboard.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C467C66234F2A7D009F4D58 /* Surfboard.swift */; };
 		9C4C54742349C28500FB2653 /* GuideViewController.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9C4C54732349C28500FB2653 /* GuideViewController.storyboard */; };
@@ -741,6 +748,13 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				9C3CF4F42CA58F7C00E5D4E3 /* AvenirNextCyr-Demi.ttf in Resources */,
+				9C3CF4F52CA58F7C00E5D4E3 /* AvenirNextCyr-Heavy.ttf in Resources */,
+				9C3CF4F62CA58F7C00E5D4E3 /* AvenirNextCyr-Light.ttf in Resources */,
+				9C3CF4F72CA58F7C00E5D4E3 /* AvenirNextCyr-LightItalic.ttf in Resources */,
+				9C3CF4F82CA58F7C00E5D4E3 /* AvenirNextCyr-Medium.ttf in Resources */,
+				9C3CF4F92CA58F7C00E5D4E3 /* AvenirNextCyr-Regular.ttf in Resources */,
+				9C3CF4FA2CA58F7C00E5D4E3 /* AvenirNextCyr-UltraLight.ttf in Resources */,
 				9C45E661234D238F0054A5FD /* SurfTripViewController.storyboard in Resources */,
 				9C8F32FF239946090070751F /* logo_final.json in Resources */,
 				9C31EB8A23E3AA2100060143 /* DetailViewController.storyboard in Resources */,

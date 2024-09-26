@@ -37,7 +37,7 @@ struct AddLevelView: View {
             VStack {
                 Spacer()
                 Button("Pick a surf goal") {
-                    showPicker()
+                   
                 }
                 .padding()
                 .foregroundColor(.indigo)
@@ -45,34 +45,16 @@ struct AddLevelView: View {
                 .cornerRadius(10)
                 .padding()
                 Spacer()
+//                    .fullScreenCover(isPresented: $isUserHere, content: {
+//                        AddLevelView()
+//                    })
             }
         }
         .onAppear {
             withAnimation {
-                self.animateView()
+
             }
         }
-    }
-
-    private func animateView() {
-            // Add animation code here if needed
-    }
-
-    private func showPicker() {
-        StringPickerPopover(title: "Pick a surf goal", choices: levels)
-            .setSize(width: UIScreen.main.bounds.size.width, height: 200)
-            .setRowHeight(60)
-            .setSelectedRow(0)
-            .setFontSize(17)
-            .setPermittedArrowDirections([.up])
-            .setDimmedBackgroundView(enabled: true)
-            .setOutsideTapDismissing(allowed: false)
-//            .setDoneButton(title: "Next", font: .boldSystemFont(ofSize: 17), color: .systemIndigo) { selectedString, _, _  in
-//                self.selectedLevel = selectedString
-//                UserDefaults.standard.selectedLevel = selectedString
-//                    // Call the next action or function here
-//            }
-//            .appear(originView: pickerView, baseViewController: nil)
     }
 }
 
