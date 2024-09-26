@@ -1,13 +1,14 @@
 
-### Recommendation iOS/Swift project from surfers to surfers
+### App idea
+:Recommendation iOS/Swift project from surfers to surfers
 ![alt tag](https://img.shields.io/badge/swift%205-Surfo%20project-blue)
 
 Survey by surfers:
 https://docs.google.com/forms/d/e/1FAIpQLSdzwVMycAc3ISaFck8lxFKnC8e5i4BmnzlVo_N9-Z0lRCYeJg/viewform?usp=sf_link
 
 
-📌  project requires Xcode 13+ (Swift 5.0)
-### Deployed for: iOS 14+
+📌  project requires Swift 5+
+### Deployed for: iOS 16+ rewritten from UIKit to SwiftUI
 
 # Why did you undertake the project?
 This was a long passion of mine and I was lucky enough to get a mentorship through a Import Foundation programme where I presented my vague idea at the time. This led me to wonderful collaborations and learning path. Here is the result of Beta V1.0. surf app. It was created from idea: help surfers to learn from surf goals and expectations. Adding value to surf hobby by that extra planning, it is a developers approach to surfing.
