@@ -8,57 +8,92 @@
 
 import Foundation
 import SwiftUI
-import SwiftyPickerPopover
-
-//struct AddLevelView: View {
-//    @State private var showNext: Bool = false
-//    
-//    var body: some View {
-//        Text("Add Level")
-//        Button("Add Date") {
-//            showNext.toggle()
-//        }
-//        .fullScreenCover(isPresented: $showNext) {
-//            AddDateView()
-//        }
-//    }
-//}
-
 
 struct AddLevelView: View {
-    @State private var selectedLevel: String = Level.Beginner.rawValue
-    let levels = [Level.Beginner.rawValue, Level.BeginnerIntermediate.rawValue, Level.Intermediate.rawValue, Level.Advanced.rawValue]
 
     var body: some View {
-        ZStack {
-            LinearGradient(gradient: Gradient(colors: [Color("pastelPrimary"), .blue, .white]), startPoint: .topLeading, endPoint: .bottomTrailing)
-                .edgesIgnoringSafeArea(.all)
+        VStack(spacing: 20) {
 
-            VStack {
-                Spacer()
-                Button("Pick a surf goal") {
-                   
-                }
-                .padding()
-                .foregroundColor(.indigo)
-                .background(Color.white)
-                .cornerRadius(10)
-                .padding()
-                Spacer()
-//                    .fullScreenCover(isPresented: $isUserHere, content: {
-//                        AddLevelView()
-//                    })
-            }
+            ArrowPopoverViews()
         }
-        .onAppear {
-            withAnimation {
-
-            }
-        }
+        .edgesIgnoringSafeArea(.all)
+        .frame(width: UIScreen.main.bounds.width, height: UIScreen.main.bounds.height)
+        .background(
+            LinearGradient(gradient:
+                            Gradient(colors: [.white, .blue, Color("pastelPrimary")]),
+                           startPoint: .topLeading,
+                           endPoint: .bottomTrailing)
+        )
     }
 }
+
+
+struct ArrowPopoverViews: View {
+    @State private var selectedLevel: String = Level.Beginner.rawValue
+
+    @State private var isPopoverPresented = false
+    @State private var isPopoverPresented1 = true
+
+    @State private var levels = [Level.Beginner.rawValue, Level.BeginnerIntermediate.rawValue, Level.Intermediate.rawValue, Level.Advanced.rawValue]
+
+    var body: some View {
+        Button("Choose your goal") { self.isPopoverPresented.toggle() }
+            .padding()
+            .foregroundColor(.indigo)
+            .background(Color.white)
+            .cornerRadius(10)
+            //  .frame(minWidth: 200, maxHeight: 200)
+
+            .popover(isPresented: $isPopoverPresented,
+                     attachmentAnchor: .point(.bottom),
+                     arrowEdge: .top) {
+                VStack { // just example
+                    Text("Surf").padding(.top)
+                    Picker("Pick a surf goal", selection: $levels) {
+                        ForEach(levels, id: \.self) {
+                            Text($0)
+                        }
+                        .pickerStyle(.wheel)
+                    }
+                }
+                .frame(width:300, height:300)
+                .presentationCompactAdaptation(.popover) // if you also want a popover on iPhones
+                .onAppear{
+                    print("popover show")
+                }
+            }
+                     .padding(.top, UIScreen.main.bounds.height * 1/4)
+
+        Button("Choose your date") { self.isPopoverPresented1.toggle() }
+            .padding()
+            .foregroundColor(.indigo)
+            .background(Color.white)
+            .cornerRadius(10)
+            //  .frame(minWidth: 200, maxHeight: 200)
+
+            .popover(isPresented: $isPopoverPresented1,
+                     attachmentAnchor: .point(.bottom),
+                     arrowEdge: .top) {
+                VStack { // just example
+                    Text("Surf").padding(.top)
+                    Picker("Pick a date", selection: $levels) {
+                        ForEach(levels, id: \.self) {
+                            Text($0)
+                        }
+                        .pickerStyle(.wheel)
+                    }
+                }
+                .frame(width:300, height:300)
+                .presentationCompactAdaptation(.popover) // if you also want a popover on iPhones
+                .onAppear{
+                    print("popover show")
+                }
+            }
+                     .padding(.bottom, UIScreen.main.bounds.height * 1/4)
+    }
+}
+
 
 #Preview {
     AddLevelView()
 }
-

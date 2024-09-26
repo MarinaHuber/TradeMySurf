@@ -13,6 +13,8 @@ enum Level: String, CaseIterable {
     case BeginnerIntermediate = "Paddling out, dropping down the green wave"
     case Intermediate = "Trimming down the middle line of the wave"
     case Advanced = "Performing full carving curves"
+    case Areals = "Performing areals"
+    case Longboarding = "Slower surf on longboard"
 }
 
 enum Season: Int, CaseIterable {
