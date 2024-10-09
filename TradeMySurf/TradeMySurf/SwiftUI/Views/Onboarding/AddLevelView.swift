@@ -14,7 +14,7 @@ struct AddLevelView: View {
     var body: some View {
         VStack(spacing: 20) {
 
-            ArrowPopoverViews()
+            ArrowLevelPopoverView()
         }
         .edgesIgnoringSafeArea(.all)
         .frame(width: UIScreen.main.bounds.width, height: UIScreen.main.bounds.height)
@@ -28,68 +28,50 @@ struct AddLevelView: View {
 }
 
 
-struct ArrowPopoverViews: View {
+struct ArrowLevelPopoverView: View {
     @State private var selectedLevel: String = Level.Beginner.rawValue
-
-    @State private var isPopoverPresented = false
-    @State private var isPopoverPresented1 = true
-
+    @State private var isPopoverPresented = true // Changed to true
     @State private var levels = [Level.Beginner.rawValue, Level.BeginnerIntermediate.rawValue, Level.Intermediate.rawValue, Level.Advanced.rawValue]
 
     var body: some View {
-        Button("Choose your goal") { self.isPopoverPresented.toggle() }
+        VStack {
+            Button("Choose your goal") { 
+                self.isPopoverPresented.toggle()
+            }
             .padding()
             .foregroundColor(.indigo)
             .background(Color.white)
             .cornerRadius(10)
-            //  .frame(minWidth: 200, maxHeight: 200)
-
             .popover(isPresented: $isPopoverPresented,
-                     attachmentAnchor: .point(.bottom),
-                     arrowEdge: .top) {
-                VStack { // just example
-                    Text("Surf").padding(.top)
-                    Picker("Pick a surf goal", selection: $levels) {
-                        ForEach(levels, id: \.self) {
-                            Text($0)
-                        }
-                        .pickerStyle(.wheel)
-                    }
-                }
-                .frame(width:300, height:300)
-                .presentationCompactAdaptation(.popover) // if you also want a popover on iPhones
-                .onAppear{
-                    print("popover show")
-                }
-            }
-                     .padding(.top, UIScreen.main.bounds.height * 1/4)
+                     attachmentAnchor: .point(.top),
+                     arrowEdge: .bottom) {
+                VStack() {
+                    Text("Select Surf")
+                        .padding(.top, 20)
+                    Picker(selection: $selectedLevel, label: EmptyView()) { // Changed selection binding
+                        ForEach(levels, id: \.self) { level in
+                            Text(level)
+                                .font(.system(size: 11))
+                                .lineLimit(2) // Set number of lines for picker text
+                                .fixedSize(horizontal: false, vertical: true) // Allow text to expand vertically
+                                .padding(40) // Add vertical spacing between items
+                                .multilineTextAlignment(.center) // Center align the text
 
-        Button("Choose your date") { self.isPopoverPresented1.toggle() }
-            .padding()
-            .foregroundColor(.indigo)
-            .background(Color.white)
-            .cornerRadius(10)
-            //  .frame(minWidth: 200, maxHeight: 200)
-
-            .popover(isPresented: $isPopoverPresented1,
-                     attachmentAnchor: .point(.bottom),
-                     arrowEdge: .top) {
-                VStack { // just example
-                    Text("Surf").padding(.top)
-                    Picker("Pick a date", selection: $levels) {
-                        ForEach(levels, id: \.self) {
-                            Text($0)
                         }
-                        .pickerStyle(.wheel)
                     }
+                    .scaleEffect(1.5)
+                    .pickerStyle(.wheel)
+                    .padding(.bottom, 20)
+                    .padding(.top, -50)
                 }
-                .frame(width:300, height:300)
-                .presentationCompactAdaptation(.popover) // if you also want a popover on iPhones
-                .onAppear{
-                    print("popover show")
-                }
+                .frame(width: 300, height: 200) // Increased height for better visibility
+                .presentationCompactAdaptation(.popover)
             }
-                     .padding(.bottom, UIScreen.main.bounds.height * 1/4)
+        }
+        .padding(.top, UIScreen.main.bounds.height * 1/4)
+        .onAppear {
+            self.isPopoverPresented = true
+        }
     }
 }
 
