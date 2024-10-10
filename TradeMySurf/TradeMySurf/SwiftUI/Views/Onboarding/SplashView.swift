@@ -32,22 +32,7 @@ struct SplashView: View {
         .fullScreenCover(isPresented: $showNext) {
             WelcomeView()
         }
-
     }
-
-//    struct LottieSplashView: UIViewRepresentable {
-//        let animationName: String
-//
-//        func updateUIView(_ uiView: Lottie.AnimationView, context: Context) {}
-//
-//        func makeUIView(context: Context) -> AnimationView {
-//            let animationView = AnimationView(name: animationName)
-//            animationView.loopMode = .playOnce
-//            animationView.contentMode = .scaleAspectFit
-//            animationView.play()
-//            return animationView
-//        }
-//    }
 }
 
 #Preview {

@@ -17,6 +17,7 @@ struct SurfTheme: ThemeProtocol {
     var bodyTextFont: Font = .custom("AvenirNextCyr-Medium", size: 19)
     var captionTxtFont: Font = .custom("AvenirNextCyr-Light", size: 16)
     var regularTitleFont: Font = .custom("AvenirNextCyr-Regular", size: 14)
+    var pickerFont: Font = .custom("AvenirNextCyr-Demi", size: 13)
 
     var primaryThemeColor: Color { return Color("pastelPrimary") }
     var secondoryThemeColor: Color { return Color("secondoryThemeColor") }

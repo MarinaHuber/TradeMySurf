@@ -17,6 +17,8 @@ protocol ThemeProtocol {
     var regularTitleFont: Font { get }
     var bodyTextFont: Font { get }
     var captionTxtFont: Font { get }
+    var pickerFont: Font { get }
+
 
     var primaryThemeColor: Color { get }
     var secondoryThemeColor: Color { get }

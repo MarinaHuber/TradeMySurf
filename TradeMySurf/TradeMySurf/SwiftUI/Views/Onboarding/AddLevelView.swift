@@ -10,28 +10,34 @@ import Foundation
 import SwiftUI
 
 struct AddLevelView: View {
+    @State private var navigateToDateView = false
 
     var body: some View {
-        VStack(spacing: 20) {
-
-            ArrowLevelPopoverView()
+        NavigationStack {
+            VStack(spacing: 20) {
+                ArrowLevelPopoverView(navigateToDateView: $navigateToDateView)
+            }
+            .edgesIgnoringSafeArea(.all)
+            .frame(maxWidth: .infinity, maxHeight: .infinity)
+            .background(
+                LinearGradient(gradient:
+                                Gradient(colors: [.white, .blue, Color("pastelPrimary")]),
+                               startPoint: .topLeading,
+                               endPoint: .bottomTrailing)
+            )
+            .navigationDestination(isPresented: $navigateToDateView) {
+                AddDateView()
+            }
         }
-        .edgesIgnoringSafeArea(.all)
-        .frame(width: UIScreen.main.bounds.width, height: UIScreen.main.bounds.height)
-        .background(
-            LinearGradient(gradient:
-                            Gradient(colors: [.white, .blue, Color("pastelPrimary")]),
-                           startPoint: .topLeading,
-                           endPoint: .bottomTrailing)
-        )
     }
 }
 
-
 struct ArrowLevelPopoverView: View {
+    @Binding var navigateToDateView: Bool
     @State private var selectedLevel: String = Level.Beginner.rawValue
-    @State private var isPopoverPresented = true // Changed to true
+    @State private var isPopoverPresented = true
     @State private var levels = [Level.Beginner.rawValue, Level.BeginnerIntermediate.rawValue, Level.Intermediate.rawValue, Level.Advanced.rawValue]
+    @EnvironmentObject private var themeManager: ThemeManager
 
     var body: some View {
         VStack {
@@ -45,30 +51,43 @@ struct ArrowLevelPopoverView: View {
             .popover(isPresented: $isPopoverPresented,
                      attachmentAnchor: .point(.top),
                      arrowEdge: .bottom) {
-                VStack() {
-                    Text("Select Surf")
-                        .padding(.top, 20)
-                    Picker(selection: $selectedLevel, label: EmptyView()) { // Changed selection binding
-                        ForEach(levels, id: \.self) { level in
-                            Text(level)
-                                .font(.system(size: 11))
-                                .lineLimit(2) // Set number of lines for picker text
-                                .fixedSize(horizontal: false, vertical: true) // Allow text to expand vertically
-                                .padding(40) // Add vertical spacing between items
-                                .multilineTextAlignment(.center) // Center align the text
-
+                ZStack {
+                    VStack(spacing: 0) {
+                        Picker(selection: $selectedLevel, label: EmptyView()) {
+                            ForEach(levels, id: \.self) { level in
+                                Text(level)
+                                    .font(themeManager.selectedTheme.pickerFont)
+                                    .lineLimit(2)
+                                    .fixedSize(horizontal: false, vertical: true)
+                                    .padding(.vertical, 10)
+                                    .multilineTextAlignment(.center)
+                            }
                         }
+                        .pickerStyle(.wheel)
+                        .frame(height: 200)
                     }
-                    .scaleEffect(1.5)
-                    .pickerStyle(.wheel)
-                    .padding(.bottom, 20)
-                    .padding(.top, -50)
+                    .frame(width: 300, height: 150)
+    #warning("create generic done button with these properties in action")
+                    HStack {
+                        Spacer()
+                        Button("Done") {
+                            UserDefaults.standard.selectedLevel = selectedLevel
+                            isPopoverPresented = false
+                            navigateToDateView = true
+                        }
+                        .font(themeManager.selectedTheme.bodyTextFont)
+                        .padding(.horizontal, 12)
+                        .frame(height: 30)
+                        .background(Color.blue)
+                        .foregroundColor(.white)
+                        .cornerRadius(4)
+                    }
+                    .padding(.horizontal, 10)
+                    .position(x: 150, y: 20) // Position the HStack at the top
                 }
-                .frame(width: 300, height: 200) // Increased height for better visibility
                 .presentationCompactAdaptation(.popover)
             }
         }
-        .padding(.top, UIScreen.main.bounds.height * 1/4)
         .onAppear {
             self.isPopoverPresented = true
         }
@@ -78,4 +97,5 @@ struct ArrowLevelPopoverView: View {
 
 #Preview {
     AddLevelView()
+        .environmentObject(ThemeManager())
 }
