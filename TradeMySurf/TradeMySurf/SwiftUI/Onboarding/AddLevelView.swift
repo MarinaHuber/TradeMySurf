@@ -26,7 +26,7 @@ struct AddLevelView: View {
                                endPoint: .bottomTrailing)
             )
             .navigationDestination(isPresented: $navigateToDateView) {
-                AddDateView()
+                MainView()
             }
         }
     }

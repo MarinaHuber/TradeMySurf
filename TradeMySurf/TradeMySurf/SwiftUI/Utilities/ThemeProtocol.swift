@@ -18,6 +18,7 @@ protocol ThemeProtocol {
     var bodyTextFont: Font { get }
     var captionTxtFont: Font { get }
     var pickerFont: Font { get }
+    var tabbarFont: Font { get }
 
 
     var primaryThemeColor: Color { get }

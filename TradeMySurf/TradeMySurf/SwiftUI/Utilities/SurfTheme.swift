@@ -18,6 +18,7 @@ struct SurfTheme: ThemeProtocol {
     var captionTxtFont: Font = .custom("AvenirNextCyr-Light", size: 16)
     var regularTitleFont: Font = .custom("AvenirNextCyr-Regular", size: 14)
     var pickerFont: Font = .custom("AvenirNextCyr-Demi", size: 13)
+    var tabbarFont: Font = .custom("AvenirNextCyr-Demi", size: 12)
 
     var primaryThemeColor: Color { return Color("pastelPrimary") }
     var secondoryThemeColor: Color { return Color("secondoryThemeColor") }

@@ -10,7 +10,6 @@
 		9C0517882BE1745000DDBFDC /* CalculatorView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C0517872BE1745000DDBFDC /* CalculatorView.swift */; };
 		9C05178A2BE1745D00DDBFDC /* MainView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C0517892BE1745D00DDBFDC /* MainView.swift */; };
 		9C05178C2BE1746D00DDBFDC /* GuideView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C05178B2BE1746D00DDBFDC /* GuideView.swift */; };
-		9C05178F2BE17FDF00DDBFDC /* TabBarView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C05178E2BE17FDF00DDBFDC /* TabBarView.swift */; };
 		9C193AFB23A2ACA7000DE1AB /* coin-wallet.json in Resources */ = {isa = PBXBuildFile; fileRef = 9C193AFA23A2ACA7000DE1AB /* coin-wallet.json */; };
 		9C31EB8A23E3AA2100060143 /* DetailViewController.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9C31EB8923E3AA2100060143 /* DetailViewController.storyboard */; };
 		9C31EB8C23E3AB1A00060143 /* DetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C31EB8B23E3AB1A00060143 /* DetailViewController.swift */; };
@@ -83,6 +82,8 @@
 		9CE09C302413FAFA00F0FE08 /* TabItemView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 9CE09C2F2413FAFA00F0FE08 /* TabItemView.xib */; };
 		9CE21BB22507C9BF00B6B20C /* LocationViewController.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9CE21BB02507C9BF00B6B20C /* LocationViewController.storyboard */; };
 		9CE21BB32507C9BF00B6B20C /* LocationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9CE21BB12507C9BF00B6B20C /* LocationViewController.swift */; };
+		9CEFD7442CBC07C70003DCF4 /* TabbarEntrySwiftUI.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9CEFD7432CBC07C70003DCF4 /* TabbarEntrySwiftUI.swift */; };
+		9CEFD7462CBC142A0003DCF4 /* RecommendedView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9CEFD7452CBC142A0003DCF4 /* RecommendedView.swift */; };
 		9CF1CC24241136950067533C /* TabBarVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9CF1CC23241136950067533C /* TabBarVC.swift */; };
 		9CF77BDC24101D8300C92725 /* TabbarEntry.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9CF77BDB24101D8300C92725 /* TabbarEntry.swift */; };
 		9CF77BE024104B9400C92725 /* AlertContainerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9CF77BDF24104B9400C92725 /* AlertContainerView.swift */; };
@@ -124,7 +125,6 @@
 		9C0517872BE1745000DDBFDC /* CalculatorView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CalculatorView.swift; sourceTree = "<group>"; };
 		9C0517892BE1745D00DDBFDC /* MainView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainView.swift; sourceTree = "<group>"; };
 		9C05178B2BE1746D00DDBFDC /* GuideView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GuideView.swift; sourceTree = "<group>"; };
-		9C05178E2BE17FDF00DDBFDC /* TabBarView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabBarView.swift; sourceTree = "<group>"; };
 		9C193AFA23A2ACA7000DE1AB /* coin-wallet.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = "coin-wallet.json"; sourceTree = "<group>"; };
 		9C31EB8923E3AA2100060143 /* DetailViewController.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = DetailViewController.storyboard; sourceTree = "<group>"; };
 		9C31EB8B23E3AB1A00060143 /* DetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailViewController.swift; sourceTree = "<group>"; };
@@ -202,6 +202,8 @@
 		9CE09C2F2413FAFA00F0FE08 /* TabItemView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = TabItemView.xib; sourceTree = "<group>"; };
 		9CE21BB02507C9BF00B6B20C /* LocationViewController.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = LocationViewController.storyboard; sourceTree = "<group>"; };
 		9CE21BB12507C9BF00B6B20C /* LocationViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LocationViewController.swift; sourceTree = "<group>"; };
+		9CEFD7432CBC07C70003DCF4 /* TabbarEntrySwiftUI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabbarEntrySwiftUI.swift; sourceTree = "<group>"; };
+		9CEFD7452CBC142A0003DCF4 /* RecommendedView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecommendedView.swift; sourceTree = "<group>"; };
 		9CF1CC23241136950067533C /* TabBarVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabBarVC.swift; sourceTree = "<group>"; };
 		9CF77BDB24101D8300C92725 /* TabbarEntry.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TabbarEntry.swift; sourceTree = "<group>"; };
 		9CF77BDF24104B9400C92725 /* AlertContainerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlertContainerView.swift; sourceTree = "<group>"; };
@@ -282,8 +284,8 @@
 			isa = PBXGroup;
 			children = (
 				9C0517872BE1745000DDBFDC /* CalculatorView.swift */,
-				9C0517892BE1745D00DDBFDC /* MainView.swift */,
 				9C05178B2BE1746D00DDBFDC /* GuideView.swift */,
+				9CEFD7452CBC142A0003DCF4 /* RecommendedView.swift */,
 			);
 			path = Main;
 			sourceTree = "<group>";
@@ -291,7 +293,7 @@
 		9C05178D2BE17FD100DDBFDC /* TabBar */ = {
 			isa = PBXGroup;
 			children = (
-				9C05178E2BE17FDF00DDBFDC /* TabBarView.swift */,
+				9C0517892BE1745D00DDBFDC /* MainView.swift */,
 			);
 			path = TabBar;
 			sourceTree = "<group>";
@@ -322,8 +324,11 @@
 		9C2F087E2B168FED00AE67D9 /* SwiftUI */ = {
 			isa = PBXGroup;
 			children = (
+				9C7ACD162BED203D00D2E915 /* SwiftUIViews */,
+				9C05178D2BE17FD100DDBFDC /* TabBar */,
+				9C0517862BE173EA00DDBFDC /* Main */,
+				9C0517852BE1737200DDBFDC /* Onboarding */,
 				9C627C7C2BF2917700CD16C4 /* Utilities */,
-				9C5B64D22B16A06300360CAF /* Views */,
 				9C5B64D12B16A03500360CAF /* Helpers */,
 				9C5B64CA2B1697A200360CAF /* AppRoot.swift */,
 			);
@@ -443,17 +448,6 @@
 			path = Helpers;
 			sourceTree = "<group>";
 		};
-		9C5B64D22B16A06300360CAF /* Views */ = {
-			isa = PBXGroup;
-			children = (
-				9C7ACD162BED203D00D2E915 /* SwiftUIViews */,
-				9C05178D2BE17FD100DDBFDC /* TabBar */,
-				9C0517862BE173EA00DDBFDC /* Main */,
-				9C0517852BE1737200DDBFDC /* Onboarding */,
-			);
-			path = Views;
-			sourceTree = "<group>";
-		};
 		9C62416C238AE35100A4B7C9 /* Cells */ = {
 			isa = PBXGroup;
 			children = (
@@ -469,6 +463,7 @@
 			children = (
 				9CF77BDB24101D8300C92725 /* TabbarEntry.swift */,
 				9C90BC542386BD020090E346 /* Enums.swift */,
+				9CEFD7432CBC07C70003DCF4 /* TabbarEntrySwiftUI.swift */,
 			);
 			path = Enums;
 			sourceTree = "<group>";
@@ -872,6 +867,7 @@
 				9CF77BEE24106A1A00C92725 /* Array+Extension.swift in Sources */,
 				9C627C842BF299EA00CD16C4 /* ThemeManager.swift in Sources */,
 				9CF77BEA2410690000C92725 /* UIView+Constraints.swift in Sources */,
+				9CEFD7462CBC142A0003DCF4 /* RecommendedView.swift in Sources */,
 				9CC4F8EA23CA536A00F3ABAB /* Surfs.mlmodel in Sources */,
 				9C467C67234F2A7D009F4D58 /* Surfboard.swift in Sources */,
 				9C5B6450232A506C000727E6 /* PriceCalculatorViewController.swift in Sources */,
@@ -886,9 +882,9 @@
 				9CE21BB32507C9BF00B6B20C /* LocationViewController.swift in Sources */,
 				9C3CC3DE23C75EE800359368 /* SupplementaryViews.swift in Sources */,
 				9C624172238AE81A00A4B7C9 /* SurfTip.swift in Sources */,
+				9CEFD7442CBC07C70003DCF4 /* TabbarEntrySwiftUI.swift in Sources */,
 				9C73E26623B963570028B9AC /* CoordinatorPresenting.swift in Sources */,
 				9C5B64DB2B16A0A700360CAF /* WelcomeView.swift in Sources */,
-				9C05178F2BE17FDF00DDBFDC /* TabBarView.swift in Sources */,
 				9CF77BE024104B9400C92725 /* AlertContainerView.swift in Sources */,
 				9CB161562BE0335D0031C913 /* AddLevelView.swift in Sources */,
 				9C624170238AE75000A4B7C9 /* MockService.swift in Sources */,
