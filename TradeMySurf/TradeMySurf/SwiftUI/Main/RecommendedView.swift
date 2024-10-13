@@ -8,7 +8,7 @@
 import SwiftUI
 
 struct RecommendedView: View {
-    @State private var selectedLevel: String?
+    @State private var selectedLevel = UserDefaults.standard.selectedLevel
     @State private var sections: [TripSection] = []
     @State private var items: [TripSection: [TripItem]] = [:]
 
@@ -22,6 +22,7 @@ struct RecommendedView: View {
                 }
                 .padding()
             }
+            //fix into MashGradient
             .background(
                 LinearGradient(gradient: Gradient(colors: [.indigo, .indigo, .blue, .teal, .white]),
                                startPoint: .top,
@@ -36,31 +37,16 @@ struct RecommendedView: View {
                         .frame(width: 70, height: 70)
                 }
                 ToolbarItem(placement: .navigationBarLeading) {
-                    Button(action: popToRoot) {
+                    Button(action:
+                            popBack)
+                    {
                         Image(systemName: "arrow.turn.up.left")
                     }
                 }
             }
         }
         .onAppear {
-            selectedLevel = UserDefaults.standard.selectedLevel
             updateData()
-        }
-        .alert(isPresented: Binding<Bool>(
-            get: { UserDefaults.standard.userWasHere },
-            set: { UserDefaults.standard.userWasHere = $0 }
-        )) {
-            Alert(
-                title: Text("Welcome"),
-                message: Text("You've been here before!"),
-                primaryButton: .default(Text("OK")) {
-                    UserDefaults.standard.userWasHere = false
-                },
-                secondaryButton: .cancel(Text("Back")) {
-                    UserDefaults.standard.userWasHere = false
-                        // Implement navigation to AddLevelView here
-                }
-            )
         }
     }
 
@@ -80,7 +66,7 @@ struct RecommendedView: View {
     }
 
     private func sectionHeader(for section: TripSection) -> some View {
-        Text("section.surfboardsBeginner.rawValue") // fix
+        Text("Sections") // fix
             .font(.headline)
             .padding(.horizontal)
     }
@@ -98,10 +84,12 @@ struct RecommendedView: View {
     }
 
     private func locationsSection(items: [TripItem]) -> some View {
-        VStack(spacing: 10) {
-            ForEach(items, id: \.self) { item in
-                if case let .surfCountry(location, _) = item {
-                    LocationView(location: location)
+        ScrollView(.horizontal, showsIndicators: false) {
+            LazyHStack(spacing: 10) {
+                ForEach(items, id: \.self) { item in
+                    if case let .surfCountry(location, _) = item {
+                        LocationView(location: location)
+                    }
                 }
             }
         }
@@ -118,45 +106,48 @@ struct RecommendedView: View {
     }
 
     private func updateData() {
-        guard let level = selectedLevel else { return }
+        guard let selectedLevel = selectedLevel else { return }
 
         let mockService = MockService()
         var newSections: [TripSection] = []
         var newItems: [TripSection: [TripItem]] = [:]
+        let pickerString = Level(rawValue: selectedLevel)
 
-//        switch level {
-//        case .beginner:
-//            newSections = [.surfboardsBeginner, .surfCountrySummer, .tipBeginner]
-//            newItems[.surfboardsBeginner] = mockService.dataService.surfboardsBeginner.map { TripItem.surfboard($0, .Beginner) }
-//            newItems[.surfCountrySummer] = mockService.dataService.surfCountryBegginer.map { TripItem.surfCountry($0, .Beginner) }
-//            newItems[.tipBeginner] = mockService.dataService.tipBeginner.map { TripItem.tip($0, .Beginner) }
-//        case .beginnerIntermediate:
-//            newSections = [.surfboardsBeginnerInter, .surfCountryAutumn, .tipBeginnerInter]
-//            newItems[.surfboardsBeginnerInter] = mockService.dataService.surfboardsBeginnerInter.map { TripItem.surfboard($0, .BeginnerIntermediate) }
-//            newItems[.surfCountryAutumn] = mockService.dataService.surfCountryBI.map { TripItem.surfCountry($0, .BeginnerIntermediate) }
-//            newItems[.tipBeginnerInter] = mockService.dataService.tipBeginnerInter.map { TripItem.tip($0, .BeginnerIntermediate) }
-//        case .Intermediate:
-//            newSections = [.surfboardsIntermediate, .surfCountryWinter, .tipIntermediate]
-//            newItems[.surfboardsIntermediate] = mockService.dataService.surfboardsIntermediate.map { TripItem.surfboard($0, .Intermediate) }
-//            newItems[.surfCountryWinter] = mockService.dataService.surfCountryInter.map { TripItem.surfCountry($0, .Intermediate) }
-//            newItems[.tipIntermediate] = mockService.dataService.tipIntermediate.map { TripItem.tip($0, .Intermediate) }
-//        case .Advanced:
-//            newSections = [.surfboardsAdvanced, .surfCountrySpring, .tipAdvanced]
-//            newItems[.surfboardsAdvanced] = mockService.dataService.surfboardsAdvanced.map { TripItem.surfboard($0, .Advanced) }
-//            newItems[.surfCountrySpring] = mockService.dataService.surfCountryAdvanced.map { TripItem.surfCountry($0, .Advanced) }
-//            newItems[.tipAdvanced] = mockService.dataService.tipAdvanced.map { TripItem.tip($0, .Advanced) }
-//        case .Areals:
-//            break
-//        case .Longboarding:
-//            break
-//        }
-//
-//        sections = newSections
-//        items = newItems
+        switch pickerString {
+        case .beginner:
+            newSections = [.surfboardsBeginner, .surfCountrySummer, .tipBeginner]
+            newItems[.surfboardsBeginner] = mockService.dataService.surfboardsBeginner.map { TripItem.surfboard($0, .beginner) }
+            newItems[.surfCountrySummer] = mockService.dataService.surfCountryBegginer.map { TripItem.surfCountry($0, .beginner) }
+            newItems[.tipBeginner] = mockService.dataService.tipBeginner.map { TripItem.tip($0, .beginner) }
+        case .beginnerIntermediate:
+            newSections = [.surfboardsBeginnerInter, .surfCountryAutumn, .tipBeginnerInter]
+            newItems[.surfboardsBeginnerInter] = mockService.dataService.surfboardsBeginnerInter.map { TripItem.surfboard($0, .beginnerIntermediate) }
+            newItems[.surfCountryAutumn] = mockService.dataService.surfCountryBI.map { TripItem.surfCountry($0, .beginnerIntermediate) }
+            newItems[.tipBeginnerInter] = mockService.dataService.tipBeginnerInter.map { TripItem.tip($0, .beginnerIntermediate) }
+        case .intermediate:
+            newSections = [.surfboardsIntermediate, .surfCountryWinter, .tipIntermediate]
+            newItems[.surfboardsIntermediate] = mockService.dataService.surfboardsIntermediate.map { TripItem.surfboard($0, .intermediate) }
+            newItems[.surfCountryWinter] = mockService.dataService.surfCountryInter.map { TripItem.surfCountry($0, .intermediate) }
+            newItems[.tipIntermediate] = mockService.dataService.tipIntermediate.map { TripItem.tip($0, .intermediate) }
+        case .advanced:
+            newSections = [.surfboardsAdvanced, .surfCountrySpring, .tipAdvanced]
+            newItems[.surfboardsAdvanced] = mockService.dataService.surfboardsAdvanced.map { TripItem.surfboard($0, .advanced) }
+            newItems[.surfCountrySpring] = mockService.dataService.surfCountryAdvanced.map { TripItem.surfCountry($0, .advanced) }
+            newItems[.tipAdvanced] = mockService.dataService.tipAdvanced.map { TripItem.tip($0, .advanced) }
+        case .areals:
+            break
+        case .longboarding:
+            break
+        case .none:
+            break
+        }
+
+        sections = newSections
+        items = newItems
     }
 
-    private func popToRoot() {
-            // Implement navigation to AddLevelView here
+    private func popBack() {
+            // Implement navigation back to AddLevelView here
         UserDefaults.standard.userWasHere = false
         selectedLevel = nil
     }

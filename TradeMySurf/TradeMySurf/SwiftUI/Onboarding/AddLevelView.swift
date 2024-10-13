@@ -27,6 +27,7 @@ struct AddLevelView: View {
             )
             .navigationDestination(isPresented: $navigateToDateView) {
                 MainView()
+                    .navigationBarHidden(true)
             }
         }
     }
@@ -34,9 +35,9 @@ struct AddLevelView: View {
 
 struct ArrowLevelPopoverView: View {
     @Binding var navigateToDateView: Bool
-    @State private var selectedLevel: String = Level.Beginner.rawValue
+    @State private var selectedLevel: String = Level.beginner.rawValue
     @State private var isPopoverPresented = true
-    @State private var levels = [Level.Beginner.rawValue, Level.BeginnerIntermediate.rawValue, Level.Intermediate.rawValue, Level.Advanced.rawValue]
+    @State private var levels = [Level.beginner.rawValue, Level.beginnerIntermediate.rawValue, Level.intermediate.rawValue, Level.advanced.rawValue]
     @EnvironmentObject private var themeManager: ThemeManager
 
     var body: some View {

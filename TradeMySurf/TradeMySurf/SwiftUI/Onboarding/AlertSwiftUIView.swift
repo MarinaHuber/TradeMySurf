@@ -17,7 +17,7 @@ struct AlertSwiftUIView: View {
     @State private var animationAmount = 0.0
     @State private var selectedDate = UserDefaults.standard.surfingTime
     @State private var selectedLevel = UserDefaults.standard.selectedLevel
-    @State private var levels = [Level.Beginner.rawValue, Level.BeginnerIntermediate.rawValue, Level.Intermediate.rawValue, Level.Advanced.rawValue]
+    @State private var levels = [Level.beginner.rawValue, Level.beginnerIntermediate.rawValue, Level.intermediate.rawValue, Level.advanced.rawValue]
     var vm: ViewModel
     @State private var gradient = [Color.red, Color.blue, Color.gray]
     @State private var startPoint = UnitPoint(x: 0, y: 0)

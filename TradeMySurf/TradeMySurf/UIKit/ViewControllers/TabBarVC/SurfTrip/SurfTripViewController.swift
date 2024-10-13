@@ -150,42 +150,42 @@ private extension SurfTripViewController {
 
         let pickerString = Level(rawValue: selectedLevel ?? "")
         switch pickerString {
-        case .Beginner:
+        case .beginner:
             snapshot.appendSections([.surfboardsBeginner])
-            snapshot.appendItems(MockService().dataService.surfboardsBeginner.map({ TripItem.surfboard($0, .Beginner) }))
+            snapshot.appendItems(MockService().dataService.surfboardsBeginner.map({ TripItem.surfboard($0, .beginner) }))
             
             snapshot.appendSections([.surfCountrySummer])
-            snapshot.appendItems(MockService().dataService.surfCountryBegginer.map({ TripItem.surfCountry($0, .Beginner) }))
-            
+            snapshot.appendItems(MockService().dataService.surfCountryBegginer.map({ TripItem.surfCountry($0, .beginner) }))
+
             snapshot.appendSections([.tipBeginner])
-            snapshot.appendItems(MockService().dataService.tipBeginner.map({ TripItem.tip($0, .Beginner) }))
-        case .BeginnerIntermediate:
+            snapshot.appendItems(MockService().dataService.tipBeginner.map({ TripItem.tip($0, .beginner) }))
+        case .beginnerIntermediate:
             snapshot.appendSections([.surfboardsBeginnerInter])
-            snapshot.appendItems(MockService().dataService.surfboardsBeginnerInter.map({ TripItem.surfboard($0, .BeginnerIntermediate) }))
-            
+            snapshot.appendItems(MockService().dataService.surfboardsBeginnerInter.map({ TripItem.surfboard($0, .beginnerIntermediate) }))
+
             snapshot.appendSections([.surfCountryAutumn])
-            snapshot.appendItems(MockService().dataService.surfCountryBI.map({ TripItem.surfCountry($0, .BeginnerIntermediate) }))
-            
+            snapshot.appendItems(MockService().dataService.surfCountryBI.map({ TripItem.surfCountry($0, .beginnerIntermediate) }))
+
             snapshot.appendSections([.tipBeginnerInter])
-            snapshot.appendItems(MockService().dataService.tipBeginnerInter.map({ TripItem.tip($0, .BeginnerIntermediate) }))
-        case .Intermediate:
+            snapshot.appendItems(MockService().dataService.tipBeginnerInter.map({ TripItem.tip($0, .beginnerIntermediate) }))
+        case .intermediate:
             snapshot.appendSections([.surfboardsIntermediate])
-            snapshot.appendItems(MockService().dataService.surfboardsIntermediate.map({  TripItem.surfboard($0, .Intermediate) }))
-            
+            snapshot.appendItems(MockService().dataService.surfboardsIntermediate.map({  TripItem.surfboard($0, .intermediate) }))
+
             snapshot.appendSections([.surfCountryWinter])
-            snapshot.appendItems(MockService().dataService.surfCountryInter.map({ TripItem.surfCountry($0, .Intermediate) }))
-            
+            snapshot.appendItems(MockService().dataService.surfCountryInter.map({ TripItem.surfCountry($0, .intermediate) }))
+
             snapshot.appendSections([.tipIntermediate])
-            snapshot.appendItems(MockService().dataService.tipIntermediate.map({ TripItem.tip($0, .Intermediate) }))
-        case .Advanced:
+            snapshot.appendItems(MockService().dataService.tipIntermediate.map({ TripItem.tip($0, .intermediate) }))
+        case .advanced:
             snapshot.appendSections([.surfboardsAdvanced])
-            snapshot.appendItems(MockService().dataService.surfboardsAdvanced.map({  TripItem.surfboard($0, .Advanced) }))
-            
+            snapshot.appendItems(MockService().dataService.surfboardsAdvanced.map({  TripItem.surfboard($0, .advanced) }))
+
             snapshot.appendSections([.surfCountrySpring])
-            snapshot.appendItems(MockService().dataService.surfCountryAdvanced.map({ TripItem.surfCountry($0, .Advanced) }))
-            
+            snapshot.appendItems(MockService().dataService.surfCountryAdvanced.map({ TripItem.surfCountry($0, .advanced) }))
+
             snapshot.appendSections([.tipAdvanced])
-            snapshot.appendItems(MockService().dataService.tipAdvanced.map({ TripItem.tip($0, .Advanced) }))
+            snapshot.appendItems(MockService().dataService.tipAdvanced.map({ TripItem.tip($0, .advanced) }))
         default: break
         }
 

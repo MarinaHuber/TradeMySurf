@@ -9,12 +9,12 @@
 import Foundation
 
 enum Level: String, CaseIterable {
-    case Beginner = "Learning to stand up in white water waves"
-    case BeginnerIntermediate = "Paddling out, dropping down the green wave"
-    case Intermediate = "Trimming down the middle line of the wave"
-    case Advanced = "Performing full carving curves"
-    case Areals = "Performing areals"
-    case Longboarding = "Slower surf on longboard"
+    case beginner = "Learning to stand up in white water waves"
+    case beginnerIntermediate = "Paddling out, dropping down the green wave"
+    case intermediate = "Trimming down the middle line of the wave"
+    case advanced = "Performing full carving curves"
+    case areals = "Performing areals"
+    case longboarding = "Slower surf on longboard"
 }
 
 enum Season: Int, CaseIterable {
