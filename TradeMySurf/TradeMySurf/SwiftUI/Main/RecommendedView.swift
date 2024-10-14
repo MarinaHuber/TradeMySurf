@@ -11,14 +11,16 @@ struct RecommendedView: View {
     @State private var selectedLevel = UserDefaults.standard.selectedLevel
     @State private var sections: [TripSection] = []
     @State private var items: [TripSection: [TripItem]] = [:]
-    
+    @EnvironmentObject private var themeManager: ThemeManager
+
+
     var body: some View {
         ZStack(alignment: .top) {
             LinearGradient(gradient: Gradient(colors: [.indigo, .indigo, .blue, .teal, .white]),
                            startPoint: .top,
                            endPoint: .bottom)
-                .ignoresSafeArea()
-            
+            .ignoresSafeArea()
+
             VStack {
                 CustomNavigationBar()
                 ScrollView {
@@ -38,7 +40,7 @@ struct RecommendedView: View {
 
     private func sectionView(for section: TripSection) -> some View {
         VStack(alignment: .leading, spacing: 10) {
-            sectionHeader(for: section)
+            textSection(for: section)
 
             switch section {
             case .surfboardsBeginner, .surfboardsBeginnerInter, .surfboardsIntermediate, .surfboardsAdvanced:
@@ -51,12 +53,62 @@ struct RecommendedView: View {
         }
     }
 
-    private func sectionHeader(for section: TripSection) -> some View {
-        Text("Sections") // fix
-            .font(.headline)
-            .padding(.horizontal)
-            .foregroundColor(Color(.white))
+    private func textSection(for section: TripSection) -> some View {
+            // Access the array of TripItem for a specific section
+        if let tripItems = items[section], !tripItems.isEmpty {
+            let selectedItem = tripItems[0] // Select the first item as default
+
+            switch selectedItem {
+            case .surfboard(let board, _):
+                return AnyView(sectionHeader(for: board))
+
+            case .surfCountry(let location, _):
+                return AnyView(sectionHeaderLocation(for: location))
+
+            case .tip(let tip, _):
+                return AnyView(sectionHeaderTip(for: tip))
+            }
+        }
+        return AnyView(Text("No items available for this section"))
     }
+
+
+
+    private func sectionHeader(for section: Surfboard) -> some View {
+        Group {
+            Text(section.level)
+                .font(themeManager.selectedTheme.pickerFont)
+            Text("Your surf level")
+                .font(.footnote)
+        }
+        .padding(.horizontal)
+        .foregroundColor(Color(.white))
+    }
+
+    private func sectionHeaderLocation(for section: Surfboard) -> some View {
+        Group {
+            Text(section.beaufortScaleWave)
+                .font(themeManager.selectedTheme.pickerFont)
+            Text("The size of the waves")
+                .font(.footnote)
+        }
+        .padding(.horizontal)
+        .foregroundColor(Color(.white))
+
+    }
+
+    private func sectionHeaderTip(for section: SurfTip) -> some View {
+       return Group {
+            Text(section.goal)
+                .font(themeManager.selectedTheme.pickerFont)
+            Text("Your goal")
+                .font(.footnote)
+        }
+        .padding(.horizontal)
+        .foregroundColor(Color(.white))
+
+    }
+
 
     private func surfboardsSection(items: [TripItem]) -> some View {
         ScrollView(.horizontal, showsIndicators: false) {
@@ -64,6 +116,7 @@ struct RecommendedView: View {
                 ForEach(items, id: \.self) { item in
                     if case let .surfboard(board, _) = item {
                         SurfboardView(board: board)
+
                     }
                 }
             }
@@ -83,7 +136,7 @@ struct RecommendedView: View {
     }
 
     private func tipsSection(items: [TripItem]) -> some View {
-        VStack(spacing: 10) {
+        return VStack(spacing: 10) {
             ForEach(items, id: \.self) { item in
                 if case let .tip(tip, _) = item {
                     TipView(tip: tip)
