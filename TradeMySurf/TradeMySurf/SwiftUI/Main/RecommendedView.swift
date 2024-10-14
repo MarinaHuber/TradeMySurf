@@ -13,38 +13,41 @@ struct RecommendedView: View {
     @State private var items: [TripSection: [TripItem]] = [:]
 
     var body: some View {
-        NavigationView {
-            ScrollView {
-                LazyVStack(spacing: 20) {
-                    ForEach(sections, id: \.self) { section in
-                        sectionView(for: section)
-                    }
-                }
-                .padding()
-            }
-            //fix into MashGradient
-            .background(
+        NavigationStack {
+            ZStack {
+                //fix into MashGradient
                 LinearGradient(gradient: Gradient(colors: [.indigo, .indigo, .blue, .teal, .white]),
                                startPoint: .top,
                                endPoint: .bottom)
-            )
-            .navigationBarTitleDisplayMode(.inline)
-            .toolbar {
-                ToolbarItem(placement: .principal) {
-                    Image("logo_wave")
-                        .resizable()
-                        .scaledToFit()
-                        .frame(width: 70, height: 70)
+                .ignoresSafeArea()
+                ScrollView {
+                    LazyVStack(spacing: 20) {
+                        ForEach(sections, id: \.self) { section in
+                            sectionView(for: section)
+                        }
+                    }
+                    .padding()
                 }
-                ToolbarItem(placement: .navigationBarLeading) {
-                    Button(action:
-                            popBack)
-                    {
-                        Image(systemName: "arrow.turn.up.left")
+                .navigationBarTitleDisplayMode(.inline)
+                .toolbarBackground(.hidden, for: .tabBar)
+                .toolbar {
+                    ToolbarItem(placement: .principal) {
+                        Image("logo_wave")
+                            .resizable()
+                            .scaledToFit()
+                            .frame(width: 70, height: 70)
+                    }
+                    ToolbarItem(placement: .navigationBarLeading) {
+                        Button(action:
+                                popBack)
+                        {
+                            Image(systemName: "arrow.turn.up.left")
+                        }
                     }
                 }
             }
         }
+
         .onAppear {
             updateData()
         }
@@ -69,6 +72,7 @@ struct RecommendedView: View {
         Text("Sections") // fix
             .font(.headline)
             .padding(.horizontal)
+            .foregroundColor(Color(.white))
     }
 
     private func surfboardsSection(items: [TripItem]) -> some View {
