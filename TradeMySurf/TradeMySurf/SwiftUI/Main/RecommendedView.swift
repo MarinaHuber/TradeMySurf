@@ -22,7 +22,7 @@ struct RecommendedView: View {
             .ignoresSafeArea()
 
             VStack {
-                CustomNavigationBar()
+                CustomNavigationBar(ifMainView: true)
                 ScrollView {
                     LazyVStack(spacing: 20) {
                         ForEach(sections, id: \.self) { section in

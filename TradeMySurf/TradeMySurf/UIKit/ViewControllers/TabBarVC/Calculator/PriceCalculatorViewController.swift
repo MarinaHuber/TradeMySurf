@@ -11,14 +11,6 @@ import SwiftUI
 
 class PriceCalculatorViewController: UIViewController, StoryboardProtocol {
 
-//    private static let surfBoards: Surfs = {
-//        do {
-//            return try Surfs(configuration: .init())
-//        } catch {
-//            print(error)
-//            fatalError("Couldn't create Surf")
-//        }
-//    }()
     
     @IBOutlet weak var materialSegmented: UISegmentedControl!
     @IBOutlet var stackView: UIStackView!

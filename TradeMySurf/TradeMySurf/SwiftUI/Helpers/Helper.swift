@@ -24,6 +24,7 @@ enum FullScreenRoute: Hashable, Identifiable {
 
 struct CustomNavigationBar: View {
     @Environment(\.presentationMode) var presentationMode
+    var ifMainView: Bool
 
     var body: some View {
             // Custom navigation bar
@@ -34,17 +35,19 @@ struct CustomNavigationBar: View {
                 .scaledToFit()
                 .frame(height: 60)
                 // Overlay the button on the left
-            HStack {
-                Button(action: {
-                        // Action for back button
-                    presentationMode.wrappedValue.dismiss()
-                }) {
-                    Image(systemName: "arrow.turn.up.left")
-                        .foregroundColor(.white)
+            if ifMainView {
+                HStack {
+                    Button(action: {
+                            // Action for back button
+                        presentationMode.wrappedValue.dismiss()
+                    }) {
+                        Image(systemName: "arrow.turn.up.left")
+                            .foregroundColor(.white)
+                    }
+                    .frame(width: 60)
+
+                    Spacer() // Keeps the button on the left, but no impact on the layout due to ZStack
                 }
-                .frame(width: 60)
-                
-                Spacer() // Keeps the button on the left, but no impact on the layout due to ZStack
             }
         }
         .frame(maxWidth: .infinity)
