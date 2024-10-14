@@ -29,6 +29,7 @@ struct RecommendedView: View {
                             sectionView(for: section)
                         }
                     }
+                    .toolbarBackground(.hidden, for: .tabBar)
                     .padding()
                 }
             }
@@ -78,10 +79,11 @@ struct RecommendedView: View {
         Group {
             Text(section.level)
                 .font(themeManager.selectedTheme.pickerFont)
-            Text("Your surf level")
+            Text("Boards")
                 .font(.footnote)
         }
         .padding(.horizontal)
+        .padding(.vertical, 2)
         .foregroundColor(Color(.white))
     }
 
@@ -200,10 +202,9 @@ struct SurfboardView: View {
         VStack {
             Image(board.imageName)
                 .resizable()
-                .aspectRatio(contentMode: .fit)
-                .frame(height: 200)
-            Text(board.level)
-                .font(.caption)
+                .scaledToFill() // Scale the image to fill the container
+                .frame(maxWidth: .infinity, maxHeight: .infinity) // Fill the maximum width and height of the parent
+                .clipped()
         }
         .frame(width: 120)
         .background(Color.white)
