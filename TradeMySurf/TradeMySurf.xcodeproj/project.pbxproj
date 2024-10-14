@@ -321,7 +321,7 @@
 		9C2F087E2B168FED00AE67D9 /* SwiftUI */ = {
 			isa = PBXGroup;
 			children = (
-				9C7ACD162BED203D00D2E915 /* SwiftUIViews */,
+				9C664C522CBD485E00E19023 /* SwiftUIViews */,
 				9C05178D2BE17FD100DDBFDC /* TabBar */,
 				9C0517862BE173EA00DDBFDC /* Main */,
 				9C0517852BE1737200DDBFDC /* Onboarding */,
@@ -475,6 +475,16 @@
 			path = Utilities;
 			sourceTree = "<group>";
 		};
+		9C664C522CBD485E00E19023 /* SwiftUIViews */ = {
+			isa = PBXGroup;
+			children = (
+				9C8939B32CBC411F008B7A45 /* ButtonAnimateColor.swift */,
+				9C8939B72CBC418B008B7A45 /* AlertSwiftUIView.swift */,
+				9C8939B52CBC414E008B7A45 /* AlertButtonView.swift */,
+			);
+			path = SwiftUIViews;
+			sourceTree = "<group>";
+		};
 		9C69CE74234CD992003E386F /* Models */ = {
 			isa = PBXGroup;
 			children = (
@@ -541,16 +551,6 @@
 				9C89B61D23DA41A600DB8DDF /* BaseNavigationController.swift */,
 			);
 			path = ViewControllers;
-			sourceTree = "<group>";
-		};
-		9C7ACD162BED203D00D2E915 /* SwiftUIViews */ = {
-			isa = PBXGroup;
-			children = (
-				9C8939B32CBC411F008B7A45 /* ButtonAnimateColor.swift */,
-				9C8939B72CBC418B008B7A45 /* AlertSwiftUIView.swift */,
-				9C8939B52CBC414E008B7A45 /* AlertButtonView.swift */,
-			);
-			path = SwiftUIViews;
 			sourceTree = "<group>";
 		};
 		9C90A2232388812400E735D3 /* Lottie */ = {

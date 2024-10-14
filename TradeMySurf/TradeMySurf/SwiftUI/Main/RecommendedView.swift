@@ -11,15 +11,16 @@ struct RecommendedView: View {
     @State private var selectedLevel = UserDefaults.standard.selectedLevel
     @State private var sections: [TripSection] = []
     @State private var items: [TripSection: [TripItem]] = [:]
-
+    
     var body: some View {
-        NavigationStack {
-            ZStack {
-                //fix into MashGradient
-                LinearGradient(gradient: Gradient(colors: [.indigo, .indigo, .blue, .teal, .white]),
-                               startPoint: .top,
-                               endPoint: .bottom)
+        ZStack(alignment: .top) {
+            LinearGradient(gradient: Gradient(colors: [.indigo, .indigo, .blue, .teal, .white]),
+                           startPoint: .top,
+                           endPoint: .bottom)
                 .ignoresSafeArea()
+            
+            VStack {
+                CustomNavigationBar()
                 ScrollView {
                     LazyVStack(spacing: 20) {
                         ForEach(sections, id: \.self) { section in
@@ -28,26 +29,8 @@ struct RecommendedView: View {
                     }
                     .padding()
                 }
-                .navigationBarTitleDisplayMode(.inline)
-                .toolbarBackground(.hidden, for: .tabBar)
-                .toolbar {
-                    ToolbarItem(placement: .principal) {
-                        Image("logo_wave")
-                            .resizable()
-                            .scaledToFit()
-                            .frame(width: 70, height: 70)
-                    }
-                    ToolbarItem(placement: .navigationBarLeading) {
-                        Button(action:
-                                popBack)
-                        {
-                            Image(systemName: "arrow.turn.up.left")
-                        }
-                    }
-                }
             }
         }
-
         .onAppear {
             updateData()
         }
@@ -219,7 +202,6 @@ struct TipView: View {
         .cornerRadius(10)
     }
 }
-
 
 #Preview {
     RecommendedView()

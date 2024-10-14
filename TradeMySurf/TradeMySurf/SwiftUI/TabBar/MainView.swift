@@ -13,7 +13,7 @@ struct MainView: View {
     @State private var selectedTab: TabbarEntrySwiftUI = .recommended
 
     var body: some View {
-        ZStack(alignment: .bottom) {
+        ZStack(alignment: .bottom) { //for tabbar bottom
             TabView(selection: $selectedTab) {
                 RecommendedView()
                     .tag(TabbarEntrySwiftUI.recommended)
@@ -22,10 +22,10 @@ struct MainView: View {
                 GuideView()
                     .tag(TabbarEntrySwiftUI.guide)
             }
-            .edgesIgnoringSafeArea(.bottom)
-            
+            .ignoresSafeArea()
             CustomTabBar(selectedTab: $selectedTab)
         }
+        .navigationBarHidden(true) // Hide the navigation bar for the entire MainView
     }
 }
 
@@ -45,7 +45,6 @@ struct CustomTabBar: View {
         .padding(.horizontal)
         .padding(.vertical, 8)
         .background(Color(themeManager.selectedTheme.primaryThemeColor))
-        .opacity(0.8)
         .cornerRadius(20)
         .padding(.horizontal)
         .padding(.bottom, 8)

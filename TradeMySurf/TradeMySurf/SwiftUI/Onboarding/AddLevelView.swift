@@ -10,31 +10,27 @@ import Foundation
 import SwiftUI
 
 struct AddLevelView: View {
-    @State private var navigateToDateView = false
+    @State private var navigateToNext = false
 
     var body: some View {
         NavigationStack {
             VStack(spacing: 20) {
-                ArrowLevelPopoverView(navigateToDateView: $navigateToDateView)
+                ArrowLevelPopoverView(navigateToNext: $navigateToNext)
             }
             .edgesIgnoringSafeArea(.all)
             .frame(maxWidth: .infinity, maxHeight: .infinity)
             .background(
-                LinearGradient(gradient:
-                                Gradient(colors: [.white, .blue, Color("pastelPrimary")]),
-                               startPoint: .topLeading,
-                               endPoint: .bottomTrailing)
+                Color("pastelPrimary")
             )
-            .navigationDestination(isPresented: $navigateToDateView) {
+            .navigationDestination(isPresented: $navigateToNext) {
                 MainView()
-                    .navigationBarHidden(true)
             }
         }
     }
 }
 
 struct ArrowLevelPopoverView: View {
-    @Binding var navigateToDateView: Bool
+    @Binding var navigateToNext: Bool
     @State private var selectedLevel: String = Level.beginner.rawValue
     @State private var isPopoverPresented = true
     @State private var levels = [Level.beginner.rawValue, Level.beginnerIntermediate.rawValue, Level.intermediate.rawValue, Level.advanced.rawValue]
@@ -74,7 +70,7 @@ struct ArrowLevelPopoverView: View {
                         Button("Done") {
                             UserDefaults.standard.selectedLevel = selectedLevel
                             isPopoverPresented = false
-                            navigateToDateView = true
+                            navigateToNext = true
                         }
                         .font(themeManager.selectedTheme.bodyTextFont)
                         .padding(.horizontal, 12)
