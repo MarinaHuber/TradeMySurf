@@ -86,13 +86,11 @@ struct RecommendedView: View {
 
 
     private func surfboardsSection(items: [TripItem]) -> some View {
-        NavigationStack {
-            ScrollView(.horizontal, showsIndicators: false) {
-                LazyHStack(spacing: 10) {
-                    ForEach(items, id: \.self) { item in
-                        if case let .surfboard(board, _) = item {
-                            SurfboardView(item: board)
-                        }
+        ScrollView(.horizontal, showsIndicators: false) {
+            LazyHStack(spacing: 10) {
+                ForEach(items, id: \.self) { item in
+                    if case let .surfboard(board, _) = item {
+                        SurfboardView(item: board)
                     }
                 }
             }
