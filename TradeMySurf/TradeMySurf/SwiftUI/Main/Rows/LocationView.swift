@@ -40,7 +40,9 @@ struct LocationView: View {
         .background(.white)
         .cornerRadius(10)
         .fullScreenCover(isPresented: $showingSheet) {
-            DetailsLocationView(transitionId: transitionId)
+            DetailsLocationView(transitionId: transitionId, onClose: {
+                showingSheet.toggle()
+            })
         }
     }
 }

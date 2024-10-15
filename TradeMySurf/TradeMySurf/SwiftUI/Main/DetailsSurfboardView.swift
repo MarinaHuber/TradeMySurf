@@ -26,18 +26,7 @@ struct DetailsSurfboardView: View {
                         .padding(.bottom, 20)
                         .overlay(alignment: .topLeading) {
                             Group {
-                                Button {
-                                    onClose()
-                                } label: {
-                                    Image(systemName: "xmark")
-                                        .foregroundStyle(.white)
-                                        .fontWeight(.semibold)
-                                        .padding(8)
-                                }
-                                .buttonStyle(BorderlessButtonStyle())
-                                .background(Material.thick)
-                                .clipShape(Circle())
-                                .frame(width: 50, height: 50)
+                                closeButton
                             }
                             .padding()
                             .safeAreaInset(edge: .top) {
@@ -63,6 +52,23 @@ struct DetailsSurfboardView: View {
         .edgesIgnoringSafeArea(.top)
         .navigationTransition(.zoom(sourceID: item, in: transitionId))
     }
+
+    private var closeButton: some View {
+        Button {
+            onClose()
+        } label: {
+            Image(systemName: "xmark")
+                .foregroundStyle(.white)
+                .fontWeight(.semibold)
+                .padding(8)
+        }
+        .buttonStyle(BorderlessButtonStyle())
+        .background(Material.thick)
+        .clipShape(Circle())
+        .frame(width: 50, height: 50)
+        .padding()
+    }
+
 }
 
 
