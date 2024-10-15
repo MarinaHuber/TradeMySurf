@@ -75,6 +75,9 @@
 		9C90BC552386BD020090E346 /* Enums.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C90BC542386BD020090E346 /* Enums.swift */; };
 		9C9F836C2366BDAA00FA4F41 /* TabBarCoordinatorTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C9F836B2366BDAA00FA4F41 /* TabBarCoordinatorTests.swift */; };
 		9CA167C92CBE772700B91E5B /* DetailsSurfboardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9CA167C82CBE772700B91E5B /* DetailsSurfboardView.swift */; };
+		9CA167CB2CBEB13900B91E5B /* DetailsLocationView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9CA167CA2CBEB13900B91E5B /* DetailsLocationView.swift */; };
+		9CA167CE2CBEC70100B91E5B /* SurfboardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9CA167CD2CBEC70100B91E5B /* SurfboardView.swift */; };
+		9CA167D02CBEC70F00B91E5B /* LocationView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9CA167CF2CBEC70F00B91E5B /* LocationView.swift */; };
 		9CB161562BE0335D0031C913 /* AddLevelView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9CB161552BE0335D0031C913 /* AddLevelView.swift */; };
 		9CBDE2982395A9E600317F51 /* TimeHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9CBDE2972395A9E600317F51 /* TimeHelper.swift */; };
 		9CC4F8EA23CA536A00F3ABAB /* Surfs.mlmodel in Sources */ = {isa = PBXBuildFile; fileRef = 9CC4F8E923CA536A00F3ABAB /* Surfs.mlmodel */; };
@@ -187,6 +190,9 @@
 		9C90BC542386BD020090E346 /* Enums.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Enums.swift; sourceTree = "<group>"; };
 		9C9F836B2366BDAA00FA4F41 /* TabBarCoordinatorTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabBarCoordinatorTests.swift; sourceTree = "<group>"; };
 		9CA167C82CBE772700B91E5B /* DetailsSurfboardView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailsSurfboardView.swift; sourceTree = "<group>"; };
+		9CA167CA2CBEB13900B91E5B /* DetailsLocationView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailsLocationView.swift; sourceTree = "<group>"; };
+		9CA167CD2CBEC70100B91E5B /* SurfboardView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SurfboardView.swift; sourceTree = "<group>"; };
+		9CA167CF2CBEC70F00B91E5B /* LocationView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationView.swift; sourceTree = "<group>"; };
 		9CAECD572BE539E300F0E7AC /* AvenirNextCyr-UltraLight.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "AvenirNextCyr-UltraLight.ttf"; sourceTree = "<group>"; };
 		9CAECD582BE539E300F0E7AC /* AvenirNextCyr-Heavy.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "AvenirNextCyr-Heavy.ttf"; sourceTree = "<group>"; };
 		9CAECD592BE539E300F0E7AC /* AvenirNextCyr-Light.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "AvenirNextCyr-Light.ttf"; sourceTree = "<group>"; };
@@ -280,9 +286,11 @@
 		9C0517862BE173EA00DDBFDC /* Main */ = {
 			isa = PBXGroup;
 			children = (
+				9CA167CC2CBEC6EA00B91E5B /* Rows */,
 				9C0517872BE1745000DDBFDC /* CalculatorView.swift */,
 				9C05178B2BE1746D00DDBFDC /* GuideView.swift */,
 				9CEFD7452CBC142A0003DCF4 /* RecommendedView.swift */,
+				9CA167CA2CBEB13900B91E5B /* DetailsLocationView.swift */,
 				9CA167C82CBE772700B91E5B /* DetailsSurfboardView.swift */,
 			);
 			path = Main;
@@ -580,6 +588,15 @@
 				9CF77BED24106A1A00C92725 /* Array+Extension.swift */,
 			);
 			path = Helpers;
+			sourceTree = "<group>";
+		};
+		9CA167CC2CBEC6EA00B91E5B /* Rows */ = {
+			isa = PBXGroup;
+			children = (
+				9CA167CD2CBEC70100B91E5B /* SurfboardView.swift */,
+				9CA167CF2CBEC70F00B91E5B /* LocationView.swift */,
+			);
+			path = Rows;
 			sourceTree = "<group>";
 		};
 		9CAECD562BE5374200F0E7AC /* Fonts */ = {
@@ -888,6 +905,7 @@
 				9C627C802BF291D400CD16C4 /* SurfTheme.swift in Sources */,
 				9C73E26823B964560028B9AC /* CoordinatorUIKit.swift in Sources */,
 				9C53D5C0234C126600A3BD80 /* StoryboardProtocol.swift in Sources */,
+				9CA167CB2CBEB13900B91E5B /* DetailsLocationView.swift in Sources */,
 				9C5B64CC2B1697A200360CAF /* AppRoot.swift in Sources */,
 				9C5B644C232A506C000727E6 /* AppDelegate.swift in Sources */,
 				9C0517882BE1745000DDBFDC /* CalculatorView.swift in Sources */,
@@ -911,6 +929,8 @@
 				9C76F09823493F0900853FD9 /* GuideViewController.swift in Sources */,
 				9CF936E923CBC0AB00A8C72D /* UIView+Gradient.swift in Sources */,
 				9C6F64D02379FB7800B0224D /* Constants.swift in Sources */,
+				9CA167D02CBEC70F00B91E5B /* LocationView.swift in Sources */,
+				9CA167CE2CBEC70100B91E5B /* SurfboardView.swift in Sources */,
 				9C627C7E2BF291B400CD16C4 /* ThemeProtocol.swift in Sources */,
 				9CF77BE82410669B00C92725 /* TabItemView.swift in Sources */,
 			);

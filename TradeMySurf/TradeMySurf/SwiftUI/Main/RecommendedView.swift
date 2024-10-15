@@ -63,7 +63,7 @@ struct RecommendedView: View {
                 return AnyView(sectionHeader(for: board.level, subtitle: "Boards"))
 
             case .surfCountry(let location, _):
-                return AnyView(sectionHeader(for: location.beaufortScaleWave, subtitle: "The size of the waves"))
+                return AnyView(sectionHeader(for: location.beaufortScaleWave, subtitle: "Locations of size of the waves"))
 
             case .tip(let tip, _):
                 return AnyView(sectionHeader(for: tip.goal, subtitle: "Your goal"))
@@ -104,7 +104,7 @@ struct RecommendedView: View {
             LazyHStack(spacing: 10) {
                 ForEach(items, id: \.self) { item in
                     if case let .surfCountry(location, _) = item {
-                        LocationView(location: location)
+                        LocationView(item: location)
                     }
                 }
             }
@@ -166,76 +166,6 @@ struct RecommendedView: View {
             // Implement navigation back to AddLevelView here
         UserDefaults.standard.userWasHere = false
         selectedLevel = nil
-    }
-}
-
-struct SurfboardView: View {
-    @State var item: Surfboard?
-    @Namespace private var transitionId
-    @State private var showingSheet = false
-    @EnvironmentObject private var themeManager: ThemeManager
-
-    var body: some View {
-        Button {
-            showingSheet.toggle()
-        } label: {
-            if let surfboard = item {
-                Image(surfboard.imageName)//images are Strings in assets named by numbers passed inside MockService data
-                    .resizable()
-                    .scaledToFill()
-                    .frame(maxWidth: .infinity, maxHeight: .infinity) // Fill the maximum width and height of the parent
-                    .clipped()
-                    .overlay(alignment: .bottom) {
-                        VStack(alignment: .leading) {
-                            Text("Board #\(surfboard.imageName)")
-                                .font(themeManager.selectedTheme.captionTxtFont)
-                                .multilineTextAlignment(.leading)
-                            Spacer()
-                                .frame(height: 4)
-                            Text("\(surfboard.volume) volume")
-                                .font(themeManager.selectedTheme.pickerFont)
-                        }
-                        .padding(10)
-                        .frame(width: 120, height: 50)
-                        .background(.thinMaterial)
-                    }
-            }
-        }
-        .matchedTransitionSource(id: item, in: transitionId)
-        .frame(width: 120)
-        .background(Color.white)
-        .cornerRadius(10)
-        .buttonStyle(.plain)
-        .shadow(color: .gray.opacity(0.7), radius: 12)
-        .fullScreenCover(isPresented: $showingSheet) {
-            DetailsSurfboardView(transitionId: transitionId, item: item, onClose: {
-                showingSheet.toggle()
-            })  // Specify the View to display modally
-        }
-    }
-}
-
-struct LocationView: View {
-    let location: Surfboard // Assuming Surfboard is used for locations as well
-
-    var body: some View {
-        HStack {
-            Image(location.imageFlag)
-                .resizable()
-                .aspectRatio(contentMode: .fit)
-                .frame(width: 60, height: 60)
-                .cornerRadius(30)
-            VStack(alignment: .leading) {
-                Text(location.countryName)
-                    .font(.headline)
-                Text(location.continentName)
-                    .font(.subheadline)
-                    .foregroundColor(.secondary)
-            }
-        }
-        .padding()
-        .background(Color.white)
-        .cornerRadius(10)
     }
 }
 
