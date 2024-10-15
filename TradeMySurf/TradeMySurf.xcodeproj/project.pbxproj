@@ -48,7 +48,6 @@
 		9C627C822BF2927900CD16C4 /* Colors.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 9C627C812BF2927900CD16C4 /* Colors.xcassets */; };
 		9C627C842BF299EA00CD16C4 /* ThemeManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C627C832BF299EA00CD16C4 /* ThemeManager.swift */; };
 		9C65758C24111E0100CCF6AF /* TabBarVC.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9C65758B24111E0100CCF6AF /* TabBarVC.storyboard */; };
-		9C69CE76234CD9B9003E386F /* Location.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C69CE75234CD9B9003E386F /* Location.swift */; };
 		9C69CE85234D06D7003E386F /* PriceCalculatorViewController.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9C69CE84234D06D7003E386F /* PriceCalculatorViewController.storyboard */; };
 		9C69CE87234D0749003E386F /* Welcome.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9C69CE86234D0749003E386F /* Welcome.storyboard */; };
 		9C6F64CE2379F86400B0224D /* AddLevelViewController.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9CFDFD3A2367220300760F25 /* AddLevelViewController.storyboard */; };
@@ -75,6 +74,7 @@
 		9C90A233238897A500E735D3 /* air.json in Resources */ = {isa = PBXBuildFile; fileRef = 9C90A232238897A400E735D3 /* air.json */; };
 		9C90BC552386BD020090E346 /* Enums.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C90BC542386BD020090E346 /* Enums.swift */; };
 		9C9F836C2366BDAA00FA4F41 /* TabBarCoordinatorTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C9F836B2366BDAA00FA4F41 /* TabBarCoordinatorTests.swift */; };
+		9CA167C92CBE772700B91E5B /* DetailsSurfboardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9CA167C82CBE772700B91E5B /* DetailsSurfboardView.swift */; };
 		9CB161562BE0335D0031C913 /* AddLevelView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9CB161552BE0335D0031C913 /* AddLevelView.swift */; };
 		9CBDE2982395A9E600317F51 /* TimeHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9CBDE2972395A9E600317F51 /* TimeHelper.swift */; };
 		9CC4F8EA23CA536A00F3ABAB /* Surfs.mlmodel in Sources */ = {isa = PBXBuildFile; fileRef = 9CC4F8E923CA536A00F3ABAB /* Surfs.mlmodel */; };
@@ -158,7 +158,6 @@
 		9C627C812BF2927900CD16C4 /* Colors.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Colors.xcassets; sourceTree = "<group>"; };
 		9C627C832BF299EA00CD16C4 /* ThemeManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ThemeManager.swift; sourceTree = "<group>"; };
 		9C65758B24111E0100CCF6AF /* TabBarVC.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = TabBarVC.storyboard; sourceTree = "<group>"; };
-		9C69CE75234CD9B9003E386F /* Location.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Location.swift; sourceTree = "<group>"; };
 		9C69CE84234D06D7003E386F /* PriceCalculatorViewController.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = PriceCalculatorViewController.storyboard; sourceTree = "<group>"; };
 		9C69CE86234D0749003E386F /* Welcome.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Welcome.storyboard; sourceTree = "<group>"; };
 		9C6F64CF2379FB7800B0224D /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
@@ -187,6 +186,7 @@
 		9C90A232238897A400E735D3 /* air.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = air.json; sourceTree = "<group>"; };
 		9C90BC542386BD020090E346 /* Enums.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Enums.swift; sourceTree = "<group>"; };
 		9C9F836B2366BDAA00FA4F41 /* TabBarCoordinatorTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabBarCoordinatorTests.swift; sourceTree = "<group>"; };
+		9CA167C82CBE772700B91E5B /* DetailsSurfboardView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailsSurfboardView.swift; sourceTree = "<group>"; };
 		9CAECD572BE539E300F0E7AC /* AvenirNextCyr-UltraLight.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "AvenirNextCyr-UltraLight.ttf"; sourceTree = "<group>"; };
 		9CAECD582BE539E300F0E7AC /* AvenirNextCyr-Heavy.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "AvenirNextCyr-Heavy.ttf"; sourceTree = "<group>"; };
 		9CAECD592BE539E300F0E7AC /* AvenirNextCyr-Light.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "AvenirNextCyr-Light.ttf"; sourceTree = "<group>"; };
@@ -283,6 +283,7 @@
 				9C0517872BE1745000DDBFDC /* CalculatorView.swift */,
 				9C05178B2BE1746D00DDBFDC /* GuideView.swift */,
 				9CEFD7452CBC142A0003DCF4 /* RecommendedView.swift */,
+				9CA167C82CBE772700B91E5B /* DetailsSurfboardView.swift */,
 			);
 			path = Main;
 			sourceTree = "<group>";
@@ -407,8 +408,8 @@
 				9C2F087B2B168D3700AE67D9 /* UIKit */,
 				9C5B644B232A506C000727E6 /* AppDelegate.swift */,
 				9C6F64CF2379FB7800B0224D /* Constants.swift */,
-				9C587296257FFA4B00524BA7 /* Services */,
 				9C62417D23915AA800A4B7C9 /* Enums */,
+				9C587296257FFA4B00524BA7 /* Services */,
 				9C69CE74234CD992003E386F /* Models */,
 				9C76F09E234946D500853FD9 /* Resources */,
 				9CC4F8E923CA536A00F3ABAB /* Surfs.mlmodel */,
@@ -489,7 +490,6 @@
 			isa = PBXGroup;
 			children = (
 				9C53CE1B289E9497000969F2 /* MapModel.swift */,
-				9C69CE75234CD9B9003E386F /* Location.swift */,
 				9C467C66234F2A7D009F4D58 /* Surfboard.swift */,
 				9C624171238AE81A00A4B7C9 /* SurfTip.swift */,
 			);
@@ -857,7 +857,6 @@
 				9CBDE2982395A9E600317F51 /* TimeHelper.swift in Sources */,
 				9C587298257FFA8300524BA7 /* ApiMapsRequest.swift in Sources */,
 				9C31EB8C23E3AB1A00060143 /* DetailViewController.swift in Sources */,
-				9C69CE76234CD9B9003E386F /* Location.swift in Sources */,
 				9CF77BEE24106A1A00C92725 /* Array+Extension.swift in Sources */,
 				9C627C842BF299EA00CD16C4 /* ThemeManager.swift in Sources */,
 				9CF77BEA2410690000C92725 /* UIView+Constraints.swift in Sources */,
@@ -884,6 +883,7 @@
 				9C624170238AE75000A4B7C9 /* MockService.swift in Sources */,
 				9C5B64D42B16A07900360CAF /* Helper.swift in Sources */,
 				9C58729C258023D800524BA7 /* ApiEndpoint.swift in Sources */,
+				9CA167C92CBE772700B91E5B /* DetailsSurfboardView.swift in Sources */,
 				9C8939B62CBC414E008B7A45 /* AlertButtonView.swift in Sources */,
 				9C627C802BF291D400CD16C4 /* SurfTheme.swift in Sources */,
 				9C73E26823B964560028B9AC /* CoordinatorUIKit.swift in Sources */,
@@ -1003,7 +1003,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 17.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 18.0;
 				MODULE_VERIFIER_SUPPORTED_LANGUAGE_STANDARDS = "gnu11 gnu++14";
 				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
 				MTL_FAST_MATH = YES;
@@ -1063,7 +1063,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 17.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 18.0;
 				MODULE_VERIFIER_SUPPORTED_LANGUAGE_STANDARDS = "gnu11 gnu++14";
 				MTL_ENABLE_DEBUG_INFO = NO;
 				MTL_FAST_MATH = YES;
@@ -1088,7 +1088,7 @@
 				ENABLE_MODULE_VERIFIER = YES;
 				INFOPLIST_FILE = TradeMySurf/Info.plist;
 				INFOPLIST_KEY_LSApplicationCategoryType = "public.app-category.lifestyle";
-				IPHONEOS_DEPLOYMENT_TARGET = 17.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 18.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",

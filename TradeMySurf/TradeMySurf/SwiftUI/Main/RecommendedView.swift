@@ -76,23 +76,23 @@ struct RecommendedView: View {
     private func sectionHeader(for text: String, subtitle: String) -> some View {
         Group {
             Text(text)
-                .font(themeManager.selectedTheme.pickerFont)
+                .font(themeManager.selectedTheme.captionTxtFont)
             Text(subtitle)
                 .font(.footnote)
         }
         .padding(.horizontal)
-        .padding(.vertical, 2)
         .foregroundColor(Color(.white))
     }
 
 
     private func surfboardsSection(items: [TripItem]) -> some View {
-        ScrollView(.horizontal, showsIndicators: false) {
-            LazyHStack(spacing: 10) {
-                ForEach(items, id: \.self) { item in
-                    if case let .surfboard(board, _) = item {
-                        SurfboardView(board: board)
-
+        NavigationStack {
+            ScrollView(.horizontal, showsIndicators: false) {
+                LazyHStack(spacing: 10) {
+                    ForEach(items, id: \.self) { item in
+                        if case let .surfboard(board, _) = item {
+                            SurfboardView(item: board)
+                        }
                     }
                 }
             }
@@ -170,19 +170,48 @@ struct RecommendedView: View {
 }
 
 struct SurfboardView: View {
-    let board: Surfboard
+    @State var item: Surfboard?
+    @Namespace private var transitionId
+    @State private var showingSheet = false
+    @EnvironmentObject private var themeManager: ThemeManager
 
     var body: some View {
-        VStack {
-            Image(board.imageName)
-                .resizable()
-                .scaledToFill() // Scale the image to fill the container
-                .frame(maxWidth: .infinity, maxHeight: .infinity) // Fill the maximum width and height of the parent
-                .clipped()
+        Button {
+            showingSheet.toggle()
+        } label: {
+            if let surfboard = item {
+                Image(surfboard.imageName)//images are Strings in assets named by numbers passed inside MockService data
+                    .resizable()
+                    .scaledToFill()
+                    .frame(maxWidth: .infinity, maxHeight: .infinity) // Fill the maximum width and height of the parent
+                    .clipped()
+                    .overlay(alignment: .bottom) {
+                        VStack(alignment: .leading) {
+                            Text("Board #\(surfboard.imageName)")
+                                .font(themeManager.selectedTheme.captionTxtFont)
+                                .multilineTextAlignment(.leading)
+                            Spacer()
+                                .frame(height: 4)
+                            Text("\(surfboard.volume) volume")
+                                .font(themeManager.selectedTheme.pickerFont)
+                        }
+                        .padding(10)
+                        .frame(width: 120, height: 50)
+                        .background(.thinMaterial)
+                    }
+            }
         }
+        .matchedTransitionSource(id: item, in: transitionId)
         .frame(width: 120)
         .background(Color.white)
         .cornerRadius(10)
+        .buttonStyle(.plain)
+        .shadow(color: .gray.opacity(0.7), radius: 12)
+        .fullScreenCover(isPresented: $showingSheet) {
+            DetailsSurfboardView(transitionId: transitionId, item: item, onClose: {
+                showingSheet.toggle()
+            })  // Specify the View to display modally
+        }
     }
 }
 
