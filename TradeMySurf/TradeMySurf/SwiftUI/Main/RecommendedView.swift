@@ -55,60 +55,34 @@ struct RecommendedView: View {
     }
 
     private func textSection(for section: TripSection) -> some View {
-            // Access the array of TripItem for a specific section
         if let tripItems = items[section], !tripItems.isEmpty {
             let selectedItem = tripItems[0] // Select the first item as default
 
             switch selectedItem {
             case .surfboard(let board, _):
-                return AnyView(sectionHeader(for: board))
+                return AnyView(sectionHeader(for: board.level, subtitle: "Boards"))
 
             case .surfCountry(let location, _):
-                return AnyView(sectionHeaderLocation(for: location))
+                return AnyView(sectionHeader(for: location.beaufortScaleWave, subtitle: "The size of the waves"))
 
             case .tip(let tip, _):
-                return AnyView(sectionHeaderTip(for: tip))
+                return AnyView(sectionHeader(for: tip.goal, subtitle: "Your goal"))
             }
         }
         return AnyView(Text("No items available for this section"))
     }
 
 
-
-    private func sectionHeader(for section: Surfboard) -> some View {
+    private func sectionHeader(for text: String, subtitle: String) -> some View {
         Group {
-            Text(section.level)
+            Text(text)
                 .font(themeManager.selectedTheme.pickerFont)
-            Text("Boards")
+            Text(subtitle)
                 .font(.footnote)
         }
         .padding(.horizontal)
         .padding(.vertical, 2)
         .foregroundColor(Color(.white))
-    }
-
-    private func sectionHeaderLocation(for section: Surfboard) -> some View {
-        Group {
-            Text(section.beaufortScaleWave)
-                .font(themeManager.selectedTheme.pickerFont)
-            Text("The size of the waves")
-                .font(.footnote)
-        }
-        .padding(.horizontal)
-        .foregroundColor(Color(.white))
-
-    }
-
-    private func sectionHeaderTip(for section: SurfTip) -> some View {
-       return Group {
-            Text(section.goal)
-                .font(themeManager.selectedTheme.pickerFont)
-            Text("Your goal")
-                .font(.footnote)
-        }
-        .padding(.horizontal)
-        .foregroundColor(Color(.white))
-
     }
 
 
