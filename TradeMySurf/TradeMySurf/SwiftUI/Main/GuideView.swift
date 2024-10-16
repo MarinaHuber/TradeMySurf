@@ -11,6 +11,7 @@ import SwiftUI
 
 struct GuideView: View {
     @State private var showNext: Bool = false
+    @EnvironmentObject private var themeManager: ThemeManager
     let data = [
         ("How do I use board price feature in the app?", "Nothing is worse than buying a board for an advanced rider and struggling to ride it. You'll end up needing to sell it and buy a board more suited to your need. If you have ever walked into a surf shop, or browsed online, you’ll know that there is more than a couple to choose from. Equipment calculator is Machine learning tool here to help you with variaty of choices you can find and amount of money you need to purchase it."),
         ("What is Beaufort scale measure for wave height?", "Beaufort scale measure is important element to consider when choosing a surf location. It's the factor that can most affect the size and the power of waves at the sea. But it isn't everything. Understanding the scale ranging from 0-17 is understanding the global wind speed to observed conditions at sea and land."),
@@ -39,7 +40,8 @@ struct GuideView: View {
                         Spacer() // Pushes the title to the center
                         Text("Surf FAQ")
                             .multilineTextAlignment(.center)
-                        Spacer() // Pushes the title to the center
+                            .font(themeManager.selectedTheme.textTitleFont)
+                        Spacer()
                     }
                     .padding(.top)
 
@@ -47,7 +49,7 @@ struct GuideView: View {
                         VStack(alignment: .leading) {
                             HStack {
                                 Text(data[index].0) // Display title
-                                    .font(.headline)
+                                    .font(themeManager.selectedTheme.pickerFont)
                                 Spacer()
                                     // Toggle arrow icon based on expanded state
                                 Image(systemName: expandedIndex == index ? "chevron.up" : "chevron.down")
@@ -60,21 +62,20 @@ struct GuideView: View {
                                     expandedIndex = expandedIndex == index ? nil : index
                                 }
                             }
-
-                                // Display answer if the current index is expanded
                             if expandedIndex == index {
                                 Text(data[index].1)
-                                    .font(.subheadline)
+                                    .font(themeManager.selectedTheme.captionTxtFont)
                                     .foregroundColor(.secondary)
                                     .padding(.top, 5)
                             }
                         }
-                        .padding(.vertical, 5)
+                        .padding(.vertical, 10)
                         .listRowSeparator(.hidden)
                     }
                 }
+                .frame(maxHeight: CGFloat(data.count * 65))
                 .listStyle(.inset)
-                .clipShape(RoundedRectangle(cornerRadius: 10)) // Clips the list to the rounded shape
+                .clipShape(RoundedRectangle(cornerRadius: 10))
                 .padding()
 
             }

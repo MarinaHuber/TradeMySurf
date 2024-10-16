@@ -7,6 +7,7 @@
 //
 
 import SwiftUI
+import CoreML
 
 enum TabbarEntrySwiftUI: Int, CaseIterable {
     case guide, recommended, calculator
@@ -32,18 +33,6 @@ enum TabbarEntrySwiftUI: Int, CaseIterable {
         case .guide: return "info_inactive"
         case .recommended: return "recommend_inactive"
         case .calculator: return "price_inactive"
-        }
-    }
-
-    @ViewBuilder
-    var view: some View {
-        switch self {
-        case .guide:
-            GuideView()
-        case .recommended:
-            RecommendedView()
-        case .calculator:
-            CalculatorView()
         }
     }
 }

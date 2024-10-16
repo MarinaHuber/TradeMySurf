@@ -1,11 +1,12 @@
-//
-//  CalculatorView.swift
-//  TradeMySurf
-//
-//  Created by Marina Huber on 30.04.2024..
-//  Copyright © 2024 Marina Huber. All rights reserved.
-//
+    //
+    //  CalculatorView.swift
+    //  TradeMySurf
+    //
+    //  Created by Marina Huber on 30.04.2024..
+    //  Copyright © 2024 Marina Huber. All rights reserved.
+    //
 
+import CoreML
 import Foundation
 import SwiftUI
 
@@ -28,45 +29,68 @@ struct CalculatorView: View {
                 colors: gradientColors,
                 background: Color(.pastelPrimary))
 
-            VStack(spacing: 10) {
+            VStack(spacing: 0) {
                 CustomNavigationBar(ifMainView: false)
+                Text("Consider these options when gettig a board for your development and fun")
+                    .padding(.top, 5)
+                    .multilineTextAlignment(.center)
+                    .frame(height: 70)// Align text to the left
                     // Segmented controls for material, model, gear, and condition
-                Picker("Material", selection: $materialIndex) {
-                    Text("Material 1").tag(0)
-                    Text("Material 2").tag(1)
-                    Text("Material 3").tag(2)
-                }
-                .pickerStyle(SegmentedPickerStyle())
-
-                Picker("Model", selection: $modelIndex) {
-                    Text("Model 1").tag(0)
-                    Text("Model 2").tag(1)
-                    Text("Model 3").tag(2)
-                }
-                .pickerStyle(SegmentedPickerStyle())
-
-                Picker("Gear", selection: $gearIndex) {
-                    Text("Gear 1").tag(0)
-                    Text("Gear 2").tag(1)
-                    Text("Gear 3").tag(2)
-                }
-                .pickerStyle(SegmentedPickerStyle())
-
-                Slider(value: $productionValue, in: 0...100, step: 1)
-                    .onChange(of: productionValue) { value in
+                Group {
+                    Text("Maker")
+                        .padding(.top, 5)
+                        .frame(maxWidth: .infinity, alignment: .leading)
+                    Picker("Maker", selection: $modelIndex) {
+                        Text("Mass produced").tag(0)
+                        Text("Custom").tag(1)
+                    }
+                    .onChange(of: modelIndex) { _, _ in
                         calculateValue()
                     }
-
-                Picker("Condition", selection: $conditionIndex) {
-                    Text("New").tag(0)
-                    Text("Used").tag(1)
+                    Text("Material")
+                        .padding(.top, 5)
+                        .frame(maxWidth: .infinity, alignment: .leading)
+                    Picker("Material", selection: $materialIndex) {
+                        Text("Foam").tag(0)
+                        Text("Polyester").tag(1)
+                        Text("Epoxy").tag(2)
+                        Text("Wood").tag(3)
+                    }
+                    .onChange(of: materialIndex) { _, _ in
+                        calculateValue()
+                    }
+                    Text("Condition")
+                        .padding(.top, 5)
+                        .frame(maxWidth: .infinity, alignment: .leading)
+                    Picker("Condition", selection: $gearIndex) {
+                        Text("New").tag(0)
+                        Text("Good").tag(1)
+                        Text("Poor").tag(2)
+                    }
+                    .onChange(of: gearIndex) { _, _ in
+                        calculateValue()
+                    }
                 }
+                .padding(.top, 5)
                 .pickerStyle(SegmentedPickerStyle())
 
-                    // Labels for hours and valuation
                 Text(hoursLabel)
                     .font(.headline)
-                    .padding(.top)
+                    .padding(.top, 5)
+                    .frame(maxWidth: .infinity, alignment: .leading)
+                Slider(value: $productionValue, in: 0...100, step: 1)
+                    .onChange(of: productionValue) { _, _ in
+                        calculateValue()
+                    }
+                Text("Gear").padding()
+                Picker("Gear", selection: $conditionIndex) {
+                    Text("Not included").tag(0)
+                    Text("Included").tag(1)
+                }
+                .onChange(of: conditionIndex) { _, _ in
+                    calculateValue()
+                }
+                .pickerStyle(SegmentedPickerStyle())
 
                 Text(valuation)
                     .font(.largeTitle)
@@ -86,24 +110,26 @@ struct CalculatorView: View {
     }
 
     private func calculateValue() {
-        let formatter = NumberFormatter()
-        formatter.numberStyle = .none
-        let formattedMileage = formatter.string(for: productionValue) ?? "0"
-        hoursLabel = "Hours on water (\(formattedMileage) hours)"
+        do {
+            let configuration = MLModelConfiguration() // You can customize the configuration here
+            let model = try Surfs(configuration: configuration)
+                // Perform prediction
+            let prediction = try model.prediction(
+                model: Double(modelIndex),
+                material: Double(materialIndex),
+                gear: Double(gearIndex),
+                production: productionValue,
+                condition: Double(conditionIndex)
+            )
 
-//        if let prediction = try? PriceCalculator.surfBoards.prediction(
-//            model: Double(modelIndex),
-//            material: Double(materialIndex),
-//            gear: Double(gearIndex),
-//            production: productionValue,
-//            condition: Double(conditionIndex)
-//        ) {
-//            let clampedValuation = max(10, prediction.price)
-//            formatter.numberStyle = .currency
-//            valuation = formatter.string(for: clampedValuation) ?? "$0.00"
-//        } else {
-//            valuation = "Error"
-//        }
+                // Clamp valuation and format it as currency
+            let clampedValuation = max(10, prediction.price)
+            let currencyFormatter = NumberFormatter()
+            currencyFormatter.numberStyle = .currency
+            valuation = currencyFormatter.string(from: NSNumber(value: clampedValuation)) ?? "Error"
+        } catch {
+            valuation = "Error calculating value."
+        }
     }
     private var gradientColors: [Color] {
         [
@@ -120,9 +146,9 @@ struct CalculatorView: View {
     }
 }
 
-struct PriceCalculatorView_Previews: PreviewProvider {
-    static var previews: some View {
-        CalculatorView()
-    }
-}
+    //struct PriceCalculatorView_Previews: PreviewProvider {
+    //    static var previews: some View {
+    //        CalculatorView(surboards: )
+    //    }
+    //}
 
