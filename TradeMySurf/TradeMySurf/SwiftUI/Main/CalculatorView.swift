@@ -22,8 +22,12 @@ struct CalculatorView: View {
 
     var body: some View {
         ZStack(alignment: .top) {
-            Color.white
-            .ignoresSafeArea()
+            MeshGradientView(
+                width: 3,
+                height: 3,
+                colors: gradientColors,
+                background: Color(UIColor(named: "pastelPrimary") ?? .purple))
+
             VStack(spacing: 10) {
                 CustomNavigationBar(ifMainView: false)
                     // Segmented controls for material, model, gear, and condition
@@ -49,9 +53,9 @@ struct CalculatorView: View {
                 .pickerStyle(SegmentedPickerStyle())
 
                 Slider(value: $productionValue, in: 0...100, step: 1)
-                    .onChange(of: productionValue, perform: { value in
+                    .onChange(of: productionValue) { value in
                         calculateValue()
-                    })
+                    }
 
                 Picker("Condition", selection: $conditionIndex) {
                     Text("New").tag(0)
@@ -75,11 +79,6 @@ struct CalculatorView: View {
                 .padding()
             }
             .padding()
-            .background(
-                LinearGradient(gradient: Gradient(colors: [.indigo, .indigo, .blue, .teal, .white]),
-                               startPoint: .top, endPoint: .bottom)
-                .ignoresSafeArea()
-            )
             .onAppear {
                 calculateValue()
             }
@@ -105,6 +104,19 @@ struct CalculatorView: View {
 //        } else {
 //            valuation = "Error"
 //        }
+    }
+    private var gradientColors: [Color] {
+        [
+            Color(red: 1.00, green: 0.42, blue: 0.42),
+            Color(red: 1.00, green: 0.55, blue: 0.00),
+            Color(red: 1.00, green: 0.27, blue: 0.00),
+            Color(red: 1.00, green: 0.41, blue: 0.71),
+            Color(red: 0.85, green: 0.44, blue: 0.84),
+            Color(red: 0.54, green: 0.17, blue: 0.89),
+            Color(red: 0.29, green: 0.00, blue: 0.51),
+            Color(red: 0.00, green: 0.00, blue: 0.55),
+            Color(red: 0.10, green: 0.10, blue: 0.44)
+        ]
     }
 }
 
