@@ -54,3 +54,32 @@ struct CustomNavigationBar: View {
         .padding(.horizontal, 0) // Make sure the button is flush with the edge
     }
 }
+
+struct MeshGradientView: View {
+    let width: Int
+    let height: Int
+    let colors: [Color]
+    let background: Color
+    
+    private var gradientPoints: [SIMD2<Float>] {
+        var points: [SIMD2<Float>] = []
+        for y in 0..<height {
+            for x in 0..<width {
+                points.append(SIMD2<Float>(Float(x) / Float(width - 1), Float(y) / Float(height - 1)))
+            }
+        }
+        return points
+    }
+    
+    var body: some View {
+        MeshGradient(
+            width: width,
+            height: height,
+            locations: .points(gradientPoints),
+            colors: .colors(colors),
+            background: background,
+            smoothsColors: true
+        )
+        .ignoresSafeArea()
+    }
+}
