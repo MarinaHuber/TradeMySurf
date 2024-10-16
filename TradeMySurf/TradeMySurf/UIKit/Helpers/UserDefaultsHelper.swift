@@ -39,7 +39,7 @@ extension UserDefaults {
 
 }
 extension UserDefaults {
-var surfingTime: Date? {
+var selectedDate: Date? {
 	get {
 		return UserDefaults.standard.object(forKey: "surfingTime") as? Date
 	}

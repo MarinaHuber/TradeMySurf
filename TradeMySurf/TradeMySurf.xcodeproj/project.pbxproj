@@ -78,7 +78,7 @@
 		9CA167CB2CBEB13900B91E5B /* DetailsLocationView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9CA167CA2CBEB13900B91E5B /* DetailsLocationView.swift */; };
 		9CA167CE2CBEC70100B91E5B /* SurfboardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9CA167CD2CBEC70100B91E5B /* SurfboardView.swift */; };
 		9CA167D02CBEC70F00B91E5B /* LocationView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9CA167CF2CBEC70F00B91E5B /* LocationView.swift */; };
-		9CB161562BE0335D0031C913 /* AddLevelView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9CB161552BE0335D0031C913 /* AddLevelView.swift */; };
+		9CB161562BE0335D0031C913 /* AddLevelDateView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9CB161552BE0335D0031C913 /* AddLevelDateView.swift */; };
 		9CBDE2982395A9E600317F51 /* TimeHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9CBDE2972395A9E600317F51 /* TimeHelper.swift */; };
 		9CC4F8EA23CA536A00F3ABAB /* Surfs.mlmodel in Sources */ = {isa = PBXBuildFile; fileRef = 9CC4F8E923CA536A00F3ABAB /* Surfs.mlmodel */; };
 		9CE09C302413FAFA00F0FE08 /* TabItemView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 9CE09C2F2413FAFA00F0FE08 /* TabItemView.xib */; };
@@ -200,7 +200,7 @@
 		9CAECD5B2BE539E300F0E7AC /* AvenirNextCyr-LightItalic.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "AvenirNextCyr-LightItalic.ttf"; sourceTree = "<group>"; };
 		9CAECD5C2BE539E300F0E7AC /* AvenirNextCyr-Demi.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "AvenirNextCyr-Demi.ttf"; sourceTree = "<group>"; };
 		9CAECD5D2BE539E300F0E7AC /* AvenirNextCyr-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "AvenirNextCyr-Regular.ttf"; sourceTree = "<group>"; };
-		9CB161552BE0335D0031C913 /* AddLevelView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddLevelView.swift; sourceTree = "<group>"; };
+		9CB161552BE0335D0031C913 /* AddLevelDateView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddLevelDateView.swift; sourceTree = "<group>"; };
 		9CBDE2972395A9E600317F51 /* TimeHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TimeHelper.swift; sourceTree = "<group>"; };
 		9CC4F8E923CA536A00F3ABAB /* Surfs.mlmodel */ = {isa = PBXFileReference; lastKnownFileType = file.mlmodel; name = Surfs.mlmodel; path = ../../Working/Surfboards/Surfs.mlmodel; sourceTree = "<group>"; };
 		9CE09C2F2413FAFA00F0FE08 /* TabItemView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = TabItemView.xib; sourceTree = "<group>"; };
@@ -276,7 +276,7 @@
 			isa = PBXGroup;
 			children = (
 				9C8939AF2CBC4089008B7A45 /* SplashView.swift */,
-				9CB161552BE0335D0031C913 /* AddLevelView.swift */,
+				9CB161552BE0335D0031C913 /* AddLevelDateView.swift */,
 				9C8939AD2CBC405B008B7A45 /* RootViewApp.swift */,
 				9C8939B12CBC40C4008B7A45 /* WelcomeView.swift */,
 			);
@@ -895,7 +895,7 @@
 				9CEFD7442CBC07C70003DCF4 /* TabbarEntrySwiftUI.swift in Sources */,
 				9C73E26623B963570028B9AC /* CoordinatorPresenting.swift in Sources */,
 				9CF77BE024104B9400C92725 /* AlertContainerView.swift in Sources */,
-				9CB161562BE0335D0031C913 /* AddLevelView.swift in Sources */,
+				9CB161562BE0335D0031C913 /* AddLevelDateView.swift in Sources */,
 				9C8939B82CBC418B008B7A45 /* AlertSwiftUIView.swift in Sources */,
 				9C624170238AE75000A4B7C9 /* MockService.swift in Sources */,
 				9C5B64D42B16A07900360CAF /* Helper.swift in Sources */,

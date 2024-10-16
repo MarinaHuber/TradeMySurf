@@ -15,7 +15,7 @@ class ViewModel {
 
 struct AlertSwiftUIView: View {
     @State private var animationAmount = 0.0
-    @State private var selectedDate = UserDefaults.standard.surfingTime
+    @State private var selectedDate = UserDefaults.standard.selectedDate
     @State private var selectedLevel = UserDefaults.standard.selectedLevel
     @State private var levels = [Level.beginner.rawValue, Level.beginnerIntermediate.rawValue, Level.intermediate.rawValue, Level.advanced.rawValue]
     var vm: ViewModel

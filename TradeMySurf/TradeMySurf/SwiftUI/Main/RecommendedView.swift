@@ -12,7 +12,7 @@ struct RecommendedView: View {
     @State private var sections: [TripSection] = []
     @State private var items: [TripSection: [TripItem]] = [:]
     @EnvironmentObject private var themeManager: ThemeManager
-
+    @Environment(\.presentationMode) var presentationMode
 
     var body: some View {
         ZStack(alignment: .top) {
@@ -20,7 +20,7 @@ struct RecommendedView: View {
                            startPoint: .top,
                            endPoint: .bottom)
             .ignoresSafeArea()
-
+            
             VStack {
                 CustomNavigationBar(ifMainView: true)
                 ScrollView {
@@ -41,7 +41,7 @@ struct RecommendedView: View {
 
     private func sectionView(for section: TripSection) -> some View {
         VStack(alignment: .leading, spacing: 10) {
-            textSection(for: section)
+            textHeader(for: section)
 
             switch section {
             case .surfboardsBeginner, .surfboardsBeginnerInter, .surfboardsIntermediate, .surfboardsAdvanced:
@@ -54,7 +54,7 @@ struct RecommendedView: View {
         }
     }
 
-    private func textSection(for section: TripSection) -> some View {
+    private func textHeader(for section: TripSection) -> some View {
         if let tripItems = items[section], !tripItems.isEmpty {
             let selectedItem = tripItems[0] // Select the first item as default
 
@@ -83,8 +83,7 @@ struct RecommendedView: View {
         .padding(.horizontal)
         .foregroundColor(Color(.white))
     }
-
-
+    
     private func surfboardsSection(items: [TripItem]) -> some View {
         ScrollView(.horizontal, showsIndicators: false) {
             LazyHStack(spacing: 10) {
@@ -110,7 +109,7 @@ struct RecommendedView: View {
     }
 
     private func tipsSection(items: [TripItem]) -> some View {
-        return VStack(spacing: 10) {
+        VStack(spacing: 10) {
             ForEach(items, id: \.self) { item in
                 if case let .tip(tip, _) = item {
                     TipView(tip: tip)
@@ -187,6 +186,7 @@ struct TipView: View {
         .cornerRadius(10)
     }
 }
+
 
 #Preview {
     RecommendedView()

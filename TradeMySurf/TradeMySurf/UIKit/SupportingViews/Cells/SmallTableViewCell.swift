@@ -27,7 +27,7 @@ class SmallTableViewCell : UICollectionViewCell {
         return descriptionLabel
     }()
     let windDescription: UILabel = UILabel()
-	let selectedDate = UserDefaults.standard.surfingTime
+	let selectedDate = UserDefaults.standard.selectedDate
 
 	override init(frame: CGRect) {
 		super.init(frame: frame)

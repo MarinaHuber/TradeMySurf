@@ -44,7 +44,7 @@ struct ButtonAnimateColor: View {
             animationProgress = 1.0
         }
         .fullScreenCover(isPresented: $isUserHere, content: {
-            AddLevelView()
+            AddLevelDateView()
         })
     }
 }
