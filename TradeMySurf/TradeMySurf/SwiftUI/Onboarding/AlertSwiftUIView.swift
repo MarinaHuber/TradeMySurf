@@ -48,22 +48,30 @@ struct AlertSwiftUIView: View {
                 AlertButtonView(vm: vm)
             }
             .frame(maxWidth: .infinity)
-            .background(LinearGradient(gradient: Gradient(colors: self.gradient), startPoint: self.startPoint, endPoint: self.endPoint)
-                .clipShape(RoundedRectangle(cornerRadius: 12.0))
-                .onAppear {
-                    self.startPoint = UnitPoint(x: 1, y: -1)
-                    self.endPoint = UnitPoint(x: 0, y: 1)
-                    animationAmount = 1.0
-                }
-                .animation(
-                    .easeOut(duration: 2)
-                    .repeatForever(autoreverses: false),
-                    value: animationAmount
+            .background(
+                MeshGradientView(
+                    width: 3,
+                    height: 3,
+                    colors: gradientColors,
+                    background: Color(.pastelPrimary)
                 )
             )
         }
         .frame(width: 300, height: 500, alignment: .center)
 
+    }
+    private var gradientColors: [Color] {
+        [
+            Color(red: 1.00, green: 0.42, blue: 0.42),
+            Color(red: 1.00, green: 0.55, blue: 0.00),
+            Color(red: 1.00, green: 0.27, blue: 0.00),
+            Color(red: 1.00, green: 0.41, blue: 0.71),
+            Color(red: 0.85, green: 0.44, blue: 0.84),
+            Color(red: 0.54, green: 0.17, blue: 0.89),
+            Color(red: 0.29, green: 0.00, blue: 0.51),
+            Color(red: 0.00, green: 0.00, blue: 0.55),
+            Color(red: 0.10, green: 0.10, blue: 0.44)
+        ]
     }
 }
 

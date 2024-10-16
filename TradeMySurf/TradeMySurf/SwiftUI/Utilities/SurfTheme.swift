@@ -20,6 +20,6 @@ struct SurfTheme: ThemeProtocol {
     var pickerFont: Font = .custom("AvenirNextCyr-Demi", size: 13)
     var tabbarFont: Font = .custom("AvenirNextCyr-Demi", size: 12)
 
-    var primaryThemeColor: Color { return Color("pastelPrimary") }
+    var primaryThemeColor: Color { return Color(.pastelPrimary) }
     var secondoryThemeColor: Color { return Color("secondoryThemeColor") }
 }

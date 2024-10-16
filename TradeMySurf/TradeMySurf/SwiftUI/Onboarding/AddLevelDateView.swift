@@ -111,7 +111,7 @@ struct AddLevelDateView: View {
             }
             .edgesIgnoringSafeArea(.all)
             .frame(maxWidth: .infinity, maxHeight: .infinity)
-            .background(Color("pastelPrimary"))
+            .background(Color(.pastelPrimary))
             .navigationDestination(isPresented: $navigateToNext) {
                 MainView()
             }

@@ -9,7 +9,7 @@
 import SwiftUI
 
 struct ButtonAnimateColor: View {
-    @State private var gradient = [Color(UIColor(named: "pastelPrimary") ?? .purple), Color.blue, Color(UIColor(named: "pastelPrimary") ?? .purple)]
+    @State private var gradient = [Color(.pastelPrimary), .blue, Color(.pastelPrimary)]
     @State private var startPoint = UnitPoint(x: 0, y: 0)
     @State private var endPoint = UnitPoint(x: 1, y: 0)
     @State var isUserHere: Bool = false

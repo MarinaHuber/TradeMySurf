@@ -20,7 +20,7 @@ struct RecommendedView: View {
                 width: 3,
                 height: 3,
                 colors: gradientColors,
-                background: Color(UIColor(named: "pastelPrimary") ?? .purple)
+                background: Color(.pastelPrimary)
             )
             
             VStack {
