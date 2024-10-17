@@ -145,4 +145,3 @@ struct CalculatorView: View {
 #Preview {
     CalculatorView()
 }
-

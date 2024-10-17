@@ -71,7 +71,6 @@ struct DetailsSurfboardView: View {
 
 }
 
-
-//#Preview {
-//    DetailsSurfboardView(transitionId: Namespace.ID())
-//}
+#Preview {
+    DetailsSurfboardView(transitionId: Namespace().wrappedValue, onClose: { })
+}

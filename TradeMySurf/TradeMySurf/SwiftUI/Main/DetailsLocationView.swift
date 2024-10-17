@@ -135,3 +135,7 @@ struct LocationAnnotation: Identifiable {
     let title: String
     let coordinate: CLLocationCoordinate2D
 }
+#Preview {
+    DetailsLocationView(queryLocation: "Surf Africa", transitionId: Namespace().wrappedValue, onClose: { })
+}
+

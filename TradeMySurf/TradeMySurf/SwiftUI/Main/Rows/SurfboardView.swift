@@ -48,7 +48,7 @@ struct SurfboardView: View {
         .fullScreenCover(isPresented: $showingSheet) {
             DetailsSurfboardView(transitionId: transitionId, item: item, onClose: {
                 showingSheet.toggle()
-            })  // Specify the View to display modally
+            })
         }
     }
 }

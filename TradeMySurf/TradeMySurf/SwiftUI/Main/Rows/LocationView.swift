@@ -68,7 +68,3 @@ struct TipView: View {
         .cornerRadius(10)
     }
 }
-
-//#Preview {
-//    LocationdView()
-//}
