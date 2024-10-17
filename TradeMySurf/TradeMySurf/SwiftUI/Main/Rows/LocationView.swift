@@ -47,6 +47,28 @@ struct LocationView: View {
     }
 }
 
+
+struct TipView: View {
+    let tip: SurfTip
+
+    var body: some View {
+        VStack(alignment: .leading, spacing: 5) {
+            Text("Your goal: \(tip.goal)")
+                .font(.headline)
+            Text(tip.description)
+                .font(.body)
+            if !tip.descriptionLocation.isEmpty {
+                Text(tip.descriptionLocation)
+                    .font(.callout)
+                    .foregroundColor(.secondary)
+            }
+        }
+        .padding()
+        .background(Color.white)
+        .cornerRadius(10)
+    }
+}
+
 //#Preview {
 //    LocationdView()
 //}

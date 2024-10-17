@@ -156,7 +156,7 @@ struct ArrowPopoverView: View {
     @Binding var navigateToNext: Bool
     @State private var selectedLevel: String = Level.beginner.rawValue
     @State private var isPopoverPresented = true
-    @State private var levels = [Level.beginner.rawValue, Level.beginnerIntermediate.rawValue, Level.intermediate.rawValue, Level.advanced.rawValue]
+    @State private var levels = [Level.beginner.rawValue, Level.beginnerIntermediate.rawValue, Level.intermediate.rawValue, Level.advanced.rawValue, Level.areals.rawValue, Level.longboarding.rawValue]
     @State private var showDatePicker = false
     @State private var selectedDate = Date()
     @EnvironmentObject private var themeManager: ThemeManager

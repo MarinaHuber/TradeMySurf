@@ -114,9 +114,9 @@ private extension SurfTripViewController {
             guard let section = self?.dataSource?.snapshot().sectionIdentifier(containingItem: itemSequence) else { return nil }
             let items = self?.dataSource?.snapshot().itemIdentifiers(inSection: section)
             switch section {
-                case .tipBeginner, .tipIntermediate, .tipBeginnerInter, .tipAdvanced:
+            case .tipBeginner, .tipIntermediate, .tipBeginnerInter, .tipAdvanced, .tipAreals, .tipLongboard:
                     return UICollectionReusableView()
-                case .surfboardsBeginner, .surfboardsBeginnerInter, .surfboardsIntermediate, .surfboardsAdvanced:
+            case .surfboardsBeginner, .surfboardsBeginnerInter, .surfboardsIntermediate, .surfboardsAdvanced, .surfboardsAreals, .surfboardsLongboard:
                     let boardHeader = collectionView.dequeueReusableView(ofType: BoardSupplementaryView.self, forKind: UICollectionView.elementKindSectionHeader, for: indexPath)
                     items.map {
                         _ = $0.map {
@@ -244,11 +244,11 @@ private extension SurfTripViewController {
             let guideSection = strongSelf.sections[sectionIndex]
             let section: NSCollectionLayoutSection
                 switch guideSection {
-                case .surfboardsBeginner, .surfboardsBeginnerInter, .surfboardsIntermediate, .surfboardsAdvanced:
+                case .surfboardsBeginner, .surfboardsBeginnerInter, .surfboardsIntermediate, .surfboardsAdvanced, .surfboardsAreals, .surfboardsLongboard:
                     section = strongSelf.makeSurfboardSection()
                 case .surfCountrySummer, .surfCountryAutumn, .surfCountryWinter, .surfCountrySpring:
                     section = strongSelf.makeLocationSection()
-                case .tipBeginner, .tipBeginnerInter, .tipIntermediate, .tipAdvanced:
+                case .tipBeginner, .tipBeginnerInter, .tipIntermediate, .tipAdvanced, .tipAreals, .tipLongboard:
                     section = strongSelf.makeSmallTipsSection()
             }
             section.contentInsets = NSDirectionalEdgeInsets(top: 0, leading: 10, bottom: 0, trailing: 10)

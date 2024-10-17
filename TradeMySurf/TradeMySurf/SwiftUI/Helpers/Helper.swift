@@ -29,7 +29,6 @@ struct CustomNavigationBar: View {
     var body: some View {
             // Custom navigation bar
         ZStack {
-                // Centered logo
             Image("logo_wave")
                 .resizable()
                 .scaledToFit()
@@ -40,6 +39,7 @@ struct CustomNavigationBar: View {
                     Button(action: {
                             // Action for back button
                         presentationMode.wrappedValue.dismiss()
+                        popBack()
                     }) {
                         Image(systemName: "arrow.turn.up.left")
                             .foregroundColor(.white)
@@ -52,6 +52,11 @@ struct CustomNavigationBar: View {
         }
         .frame(maxWidth: .infinity)
         .padding(.horizontal, 0) // Make sure the button is flush with the edge
+    }
+
+    private func popBack() {
+        UserDefaults.standard.userWasHere = false
+        UserDefaults.standard.selectedLevel = nil
     }
 }
 

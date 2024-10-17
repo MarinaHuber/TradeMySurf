@@ -42,8 +42,8 @@ enum Season: Int, CaseIterable {
 }
 
 enum TripSection: CaseIterable {
-	case tipBeginner, tipBeginnerInter, tipIntermediate, tipAdvanced
-	case surfboardsBeginner, surfboardsBeginnerInter, surfboardsIntermediate, surfboardsAdvanced
+    case tipBeginner, tipBeginnerInter, tipIntermediate, tipAdvanced, tipAreals, tipLongboard
+	case surfboardsBeginner, surfboardsBeginnerInter, surfboardsIntermediate, surfboardsAdvanced, surfboardsAreals, surfboardsLongboard
 	case surfCountrySummer, surfCountryAutumn, surfCountryWinter, surfCountrySpring
 }
 

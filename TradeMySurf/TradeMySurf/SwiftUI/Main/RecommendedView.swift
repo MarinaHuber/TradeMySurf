@@ -47,11 +47,11 @@ struct RecommendedView: View {
             textHeader(for: section)
 
             switch section {
-            case .surfboardsBeginner, .surfboardsBeginnerInter, .surfboardsIntermediate, .surfboardsAdvanced:
+            case .surfboardsBeginner, .surfboardsBeginnerInter, .surfboardsIntermediate, .surfboardsAdvanced, .surfboardsAreals, .surfboardsLongboard:
                 surfboardsSection(items: items[section] ?? [])
             case .surfCountrySummer, .surfCountryAutumn, .surfCountryWinter, .surfCountrySpring:
                 locationsSection(items: items[section] ?? [])
-            case .tipBeginner, .tipBeginnerInter, .tipIntermediate, .tipAdvanced:
+            case .tipBeginner, .tipBeginnerInter, .tipIntermediate, .tipAdvanced, .tipAreals, .tipLongboard:
                 tipsSection(items: items[section] ?? [])
             }
         }
@@ -151,21 +151,21 @@ struct RecommendedView: View {
             newItems[.surfCountrySpring] = mockService.dataService.surfCountryAdvanced.map { TripItem.surfCountry($0, .advanced) }
             newItems[.tipAdvanced] = mockService.dataService.tipAdvanced.map { TripItem.tip($0, .advanced) }
         case .areals:
-            break
+            newSections = [.surfboardsAreals, .surfCountrySpring, .tipAreals]
+            newItems[.surfboardsAreals] = mockService.dataService.surfboardsAreals.map { TripItem.surfboard($0, .areals) }
+            newItems[.surfCountrySpring] = mockService.dataService.surfCountryAreals.map { TripItem.surfCountry($0, .areals) }
+            newItems[.tipAreals] = mockService.dataService.tipAreals.map { TripItem.tip($0, .areals) }
         case .longboarding:
-            break
+            newSections = [.surfboardsLongboard, .surfCountrySummer, .tipLongboard]
+            newItems[.surfboardsLongboard] = mockService.dataService.surfboardsLongboard.map { TripItem.surfboard($0, .longboarding) }
+            newItems[.surfCountrySummer] = mockService.dataService.surfCountryLongoard.map { TripItem.surfCountry($0, .longboarding) }
+            newItems[.tipLongboard] = mockService.dataService.tipLongboarding.map { TripItem.tip($0, .longboarding) }
         case .none:
             break
         }
 
         sections = newSections
         items = newItems
-    }
-
-    private func popBack() {
-            // Implement navigation back to AddLevelView here
-        UserDefaults.standard.userWasHere = false
-        selectedLevel = nil
     }
 
     private var gradientColors: [Color] {
@@ -182,28 +182,6 @@ struct RecommendedView: View {
         ]
     }
 }
-
-struct TipView: View {
-    let tip: SurfTip
-
-    var body: some View {
-        VStack(alignment: .leading, spacing: 5) {
-            Text("Your goal: \(tip.goal)")
-                .font(.headline)
-            Text(tip.description)
-                .font(.body)
-            if !tip.descriptionLocation.isEmpty {
-                Text(tip.descriptionLocation)
-                    .font(.callout)
-                    .foregroundColor(.secondary)
-            }
-        }
-        .padding()
-        .background(Color.white)
-        .cornerRadius(10)
-    }
-}
-
 
 #Preview {
     RecommendedView()
