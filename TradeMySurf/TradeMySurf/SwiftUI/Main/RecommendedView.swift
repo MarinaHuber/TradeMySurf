@@ -9,6 +9,7 @@ import SwiftUI
 
 struct RecommendedView: View {
     @State private var selectedLevel = UserDefaults.standard.selectedLevel
+    @State private var selectedDate = UserDefaults.standard.selectedDate
     @State private var sections: [TripSection] = []
     @State private var items: [TripSection: [TripItem]] = [:]
     @EnvironmentObject private var themeManager: ThemeManager
@@ -26,7 +27,7 @@ struct RecommendedView: View {
             VStack {
                 CustomNavigationBar(ifMainView: true)
                 ScrollView {
-                    LazyVStack(spacing: 20) {
+                    LazyVStack(spacing: 10) {
                         ForEach(sections, id: \.self) { section in
                             sectionView(for: section)
                         }
@@ -67,8 +68,8 @@ struct RecommendedView: View {
             case .surfCountry(let location, _):
                 return AnyView(sectionHeader(for: location.beaufortScaleWave, subtitle: "Locations of size of the waves"))
 
-            case .tip(let tip, _):
-                return AnyView(sectionHeader(for: tip.goal, subtitle: "Your goal"))
+            case .tip(_, _):
+                return AnyView(sectionHeader(for: "\(self.selectedDate?.dateAsString(style: .long) ?? "")", subtitle: "Your date of surf"))
             }
         }
         return AnyView(Text("No items available for this section"))
@@ -82,7 +83,7 @@ struct RecommendedView: View {
             Text(subtitle)
                 .font(.footnote)
         }
-        .padding(.horizontal)
+       // .padding(.horizontal)
         .foregroundColor(Color(.white))
     }
     
