@@ -131,20 +131,19 @@ struct AnimatedTextView: View {
             let goals = Text("goal")
                 .foregroundStyle(.green).bold()
             
-            if showText {
-                Text("To assist you with surfing\nlevels and places fill in your\n\(goals) and travel \(date) please")
-                    .font(themeManager.selectedTheme.textTitleFont)
-                    .foregroundColor(.white)
-                    .multilineTextAlignment(.center)
-                    .transition(LineByLineTransition(duration: 4.0))
-                    .id(showText)
-            }
+            Text("To assist you with surfing\nlevels and places fill in your\n\(goals) and travel \(date) please")
+                .font(themeManager.selectedTheme.textTitleFont)
+                .foregroundColor(.white)
+                .multilineTextAlignment(.center)
+                .opacity(showText ? 1 : 0)
+                .textRenderer(LineByLineEffect(
+                    elapsedTime: showText ? 4.0 : 0,
+                    totalDuration: 4.0
+                ))
         }
         .onAppear {
-            DispatchQueue.main.asyncAfter(deadline: .now() + 0.5) {
-                withAnimation(.easeInOut(duration: 4.0)) {
-                    showText = true
-                }
+            withAnimation(.easeInOut(duration: 4.0)) {
+                showText = true
             }
         }
         .onTapGesture {
@@ -213,7 +212,7 @@ struct ArrowPopoverView: View {
                             .cornerRadius(4)
                         }
                         .padding(.horizontal, 10)
-                        .position(x: 150, y: 20)
+                        .position(x: 150, y: 20) // button position need dynemic size
                     }
                     .presentationCompactAdaptation(.popover)
                 }
