@@ -10,7 +10,7 @@ import SwiftUI
 
 
 struct LocationView: View {
-    @State var item: Surfboard // Assuming Surfboard is used for locations as well
+    @State var item: Surfboard
     @Namespace private var transitionId
     @State private var showingSheet = false
     @EnvironmentObject private var themeManager: ThemeManager
@@ -40,7 +40,7 @@ struct LocationView: View {
         .background(.white)
         .cornerRadius(10)
         .fullScreenCover(isPresented: $showingSheet) {
-            DetailsLocationView(transitionId: transitionId, onClose: {
+            DetailsLocationView(queryLocation: item.countryName, transitionId: transitionId, onClose: {
                 showingSheet.toggle()
             })
         }

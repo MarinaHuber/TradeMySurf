@@ -66,7 +66,7 @@ struct RecommendedView: View {
                 return AnyView(sectionHeader(for: board.level, subtitle: "Boards"))
 
             case .surfCountry(let location, _):
-                return AnyView(sectionHeader(for: location.beaufortScaleWave, subtitle: "Locations of size of the waves"))
+                return AnyView(sectionHeader(for: location.beaufortScaleWave, subtitle: "Locations for your level"))
 
             case .tip(_, _):
                 return AnyView(sectionHeader(for: "\(self.selectedDate?.dateAsString(style: .long) ?? "")", subtitle: "Your date of surf"))

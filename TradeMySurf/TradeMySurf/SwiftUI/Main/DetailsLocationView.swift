@@ -9,6 +9,7 @@ import MapKit
 import SwiftUI
 
 struct DetailsLocationView: View {
+    @State var item: Surfboard?
     @State private var region = MKCoordinateRegion(
         center: CLLocationCoordinate2D(latitude: 31.5, longitude: -9.75), // Example starting location (Morocco)
         latitudinalMeters: 6000,
@@ -16,9 +17,8 @@ struct DetailsLocationView: View {
     )
 
     @State private var annotations: [LocationAnnotation] = [] // Array to hold annotation data
-    private let queryLocation: String = "Surf Morocco" // Your search query
+    var queryLocation: String
     var transitionId: Namespace.ID
-    @State var item: Surfboard?
     var onClose: () -> Void
 
     var body: some View {
@@ -77,7 +77,7 @@ struct DetailsLocationView: View {
     }
 
     func fetchGooglePlaces() {
-        ApiMapsRequest.client.request(.search(matching: queryLocation), model: MapModel.self) { result in
+        ApiMapsRequest.client.request(.search(matching: "Surf \(queryLocation)"), model: MapModel.self) { result in
             switch result {
             case .success(let mapModel):
                 DispatchQueue.main.async {
