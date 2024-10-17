@@ -60,20 +60,25 @@ struct WelcomeAnimateView: View {
 struct WelcomeIntroText: View {
     @State private var isUserHere = false
     @EnvironmentObject private var themeManager: ThemeManager
-
+    
     var body: some View {
         VStack(spacing: 0) {
             Group {
                 Text("Welcome")
                     .font(themeManager.selectedTheme.largeTitleFont)
-
+                
                 Text("Your surf goals in one place")
                     .font(themeManager.selectedTheme.captionTxtFont)
                     .padding(.bottom, 20)
             }
             .foregroundColor(Color.white)
-            ButtonAnimateColor()
+            ButtonAnimateColor(title: "Get started", action: {
+                isUserHere.toggle()
+            }, isPresented: $isUserHere)
             Spacer()
+        }
+        .fullScreenCover(isPresented: $isUserHere) {
+            AddLevelDateView()
         }
     }
 }

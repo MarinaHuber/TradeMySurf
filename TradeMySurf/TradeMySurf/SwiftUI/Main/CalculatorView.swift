@@ -12,13 +12,14 @@ import SwiftUI
 
 
 struct CalculatorView: View {
+    @EnvironmentObject private var themeManager: ThemeManager
     @State private var materialIndex: Int = 0
     @State private var modelIndex: Int = 0
     @State private var gearIndex: Int = 0
     @State private var productionValue: Double = 0
     @State private var conditionIndex: Int = 0
 
-    @State private var hoursLabel: String = "Hours on water (0 hours)"
+    @State private var hoursLabel: String = "Hours on water (0-24 hours)"
     @State private var valuation: String = "$0.00" // Placeholder for currency format
 
     var body: some View {
@@ -28,85 +29,80 @@ struct CalculatorView: View {
                 height: 3,
                 colors: gradientColors,
                 background: Color(.pastelPrimary))
+            ScrollView {
+                VStack(spacing: 10) {
+                    CustomNavigationBar(ifMainView: false)
+                    Text("Consider these options when choosing a board for your enjoinment")
+                        .foregroundColor(Color(.white))
+                        .padding(.top, 5)
+                        .font(themeManager.selectedTheme.bodyTextFont)
+                        .multilineTextAlignment(.leading)
+                    Group {
+                        Text("Maker")
 
-            VStack(spacing: 0) {
-                CustomNavigationBar(ifMainView: false)
-                Text("Consider these options when gettig a board for your development and fun")
-                    .padding(.top, 5)
-                    .multilineTextAlignment(.center)
-                    .frame(height: 70)// Align text to the left
-                    // Segmented controls for material, model, gear, and condition
-                Group {
-                    Text("Maker")
-                        .padding(.top, 5)
-                        .frame(maxWidth: .infinity, alignment: .leading)
-                    Picker("Maker", selection: $modelIndex) {
-                        Text("Mass produced").tag(0)
-                        Text("Custom").tag(1)
-                    }
-                    .onChange(of: modelIndex) { _, _ in
-                        calculateValue()
-                    }
-                    Text("Material")
-                        .padding(.top, 5)
-                        .frame(maxWidth: .infinity, alignment: .leading)
-                    Picker("Material", selection: $materialIndex) {
-                        Text("Foam").tag(0)
-                        Text("Polyester").tag(1)
-                        Text("Epoxy").tag(2)
-                        Text("Wood").tag(3)
-                    }
-                    .onChange(of: materialIndex) { _, _ in
-                        calculateValue()
-                    }
-                    Text("Condition")
-                        .padding(.top, 5)
-                        .frame(maxWidth: .infinity, alignment: .leading)
-                    Picker("Condition", selection: $gearIndex) {
-                        Text("New").tag(0)
-                        Text("Good").tag(1)
-                        Text("Poor").tag(2)
-                    }
-                    .onChange(of: gearIndex) { _, _ in
-                        calculateValue()
-                    }
-                }
-                .padding(.top, 5)
-                .pickerStyle(SegmentedPickerStyle())
+                        Picker("Maker", selection: $modelIndex) {
+                            Text("Mass produced").tag(0)
+                            Text("Custom").tag(1)
+                        }
+                        .onChange(of: modelIndex) { _, _ in
+                            calculateValue()
+                        }
+                        Text("Material")
 
-                Text(hoursLabel)
-                    .font(.headline)
+                        Picker(selection: $materialIndex, label: EmptyView()) {
+                            Text("Foam").tag(0)
+                            Text("Polyester").tag(1)
+                            Text("Epoxy").tag(2)
+                            Text("Wood").tag(3)
+                        }
+                        .onChange(of: materialIndex) { _, _ in
+                            calculateValue()
+                        }
+                        Text("Condition")
+
+                        Picker("Condition", selection: $gearIndex) {
+                            Text("New").tag(0)
+                            Text("Good").tag(1)
+                            Text("Poor").tag(2)
+                        }
+                        .onChange(of: gearIndex) { _, _ in
+                            calculateValue()
+                        }
+                        Text(hoursLabel)
+
+                        Slider(value: $productionValue, in: 0...100, step: 1)
+                            .onChange(of: productionValue) { _, _ in
+                                calculateValue()
+                            }
+                        Text("Gear")
+                        Picker("Gear", selection: $conditionIndex) {
+                            Text("Not included").tag(0)
+                            Text("Included").tag(1)
+                        }
+                        .onChange(of: conditionIndex) { _, _ in
+                            calculateValue()
+                        }
+                    }
                     .padding(.top, 5)
+                    .padding(.horizontal)
                     .frame(maxWidth: .infinity, alignment: .leading)
-                Slider(value: $productionValue, in: 0...100, step: 1)
-                    .onChange(of: productionValue) { _, _ in
-                        calculateValue()
-                    }
-                Text("Gear").padding()
-                Picker("Gear", selection: $conditionIndex) {
-                    Text("Not included").tag(0)
-                    Text("Included").tag(1)
+                    .foregroundColor(Color(.white))
+                    .font(themeManager.selectedTheme.captionTxtFont)
+                    .pickerStyle(SegmentedPickerStyle())
                 }
-                .onChange(of: conditionIndex) { _, _ in
-                    calculateValue()
-                }
-                .pickerStyle(SegmentedPickerStyle())
-
                 Text(valuation)
-                    .font(.largeTitle)
+                    .font(themeManager.selectedTheme.normalBtnTitleFont)
+                    .foregroundColor(.white)
                     .padding(.top)
-
-                    // Calculate button
-                Button("Calculate") {
-                    calculateValue()
-                }
-                .padding()
+                Text("Average price")
+                    .padding(.top, 10)
+                    .font(themeManager.selectedTheme.textTitleFont)
+                    .foregroundColor(Color.white)
             }
-            .padding()
             .onAppear {
-                calculateValue()
+                calculateValue()  // need here
             }
-        }
+        }.toolbarBackground(.hidden, for: .tabBar)
     }
 
     private func calculateValue() {
@@ -146,9 +142,7 @@ struct CalculatorView: View {
     }
 }
 
-    //struct PriceCalculatorView_Previews: PreviewProvider {
-    //    static var previews: some View {
-    //        CalculatorView(surboards: )
-    //    }
-    //}
+#Preview {
+    CalculatorView()
+}
 

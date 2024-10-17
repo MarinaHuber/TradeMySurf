@@ -37,9 +37,8 @@ struct GuideView: View {
                 CustomNavigationBar(ifMainView: false)
                 List {
                     HStack {
-                        Spacer() // Pushes the title to the center
                         Text("Surf FAQ")
-                            .multilineTextAlignment(.center)
+                            .multilineTextAlignment(.leading)
                             .font(themeManager.selectedTheme.textTitleFont)
                         Spacer()
                     }
@@ -79,7 +78,8 @@ struct GuideView: View {
                 .padding()
 
             }
-        }
+        }.toolbarBackground(.hidden, for: .tabBar)
+
     }
 
     private var gradientColors: [Color] {

@@ -9,24 +9,34 @@
 import SwiftUI
 
 struct ButtonAnimateColor: View {
+    let title: String
+    let action: () -> Void
+    @Binding var isPresented: Bool?
     @State private var gradient = [Color(.pastelPrimary), .blue, Color(.pastelPrimary)]
     @State private var startPoint = UnitPoint(x: 0, y: 0)
     @State private var endPoint = UnitPoint(x: 1, y: 0)
-    @State var isUserHere: Bool = false
+    @State var userWasHere: Bool = false
     @State private var animationProgress: Double = 0.0
     @EnvironmentObject private var themeManager: ThemeManager
 
+    init(title: String, action: @escaping () -> Void, isPresented: Binding<Bool>? = nil) {
+        self.title = title
+        self.action = action
+        self._isPresented = isPresented.map { .constant($0.wrappedValue) } ?? .constant(nil)
+    }
 
     var body: some View {
         Button(action: {
-            self.isUserHere.toggle()
+          //  self.userWasHere.toggle()
+            self.isPresented = isPresented != nil ? true : self.isPresented
+            action()
         }) {
-            Text("Get started")
+            Text(title)
                 .font(themeManager.selectedTheme.textTitleFont)
                 .padding()
                 .foregroundColor(Color.white)
         }
-        .opacity(isUserHere ? 0 : 1)
+        .opacity(userWasHere ? 0 : 1)
         .frame(width: 300, height: 40, alignment: .center)
         .background(LinearGradient(gradient: Gradient(colors: self.gradient), startPoint: self.startPoint, endPoint: self.endPoint)
             .clipShape(RoundedRectangle(cornerRadius: 12.0))
@@ -43,12 +53,9 @@ struct ButtonAnimateColor: View {
         .onAppear {
             animationProgress = 1.0
         }
-        .fullScreenCover(isPresented: $isUserHere, content: {
-            AddLevelDateView()
-        })
     }
 }
 
 #Preview {
-    ButtonAnimateColor()
+    ButtonAnimateColor(title: "Calculate", action: {})
 }
