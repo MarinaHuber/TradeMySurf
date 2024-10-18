@@ -41,17 +41,17 @@ public struct RecommendedTripArray {
 			]
     }()
 	public var surfboardsAdvanced: [Surfboard] = {
-        return [Surfboard(level: "Advanced", volume: "40 L", imageName: "pro1", weightUnit: "<", beaufortScaleWave: "1 - 4.4", countryName: "France", continentName: "Surf Europe", imageFlag: "french", weight: 50), Surfboard(level: "Advanced", volume: "50 L", imageName: "pro", weightUnit: "<", beaufortScaleWave: "", countryName: "France", continentName: "Surf Europe", imageFlag: "french", weight: 50), Surfboard(level: "Advanced", volume: "50 L", imageName: "pro1", weightUnit: "<", beaufortScaleWave: "", countryName: "France", continentName: "Surf Europe", imageFlag: "french", weight: 50)
+        return [Surfboard(level: "Advanced", volume: "40 L", imageName: "pro1", weightUnit: "<", beaufortScaleWave: "1 - 4.4", countryName: "France", continentName: "Surf Europe", imageFlag: "french", weight: 50), Surfboard(level: "Advanced", volume: "50 L", imageName: "pro", weightUnit: "<", beaufortScaleWave: "", countryName: "France", continentName: "Surf Europe", imageFlag: "french", weight: 50), Surfboard(level: "Advanced", volume: "50 L", imageName: "pro", weightUnit: "<", beaufortScaleWave: "", countryName: "France", continentName: "Surf Europe", imageFlag: "french", weight: 50)
 			]
     }()
     public var surfboardsAreals: [Surfboard] = {
-        return [Surfboard(level: "Areals", volume: "40 L", imageName: "inter1", weightUnit: "<", beaufortScaleWave: " 0 - 3.4 m", countryName: "France", continentName: "Surf Europe", imageFlag: "french", weight: 40),
-                Surfboard(level: "Areals", volume: "40 L", imageName: "inter2", weightUnit: "<", beaufortScaleWave: "", countryName: "France", continentName: "Surf Europe", imageFlag: "french", weight: 40),
-                Surfboard(level: "Areals", volume: "40 L", imageName: "inter3", weightUnit: "<", beaufortScaleWave: "", countryName: "France", continentName: "Surf Europe", imageFlag: "french", weight: 40)
+        return [Surfboard(level: "Areals", volume: "40 L", imageName: "3.3", weightUnit: "<", beaufortScaleWave: " 0 - 3.4 m", countryName: "France", continentName: "Surf Europe", imageFlag: "french", weight: 40),
+                Surfboard(level: "Areals", volume: "40 L", imageName: "3.1", weightUnit: "<", beaufortScaleWave: "", countryName: "France", continentName: "Surf Europe", imageFlag: "french", weight: 40),
+                Surfboard(level: "Areals", volume: "40 L", imageName: "7", weightUnit: "<", beaufortScaleWave: "", countryName: "France", continentName: "Surf Europe", imageFlag: "french", weight: 40)
         ]
     }()
     public var surfboardsLongboard: [Surfboard] = {
-        return [Surfboard(level: "Longboarding", volume: "70 L", imageName: "pro1", weightUnit: "<", beaufortScaleWave: "0 - 1", countryName: "France", continentName: "Surf Europe", imageFlag: "french", weight: 70), Surfboard(level: "Longboarding", volume: "70 L", imageName: "pro", weightUnit: "<", beaufortScaleWave: "", countryName: "France", continentName: "Surf Europe", imageFlag: "french", weight: 70), Surfboard(level: "Longboarding", volume: "70 L", imageName: "pro1", weightUnit: "<", beaufortScaleWave: "", countryName: "France", continentName: "Surf Europe", imageFlag: "french", weight: 70)
+        return [Surfboard(level: "Longboarding", volume: "70 L", imageName: "6", weightUnit: "<", beaufortScaleWave: "0 - 1", countryName: "France", continentName: "Surf Europe", imageFlag: "french", weight: 70), Surfboard(level: "Longboarding", volume: "70 L", imageName: "7", weightUnit: "<", beaufortScaleWave: "", countryName: "France", continentName: "Surf Europe", imageFlag: "french", weight: 70), Surfboard(level: "Longboarding", volume: "70 L", imageName: "5-2", weightUnit: "<", beaufortScaleWave: "", countryName: "France", continentName: "Surf Europe", imageFlag: "french", weight: 70)
         ]
     }()
 

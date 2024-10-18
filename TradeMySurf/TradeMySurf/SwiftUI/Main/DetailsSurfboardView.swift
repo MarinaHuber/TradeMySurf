@@ -15,41 +15,44 @@ struct DetailsSurfboardView: View {
     @EnvironmentObject private var themeManager: ThemeManager
 
     var body: some View {
-        ScrollView {
-            VStack(alignment: .leading) {
-                if let imageName = item?.imageName, !imageName.isEmpty {
-                    Image(imageName)
-                        .resizable()
-                        .scaledToFill()
-                        .clipped()
-                        .frame(maxWidth: .infinity, maxHeight: .infinity)
-                        .padding(.bottom, 20)
-                        .overlay(alignment: .topLeading) {
-                            Group {
+        GeometryReader { geometry in
+            ScrollView {
+                VStack(spacing: 0) {
+                    if let imageName = item?.imageName, !imageName.isEmpty {
+                        Spacer()
+                            .frame(height: 20)
+                        Image(imageName)
+                            .resizable()
+                            .scaledToFill()
+                            .frame(width: geometry.size.width, height: geometry.size.height * 0.75)
+                            .overlay(alignment: .topLeading) {
                                 closeButton
+                                    .padding()
+                                    .safeAreaInset(edge: .top) {
+                                        Spacer()
+                                            .frame(height: 20)
+                                    }
                             }
-                            .padding()
-                            .safeAreaInset(edge: .top) {
-                                Spacer()
-                                    .frame(height: 20) // Add some extra top space
-                            }
-                        }
-                } else { }
+                    }
 
-                Group {
-                    Text("Board for - \(item?.level ?? "Unknown Level")")
-                        .font(themeManager.selectedTheme.normalBtnTitleFont)
+                    VStack(alignment: .leading, spacing: 5) {
+                        Text("Board for - \(item?.level ?? "Unknown Level")")
+                            .font(themeManager.selectedTheme.normalBtnTitleFont)
 
-                    Text("Volume: \(item?.volume ?? "N/A")")
-                        .font(themeManager.selectedTheme.regularTitleFont)
+                        Text("Volume: \(item?.volume ?? "N/A")")
+                            .font(themeManager.selectedTheme.regularTitleFont)
 
-                    Text("Weight: \(item?.weight ?? 0) kg")
-                        .font(themeManager.selectedTheme.regularTitleFont)
-
-                }.padding(.leading, 25)
+                        Text("Weight: \(item?.weight ?? 0) kg")
+                            .font(themeManager.selectedTheme.regularTitleFont)
+                    }
+                    .padding(15)
+                    .cornerRadius(10)
+                    .frame(minHeight: geometry.size.height * 0.25)
+                    .background(Color.white)
+                }
             }
+            .edgesIgnoringSafeArea(.all)
         }
-        .edgesIgnoringSafeArea(.top)
         .navigationTransition(.zoom(sourceID: item, in: transitionId))
     }
 
