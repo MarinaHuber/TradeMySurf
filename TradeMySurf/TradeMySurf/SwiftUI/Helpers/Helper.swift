@@ -87,17 +87,17 @@ struct MeshGradientView: View {
     // MARK: - iOS 18+ MeshGradient Implementation
     @ViewBuilder
     private func iOS18MeshGradientView() -> some View {
-#if canImport(MeshGradient)
-        MeshGradient(
-            width: width,
-            height: height,
-            locations: .points(gradientPoints),
-            colors: .colors(colors),
-            background: background,
-            smoothsColors: true
-        )
-        .ignoresSafeArea()
-#endif
+        if #available(iOS 18, *) {
+            MeshGradient(
+                width: width,
+                height: height,
+                locations: .points(gradientPoints),
+                colors: .colors(colors),
+                background: background,
+                smoothsColors: true
+            )
+            .ignoresSafeArea()
+        }
     }
 
     // MARK: - Fallback plain color for iOS 17 and Below
