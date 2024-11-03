@@ -78,36 +78,36 @@ extension Text.Layout {
     }
 }
 
-@available(iOS 18.0, *)
-struct LineByLineTransition: Transition {
-    let duration: TimeInterval
-    init(duration: TimeInterval = 1.0) {
-        self.duration = duration
-    }
-
-    func body(content: Content, phase: TransitionPhase) -> some View {
-        let elapsedTime = phase.isIdentity ? duration : 0
-        let renderer = LineByLineEffect(
-            elapsedTime: elapsedTime,
-            totalDuration: duration
-        )
-
-        content.transaction { t in
-            if !t.disablesAnimations {
-                t.animation = .linear(duration: duration)
-            }
-        } body: { view in
-            view.textRenderer(renderer)
-        }
-    }
-}
+//@available(iOS 18.0, *)
+//struct LineByLineTransition: Transition {
+//    let duration: TimeInterval
+//    init(duration: TimeInterval = 1.0) {
+//        self.duration = duration
+//    }
+//
+//    func body(content: Content, phase: TransitionPhase) -> some View {
+//        let elapsedTime = phase.isIdentity ? duration : 0
+//        let renderer = LineByLineEffect(
+//            elapsedTime: elapsedTime,
+//            totalDuration: duration
+//        )
+//
+//        content.transaction { t in
+//            if !t.disablesAnimations {
+//                t.animation = .linear(duration: duration)
+//            }
+//        } body: { view in
+//            view.textRenderer(renderer)
+//        }
+//    }
+//}
 
 struct AddLevelDateView: View {
     @State private var navigateToNext = false
     
     var body: some View {
         NavigationStack {
-            VStack(spacing: 20) {
+            VStack(spacing: 0) {
                 ArrowPopoverView(navigateToNext: $navigateToNext)
             }
             .edgesIgnoringSafeArea(.all)
@@ -129,16 +129,8 @@ struct AnimatedTextView: View {
 
     var body: some View {
         VStack(spacing: 10) {
-                // Define the text components
-            let dateText = Text("date")
-                .foregroundStyle(.teal)
-                .bold()
-            let goalsText = Text("goal")
-                .foregroundStyle(.green)
-                .bold()
-
                 // Define the main message as a single variable
-            let mainMessage = "To assist you with surfing\nlevels and places, fill in your\n\(goalsText) and travel \(dateText) please"
+            let mainMessage = "To assist you with surfing\nlevels and places, fill in your\n goal and travel date please"
 
                 // Base Text view with common modifiers
             let baseTextView = Text(mainMessage)
@@ -158,6 +150,7 @@ struct AnimatedTextView: View {
             } else {
                     // iOS 17 and below with regular Text
                 baseTextView
+                    .padding(.top, 30)
             }
         }
         .onAppear {

@@ -27,7 +27,7 @@ struct CustomNavigationBar: View {
     var ifMainView: Bool
 
     var body: some View {
-            // Custom navigation bar
+        // Custom navigation bar
         ZStack {
             Image("logo_wave")
                 .resizable()
@@ -65,7 +65,7 @@ struct MeshGradientView: View {
     let height: Int
     let colors: [Color]
     let background: Color
-    
+
     private var gradientPoints: [SIMD2<Float>] {
         var points: [SIMD2<Float>] = []
         for y in 0..<height {
@@ -76,18 +76,41 @@ struct MeshGradientView: View {
         return points
     }
 
-//    var body: some View {
-//        MeshGradient(
-//            width: width,
-//            height: height,
-//            locations: .points(gradientPoints),
-//            colors: .colors(colors),
-//            background: background,
-//            smoothsColors: true
-//        )
-//        .ignoresSafeArea()
-//    }
+    var body: some View {
+        if #available(iOS 18, *) {
+            iOS18MeshGradientView()
+        } else {
+            generateFallbackGradient()
+        }
+    }
+
+    // MARK: - iOS 18+ MeshGradient Implementation
+    @ViewBuilder
+    private func iOS18MeshGradientView() -> some View {
+#if canImport(MeshGradient)
+        MeshGradient(
+            width: width,
+            height: height,
+            locations: .points(gradientPoints),
+            colors: .colors(colors),
+            background: background,
+            smoothsColors: true
+        )
+        .ignoresSafeArea()
+#endif
+    }
+
+    // MARK: - Fallback plain color for iOS 17 and Below
+    @ViewBuilder
+    private func generateFallbackGradient() -> some View {
+        ZStack {
+            background
+                .foregroundColor(Color(.pastelPrimary))
+                .ignoresSafeArea()
+        }
+    }
 }
+
 
     // Define the view modifier for the navigation transition
 struct IfAvailableNavigationTransition: ViewModifier {
