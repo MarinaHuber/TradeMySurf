@@ -23,14 +23,14 @@ struct DetailsLocationView: View {
 
     var body: some View {
         ZStack(alignment: .topTrailing) {
-                // Refactored Map component
+            // Refactored Map component
             mapView
         }
         .onAppear {
-            fetchGooglePlaces() // Fetch the places when the view appears
+            fetchGooglePlaces()
         }
-        .navigationTransition(.zoom(sourceID: item, in: transitionId))
-    }
+        .ifAvailableNavigationTransition(item: item, transitionId: transitionId)
+    }    
 
     private var mapView: some View {
         Map {
@@ -139,3 +139,9 @@ struct LocationAnnotation: Identifiable {
     DetailsLocationView(queryLocation: "Surf Africa", transitionId: Namespace().wrappedValue, onClose: { })
 }
 
+    // Extension for applying the modifier
+extension View {
+    func ifAvailableNavigationTransition(item: Surfboard?, transitionId: Namespace.ID) -> some View {
+        self.modifier(IfAvailableNavigationTransition(item: item, transitionId: transitionId))
+    }
+}

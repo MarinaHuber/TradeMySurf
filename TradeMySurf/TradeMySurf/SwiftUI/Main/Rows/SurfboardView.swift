@@ -19,10 +19,10 @@ struct SurfboardView: View {
             showingSheet.toggle()
         } label: {
             if let surfboard = item {
-                Image(surfboard.imageName)//images are Strings in assets named by numbers passed inside MockService data
+                Image(surfboard.imageName)
                     .resizable()
                     .scaledToFill()
-                    .frame(maxWidth: .infinity, maxHeight: .infinity) // Fill the maximum width and height of the parent
+                    .frame(maxWidth: .infinity, maxHeight: .infinity)
                     .clipped()
                     .overlay(alignment: .bottom) {
                         VStack(alignment: .leading) {
@@ -40,18 +40,52 @@ struct SurfboardView: View {
                     }
             }
         }
-        .matchedTransitionSource(id: item, in: transitionId)
         .frame(width: 120)
         .cornerRadius(10)
         .buttonStyle(.plain)
         .shadow(color: .gray.opacity(0.7), radius: 12)
-        .fullScreenCover(isPresented: $showingSheet) {
-            DetailsSurfboardView(transitionId: transitionId, item: item, onClose: {
-                showingSheet.toggle()
-            })
+
+            // Conditionally apply iOS 18+ matched transition and full-screen cover
+        .applyFullScreenCover(for: item, showingSheet: $showingSheet, transitionId: transitionId)
+    }
+}
+
+    // Extension to manage full-screen cover conditionally
+extension View {
+    @ViewBuilder
+    func applyFullScreenCover(for item: Surfboard?, showingSheet: Binding<Bool>, transitionId: Namespace.ID) -> some View {
+        if #available(iOS 18, *) {
+            self
+                .matchedTransitionSource(id: item, in: transitionId)
+                .fullScreenCover(isPresented: showingSheet) {
+                    DetailsSurfboardView(transitionId: transitionId, item: item, onClose: {
+                        showingSheet.wrappedValue.toggle()
+                    })
+                }
+        } else {
+            self
+                .fullScreenCover(isPresented: showingSheet) {
+                    DetailsSurfboardView(transitionId: transitionId, item: item, onClose: {
+                        showingSheet.wrappedValue.toggle()
+                    })
+                }
         }
     }
 }
+
+
+    // Updated conditionalModifier helper
+extension View {
+    @ViewBuilder
+    func conditionalModifier<Content: View>(isIOS18: Bool = false, isBelowIOS18: Bool = false, @ViewBuilder content: (Self) -> Content) -> some View {
+        if isIOS18 || isBelowIOS18 {
+            content(self)
+        } else {
+            self
+        }
+    }
+}
+
 
 #Preview {
     SurfboardView()

@@ -35,7 +35,8 @@ struct LocationView: View {
                 }
             }
         }
-        .matchedTransitionSource(id: item, in: transitionId)
+            // Conditional application of matchedTransitionSource based on iOS version
+        .applyMatchedTransition(for: item, transitionId: transitionId)
         .padding()
         .background(.white)
         .cornerRadius(10)
@@ -47,24 +48,14 @@ struct LocationView: View {
     }
 }
 
-
-struct TipView: View {
-    let tip: SurfTip
-
-    var body: some View {
-        VStack(alignment: .leading, spacing: 5) {
-            Text("Your goal: \(tip.goal)")
-                .font(.headline)
-            Text(tip.description)
-                .font(.body)
-            if !tip.descriptionLocation.isEmpty {
-                Text(tip.descriptionLocation)
-                    .font(.callout)
-                    .foregroundColor(.secondary)
-            }
+    // View extension to conditionally apply the matchedTransitionSource
+extension View {
+    func applyMatchedTransition(for item: Surfboard, transitionId: Namespace.ID) -> some View {
+        if #available(iOS 18, *) {
+                // You can use `self` here because this method doesn't need to return a different type
+            return self.matchedTransitionSource(id: item, in: transitionId)
+        } else {
+            return self // Just return self if iOS version is below 18
         }
-        .padding()
-        .background(Color.white)
-        .cornerRadius(10)
     }
 }

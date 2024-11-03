@@ -78,6 +78,7 @@ extension Text.Layout {
     }
 }
 
+@available(iOS 18.0, *)
 struct LineByLineTransition: Transition {
     let duration: TimeInterval
     init(duration: TimeInterval = 1.0) {
@@ -119,6 +120,8 @@ struct AddLevelDateView: View {
     }
 }
 
+import SwiftUI
+
 struct AnimatedTextView: View {
     @Binding var isPopoverPresented: Bool
     @State private var showText = false
@@ -126,20 +129,36 @@ struct AnimatedTextView: View {
 
     var body: some View {
         VStack(spacing: 10) {
-            let date = Text("date")
-                .foregroundStyle(.teal).bold()
-            let goals = Text("goal")
-                .foregroundStyle(.green).bold()
-            
-            Text("To assist you with surfing\nlevels and places fill in your\n\(goals) and travel \(date) please")
+                // Define the text components
+            let dateText = Text("date")
+                .foregroundStyle(.teal)
+                .bold()
+            let goalsText = Text("goal")
+                .foregroundStyle(.green)
+                .bold()
+
+                // Define the main message as a single variable
+            let mainMessage = "To assist you with surfing\nlevels and places, fill in your\n\(goalsText) and travel \(dateText) please"
+
+                // Base Text view with common modifiers
+            let baseTextView = Text(mainMessage)
                 .font(themeManager.selectedTheme.textTitleFont)
                 .foregroundColor(.white)
                 .multilineTextAlignment(.center)
                 .opacity(showText ? 1 : 0)
-                .textRenderer(LineByLineEffect(
-                    elapsedTime: showText ? 4.0 : 0,
-                    totalDuration: 4.0
-                ))
+
+                // Conditional rendering based on iOS version
+            if #available(iOS 18, *) {
+                    // iOS 18 and above with LineByLineEffect
+                baseTextView
+                    .textRenderer(LineByLineEffect(
+                        elapsedTime: showText ? 4.0 : 0,
+                        totalDuration: 4.0
+                    ))
+            } else {
+                    // iOS 17 and below with regular Text
+                baseTextView
+            }
         }
         .onAppear {
             withAnimation(.easeInOut(duration: 4.0)) {
@@ -151,6 +170,7 @@ struct AnimatedTextView: View {
         }
     }
 }
+
 
 struct ArrowPopoverView: View {
     @Binding var navigateToNext: Bool

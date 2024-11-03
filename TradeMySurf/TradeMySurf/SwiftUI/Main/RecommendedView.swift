@@ -168,6 +168,12 @@ struct RecommendedView: View {
         items = newItems
     }
 
+    private func popBack() {
+            // Implement navigation back to AddLevelView here
+        UserDefaults.standard.userWasHere = false
+        selectedLevel = nil
+    }
+
     private var gradientColors: [Color] {
         [
             Color(red: 1.00, green: 0.42, blue: 0.42),
@@ -182,6 +188,28 @@ struct RecommendedView: View {
         ]
     }
 }
+
+struct TipView: View {
+    let tip: SurfTip
+
+    var body: some View {
+        VStack(alignment: .leading, spacing: 5) {
+            Text("Your goal: \(tip.goal)")
+                .font(.headline)
+            Text(tip.description)
+                .font(.body)
+            if !tip.descriptionLocation.isEmpty {
+                Text(tip.descriptionLocation)
+                    .font(.callout)
+                    .foregroundColor(.secondary)
+            }
+        }
+        .padding()
+        .background(Color.white)
+        .cornerRadius(10)
+    }
+}
+
 
 #Preview {
     RecommendedView()

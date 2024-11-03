@@ -75,16 +75,30 @@ struct MeshGradientView: View {
         }
         return points
     }
-    
-    var body: some View {
-        MeshGradient(
-            width: width,
-            height: height,
-            locations: .points(gradientPoints),
-            colors: .colors(colors),
-            background: background,
-            smoothsColors: true
-        )
-        .ignoresSafeArea()
+
+//    var body: some View {
+//        MeshGradient(
+//            width: width,
+//            height: height,
+//            locations: .points(gradientPoints),
+//            colors: .colors(colors),
+//            background: background,
+//            smoothsColors: true
+//        )
+//        .ignoresSafeArea()
+//    }
+}
+
+    // Define the view modifier for the navigation transition
+struct IfAvailableNavigationTransition: ViewModifier {
+    var item: Surfboard?
+    var transitionId: Namespace.ID
+
+    func body(content: Content) -> some View {
+        if #available(iOS 18, *) {
+            content.navigationTransition(.zoom(sourceID: item, in: transitionId))
+        } else {
+            content // Just return the content if the iOS version is below 18
+        }
     }
 }

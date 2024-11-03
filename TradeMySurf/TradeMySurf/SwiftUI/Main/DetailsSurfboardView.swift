@@ -53,7 +53,7 @@ struct DetailsSurfboardView: View {
             }
             .edgesIgnoringSafeArea(.all)
         }
-        .navigationTransition(.zoom(sourceID: item, in: transitionId))
+        .ifAvailableNavigationTransition(item: item, transitionId: transitionId)
     }
 
     private var closeButton: some View {
