@@ -16,52 +16,70 @@ struct DetailsSurfboardView: View {
 
     var body: some View {
         GeometryReader { geometry in
-            ScrollView {
-                VStack(spacing: 0) {
-                    if let imageName = item?.imageName, !imageName.isEmpty {
-                        Spacer()
-                            .frame(height: 20)
-                        Image(imageName)
-                            .resizable()
-                            .scaledToFill()
-                            .frame(width: geometry.size.width, height: geometry.size.height * 0.75)
-                            .overlay(alignment: .topLeading) {
-                                closeButton
-                                    .padding()
-                                    .safeAreaInset(edge: .top) {
-                                        Spacer()
-                                            .frame(height: 20)
+            ZStack(alignment: .topLeading) {
+                ScrollView {
+                    ZStack(alignment: .topLeading) {
+                        closeButton
+                            .zIndex(1)
+                            .padding(.top, 20)
+
+                            // Background image with Info View overlay
+                        if let imageName = item?.imageName, !imageName.isEmpty {
+                            Image(imageName)
+                                .resizable()
+                                .scaledToFill()
+                                .frame(width: geometry.size.width)
+                                .clipped() // Prevent overflow
+                                .ignoresSafeArea(edges: .top)
+                                .overlay(
+                                    // Info View positioned above the image
+                                    VStack(alignment: .leading, spacing: 5) {
+                                        Text("Board for - \(item?.level ?? "Unknown Level")")
+                                            .font(themeManager.selectedTheme.normalBtnTitleFont)
+
+                                        Text("Volume: \(item?.volume ?? "N/A")")
+                                            .font(themeManager.selectedTheme.regularTitleFont)
+
+                                        Text("Weight: \(item?.weight ?? 0) kg")
+                                            .font(themeManager.selectedTheme.regularTitleFont)
                                     }
-                            }
-                    }
+                                        .padding(15)
+                                        .frame(width: geometry.size.width * 0.8)
+                                        .background(Color.white.opacity(0.8)) // Semi-transparent background
+                                        .cornerRadius(10)
+                                        .padding(.top, 90), // Space from the top
+                                    alignment: .top
+                                )
+                        }
 
-                    VStack(alignment: .leading, spacing: 5) {
-                        Text("Board for - \(item?.level ?? "Unknown Level")")
-                            .font(themeManager.selectedTheme.normalBtnTitleFont)
+                            // Additional content can go here if needed
+                        Spacer() // This can help push content down to allow for scrolling
 
-                        Text("Volume: \(item?.volume ?? "N/A")")
-                            .font(themeManager.selectedTheme.regularTitleFont)
-
-                        Text("Weight: \(item?.weight ?? 0) kg")
-                            .font(themeManager.selectedTheme.regularTitleFont)
-                    }
-                    .padding(15)
-                    .cornerRadius(10)
-                    .frame(minHeight: geometry.size.height * 0.25)
-                    .background(Color.white)
+                    } // End of VStack
                 }
+                .ignoresSafeArea(edges: .top)
+
+                    // Premium View centered at the bottom
+                PremiumView()
+                    .frame(width: geometry.size.width * 0.9, height: min(geometry.size.height * 0.5, 300)) // Set max height
+                    .padding(.bottom, 30) // Space from the bottom
+                    .cornerRadius(16)
+                    .shadow(radius: 10) // Optional shadow for floating effect
+                    .position(x: geometry.size.width / 2, y: geometry.size.height - (min(geometry.size.height * 0.5, 300) / 2) - 30) // Centered horizontally at the bottom
+
             }
-            .edgesIgnoringSafeArea(.all)
+            .edgesIgnoringSafeArea(.bottom)
+            .ifAvailableNavigationTransition(item: item, transitionId: transitionId)
         }
-        .ifAvailableNavigationTransition(item: item, transitionId: transitionId)
     }
+
 
     private var closeButton: some View {
         Button {
             onClose()
         } label: {
             Image(systemName: "xmark")
-                .foregroundStyle(.white)
+                .foregroundStyle(.black)
                 .fontWeight(.semibold)
                 .padding(8)
         }

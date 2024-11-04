@@ -18,7 +18,6 @@ struct GuideView: View {
         ("Where can I find surf videos and apps?", "Great video content is streamed daily at WLC which is the official world surfing league chanel and also has the app version, another one for videos is Nobody Surf. Most used app is MagicSeadweed useful for finding waves, wind and swell. Some other handy apps: Da Surf Engine, Endangered waves (for environmental issues), Dorsal (for shark detection), Surftracker (dokumenting surf sessions), Surfline (weather forecast)."),
         ("What is surfboard volume?", "Volume is important element to consider when choosing a surfboard. It's the factor that can most affect the number of waves you catch, and how much fun you have in water.But it isn't everything. Understanding how the curved shapes and the surfboard's dimensions affect your surfing will also help you find better surfboardsfor your surf level, and have positive impact on your progression. Volume is calculated in liters and it takes yout weight and height to do so, check the online calculator and find out your ideal board vloume."),
         ("What is surfboard lenght?", "Traditionally lenght is something that you get accustom to and is hard to change, tipically there are few of those: longboard, funboard, fish and shortboard but it is really individally different for every surfer out there. Surfers get so consumed on a certain lenght of a board that they are riding instead of focusing on the rails, rockers and concaves of the board shape. These can change a whole loose feeling and performance of the board more than the lenght alone."),
-        ("What is Beaufort scale measure for wave height?", "Beaufort scale measure is important element to consider when choosing a surf location. It's the factor that can most affect the size and the power of waves at the sea. But it isn't everything. Understanding the scale ranging from 0-17 is understanding the global wind speed to observed conditions at sea and land."),
         ("How to read waves?", "“How do I know if the wave is a right or a left”? “How can I know when a wave is going to break”? “What is a closeout”? These are very common questions in surfing. One of the most important aspects of wave reading is being able to identify (and properly name) the different parts of a wave. Lip: The top part of the wave, Shoulder (or “Face”): The part of a wave that has not broken yet, Curl: The advanced “concave” part, White water (or Foam): After the wave breaks, Impact Zone: The spot where the lip crashes down on the flat water, Tube (or Barrel) and Peak: The highest point on a wave, also the first part of the wave that breaks."),
         ("What means trimming down the middle line of the wave?", "Surfers “trim” in order to adjust to the shape of a wave, going slightly higher or lower to surf the wave shoulder with the necessary speed to stay in the optimal position. These small adjustments are made by slightly leaning your body and putting a bit of weight on either your heels or toes, especially over the front foot. Trimming can’t be used to change direction. Fast breaking wave: Trimming, slow breaking waves: Carving.")
     ]
@@ -30,7 +29,7 @@ struct GuideView: View {
             MeshGradientView(
                 width: 3,
                 height: 3,
-                colors: gradientColors,
+                colors: ColorPalette.gradientColors,
                 background: Color(.pastelPrimary)
             )
             VStack {
@@ -80,20 +79,6 @@ struct GuideView: View {
             }
         }.toolbarBackground(.hidden, for: .tabBar)
 
-    }
-
-    private var gradientColors: [Color] {
-        [
-            Color(red: 1.00, green: 0.42, blue: 0.42),
-            Color(red: 1.00, green: 0.55, blue: 0.00),
-            Color(red: 1.00, green: 0.27, blue: 0.00),
-            Color(red: 1.00, green: 0.41, blue: 0.71),
-            Color(red: 0.85, green: 0.44, blue: 0.84),
-            Color(red: 0.54, green: 0.17, blue: 0.89),
-            Color(red: 0.29, green: 0.00, blue: 0.51),
-            Color(red: 0.00, green: 0.00, blue: 0.55),
-            Color(red: 0.10, green: 0.10, blue: 0.44)
-        ]
     }
 }
 

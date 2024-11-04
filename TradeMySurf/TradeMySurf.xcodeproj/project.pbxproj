@@ -13,6 +13,7 @@
 		9C193AFB23A2ACA7000DE1AB /* coin-wallet.json in Resources */ = {isa = PBXBuildFile; fileRef = 9C193AFA23A2ACA7000DE1AB /* coin-wallet.json */; };
 		9C31EB8A23E3AA2100060143 /* DetailViewController.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9C31EB8923E3AA2100060143 /* DetailViewController.storyboard */; };
 		9C31EB8C23E3AB1A00060143 /* DetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C31EB8B23E3AB1A00060143 /* DetailViewController.swift */; };
+		9C3763442CD8012400A347EE /* AdsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C3763432CD8012400A347EE /* AdsView.swift */; };
 		9C3CC3DE23C75EE800359368 /* SupplementaryViews.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C3CC3DD23C75EE800359368 /* SupplementaryViews.swift */; };
 		9C3CF4F42CA58F7C00E5D4E3 /* AvenirNextCyr-Demi.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 9CAECD5C2BE539E300F0E7AC /* AvenirNextCyr-Demi.ttf */; };
 		9C3CF4F52CA58F7C00E5D4E3 /* AvenirNextCyr-Heavy.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 9CAECD582BE539E300F0E7AC /* AvenirNextCyr-Heavy.ttf */; };
@@ -130,6 +131,7 @@
 		9C193AFA23A2ACA7000DE1AB /* coin-wallet.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = "coin-wallet.json"; sourceTree = "<group>"; };
 		9C31EB8923E3AA2100060143 /* DetailViewController.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = DetailViewController.storyboard; sourceTree = "<group>"; };
 		9C31EB8B23E3AB1A00060143 /* DetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailViewController.swift; sourceTree = "<group>"; };
+		9C3763432CD8012400A347EE /* AdsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AdsView.swift; sourceTree = "<group>"; };
 		9C3CC3DD23C75EE800359368 /* SupplementaryViews.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SupplementaryViews.swift; sourceTree = "<group>"; };
 		9C45E660234D238E0054A5FD /* SurfTripViewController.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = SurfTripViewController.storyboard; sourceTree = "<group>"; };
 		9C467C66234F2A7D009F4D58 /* Surfboard.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Surfboard.swift; sourceTree = "<group>"; };
@@ -490,6 +492,7 @@
 				9C8939B32CBC411F008B7A45 /* ButtonAnimateColor.swift */,
 				9C8939B72CBC418B008B7A45 /* AlertSwiftUIView.swift */,
 				9C8939B52CBC414E008B7A45 /* AlertButtonView.swift */,
+				9C3763432CD8012400A347EE /* AdsView.swift */,
 			);
 			path = SwiftUIViews;
 			sourceTree = "<group>";
@@ -916,6 +919,7 @@
 				9C8F330223994CDD0070751F /* FontHelper.swift in Sources */,
 				9C8939B22CBC40C4008B7A45 /* WelcomeView.swift in Sources */,
 				9C89B61C23DA40D400DB8DDF /* UIView+Shadow.swift in Sources */,
+				9C3763442CD8012400A347EE /* AdsView.swift in Sources */,
 				9CF1CC24241136950067533C /* TabBarVC.swift in Sources */,
 				9CF77BDC24101D8300C92725 /* TabbarEntry.swift in Sources */,
 				9C8939AE2CBC405B008B7A45 /* RootViewApp.swift in Sources */,
