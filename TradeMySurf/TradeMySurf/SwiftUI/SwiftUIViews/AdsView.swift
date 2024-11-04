@@ -16,8 +16,10 @@ struct PremiumView: View {
                 // Header Text
             Text("Get more surfboard goodies with Premium")
                 .font(.system(size: 22, weight: .bold))
-                .foregroundColor(.green)
+                .padding(.top, 20)
+                .foregroundColor(.white)
                 .multilineTextAlignment(.center)
+                .fixedSize(horizontal: false, vertical: true)
 
                 // Subtitle
             Text("AI combined with surfers analytics to fuel your surf goals.")
@@ -25,61 +27,60 @@ struct PremiumView: View {
                 .foregroundColor(.white)
                 .multilineTextAlignment(.center)
                 .padding(.horizontal, 24)
+                .fixedSize(horizontal: false, vertical: true)
 
                 // Plan Selection Tabs
             HStack {
                 Button(action: {
-                    isPremiumSelected = false
                 }) {
                     Text("Basic")
                         .font(.system(size: 16, weight: .semibold))
-                        .foregroundColor(isPremiumSelected ? .white : .blue)
+                        .foregroundColor(.blue)
                         .frame(maxWidth: .infinity)
                         .padding(.vertical, 10)
-                        .background(isPremiumSelected ? Color.blue.opacity(0.7) : Color.white.opacity(0.3))
+                        .background(Color.white.opacity(0.3))
                         .cornerRadius(12)
                 }
 
                 Button(action: {
-                    isPremiumSelected = true
                 }) {
                     Text("CURRENT PLAN")
-                        .font(.system(size: 16, weight: .semibold))
-                        .foregroundColor(isPremiumSelected ? .blue : .white)
+                        .font(.system(size: 13, weight: .semibold))
+                        .foregroundColor(.white)
                         .frame(maxWidth: .infinity)
                         .padding(.vertical, 10)
-                        .background(isPremiumSelected ? Color.white : Color.blue.opacity(0.7))
+                        .background(Color.blue.opacity(0.7))
                         .cornerRadius(12)
                 }
             }
             .padding(.horizontal, 24)
 
-                // Premium Plan Features
             VStack(spacing: 8) {
                 Text("Premium Plan")
                     .font(.system(size: 18, weight: .bold))
-                    .foregroundColor(.gray)
+                    .foregroundColor(.white)
 
                 Text("Live analytics prior to surf trip • Season locations and Surf guide • Program guide • Machine learning on surf market")
                     .font(.system(size: 14))
-                    .foregroundColor(.gray)
+                    .foregroundColor(.white)
                     .multilineTextAlignment(.center)
-                    .padding(.horizontal, 24)
+                    .padding(.horizontal, 20)
+                    .fixedSize(horizontal: false, vertical: true)
+
             }
-            .padding(16)
-            .background(Color.green.opacity(0.2))
+            .padding(.bottom, 10)
+            .background(Color.gray.opacity(0.3))
             .cornerRadius(12)
 
             Spacer()
         }
-        .padding()
+        .padding(.horizontal, 20)
         .background(
             LinearGradient(gradient: Gradient(colors: [Color.blue.opacity(0.8), Color.purple.opacity(0.7)]),
                            startPoint: .top,
                            endPoint: .bottom)
         )
         .cornerRadius(16)
-        .padding()
     }
 }
 
