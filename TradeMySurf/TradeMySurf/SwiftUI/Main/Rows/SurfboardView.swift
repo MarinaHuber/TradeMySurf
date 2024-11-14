@@ -29,23 +29,24 @@ struct SurfboardView: View {
                             Text("Board #\(surfboard.imageName)")
                                 .font(themeManager.selectedTheme.captionTxtFont)
                                 .multilineTextAlignment(.leading)
+                                .foregroundColor(.primary)
                             Spacer()
                                 .frame(height: 4)
                             Text("\(surfboard.volume) volume")
                                 .font(themeManager.selectedTheme.pickerFont)
+                                .foregroundColor(.primary)
                         }
                         .padding(10)
                         .frame(width: 120, height: 50)
-                        .background(.thinMaterial)
+                        .background(Color(UIColor.systemBackground).opacity(0.7))
                     }
             }
         }
         .frame(width: 120)
         .cornerRadius(10)
         .buttonStyle(.plain)
-        .shadow(color: .gray.opacity(0.7), radius: 12)
 
-            // Conditionally apply iOS 18+ matched transition and full-screen cover
+    // Conditionally apply iOS 18+ matched transition and full-screen cover
         .applyFullScreenCover(for: item, showingSheet: $showingSheet, transitionId: transitionId)
     }
 }

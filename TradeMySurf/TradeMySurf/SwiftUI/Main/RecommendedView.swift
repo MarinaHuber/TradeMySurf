@@ -63,13 +63,13 @@ struct RecommendedView: View {
 
             switch selectedItem {
             case .surfboard(let board, _):
-                return AnyView(sectionHeader(for: board.level, subtitle: "Boards"))
+                return AnyView(sectionHeader(for: "\(board.level) level", subtitle: "Boards recommended for you"))
 
             case .surfCountry(let location, _):
                 return AnyView(sectionHeader(for: location.beaufortScaleWave, subtitle: "Locations for your level"))
 
             case .tip(_, _):
-                return AnyView(sectionHeader(for: "\(self.selectedDate?.dateAsString(style: .long) ?? "")", subtitle: "Your date of surf"))
+                return AnyView(sectionHeader(for: "\(self.selectedDate?.dateAsString(style: .long) ?? "")", subtitle: "Start of your surf therapy"))
             }
         }
         return AnyView(Text("No items available for this section"))
@@ -83,7 +83,6 @@ struct RecommendedView: View {
             Text(subtitle)
                 .font(.footnote)
         }
-       // .padding(.horizontal)
         .foregroundColor(Color(.white))
     }
     

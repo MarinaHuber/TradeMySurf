@@ -71,6 +71,7 @@ struct GuideView: View {
                         .listRowSeparator(.hidden)
                     }
                 }
+                .opacity(0.7)
                 .frame(maxHeight: CGFloat(data.count * 65))
                 .listStyle(.inset)
                 .clipShape(RoundedRectangle(cornerRadius: 10))

@@ -23,7 +23,14 @@ struct CalculatorView: View {
     @State private var valuation: String = "$0.00" // Placeholder for currency format
 
     init(){
-        UISegmentedControl.appearance().selectedSegmentTintColor = UIColor(Color.secondary)
+        if (UIScreen.main.traitCollection.userInterfaceStyle == .dark ) {
+            UISegmentedControl.appearance().selectedSegmentTintColor = UIColor(Color.black)
+        }else{
+            UISegmentedControl.appearance().selectedSegmentTintColor = UIColor(Color.white)
+
+        }
+        UISegmentedControl.appearance().backgroundColor = UIColor(Color.pastelPrimary)
+        UISegmentedControl.appearance().setTitleTextAttributes([.foregroundColor: UIColor.white], for: .normal)
         UISegmentedControl.appearance().setTitleTextAttributes([.foregroundColor: UIColor(Color.pastelPrimary)], for: .selected)
     }
     var body: some View {
@@ -37,7 +44,7 @@ struct CalculatorView: View {
                 VStack(spacing: 10) {
                     CustomNavigationBar(ifMainView: false)
                     Text("Consider these options when choosing a board for your enjoinment")
-                        .foregroundColor(.primary)
+                        .foregroundColor(.white)
                         .padding(.top, 5)
                         .font(themeManager.selectedTheme.bodyTextFont)
                         .multilineTextAlignment(.leading)
@@ -87,7 +94,7 @@ struct CalculatorView: View {
                             calculateValue()
                         }
                     }
-                    .foregroundColor(.primary)
+                    .foregroundColor(.white)
                     .padding(.top, 5)
                     .padding(.horizontal)
                     .frame(maxWidth: .infinity, alignment: .leading)
@@ -96,12 +103,12 @@ struct CalculatorView: View {
                 }
                 Text(valuation)
                     .font(themeManager.selectedTheme.normalBtnTitleFont)
-                    .foregroundColor(.primary)
+                    .foregroundColor(.white)
                     .padding(.top)
                 Text("Average price")
                     .padding(.top, 10)
                     .font(themeManager.selectedTheme.textTitleFont)
-                    .foregroundColor(.primary)
+                    .foregroundColor(.white)
             }
             .onAppear {
                 calculateValue()  // need here

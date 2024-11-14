@@ -51,8 +51,6 @@ struct DetailsSurfboardView: View {
                                     alignment: .top
                                 )
                         }
-
-                            // Additional content can go here if needed
                         Spacer() 
 
                     } // End of VStack

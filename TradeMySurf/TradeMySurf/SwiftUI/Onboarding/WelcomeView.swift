@@ -67,12 +67,12 @@ struct WelcomeIntroText: View {
                 Text("Welcome")
                     .font(themeManager.selectedTheme.largeTitleFont)
                 
-                Text("Your surf goals in one place")
+                Text("Your surf therapy in one place")
                     .font(themeManager.selectedTheme.captionTxtFont)
                     .padding(.bottom, 20)
             }
             .foregroundColor(Color.white)
-            ButtonAnimateColor(title: "Get started", action: {
+            ButtonAnimateColor(title: "Get help", action: {
                 isUserHere.toggle()
             }, isPresented: $isUserHere)
             Spacer()
@@ -106,9 +106,9 @@ struct WelcomeAnimateContentView: View {
             }
             VStack(alignment: .leading, spacing: 40) {
                 Group {
-                    Text("Recommend surf board according to level")
-                    Text("Your surf locations according to level and season")
-                    Text("Help with buying a board and price prediction")
+                    Text("Surf therapy according to your needs")
+                    Text("Your surf locations according to your level and season")
+                    Text("Help with spending for a surfboard")
                 }
                 .foregroundColor(.white)
                 .font(themeManager.selectedTheme.regularTitleFont)

@@ -41,7 +41,7 @@ struct DetailsLocationView: View {
                 }
             }
         }
-        .mapStyle(.standard)
+        .mapStyle(.imagery)
         .mapControls {
             MapUserLocationButton()
         }
@@ -107,6 +107,7 @@ struct DetailsLocationView: View {
     // Custom annotation view
 struct LocationAnnotationView: View {
     let annotation: LocationAnnotation
+    @EnvironmentObject private var themeManager: ThemeManager
 
     var body: some View {
         VStack(spacing: 4) {
@@ -114,16 +115,18 @@ struct LocationAnnotationView: View {
                 .resizable()
                 .scaledToFit()
                 .frame(width: 30, height: 30)
-                .foregroundColor(.red)
+                .foregroundColor(.pastelPrimary)
+
             Text(annotation.title)
-                .font(.caption)
+                .font(themeManager.selectedTheme.captionTxtFont)
                 .padding(5)
-                .background(Color.white)
+                .background(.white)
                 .cornerRadius(5)
-                .shadow(radius: 2)
+                .multilineTextAlignment(.leading)
+                .lineLimit(2)
+                .fixedSize(horizontal: false, vertical: true)
         }
         .padding(5)
-        .background(Color.white.opacity(0.8))
         .cornerRadius(10)
         .shadow(radius: 4)
     }
