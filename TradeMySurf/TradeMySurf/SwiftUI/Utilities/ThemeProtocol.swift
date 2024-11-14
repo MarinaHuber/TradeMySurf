@@ -22,6 +22,5 @@ protocol ThemeProtocol {
 
 
     var primaryThemeColor: Color { get }
-    var secondoryThemeColor: Color { get }
 }
 

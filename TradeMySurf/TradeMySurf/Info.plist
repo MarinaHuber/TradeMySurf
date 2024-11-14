@@ -20,13 +20,6 @@
 	<string>$(MARKETING_VERSION)</string>
 	<key>CFBundleVersion</key>
 	<string>$(CURRENT_PROJECT_VERSION)</string>
-	<key>UILaunchScreen</key>
-	<dict>
-		<key>UIImageName</key>
-		<string>logo_wave</string>
-		<key>UIColorName</key>
-		<string>pastelPrimary</string>
-	</dict>
 	<key>NSLocationWhenInUseUsageDescription</key>
 	<string>Allow application to access your location when the application is in use. Thanks</string>
 	<key>UIAppFonts</key>
@@ -39,5 +32,12 @@
 		<string>AvenirNextCyr-Medium.ttf</string>
 		<string>AvenirNextCyr-Regular.ttf</string>
 	</array>
+	<key>UILaunchScreen</key>
+	<dict>
+		<key>UIColorName</key>
+		<string>pastelPrimary</string>
+		<key>UIImageName</key>
+		<string>logo_wave</string>
+	</dict>
 </dict>
 </plist>

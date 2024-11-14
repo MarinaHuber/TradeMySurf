@@ -21,5 +21,4 @@ struct SurfTheme: ThemeProtocol {
     var tabbarFont: Font = .custom("AvenirNextCyr-Demi", size: 12)
 
     var primaryThemeColor: Color { return Color(.pastelPrimary) }
-    var secondoryThemeColor: Color { return Color("secondoryThemeColor") }
 }

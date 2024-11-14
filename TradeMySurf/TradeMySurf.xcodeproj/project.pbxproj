@@ -49,6 +49,9 @@
 		9C627C822BF2927900CD16C4 /* Colors.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 9C627C812BF2927900CD16C4 /* Colors.xcassets */; };
 		9C627C842BF299EA00CD16C4 /* ThemeManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C627C832BF299EA00CD16C4 /* ThemeManager.swift */; };
 		9C65758C24111E0100CCF6AF /* TabBarVC.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9C65758B24111E0100CCF6AF /* TabBarVC.storyboard */; };
+		9C65C9CC2CE4CF140084911C /* AlertSwiftUIView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C65C9CA2CE4CF140084911C /* AlertSwiftUIView.swift */; };
+		9C65C9CD2CE4CF140084911C /* ButtonAnimateColor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C65C9CB2CE4CF140084911C /* ButtonAnimateColor.swift */; };
+		9C65C9CE2CE4CF140084911C /* AlertButtonView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C65C9C92CE4CF140084911C /* AlertButtonView.swift */; };
 		9C69CE85234D06D7003E386F /* PriceCalculatorViewController.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9C69CE84234D06D7003E386F /* PriceCalculatorViewController.storyboard */; };
 		9C69CE87234D0749003E386F /* Welcome.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9C69CE86234D0749003E386F /* Welcome.storyboard */; };
 		9C6F64CE2379F86400B0224D /* AddLevelViewController.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9CFDFD3A2367220300760F25 /* AddLevelViewController.storyboard */; };
@@ -61,9 +64,6 @@
 		9C8939AE2CBC405B008B7A45 /* RootViewApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C8939AD2CBC405B008B7A45 /* RootViewApp.swift */; };
 		9C8939B02CBC4089008B7A45 /* SplashView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C8939AF2CBC4089008B7A45 /* SplashView.swift */; };
 		9C8939B22CBC40C4008B7A45 /* WelcomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C8939B12CBC40C4008B7A45 /* WelcomeView.swift */; };
-		9C8939B42CBC411F008B7A45 /* ButtonAnimateColor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C8939B32CBC411F008B7A45 /* ButtonAnimateColor.swift */; };
-		9C8939B62CBC414E008B7A45 /* AlertButtonView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C8939B52CBC414E008B7A45 /* AlertButtonView.swift */; };
-		9C8939B82CBC418B008B7A45 /* AlertSwiftUIView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C8939B72CBC418B008B7A45 /* AlertSwiftUIView.swift */; };
 		9C89B61C23DA40D400DB8DDF /* UIView+Shadow.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C89B61B23DA40D400DB8DDF /* UIView+Shadow.swift */; };
 		9C89B61E23DA41A600DB8DDF /* BaseNavigationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C89B61D23DA41A600DB8DDF /* BaseNavigationController.swift */; };
 		9C8F32FC239943350070751F /* SplashViewController.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9C8F32FB239943350070751F /* SplashViewController.storyboard */; };
@@ -163,6 +163,9 @@
 		9C627C812BF2927900CD16C4 /* Colors.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Colors.xcassets; sourceTree = "<group>"; };
 		9C627C832BF299EA00CD16C4 /* ThemeManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ThemeManager.swift; sourceTree = "<group>"; };
 		9C65758B24111E0100CCF6AF /* TabBarVC.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = TabBarVC.storyboard; sourceTree = "<group>"; };
+		9C65C9C92CE4CF140084911C /* AlertButtonView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlertButtonView.swift; sourceTree = "<group>"; };
+		9C65C9CA2CE4CF140084911C /* AlertSwiftUIView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlertSwiftUIView.swift; sourceTree = "<group>"; };
+		9C65C9CB2CE4CF140084911C /* ButtonAnimateColor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ButtonAnimateColor.swift; sourceTree = "<group>"; };
 		9C69CE84234D06D7003E386F /* PriceCalculatorViewController.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = PriceCalculatorViewController.storyboard; sourceTree = "<group>"; };
 		9C69CE86234D0749003E386F /* Welcome.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Welcome.storyboard; sourceTree = "<group>"; };
 		9C6F64CF2379FB7800B0224D /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
@@ -177,9 +180,6 @@
 		9C8939AD2CBC405B008B7A45 /* RootViewApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RootViewApp.swift; sourceTree = "<group>"; };
 		9C8939AF2CBC4089008B7A45 /* SplashView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SplashView.swift; sourceTree = "<group>"; };
 		9C8939B12CBC40C4008B7A45 /* WelcomeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WelcomeView.swift; sourceTree = "<group>"; };
-		9C8939B32CBC411F008B7A45 /* ButtonAnimateColor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = ButtonAnimateColor.swift; path = TradeMySurf/SwiftUI/Onboarding/ButtonAnimateColor.swift; sourceTree = SOURCE_ROOT; };
-		9C8939B52CBC414E008B7A45 /* AlertButtonView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = AlertButtonView.swift; path = TradeMySurf/SwiftUI/Onboarding/AlertButtonView.swift; sourceTree = SOURCE_ROOT; };
-		9C8939B72CBC418B008B7A45 /* AlertSwiftUIView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = AlertSwiftUIView.swift; path = TradeMySurf/SwiftUI/Onboarding/AlertSwiftUIView.swift; sourceTree = SOURCE_ROOT; };
 		9C89B61B23DA40D400DB8DDF /* UIView+Shadow.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIView+Shadow.swift"; sourceTree = "<group>"; };
 		9C89B61D23DA41A600DB8DDF /* BaseNavigationController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseNavigationController.swift; sourceTree = "<group>"; };
 		9C8F32FB239943350070751F /* SplashViewController.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = SplashViewController.storyboard; sourceTree = "<group>"; };
@@ -489,9 +489,9 @@
 		9C664C522CBD485E00E19023 /* SwiftUIViews */ = {
 			isa = PBXGroup;
 			children = (
-				9C8939B32CBC411F008B7A45 /* ButtonAnimateColor.swift */,
-				9C8939B72CBC418B008B7A45 /* AlertSwiftUIView.swift */,
-				9C8939B52CBC414E008B7A45 /* AlertButtonView.swift */,
+				9C65C9C92CE4CF140084911C /* AlertButtonView.swift */,
+				9C65C9CA2CE4CF140084911C /* AlertSwiftUIView.swift */,
+				9C65C9CB2CE4CF140084911C /* ButtonAnimateColor.swift */,
 				9C3763432CD8012400A347EE /* AdsView.swift */,
 			);
 			path = SwiftUIViews;
@@ -719,7 +719,7 @@
 			attributes = {
 				BuildIndependentTargetsInParallel = YES;
 				LastSwiftUpdateCheck = 1100;
-				LastUpgradeCheck = 1530;
+				LastUpgradeCheck = 1600;
 				ORGANIZATIONNAME = "Marina Huber";
 				TargetAttributes = {
 					9C5B6447232A506C000727E6 = {
@@ -897,14 +897,15 @@
 				9C624172238AE81A00A4B7C9 /* SurfTip.swift in Sources */,
 				9CEFD7442CBC07C70003DCF4 /* TabbarEntrySwiftUI.swift in Sources */,
 				9C73E26623B963570028B9AC /* CoordinatorPresenting.swift in Sources */,
+				9C65C9CC2CE4CF140084911C /* AlertSwiftUIView.swift in Sources */,
+				9C65C9CD2CE4CF140084911C /* ButtonAnimateColor.swift in Sources */,
+				9C65C9CE2CE4CF140084911C /* AlertButtonView.swift in Sources */,
 				9CF77BE024104B9400C92725 /* AlertContainerView.swift in Sources */,
 				9CB161562BE0335D0031C913 /* AddLevelDateView.swift in Sources */,
-				9C8939B82CBC418B008B7A45 /* AlertSwiftUIView.swift in Sources */,
 				9C624170238AE75000A4B7C9 /* MockService.swift in Sources */,
 				9C5B64D42B16A07900360CAF /* Helper.swift in Sources */,
 				9C58729C258023D800524BA7 /* ApiEndpoint.swift in Sources */,
 				9CA167C92CBE772700B91E5B /* DetailsSurfboardView.swift in Sources */,
-				9C8939B62CBC414E008B7A45 /* AlertButtonView.swift in Sources */,
 				9C627C802BF291D400CD16C4 /* SurfTheme.swift in Sources */,
 				9C73E26823B964560028B9AC /* CoordinatorUIKit.swift in Sources */,
 				9C53D5C0234C126600A3BD80 /* StoryboardProtocol.swift in Sources */,
@@ -928,7 +929,6 @@
 				9C62417C239156C200A4B7C9 /* UserDefaultsHelper.swift in Sources */,
 				9C53CE1C289E9497000969F2 /* MapModel.swift in Sources */,
 				9C90BC552386BD020090E346 /* Enums.swift in Sources */,
-				9C8939B42CBC411F008B7A45 /* ButtonAnimateColor.swift in Sources */,
 				9C89B61E23DA41A600DB8DDF /* BaseNavigationController.swift in Sources */,
 				9C76F09823493F0900853FD9 /* GuideViewController.swift in Sources */,
 				9CF936E923CBC0AB00A8C72D /* UIView+Gradient.swift in Sources */,
@@ -977,6 +977,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
+				ASSETCATALOG_COMPILER_GENERATE_SWIFT_ASSET_SYMBOL_EXTENSIONS = YES;
 				CLANG_ANALYZER_NONNULL = YES;
 				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
@@ -1027,7 +1028,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 18.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 17.6;
 				MODULE_VERIFIER_SUPPORTED_LANGUAGE_STANDARDS = "gnu11 gnu++14";
 				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
 				MTL_FAST_MATH = YES;
@@ -1043,6 +1044,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
+				ASSETCATALOG_COMPILER_GENERATE_SWIFT_ASSET_SYMBOL_EXTENSIONS = YES;
 				CLANG_ANALYZER_NONNULL = YES;
 				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
@@ -1087,7 +1089,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 18.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 17.6;
 				MODULE_VERIFIER_SUPPORTED_LANGUAGE_STANDARDS = "gnu11 gnu++14";
 				MTL_ENABLE_DEBUG_INFO = NO;
 				MTL_FAST_MATH = YES;
@@ -1106,20 +1108,20 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_IDENTITY = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 2;
+				CURRENT_PROJECT_VERSION = 1;
 				DEFINES_MODULE = YES;
 				DEVELOPMENT_TEAM = HBS2B82CVU;
 				ENABLE_MODULE_VERIFIER = YES;
 				INFOPLIST_FILE = TradeMySurf/Info.plist;
-				INFOPLIST_KEY_LSApplicationCategoryType = "public.app-category.lifestyle";
+				INFOPLIST_KEY_LSApplicationCategoryType = "public.app-category.healthcare-fitness";
 				IPHONEOS_DEPLOYMENT_TARGET = 17.4;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				MARKETING_VERSION = 1.0.2;
+				MARKETING_VERSION = 1.1.4;
 				MODULE_VERIFIER_SUPPORTED_LANGUAGE_STANDARDS = "gnu11 gnu++14";
-				PRODUCT_BUNDLE_IDENTIFIER = com.marinahuber;
+				PRODUCT_BUNDLE_IDENTIFIER = com.marinahuber.trademysurf;
 				PRODUCT_NAME = SurfCurve;
 				PROVISIONING_PROFILE_SPECIFIER = "";
 				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
@@ -1138,20 +1140,20 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_IDENTITY = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 2;
+				CURRENT_PROJECT_VERSION = 1;
 				DEFINES_MODULE = YES;
 				DEVELOPMENT_TEAM = HBS2B82CVU;
 				ENABLE_MODULE_VERIFIER = YES;
 				INFOPLIST_FILE = TradeMySurf/Info.plist;
-				INFOPLIST_KEY_LSApplicationCategoryType = "public.app-category.lifestyle";
-				IPHONEOS_DEPLOYMENT_TARGET = 17.0;
+				INFOPLIST_KEY_LSApplicationCategoryType = "public.app-category.healthcare-fitness";
+				IPHONEOS_DEPLOYMENT_TARGET = 17.4;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				MARKETING_VERSION = 1.0.2;
+				MARKETING_VERSION = 1.1.4;
 				MODULE_VERIFIER_SUPPORTED_LANGUAGE_STANDARDS = "gnu11 gnu++14";
-				PRODUCT_BUNDLE_IDENTIFIER = com.marinahuber;
+				PRODUCT_BUNDLE_IDENTIFIER = com.marinahuber.trademysurf;
 				PRODUCT_NAME = SurfCurve;
 				PROVISIONING_PROFILE_SPECIFIER = "";
 				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
@@ -1167,7 +1169,6 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 3A1C042CB9EFA0254C2988FE /* Pods-TradeMySurfTests.debug.xcconfig */;
 			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = HBS2B82CVU;
@@ -1190,7 +1191,6 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 4510A5DB5E6D5379DA0C696C /* Pods-TradeMySurfTests.release.xcconfig */;
 			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = HBS2B82CVU;
@@ -1212,7 +1212,6 @@
 		9C5B647C232A5073000727E6 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = HBS2B82CVU;
 				INFOPLIST_FILE = TradeMySurfUITests/Info.plist;
@@ -1232,7 +1231,6 @@
 		9C5B647D232A5073000727E6 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = HBS2B82CVU;
 				INFOPLIST_FILE = TradeMySurfUITests/Info.plist;

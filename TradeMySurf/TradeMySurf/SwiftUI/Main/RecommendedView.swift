@@ -182,16 +182,18 @@ struct TipView: View {
         VStack(alignment: .leading, spacing: 5) {
             Text("Your goal: \(tip.goal)")
                 .font(.headline)
+                .foregroundColor(.primary)
             Text(tip.description)
                 .font(.body)
+                .foregroundColor(.primary)
             if !tip.descriptionLocation.isEmpty {
                 Text(tip.descriptionLocation)
                     .font(.callout)
-                    .foregroundColor(.secondary)
+                    .foregroundColor(Color(UIColor.secondaryLabel))
             }
         }
         .padding()
-        .background(Color.white)
+        .background(Color(UIColor.systemBackground))
         .cornerRadius(10)
     }
 }

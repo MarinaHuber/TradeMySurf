@@ -28,17 +28,17 @@ struct LocationView: View {
                 VStack(alignment: .leading) {
                     Text(item.countryName)
                         .font(themeManager.selectedTheme.bodyTextFont)
-                        .foregroundStyle(.black)
+                        .foregroundColor(.primary)
                     Text(item.continentName)
                         .font(themeManager.selectedTheme.captionTxtFont)
-                        .foregroundStyle(.black)
+                        .foregroundColor(.secondary)
                 }
+                Spacer()
             }
         }
-            // Conditional application of matchedTransitionSource based on iOS version
         .applyMatchedTransition(for: item, transitionId: transitionId)
         .padding()
-        .background(.white)
+        .background(Color(UIColor.systemBackground))
         .cornerRadius(10)
         .fullScreenCover(isPresented: $showingSheet) {
             DetailsLocationView(queryLocation: item.countryName, transitionId: transitionId, onClose: {

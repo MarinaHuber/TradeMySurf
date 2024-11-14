@@ -44,7 +44,7 @@ struct DetailsSurfboardView: View {
                                             .font(themeManager.selectedTheme.regularTitleFont)
                                     }
                                         .padding(15)
-                                        .frame(width: geometry.size.width * 0.8)
+                                        .frame(width: geometry.size.width * 0.9)
                                         .background(Color.white.opacity(0.8)) // Semi-transparent background
                                         .cornerRadius(10)
                                         .padding(.top, 90), // Space from the top
@@ -53,7 +53,7 @@ struct DetailsSurfboardView: View {
                         }
 
                             // Additional content can go here if needed
-                        Spacer() // This can help push content down to allow for scrolling
+                        Spacer() 
 
                     } // End of VStack
                 }

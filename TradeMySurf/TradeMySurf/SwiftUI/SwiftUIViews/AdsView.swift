@@ -22,7 +22,7 @@ struct PremiumView: View {
                 .fixedSize(horizontal: false, vertical: true)
 
                 // Subtitle
-            Text("AI combined with surfers analytics to fuel your surf goals.")
+            Text("AI combined with mental health analytics to fuel your surf goals.")
                 .font(.system(size: 14))
                 .foregroundColor(.white)
                 .multilineTextAlignment(.center)
@@ -60,7 +60,7 @@ struct PremiumView: View {
                     .font(.system(size: 18, weight: .bold))
                     .foregroundColor(.white)
 
-                Text("Live analytics prior to surf trip • Season locations and Surf guide • Program guide • Machine learning on surf market")
+                Text("Live analytics of surf therapy • Beautiful locations and surf retreats • Program guide • Machine learning for surfboards")
                     .font(.system(size: 14))
                     .foregroundColor(.white)
                     .multilineTextAlignment(.center)
