@@ -41,11 +41,11 @@ struct CalculatorView: View {
                 colors: ColorPalette.gradientColors,
                 background: Color(.pastelPrimary))
             ScrollView {
-                VStack(spacing: 10) {
+                VStack(spacing: 5) {
                     CustomNavigationBar(ifMainView: false)
                     Text("Consider these options when choosing a board for your enjoinment")
                         .foregroundColor(.white)
-                        .padding(.top, 5)
+                        .padding()
                         .font(themeManager.selectedTheme.bodyTextFont)
                         .multilineTextAlignment(.leading)
                     Group {
@@ -106,7 +106,7 @@ struct CalculatorView: View {
                     .foregroundColor(.white)
                     .padding(.top)
                 Text("Average price")
-                    .padding(.top, 10)
+                    .padding(.top, 5)
                     .font(themeManager.selectedTheme.textTitleFont)
                     .foregroundColor(.white)
             }

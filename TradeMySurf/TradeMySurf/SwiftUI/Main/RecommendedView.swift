@@ -77,7 +77,7 @@ struct RecommendedView: View {
 
 
     private func sectionHeader(for text: String, subtitle: String) -> some View {
-        Group {
+        VStack(alignment: .leading, spacing: 5) {
             Text(text)
                 .font(themeManager.selectedTheme.captionTxtFont)
             Text(subtitle)

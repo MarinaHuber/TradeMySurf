@@ -10,18 +10,7 @@ import Foundation
 import SwiftUI
 
 
-enum SheetRoute: Hashable {
-    case confirm, location, surfDetail
-}
-
-enum FullScreenRoute: Hashable, Identifiable {
-    var id: Int {
-        hashValue
-    }
-
-    case splash, welcome, addLevel, addDate
-}
-
+// MARK: - Navigation bar
 struct CustomNavigationBar: View {
     @Environment(\.presentationMode) var presentationMode
     var ifMainView: Bool
@@ -59,7 +48,7 @@ struct CustomNavigationBar: View {
         UserDefaults.standard.selectedLevel = nil
     }
 }
-
+// MARK: - iOS MeshGradient & LinearGradient Implementation
 struct MeshGradientView: View {
     let width: Int
     let height: Int
@@ -78,15 +67,14 @@ struct MeshGradientView: View {
 
     var body: some View {
         if #available(iOS 18, *) {
-            iOS18MeshGradientView()
+            meshGradientView()
         } else {
             generateFallbackGradient()
         }
     }
 
-    // MARK: - iOS 18+ MeshGradient Implementation
     @ViewBuilder
-    private func iOS18MeshGradientView() -> some View {
+    private func meshGradientView() -> some View {
         if #available(iOS 18, *) {
             MeshGradient(
                 width: width,
@@ -100,28 +88,10 @@ struct MeshGradientView: View {
         }
     }
 
-    // MARK: - Fallback plain color for iOS 17 and Below
     @ViewBuilder
     private func generateFallbackGradient() -> some View {
         ZStack {
-            background
-                .foregroundColor(Color(.pastelPrimary))
-                .ignoresSafeArea()
-        }
-    }
-}
-
-
-    // Define the view modifier for the navigation transition
-struct IfAvailableNavigationTransition: ViewModifier {
-    var item: Surfboard?
-    var transitionId: Namespace.ID
-
-    func body(content: Content) -> some View {
-        if #available(iOS 18, *) {
-            content.navigationTransition(.zoom(sourceID: item, in: transitionId))
-        } else {
-            content // Just return the content if the iOS version is below 18
+            GradientFallbackView(width: 2, height: 4)
         }
     }
 }
@@ -139,3 +109,65 @@ struct ColorPalette {
         Color(red: 0.85, green: 0.44, blue: 0.84)
     ]
 }
+
+// MARK: - Fallback gradient for iOS 17 and Below
+struct GradientFallbackView: View {
+    let width: Int
+    let height: Int // Replace with the desired height
+
+    private var gradientPoints: [SIMD2<Float>] {
+        var points: [SIMD2<Float>] = []
+        for y in 0..<height {
+            for x in 0..<width {
+                points.append(SIMD2<Float>(Float(x) / Float(width - 1), Float(y) / Float(height - 1)))
+            }
+        }
+        return points
+    }
+
+    private var fallbackGradient: LinearGradient {
+        LinearGradient(
+            gradient: Gradient(colors: ColorPalette.gradientColors),
+            startPoint: .topLeading,
+            endPoint: .bottomTrailing
+        )
+    }
+
+    var body: some View {
+        GeometryReader { geometry in
+            ZStack {
+                fallbackGradient
+                    .ignoresSafeArea()
+
+                    // Optional: Add dynamic shapes for a more "meshy" feel
+                ForEach(0..<gradientPoints.count, id: \.self) { index in
+                    Circle()
+                        .fill(ColorPalette.gradientColors[index % ColorPalette.gradientColors.count])
+                        .frame(width: geometry.size.width / CGFloat(width),
+                               height: geometry.size.height / CGFloat(height))
+                        .position(
+                            x: geometry.size.width * CGFloat(gradientPoints[index].x),
+                            y: geometry.size.height * CGFloat(gradientPoints[index].y)
+                        )
+                        .opacity(0.6)
+                        .blur(radius: 10)
+                }
+            }
+        }
+    }
+}
+
+    // Define the view modifier for the navigation transition
+struct IfAvailableNavigationTransition: ViewModifier {
+    var item: Surfboard?
+    var transitionId: Namespace.ID
+
+    func body(content: Content) -> some View {
+        if #available(iOS 18, *) {
+            content.navigationTransition(.zoom(sourceID: item, in: transitionId))
+        } else {
+            content // Just return the content if the iOS version is below 18
+        }
+    }
+}
+
