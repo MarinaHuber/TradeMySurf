@@ -19,34 +19,26 @@ struct SurfboardView: View {
             showingSheet.toggle()
         } label: {
             if let surfboard = item {
-                Image(surfboard.imageName)
-                    .resizable()
-                    .scaledToFill()
-                    .frame(maxWidth: .infinity, maxHeight: .infinity)
-                    .clipped()
-                    .overlay(alignment: .bottom) {
-                        VStack(alignment: .leading) {
-                            Text("Board #\(surfboard.imageName)")
-                                .font(themeManager.selectedTheme.captionTxtFont)
-                                .multilineTextAlignment(.leading)
-                                .foregroundColor(.primary)
-                            Spacer()
-                                .frame(height: 4)
-                            Text("\(surfboard.volume) volume")
-                                .font(themeManager.selectedTheme.pickerFont)
-                                .foregroundColor(.primary)
-                        }
-                        .padding(10)
-                        .frame(width: 120, height: 50)
-                        .background(Color(UIColor.systemBackground).opacity(0.7))
-                    }
+
+                ZStack (alignment: .topLeading) {
+                    RoundedRectangle(cornerRadius: 10,
+                                     style: .circular)
+                    .fill(Color(UIColor.systemBackground).opacity(0.7))
+                    .frame(width: 120, height: 300)
+                    .overlay(
+                        OverlaySurfboardView(item: surfboard)
+                    )
+                    Image(surfboard.imageName)
+                        .resizable()
+                        .scaledToFill()
+                        .frame(minWidth: 0, maxWidth: .infinity, maxHeight: 250, alignment: .top)
+                        .clipShape(RoundedRectangle(cornerRadius: 10))
+                }
             }
         }
         .frame(width: 120)
-        .cornerRadius(10)
         .buttonStyle(.plain)
 
-    // Conditionally apply iOS 18+ matched transition and full-screen cover
         .applyFullScreenCover(for: item, showingSheet: $showingSheet, transitionId: transitionId)
     }
 }
@@ -74,15 +66,26 @@ extension View {
     }
 }
 
+struct OverlaySurfboardView: View {
+    @State var item: Surfboard?
+    @EnvironmentObject private var themeManager: ThemeManager
 
-    // Updated conditionalModifier helper
-extension View {
-    @ViewBuilder
-    func conditionalModifier<Content: View>(isIOS18: Bool = false, isBelowIOS18: Bool = false, @ViewBuilder content: (Self) -> Content) -> some View {
-        if isIOS18 || isBelowIOS18 {
-            content(self)
-        } else {
-            self
+    var body: some View {
+        if let surfboard = item {
+            VStack(alignment: .leading) {
+                Spacer()
+                Text("Board #\(surfboard.imageName)")
+                    .font(themeManager.selectedTheme.captionTxtFont)
+                    .multilineTextAlignment(.leading)
+                    .foregroundColor(.primary)
+                Spacer()
+                    .frame(height: 3)
+                Text("\(surfboard.volume) volume")
+                    .font(themeManager.selectedTheme.pickerFont)
+                    .foregroundColor(.primary)
+            }
+            .frame(width: 120, height: 300)
+            .padding(.bottom, 10)
         }
     }
 }

@@ -38,7 +38,7 @@ struct LocationView: View {
         }
         .applyMatchedTransition(for: item, transitionId: transitionId)
         .padding()
-        .background(Color(UIColor.systemBackground))
+        .background(Color(UIColor.systemBackground).opacity(0.7))
         .cornerRadius(10)
         .fullScreenCover(isPresented: $showingSheet) {
             DetailsLocationView(queryLocation: item.countryName, transitionId: transitionId, onClose: {
