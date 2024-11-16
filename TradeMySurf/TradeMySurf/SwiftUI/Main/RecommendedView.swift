@@ -63,10 +63,10 @@ struct RecommendedView: View {
 
             switch selectedItem {
             case .surfboard(let board, _):
-                return AnyView(sectionHeader(for: "\(board.level) level", subtitle: "Boards recommended for you"))
+                return AnyView(sectionHeader(for: "\(board.level) level", subtitle: "Recommended boards for you"))
 
             case .surfCountry(let location, _):
-                return AnyView(sectionHeader(for: location.beaufortScaleWave, subtitle: "Locations for your level"))
+                return AnyView(sectionHeader(for: location.beaufortScaleWave, subtitle: "Recommended locations for your level"))
 
             case .tip(_, _):
                 return AnyView(sectionHeader(for: "\(self.selectedDate?.dateAsString(style: .long) ?? "")", subtitle: "Start of your surf therapy"))

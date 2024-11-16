@@ -78,30 +78,6 @@ extension Text.Layout {
     }
 }
 
-//@available(iOS 18.0, *)
-//struct LineByLineTransition: Transition {
-//    let duration: TimeInterval
-//    init(duration: TimeInterval = 1.0) {
-//        self.duration = duration
-//    }
-//
-//    func body(content: Content, phase: TransitionPhase) -> some View {
-//        let elapsedTime = phase.isIdentity ? duration : 0
-//        let renderer = LineByLineEffect(
-//            elapsedTime: elapsedTime,
-//            totalDuration: duration
-//        )
-//
-//        content.transaction { t in
-//            if !t.disablesAnimations {
-//                t.animation = .linear(duration: duration)
-//            }
-//        } body: { view in
-//            view.textRenderer(renderer)
-//        }
-//    }
-//}
-
 struct AddLevelDateView: View {
     @State private var navigateToNext = false
     
@@ -130,7 +106,7 @@ struct AnimatedTextView: View {
     var body: some View {
         VStack(spacing: 10) {
                 // Define the main message as a single variable
-            let mainMessage = "To assist you with surfing\nlevels and places, fill in your\n goal and travel date please"
+            let mainMessage = "To assist you with surf\ntherapy and retreats, fill in your\n goal and your travel date\nplease"
 
                 // Base Text view with common modifiers
             let baseTextView = Text(mainMessage)
@@ -154,7 +130,7 @@ struct AnimatedTextView: View {
             }
         }
         .onAppear {
-            withAnimation(.easeInOut(duration: 4.0)) {
+            withAnimation(.easeInOut(duration: 5.0)) {
                 showText = true
             }
         }

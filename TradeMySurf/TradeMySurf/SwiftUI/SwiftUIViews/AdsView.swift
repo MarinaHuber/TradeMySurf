@@ -14,7 +14,7 @@ struct PremiumView: View {
     var body: some View {
         VStack(spacing: 16) {
                 // Header Text
-            Text("Get more surfboard goodies with Premium")
+            Text("Get more retreat goodies with Premium")
                 .font(.system(size: 22, weight: .bold))
                 .padding(.top, 20)
                 .foregroundColor(.white)
@@ -60,7 +60,7 @@ struct PremiumView: View {
                     .font(.system(size: 18, weight: .bold))
                     .foregroundColor(.white)
 
-                Text("Live analytics of surf therapy • Beautiful locations and surf retreats • Program guide • Machine learning for surfboards")
+                Text("Live analytics of surf personalised • Beautiful locations and surf retreats • Program guide • Machine learning for surfboards")
                     .font(.system(size: 14))
                     .foregroundColor(.white)
                     .multilineTextAlignment(.center)

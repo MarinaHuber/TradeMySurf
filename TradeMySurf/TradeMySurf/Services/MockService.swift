@@ -58,12 +58,12 @@ public struct RecommendedTripArray {
     
     public var surfCountryBegginer: [Surfboard] = {
         return [
-			Surfboard(level: "Beginner", volume: "40 L", imageName: "2.2", weightUnit: "<", beaufortScaleWave: "0 - 1.4 m", countryName: "France", continentName: "Surf Europe", imageFlag: "french", weight: 50),
-            Surfboard(level: "Beginner", volume: "40 L", imageName: "2.2", weightUnit: "<", beaufortScaleWave: "0 - 1.4 m", countryName: "Brazil", continentName: "Surf Latin America", imageFlag: "brazil", weight: 50),
-            Surfboard(level: "Beginner", volume: "40 L", imageName: "2.2", weightUnit: "<", beaufortScaleWave: "0 - 1.4 m", countryName: "Morocco", continentName: "Surf Africa", imageFlag: "SA", weight: 50),
-            Surfboard(level: "Beginner", volume: "40 L", imageName: "2.2", weightUnit: "<", beaufortScaleWave: "0 - 1.4 m", countryName: "Bali", continentName: "Surf Asia", imageFlag: "indonesia", weight: 50),
-            Surfboard(level: "Beginner", volume: "40 L", imageName: "2.2", weightUnit: "<", beaufortScaleWave: "0 - 1.4 m", countryName: "Hawaii", continentName: "Surf North America", imageFlag: "usa", weight: 50),
-            Surfboard(level: "Beginner", volume: "40 L", imageName: "2.2", weightUnit: "<", beaufortScaleWave: "0 - 1.4 m", countryName: "South Africa", continentName: "Surf Africa", imageFlag: "morocco", weight: 50)
+			Surfboard(level: "Beginner", volume: "40 L", imageName: "2.2", weightUnit: "<", beaufortScaleWave: "0 - 1.4 m", countryName: "France", continentName: "100% sunshine and baby waves", imageFlag: "french", weight: 50),
+            Surfboard(level: "Beginner", volume: "40 L", imageName: "2.2", weightUnit: "<", beaufortScaleWave: "0 - 1.4 m", countryName: "Brazil", continentName: "South American sun", imageFlag: "brazil", weight: 50),
+            Surfboard(level: "Beginner", volume: "40 L", imageName: "2.2", weightUnit: "<", beaufortScaleWave: "0 - 1.4 m", countryName: "Morocco", continentName: "West Africa sand beaches", imageFlag: "SA", weight: 50),
+            Surfboard(level: "Beginner", volume: "40 L", imageName: "2.2", weightUnit: "<", beaufortScaleWave: "0 - 1.4 m", countryName: "Bali", continentName: "Small wave retreats", imageFlag: "indonesia", weight: 50),
+            Surfboard(level: "Beginner", volume: "40 L", imageName: "2.2", weightUnit: "<", beaufortScaleWave: "0 - 1.4 m", countryName: "Hawaii", continentName: "Beginners waves", imageFlag: "usa", weight: 50),
+            Surfboard(level: "Beginner", volume: "40 L", imageName: "2.2", weightUnit: "<", beaufortScaleWave: "0 - 1.4 m", countryName: "South Africa", continentName: "Beginners retreats", imageFlag: "morocco", weight: 50)
         ]
     }()
     
@@ -91,12 +91,11 @@ public struct RecommendedTripArray {
 
 	public var surfCountryAdvanced: [Surfboard] = {
 		  return [
-			  Surfboard(level: "Advanced", volume: "40 L", imageName: "pro1", weightUnit: "<", beaufortScaleWave: "3 > m", countryName: "France",continentName: "Surf Europe", imageFlag: "french", weight: 50),
-			  Surfboard(level: "Advanced", volume: "40 L", imageName: "pro1", weightUnit: "<", beaufortScaleWave: "3 > m", countryName: "Brazil", continentName: "Surf Latin America", imageFlag: "brazil", weight: 50),
-			  Surfboard(level: "Advanced", volume: "40 L", imageName: "pro1", weightUnit: "<", beaufortScaleWave: "3 > m", countryName: "South Africa", continentName: "Surf Africa", imageFlag: "SA", weight: 50),
-			  Surfboard(level: "Advanced", volume: "40 L", imageName: "pro1", weightUnit: "<", beaufortScaleWave: "3 > m", countryName: "Bali", continentName: "Surf Asia", imageFlag: "indonesia", weight: 50),
-			  Surfboard(level: "Advanced", volume: "40 L", imageName: "pro1", weightUnit: "<", beaufortScaleWave: "3 > m", countryName: "Hawaii", continentName: "Surf North America", imageFlag: "usa", weight: 50),
-			  Surfboard(level: "Advanced", volume: "40 L", imageName: "pro1", weightUnit: "<", beaufortScaleWave: "3 > m", countryName: "Morocco", continentName: "Surf Africa", imageFlag: "morocco", weight: 50)
+			  Surfboard(level: "Advanced", volume: "40 L", imageName: "pro1", weightUnit: "<", beaufortScaleWave: "3 > m", countryName: "South Africa", continentName: "Advanced surfing retreats", imageFlag: "SA", weight: 50),
+			  Surfboard(level: "Advanced", volume: "40 L", imageName: "pro1", weightUnit: "<", beaufortScaleWave: "3 > m", countryName: "Bali", continentName: "Comminuty for surfers Pro", imageFlag: "indonesia", weight: 50),
+              Surfboard(level: "Advanced", volume: "40 L", imageName: "pro1", weightUnit: "<", beaufortScaleWave: "3 > m", countryName: "Brazil", continentName: "Big wave surf", imageFlag: "brazil", weight: 50),
+			  Surfboard(level: "Advanced", volume: "40 L", imageName: "pro1", weightUnit: "<", beaufortScaleWave: "3 > m", countryName: "Hawaii", continentName: "Locations for communities", imageFlag: "usa", weight: 50),
+			  Surfboard(level: "Advanced", volume: "40 L", imageName: "pro1", weightUnit: "<", beaufortScaleWave: "3 > m", countryName: "Morocco", continentName: "Fun pointbreaks", imageFlag: "morocco", weight: 50)
 		  ]
 	  }()
 
@@ -120,48 +119,48 @@ public struct RecommendedTripArray {
 
     public var tipBeginner: [SurfTip] = {
         return [
-            SurfTip(goal: "Learning to stand up in white water waves",
-                    description: "White water waves are broken waves they belong to the fourth stage of the wave shape. Beginners should start out on a foam surfboard made of soft material and good for learning.",
-                    descriptionLocation: "Volumen is important element to consider when choosing a surfboard. More weight you have the more volume you need and more waves you can catch.")
+            SurfTip(goal: "Get vitamin D and negative ions from waves",
+                    description: "Learning to stand up in white water waves is best way to get sunshine and positiove ions. Beginners should start out on a foam surfboard and white water baby waves. These are broken waves they belong to the fourth stage of the wave journey.",
+                    descriptionLocation: "Surfers always wear sunscreen and zink for sun protection. Surfboard size is important element to consider. More weight and volume board has the more waves you can catch.")
         ]
     }()
     
     public var tipBeginnerInter: [SurfTip] = {
          return [
-             SurfTip(goal: "Paddling out, dropping down the face of the wave",
-                     description: "A proper pop-up and surf stance is one of the keys to unlocking your surfing potential. With the proper technique, you will gain more balance and you will be comfortable shifting weight forwards, backwards and sideways.",
-                     descriptionLocation: "Position yourself to find, catch & stick on unbroken “green” waves.")
+             SurfTip(goal: "Improve cardiovascular health",
+                     description: "A pop-up and surfboard stance in the usually cold water is one of the keys to unlocking your surfing and health potential. Paddling out, dropping down the face of the wave guarantees cardio exercise. With the proper technique, you will gain more balance and you will be comfortable shifting foot weight forwards, backwards and sideways.",
+                     descriptionLocation: "Position yourself to find, catch & stay on unbroken “green” waves.")
          ]
      }()
     
     public var tipIntermediate: [SurfTip] = {
         return [
-            SurfTip(goal: "Trimming down the middle line of the wave",
-                    description: "If a surfboard needs to turn at high speed, the nose will stay closer to the water and the turn will be less sharp that is called trimming",
+            SurfTip(goal: "Reduce stress and anxiety",
+                    description: "At any level of surfing skill the stress is lowered. But for Intermediate sufer there is a gloden middle. If a surfboard needs to turn at high speed, the nose will stay closer to the water and the turn will be less sharp - that is called trimming. Trimming down the middle line of the wave reduces anxiety and depression.",
                    descriptionLocation: "Surfers “trim” in order to adjust to the shape of a wave, going slightly higher or lower to wave edge. Trimming can’t be used to change direction.")
         ]
     }()
     
     public var tipAdvanced: [SurfTip] = {
         return [
-            SurfTip(goal: "Performing full carving vertical movements",
-                    description: "If a surfboarf needs to do a sharp turn to change direction, then the nose of the board will go up in order to pivot easily that is called carving.",
+            SurfTip(goal: "Become part of community",
+                    description: "Surfing level does not require a community but Advanced surfer is usually part of multiple communities around the world. Performing full carving vertical movements with locals. If a surfboarf needs to do a sharp turn to change direction, then the nose of the board will go up in order to pivot easily that is called carving.",
                     descriptionLocation: "Carves are the deeper, more radical turns. They are used to change direction rapidly and drastically. To do so, surfers need to apply more pressure on the back foot, slightly lifting the nose and making it possible to pivot the board using the fins and the rails. Many of the high-performance manoeuvres include a good carve. Example: Bottom Turns & Cutbacks.")
         ]
     }()
 
     public var tipAreals: [SurfTip] = {
         return [
-            SurfTip(goal: "Performing areals above the waves",
-                    description: "An aerial maneuver through which, thanks to the speed and technique, the surfer manages to “jump” out of the lip of the wave and then land inside it, on the foam or at the base.",
+            SurfTip(goal: "Build core strenght",
+                    description: "All part of surfing requires core training. Performing areals above the waves is challenge in strenght and play. An aerial maneuver through which, thanks to the speed and technique, the surfer manages to “jump” out of the lip of the wave and then land inside it, on the foam or at the base.",
                     descriptionLocation: "Flight technique is the most important skill when it comes to aerials in surfing. The decisive moment arrives when your surfboard is about to leave the wave face. When you pop up off of the lip, your front foot should be in the center of the board, and your rear foot should be on the traction pad.")
         ]
     }()
 
     public var tipLongboarding: [SurfTip] = {
         return [
-            SurfTip(goal: "Surfing with style and grace horizontal movements",
-                    description: "Longboards are a go-to for beginner surfers learning how to surf. They allow you to easily catch small waves and whitewash, perfect your pop-up, and learn the basics of riding down the face.",
+            SurfTip(goal: "Build confidence",
+                    description: "Every person claims confidence boost after a surfing session. Longboards are a go-to for beginner surfers learning how to surf but also advanced. They allow you to easily catch small waves and whitewash, perfect your pop-up, and learn the basics of riding down the face.",
                     descriptionLocation: "Longboarders draw very different lines on a wave to shortboarders. This is one of the big things that differentiate the two. The lines a longboarder will surf are predominantly horizontal and down the line of a wave.")
         ]
     }()
