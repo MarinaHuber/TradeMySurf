@@ -13,7 +13,8 @@ import SwiftUI
 // MARK: - Navigation bar
 struct CustomNavigationBar: View {
     @Environment(\.presentationMode) var presentationMode
-    var ifMainView: Bool
+    var ifRecommendedView: Bool
+    @State var showSheetView = false
 
     var body: some View {
         // Custom navigation bar
@@ -23,7 +24,7 @@ struct CustomNavigationBar: View {
                 .scaledToFit()
                 .frame(height: 60)
                 // Overlay the button on the left
-            if ifMainView {
+            if ifRecommendedView {
                 HStack {
                     Button(action: {
                             // Action for back button
@@ -35,7 +36,17 @@ struct CustomNavigationBar: View {
                     }
                     .frame(width: 60)
 
-                    Spacer() // Keeps the button on the left, but no impact on the layout due to ZStack
+                    Spacer()
+                    Button(action: {
+                        showSheetView.toggle()
+                    }) {
+                        Image(systemName: "info.bubble")
+                            .foregroundColor(.white)
+                    }
+                    .frame(width: 60)
+                    .sheet(isPresented: $showSheetView) {
+                        ThanksView(ifOnboardingView: false)
+                    }
                 }
             }
         }

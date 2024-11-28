@@ -25,7 +25,7 @@ struct RecommendedView: View {
             )
             
             VStack {
-                CustomNavigationBar(ifMainView: true)
+                CustomNavigationBar(ifRecommendedView: true)
                 ScrollView {
                     LazyVStack(spacing: 10) {
                         ForEach(sections, id: \.self) { section in
@@ -192,7 +192,7 @@ struct TipView: View {
             }
         }
         .padding()
-        .background(Color(UIColor.systemBackground))
+        .background(.pastelSecondary)
         .cornerRadius(10)
     }
 }

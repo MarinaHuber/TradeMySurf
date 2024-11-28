@@ -6,9 +6,6 @@
 //  Copyright © 2024 Marina Huber. All rights reserved.
 //
 
-import SwiftUI
-import CoreML
-
 enum TabbarEntrySwiftUI: Int, CaseIterable {
     case guide, recommended, calculator
 
@@ -36,7 +33,3 @@ enum TabbarEntrySwiftUI: Int, CaseIterable {
         }
     }
 }
-
-//#Preview {
-//    TabbarEntrySwiftUI(rawValue: 2)
-//}

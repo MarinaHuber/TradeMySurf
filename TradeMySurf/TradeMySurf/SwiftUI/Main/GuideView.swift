@@ -13,6 +13,7 @@ struct GuideView: View {
     @State private var showNext: Bool = false
     @EnvironmentObject private var themeManager: ThemeManager
     let data = [
+        ("Is surfing extreme sport?", "Risk and Danger: Surfing involves navigating large waves, which can be unpredictable and powerful. Surfers face risks such as drowning, injury from falls, collisions with the board or other surfers, and encounters with marine life, like jellyfish or sharks.Surfing requires significant physical strength, balance, and stamina.  Surfing has a culture associated with thrill-seeking and adventure."),
         ("How do I use board price feature in the app?", "Nothing is worse than buying a board for an advanced rider and struggling to ride it. You'll end up needing to sell it and buy a board more suited to your need. If you have ever walked into a surf shop, or browsed online, you’ll know that there is more than a couple to choose from. Equipment calculator is Machine learning tool here to help you with variaty of choices you can find and amount of money you need to purchase it."),
         ("What is Beaufort scale measure for wave height?", "Beaufort scale measure is important element to consider when choosing a surf location. It's the factor that can most affect the size and the power of waves at the sea. But it isn't everything. Understanding the scale ranging from 0-17 is understanding the global wind speed to observed conditions at sea and land."),
         ("Where can I find surf videos and apps?", "Great video content is streamed daily at WLC which is the official world surfing league chanel and also has the app version, another one for videos is Nobody Surf. Most used app is MagicSeadweed useful for finding waves, wind and swell. Some other handy apps: Da Surf Engine, Endangered waves (for environmental issues), Dorsal (for shark detection), Surftracker (dokumenting surf sessions), Surfline (weather forecast)."),
@@ -33,7 +34,7 @@ struct GuideView: View {
                 background: Color(.pastelPrimary)
             )
             VStack {
-                CustomNavigationBar(ifMainView: false)
+                CustomNavigationBar(ifRecommendedView: false)
                 List {
                     HStack {
                         Text("Surf FAQ")
@@ -71,6 +72,7 @@ struct GuideView: View {
                         .listRowSeparator(.hidden)
                     }
                 }
+                .background(.pastelSecondary)
                 .opacity(0.7)
                 .frame(maxHeight: CGFloat(data.count * 65))
                 .listStyle(.inset)

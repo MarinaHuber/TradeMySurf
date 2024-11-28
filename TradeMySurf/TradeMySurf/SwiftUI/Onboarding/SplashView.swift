@@ -31,7 +31,7 @@ struct SplashView: View {
         .background(.pastelSecondary)
         .animation(.easeInOut(duration: 3.0), value: showNext)
         .fullScreenCover(isPresented: $showNext) {
-            ThanksView()
+            ThanksView(ifOnboardingView: true)
         }
     }
 }

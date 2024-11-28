@@ -42,7 +42,7 @@ struct CalculatorView: View {
                 background: Color(.pastelPrimary))
             ScrollView {
                 VStack(spacing: 5) {
-                    CustomNavigationBar(ifMainView: false)
+                    CustomNavigationBar(ifRecommendedView: false)
                     Text("Consider these options when choosing a board for your enjoinment")
                         .foregroundColor(.white)
                         .padding()
@@ -85,7 +85,7 @@ struct CalculatorView: View {
                             .onChange(of: productionValue) { _, _ in
                                 calculateValue()
                             }
-                        Text("Gear")
+                        Text("Gear (fins, leash")
                         Picker("Gear", selection: $conditionIndex) {
                             Text("Not included").tag(0)
                             Text("Included").tag(1)

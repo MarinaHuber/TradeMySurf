@@ -67,8 +67,8 @@ struct WelcomeIntroText: View {
                 Text("Welcome")
                     .font(themeManager.selectedTheme.largeTitleFont)
                 
-                Text("Your surf therapy in one place")
-                    .font(themeManager.selectedTheme.captionTxtFont)
+                Text("Your surf therapy starts here")
+                    .font(themeManager.selectedTheme.pickerFont)
                     .padding(.bottom, 20)
             }
             .foregroundColor(Color.white)
@@ -107,8 +107,8 @@ struct WelcomeAnimateContentView: View {
             VStack(alignment: .leading, spacing: 40) {
                 Group {
                     Text("Surf therapy according to your needs")
-                    Text("Your surf locations according to your level and season")
-                    Text("Help with spending for a surfboard")
+                    Text("Surf locations according to your level and waves size")
+                    Text("Get help before spending on a surfboard")
                 }
                 .foregroundColor(.white)
                 .font(themeManager.selectedTheme.regularTitleFont)

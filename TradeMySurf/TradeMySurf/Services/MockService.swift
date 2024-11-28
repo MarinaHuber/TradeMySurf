@@ -60,10 +60,10 @@ public struct RecommendedTripArray {
         return [
 			Surfboard(level: "Beginner", volume: "40 L", imageName: "2.2", weightUnit: "<", beaufortScaleWave: "0 - 1.4 m", countryName: "France", continentName: "100% sunshine and baby waves", imageFlag: "french", weight: 50),
             Surfboard(level: "Beginner", volume: "40 L", imageName: "2.2", weightUnit: "<", beaufortScaleWave: "0 - 1.4 m", countryName: "Brazil", continentName: "South American sun", imageFlag: "brazil", weight: 50),
-            Surfboard(level: "Beginner", volume: "40 L", imageName: "2.2", weightUnit: "<", beaufortScaleWave: "0 - 1.4 m", countryName: "Morocco", continentName: "West Africa sand beaches", imageFlag: "SA", weight: 50),
+            Surfboard(level: "Beginner", volume: "40 L", imageName: "2.2", weightUnit: "<", beaufortScaleWave: "0 - 1.4 m", countryName: "Morocco", continentName: "West Africa sand beaches", imageFlag: "morocco", weight: 50),
             Surfboard(level: "Beginner", volume: "40 L", imageName: "2.2", weightUnit: "<", beaufortScaleWave: "0 - 1.4 m", countryName: "Bali", continentName: "Small wave retreats", imageFlag: "indonesia", weight: 50),
             Surfboard(level: "Beginner", volume: "40 L", imageName: "2.2", weightUnit: "<", beaufortScaleWave: "0 - 1.4 m", countryName: "Hawaii", continentName: "Beginners waves", imageFlag: "usa", weight: 50),
-            Surfboard(level: "Beginner", volume: "40 L", imageName: "2.2", weightUnit: "<", beaufortScaleWave: "0 - 1.4 m", countryName: "South Africa", continentName: "Beginners retreats", imageFlag: "morocco", weight: 50)
+            Surfboard(level: "Beginner", volume: "40 L", imageName: "2.2", weightUnit: "<", beaufortScaleWave: "0 - 1.4 m", countryName: "South Africa", continentName: "Beginners retreats", imageFlag: "SA", weight: 50)
         ]
     }()
     

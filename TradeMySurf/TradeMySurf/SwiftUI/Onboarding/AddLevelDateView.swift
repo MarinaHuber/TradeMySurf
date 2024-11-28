@@ -106,7 +106,7 @@ struct AnimatedTextView: View {
     var body: some View {
         VStack(spacing: 10) {
                 // Define the main message as a single variable
-            let mainMessage = "To assist you with surf\ntherapy and retreats, fill in your\n goal and your travel date\nplease"
+            let mainMessage = "To assist you with surf\ntherapy and retreats, choose your\n goal and your travel date\nplease"
 
                 // Base Text view with common modifiers
             let baseTextView = Text(mainMessage)
