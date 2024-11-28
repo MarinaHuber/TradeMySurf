@@ -32,23 +32,21 @@ struct DetailsSurfboardView: View {
                                 .clipped() // Prevent overflow
                                 .ignoresSafeArea(edges: .top)
                                 .overlay(
-                                    // Info View positioned above the image
+                                    // Board info View positioned above the image
                                     VStack(alignment: .leading, spacing: 5) {
-                                        Text("Board for - \(item?.level ?? "Unknown Level")")
-                                            .font(themeManager.selectedTheme.normalBtnTitleFont)
-
-                                        Text("Volume: \(item?.volume ?? "N/A")")
-                                            .font(themeManager.selectedTheme.regularTitleFont)
-
-                                        Text("Weight: \(item?.weight ?? 0) kg")
-                                            .font(themeManager.selectedTheme.regularTitleFont)
+                                        Group {
+                                            Text("Board for - \(item?.level ?? "Unknown Level")")
+                                                .font(themeManager.selectedTheme.normalBtnTitleFont)
+                                            Text("Volume: \(item?.volume ?? "N/A")")
+                                            Text("Weight: \(item?.weight ?? 0) kg")
+                                        }
+                                         .font(themeManager.selectedTheme.regularTitleFont)
                                     }
                                         .padding(15)
                                         .frame(width: geometry.size.width * 0.9)
-                                        .background(Color.white.opacity(0.8)) // Semi-transparent background
+                                        .background(.pastelSecondary.opacity(0.8))
                                         .cornerRadius(10)
-                                        .padding(.top, 90), // Space from the top
-                                    alignment: .top
+                                        .padding(.top, 90), alignment: .top
                                 )
                         }
                         Spacer() 

@@ -75,11 +75,7 @@ struct PremiumView: View {
             Spacer()
         }
         .padding(.horizontal, 20)
-        .background(
-            LinearGradient(gradient: Gradient(colors: [Color.blue.opacity(0.8), Color.purple.opacity(0.7)]),
-                           startPoint: .top,
-                           endPoint: .bottom)
-        )
+        .background(.pastelPrimary)
         .cornerRadius(16)
     }
 }

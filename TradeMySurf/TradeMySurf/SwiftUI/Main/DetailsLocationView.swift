@@ -20,24 +20,31 @@ struct DetailsLocationView: View {
     var queryLocation: String
     var transitionId: Namespace.ID
     var onClose: () -> Void
+    @State private var selectedAnnotation: LocationAnnotation? = nil
 
     var body: some View {
         ZStack(alignment: .topTrailing) {
-            // Refactored Map component
             mapView
         }
         .onAppear {
             fetchGooglePlaces()
+        }
+        .sheet(item: $selectedAnnotation) { annotation in
+            AnnotationDetailView(annotation: annotation)
+                .presentationDetents([.fraction(0.2)])
+                .presentationDragIndicator(.visible)
         }
         .ifAvailableNavigationTransition(item: item, transitionId: transitionId)
     }    
 
     private var mapView: some View {
         Map {
-            UserAnnotation()
             ForEach(annotations) { annotation in
                 Annotation(annotation.title, coordinate: annotation.coordinate) {
                     LocationAnnotationView(annotation: annotation)
+                        .onTapGesture {
+                            selectedAnnotation = annotation
+                        }
                 }
             }
         }
@@ -118,13 +125,10 @@ struct LocationAnnotationView: View {
                 .foregroundColor(.pastelPrimary)
 
             Text(annotation.title)
-                .font(themeManager.selectedTheme.captionTxtFont)
+                .font(themeManager.selectedTheme.tabbarFont)
                 .padding(5)
-                .background(.white)
+                .background(.pastelSecondary)
                 .cornerRadius(5)
-                .multilineTextAlignment(.leading)
-                .lineLimit(2)
-                .fixedSize(horizontal: false, vertical: true)
         }
         .padding(5)
         .cornerRadius(10)
@@ -132,9 +136,32 @@ struct LocationAnnotationView: View {
     }
 }
 
+    // Detail View for Annotation
+struct AnnotationDetailView: View {
+    let annotation: LocationAnnotation
+    @EnvironmentObject private var themeManager: ThemeManager
+
+    var body: some View {
+        VStack(spacing: 10) {
+            Text("Recommended surf school:")
+                .font(themeManager.selectedTheme.pickerFont)
+            Text(annotation.title)
+                .font(themeManager.selectedTheme.captionTxtFont)
+                .multilineTextAlignment(.center)
+                .lineLimit(2)
+                .fixedSize(horizontal: false, vertical: true)
+            Divider()
+            Text("Coordinates: \(annotation.coordinate.latitude), \(annotation.coordinate.longitude)")
+                .font(themeManager.selectedTheme.tabbarFont)
+                .foregroundColor(.pastelPrimary)
+        }
+        .padding()
+    }
+}
+
     // Data model for annotation
 struct LocationAnnotation: Identifiable {
-    let id = UUID() // Unique identifier for each annotation
+    let id = UUID()
     let title: String
     let coordinate: CLLocationCoordinate2D
 }

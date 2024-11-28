@@ -18,7 +18,7 @@ struct ThanksView: View {
                 // Header with profile picture
             HStack {
                 VStack(alignment: .leading, spacing: 8) {
-                    Text("🌊 Thank you! 🌊")
+                    Text("🫧 Thank you! 🫧")
                         .font(themeManager.selectedTheme.largeTitleFont)
                     Text("It’s great having you as a customer.")
                         .font(.system(size: 17))
@@ -58,9 +58,9 @@ struct ThanksView: View {
             Group {
                 Text("Marina Huber,")
                     .font(themeManager.selectedTheme.pickerFont)
-                Image("signat")
+                Image("signature")
                     .resizable()
-                    .frame(width: 80, height: 30)
+                    .frame(width: 67, height: 27)
                 Text("Maker of Weather Cast & Surf Curve")
                     .font(themeManager.selectedTheme.captionTxtFont)
             }

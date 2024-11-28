@@ -1,11 +1,11 @@
 {
   "images" : [
     {
-      "filename" : "signat.png",
       "idiom" : "universal",
       "scale" : "1x"
     },
     {
+      "filename" : "signature.png",
       "idiom" : "universal",
       "scale" : "2x"
     },

@@ -64,7 +64,6 @@ struct GuideView: View {
                             if expandedIndex == index {
                                 Text(data[index].1)
                                     .font(themeManager.selectedTheme.captionTxtFont)
-                                    .foregroundColor(.secondary)
                                     .padding(.top, 5)
                             }
                         }
@@ -72,15 +71,16 @@ struct GuideView: View {
                         .listRowSeparator(.hidden)
                     }
                 }
-                .background(.pastelSecondary)
-                .opacity(0.7)
-                .frame(maxHeight: CGFloat(data.count * 65))
+                .frame(maxHeight: UIScreen.main.bounds.height * 3 / 4)
                 .listStyle(.inset)
                 .clipShape(RoundedRectangle(cornerRadius: 10))
                 .padding()
 
             }
-        }.toolbarBackground(.hidden, for: .tabBar)
+        }
+        .toolbarBackground(.hidden, for: .tabBar)
+        .background(.pastelPrimary)
+
 
     }
 }
