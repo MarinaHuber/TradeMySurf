@@ -58,9 +58,9 @@ struct ThanksView: View {
             Group {
                 Text("Marina Huber,")
                     .font(themeManager.selectedTheme.pickerFont)
-                Image("marina")
+                Image("signat")
                     .resizable()
-                    .frame(width: 50, height: 50)
+                    .frame(width: 80, height: 30)
                 Text("Maker of Weather Cast & Surf Curve")
                     .font(themeManager.selectedTheme.captionTxtFont)
             }
