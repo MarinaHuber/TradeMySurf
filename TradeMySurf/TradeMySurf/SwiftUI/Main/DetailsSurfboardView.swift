@@ -80,7 +80,7 @@ struct DetailsSurfboardView: View {
                 .padding(8)
         }
         .buttonStyle(BorderlessButtonStyle())
-        .background(Material.thick)
+        .background(Material.thin)
         .clipShape(Circle())
         .frame(width: 50, height: 50)
         .padding()
