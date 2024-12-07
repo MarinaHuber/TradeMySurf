@@ -58,7 +58,7 @@ struct ThanksView: View {
             Group {
                 Text("Marina Huber,")
                     .font(themeManager.selectedTheme.pickerFont)
-                Image("signature")
+                Image("signature") // change to SVG
                     .resizable()
                     .frame(width: 67, height: 27)
                 Text("Maker of Weather Cast & Surf Curve")
@@ -70,7 +70,7 @@ struct ThanksView: View {
             if ifOnboardingView {
                 ButtonAnimateColor(title: "Let's go!", action: {
                     isUserHere.toggle()
-                }, isPresented: $isUserHere)
+                })
                 .fullScreenCover(isPresented: $isUserHere) {
                     WelcomeView()
                 }

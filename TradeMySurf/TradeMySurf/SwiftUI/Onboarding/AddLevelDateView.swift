@@ -1,10 +1,10 @@
-//
-//  AddLevelView.swift
-//  TradeMySurf
-//
-//  Created by Marina Huber on 29.04.2024..
-//  Copyright © 2024 Marina Huber. All rights reserved.
-//
+    //
+    //  AddLevelView.swift
+    //  TradeMySurf
+    //
+    //  Created by Marina Huber on 29.04.2024..
+    //  Copyright © 2024 Marina Huber. All rights reserved.
+    //
 
 import Foundation
 import SwiftUI
@@ -80,7 +80,7 @@ extension Text.Layout {
 
 struct AddLevelDateView: View {
     @State private var navigateToNext = false
-    
+
     var body: some View {
         NavigationStack {
             VStack(spacing: 0) {
@@ -99,7 +99,6 @@ struct AddLevelDateView: View {
 import SwiftUI
 
 struct AnimatedTextView: View {
-    @Binding var isPopoverPresented: Bool
     @State private var showText = false
     @EnvironmentObject private var themeManager: ThemeManager
 
@@ -108,20 +107,18 @@ struct AnimatedTextView: View {
                 // Define the main message as a single variable
             let mainMessage = "To assist you with surf\ntherapy and retreats, choose your\n goal and your travel date\nplease"
 
-                // Base Text view with common modifiers
             let baseTextView = Text(mainMessage)
                 .font(themeManager.selectedTheme.textTitleFont)
                 .foregroundColor(.white)
                 .multilineTextAlignment(.center)
                 .opacity(showText ? 1 : 0)
 
-                // Conditional rendering based on iOS version
             if #available(iOS 18, *) {
                     // iOS 18 and above with LineByLineEffect
                 baseTextView
                     .textRenderer(LineByLineEffect(
-                        elapsedTime: showText ? 4.0 : 0,
-                        totalDuration: 4.0
+                        elapsedTime: showText ? 2.0 : 0,
+                        totalDuration: 2.0
                     ))
             } else {
                     // iOS 17 and below with regular Text
@@ -134,81 +131,84 @@ struct AnimatedTextView: View {
                 showText = true
             }
         }
-        .onTapGesture {
-            self.isPopoverPresented.toggle()
-        }
     }
 }
 
 
 struct ArrowPopoverView: View {
     @Binding var navigateToNext: Bool
-    @State private var selectedLevel: String = Level.beginner.rawValue
-    @State private var isPopoverPresented = true
-    @State private var levels = [Level.beginner.rawValue, Level.beginnerIntermediate.rawValue, Level.intermediate.rawValue, Level.advanced.rawValue, Level.areals.rawValue, Level.longboarding.rawValue]
+    @State var level: String = Level.beginner.rawValue
     @State private var showDatePicker = false
-    @State private var selectedDate = Date()
+    @State var date = Date()
     @EnvironmentObject private var themeManager: ThemeManager
 
     var body: some View {
-        VStack {
-            AnimatedTextView(isPopoverPresented: $isPopoverPresented)
-                .padding()
-                .popover(isPresented: $isPopoverPresented,
-                         attachmentAnchor: .point(.top),
-                         arrowEdge: .bottom) {
-                    ZStack {
-                        VStack(spacing: 0) {
-                            if showDatePicker {
-                                DatePicker("Select Date", selection: $selectedDate, displayedComponents: .date)
-                                    .datePickerStyle(WheelDatePickerStyle())
-                                    .labelsHidden()
-                                    .frame(height: 200)
-                            } else {
-                                Picker(selection: $selectedLevel, label: EmptyView()) {
-                                    ForEach(levels, id: \.self) { level in
-                                        Text(level)
-                                            .font(themeManager.selectedTheme.pickerFont)
-                                            .lineLimit(2)
-                                            .fixedSize(horizontal: false, vertical: true)
-                                            .padding(.vertical, 10)
-                                            .multilineTextAlignment(.center)
-                                    }
-                                }
-                                .pickerStyle(.wheel)
-                                .frame(height: 200)
-                            }
-                        }
-                        .frame(width: 300, height: 150)
-                        
-                        HStack {
-                            Spacer()
-                            Button(showDatePicker ? "Finish" : "Done") {
-                                if showDatePicker {
-                                    UserDefaults.standard.selectedDate = selectedDate
-                                    isPopoverPresented = false
-                                    navigateToNext = true
-                                } else {
-                                    UserDefaults.standard.selectedLevel = selectedLevel
-                                    showDatePicker = true
-                                }
-                            }
-                            .font(themeManager.selectedTheme.bodyTextFont)
-                            .padding(.horizontal, 12)
-                            .frame(height: 30)
-                            .background(Color.blue)
-                            .foregroundColor(.white)
-                            .cornerRadius(4)
-                        }
-                        .padding(.horizontal, 10)
-                        .position(x: 150, y: 20) // button position need dynemic size
-                    }
-                    .presentationCompactAdaptation(.popover)
+        VStack(spacing: 16) {
+            VStack(spacing: 0) {
+                PickerPopoverView(selectedLevel: $level, selectedDate: $date, showDatePicker: showDatePicker)
+                .offset(y: 2)
+                .zIndex(1)
+
+                Image(systemName: "arrowtriangle.down.fill") // arrow
+                    .foregroundColor(.pastelSecondary)
+            }
+            .compositingGroup()
+            .shadow(color: .black.opacity(0.4), radius: 30)
+            .padding(.top, UIScreen.main.bounds.height / 4)
+
+            AnimatedTextView()
+                .padding(.top, 10)
+
+            ButtonAnimateColor(title: showDatePicker ? "Finish" : "Done", action: {
+                if showDatePicker {
+                    UserDefaults.standard.selectedDate = date
+                    navigateToNext = true
+                } else {
+                    showDatePicker = true
+                    UserDefaults.standard.selectedLevel = level
                 }
+            })
+            .font(themeManager.selectedTheme.bodyTextFont)
+            .frame(width: 300, height: 40, alignment: .center)
+            .padding([.horizontal, .top]) // Add some spacing at the bottom
+
+            Spacer()
         }
-        .onAppear {
-            self.isPopoverPresented = true
+
+    }
+}
+
+struct PickerPopoverView: View {
+    @Binding var selectedLevel: String
+    @Binding var selectedDate: Date
+    var showDatePicker = false
+    @EnvironmentObject private var themeManager: ThemeManager
+
+    @State private var levels = [Level.beginner.rawValue, Level.beginnerIntermediate.rawValue, Level.intermediate.rawValue, Level.advanced.rawValue, Level.areals.rawValue, Level.longboarding.rawValue]
+
+    var body: some View {
+        VStack(spacing: 0) {
+            if showDatePicker {
+                DatePicker("Select Date", selection: $selectedDate, displayedComponents: .date)
+                    .datePickerStyle(.wheel)
+                    .labelsHidden()
+                    .pickerStyle(.wheel)
+            } else {
+                Picker(selection: $selectedLevel, label: EmptyView()) {
+                    ForEach(levels, id: \.self) { level in
+                        Text(level)
+                            .font(themeManager.selectedTheme.pickerFont)
+                            .lineLimit(2)
+                            .fixedSize(horizontal: false, vertical: true)
+                            .multilineTextAlignment(.center)
+                    }
+                }
+                .pickerStyle(.wheel)
+            }
         }
+        .background(.pastelSecondary)
+        .cornerRadius(12)
+        .frame(width: 300)
     }
 }
 

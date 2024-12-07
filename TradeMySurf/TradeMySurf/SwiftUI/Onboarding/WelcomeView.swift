@@ -74,7 +74,7 @@ struct WelcomeIntroText: View {
             .foregroundColor(Color.white)
             ButtonAnimateColor(title: "Get help", action: {
                 isUserHere.toggle()
-            }, isPresented: $isUserHere)
+            })
             Spacer()
         }
         .fullScreenCover(isPresented: $isUserHere) {
