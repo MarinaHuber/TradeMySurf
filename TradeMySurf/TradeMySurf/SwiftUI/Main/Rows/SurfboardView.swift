@@ -24,19 +24,19 @@ struct SurfboardView: View {
                     RoundedRectangle(cornerRadius: 10,
                                      style: .circular)
                     .fill(Color(UIColor.systemBackground).opacity(0.7))
-                    .frame(width: 120, height: 300)
+                    .frame(width: UIScreen.main.bounds.width / 3)
                     .overlay(
                         OverlaySurfboardView(item: surfboard)
                     )
                     Image(surfboard.imageName)
                         .resizable()
                         .scaledToFill()
-                        .frame(minWidth: 0, maxWidth: .infinity, maxHeight: 250, alignment: .top)
+                        .frame(minWidth: 0, maxWidth: .infinity, maxHeight: 230, alignment: .top)
                         .clipShape(RoundedRectangle(cornerRadius: 10))
                 }
             }
         }
-        .frame(width: 120)
+        .frame(width: UIScreen.main.bounds.width / 3, height: 280)
         .buttonStyle(.plain)
 
         .applyFullScreenCover(for: item, showingSheet: $showingSheet, transitionId: transitionId)
@@ -75,17 +75,18 @@ struct OverlaySurfboardView: View {
             VStack(alignment: .leading) {
                 Spacer()
                 Text("Board #\(surfboard.imageName)")
+                    .padding(.bottom, 0)
                     .font(themeManager.selectedTheme.captionTxtFont)
                     .multilineTextAlignment(.leading)
                     .foregroundColor(.primary)
-                Spacer()
-                    .frame(height: 3)
                 Text("\(surfboard.volume) volume")
+                    .padding(.bottom, 6)
                     .font(themeManager.selectedTheme.pickerFont)
                     .foregroundColor(.primary)
+
             }
-            .frame(width: 120, height: 300)
-            .padding(.bottom, 10)
+            .frame(width: UIScreen.main.bounds.width / 3, height: 280)
+           // .padding(.top, 230)
         }
     }
 }

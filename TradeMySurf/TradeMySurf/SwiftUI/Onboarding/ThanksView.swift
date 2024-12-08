@@ -40,7 +40,7 @@ struct ThanksView: View {
                 Text("I can ensure you: I don’t serve ads, I don’t mine your data, and I protect your privacy.")
                 Text("App is made by surfers for surfers to help anyone safely learn about this extreme sport. Please be aware that many factors combined make surfing not just a recreational activity, but an extreme sport that challenges both physical and mental limits. If you have any questions or need assistance, please don’t hesitate to reach out to me via email at:")
             }
-            .font(themeManager.selectedTheme.tabbarFont)
+            .font(themeManager.selectedTheme.regularTitleFont)
             .multilineTextAlignment(.leading)
             .padding(.horizontal)
             .frame(maxWidth: .infinity, alignment: .leading)

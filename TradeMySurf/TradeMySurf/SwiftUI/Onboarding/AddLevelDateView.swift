@@ -117,8 +117,8 @@ struct AnimatedTextView: View {
                     // iOS 18 and above with LineByLineEffect
                 baseTextView
                     .textRenderer(LineByLineEffect(
-                        elapsedTime: showText ? 2.0 : 0,
-                        totalDuration: 2.0
+                        elapsedTime: showText ? 4.0 : 0,
+                        totalDuration: 4.0
                     ))
             } else {
                     // iOS 17 and below with regular Text
@@ -127,7 +127,7 @@ struct AnimatedTextView: View {
             }
         }
         .onAppear {
-            withAnimation(.easeInOut(duration: 5.0)) {
+            withAnimation(.easeInOut(duration: 2.0)) {
                 showText = true
             }
         }
@@ -141,25 +141,18 @@ struct ArrowPopoverView: View {
     @State private var showDatePicker = false
     @State var date = Date()
     @EnvironmentObject private var themeManager: ThemeManager
+    @State private var showPopover = false
+    @State var showButton: Bool = false
 
     var body: some View {
         VStack(spacing: 16) {
-            VStack(spacing: 0) {
-                PickerPopoverView(selectedLevel: $level, selectedDate: $date, showDatePicker: showDatePicker)
-                .offset(y: 2)
-                .zIndex(1)
-
-                Image(systemName: "arrowtriangle.down.fill") // arrow
-                    .foregroundColor(.pastelSecondary)
-            }
-            .compositingGroup()
-            .shadow(color: .black.opacity(0.4), radius: 30)
-            .padding(.top, UIScreen.main.bounds.height / 4)
+            PickerPopoverView(selectedLevel: $level, selectedDate: $date, showDatePicker: showDatePicker) // TODO- Add viewModel @ObservableObject instead
+                .opacity(showPopover ? 1 : 0)
 
             AnimatedTextView()
                 .padding(.top, 10)
 
-            ButtonAnimateColor(title: showDatePicker ? "Finish" : "Done", action: {
+            ButtonAnimateColor(title: showDatePicker ? "Done" : "Let's go", action: {
                 if showDatePicker {
                     UserDefaults.standard.selectedDate = date
                     navigateToNext = true
@@ -171,9 +164,19 @@ struct ArrowPopoverView: View {
             .font(themeManager.selectedTheme.bodyTextFont)
             .frame(width: 300, height: 40, alignment: .center)
             .padding([.horizontal, .top]) // Add some spacing at the bottom
+            .opacity(showButton ? 1 : 0)
+
 
             Spacer()
         }
+        .onAppear {
+            withAnimation(.easeInOut(duration: 4.0)) {
+                showPopover = true
+            }
+        }
+        .onChange(of: level, {
+            showButton = true
+        })
 
     }
 }
@@ -183,32 +186,43 @@ struct PickerPopoverView: View {
     @Binding var selectedDate: Date
     var showDatePicker = false
     @EnvironmentObject private var themeManager: ThemeManager
-
     @State private var levels = [Level.beginner.rawValue, Level.beginnerIntermediate.rawValue, Level.intermediate.rawValue, Level.advanced.rawValue, Level.areals.rawValue, Level.longboarding.rawValue]
 
     var body: some View {
         VStack(spacing: 0) {
-            if showDatePicker {
-                DatePicker("Select Date", selection: $selectedDate, displayedComponents: .date)
-                    .datePickerStyle(.wheel)
-                    .labelsHidden()
-                    .pickerStyle(.wheel)
-            } else {
-                Picker(selection: $selectedLevel, label: EmptyView()) {
-                    ForEach(levels, id: \.self) { level in
-                        Text(level)
-                            .font(themeManager.selectedTheme.pickerFont)
-                            .lineLimit(2)
-                            .fixedSize(horizontal: false, vertical: true)
-                            .multilineTextAlignment(.center)
+
+            VStack(spacing: 0) {
+                if showDatePicker {
+                    DatePicker("Select Date", selection: $selectedDate, displayedComponents: .date)
+                        .datePickerStyle(.wheel)
+                        .labelsHidden()
+                        .pickerStyle(.wheel)
+                } else {
+                    Picker(selection: $selectedLevel, label: EmptyView()) {
+                        ForEach(levels, id: \.self) { level in
+                            Text(level)
+                                .font(themeManager.selectedTheme.pickerFont)
+                                .lineLimit(2)
+                                .fixedSize(horizontal: false, vertical: true)
+                                .multilineTextAlignment(.center)
+                        }
                     }
+                    .pickerStyle(.wheel)
                 }
-                .pickerStyle(.wheel)
             }
+            .background(.pastelSecondary)
+            .cornerRadius(12)
+            .frame(width: 300)
+            .offset(y: 2)
+            .zIndex(1)
+
+            Image(systemName: "arrowtriangle.down.fill") // arrow
+                .foregroundColor(.pastelSecondary)
         }
-        .background(.pastelSecondary)
-        .cornerRadius(12)
-        .frame(width: 300)
+        .compositingGroup()
+        .shadow(color: .black.opacity(0.4), radius: 30)
+        .padding(.top, UIScreen.main.bounds.height / 4)
+
     }
 }
 
