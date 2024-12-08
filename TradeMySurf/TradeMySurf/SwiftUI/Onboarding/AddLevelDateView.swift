@@ -80,19 +80,24 @@ extension Text.Layout {
 
 struct AddLevelDateView: View {
     @State private var navigateToNext = false
+    var viewModel: ViewModel?
 
     var body: some View {
-        NavigationStack {
+      //  NavigationStack {
             VStack(spacing: 0) {
                 ArrowPopoverView(navigateToNext: $navigateToNext)
             }
             .edgesIgnoringSafeArea(.all)
             .frame(maxWidth: .infinity, maxHeight: .infinity)
             .background(Color(.pastelPrimary))
-            .navigationDestination(isPresented: $navigateToNext) {
-                MainView()
+            .fullScreenCover(isPresented: $navigateToNext) {
+                SummaryView(vm: viewModel ?? ViewModel())
             }
-        }
+//Move this to SummryView
+//            .navigationDestination(isPresented: $navigateToNext) {
+//                //MainView()
+//            }
+//        }
     }
 }
 

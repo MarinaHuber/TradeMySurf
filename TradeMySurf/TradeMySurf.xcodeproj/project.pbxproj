@@ -28,6 +28,7 @@
 		9C53CE1C289E9497000969F2 /* MapModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C53CE1B289E9497000969F2 /* MapModel.swift */; };
 		9C53CE1E289E94B5000969F2 /* SplashViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C53CE1D289E94B5000969F2 /* SplashViewController.swift */; };
 		9C53D5C0234C126600A3BD80 /* StoryboardProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C53D5BF234C126600A3BD80 /* StoryboardProtocol.swift */; };
+		9C56F05E2D05C0E7005CB833 /* SummaryView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C56F05D2D05C0E7005CB833 /* SummaryView.swift */; };
 		9C587298257FFA8300524BA7 /* ApiMapsRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C587297257FFA8300524BA7 /* ApiMapsRequest.swift */; };
 		9C58729C258023D800524BA7 /* ApiEndpoint.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C58729B258023D800524BA7 /* ApiEndpoint.swift */; };
 		9C5B644C232A506C000727E6 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C5B644B232A506C000727E6 /* AppDelegate.swift */; };
@@ -140,6 +141,7 @@
 		9C53CE1B289E9497000969F2 /* MapModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MapModel.swift; sourceTree = "<group>"; };
 		9C53CE1D289E94B5000969F2 /* SplashViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SplashViewController.swift; sourceTree = "<group>"; };
 		9C53D5BF234C126600A3BD80 /* StoryboardProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StoryboardProtocol.swift; sourceTree = "<group>"; };
+		9C56F05D2D05C0E7005CB833 /* SummaryView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SummaryView.swift; sourceTree = "<group>"; };
 		9C587297257FFA8300524BA7 /* ApiMapsRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ApiMapsRequest.swift; sourceTree = "<group>"; };
 		9C58729B258023D800524BA7 /* ApiEndpoint.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ApiEndpoint.swift; sourceTree = "<group>"; };
 		9C5B6448232A506C000727E6 /* SurfCurve.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SurfCurve.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -284,6 +286,7 @@
 				9CB161552BE0335D0031C913 /* AddLevelDateView.swift */,
 				9C8939AD2CBC405B008B7A45 /* RootViewApp.swift */,
 				9C8939B12CBC40C4008B7A45 /* WelcomeView.swift */,
+				9C56F05D2D05C0E7005CB833 /* SummaryView.swift */,
 			);
 			path = Onboarding;
 			sourceTree = "<group>";
@@ -929,6 +932,7 @@
 				9CF77BDC24101D8300C92725 /* TabbarEntry.swift in Sources */,
 				9C8939AE2CBC405B008B7A45 /* RootViewApp.swift in Sources */,
 				9CFDFD3F2367226C00760F25 /* AddDateViewController.swift in Sources */,
+				9C56F05E2D05C0E7005CB833 /* SummaryView.swift in Sources */,
 				9C76F09623493EDA00853FD9 /* SurfTripViewController.swift in Sources */,
 				9C62417C239156C200A4B7C9 /* UserDefaultsHelper.swift in Sources */,
 				9C53CE1C289E9497000969F2 /* MapModel.swift in Sources */,

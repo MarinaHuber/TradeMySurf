@@ -13,12 +13,13 @@ struct WelcomeView: View {
     @State private var isAnimated = false
 
     var body: some View {
-        VStack() {
+        VStack {
             WelcomeAnimateView()
                 .offset(y: isAnimated ? -180 : 0)
             WelcomeIntroText()
                 .padding(.bottom, 130)
         }
+        .navigationBarBackButtonHidden(true)
         .onAppear {
             UserDefaults.standard.userWasHere = false
             withAnimation(.easeInOut(duration: 2)) {
@@ -59,20 +60,16 @@ struct WelcomeAnimateView: View {
 
 struct WelcomeIntroText: View {
     @State private var isUserHere = false
+
     @EnvironmentObject private var themeManager: ThemeManager
     
     var body: some View {
         VStack(spacing: 0) {
-            Group {
-                Text("Welcome")
-                    .font(themeManager.selectedTheme.largeTitleFont)
-                
-                Text("Your surf therapy starts here")
-                    .font(themeManager.selectedTheme.pickerFont)
-                    .padding(.bottom, 20)
-            }
-            .foregroundColor(Color.white)
-            ButtonAnimateColor(title: "Get help", action: {
+            Text("Your therapy starts here")
+                .font(themeManager.selectedTheme.textTitleFont)
+                .padding(.bottom, 30)
+                .foregroundColor(.white)
+            ButtonAnimateColor(title: "Show me the surf!", action: {
                 isUserHere.toggle()
             })
             Spacer()
@@ -113,11 +110,12 @@ struct WelcomeAnimateContentView: View {
                 .foregroundColor(.white)
                 .font(themeManager.selectedTheme.regularTitleFont)
             }
-            .padding(.trailing,30)
+            .padding(.trailing, 30)
             .frame(maxWidth: 190, maxHeight: .infinity) // end of text columns
         }
     }
 }
+
 
 #Preview {
     WelcomeView()

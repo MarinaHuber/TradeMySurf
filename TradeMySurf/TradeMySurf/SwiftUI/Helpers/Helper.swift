@@ -31,7 +31,7 @@ struct CustomNavigationBar: View {
                         presentationMode.wrappedValue.dismiss()
                         popBack()
                     }) {
-                        Image(systemName: "arrow.turn.up.left")
+                        Image(systemName: "chevron.backward")
                             .foregroundColor(.white)
                     }
                     .frame(width: 60)

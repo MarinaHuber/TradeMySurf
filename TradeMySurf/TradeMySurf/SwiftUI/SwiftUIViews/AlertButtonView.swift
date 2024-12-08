@@ -9,41 +9,42 @@
 import SwiftUI
 
 struct AlertButtonView: View {
-
     var vm: ViewModel
 
     var body: some View {
-        HStack(alignment: .center, spacing: 30) {
-            SwiftUI.Button(action: {
-                self.vm.backAction()
-            }) {
-                Text("Try again")
-                    .bold()
-                    .font(.body)
-                    .foregroundColor(Color.red)
-                    .padding()
-                    .overlay(
-                        RoundedRectangle(cornerRadius: 10)
-                            .stroke(Color.red, lineWidth: 1)
-                    )
+       // NavigationStack {
+            HStack(alignment: .center, spacing: 30) {
+                Group {
+                    Button(action: {
+                        self.vm.backAction()
+                    }) {
+                        Text(" Cancel  ")
+                            .bold()
+                            .font(.body)
+                            .foregroundColor(.red)
+                            .frame(width: 120, height: 40)
+                            .overlay(
+                                RoundedRectangle(cornerRadius: 10)
+                                    .stroke(.red, lineWidth: 1)
+                            )
+                    }
+                    Button(action: {
+                        self.vm.closeAction()
+                        
+                    }) {
+                        Text("Match me")
+                            .bold()
+                            .font(.body)
+                            .foregroundColor(.white)
+                            .frame(width: 120, height: 40)
+                            .overlay(
+                                RoundedRectangle(cornerRadius: 10)
+                                    .stroke(.white, lineWidth: 1)
+                            )
+                    }
+                }
             }
-            SwiftUI.Button(action: {
-                self.vm.closeAction()
-
-            }) {
-                Text("Match me")
-                    .bold()
-                    .font(.body)
-                    .foregroundColor(Color.white)
-                    .padding()
-                    .overlay(
-                        RoundedRectangle(cornerRadius: 10)
-                            .stroke(Color.white, lineWidth: 1)
-                    )
-            }
-        }
-        .frame(maxWidth: .infinity)
-        .padding(.bottom)
+       // }
 
     }
 }

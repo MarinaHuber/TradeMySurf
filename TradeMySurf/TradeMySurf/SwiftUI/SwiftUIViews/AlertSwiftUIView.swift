@@ -30,7 +30,7 @@ struct AlertSwiftUIView: View {
                     Image(systemName: "checkmark")
                         .font(Font.system(.largeTitle).bold())
                         .padding(.top, 10)
-                    Text("You have been matched for:")
+                    Text("When you want to:")
                         .font(Font.system(.subheadline))
                         .padding()
                     Text("\(self.selectedLevel ?? "")")
@@ -38,14 +38,16 @@ struct AlertSwiftUIView: View {
                         .multilineTextAlignment(.center)
                         .lineLimit(4)
                         .padding(10)
-                    Text("Surfing start: \(self.selectedDate?.dateAsString(style: .long) ?? "")")
-                    Text("Surfboards and locations for your level matched")
+                    Text("The key difference for you is to arrive at \(self.selectedLevel ?? "") level surfing")
                         .multilineTextAlignment(.center)
                         .lineLimit(3)
                         .padding(10)
+                    Text("Your surfing start at: \(self.selectedDate?.dateAsString(style: .long) ?? ""), here are your recommended locations and surfboards")
+
                 }
                 .foregroundColor(Color.white)
                 AlertButtonView(vm: vm)
+
             }
             .frame(maxWidth: .infinity)
             .background(
