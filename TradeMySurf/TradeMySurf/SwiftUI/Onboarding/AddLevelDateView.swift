@@ -80,7 +80,6 @@ extension Text.Layout {
 
 struct AddLevelDateView: View {
     @State private var navigateToNext = false
-    var viewModel: ViewModel?
 
     var body: some View {
       //  NavigationStack {
@@ -91,13 +90,8 @@ struct AddLevelDateView: View {
             .frame(maxWidth: .infinity, maxHeight: .infinity)
             .background(Color(.pastelPrimary))
             .fullScreenCover(isPresented: $navigateToNext) {
-                SummaryView(vm: viewModel ?? ViewModel())
+                SummaryView()
             }
-//Move this to SummryView
-//            .navigationDestination(isPresented: $navigateToNext) {
-//                //MainView()
-//            }
-//        }
     }
 }
 

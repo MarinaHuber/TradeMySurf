@@ -48,24 +48,24 @@ class SurfTripViewController: UIViewController, StoryboardProtocol {
         self.collectionView.backgroundColor = .clear
     }
     
-    override func viewDidAppear(_ animated: Bool) {
-        super.viewDidAppear(animated)
-        self.navigationItem.leftBarButtonItem = leftBtn
-        if UserDefaults.standard.userWasHere == true {
-            let bridge = ViewModel()
-            let vc = UIHostingController(rootView: AlertSwiftUIView(vm: bridge))
-            vc.modalPresentationStyle = .overFullScreen
-            vc.view.backgroundColor = .clear
-            bridge.closeAction = { [weak vc] in
-                vc?.dismiss(animated: true)
-            }
-            bridge.backAction = { [weak vc] in
-                vc?.dismiss(animated: true)
-                self.scenePresenter?.presentAddLevel()
-            }
-            self.present(vc, animated: true, completion: nil)
-        }
-    }
+//    override func viewDidAppear(_ animated: Bool) {
+//        super.viewDidAppear(animated)
+//        self.navigationItem.leftBarButtonItem = leftBtn
+//        if UserDefaults.standard.userWasHere == true {
+//            let bridge = ViewModel()
+//            let vc = UIHostingController(rootView: AlertSwiftUIView(vm: bridge))
+//            vc.modalPresentationStyle = .overFullScreen
+//            vc.view.backgroundColor = .clear
+//            bridge.closeAction = { [weak vc] in
+//                vc?.dismiss(animated: true)
+//            }
+//            bridge.backAction = { [weak vc] in
+//                vc?.dismiss(animated: true)
+//                self.scenePresenter?.presentAddLevel()
+//            }
+//            self.present(vc, animated: true, completion: nil)
+//        }
+//    }
     
     override func viewDidDisappear(_ animated: Bool) {
         super.viewDidDisappear(animated)

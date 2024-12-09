@@ -9,56 +9,6 @@
 import Foundation
 import SwiftUI
 
-
-// MARK: - Navigation bar
-struct CustomNavigationBar: View {
-    @Environment(\.presentationMode) var presentationMode
-    var ifRecommendedView: Bool
-    @State var showSheetView = false
-
-    var body: some View {
-        // Custom navigation bar
-        ZStack {
-            Image("logo_wave")
-                .resizable()
-                .scaledToFit()
-                .frame(height: 60)
-                // Overlay the button on the left
-            if ifRecommendedView {
-                HStack {
-                    Button(action: {
-                            // Action for back button
-                        presentationMode.wrappedValue.dismiss()
-                        popBack()
-                    }) {
-                        Image(systemName: "chevron.backward")
-                            .foregroundColor(.white)
-                    }
-                    .frame(width: 60)
-
-                    Spacer()
-                    Button(action: {
-                        showSheetView.toggle()
-                    }) {
-                        Image(systemName: "info.bubble")
-                            .foregroundColor(.white)
-                    }
-                    .frame(width: 60)
-                    .sheet(isPresented: $showSheetView) {
-                        ThanksView(ifOnboardingView: false)
-                    }
-                }
-            }
-        }
-        .frame(maxWidth: .infinity)
-        .padding(.horizontal, 0) // Make sure the button is flush with the edge
-    }
-
-    private func popBack() {
-        UserDefaults.standard.userWasHere = false
-        UserDefaults.standard.selectedLevel = nil
-    }
-}
 // MARK: - iOS MeshGradient & LinearGradient Implementation
 struct MeshGradientView: View {
     let width: Int

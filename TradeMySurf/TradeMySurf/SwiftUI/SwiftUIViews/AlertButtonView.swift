@@ -9,48 +9,46 @@
 import SwiftUI
 
 struct AlertButtonView: View {
-    var vm: ViewModel
-
+    @Binding var navigationPath: NavigationPath
+    
     var body: some View {
-       // NavigationStack {
-            HStack(alignment: .center, spacing: 30) {
-                Group {
-                    Button(action: {
-                        self.vm.backAction()
-                    }) {
-                        Text(" Cancel  ")
-                            .bold()
-                            .font(.body)
-                            .foregroundColor(.red)
-                            .frame(width: 120, height: 40)
-                            .overlay(
-                                RoundedRectangle(cornerRadius: 10)
-                                    .stroke(.red, lineWidth: 1)
-                            )
-                    }
-                    Button(action: {
-                        self.vm.closeAction()
-                        
-                    }) {
-                        Text("Match me")
-                            .bold()
-                            .font(.body)
-                            .foregroundColor(.white)
-                            .frame(width: 120, height: 40)
-                            .overlay(
-                                RoundedRectangle(cornerRadius: 10)
-                                    .stroke(.white, lineWidth: 1)
-                            )
-                    }
+        HStack(alignment: .center, spacing: 20) {
+            Group {
+                Button(action: {
+                    navigationPath.append(NavigationOption.onboarding)
+                }) {
+                    Text("No thanks")
+                        .bold()
+                        .font(.body)
+                        .foregroundColor(.red)
+                        .frame(width: 100, height: 40)
+                        .padding(.horizontal, 8)
+                        .overlay(
+                            RoundedRectangle(cornerRadius: 10)
+                                .stroke(.red, lineWidth: 1)
+                        )
+                }
+                
+                Button(action: {
+                    navigationPath.append(NavigationOption.main)
+                }) {
+                    Text("Match me")
+                        .bold()
+                        .font(.body)
+                        .foregroundColor(.white)
+                        .frame(width: 100, height: 40)
+                        .overlay(
+                            RoundedRectangle(cornerRadius: 10)
+                                .stroke(.white, lineWidth: 1)
+                        )
                 }
             }
-       // }
-
+        }
     }
 }
 
 struct AlertButtonView_Previews: PreviewProvider {
     static var previews: some View {
-        AlertButtonView(vm: .init())
+        AlertButtonView(navigationPath: .constant(NavigationPath()))
     }
 }

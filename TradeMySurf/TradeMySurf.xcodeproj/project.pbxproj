@@ -29,6 +29,7 @@
 		9C53CE1E289E94B5000969F2 /* SplashViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C53CE1D289E94B5000969F2 /* SplashViewController.swift */; };
 		9C53D5C0234C126600A3BD80 /* StoryboardProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C53D5BF234C126600A3BD80 /* StoryboardProtocol.swift */; };
 		9C56F05E2D05C0E7005CB833 /* SummaryView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C56F05D2D05C0E7005CB833 /* SummaryView.swift */; };
+		9C56F0CE2D07611B005CB833 /* NavigationModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C56F0CD2D076107005CB833 /* NavigationModel.swift */; };
 		9C587298257FFA8300524BA7 /* ApiMapsRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C587297257FFA8300524BA7 /* ApiMapsRequest.swift */; };
 		9C58729C258023D800524BA7 /* ApiEndpoint.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C58729B258023D800524BA7 /* ApiEndpoint.swift */; };
 		9C5B644C232A506C000727E6 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C5B644B232A506C000727E6 /* AppDelegate.swift */; };
@@ -50,7 +51,6 @@
 		9C627C822BF2927900CD16C4 /* Colors.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 9C627C812BF2927900CD16C4 /* Colors.xcassets */; };
 		9C627C842BF299EA00CD16C4 /* ThemeManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C627C832BF299EA00CD16C4 /* ThemeManager.swift */; };
 		9C65758C24111E0100CCF6AF /* TabBarVC.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9C65758B24111E0100CCF6AF /* TabBarVC.storyboard */; };
-		9C65C9CC2CE4CF140084911C /* AlertSwiftUIView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C65C9CA2CE4CF140084911C /* AlertSwiftUIView.swift */; };
 		9C65C9CD2CE4CF140084911C /* ButtonAnimateColor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C65C9CB2CE4CF140084911C /* ButtonAnimateColor.swift */; };
 		9C65C9CE2CE4CF140084911C /* AlertButtonView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C65C9C92CE4CF140084911C /* AlertButtonView.swift */; };
 		9C69CE85234D06D7003E386F /* PriceCalculatorViewController.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9C69CE84234D06D7003E386F /* PriceCalculatorViewController.storyboard */; };
@@ -142,6 +142,7 @@
 		9C53CE1D289E94B5000969F2 /* SplashViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SplashViewController.swift; sourceTree = "<group>"; };
 		9C53D5BF234C126600A3BD80 /* StoryboardProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StoryboardProtocol.swift; sourceTree = "<group>"; };
 		9C56F05D2D05C0E7005CB833 /* SummaryView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SummaryView.swift; sourceTree = "<group>"; };
+		9C56F0CD2D076107005CB833 /* NavigationModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NavigationModel.swift; sourceTree = "<group>"; };
 		9C587297257FFA8300524BA7 /* ApiMapsRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ApiMapsRequest.swift; sourceTree = "<group>"; };
 		9C58729B258023D800524BA7 /* ApiEndpoint.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ApiEndpoint.swift; sourceTree = "<group>"; };
 		9C5B6448232A506C000727E6 /* SurfCurve.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SurfCurve.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -167,7 +168,6 @@
 		9C627C832BF299EA00CD16C4 /* ThemeManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ThemeManager.swift; sourceTree = "<group>"; };
 		9C65758B24111E0100CCF6AF /* TabBarVC.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = TabBarVC.storyboard; sourceTree = "<group>"; };
 		9C65C9C92CE4CF140084911C /* AlertButtonView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlertButtonView.swift; sourceTree = "<group>"; };
-		9C65C9CA2CE4CF140084911C /* AlertSwiftUIView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlertSwiftUIView.swift; sourceTree = "<group>"; };
 		9C65C9CB2CE4CF140084911C /* ButtonAnimateColor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ButtonAnimateColor.swift; sourceTree = "<group>"; };
 		9C69CE84234D06D7003E386F /* PriceCalculatorViewController.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = PriceCalculatorViewController.storyboard; sourceTree = "<group>"; };
 		9C69CE86234D0749003E386F /* Welcome.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Welcome.storyboard; sourceTree = "<group>"; };
@@ -307,6 +307,7 @@
 		9C05178D2BE17FD100DDBFDC /* TabBar */ = {
 			isa = PBXGroup;
 			children = (
+				9C56F0CC2D0760EF005CB833 /* Navigation */,
 				9C0517892BE1745D00DDBFDC /* MainView.swift */,
 			);
 			path = TabBar;
@@ -383,6 +384,14 @@
 				9C5B644F232A506C000727E6 /* PriceCalculatorViewController.swift */,
 			);
 			path = Calculator;
+			sourceTree = "<group>";
+		};
+		9C56F0CC2D0760EF005CB833 /* Navigation */ = {
+			isa = PBXGroup;
+			children = (
+				9C56F0CD2D076107005CB833 /* NavigationModel.swift */,
+			);
+			path = Navigation;
 			sourceTree = "<group>";
 		};
 		9C587296257FFA4B00524BA7 /* Services */ = {
@@ -496,7 +505,6 @@
 			isa = PBXGroup;
 			children = (
 				9C65C9C92CE4CF140084911C /* AlertButtonView.swift */,
-				9C65C9CA2CE4CF140084911C /* AlertSwiftUIView.swift */,
 				9C65C9CB2CE4CF140084911C /* ButtonAnimateColor.swift */,
 				9C3763432CD8012400A347EE /* AdsView.swift */,
 			);
@@ -897,13 +905,13 @@
 				9C624178238B107B00A4B7C9 /* SurfboardCollectionViewCell.swift in Sources */,
 				9C53CE1E289E94B5000969F2 /* SplashViewController.swift in Sources */,
 				9C76F09423493DAB00853FD9 /* WelcomeViewController.swift in Sources */,
+				9C56F0CE2D07611B005CB833 /* NavigationModel.swift in Sources */,
 				9C05178A2BE1745D00DDBFDC /* MainView.swift in Sources */,
 				9CE21BB32507C9BF00B6B20C /* LocationViewController.swift in Sources */,
 				9C3CC3DE23C75EE800359368 /* SupplementaryViews.swift in Sources */,
 				9C624172238AE81A00A4B7C9 /* SurfTip.swift in Sources */,
 				9CEFD7442CBC07C70003DCF4 /* TabbarEntrySwiftUI.swift in Sources */,
 				9C73E26623B963570028B9AC /* CoordinatorPresenting.swift in Sources */,
-				9C65C9CC2CE4CF140084911C /* AlertSwiftUIView.swift in Sources */,
 				9C65C9CD2CE4CF140084911C /* ButtonAnimateColor.swift in Sources */,
 				9C65C9CE2CE4CF140084911C /* AlertButtonView.swift in Sources */,
 				9CF77BE024104B9400C92725 /* AlertContainerView.swift in Sources */,
