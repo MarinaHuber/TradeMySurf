@@ -8,7 +8,7 @@
 
 import SwiftUI
 
-public struct RootAppView: View {
+public struct RootView: View {
 
     public var body: some View {
         SplashView()
@@ -17,5 +17,5 @@ public struct RootAppView: View {
 }
 
 #Preview {
-    RootAppView()
+    RootView()
 }

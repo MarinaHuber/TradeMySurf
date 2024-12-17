@@ -19,7 +19,7 @@ struct SummaryView: View {
     @State private var endPoint = UnitPoint(x: 0, y: 2)
     @Environment(\.dismiss) private var dismiss
     @EnvironmentObject private var themeManager: ThemeManager
-
+    
     var body: some View {
         NavigationStack(path: $navigationModel.navigationPath) {
             VStack(spacing: 0) {
@@ -32,23 +32,23 @@ struct SummaryView: View {
                 .padding(.horizontal, 30)
                 .frame(maxWidth: .infinity, alignment: .center)
                 .multilineTextAlignment(.center)
-
-
+                
+                
                 Group {
                     Image(systemName: "checkmark")
                         .font(themeManager.selectedTheme.largeTitleFont)
                         .padding([.top, .bottom], 10)
                         .frame(maxWidth: .infinity, alignment: .center)
-
+                    
                     Text("The key difference is to start at the right level for your surfing skills. You choose a start date: \(self.selectedDate?.dateAsString(style: .long) ?? "")")
                         .padding([.top, .bottom], 10)
                         .font(themeManager.selectedTheme.regularTitleFont)
-
+                    
                     Text("To cut down on your carbon footprint, try sticking to local spots by allowing your location access.")
                         .padding(.bottom, 20)
                         .font(themeManager.selectedTheme.bodyTextFont)
-
-
+                    
+                    
                     LocationAccessCard(
                         icon: Image(systemName: "location.circle"),
                         title: "Allow location access",
@@ -62,8 +62,8 @@ struct SummaryView: View {
                         }
                     )
                     .padding(.bottom, 20)
-
-
+                    
+                    
                     Text("Match to see your recommended level:")
                         .padding(.bottom, 20)
                         .font(themeManager.selectedTheme.regularTitleFont)
@@ -71,9 +71,20 @@ struct SummaryView: View {
                 .frame(maxWidth: .infinity, alignment: .center)
                 .padding(.horizontal, 30)
                 .multilineTextAlignment(.center)
-
-
-                AlertButtonView(navigationPath: $navigationModel.navigationPath)
+                
+                
+                AlertButtonView(
+                    onMainButtonTap: {
+                        navigationModel.navigateTo(.main)
+                    },
+                    onSecondaryButtonTap: {
+                        if navigationModel.canNavigateBack {
+                            navigationModel.navigateBack()
+                        } else {
+                            dismiss()
+                        }
+                    }
+                )
             }
             .padding(.vertical, 20)
             .frame(maxWidth: .infinity, maxHeight: .infinity)
@@ -82,13 +93,10 @@ struct SummaryView: View {
                 switch navigationOption {
                 case .main:
                     MainView()
-                case .welcome:
-                    WelcomeView()
                 }
             }
         }
     }
-
 }
 
 struct LocationAccessCard: View {

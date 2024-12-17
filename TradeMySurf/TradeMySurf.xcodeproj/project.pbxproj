@@ -62,7 +62,7 @@
 		9C76F09423493DAB00853FD9 /* WelcomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C76F09323493DAB00853FD9 /* WelcomeViewController.swift */; };
 		9C76F09623493EDA00853FD9 /* SurfTripViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C76F09523493EDA00853FD9 /* SurfTripViewController.swift */; };
 		9C76F09823493F0900853FD9 /* GuideViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C76F09723493F0900853FD9 /* GuideViewController.swift */; };
-		9C8939AE2CBC405B008B7A45 /* RootViewApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C8939AD2CBC405B008B7A45 /* RootViewApp.swift */; };
+		9C8939AE2CBC405B008B7A45 /* RootView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C8939AD2CBC405B008B7A45 /* RootView.swift */; };
 		9C8939B02CBC4089008B7A45 /* SplashView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C8939AF2CBC4089008B7A45 /* SplashView.swift */; };
 		9C8939B22CBC40C4008B7A45 /* WelcomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C8939B12CBC40C4008B7A45 /* WelcomeView.swift */; };
 		9C89B61C23DA40D400DB8DDF /* UIView+Shadow.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C89B61B23DA40D400DB8DDF /* UIView+Shadow.swift */; };
@@ -180,7 +180,7 @@
 		9C76F09323493DAB00853FD9 /* WelcomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WelcomeViewController.swift; sourceTree = "<group>"; };
 		9C76F09523493EDA00853FD9 /* SurfTripViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SurfTripViewController.swift; sourceTree = "<group>"; };
 		9C76F09723493F0900853FD9 /* GuideViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GuideViewController.swift; sourceTree = "<group>"; };
-		9C8939AD2CBC405B008B7A45 /* RootViewApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RootViewApp.swift; sourceTree = "<group>"; };
+		9C8939AD2CBC405B008B7A45 /* RootView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RootView.swift; sourceTree = "<group>"; };
 		9C8939AF2CBC4089008B7A45 /* SplashView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SplashView.swift; sourceTree = "<group>"; };
 		9C8939B12CBC40C4008B7A45 /* WelcomeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WelcomeView.swift; sourceTree = "<group>"; };
 		9C89B61B23DA40D400DB8DDF /* UIView+Shadow.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIView+Shadow.swift"; sourceTree = "<group>"; };
@@ -284,7 +284,7 @@
 				9C8939AF2CBC4089008B7A45 /* SplashView.swift */,
 				9C8B9C2E2CF7AE17007922C5 /* ThanksView.swift */,
 				9CB161552BE0335D0031C913 /* AddLevelDateView.swift */,
-				9C8939AD2CBC405B008B7A45 /* RootViewApp.swift */,
+				9C8939AD2CBC405B008B7A45 /* RootView.swift */,
 				9C8939B12CBC40C4008B7A45 /* WelcomeView.swift */,
 				9C56F05D2D05C0E7005CB833 /* SummaryView.swift */,
 			);
@@ -938,7 +938,7 @@
 				9C8B9C2F2CF7AE17007922C5 /* ThanksView.swift in Sources */,
 				9CF1CC24241136950067533C /* TabBarVC.swift in Sources */,
 				9CF77BDC24101D8300C92725 /* TabbarEntry.swift in Sources */,
-				9C8939AE2CBC405B008B7A45 /* RootViewApp.swift in Sources */,
+				9C8939AE2CBC405B008B7A45 /* RootView.swift in Sources */,
 				9CFDFD3F2367226C00760F25 /* AddDateViewController.swift in Sources */,
 				9C56F05E2D05C0E7005CB833 /* SummaryView.swift in Sources */,
 				9C76F09623493EDA00853FD9 /* SurfTripViewController.swift in Sources */,

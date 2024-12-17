@@ -11,11 +11,25 @@ import Foundation
 @MainActor
 class NavigationModel: ObservableObject {
     @Published var navigationPath = NavigationPath()
+    
+    func navigateTo(_ destination: NavigationOption) {
+        navigationPath.append(destination)
+    }
+    
+    func navigateBack() {
+        guard !navigationPath.isEmpty else { return }
+        navigationPath.removeLast()
+    }
+
+    // Helper method to check if we can navigate back
+    var canNavigateBack: Bool {
+        !navigationPath.isEmpty
+    }
 }
 
 
-enum NavigationOption: String, CaseIterable, Hashable {
-    case main, welcome
+enum NavigationOption: Hashable {
+    case main
 }
 
 // MARK: - Navigation bar

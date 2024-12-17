@@ -13,7 +13,6 @@ struct RecommendedView: View {
     @State private var sections: [TripSection] = []
     @State private var items: [TripSection: [TripItem]] = [:]
     @EnvironmentObject private var themeManager: ThemeManager
-    @Environment(\.presentationMode) var presentationMode
 
     var body: some View {
         ZStack(alignment: .top) {

@@ -7,13 +7,13 @@ import SwiftUI
 import UIKit
 
 @main
-struct RootApp: App {
+struct AppRoot: App {
     @UIApplicationDelegateAdaptor(AppDelegate.self) var appDelegate
     @StateObject var themeManager = ThemeManager()
 
     var body: some Scene {
             WindowGroup {
-                RootAppView()
+                RootView()
                     .environmentObject(themeManager)
             }
     }
