@@ -169,19 +169,23 @@ struct RecommendedView: View {
 
 struct TipView: View {
     let tip: SurfTip
+    @EnvironmentObject private var themeManager: ThemeManager
 
     var body: some View {
         VStack(alignment: .leading, spacing: 5) {
-            Text("Your goal: \(tip.goal)")
+            Text("Your goal to: ")
                 .font(.headline)
                 .foregroundColor(.primary)
+            + Text(" \(tip.goal)")
+                .font(themeManager.selectedTheme.bodyTextFont)
+                .foregroundColor(.primary)
             Text(tip.description)
-                .font(.body)
+                .font(themeManager.selectedTheme.captionTxtFont)
                 .foregroundColor(.primary)
             if !tip.descriptionLocation.isEmpty {
                 Text(tip.descriptionLocation)
-                    .font(.callout)
-                    .foregroundColor(Color(UIColor.secondaryLabel))
+                    .font(themeManager.selectedTheme.bodyTextFont)
+                    .foregroundColor(.secondary)
             }
         }
         .padding()

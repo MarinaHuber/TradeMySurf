@@ -24,7 +24,70 @@ struct GuideView: View {
     ]
     @State private var expandedIndex: Int? = nil
 
+// MARK: - Header Row
+    private var headerRow: some View {
+        HStack {
+            Text("Learning")
+                .multilineTextAlignment(.leading)
+                .font(themeManager.selectedTheme.largeTitleFont)
+            Spacer()
+        }
+        .padding(.top)
+        .listRowBackground(Color.pastelSecondary)
+    }
 
+// MARK: - Rows
+    private var rows: some View {
+        ForEach(data.indices, id: \.self) { index in
+            RowView(
+                title: data[index].0,
+                description: data[index].1,
+                isExpanded: expandedIndex == index
+            ) {
+                withAnimation {
+                    expandedIndex = expandedIndex == index ? nil : index
+                }
+            }
+            .listRowSeparator(.hidden) // Hide separator
+            .listRowBackground(Color.pastelSecondary) // Row background color
+        }
+    }
+// MARK: - RowView Component
+    private struct RowView: View {
+        let title: String
+        let description: String
+        let isExpanded: Bool
+        let onTap: () -> Void
+
+        @EnvironmentObject private var themeManager: ThemeManager
+
+        var body: some View {
+            VStack(alignment: .leading) {
+                HStack {
+                    Text(title) // Display title
+                        .font(themeManager.selectedTheme.pickerFont)
+                    Spacer()
+
+                        // Chevron toggle
+                    Image(systemName: isExpanded ? "chevron.down" : "chevron.down")
+                        .rotationEffect(.degrees(isExpanded ? 180 : 0))
+                        .foregroundColor(.gray)
+                }
+                .onTapGesture {
+                    onTap()
+                }
+
+                if isExpanded {
+                    Text(description)
+                        .font(themeManager.selectedTheme.captionTxtFont)
+                        .padding(.top, 5)
+                }
+            }
+            .padding(.vertical, 8)
+        }
+    }
+
+// MARK: - GuideView
     var body: some View {
         ZStack(alignment: .top) {
             MeshGradientView(
@@ -36,52 +99,17 @@ struct GuideView: View {
             VStack {
                 CustomNavigationBar(ifRecommendedView: false)
                 List {
-                    HStack {
-                        Text("Learning")
-                            .multilineTextAlignment(.leading)
-                            .font(themeManager.selectedTheme.largeTitleFont)
-                        Spacer()
-                    }
-                    .padding(.top)
-
-                    ForEach(data.indices, id: \.self) { index in
-                        VStack(alignment: .leading) {
-                            HStack {
-                                Text(data[index].0) // Display title
-                                    .font(themeManager.selectedTheme.pickerFont)
-                                Spacer()
-                                    // Toggle arrow icon based on expanded state
-                                Image(systemName: expandedIndex == index ? "chevron.up" : "chevron.down")
-                                    .rotationEffect(.degrees(expandedIndex == index ? 180 : 0))
-                                    .foregroundColor(.gray)
-                            }
-                            .onTapGesture {
-                                    // Toggle expansion state
-                                withAnimation {
-                                    expandedIndex = expandedIndex == index ? nil : index
-                                }
-                            }
-                            if expandedIndex == index {
-                                Text(data[index].1)
-                                    .font(themeManager.selectedTheme.captionTxtFont)
-                                    .padding(.top, 5)
-                            }
-                        }
-                        .padding(.vertical, 10)
-                        .listRowSeparator(.hidden)
-                    }
-                }
-                .frame(maxHeight: UIScreen.main.bounds.height * 3 / 4)
-                .listStyle(.inset)
-                .clipShape(RoundedRectangle(cornerRadius: 10))
-                .padding()
-
-            }
-        }
+                    headerRow
+                    rows
+                } // List
+                .scrollContentBackground(.hidden) // Remove List default background
+                .listStyle(.inset) // List style
+                .cornerRadius(12)
+                .padding(.horizontal, 20)
+                .frame(maxHeight: .infinity)
+            }// VStack
+        }// ZStack
         .toolbarBackground(.hidden, for: .tabBar)
-        .background(.pastelPrimary)
-
-
     }
 }
 

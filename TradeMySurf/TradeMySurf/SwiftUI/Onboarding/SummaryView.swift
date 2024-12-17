@@ -32,18 +32,18 @@ struct SummaryView: View {
                 .padding(.horizontal, 30)
                 .frame(maxWidth: .infinity, alignment: .center)
                 .multilineTextAlignment(.center)
-                
-                
+                .foregroundColor(.white)
+
                 Group {
                     Image(systemName: "checkmark")
                         .font(themeManager.selectedTheme.largeTitleFont)
                         .padding([.top, .bottom], 10)
                         .frame(maxWidth: .infinity, alignment: .center)
                     
-                    Text("The key difference is to start at the right level for your surfing skills. You choose a start date: \(self.selectedDate?.dateAsString(style: .long) ?? "")")
+                    Text("The key difference is to start at the right level for your surfing skills. Choosen start date:\n \(self.selectedDate?.dateAsString(style: .long) ?? "")")
                         .padding([.top, .bottom], 10)
-                        .font(themeManager.selectedTheme.regularTitleFont)
-                    
+                        .font(themeManager.selectedTheme.captionTxtFont)
+
                     Text("To cut down on your carbon footprint, try sticking to local spots by allowing your location access.")
                         .padding(.bottom, 20)
                         .font(themeManager.selectedTheme.bodyTextFont)
@@ -52,7 +52,7 @@ struct SummaryView: View {
                     LocationAccessCard(
                         icon: Image(systemName: "location.circle"),
                         title: "Allow location access",
-                        description: "We need \"When using app\" location access to: 1) map your nearest surf location, 2) suggest places you can visit.",
+                        description: "We need \"When using app\" location access to: 1) map your nearest surf location, 2) suggest places to surf.",
                         buttonText: "Open phone settings",
                         buttonAction: {
                             if let settingsUrl = URL(string: UIApplication.openSettingsURLString),
@@ -62,17 +62,17 @@ struct SummaryView: View {
                         }
                     )
                     .padding(.bottom, 20)
-                    
+
                     
                     Text("Match to see your recommended level:")
                         .padding(.bottom, 20)
-                        .font(themeManager.selectedTheme.regularTitleFont)
+                        .font(themeManager.selectedTheme.captionTxtFont)
                 }
                 .frame(maxWidth: .infinity, alignment: .center)
-                .padding(.horizontal, 30)
+                .padding(.horizontal, 20)
                 .multilineTextAlignment(.center)
-                
-                
+                .foregroundColor(.white)
+
                 AlertButtonView(
                     onMainButtonTap: {
                         navigationModel.navigateTo(.main)
@@ -86,7 +86,7 @@ struct SummaryView: View {
                     }
                 )
             }
-            .padding(.vertical, 20)
+            .padding(.vertical, 10)
             .frame(maxWidth: .infinity, maxHeight: .infinity)
             .background(.pastelPrimary)
             .navigationDestination(for: NavigationOption.self) { navigationOption in
@@ -118,6 +118,7 @@ struct LocationAccessCard: View {
 
                 Text(title)
                     .font(.headline)
+                    .foregroundColor(.primary)
             }
 
             Text(description)
@@ -130,7 +131,7 @@ struct LocationAccessCard: View {
 
             Button(action: buttonAction) {
                 Text(buttonText)
-                    .font(themeManager.selectedTheme.regularTitleFont)
+                    .font(themeManager.selectedTheme.tabbarFont)
                     .frame(maxWidth: 150, maxHeight: 30)
                     .padding(6)
                     .foregroundColor(.blue)
