@@ -60,16 +60,15 @@ struct WelcomeAnimateView: View {
 
 struct WelcomeIntroText: View {
     @State private var isUserHere = false
-
     @EnvironmentObject private var themeManager: ThemeManager
     
     var body: some View {
         VStack(spacing: 0) {
-            Text("Your therapy starts here")
+            Text("Your surf starts here")
                 .font(themeManager.selectedTheme.textTitleFont)
                 .padding(.bottom, 30)
                 .foregroundColor(.white)
-            ButtonAnimateColor(title: "Show me the surf!", action: {
+            ButtonAnimateColor(title: "Continue", action: {
                 isUserHere.toggle()
             })
             Spacer()

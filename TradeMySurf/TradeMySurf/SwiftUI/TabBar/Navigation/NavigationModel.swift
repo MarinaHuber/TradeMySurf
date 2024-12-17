@@ -15,7 +15,7 @@ class NavigationModel: ObservableObject {
 
 
 enum NavigationOption: String, CaseIterable, Hashable {
-    case main, onboarding
+    case main, welcome
 }
 
 // MARK: - Navigation bar
@@ -25,17 +25,16 @@ struct CustomNavigationBar: View {
     @State var showSheetView = false
 
     var body: some View {
-            // Custom navigation bar
         ZStack {
             Image("logo_wave")
                 .resizable()
                 .scaledToFit()
                 .frame(height: 60)
-                // Overlay the button on the left
             if ifRecommendedView {
                 HStack {
+                // Summary button on left navbar
                     Button(action: {
-                            // Action for back button
+                // Action back button
                         presentationMode.wrappedValue.dismiss()
                         popBack()
                     }) {
@@ -65,5 +64,6 @@ struct CustomNavigationBar: View {
     private func popBack() {
         UserDefaults.standard.userWasHere = false
         UserDefaults.standard.selectedLevel = nil
+        UserDefaults.standard.selectedDate = nil
     }
 }

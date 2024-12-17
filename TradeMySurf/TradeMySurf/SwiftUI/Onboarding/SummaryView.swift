@@ -18,38 +18,41 @@ struct SummaryView: View {
     @State private var startPoint = UnitPoint(x: 0, y: 0)
     @State private var endPoint = UnitPoint(x: 0, y: 2)
     @Environment(\.dismiss) private var dismiss
+    @EnvironmentObject private var themeManager: ThemeManager
 
     var body: some View {
         NavigationStack(path: $navigationModel.navigationPath) {
             VStack(spacing: 0) {
-                Group{
+                Group {
                     Text("When you want to:")
-                        .font(Font.system(.subheadline))
+                        .font(themeManager.selectedTheme.tabbarFont)
                     Text("\(self.selectedLevel ?? "")")
-                        .font(Font.system(.title).bold())
+                        .font(themeManager.selectedTheme.largeTitleFont)
                 }
                 .padding(.horizontal, 30)
-                .frame(maxWidth: .infinity, alignment: .leading)
+                .frame(maxWidth: .infinity, alignment: .center)
+                .multilineTextAlignment(.center)
 
 
                 Group {
                     Image(systemName: "checkmark")
-                        .font(Font.system(.largeTitle).bold())
+                        .font(themeManager.selectedTheme.largeTitleFont)
                         .padding([.top, .bottom], 10)
                         .frame(maxWidth: .infinity, alignment: .center)
 
-                    Text("The key difference is to arrive at appropriate surfing level. You choose the start date on: \(self.selectedDate?.dateAsString(style: .long) ?? "")")
+                    Text("The key difference is to start at the right level for your surfing skills. You choose a start date: \(self.selectedDate?.dateAsString(style: .long) ?? "")")
                         .padding([.top, .bottom], 10)
+                        .font(themeManager.selectedTheme.regularTitleFont)
 
-
-                    Text("For carbon footprint reduction use your location and reduce usage of flights.")
+                    Text("To cut down on your carbon footprint, try sticking to local spots by allowing your location access.")
                         .padding(.bottom, 20)
+                        .font(themeManager.selectedTheme.bodyTextFont)
 
 
-                    NotificationCard(
+                    LocationAccessCard(
                         icon: Image(systemName: "location.circle"),
                         title: "Allow location access",
-                        description: "We need \"When using app\" location access to: 1) map your nearest surf location, 2) suggest places you can visit. Don't worry, it won't drain your battery.",
+                        description: "We need \"When using app\" location access to: 1) map your nearest surf location, 2) suggest places you can visit.",
                         buttonText: "Open phone settings",
                         buttonAction: {
                             if let settingsUrl = URL(string: UIApplication.openSettingsURLString),
@@ -61,11 +64,14 @@ struct SummaryView: View {
                     .padding(.bottom, 20)
 
 
-                    Text("Match to see your recommended locations and surfboards:")
+                    Text("Match to see your recommended level:")
                         .padding(.bottom, 20)
+                        .font(themeManager.selectedTheme.regularTitleFont)
                 }
+                .frame(maxWidth: .infinity, alignment: .center)
                 .padding(.horizontal, 30)
-                .frame(maxWidth: .infinity, alignment: .leading)
+                .multilineTextAlignment(.center)
+
 
                 AlertButtonView(navigationPath: $navigationModel.navigationPath)
             }
@@ -76,7 +82,7 @@ struct SummaryView: View {
                 switch navigationOption {
                 case .main:
                     MainView()
-                case .onboarding:
+                case .welcome:
                     WelcomeView()
                 }
             }
@@ -85,13 +91,13 @@ struct SummaryView: View {
 
 }
 
-
-struct NotificationCard: View {
+struct LocationAccessCard: View {
     let icon: Image
     let title: String
     let description: String
     let buttonText: String
     let buttonAction: () -> Void
+    @EnvironmentObject private var themeManager: ThemeManager
 
     var body: some View {
         VStack(alignment: .leading, spacing: 12) {
@@ -107,7 +113,7 @@ struct NotificationCard: View {
             }
 
             Text(description)
-                .font(.subheadline)
+                .font(themeManager.selectedTheme.regularTitleFont)
                 .foregroundColor(.gray)
                 .multilineTextAlignment(.leading)
                 .lineLimit(5)
@@ -116,7 +122,7 @@ struct NotificationCard: View {
 
             Button(action: buttonAction) {
                 Text(buttonText)
-                    .font(.subheadline)
+                    .font(themeManager.selectedTheme.regularTitleFont)
                     .frame(maxWidth: 150, maxHeight: 30)
                     .padding(6)
                     .foregroundColor(.blue)

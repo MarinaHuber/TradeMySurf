@@ -18,7 +18,7 @@ struct SplashView: View {
                 .playing(loopMode: .playOnce)
                 .scaleEffect(3)
                 .padding(.top , UIScreen.main.bounds.height / 1.5)
-            Text("Copyrights Codable 2024")
+            Text("Copyrights Codable 2025")
                 .padding(.bottom, 20)
                 .font(.system(size: 11).weight(.light))
         }

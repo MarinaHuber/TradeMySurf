@@ -77,12 +77,10 @@ extension Text.Layout {
         flattenedRuns.flatMap(\.self)
     }
 }
-
 struct AddLevelDateView: View {
     @State private var navigateToNext = false
 
     var body: some View {
-      //  NavigationStack {
             VStack(spacing: 0) {
                 ArrowPopoverView(navigateToNext: $navigateToNext)
             }
@@ -133,7 +131,6 @@ struct AnimatedTextView: View {
     }
 }
 
-
 struct ArrowPopoverView: View {
     @Binding var navigateToNext: Bool
     @State var level: String = Level.beginner.rawValue
@@ -151,7 +148,7 @@ struct ArrowPopoverView: View {
             AnimatedTextView()
                 .padding(.top, 10)
 
-            ButtonAnimateColor(title: showDatePicker ? "Done" : "Let's go", action: {
+            ButtonAnimateColor(title: showDatePicker ? "Done" : "Continue", action: {
                 if showDatePicker {
                     UserDefaults.standard.selectedDate = date
                     navigateToNext = true
@@ -171,6 +168,8 @@ struct ArrowPopoverView: View {
         .onAppear {
             withAnimation(.easeInOut(duration: 4.0)) {
                 showPopover = true
+                showDatePicker = false
+
             }
         }
         .onChange(of: level, {

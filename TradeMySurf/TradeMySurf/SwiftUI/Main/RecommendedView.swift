@@ -42,84 +42,6 @@ struct RecommendedView: View {
         }
     }
 
-    private func sectionView(for section: TripSection) -> some View {
-        VStack(alignment: .leading, spacing: 10) {
-            textHeader(for: section)
-
-            switch section {
-            case .surfboardsBeginner, .surfboardsBeginnerInter, .surfboardsIntermediate, .surfboardsAdvanced, .surfboardsAreals, .surfboardsLongboard:
-                surfboardsSection(items: items[section] ?? [])
-            case .surfCountrySummer, .surfCountryAutumn, .surfCountryWinter, .surfCountrySpring:
-                locationsSection(items: items[section] ?? [])
-            case .tipBeginner, .tipBeginnerInter, .tipIntermediate, .tipAdvanced, .tipAreals, .tipLongboard:
-                tipsSection(items: items[section] ?? [])
-            }
-        }
-    }
-
-    private func textHeader(for section: TripSection) -> some View {
-        if let tripItems = items[section], !tripItems.isEmpty {
-            let selectedItem = tripItems[0] // Select the first item as default
-
-            switch selectedItem {
-            case .surfboard(let board, _):
-                return AnyView(sectionHeader(for: "\(board.level) level", subtitle: "Recommended boards for you"))
-
-            case .surfCountry(let location, _):
-                return AnyView(sectionHeader(for: location.beaufortScaleWave, subtitle: "Recommended locations for your level"))
-
-            case .tip(_, _):
-                return AnyView(sectionHeader(for: "\(self.selectedDate?.dateAsString(style: .long) ?? "")", subtitle: "Start of your surf therapy"))
-            }
-        }
-        return AnyView(Text("No items available for this section"))
-    }
-
-
-    private func sectionHeader(for text: String, subtitle: String) -> some View {
-        VStack(alignment: .leading, spacing: 5) {
-            Text(text)
-                .font(themeManager.selectedTheme.captionTxtFont)
-            Text(subtitle)
-                .font(.footnote)
-        }
-        .foregroundColor(Color(.white))
-    }
-    
-    private func surfboardsSection(items: [TripItem]) -> some View {
-        ScrollView(.horizontal, showsIndicators: false) {
-            LazyHStack(spacing: 10) {
-                ForEach(items, id: \.self) { item in
-                    if case let .surfboard(board, _) = item {
-                        SurfboardView(item: board)
-                    }
-                }
-            }
-        }
-    }
-
-    private func locationsSection(items: [TripItem]) -> some View {
-        ScrollView(.horizontal, showsIndicators: false) {
-            LazyHStack(spacing: 10) {
-                ForEach(items, id: \.self) { item in
-                    if case let .surfCountry(location, _) = item {
-                        LocationView(item: location)
-                    }
-                }
-            }
-        }
-    }
-
-    private func tipsSection(items: [TripItem]) -> some View {
-        VStack(spacing: 10) {
-            ForEach(items, id: \.self) { item in
-                if case let .tip(tip, _) = item {
-                    TipView(tip: tip)
-                }
-            }
-        }
-    }
-
     private func updateData() {
         guard let selectedLevel = selectedLevel else { return }
 
@@ -167,10 +89,82 @@ struct RecommendedView: View {
         items = newItems
     }
 
-    private func popBack() {
-            // Implement navigation back to AddLevelView here
-        UserDefaults.standard.userWasHere = false
-        selectedLevel = nil
+    private func sectionView(for section: TripSection) -> some View {
+        VStack(alignment: .leading, spacing: 10) {
+            textHeader(for: section)
+
+            switch section {
+            case .surfboardsBeginner, .surfboardsBeginnerInter, .surfboardsIntermediate, .surfboardsAdvanced, .surfboardsAreals, .surfboardsLongboard:
+                surfboardsSection(items: items[section] ?? [])
+            case .surfCountrySummer, .surfCountryAutumn, .surfCountryWinter, .surfCountrySpring:
+                locationsSection(items: items[section] ?? [])
+            case .tipBeginner, .tipBeginnerInter, .tipIntermediate, .tipAdvanced, .tipAreals, .tipLongboard:
+                tipsSection(items: items[section] ?? [])
+            }
+        }
+    }
+
+    private func textHeader(for section: TripSection) -> some View {
+        if let tripItems = items[section], !tripItems.isEmpty {
+            let selectedItem = tripItems[0] // Select the first item as default
+
+            switch selectedItem {
+            case .surfboard(let board, _):
+                return AnyView(sectionHeader(for: "\(board.level) level", subtitle: "Recommended boards for you"))
+
+            case .surfCountry(let location, _):
+                return AnyView(sectionHeader(for: location.beaufortScaleWave, subtitle: "Recommended locations for your level"))
+
+            case .tip(_, _):
+                return AnyView(sectionHeader(for: "\(self.selectedDate?.dateAsString(style: .long) ?? "")", subtitle: "Start of your surf therapy"))
+            }
+        }
+        return AnyView(Text("No items available for this section"))
+    }
+
+
+    private func sectionHeader(for text: String, subtitle: String) -> some View {
+        VStack(alignment: .leading, spacing: 5) {
+            Text(text)
+                .font(themeManager.selectedTheme.captionTxtFont)
+            Text(subtitle)
+                .font(.footnote)
+        }
+        .foregroundColor(Color(.white))
+    }
+
+    private func surfboardsSection(items: [TripItem]) -> some View {
+        ScrollView(.horizontal, showsIndicators: false) {
+            LazyHStack(spacing: 10) {
+                ForEach(items, id: \.self) { item in
+                    if case let .surfboard(board, _) = item {
+                        SurfboardView(item: board)
+                    }
+                }
+            }
+        }
+    }
+
+    private func locationsSection(items: [TripItem]) -> some View {
+        ScrollView(.horizontal, showsIndicators: false) {
+            LazyHStack(spacing: 10) {
+                ForEach(items, id: \.self) { item in
+                    if case let .surfCountry(location, _) = item {
+                        LocationView(item: location)
+                    }
+                }
+            }
+        }
+    }
+
+    private func tipsSection(items: [TripItem]) -> some View {
+        VStack(spacing: 10) {
+            ForEach(items, id: \.self) { item in
+                if case let .tip(tip, _) = item {
+                    TipView(tip: tip)
+                }
+            }
+        }
     }
 }
 
