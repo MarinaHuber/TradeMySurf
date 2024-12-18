@@ -106,8 +106,7 @@ struct CalculatorView: View {
                     .foregroundColor(.white)
                     .padding(.top)
                 Text("Average price")
-                    .padding(.top, 5)
-                    .font(themeManager.selectedTheme.textTitleFont)
+                    .font(themeManager.selectedTheme.regularTitleFont)
                     .foregroundColor(.white)
             }
             .onAppear {

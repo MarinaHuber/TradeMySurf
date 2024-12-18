@@ -11,9 +11,9 @@ import SwiftUI
 struct DetailsLocationView: View {
     @State var item: Surfboard?
     @State private var region = MKCoordinateRegion(
-        center: CLLocationCoordinate2D(latitude: 31.5, longitude: -9.75), // Example starting location (Morocco)
-        latitudinalMeters: 6000,
-        longitudinalMeters: 6000
+        center: CLLocationCoordinate2D(latitude: 40.5, longitude: -8.75),
+        latitudinalMeters: 1000,
+        longitudinalMeters: 1000
     )
 
     @State private var annotations: [LocationAnnotation] = [] // Array to hold annotation data

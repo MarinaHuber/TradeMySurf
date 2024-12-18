@@ -75,7 +75,7 @@ struct ArrowPopoverView: View {
             })
             .font(themeManager.selectedTheme.bodyTextFont)
             .frame(width: 300, height: 40, alignment: .center)
-            .padding([.horizontal, .top])
+            .padding([.horizontal, .top], 10)
             .opacity(showButton ? 1 : 0)
 
             Spacer()

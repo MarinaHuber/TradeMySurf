@@ -22,17 +22,25 @@ struct RecommendedView: View {
                 colors: ColorPalette.gradientColors,
                 background: Color(.pastelPrimary)
             )
-            
-            VStack {
-                CustomNavigationBar(ifRecommendedView: true)
-                ScrollView {
-                    LazyVStack(spacing: 10) {
-                        ForEach(sections, id: \.self) { section in
-                            sectionView(for: section)
+            if sections.isEmpty {
+                Text("No surf therapy")
+                    .font(themeManager.selectedTheme.normalBtnTitleFont)
+                    .foregroundColor(.white)
+                    .padding(40)
+                    .frame(maxWidth: .infinity, maxHeight: .infinity)
+                    .multilineTextAlignment(.center)
+            } else {
+                VStack {
+                    CustomNavigationBar(ifRecommendedView: true)
+                    ScrollView {
+                        LazyVStack(spacing: 5) {
+                            ForEach(sections, id: \.self) { section in
+                                sectionView(for: section)
+                            }
                         }
+                        .toolbarBackground(.hidden, for: .tabBar)
+                        .padding()
                     }
-                    .toolbarBackground(.hidden, for: .tabBar)
-                    .padding()
                 }
             }
         }
@@ -125,7 +133,7 @@ struct RecommendedView: View {
     private func sectionHeader(for text: String, subtitle: String) -> some View {
         VStack(alignment: .leading, spacing: 5) {
             Text(text)
-                .font(themeManager.selectedTheme.captionTxtFont)
+                .font(themeManager.selectedTheme.bodyTextFont)
             Text(subtitle)
                 .font(.footnote)
         }

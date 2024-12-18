@@ -54,7 +54,7 @@ struct WelcomeAnimateView: View {
         .background(themeManager.selectedTheme.primaryThemeColor.opacity(0.7))
         .cornerRadius(30)
         .offset(y: 210)
-        .padding([.top, .bottom], 90) //to do fix padding to be dynamic
+        .padding([.top, .bottom], 90) //fix padding to dynamic
     }
 }
 
@@ -63,11 +63,12 @@ struct WelcomeIntroText: View {
     @EnvironmentObject private var themeManager: ThemeManager
     
     var body: some View {
-        VStack(spacing: 0) {
+        VStack(spacing: 10) {
             Text("Your surf starts here")
-                .font(themeManager.selectedTheme.textTitleFont)
-                .padding(.bottom, 30)
+                .font(themeManager.selectedTheme.largeTitleFont)
                 .foregroundColor(.white)
+                .multilineTextAlignment(.center)
+                .fixedSize(horizontal: false, vertical: true)
             ButtonAnimateColor(title: "Continue", action: {
                 isUserHere.toggle()
             })
