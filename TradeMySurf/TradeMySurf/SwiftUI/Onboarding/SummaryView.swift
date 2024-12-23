@@ -89,10 +89,13 @@ struct SummaryView: View {
             .padding(.vertical, 10)
             .frame(maxWidth: .infinity, maxHeight: .infinity)
             .background(.pastelPrimary)
-            .navigationDestination(for: NavigationOption.self) { navigationOption in
-                switch navigationOption {
+            .navigationDestination(for: NavigationOption.self) { navigation in
+                switch navigation {
                 case .main:
                     MainView()
+                default:
+                    fatalError("Unhandled case: \(navigation)")
+
                 }
             }
         }

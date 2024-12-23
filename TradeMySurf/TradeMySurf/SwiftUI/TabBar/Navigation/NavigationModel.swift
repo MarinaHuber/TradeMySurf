@@ -20,15 +20,14 @@ class NavigationModel: ObservableObject {
         guard !navigationPath.isEmpty else { return }
         navigationPath.removeLast()
     }
-
     // Helper method to check if we can navigate back
     var canNavigateBack: Bool {
         !navigationPath.isEmpty
     }
 }
 
-
 enum NavigationOption: Hashable {
+    case welcome
     case main
 }
 
@@ -46,9 +45,8 @@ struct CustomNavigationBar: View {
                 .frame(height: 60)
             if ifRecommendedView {
                 HStack {
-                // Summary button on left navbar
+                // Back button on left navbar
                     Button(action: {
-                // Action back button
                         presentationMode.wrappedValue.dismiss()
                         popBack()
                     }) {

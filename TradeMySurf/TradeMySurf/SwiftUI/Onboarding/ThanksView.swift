@@ -9,12 +9,12 @@
 import SwiftUI
 
 struct ThanksView: View {
-    @State private var isUserHere = false
     @EnvironmentObject private var themeManager: ThemeManager
+    @StateObject private var navigationModel = NavigationModel()
     var ifOnboardingView: Bool
 
     var body: some View {
-        NavigationStack {
+        NavigationStack(path: $navigationModel.navigationPath) {
             VStack(spacing: 20) {
                 // Header with profile picture
                 HStack {
@@ -70,10 +70,15 @@ struct ThanksView: View {
 
                 if ifOnboardingView {
                     ButtonAnimateColor(title: "Let's go!", action: {
-                        isUserHere.toggle()
+                        navigationModel.navigateTo(.welcome)
                     })
-                    .navigationDestination(isPresented: $isUserHere) {
-                        WelcomeView()
+                    .navigationDestination(for: NavigationOption.self) { navigation in
+                        switch navigation {
+                        case .welcome:
+                            WelcomeView()
+                        default:
+                            fatalError("Unhandled case: \(navigation)")
+                        }
                     }
                 }
             }
