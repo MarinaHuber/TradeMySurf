@@ -13,7 +13,7 @@
 		9C193AFB23A2ACA7000DE1AB /* coin-wallet.json in Resources */ = {isa = PBXBuildFile; fileRef = 9C193AFA23A2ACA7000DE1AB /* coin-wallet.json */; };
 		9C31EB8A23E3AA2100060143 /* DetailViewController.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9C31EB8923E3AA2100060143 /* DetailViewController.storyboard */; };
 		9C31EB8C23E3AB1A00060143 /* DetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C31EB8B23E3AB1A00060143 /* DetailViewController.swift */; };
-		9C3763442CD8012400A347EE /* AdsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C3763432CD8012400A347EE /* AdsView.swift */; };
+		9C3763442CD8012400A347EE /* PremiumView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C3763432CD8012400A347EE /* PremiumView.swift */; };
 		9C3CC3DE23C75EE800359368 /* SupplementaryViews.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C3CC3DD23C75EE800359368 /* SupplementaryViews.swift */; };
 		9C3CF4F42CA58F7C00E5D4E3 /* AvenirNextCyr-Demi.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 9CAECD5C2BE539E300F0E7AC /* AvenirNextCyr-Demi.ttf */; };
 		9C3CF4F52CA58F7C00E5D4E3 /* AvenirNextCyr-Heavy.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 9CAECD582BE539E300F0E7AC /* AvenirNextCyr-Heavy.ttf */; };
@@ -62,6 +62,9 @@
 		9C76F09423493DAB00853FD9 /* WelcomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C76F09323493DAB00853FD9 /* WelcomeViewController.swift */; };
 		9C76F09623493EDA00853FD9 /* SurfTripViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C76F09523493EDA00853FD9 /* SurfTripViewController.swift */; };
 		9C76F09823493F0900853FD9 /* GuideViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C76F09723493F0900853FD9 /* GuideViewController.swift */; };
+		9C7F9ADE2D1B5C69005BB949 /* FeedbackView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C7F9ADD2D1B5C69005BB949 /* FeedbackView.swift */; };
+		9C7F9AE02D1B5CA9005BB949 /* SnowFall.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C7F9ADF2D1B5CA9005BB949 /* SnowFall.swift */; };
+		9C7F9AE22D1B5CEC005BB949 /* snow.sks in Resources */ = {isa = PBXBuildFile; fileRef = 9C7F9AE12D1B5CEC005BB949 /* snow.sks */; };
 		9C8939AE2CBC405B008B7A45 /* RootView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C8939AD2CBC405B008B7A45 /* RootView.swift */; };
 		9C8939B02CBC4089008B7A45 /* SplashView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C8939AF2CBC4089008B7A45 /* SplashView.swift */; };
 		9C8939B22CBC40C4008B7A45 /* WelcomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C8939B12CBC40C4008B7A45 /* WelcomeView.swift */; };
@@ -133,7 +136,7 @@
 		9C193AFA23A2ACA7000DE1AB /* coin-wallet.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = "coin-wallet.json"; sourceTree = "<group>"; };
 		9C31EB8923E3AA2100060143 /* DetailViewController.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = DetailViewController.storyboard; sourceTree = "<group>"; };
 		9C31EB8B23E3AB1A00060143 /* DetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailViewController.swift; sourceTree = "<group>"; };
-		9C3763432CD8012400A347EE /* AdsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AdsView.swift; sourceTree = "<group>"; };
+		9C3763432CD8012400A347EE /* PremiumView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PremiumView.swift; sourceTree = "<group>"; };
 		9C3CC3DD23C75EE800359368 /* SupplementaryViews.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SupplementaryViews.swift; sourceTree = "<group>"; };
 		9C45E660234D238E0054A5FD /* SurfTripViewController.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = SurfTripViewController.storyboard; sourceTree = "<group>"; };
 		9C467C66234F2A7D009F4D58 /* Surfboard.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Surfboard.swift; sourceTree = "<group>"; };
@@ -180,6 +183,9 @@
 		9C76F09323493DAB00853FD9 /* WelcomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WelcomeViewController.swift; sourceTree = "<group>"; };
 		9C76F09523493EDA00853FD9 /* SurfTripViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SurfTripViewController.swift; sourceTree = "<group>"; };
 		9C76F09723493F0900853FD9 /* GuideViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GuideViewController.swift; sourceTree = "<group>"; };
+		9C7F9ADD2D1B5C69005BB949 /* FeedbackView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeedbackView.swift; sourceTree = "<group>"; };
+		9C7F9ADF2D1B5CA9005BB949 /* SnowFall.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SnowFall.swift; sourceTree = "<group>"; };
+		9C7F9AE12D1B5CEC005BB949 /* snow.sks */ = {isa = PBXFileReference; lastKnownFileType = file.sks; path = snow.sks; sourceTree = "<group>"; };
 		9C8939AD2CBC405B008B7A45 /* RootView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RootView.swift; sourceTree = "<group>"; };
 		9C8939AF2CBC4089008B7A45 /* SplashView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SplashView.swift; sourceTree = "<group>"; };
 		9C8939B12CBC40C4008B7A45 /* WelcomeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WelcomeView.swift; sourceTree = "<group>"; };
@@ -300,6 +306,7 @@
 				9CEFD7452CBC142A0003DCF4 /* RecommendedView.swift */,
 				9CA167CA2CBEB13900B91E5B /* DetailsLocationView.swift */,
 				9CA167C82CBE772700B91E5B /* DetailsSurfboardView.swift */,
+				9C7F9ADD2D1B5C69005BB949 /* FeedbackView.swift */,
 			);
 			path = Main;
 			sourceTree = "<group>";
@@ -506,7 +513,8 @@
 			children = (
 				9C65C9C92CE4CF140084911C /* AlertButtonView.swift */,
 				9C65C9CB2CE4CF140084911C /* ButtonAnimateColor.swift */,
-				9C3763432CD8012400A347EE /* AdsView.swift */,
+				9C3763432CD8012400A347EE /* PremiumView.swift */,
+				9C7F9ADF2D1B5CA9005BB949 /* SnowFall.swift */,
 			);
 			path = SwiftUIViews;
 			sourceTree = "<group>";
@@ -561,6 +569,7 @@
 				9C90A2232388812400E735D3 /* Lottie */,
 				9C5B6457232A5073000727E6 /* Assets.xcassets */,
 				9C627C812BF2927900CD16C4 /* Colors.xcassets */,
+				9C7F9AE12D1B5CEC005BB949 /* snow.sks */,
 			);
 			path = Resources;
 			sourceTree = "<group>";
@@ -785,6 +794,7 @@
 				9C8F32FF239946090070751F /* logo_final.json in Resources */,
 				9C31EB8A23E3AA2100060143 /* DetailViewController.storyboard in Resources */,
 				9C8F3300239946090070751F /* loader_animation.json in Resources */,
+				9C7F9AE22D1B5CEC005BB949 /* snow.sks in Resources */,
 				9C69CE87234D0749003E386F /* Welcome.storyboard in Resources */,
 				9C5B6458232A5073000727E6 /* Assets.xcassets in Resources */,
 				9C8F32FC239943350070751F /* SplashViewController.storyboard in Resources */,
@@ -913,6 +923,7 @@
 				9CEFD7442CBC07C70003DCF4 /* TabbarEntrySwiftUI.swift in Sources */,
 				9C73E26623B963570028B9AC /* CoordinatorPresenting.swift in Sources */,
 				9C65C9CD2CE4CF140084911C /* ButtonAnimateColor.swift in Sources */,
+				9C7F9AE02D1B5CA9005BB949 /* SnowFall.swift in Sources */,
 				9C65C9CE2CE4CF140084911C /* AlertButtonView.swift in Sources */,
 				9CF77BE024104B9400C92725 /* AlertContainerView.swift in Sources */,
 				9CB161562BE0335D0031C913 /* AddLevelDateView.swift in Sources */,
@@ -934,13 +945,14 @@
 				9C8F330223994CDD0070751F /* FontHelper.swift in Sources */,
 				9C8939B22CBC40C4008B7A45 /* WelcomeView.swift in Sources */,
 				9C89B61C23DA40D400DB8DDF /* UIView+Shadow.swift in Sources */,
-				9C3763442CD8012400A347EE /* AdsView.swift in Sources */,
+				9C3763442CD8012400A347EE /* PremiumView.swift in Sources */,
 				9C8B9C2F2CF7AE17007922C5 /* ThanksView.swift in Sources */,
 				9CF1CC24241136950067533C /* TabBarVC.swift in Sources */,
 				9CF77BDC24101D8300C92725 /* TabbarEntry.swift in Sources */,
 				9C8939AE2CBC405B008B7A45 /* RootView.swift in Sources */,
 				9CFDFD3F2367226C00760F25 /* AddDateViewController.swift in Sources */,
 				9C56F05E2D05C0E7005CB833 /* SummaryView.swift in Sources */,
+				9C7F9ADE2D1B5C69005BB949 /* FeedbackView.swift in Sources */,
 				9C76F09623493EDA00853FD9 /* SurfTripViewController.swift in Sources */,
 				9C62417C239156C200A4B7C9 /* UserDefaultsHelper.swift in Sources */,
 				9C53CE1C289E9497000969F2 /* MapModel.swift in Sources */,

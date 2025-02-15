@@ -84,7 +84,7 @@ struct DetailsLocationView: View {
     }
 
     func fetchGooglePlaces() {
-        ApiMapsRequest.client.request(.search(matching: "Surf \(queryLocation)"), model: MapModel.self) { result in
+        ApiMapsRequest.client.request(.search(matching: "Wave surf pool \(queryLocation)"), model: MapModel.self) { result in
             switch result {
             case .success(let mapModel):
                 DispatchQueue.main.async {

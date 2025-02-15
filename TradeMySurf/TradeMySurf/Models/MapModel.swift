@@ -50,6 +50,7 @@ struct Results: Codable {
     let formattedAddress: String
     let geometry: Geometry
     let name: String
+    // here add more info about wave pool
 }
 
 // MARK: - Geometry

@@ -43,11 +43,11 @@ struct CalculatorView: View {
             ScrollView {
                 VStack(spacing: 5) {
                     CustomNavigationBar(ifRecommendedView: false)
-                    Text("Consider these options when choosing a board for your enjoinment")
-                        .foregroundColor(.white)
-                        .padding()
-                        .font(themeManager.selectedTheme.bodyTextFont)
+                    Text("Price matching")
                         .multilineTextAlignment(.leading)
+                        .font(themeManager.selectedTheme.largeTitleFont)
+                        .foregroundColor(.white)
+                        .padding(.leading, 20)
                     Group {
                         Text("Maker")
 

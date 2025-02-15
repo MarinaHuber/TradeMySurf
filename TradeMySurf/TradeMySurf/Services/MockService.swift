@@ -10,46 +10,46 @@ import Foundation
 
 public struct MockService {
     
-    public let dataService: RecommendedTripArray
-    
+    let dataService: RecommendedTripArray
+
     public init() {
         self.dataService = RecommendedTripArray()
     }
 }
 
-public struct RecommendedTripArray {
+class RecommendedTripArray {
 
-	public var surfboardsBeginner: [Surfboard] = {
+	lazy var surfboardsBeginner: [Surfboard] = {
         return [Surfboard(level: "Beginner", volume: "50 L", imageName: "2.2", weightUnit: "<", beaufortScaleWave: "0 - 1.5", countryName: "France", continentName: "Surf Europe", imageFlag: "french", weight: 50),
                 Surfboard(level: "Beginner", volume: "50 L", imageName: "2.2", weightUnit: "<", beaufortScaleWave: "", countryName: "France", continentName: "Surf Europe", imageFlag: "french", weight: 40),
                 Surfboard(level: "Beginner", volume: "60 L", imageName: "3.2", weightUnit: "<", beaufortScaleWave: "", countryName: "France", continentName: "Surf Europe", imageFlag: "french", weight: 50),
                 Surfboard(level: "Beginner", volume: "70 L", imageName: "4.2", weightUnit: "<", beaufortScaleWave: "", countryName: "France", continentName: "Surf Europe", imageFlag: "french", weight: 50)
 			]
     }()
-	public var surfboardsBeginnerInter: [Surfboard] = {
+    lazy var surfboardsBeginnerInter: [Surfboard] = {
         return [Surfboard(level: "Beginner-Intermediate", volume: "40 L", imageName: "1", weightUnit: "<", beaufortScaleWave: "1 - 2.5", countryName: "France", continentName: "Surf Europe", imageFlag: "french", weight: 50),
                 Surfboard(level: "Beginner-Intermediate", volume: "50 L", imageName: "2", weightUnit: "<", beaufortScaleWave: "", countryName: "France", continentName: "Surf Europe", imageFlag: "french", weight: 50),
                 Surfboard(level: "Beginner-Intermediate", volume: "60 L", imageName: "3", weightUnit: "<", beaufortScaleWave: "", countryName: "France", continentName: "Surf Europe", imageFlag: "french", weight: 50),
                 Surfboard(level: "Beginner-Intermediate", volume: "70 L", imageName: "4", weightUnit: "<", beaufortScaleWave: "", countryName: "France", continentName: "Surf Europe", imageFlag: "french", weight: 50)
         ]
     }()
-	public var surfboardsIntermediate: [Surfboard] = {
+    lazy var surfboardsIntermediate: [Surfboard] = {
         return [Surfboard(level: "Intermediate", volume: "40 L", imageName: "inter1", weightUnit: "<", beaufortScaleWave: " 1 - 3.4 m", countryName: "France", continentName: "Surf Europe", imageFlag: "french", weight: 30),
                 Surfboard(level: "Intermediate", volume: "50 L", imageName: "inter2", weightUnit: "<", beaufortScaleWave: "", countryName: "France", continentName: "Surf Europe", imageFlag: "french", weight: 40),
                 Surfboard(level: "Intermediate", volume: "60 L", imageName: "inter3", weightUnit: "<", beaufortScaleWave: "", countryName: "France", continentName: "Surf Europe", imageFlag: "french", weight: 50)
 			]
     }()
-	public var surfboardsAdvanced: [Surfboard] = {
+    lazy var surfboardsAdvanced: [Surfboard] = {
         return [Surfboard(level: "Advanced", volume: "40 L", imageName: "pro1", weightUnit: "<", beaufortScaleWave: "1 - 4.4", countryName: "France", continentName: "Surf Europe", imageFlag: "french", weight: 20), Surfboard(level: "Advanced", volume: "50 L", imageName: "pro", weightUnit: "<", beaufortScaleWave: "", countryName: "France", continentName: "Surf Europe", imageFlag: "french", weight: 40), Surfboard(level: "Advanced", volume: "50 L", imageName: "pro", weightUnit: "<", beaufortScaleWave: "", countryName: "France", continentName: "Surf Europe", imageFlag: "french", weight: 30)
 			]
     }()
-    public var surfboardsAreals: [Surfboard] = {
+    lazy var surfboardsAreals: [Surfboard] = {
         return [Surfboard(level: "Areals", volume: "40 L", imageName: "3.3", weightUnit: "<", beaufortScaleWave: " 0 - 3.4 m", countryName: "France", continentName: "Surf Europe", imageFlag: "french", weight: 10),
                 Surfboard(level: "Areals", volume: "40 L", imageName: "3.1", weightUnit: "<", beaufortScaleWave: "", countryName: "France", continentName: "Surf Europe", imageFlag: "french", weight: 20),
                 Surfboard(level: "Areals", volume: "40 L", imageName: "7", weightUnit: "<", beaufortScaleWave: "", countryName: "France", continentName: "Surf Europe", imageFlag: "french", weight: 20)
         ]
     }()
-    public var surfboardsLongboard: [Surfboard] = {
+    lazy var surfboardsLongboard: [Surfboard] = {
         return [Surfboard(level: "Longboarding", volume: "70 L", imageName: "6", weightUnit: "<", beaufortScaleWave: "0 - 1", countryName: "France", continentName: "Surf Europe", imageFlag: "french", weight: 70), Surfboard(level: "Longboarding", volume: "70 L", imageName: "7", weightUnit: "<", beaufortScaleWave: "", countryName: "France", continentName: "Surf Europe", imageFlag: "french", weight: 70), Surfboard(level: "Longboarding", volume: "70 L", imageName: "5-2", weightUnit: "<", beaufortScaleWave: "", countryName: "France", continentName: "Surf Europe", imageFlag: "french", weight: 70)
         ]
     }()
@@ -57,7 +57,7 @@ public struct RecommendedTripArray {
 /* ================================ */
 
 
-    public var surfCountryBegginer: [Surfboard] = {
+    lazy var surfCountryBegginer: [Surfboard] = {
         return [
 			Surfboard(level: "Beginner", volume: "40 L", imageName: "2.2", weightUnit: "<", beaufortScaleWave: "0 - 1.5 m", countryName: "Croatia", continentName: "Sunshine and baby waves", imageFlag: "cro", weight: 50),
             Surfboard(level: "Beginner", volume: "40 L", imageName: "2.2", weightUnit: "<", beaufortScaleWave: "0 - 1.5 m", countryName: "Portugal", continentName: "South Europe sun", imageFlag: "portug", weight: 50),
@@ -66,7 +66,7 @@ public struct RecommendedTripArray {
         ]
     }()
     
-    public var surfCountryBI: [Surfboard] = {
+    lazy var surfCountryBI: [Surfboard] = {
           return [
               Surfboard(level: "Beginner-Intermediate", volume: "40 L", imageName: "1", weightUnit: "<", beaufortScaleWave: "1 - 2 m", countryName: "Portugal",continentName: "Surf Europe", imageFlag: "portug", weight: 50),
               Surfboard(level: "Beginner-Intermediate", volume: "40 L", imageName: "1", weightUnit: "<", beaufortScaleWave: "1 - 2 m", countryName: "Croatia", continentName: "Surf and wind", imageFlag: "cro", weight: 50),
@@ -77,7 +77,7 @@ public struct RecommendedTripArray {
           ]
       }()
     
-	public var surfCountryInter: [Surfboard] = {
+    lazy var surfCountryInter: [Surfboard] = {
 		  return [
               Surfboard(level: "Intermediate", volume: "40 L", imageName: "inter1", weightUnit: "<", beaufortScaleWave: "1 - 3 m", countryName: "France", continentName: "Surf Europe", imageFlag: "french", weight: 50),
 			  Surfboard(level: "Intermediate", volume: "40 L", imageName: "inter1", weightUnit: "<", beaufortScaleWave: "1 - 3 m", countryName: "Portugal", continentName: "Surf intermedium", imageFlag: "portug", weight: 50),
@@ -88,7 +88,7 @@ public struct RecommendedTripArray {
 		  ]
 	  }()
 
-	public var surfCountryAdvanced: [Surfboard] = {
+    lazy var surfCountryAdvanced: [Surfboard] = {
 		  return [
 			  Surfboard(level: "Advanced", volume: "40 L", imageName: "pro1", weightUnit: "<", beaufortScaleWave: "3 > m", countryName: "South Africa", continentName: "Advanced surfing retreats", imageFlag: "SA", weight: 50),
 			  Surfboard(level: "Advanced", volume: "40 L", imageName: "pro1", weightUnit: "<", beaufortScaleWave: "3 > m", countryName: "Bali", continentName: "Comminuty for surfers Pro", imageFlag: "indonesia", weight: 50),
@@ -98,7 +98,7 @@ public struct RecommendedTripArray {
 		  ]
 	  }()
 
-    public var surfCountryAreals: [Surfboard] = {
+    lazy var surfCountryAreals: [Surfboard] = {
         return [
             Surfboard(level: "Areals", volume: "40 L", imageName: "pro1", weightUnit: "<", beaufortScaleWave: "3 > m", countryName: "Brazil", continentName: "Surf Latin America", imageFlag: "brazil", weight: 50),
             Surfboard(level: "Areals", volume: "40 L", imageName: "pro1", weightUnit: "<", beaufortScaleWave: "3 > m", countryName: "South Africa", continentName: "Surf Africa", imageFlag: "SA", weight: 50),
@@ -109,7 +109,7 @@ public struct RecommendedTripArray {
         ]
     }()
 
-    public var surfCountryLongoard: [Surfboard] = {
+    lazy var surfCountryLongoard: [Surfboard] = {
         return [
             Surfboard(level: "Longoard", volume: "40 L", imageName: "pro1", weightUnit: "<", beaufortScaleWave: "1 > m", countryName: "Bali", continentName: "Surf Asia", imageFlag: "indonesia", weight: 50),
             Surfboard(level: "Longoard", volume: "40 L", imageName: "pro1", weightUnit: "<", beaufortScaleWave: "1 > m", countryName: "Hawaii", continentName: "Surf North America", imageFlag: "usa", weight: 50),
@@ -119,7 +119,7 @@ public struct RecommendedTripArray {
 
 /* ================================ */
 
-    public var tipBeginner: [SurfTip] = {
+    lazy var tipBeginner: [SurfTip] = {
         return [
             SurfTip(goal: "Get vitamin D and negative ions from waves",
                     description: "Learning to stand up on whitewater waves is one of the best ways to soak up sunshine and positive ions. Beginners should start with a foam surfboard and small whitewater waves, which are broken waves that belong to the fourth stage of the wave journey",
@@ -127,7 +127,7 @@ public struct RecommendedTripArray {
         ]
     }()
     
-    public var tipBeginnerInter: [SurfTip] = {
+    lazy var tipBeginnerInter: [SurfTip] = {
          return [
              SurfTip(goal: "Improve cardiovascular health",
                      description: "A proper pop-up and surfboard stance, often in colder water, are key to unlocking both your surfing and health potential. Paddling out and dropping down the face of the wave provide an excellent cardiovascular workout. With the right technique, you’ll improve your balance and become more comfortable shifting your foot weight forward, backward, and sideways.",
@@ -135,7 +135,7 @@ public struct RecommendedTripArray {
          ]
      }()
     
-    public var tipIntermediate: [SurfTip] = {
+    lazy var tipIntermediate: [SurfTip] = {
         return [
             SurfTip(goal: "Reduce stress and anxiety",
                     description: "Surfing helps lower stress at any skill level, but for intermediate surfers, it often brings a common sense of calm.",
@@ -143,7 +143,7 @@ public struct RecommendedTripArray {
         ]
     }()
     
-    public var tipAdvanced: [SurfTip] = {
+    lazy var tipAdvanced: [SurfTip] = {
         return [
             SurfTip(goal: "Become part of community",
                     description: "While you don’t need to be part of a community to enjoy surfing, advanced surfers often find themselves connected to multiple surfing communities around the world. These surfers often engage with locals, performing full carving vertical movements in unison.",
@@ -151,7 +151,7 @@ public struct RecommendedTripArray {
         ]
     }()
 
-    public var tipAreals: [SurfTip] = {
+    lazy var tipAreals: [SurfTip] = {
         return [
             SurfTip(goal: "Build core strenght",
                     description: "All aspects of surfing require strong core muscles. Performing aerials above the waves is a challenge that combines strength and technique. An aerial maneuver allows the surfer, using speed and precision, to “jump” off the lip of the wave and land back on the foam or at its base. Mastering flight technique is essential for executing aerials in surfing.",
@@ -159,10 +159,10 @@ public struct RecommendedTripArray {
         ]
     }()
 
-    public var tipLongboarding: [SurfTip] = {
+    lazy var tipLongboarding: [SurfTip] = {
         return [
             SurfTip(goal: "Build confidence",
-                    description: "Surfing is known for giving everyone a confidence boost after a session in the water. Longboards are a popular choice for both beginner and advanced surfers. They make it easier to catch small waves and whitewash, practice your pop-up, and master the fundamentals of riding down the wave face.",
+                    description: "Surfing is known for giving a confidence boost after a session in the ocean. Longboards are a popular choice for both beginner and advanced surfers. They make it easier to catch small waves and whitewash, practice your pop-up, and master the fundamentals of riding down the wave face.",
                     descriptionLocation: "One major difference between longboarders and shortboarders is the lines they draw on a wave. Longboarders tend to surf in predominantly horizontal lines, flowing down the length of the wave, while shortboarders focus on sharper, more vertical maneuvers.")
         ]
     }()
